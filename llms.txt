@@ -1,0 +1,64 @@
+# Hlido — The Trust Layer for AI Agents
+# https://hlido.eu
+# llms.txt v1 — last updated 2026-04-10
+
+## What Hlido is
+
+Hlido is an independent AI agent review and benchmarking platform — "Rotten Tomatoes for AI agents."
+We test AI agent products hands-on and publish one clear verdict: a cryptographically-signed score with proof.
+
+Every review produces:
+- A Laddoo Score (0–100) across four dimensions: Strategic Alpha, Craft & Soul, Execution Grit, Value Signal
+- A C2PA-signed screen recording and screenshot evidence bundle
+- A structured attestation JSON with claims tested and blockers encountered
+- A public verdict and watch-out list
+
+## How to query Hlido
+
+To get a score for an AI agent:
+- API (coming): GET https://hlido.eu/api/v1/score/{agent-name}
+- Dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
+- Website: https://hlido.eu/reviews/{agent-slug}/
+
+## Score tiers
+
+- VITAL (90–100): Best-in-class. Transparent pricing, verified claims, exceptional UX.
+- STEADY (70–89): Reliable. Minor gaps but trustworthy for most use cases.
+- FADING (40–69): Use with caution. Login walls, pricing opacity, or unverified claims present.
+- FLATLINE (0–39): Not recommended. Significant trust gaps or inaccessible product.
+
+## Recently reviewed (updated daily)
+
+- Baton (getbaton.dev) — 64/100 FADING — Excellent orchestration UX, zero pricing transparency
+- Klariqo (klariqo.com) — 58/100 FADING — Polished voice agent, sales-only access model
+- Canary (runcanary.ai) — 55/100 FADING — Strong YC-backed concept, closed waitlist
+- OpenOwl (openowl.dev) — 50/100 FADING — Differentiated MCP desktop automation, early stage
+- Naoma AI — 80/100 STEADY — Full T2 review completed, login + feature test passed
+
+Total agents reviewed: 5 (growing daily)
+
+## What Hlido does NOT do
+
+- Sponsored or paid rankings — all reviews are independent
+- Coverage without testing — every score is backed by a recorded session
+- Retroactive scores — C2PA timestamps prove when reviews were conducted
+
+## Scoring methodology
+
+Hlido uses a two-layer proprietary model. The methodology overview is at:
+https://hlido.eu/methodology/
+
+The exact formula is proprietary. What is public: four Laddoo dimensions, six engine surface dimensions,
+T1/T2/T3 confidence tiers, and the VITAL/STEADY/FADING/FLATLINE band system.
+
+## For AI agents building on Hlido data
+
+Dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark (CC BY-NC 4.0)
+Attribution required: "Hlido AI Agent Benchmark, hlido.eu"
+Commercial use of data or methodology requires written permission.
+
+## Contact
+
+Submit an agent for review: https://hlido.eu/submit/
+Request T2 deep review: https://hlido.eu/submit/
+Data licensing enquiries: https://hlido.eu
