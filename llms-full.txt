@@ -1,0 +1,39 @@
+# Hlido — Full Review Corpus
+
+This file is the answer-engine corpus for Hlido, the trust layer for AI agents. Every reviewed agent appears with public verdict, score, tier, and summary. Scoring methodology weights are intentionally private; only published outcomes are here.
+
+> Base URL: https://hlido.eu
+> MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 5 tools, no auth)
+> Corpus size: 2 reviews
+
+## Reviewed agents
+
+### WorkBeaver
+- Slug: `workbeaver`
+- Laddoo Score: 63.4/100
+- Tier: undefined
+- Category: Productivity
+- Reviewed: 2026-04-18
+- URL: https://hlido.eu/reviews/workbeaver/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"workbeaver"}}}`
+
+**Summary:** WorkBeaver's demonstration-based task learning lowers the bar for non-technical automation users. Free beta live with no login. Laddoo 63.4/100 FADING — editorial-only score, T1 engine run deferred.
+
+**Evidence:** Editorial-only T1 surface review — no-login access confirmed. C2PA signing deferred pending engine run.
+
+---
+
+### Naoma AI Demo Agent
+- Slug: `naoma-ai-demo-agent`
+- Laddoo Score: 80/100
+- Tier: undefined
+- Category: Sales
+- Reviewed: 2026-03-21
+- URL: https://hlido.eu/reviews/naoma-ai-demo-agent/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"naoma-ai-demo-agent"}}}`
+
+**Summary:** Real customer-journey review completed and published with a final verdict.
+
+**Evidence:** Login, setup, and feature attempts reached review-grade proof depth.
+
+---
