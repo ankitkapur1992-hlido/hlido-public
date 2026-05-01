@@ -1,0 +1,87 @@
+{
+  "slug": "aider",
+  "name": "Aider",
+  "category": "AI Coding CLI",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "live-cli",
+  "engine": "cli",
+  "summary": "Aider 0.86.2 — open-source AI pair-programming CLI. Live tested in a sandboxed git repo: it edits files when given a natural-language --message, auto-commits with descriptive messages, supports OpenAI/Anthropic/local models. MIT licensed.",
+  "review_url": "https://hlido.eu/reviews/aider/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/aider/",
+  "reviewed_at": "2026-04-26",
+  "run_id": "run-aider-mofz4644",
+  "claims": [
+    {
+      "id": "version-output",
+      "claim": "Verify the `aider --version` command exits 0 and prints a semantic version like 0.x.y or 1.x.y",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The command output shows 'aider 0.86.2', which is a valid semantic version format.",
+      "source_surface": "cli",
+      "command": "aider --version",
+      "exit_code": 0,
+      "duration_ms": 2041
+    },
+    {
+      "id": "help-documents-core-flags",
+      "claim": "Verify `aider --help` exits 0 and the help text documents the core flags --message, --model, and references git integration (auto-commit / git repo)",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The help text includes the flags --message and --model, and references git integration with options like --git, --auto-commits, and --commit.",
+      "source_surface": "cli",
+      "command": "aider --help",
+      "exit_code": 0,
+      "duration_ms": 1939
+    },
+    {
+      "id": "list-models-openai",
+      "claim": "Verify `aider --list-models openai` lists at least one OpenAI model (e.g. gpt-4o, gpt-4o-mini, gpt-4)",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Models which match \"openai\": - gmi/openai/gpt-4o - gmi/openai/gpt-4o-mini - openai/gpt-4",
+      "source_surface": "cli",
+      "command": "aider --list-models openai",
+      "exit_code": null,
+      "duration_ms": 71062
+    },
+    {
+      "id": "scaffold-test-file",
+      "claim": "Scaffold a minimal math_utils.py with an add() function only, ready for Aider to extend",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "The output indicates that a file named 'math_utils.py' was created, but does not confirm the presence of the 'add()' function within it.",
+      "source_surface": "cli",
+      "command": "scaffold math_utils.py",
+      "exit_code": 0,
+      "duration_ms": 0
+    },
+    {
+      "id": "real-edit-add-function",
+      "claim": "Verify Aider actually modifies math_utils.py to include multiply() and subtract() functions when given a natural-language --message",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The output shows that the functions multiply() and subtract() were added to math_utils.py as requested.",
+      "source_surface": "cli",
+      "command": "aider --model gpt-4o-mini --message \"Add a multiply(a, b) function and a subtract(a, b) function to math_utils.py. Return only the modified file.\" --yes-always --no-show-model-warnings --no-stream --no-pretty math_utils.py",
+      "exit_code": 0,
+      "duration_ms": 14140
+    },
+    {
+      "id": "verify-auto-commit",
+      "claim": "Verify Aider auto-created a git commit after the edit (a recent commit exists whose message references aider, multiply, or subtract)",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The commit message 'feat: add multiply and subtract functions to math_utils.py' references 'multiply' and 'subtract'.",
+      "source_surface": "cli",
+      "command": "git log --oneline -5",
+      "exit_code": 0,
+      "duration_ms": 73
+    }
+  ],
+  "required_items_total": 5,
+  "required_items_passing": 5,
+  "confidence": "high",
+  "schema_version": "1.0",
+  "generated_at": "2026-04-30T09:21:53.821Z"
+}
