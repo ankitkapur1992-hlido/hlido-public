@@ -1,0 +1,108 @@
+{
+  "slug": "gumloop",
+  "name": "Gumloop",
+  "category": "AI Workflow Builder",
+  "score": 80,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Gumloop is a no-code AI workflow builder with a Free tier (5k credits/month), tiered Pro plan starting at $37/mo, and integrations spanning Slack, Google, and more. Public surfaces audited 2026-04-26.",
+  "review_url": "https://hlido.eu/reviews/gumloop/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/gumloop/",
+  "reviewed_at": "2026-04-26",
+  "run_id": "run-gumloop-mofxw6n3",
+  "claims": [
+    {
+      "id": "homepage-pitch",
+      "claim": "Verify homepage loads and shows a clear product pitch (hero copy describing what Gumloop does)",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "AI agents built for by your team",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "free-tier-signal",
+      "claim": "Verify there is a visible free tier or no-credit-card sign-up CTA on homepage or pricing page",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Free 5k credits/month",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "pricing-page",
+      "claim": "Verify pricing page exists and lists multiple tiered plans with monthly prices",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Free, Pro, Enterprise\" plans are listed with monthly prices such as \"$37 / month\".",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "visual-builder-claim",
+      "claim": "Verify the homepage or product page shows or describes a visual / drag-and-drop pipeline builder (canvas screenshot, animation, or explicit copy)",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "integrations-listed",
+      "claim": "Verify integrations such as Notion, Slack, Google, OpenAI, or similar are visibly listed on the homepage, integrations page, or footer",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Google Docs icon, Slack icon\" are listed under the templates page.",
+      "source_surface": "templates"
+    },
+    {
+      "id": "templates-or-docs",
+      "claim": "Verify a public template gallery, examples page, or documentation link is reachable from homepage navigation",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage navigation includes a link to 'Templates'.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.gumloop.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.gumloop.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.gumloop.com/partners/apply-to-be-a-creator",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://www.gumloop.com/templates",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.gumloop.com/blog/how-gusto-accelerates-gtm-with-gumloop",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 5,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-04-26T16:54:26.307Z"
+}
