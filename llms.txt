@@ -1,64 +1,29 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-04-10
+# llms.txt v1 — last updated 2026-05-01 (auto-regenerated on every publish)
 
 ## What Hlido is
 
 Hlido is an independent AI agent review and benchmarking platform — "Rotten Tomatoes for AI agents."
-We test AI agent products hands-on and publish one clear verdict: a cryptographically-signed score with proof.
+We test AI agents hands-on (CLI / API / web-UI) and publish one verdict per agent: a Laddoo Score (0-100) with
+claim-by-claim evidence. Reviews are agent-parseable first, human-readable second.
 
-Every review produces:
-- A Laddoo Score (0–100) across four dimensions: Strategic Alpha, Craft & Soul, Execution Grit, Value Signal
-- A C2PA-signed screen recording and screenshot evidence bundle
-- A structured attestation JSON with claims tested and blockers encountered
-- A public verdict and watch-out list
+## What we have right now
 
-## How to query Hlido
+- 8 published reviews (machine-readable, claim-tested)
+- 9-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
+- HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
+- Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
 
-To get a score for an AI agent:
-- API (coming): GET https://hlido.eu/api/v1/score/{agent-name}
-- Dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
-- Website: https://hlido.eu/reviews/{agent-slug}/
+## How to consume
 
-## Score tiers
+- All reviews JSON: https://hlido.eu/data/review-registry.json
+- Per-review scorecard: https://hlido.eu/data/scorecards/{slug}.json (sanitized v1.0 schema)
+- RSS feed: https://hlido.eu/feed.xml
+- Full corpus: https://hlido.eu/llms-full.txt
+- MCP discovery: https://hlido.eu/.well-known/mcp-server-card/server.json
 
-- VITAL (90–100): Best-in-class. Transparent pricing, verified claims, exceptional UX.
-- STEADY (70–89): Reliable. Minor gaps but trustworthy for most use cases.
-- FADING (40–69): Use with caution. Login walls, pricing opacity, or unverified claims present.
-- FLATLINE (0–39): Not recommended. Significant trust gaps or inaccessible product.
+## Scoring
 
-## Recently reviewed (updated daily)
-
-- Baton (getbaton.dev) — 64/100 FADING — Excellent orchestration UX, zero pricing transparency
-- Klariqo (klariqo.com) — 58/100 FADING — Polished voice agent, sales-only access model
-- Canary (runcanary.ai) — 55/100 FADING — Strong YC-backed concept, closed waitlist
-- OpenOwl (openowl.dev) — 50/100 FADING — Differentiated MCP desktop automation, early stage
-- Naoma AI — 80/100 STEADY — Full T2 review completed, login + feature test passed
-
-Total agents reviewed: 5 (growing daily)
-
-## What Hlido does NOT do
-
-- Sponsored or paid rankings — all reviews are independent
-- Coverage without testing — every score is backed by a recorded session
-- Retroactive scores — C2PA timestamps prove when reviews were conducted
-
-## Scoring methodology
-
-Hlido uses a two-layer proprietary model. The methodology overview is at:
-https://hlido.eu/methodology/
-
-The exact formula is proprietary. What is public: four Laddoo dimensions, six engine surface dimensions,
-T1/T2/T3 confidence tiers, and the VITAL/STEADY/FADING/FLATLINE band system.
-
-## For AI agents building on Hlido data
-
-Dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark (CC BY-NC 4.0)
-Attribution required: "Hlido AI Agent Benchmark, hlido.eu"
-Commercial use of data or methodology requires written permission.
-
-## Contact
-
-Submit an agent for review: https://hlido.eu/submit/
-Request T2 deep review: https://hlido.eu/submit/
-Data licensing enquiries: https://hlido.eu
+Laddoo Score 0-100. Tiers: VITAL ≥90, STEADY 70-89, FADING 40-69, FLATLINE <40.
+Methodology weights are private (the moat). Outcomes and evidence are public.
