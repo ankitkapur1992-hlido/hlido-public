@@ -1,0 +1,159 @@
+{
+  "name": "hlido-agent-reviews",
+  "description": "The trust layer for AI agents - C2PA-verified reviews and Laddoo Scores.",
+  "publisher": "hlido.eu",
+  "version": "2.3.0",
+  "transports": ["http", "streamable-http", "stdio"],
+  "homepage": "https://hlido.eu",
+  "repository": "https://github.com/ankitkapur1992-hlido/hlido-public",
+  "contact": "ankit@hlido.eu",
+  "auth": "none",
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "endpoints": [
+    {
+      "transport": "stdio",
+      "command": "python",
+      "args": [
+        "mcp-server/hlido_mcp_server.py"
+      ],
+      "working_directory": "."
+    },
+    {
+      "transport": "http",
+      "url": "https://hlido.eu/mcp",
+      "status": "live",
+      "protocolVersion": "2024-11-05",
+      "notes": "Stateless JSON-RPC 2.0 over HTTPS. POST for tools/list, tools/call, initialize. GET returns server summary."
+    },
+    {
+      "transport": "streamable-http",
+      "url": "https://hlido.eu/mcp",
+      "status": "live",
+      "protocolVersion": "2025-03-26",
+      "notes": "MCP streamable HTTP transport (spec 2025-03-26). Same endpoint; request/response is stateless JSON-RPC."
+    }
+  ],
+  "tools": [
+    {
+      "name": "trust_check",
+      "description": "One-call Hlido trust answer for a reviewed AI agent. Accepts a slug or full URL, normalizes it, and returns score, tier, blockers, verdict summary, review URL, embed URL, and C2PA trust metadata.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "agent_or_url": {
+            "type": "string",
+            "description": "Agent slug or full URL to normalize and look up."
+          },
+          "use_case": {
+            "type": "string",
+            "description": "Optional free-text context for the caller's intent."
+          }
+        },
+        "required": [
+          "agent_or_url"
+        ]
+      }
+    },
+    {
+      "name": "find_trusted",
+      "description": "Find Hlido-reviewed agents for a free-text need. Matches the need against category, summary, and keywords, then returns ranked trust payloads.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "need": {
+            "type": "string",
+            "description": "Free-text intent, such as 'voice agent for SMB outbound'."
+          },
+          "min_tier": {
+            "type": "string",
+            "enum": [
+              "SIGNAL",
+              "STEADY",
+              "WATCH",
+              "SKIP"
+            ],
+            "default": "STEADY",
+            "description": "Minimum tier filter. Defaults to STEADY."
+          },
+          "limit": {
+            "type": "integer",
+            "default": 10,
+            "description": "Result cap. Defaults to 10. Maximum 25."
+          }
+        },
+        "required": [
+          "need"
+        ]
+      }
+    },
+    {
+      "name": "verify_claim",
+      "description": "Check whether a claim is present in the agent's server-card and whether Hlido has actually tested it. Returns honest nulls when tested data does not exist.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "agent": {
+            "type": "string",
+            "description": "Agent slug or full URL."
+          },
+          "claim": {
+            "type": "string",
+            "description": "The specific claim to check."
+          }
+        },
+        "required": [
+          "agent",
+          "claim"
+        ]
+      }
+    },
+    {
+      "name": "compare_agents",
+      "description": "Compare multiple AI agents side by side using their Hlido Laddoo Scores, tiers, and verdicts. Pass up to 5 slugs. Returns a ranked comparison with scores and review URLs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of agent slugs to compare (max 5)."
+          }
+        },
+        "required": [
+          "slugs"
+        ]
+      }
+    },
+    {
+      "name": "submit_agent",
+      "description": "Submit an AI agent for Hlido review consideration. Hlido reviews are independent and methodology-driven. Returns a confirmation and next steps.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Public URL of the agent to review."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the agent or product."
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional context: category, why it matters, or known access details."
+          }
+        },
+        "required": [
+          "url",
+          "name"
+        ]
+      }
+    }
+  ]
+}
