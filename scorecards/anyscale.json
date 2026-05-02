@@ -1,0 +1,100 @@
+{
+  "slug": "anyscale",
+  "name": "Anyscale",
+  "category": "Infra",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Anyscale",
+  "review_url": "https://hlido.eu/reviews/anyscale/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/anyscale/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-anyscale-moo1scqg",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Foundation Model builders scale multimodal data curation workloads on Anyscale",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"link\",\"name\":\"Pricing\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Learn more about building with Anyscale and Ray through our self-service courses, webinars, events and more.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Anyscale integrates with the most popular AI/ML libraries and frameworks, letting you scale your existing AI/ML workloads efficiently.",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.anyscale.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.anyscale.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.anyscale.com/integrations",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://www.anyscale.com/examples",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.anyscale.com/blog/announcing-anyscale-agent-skills-ray?utm_source=anyscaleeyebrow",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:56:58.354Z"
+}
