@@ -1,0 +1,99 @@
+{
+  "slug": "elastic-quote",
+  "name": "Elastic Quote",
+  "category": "Search",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Elastic Quote",
+  "review_url": "https://hlido.eu/reviews/elastic-quote/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/elastic-quote/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-elastic-quote-moo22ty4",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Better retrieval. Better answers.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Pricing\" is a link available directly on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Welcome to the technical documentation for Elastic Stack 9.0.0 and later, and Elastic Cloud Serverless.\"",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "unknown"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Elastic Cloud Hosted is now FedRAMP® High Authorized Elastic deepens its commitment to the highest levels of security for US federal agencies.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.elastic.co/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.elastic.co/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://www.elastic.co/docs",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.elastic.co/partners",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://www.elastic.co/demo-gallery",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.elastic.co/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:05:06.714Z"
+}
