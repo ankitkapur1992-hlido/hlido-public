@@ -1,0 +1,102 @@
+{
+  "slug": "harvey-ai",
+  "name": "Harvey",
+  "category": "Legal",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Harvey",
+  "review_url": "https://hlido.eu/reviews/harvey-ai/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/harvey-ai/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-harvey-ai-moo19x33",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Harvey is AI designed for legal and professional services. Advance your expertise on a secure platform that lets you focus on high-value work.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain a direct link to the pricing page, making it unclear how to access it in just two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "unknown"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"Harvey is built with security at its core, and our collaboration capabilities are no exception. Strict permissions and access controls ensure that only the right people across organizations have access to the right information, with full auditability and governance that meet the standards these relationships demand.\"",
+      "source_surface": "changelog"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.harvey.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.harvey.ai/newsroom",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.harvey.ai/blog/a-new-era-of-collaboration-for-legal-and-professional-services",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:42:54.898Z"
+}
