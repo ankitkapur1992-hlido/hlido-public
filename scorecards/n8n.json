@@ -1,0 +1,101 @@
+{
+  "slug": "n8n",
+  "name": "n8n",
+  "category": "Workflow",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of n8n",
+  "review_url": "https://hlido.eu/reviews/n8n/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/n8n/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-n8n-moo1kmww",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"AI Workflow Automation Platform - n8n\" and \"Build visually, go deep with code, connect to anything.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The 'Pricing' menu item is accessible directly from the homepage menu.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes a link to the 'Docs' section, which suggests that documentation is accessible without login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Plug AI into your own data & over 500 integrations\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"Protect your data by deploying on-prem.\"",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://n8n.io/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://n8n.io/pricing/",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://n8n.io/integrations/",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://n8n.io/workflows/?integrations=Microsoft+Outlook",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:50:47.586Z"
+}
