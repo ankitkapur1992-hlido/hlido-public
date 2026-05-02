@@ -1,0 +1,100 @@
+{
+  "slug": "zed-ai",
+  "name": "Zed AI",
+  "category": "Coding",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Zed AI",
+  "review_url": "https://hlido.eu/reviews/zed-ai/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/zed-ai/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-zed-ai-moo16igd",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Zed is a minimal code editor crafted for speed and collaboration with humans and AI.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'Pricing' is available directly on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The documentation is accessible without login at the URL https://zed.dev/docs/",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Yes you can! We currently support Amazon Bedrock, Anthropic, GitHub Copilot, Deepseek, Google AI, LM Studio, Mistral, Ollama, OpenAI, OpenRouter, Vercel, and more.\"",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"When using third-party agents, nothing touches our servers. We never store or train on your code without explicit consent.\"",
+      "source_surface": "integrations"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://zed.dev/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://zed.dev/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://zed.dev/docs/",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://zed.dev/acp",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://zed.dev/blog/parallel-agents",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:40:34.510Z"
+}
