@@ -1,0 +1,103 @@
+{
+  "slug": "dia-browser",
+  "name": "Dia (The Browser Company)",
+  "category": "Browser",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Dia (The Browser Company)",
+  "review_url": "https://hlido.eu/reviews/dia-browser/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/dia-browser/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-dia-browser-moo20bx4",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "A browser that works with you",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Your data is never sold or used to build ad profiles — and with Sync, it's end-to-end encrypted.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.diabrowser.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.diabrowser.com/release-notes/latest",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:02:50.902Z"
+}
