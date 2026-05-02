@@ -1,0 +1,102 @@
+{
+  "slug": "decagon",
+  "name": "Decagon",
+  "category": "Customer Support",
+  "score": 65,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Decagon",
+  "review_url": "https://hlido.eu/reviews/decagon/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/decagon/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-decagon-moo11ep4",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage states, \"The AI concierge for every customer\" and describes the value proposition as \"Build, optimize, and scale AI agents that treat every customer like the only one.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The homepage includes a 'Product' button that likely leads to the pricing page, but the exact number of clicks to reach it is not specified.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Pre-built integrations, APIs, and MCP support for data, actions, and escalations.",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Fine-tuning allows us to teach these compact models exactly what they need to know, while still cleaning and filtering training data to remove PII and protect customer IP.",
+      "source_surface": "changelog"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://decagon.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://decagon.ai/product/integrations",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://decagon.ai/blog/fine-tuning-ai-agents",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:36:12.127Z"
+}
