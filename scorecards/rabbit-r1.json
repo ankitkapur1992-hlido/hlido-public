@@ -1,0 +1,101 @@
+{
+  "slug": "rabbit-r1",
+  "name": "Rabbit R1",
+  "category": "AI Agent",
+  "score": 65,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Rabbit R1",
+  "review_url": "https://hlido.eu/reviews/rabbit-r1/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/rabbit-r1/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-rabbit-r1-moo23cvd",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "rabbit r1 is the first AI device that lets you issue voice prompts & have OpenClaw act on them immediately",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"try it today on the LAM playground tab in your rabbithole account\"",
+      "source_surface": "demo"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "rabbit does not control or operate OpenClaw and is not responsible for its performance, reliability, behavior, or any data you share with or through it, including the security or privacy of your information.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.rabbit.tech/rabbit-r1",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": "https://www.rabbit.tech/creations",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.rabbit.tech/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": "https://www.rabbit.tech/lam-playground",
+      "ok": true
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:05:21.886Z"
+}
