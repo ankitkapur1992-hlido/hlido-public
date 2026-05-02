@@ -1,0 +1,137 @@
+{
+  "slug": "ovren",
+  "name": "ovren",
+  "category": "AI Agent",
+  "score": 40,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": {
+    "strategic_alpha": {
+      "predicted": 72,
+      "reasoning": "Dual-role FE+BE agents delivering reviewable PRs is highly differentiated vs IDE copilots; PH Apr 16 launch."
+    },
+    "execution_grit": {
+      "predicted": 50,
+      "reasoning": "GitHub auth + unconfirmed product URL limits T2 testability; PR quality claim unverifiable."
+    },
+    "craft_and_soul": {
+      "predicted": 60,
+      "reasoning": "Developer-focused product likely has solid UX but GitHub-only access narrows appeal."
+    },
+    "value_signal": {
+      "predicted": 45,
+      "reasoning": "Pricing unknown — unclear if there's a free tier or trial, which is a red flag for adoption."
+    }
+  },
+  "review_url": "https://hlido.eu/reviews/ovren/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/ovren/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-ovren-monedafq",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Confirm real product URL (ovren.com or ovren.dev, not PH placeholder)",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The URL provided is for www.producthunt.com, which is a placeholder, not the actual product URL.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "GitHub auth flow and repo connection process documented",
+      "required": true,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Free trial or free tier available",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "PR output quality shown in public demo or screenshots",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "FE vs BE agent scope (what tasks each handles) documented publicly",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C06",
+      "claim": "Pricing page exists",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C07",
+      "claim": "Private repo support on free/trial tier documented",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.producthunt.com/products/ovren",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 2,
+  "required_items_passing": 0,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:01:11.177Z"
+}
