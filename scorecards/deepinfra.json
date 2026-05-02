@@ -1,0 +1,100 @@
+{
+  "slug": "deepinfra",
+  "name": "DeepInfra",
+  "category": "Infra",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of DeepInfra",
+  "review_url": "https://hlido.eu/reviews/deepinfra/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/deepinfra/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-deepinfra-moo26evl",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Accelerate your AI with developer-friendly APIs designed for performance and cost-efficiency.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The links to 'Docs' and 'Demo' are available on the homepage without requiring a login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "unknown"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"With our zero retention policy your inputs, your outputs, and your user data stay private. DeepInfra is SOC 2 and ISO 27001 certified.\"",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://deepinfra.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://deepinfra.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://deepinfra.com/Qwen/Qwen3.6-35B-A3B",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://deepinfra.com/Qwen/Qwen3.5-397B-A17B",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://deepinfra.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:07:53.157Z"
+}
