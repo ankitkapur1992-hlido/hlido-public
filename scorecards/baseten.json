@@ -1,0 +1,101 @@
+{
+  "slug": "baseten",
+  "name": "Baseten",
+  "category": "Infra",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Baseten",
+  "review_url": "https://hlido.eu/reviews/baseten/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/baseten/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-baseten-moo1skvr",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Pricing\" is listed as a link on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"DOCS\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "\"SOC 2 Type II and HIPAA compliant\"",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.baseten.co/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.baseten.co/pricing/",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.baseten.co/resources/changelog/",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": "https://www.baseten.co/library/nvidia-nemotron-super/",
+      "ok": true
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:57:09.235Z"
+}
