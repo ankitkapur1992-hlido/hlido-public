@@ -1,0 +1,100 @@
+{
+  "slug": "hubspot-breeze",
+  "name": "HubSpot Breeze",
+  "category": "AI Agent",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of HubSpot Breeze",
+  "review_url": "https://hlido.eu/reviews/hubspot-breeze/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/hubspot-breeze/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-hubspot-breeze-moneqcmp",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "That page doesn't exist. But based on where you were headed, this one's worth a look: Meet Breeze — HubSpot's AI tools that make impossible growth impossibly easy.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'Pricing' is present on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.hubspot.com/404?url=%2Fproducts%2Fbreeze&domain=hubspot.com",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.hubspot.com/pricing/marketing?hubs_content=www.hubspot.com%2F404&hubs_content-cta=nav-pricing&url=%2Fproducts%2Fbreeze&domain=hubspot.com",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.hubspot.com/partners/solutions?hubs_content=www.hubspot.com/404&hubs_content-cta=nav-resources-solutions&url=/products/breeze&domain=hubspot.com",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://www.hubspot.com/resources/templates?hubs_content=www.hubspot.com/404&hubs_content-cta=footer-tools-businesstemplates&url=/products/breeze&domain=hubspot.com",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.hubspot.com/new?hubs_content=www.hubspot.com/404&hubs_content-cta=nav-resources-new&url=/products/breeze&domain=hubspot.com",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:11:56.685Z"
+}
