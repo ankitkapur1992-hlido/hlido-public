@@ -1,0 +1,99 @@
+{
+  "slug": "modal-com",
+  "name": "Modal",
+  "category": "Infra",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Modal",
+  "review_url": "https://hlido.eu/reviews/modal-com/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/modal-com/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-modal-com-moo1sk1o",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "AI infrastructure that developers love",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Modal Documentation\"",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "First-party integrations",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "\"SOC2 & HIPAA\" and \"Data residency controls\"",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://modal.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://modal.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://modal.com/docs",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://modal.com/login?next=%2Fapps",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://modal.com/docs/examples",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://modal.com/blog/quora-case-study",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:57:50.332Z"
+}
