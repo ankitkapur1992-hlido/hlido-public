@@ -1,0 +1,99 @@
+{
+  "slug": "langfuse",
+  "name": "Langfuse",
+  "category": "Eval",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Langfuse",
+  "review_url": "https://hlido.eu/reviews/langfuse/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/langfuse/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-langfuse-moo1nw2t",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Langfuse is an open-source LLM engineering platform that helps teams collaboratively debug, analyze, and iterate on their LLM applications.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'Pricing' is present on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The documentation is accessible without login.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Langfuse works with any language and framework supporting OTel instrumentation. Additionally, 80+ integrations make getting started even easier.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "\"SOC2 & ISO27001 reports, BAA available (HIPAA)\"",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://langfuse.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://langfuse.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://langfuse.com/docs",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://langfuse.com/integrations/native/opentelemetry",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://langfuse.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": "https://langfuse.com/docs/prompt-management/features/playground",
+      "ok": true
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:53:28.723Z"
+}
