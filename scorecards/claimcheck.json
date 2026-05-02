@@ -1,0 +1,103 @@
+{
+  "slug": "claimcheck",
+  "name": "ClaimCheck",
+  "category": "AI Agent",
+  "score": 65,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of ClaimCheck",
+  "review_url": "https://hlido.eu/reviews/claimcheck/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/claimcheck/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-claimcheck-monf0x91",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Discover Your Blockchain Rewards in One Click",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Enter your wallet address to instantly check your airdrop rewards across all blockchain networks.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "Our tool checks token balances from Arbitrum (ARB), Optimism (OP), ENS, Uniswap (UNI), and other popular crypto airdrops.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "We only require your public wallet address - never your private keys or seed phrases.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://claimcheck.io/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://claimcheck.io/#",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:19:32.707Z"
+}
