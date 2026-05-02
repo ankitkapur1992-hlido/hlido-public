@@ -1,0 +1,101 @@
+{
+  "slug": "activepieces",
+  "name": "Activepieces",
+  "category": "Workflow",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Activepieces",
+  "review_url": "https://hlido.eu/reviews/activepieces/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/activepieces/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-activepieces-moo1lm5p",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "AI-first automation for every team · Activepieces",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link labeled 'Pricing'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The documentation is accessible without login at https://www.activepieces.com/docs/getting-started/introduction.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "696+ INTEGRATIONS",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Self-hosted and network-gapped for maximum security and control over your data.",
+      "source_surface": "docs"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.activepieces.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.activepieces.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://www.activepieces.com/docs/getting-started/introduction",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.activepieces.com/blog#automation-thoughts",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:51:34.042Z"
+}
