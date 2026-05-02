@@ -1,0 +1,102 @@
+{
+  "slug": "brave-leo",
+  "name": "Brave Leo",
+  "category": "Browser",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Brave Leo",
+  "review_url": "https://hlido.eu/reviews/brave-leo/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/brave-leo/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-brave-leo-moo211xu",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The smart AI assistant built right in your browser. Ask questions, get answers, with unparalleled privacy.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "No account or login is required. Just open and chat. Privately.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Tools & integrations\"",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Leo doesn’t retain or share chats, or use them for additional model training.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://brave.com/leo/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://brave.com/search/api/tools/",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://brave.com/whats-new/",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:03:29.988Z"
+}
