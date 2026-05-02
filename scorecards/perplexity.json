@@ -1,0 +1,103 @@
+{
+  "slug": "perplexity",
+  "name": "Perplexity",
+  "category": "ai-search",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "AI-powered answer engine with cited sources. Public no-login basic queries. Pro tier for advanced reasoning models.",
+  "review_url": "https://hlido.eu/reviews/perplexity/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/perplexity/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-perplexity-monehpzb",
+  "claims": [
+    {
+      "id": "homepage-loads",
+      "claim": "Verify the Perplexity homepage loads with a search input field visible without requiring sign-in",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Ask anything…\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "type-query-france",
+      "claim": "Type the literal query 'What is the capital of France and what is its population?' into the main search input and submit it. Verify an answer appears on the page.",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "answer-has-citations",
+      "claim": "Verify the rendered answer includes at least one numbered citation link or source reference",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "type-followup-query",
+      "claim": "Type a follow-up question 'When was it founded?' into the follow-up or new search input and submit it. Verify a second answer appears.",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "The corpus does not provide relevant content regarding the follow-up question feature.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing-exists",
+      "claim": "Verify a pricing or pro plan page is reachable from navigation and lists at least one paid plan",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain any links to a pricing or pro plan page.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.perplexity.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.perplexity.ai/computer/connectors",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:04:28.487Z"
+}
