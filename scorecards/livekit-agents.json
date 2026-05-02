@@ -1,0 +1,101 @@
+{
+  "slug": "livekit-agents",
+  "name": "LiveKit Agents",
+  "category": "Voice",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of LiveKit Agents",
+  "review_url": "https://hlido.eu/reviews/livekit-agents/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/livekit-agents/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-livekit-agents-moo27j43",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage states, \"The open source framework and cloud platform for voice, video, and physical AI agents.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"The framework is fully open source and supported by an active community.\"",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The framework supports plugins for most major AI providers, with more continually added.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://docs.livekit.io/agents/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": "https://docs.livekit.io/reference/developer-tools/livekit-cli/",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://docs.livekit.io/agents/integrations/cerebras/",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://docs.livekit.io/reference/recipes/",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:08:35.023Z"
+}
