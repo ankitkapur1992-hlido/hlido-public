@@ -1,0 +1,102 @@
+{
+  "slug": "ravenpack",
+  "name": "RavenPack",
+  "category": "Finance",
+  "score": 65,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of RavenPack",
+  "review_url": "https://hlido.eu/reviews/ravenpack/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/ravenpack/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-ravenpack-moo219aq",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "RavenPack is the leading provider of insights and technology for data-driven companies, including the most successful hedge funds, banks, and asset managers in the world.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The homepage contains links to 'Solutions', 'Products', and 'Support', but does not explicitly mention a 'Pricing' link.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "RavenPack partners with some of the leading firms in alternative data to source high-quality datasets.",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "\"All FT content is made available under licensing agreements that ensure full copyright compliance and respect for intellectual property.\"",
+      "source_surface": "changelog"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.ravenpack.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.ravenpack.com/company#partners",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.ravenpack.com/blog/ravenpack-financial-times-investment-content-integration",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:03:49.431Z"
+}
