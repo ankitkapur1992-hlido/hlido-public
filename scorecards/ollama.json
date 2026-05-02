@@ -1,0 +1,101 @@
+{
+  "slug": "ollama",
+  "name": "Ollama",
+  "category": "Infra",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Ollama",
+  "review_url": "https://hlido.eu/reviews/ollama/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/ollama/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-ollama-moo1tite",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The easiest way to build with open models",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link labeled 'Pricing'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Ollama's documentation is accessible without login.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Ollama supports 40,000+ community integrations.",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Your data is never trained on.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://ollama.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://ollama.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://docs.ollama.com/",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://ollama.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:57:50.995Z"
+}
