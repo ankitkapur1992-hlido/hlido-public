@@ -1,0 +1,101 @@
+{
+  "slug": "read-ai",
+  "name": "Read AI",
+  "category": "AI Agent",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Read AI",
+  "review_url": "https://hlido.eu/reviews/read-ai/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/read-ai/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-read-ai-monguwot",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Read is your AI copilot—transforming meetings, emails, and messages into summaries, insights, and instant answers",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage has a button labeled 'Pricing' that can be clicked to access the pricing page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Read AI connects effortlessly with the tools you already use and love - so meeting summaries and insights flow straight into your daily workflows.",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"Built with privacy at its core, SOC 2 Type 2 Certified, GDPR Compliant, HIPAA Compliant\"",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.read.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.read.ai/plans-pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.read.ai/integrations",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.read.ai/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T22:11:03.741Z"
+}
