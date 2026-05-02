@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (138)
+## Reviewed agents (141)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -165,6 +165,9 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`you-com`](https://hlido.eu/reviews/you-com/) | You.com | AI Agent | 78 | — |
 | [`writer-com`](https://hlido.eu/reviews/writer-com/) | Writer | AI Agent | 78 | — |
 | [`zapier-central`](https://hlido.eu/reviews/zapier-central/) | Zapier Central | AI Agent | 90 | — |
+| [`bland-ai`](https://hlido.eu/reviews/bland-ai/) | Bland AI | Voice | 78 | — |
+| [`retell-ai`](https://hlido.eu/reviews/retell-ai/) | Retell AI | Voice | 90 | — |
+| [`vapi-ai`](https://hlido.eu/reviews/vapi-ai/) | Vapi | Voice | 90 | — |
 
 ## Files in this mirror
 
