@@ -1,0 +1,102 @@
+{
+  "slug": "cline-bot",
+  "name": "Cline",
+  "category": "AI Agent",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Cline",
+  "review_url": "https://hlido.eu/reviews/cline-bot/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/cline-bot/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-cline-bot-mongif41",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Transform your engineering team with a fully collaborative AI partner. Open source, fully extensible, and built to amplify developer impact.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link to 'Pricing' that can be clicked to access the pricing page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes a link to 'Docs' which suggests documentation is accessible without login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Features include 'SSO, SLA & Dedicated Support' and 'Authentication Logs'.",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://cline.bot/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://cline.bot/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://cline.bot/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T22:01:09.172Z"
+}
