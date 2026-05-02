@@ -1,0 +1,101 @@
+{
+  "slug": "abridge",
+  "name": "Abridge",
+  "category": "Healthcare",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Abridge",
+  "review_url": "https://hlido.eu/reviews/abridge/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/abridge/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-abridge-moo1calg",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Enterprise-grade AI for clinical conversations—trusted by the largest healthcare systems.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The presence of a 'LOGIN' link on the homepage indicates that access to documentation or live demo may require login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "Abridge is rapidly becoming the platform of choice for enterprise-wide deployment at leading healthcare systems across the country, including Johns Hopkins Medicine, Corewell Health, Deaconess Health System, Reid Health, University of Vermont Health Network, CHRISTUS Health, UChicago Medicine, Sutter Health, Yale New Haven Health System, UCI Health, Emory Healthcare, The University of Kansas Health System, UPMC, and many more.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Abridge is the only company that maps AI-generated summaries to ground truth, helping providers quickly trust and verify the output.",
+      "source_surface": "docs"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.abridge.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": "https://www.abridge.com/press-release/mayo-clinic-announcement",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.abridge.com/press-release/altamed-abridge",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.abridge.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:44:18.851Z"
+}
