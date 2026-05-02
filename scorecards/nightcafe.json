@@ -1,0 +1,102 @@
+{
+  "slug": "nightcafe",
+  "name": "NightCafe",
+  "category": "Image",
+  "score": 53,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of NightCafe",
+  "review_url": "https://hlido.eu/reviews/nightcafe/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/nightcafe/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-nightcafe-moo1xava",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "NightCafe is the AI Art Generator for AI artists, enthusiasts and content creators. Imagine it, create it, share it.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The pricing page is currently inaccessible due to a security verification process.",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The pricing page indicates that it is performing security verification and does not provide access to documentation or a live demo without login.",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://creator.nightcafe.studio/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://creator.nightcafe.studio/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": "https://creator.nightcafe.studio/gallery/art-workout",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:00:32.622Z"
+}
