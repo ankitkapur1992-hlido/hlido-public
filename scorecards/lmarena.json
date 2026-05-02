@@ -1,0 +1,96 @@
+{
+  "slug": "lmarena",
+  "name": "Chatbot Arena (LMArena)",
+  "category": "ai-evaluation",
+  "score": 40,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public side-by-side LLM comparison platform. Type a prompt, get two anonymous model answers, vote which is better. Used as the de facto LLM leaderboard.",
+  "review_url": "https://hlido.eu/reviews/lmarena/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/lmarena/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-lmarena-monehjon",
+  "claims": [
+    {
+      "id": "homepage-loads",
+      "claim": "Verify the LMArena homepage loads with a chat input textarea visible without requiring sign-in",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "type-physics-query",
+      "claim": "Type the literal prompt 'Explain in two sentences why the sky is blue' into the main chat input textarea and submit it (press Enter or click the send button). Wait for AI responses to appear.",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "verify-response-appeared",
+      "claim": "Verify that AI-generated text content has appeared on the page in response to the prompt — at least one model has produced a visible answer with multiple words",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "leaderboard-link",
+      "claim": "Verify a Leaderboard link is visible in the navigation that leads to model rankings",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://arena.ai/?manage-cookies=true",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 0,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:04:22.344Z"
+}
