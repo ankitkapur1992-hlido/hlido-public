@@ -1,0 +1,101 @@
+{
+  "slug": "daily-co",
+  "name": "Daily",
+  "category": "Voice",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Daily",
+  "review_url": "https://hlido.eu/reviews/daily-co/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/daily-co/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-daily-co-moo029y6",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Build ultra low latency conversations. Global WebRTC infrastructure and enterprise reliability since 2016.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"/ PRICING\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes a button labeled 'DOCS' which suggests that documentation is accessible.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Build realtime voice, video, and AI with our partners.\"",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Daily offers true end-to-end encryption, provides signed HIPAA BAAs, and operates under the EU-US Data Privacy Framework.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.daily.co/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.daily.co/pricing/video-sdk/",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.daily.co/partners/#ai-infrastructure-partners",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.daily.co/blog/",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:08:32.449Z"
+}
