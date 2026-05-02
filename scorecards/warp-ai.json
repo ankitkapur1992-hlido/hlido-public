@@ -1,0 +1,102 @@
+{
+  "slug": "warp-ai",
+  "name": "Warp AI",
+  "category": "Coding",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Warp AI",
+  "review_url": "https://hlido.eu/reviews/warp-ai/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/warp-ai/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-warp-ai-moo16igs",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Warp: The Agentic Development Environment\" clearly states the product's value proposition.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link to 'Pricing' that can be accessed in two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "You can learn more about the contribution process in \"CONTRIBUTING.md\"",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"SOC 2 Compliance\" and \"Zero data retention policy for AI\" are mentioned in the pricing section.",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.warp.dev/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.warp.dev/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.warp.dev/blog/warp-is-now-open-source",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:39:59.153Z"
+}
