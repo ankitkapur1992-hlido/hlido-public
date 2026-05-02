@@ -1,0 +1,101 @@
+{
+  "slug": "perplexity-api",
+  "name": "Perplexity API",
+  "category": "API",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Perplexity API",
+  "review_url": "https://hlido.eu/reviews/perplexity-api/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/perplexity-api/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-perplexity-api-moo1z9nd",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Power your products with unparalleled real-time, web-wide research and Q&A capabilities.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Pricing\" is listed as a link on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Getting started is simple and fast—make your first API call within minutes.\"",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The Agent API now supports Claude Opus 4.7, GPT-5.5, and Grok 4.20 Reasoning — extending model choice for tool-calling, structured outputs, and fallback chains.",
+      "source_surface": "changelog"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"API Key Management: Security Upgrade - We’ve upgraded API key management with a one-time reveal model: full token values are now returned only at the moment of creation and cannot be retrieved again from the console or any endpoint.\"",
+      "source_surface": "changelog"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://docs.perplexity.ai/docs/getting-started/overview",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://docs.perplexity.ai/docs/getting-started/overview#content-area",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://docs.perplexity.ai/docs/resources/changelog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:02:13.627Z"
+}
