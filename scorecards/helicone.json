@@ -1,0 +1,102 @@
+{
+  "slug": "helicone",
+  "name": "Helicone",
+  "category": "AI Agent",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Helicone",
+  "review_url": "https://hlido.eu/reviews/helicone/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/helicone/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-helicone-mongo431",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The world's fastest-growing AI companies rely on Helicone to route, debug, and analyze their applications.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Pricing\" is listed as a link on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Docs\" is accessible from the homepage without login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "INTEGRATIONS: OpenAI, Anthropic, Azure, LiteLLM, Anyscale, Together AI, OpenRouter, Other",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "SOC-2 & HIPAA compliance",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.helicone.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.helicone.ai/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.helicone.ai/blog/joining-mintlify",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T22:05:34.303Z"
+}
