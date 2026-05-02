@@ -1,0 +1,102 @@
+{
+  "slug": "griptape",
+  "name": "Griptape",
+  "category": "Workflow",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Griptape",
+  "review_url": "https://hlido.eu/reviews/griptape/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/griptape/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-griptape-moo27j4d",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Unleash Your AI Creative Superpowers\" and \"A new way for creative professionals to harness the full power of generative AI in their workflows.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes a link to 'Docs' which suggests documentation is accessible without login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Griptape now integrates with RunwayML for code-free creative AI workflows, including image-to-video generation & reference image use.",
+      "source_surface": "changelog"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Griptape offers the ability to store information in a configurable vector store called TaskMemory, which can be helpful in cases where you do not want to share information with model providers for security or compliance reasons.",
+      "source_surface": "integrations"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.griptape.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://www.griptape.ai/sample-applications",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.griptape.ai/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:08:33.175Z"
+}
