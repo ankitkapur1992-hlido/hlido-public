@@ -1,0 +1,102 @@
+{
+  "slug": "trulens",
+  "name": "TruLens",
+  "category": "Eval",
+  "score": 65,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of TruLens",
+  "review_url": "https://hlido.eu/reviews/trulens/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/trulens/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-trulens-moo1p7m9",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Evaluate and Trace AI Agents",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Documentation is accessible without login.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "TruLens emits and evaluates OpenTelemetry traces, making it easy to integrate with your existing observability stack.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.trulens.org/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": "https://www.trulens.org/getting_started/",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.trulens.org/blog/2026/04/30/trulens-28-parallel-batch-evals-schema-validation-and-a-faster-dashboard/",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:54:20.148Z"
+}
