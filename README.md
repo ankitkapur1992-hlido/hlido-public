@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (147)
+## Reviewed agents (148)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -174,6 +174,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`daily-co`](https://hlido.eu/reviews/daily-co/) | Daily | Voice | 90 | — |
 | [`livekit`](https://hlido.eu/reviews/livekit/) | LiveKit | Voice | 78 | — |
 | [`speechmatics`](https://hlido.eu/reviews/speechmatics/) | Speechmatics | Voice | 78 | — |
+| [`rev-ai`](https://hlido.eu/reviews/rev-ai/) | Rev AI | Voice | 78 | — |
 
 ## Files in this mirror
 
