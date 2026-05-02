@@ -1,0 +1,101 @@
+{
+  "slug": "traceloop",
+  "name": "Traceloop",
+  "category": "Eval",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Traceloop",
+  "review_url": "https://hlido.eu/reviews/traceloop/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/traceloop/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-traceloop-moo1od5f",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Traceloop turns evals and monitors into a continuous feedback loop - so every release gets better.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link to 'Pricing'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The documentation is accessible via the link labeled 'Docs' on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Traceloop supports 20+ providers (OpenAI, Anthropic, Gemini, Bedrock, Ollama), vector DBs (Pinecone, Chroma), and frameworks like LangChain, LlamaIndex, and CrewAI.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "SOC 2 & HIPAA compliant.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.traceloop.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.traceloop.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://www.traceloop.com/docs",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.traceloop.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:53:44.212Z"
+}
