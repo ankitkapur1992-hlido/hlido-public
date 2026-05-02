@@ -1,0 +1,102 @@
+{
+  "slug": "agno",
+  "name": "Agno",
+  "category": "Workflow",
+  "score": 78,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Agno",
+  "review_url": "https://hlido.eu/reviews/agno/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/agno/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-agno-moo27j4d",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The all-in-one agent platform that runs in your cloud.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'PRICING' is available directly on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'DOCS' is available on the homepage and pricing page, indicating that documentation is accessible without login.",
+      "source_surface": "homepage|pricing"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "\"interfaces = [Slack(), AISdk(), AGUI()]\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Privacy and security are built into the architecture, not layered on.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.agno.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.agno.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.agno.com/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T08:08:32.722Z"
+}
