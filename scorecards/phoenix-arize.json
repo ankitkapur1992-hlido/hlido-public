@@ -1,0 +1,102 @@
+{
+  "slug": "phoenix-arize",
+  "name": "Phoenix (Arize)",
+  "category": "Eval",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of Phoenix (Arize)",
+  "review_url": "https://hlido.eu/reviews/phoenix-arize/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/phoenix-arize/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-phoenix-arize-moo1o1t8",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Arize Phoenix: Open-source LLM tracing and evaluation\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The link to 'Pricing' is available directly on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes links to 'Docs' and 'Release Notes' which are accessible without login.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The integrations section lists multiple supported frameworks including 'LlamaIndex', 'Langchain', 'OpenAI', 'Mistral', 'Google Vertex', 'DSPy', 'AWS Bedrock', 'Guardrails AI', 'Haystack', and 'CrewAI'.",
+      "source_surface": "integrations"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "SOC2 reports and HIPAA compliance",
+      "source_surface": "pricing"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://phoenix.arize.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://phoenix.arize.com/pricing/",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://phoenix.arize.com/integration/llamaindex/",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 4,
+  "required_items_passing": 4,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-02T07:53:27.806Z"
+}
