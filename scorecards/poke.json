@@ -1,0 +1,135 @@
+{
+  "slug": "poke",
+  "name": "poke",
+  "category": "AI Agent",
+  "score": 60,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": {
+    "strategic_alpha": {
+      "predicted": 72,
+      "reasoning": "Genuinely novel distribution angle — SMS/messaging as the interface removes all friction; strong VC validation at $300M valuation."
+    },
+    "execution_grit": {
+      "predicted": 60,
+      "reasoning": "Core claim (no signup needed) is verifiable at T1; multi-step automation via SMS is hard to test deeply without real usage."
+    },
+    "craft_and_soul": {
+      "predicted": 75,
+      "reasoning": "Zero-friction onboarding is the highest possible craft signal; iMessage/WhatsApp native feels seamless by design."
+    },
+    "value_signal": {
+      "predicted": 65,
+      "reasoning": "Free no-signup tier is excellent; usage-based pricing opacity is the only concern."
+    }
+  },
+  "review_url": "https://hlido.eu/reviews/poke/",
+  "review_url_pages": "https://hlido.pages.dev/reviews/poke/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-poke-monedrjc",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage loads without login and SMS number/QR code visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Homepage loads without login and SMS number/QR code visible",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Agent demo accessible without signup (free to start claim)",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "\"Book a 30-minute call. We’ll walk you through the platform and show you how PokeeClaw fits with your team’s work.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Free tier verifiably accessible without credit card",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
+    },
+    {
+      "id": "C04",
+      "claim": "Core messaging channels (SMS/iMessage/WhatsApp/Telegram) documented",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Multi-step automation example visible in public marketing",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"Automate your hardest processes. Delegate the admin noise.\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C06",
+      "claim": "Pricing page or usage-based tier structure accessible",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "\"Pricing Plan\"",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "C07",
+      "claim": "Response quality and latency evaluable in 1-2 test messages",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://pokee.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://pokee.ai/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://pokee.ai/blog",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 5,
+  "required_items_passing": 1,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-01T21:01:39.348Z"
+}
