@@ -30,7 +30,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`naoma-ai-demo-agent`](https://hlido.eu/reviews/naoma-ai-demo-agent/) | Naoma AI Demo Agent | Sales | 80 | — |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
 | [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | AI Workflow Builder | 80 | — |
-| [`aider`](https://hlido.eu/reviews/aider/) | Aider | AI Coding CLI | 90 | — |
+| [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 90 | — |
 | [`jared-so`](https://hlido.eu/reviews/jared-so/) | jared-so | Productivity | 40 | — |
 | [`raccoon-ai`](https://hlido.eu/reviews/raccoon-ai/) | raccoon-ai | Productivity | 70 | — |
 | [`needle-2-0`](https://hlido.eu/reviews/needle-2-0/) | needle-2-0 | Productivity | 80 | — |
@@ -53,7 +53,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`back4app-ai-agent`](https://hlido.eu/reviews/back4app-ai-agent/) | Back4app AI Agent | AI Agent | 40 | — |
 | [`luma-ai-agents`](https://hlido.eu/reviews/luma-ai-agents/) | Luma AI Agents | AI Agent | 65 | — |
 | [`agent-ai`](https://hlido.eu/reviews/agent-ai/) | Agent.ai | AI Agent | 78 | — |
-| [`windsurf`](https://hlido.eu/reviews/windsurf/) | Windsurf | AI Agent | 65 | — |
+| [`windsurf`](https://hlido.eu/reviews/windsurf/) | Windsurf | Coding | 65 | — |
 | [`cal-com-ai-agents`](https://hlido.eu/reviews/cal-com-ai-agents/) | Cal.com AI Agents | AI Agent | 78 | — |
 | [`usercall`](https://hlido.eu/reviews/usercall/) | UserCall | AI Agent | 40 | — |
 | [`mindstudio`](https://hlido.eu/reviews/mindstudio/) | MindStudio | AI Agent | 78 | — |
@@ -74,97 +74,97 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`fuseai`](https://hlido.eu/reviews/fuseai/) | FuseAI | AI Agent | 53 | — |
 | [`relay-app`](https://hlido.eu/reviews/relay-app/) | Relay.app | AI Agent | 78 | — |
 | [`canary-ai`](https://hlido.eu/reviews/canary-ai/) | Canary | AI Agent | 53 | — |
-| [`augment-code`](https://hlido.eu/reviews/augment-code/) | Augment Code (Intent) | AI Agent | 78 | — |
-| [`cursor`](https://hlido.eu/reviews/cursor/) | Cursor | AI Agent | 78 | — |
+| [`augment-code`](https://hlido.eu/reviews/augment-code/) | Augment Code (Intent) | Coding | 78 | — |
+| [`cursor`](https://hlido.eu/reviews/cursor/) | Cursor | Coding | 78 | — |
 | [`cto-new`](https://hlido.eu/reviews/cto-new/) | cto.new | AI Agent | 90 | — |
 | [`orange-slice`](https://hlido.eu/reviews/orange-slice/) | Orange Slice | AI Agent | 90 | — |
-| [`claimcheck`](https://hlido.eu/reviews/claimcheck/) | ClaimCheck | AI Agent | 65 | — |
+| [`claimcheck`](https://hlido.eu/reviews/claimcheck/) | ClaimCheck | Coding | 65 | — |
 | [`kaily`](https://hlido.eu/reviews/kaily/) | Kaily | AI Agent | 78 | — |
 | [`magine`](https://hlido.eu/reviews/magine/) | Magine | AI Agent | 65 | — |
 | [`blink-ai`](https://hlido.eu/reviews/blink-ai/) | Blink | AI Agent | 65 | — |
 | [`cosyra-2`](https://hlido.eu/reviews/cosyra-2/) | Cosyra | AI Agent | 78 | — |
 | [`catdoes-v4`](https://hlido.eu/reviews/catdoes-v4/) | CatDoes v4 | AI Agent | 65 | — |
 | [`denovo`](https://hlido.eu/reviews/denovo/) | Denovo | AI Agent | 78 | — |
-| [`athena-intel`](https://hlido.eu/reviews/athena-intel/) | Athena Intelligence | AI Agent | 53 | — |
-| [`anthropic-computer-use`](https://hlido.eu/reviews/anthropic-computer-use/) | Anthropic Computer Use | AI Agent | 40 | — |
-| [`anyword`](https://hlido.eu/reviews/anyword/) | Anyword | AI Agent | 90 | — |
+| [`athena-intel`](https://hlido.eu/reviews/athena-intel/) | Athena Intelligence | Workflow | 53 | — |
+| [`anthropic-computer-use`](https://hlido.eu/reviews/anthropic-computer-use/) | Anthropic Computer Use | Browser | 40 | — |
+| [`anyword`](https://hlido.eu/reviews/anyword/) | Anyword | Writing | 90 | — |
 | [`axe`](https://hlido.eu/reviews/axe/) | Axe | AI Agent | 40 | — |
-| [`bolt-new`](https://hlido.eu/reviews/bolt-new/) | Bolt.new | AI Agent | 65 | — |
-| [`braintrust`](https://hlido.eu/reviews/braintrust/) | Braintrust | AI Agent | 90 | — |
-| [`cerebras`](https://hlido.eu/reviews/cerebras/) | Cerebras | AI Agent | 65 | — |
-| [`cassidy-ai`](https://hlido.eu/reviews/cassidy-ai/) | Cassidy | AI Agent | 78 | — |
-| [`chatgpt`](https://hlido.eu/reviews/chatgpt/) | ChatGPT | AI Agent | 65 | — |
-| [`character-ai`](https://hlido.eu/reviews/character-ai/) | Character.AI | AI Agent | 53 | — |
+| [`bolt-new`](https://hlido.eu/reviews/bolt-new/) | Bolt.new | Coding | 65 | — |
+| [`braintrust`](https://hlido.eu/reviews/braintrust/) | Braintrust | Agent Framework | 90 | — |
+| [`cerebras`](https://hlido.eu/reviews/cerebras/) | Cerebras | Infra | 65 | — |
+| [`cassidy-ai`](https://hlido.eu/reviews/cassidy-ai/) | Cassidy | Workflow | 78 | — |
+| [`chatgpt`](https://hlido.eu/reviews/chatgpt/) | ChatGPT | Chat | 65 | — |
+| [`character-ai`](https://hlido.eu/reviews/character-ai/) | Character.AI | Chat | 53 | — |
 | [`chatwithads`](https://hlido.eu/reviews/chatwithads/) | ChatWithAds | AI Agent | 78 | — |
-| [`claude-ai`](https://hlido.eu/reviews/claude-ai/) | Claude.ai | AI Agent | 53 | — |
-| [`cline-bot`](https://hlido.eu/reviews/cline-bot/) | Cline | AI Agent | 78 | — |
-| [`codeium`](https://hlido.eu/reviews/codeium/) | Codeium | AI Agent | 65 | — |
-| [`continue-dev`](https://hlido.eu/reviews/continue-dev/) | Continue | AI Agent | 78 | — |
-| [`cohere`](https://hlido.eu/reviews/cohere/) | Cohere | AI Agent | 78 | — |
-| [`copy-ai`](https://hlido.eu/reviews/copy-ai/) | Copy.ai | AI Agent | 78 | — |
-| [`crewai`](https://hlido.eu/reviews/crewai/) | CrewAI | AI Agent | 90 | — |
+| [`claude-ai`](https://hlido.eu/reviews/claude-ai/) | Claude.ai | Chat | 53 | — |
+| [`cline-bot`](https://hlido.eu/reviews/cline-bot/) | Cline | Coding | 78 | — |
+| [`codeium`](https://hlido.eu/reviews/codeium/) | Codeium | Coding | 65 | — |
+| [`continue-dev`](https://hlido.eu/reviews/continue-dev/) | Continue | Coding | 78 | — |
+| [`cohere`](https://hlido.eu/reviews/cohere/) | Cohere | Chat | 78 | — |
+| [`copy-ai`](https://hlido.eu/reviews/copy-ai/) | Copy.ai | Writing | 78 | — |
+| [`crewai`](https://hlido.eu/reviews/crewai/) | CrewAI | Agent Framework | 90 | — |
 | [`datagrout`](https://hlido.eu/reviews/datagrout/) | DataGrout | AI Agent | 40 | — |
-| [`dust-tt`](https://hlido.eu/reviews/dust-tt/) | Dust | AI Agent | 90 | — |
-| [`descript`](https://hlido.eu/reviews/descript/) | Descript | AI Agent | 65 | — |
-| [`elevenlabs`](https://hlido.eu/reviews/elevenlabs/) | ElevenLabs | AI Agent | 78 | — |
-| [`flux-bfl`](https://hlido.eu/reviews/flux-bfl/) | FLUX (Black Forest Labs) | AI Agent | 65 | — |
-| [`flowith`](https://hlido.eu/reviews/flowith/) | Flowith | AI Agent | 78 | — |
-| [`fireworks-ai`](https://hlido.eu/reviews/fireworks-ai/) | Fireworks AI | AI Agent | 90 | — |
-| [`gemini`](https://hlido.eu/reviews/gemini/) | Gemini | AI Agent | 53 | — |
-| [`granola`](https://hlido.eu/reviews/granola/) | Granola | AI Agent | 65 | — |
-| [`github-copilot`](https://hlido.eu/reviews/github-copilot/) | GitHub Copilot | AI Agent | 90 | — |
-| [`glean`](https://hlido.eu/reviews/glean/) | Glean | AI Agent | 65 | — |
-| [`helicone`](https://hlido.eu/reviews/helicone/) | Helicone | AI Agent | 90 | — |
-| [`groq`](https://hlido.eu/reviews/groq/) | Groq | AI Agent | 78 | — |
-| [`heygen`](https://hlido.eu/reviews/heygen/) | HeyGen | AI Agent | 78 | — |
-| [`humanloop`](https://hlido.eu/reviews/humanloop/) | Humanloop | AI Agent | 40 | — |
-| [`ideogram`](https://hlido.eu/reviews/ideogram/) | Ideogram | AI Agent | 40 | — |
-| [`inflection-pi`](https://hlido.eu/reviews/inflection-pi/) | Inflection Pi | AI Agent | 53 | — |
-| [`jasper`](https://hlido.eu/reviews/jasper/) | Jasper | AI Agent | 90 | — |
-| [`krea`](https://hlido.eu/reviews/krea/) | Krea | AI Agent | 78 | — |
-| [`langchain`](https://hlido.eu/reviews/langchain/) | LangChain | AI Agent | 90 | — |
-| [`langsmith`](https://hlido.eu/reviews/langsmith/) | LangSmith | AI Agent | 53 | — |
-| [`leonardo-ai`](https://hlido.eu/reviews/leonardo-ai/) | Leonardo AI | AI Agent | 78 | — |
-| [`llamaindex`](https://hlido.eu/reviews/llamaindex/) | LlamaIndex | AI Agent | 78 | — |
-| [`lovable`](https://hlido.eu/reviews/lovable/) | Lovable | AI Agent | 78 | — |
-| [`mem-ai`](https://hlido.eu/reviews/mem-ai/) | Mem | AI Agent | 90 | — |
-| [`microsoft-copilot`](https://hlido.eu/reviews/microsoft-copilot/) | Microsoft Copilot | AI Agent | 53 | — |
-| [`midjourney`](https://hlido.eu/reviews/midjourney/) | Midjourney | AI Agent | 53 | — |
-| [`mendable`](https://hlido.eu/reviews/mendable/) | Mendable | AI Agent | 78 | — |
-| [`mistral-le-chat`](https://hlido.eu/reviews/mistral-le-chat/) | Mistral Le Chat | AI Agent | 40 | — |
-| [`notion-ai`](https://hlido.eu/reviews/notion-ai/) | Notion AI | AI Agent | 65 | — |
-| [`murf-ai`](https://hlido.eu/reviews/murf-ai/) | Murf AI | AI Agent | 65 | — |
+| [`dust-tt`](https://hlido.eu/reviews/dust-tt/) | Dust | Workflow | 90 | — |
+| [`descript`](https://hlido.eu/reviews/descript/) | Descript | Voice | 65 | — |
+| [`elevenlabs`](https://hlido.eu/reviews/elevenlabs/) | ElevenLabs | Voice | 78 | — |
+| [`flux-bfl`](https://hlido.eu/reviews/flux-bfl/) | FLUX (Black Forest Labs) | Image | 65 | — |
+| [`flowith`](https://hlido.eu/reviews/flowith/) | Flowith | Workflow | 78 | — |
+| [`fireworks-ai`](https://hlido.eu/reviews/fireworks-ai/) | Fireworks AI | Infra | 90 | — |
+| [`gemini`](https://hlido.eu/reviews/gemini/) | Gemini | Chat | 53 | — |
+| [`granola`](https://hlido.eu/reviews/granola/) | Granola | Productivity | 65 | — |
+| [`github-copilot`](https://hlido.eu/reviews/github-copilot/) | GitHub Copilot | Coding | 90 | — |
+| [`glean`](https://hlido.eu/reviews/glean/) | Glean | Research | 65 | — |
+| [`helicone`](https://hlido.eu/reviews/helicone/) | Helicone | Agent Framework | 90 | — |
+| [`groq`](https://hlido.eu/reviews/groq/) | Groq | Infra | 78 | — |
+| [`heygen`](https://hlido.eu/reviews/heygen/) | HeyGen | Voice | 78 | — |
+| [`humanloop`](https://hlido.eu/reviews/humanloop/) | Humanloop | Agent Framework | 40 | — |
+| [`ideogram`](https://hlido.eu/reviews/ideogram/) | Ideogram | Image | 40 | — |
+| [`inflection-pi`](https://hlido.eu/reviews/inflection-pi/) | Inflection Pi | Chat | 53 | — |
+| [`jasper`](https://hlido.eu/reviews/jasper/) | Jasper | Writing | 90 | — |
+| [`krea`](https://hlido.eu/reviews/krea/) | Krea | Image | 78 | — |
+| [`langchain`](https://hlido.eu/reviews/langchain/) | LangChain | Agent Framework | 90 | — |
+| [`langsmith`](https://hlido.eu/reviews/langsmith/) | LangSmith | Agent Framework | 53 | — |
+| [`leonardo-ai`](https://hlido.eu/reviews/leonardo-ai/) | Leonardo AI | Image | 78 | — |
+| [`llamaindex`](https://hlido.eu/reviews/llamaindex/) | LlamaIndex | Agent Framework | 78 | — |
+| [`lovable`](https://hlido.eu/reviews/lovable/) | Lovable | Coding | 78 | — |
+| [`mem-ai`](https://hlido.eu/reviews/mem-ai/) | Mem | Productivity | 90 | — |
+| [`microsoft-copilot`](https://hlido.eu/reviews/microsoft-copilot/) | Microsoft Copilot | Chat | 53 | — |
+| [`midjourney`](https://hlido.eu/reviews/midjourney/) | Midjourney | Image | 53 | — |
+| [`mendable`](https://hlido.eu/reviews/mendable/) | Mendable | Research | 78 | — |
+| [`mistral-le-chat`](https://hlido.eu/reviews/mistral-le-chat/) | Mistral Le Chat | Chat | 40 | — |
+| [`notion-ai`](https://hlido.eu/reviews/notion-ai/) | Notion AI | Research | 65 | — |
+| [`murf-ai`](https://hlido.eu/reviews/murf-ai/) | Murf AI | Voice | 65 | — |
 | [`nyx`](https://hlido.eu/reviews/nyx/) | Nyx | AI Agent | 40 | — |
-| [`openai-operator`](https://hlido.eu/reviews/openai-operator/) | OpenAI Operator | AI Agent | 65 | — |
-| [`openrouter`](https://hlido.eu/reviews/openrouter/) | OpenRouter | AI Agent | 78 | — |
-| [`phind`](https://hlido.eu/reviews/phind/) | Phind | AI Agent | 40 | — |
-| [`pika`](https://hlido.eu/reviews/pika/) | Pika | AI Agent | 40 | — |
-| [`otter-ai`](https://hlido.eu/reviews/otter-ai/) | Otter.ai | AI Agent | 90 | — |
-| [`pydantic-ai`](https://hlido.eu/reviews/pydantic-ai/) | Pydantic AI | AI Agent | 78 | — |
-| [`reflect-app`](https://hlido.eu/reviews/reflect-app/) | Reflect | AI Agent | 65 | — |
-| [`read-ai`](https://hlido.eu/reviews/read-ai/) | Read AI | AI Agent | 78 | — |
-| [`resemble-ai`](https://hlido.eu/reviews/resemble-ai/) | Resemble AI | AI Agent | 78 | — |
-| [`replit-agent`](https://hlido.eu/reviews/replit-agent/) | Replit Agent | AI Agent | 90 | — |
-| [`relevance-ai`](https://hlido.eu/reviews/relevance-ai/) | Relevance AI | AI Agent | 90 | — |
-| [`runway`](https://hlido.eu/reviews/runway/) | Runway | AI Agent | 78 | — |
+| [`openai-operator`](https://hlido.eu/reviews/openai-operator/) | OpenAI Operator | Browser | 65 | — |
+| [`openrouter`](https://hlido.eu/reviews/openrouter/) | OpenRouter | Infra | 78 | — |
+| [`phind`](https://hlido.eu/reviews/phind/) | Phind | Chat | 40 | — |
+| [`pika`](https://hlido.eu/reviews/pika/) | Pika | Image | 40 | — |
+| [`otter-ai`](https://hlido.eu/reviews/otter-ai/) | Otter.ai | Productivity | 90 | — |
+| [`pydantic-ai`](https://hlido.eu/reviews/pydantic-ai/) | Pydantic AI | Agent Framework | 78 | — |
+| [`reflect-app`](https://hlido.eu/reviews/reflect-app/) | Reflect | Productivity | 65 | — |
+| [`read-ai`](https://hlido.eu/reviews/read-ai/) | Read AI | Productivity | 78 | — |
+| [`resemble-ai`](https://hlido.eu/reviews/resemble-ai/) | Resemble AI | Voice | 78 | — |
+| [`replit-agent`](https://hlido.eu/reviews/replit-agent/) | Replit Agent | Coding | 90 | — |
+| [`relevance-ai`](https://hlido.eu/reviews/relevance-ai/) | Relevance AI | Workflow | 90 | — |
+| [`runway`](https://hlido.eu/reviews/runway/) | Runway | Image | 78 | — |
 | [`sonarly`](https://hlido.eu/reviews/sonarly/) | Sonarly | AI Agent | 53 | — |
-| [`retool-agents`](https://hlido.eu/reviews/retool-agents/) | Retool Agents | AI Agent | 78 | — |
-| [`stability-ai`](https://hlido.eu/reviews/stability-ai/) | Stability AI | AI Agent | 90 | — |
-| [`sourcegraph-cody`](https://hlido.eu/reviews/sourcegraph-cody/) | Sourcegraph Cody | AI Agent | 90 | — |
-| [`stack-ai`](https://hlido.eu/reviews/stack-ai/) | Stack AI | AI Agent | 78 | — |
-| [`suno`](https://hlido.eu/reviews/suno/) | Suno | AI Agent | 53 | — |
-| [`superhuman`](https://hlido.eu/reviews/superhuman/) | Superhuman | AI Agent | 78 | — |
-| [`synthesia`](https://hlido.eu/reviews/synthesia/) | Synthesia | AI Agent | 90 | — |
-| [`tabnine`](https://hlido.eu/reviews/tabnine/) | Tabnine | AI Agent | 90 | — |
-| [`tana`](https://hlido.eu/reviews/tana/) | Tana | AI Agent | 65 | — |
-| [`tavus`](https://hlido.eu/reviews/tavus/) | Tavus | AI Agent | 78 | — |
-| [`v0`](https://hlido.eu/reviews/v0/) | v0 | AI Agent | 65 | — |
-| [`together-ai`](https://hlido.eu/reviews/together-ai/) | Together AI | AI Agent | 65 | — |
-| [`vercel-ai-sdk`](https://hlido.eu/reviews/vercel-ai-sdk/) | Vercel AI SDK | AI Agent | 78 | — |
-| [`vellum-ai`](https://hlido.eu/reviews/vellum-ai/) | Vellum | AI Agent | 78 | — |
-| [`you-com`](https://hlido.eu/reviews/you-com/) | You.com | AI Agent | 78 | — |
-| [`writer-com`](https://hlido.eu/reviews/writer-com/) | Writer | AI Agent | 78 | — |
-| [`zapier-central`](https://hlido.eu/reviews/zapier-central/) | Zapier Central | AI Agent | 90 | — |
+| [`retool-agents`](https://hlido.eu/reviews/retool-agents/) | Retool Agents | Workflow | 78 | — |
+| [`stability-ai`](https://hlido.eu/reviews/stability-ai/) | Stability AI | Image | 90 | — |
+| [`sourcegraph-cody`](https://hlido.eu/reviews/sourcegraph-cody/) | Sourcegraph Cody | Coding | 90 | — |
+| [`stack-ai`](https://hlido.eu/reviews/stack-ai/) | Stack AI | Workflow | 78 | — |
+| [`suno`](https://hlido.eu/reviews/suno/) | Suno | Voice | 53 | — |
+| [`superhuman`](https://hlido.eu/reviews/superhuman/) | Superhuman | Productivity | 78 | — |
+| [`synthesia`](https://hlido.eu/reviews/synthesia/) | Synthesia | Voice | 90 | — |
+| [`tabnine`](https://hlido.eu/reviews/tabnine/) | Tabnine | Coding | 90 | — |
+| [`tana`](https://hlido.eu/reviews/tana/) | Tana | Productivity | 65 | — |
+| [`tavus`](https://hlido.eu/reviews/tavus/) | Tavus | Voice | 78 | — |
+| [`v0`](https://hlido.eu/reviews/v0/) | v0 | Coding | 65 | — |
+| [`together-ai`](https://hlido.eu/reviews/together-ai/) | Together AI | Infra | 65 | — |
+| [`vercel-ai-sdk`](https://hlido.eu/reviews/vercel-ai-sdk/) | Vercel AI SDK | Agent Framework | 78 | — |
+| [`vellum-ai`](https://hlido.eu/reviews/vellum-ai/) | Vellum | Agent Framework | 78 | — |
+| [`you-com`](https://hlido.eu/reviews/you-com/) | You.com | Chat | 78 | — |
+| [`writer-com`](https://hlido.eu/reviews/writer-com/) | Writer | Writing | 78 | — |
+| [`zapier-central`](https://hlido.eu/reviews/zapier-central/) | Zapier Central | Workflow | 90 | — |
 | [`bland-ai`](https://hlido.eu/reviews/bland-ai/) | Bland AI | Voice | 78 | — |
 | [`retell-ai`](https://hlido.eu/reviews/retell-ai/) | Retell AI | Voice | 90 | — |
 | [`vapi-ai`](https://hlido.eu/reviews/vapi-ai/) | Vapi | Voice | 90 | — |
@@ -292,13 +292,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ollama`](https://hlido.eu/reviews/ollama/) | Ollama | Infra | 90 | — |
 | [`replicate`](https://hlido.eu/reviews/replicate/) | Replicate | Infra | 78 | — |
 | [`lmstudio`](https://hlido.eu/reviews/lmstudio/) | LM Studio | Infra | 65 | — |
-| [`deepseek-chat`](https://hlido.eu/reviews/deepseek-chat/) | DeepSeek | AI Agent | 53 | — |
-| [`xai-grok`](https://hlido.eu/reviews/xai-grok/) | Grok (xAI) | AI Agent | 65 | — |
+| [`deepseek-chat`](https://hlido.eu/reviews/deepseek-chat/) | DeepSeek | Chat | 53 | — |
+| [`xai-grok`](https://hlido.eu/reviews/xai-grok/) | Grok (xAI) | Chat | 65 | — |
 | [`hugging-face`](https://hlido.eu/reviews/hugging-face/) | HuggingFace | Infra | 78 | — |
-| [`qwen-chat`](https://hlido.eu/reviews/qwen-chat/) | Qwen Chat | AI Agent | 40 | — |
-| [`kimi-moonshot`](https://hlido.eu/reviews/kimi-moonshot/) | Kimi (Moonshot) | AI Agent | 53 | — |
+| [`qwen-chat`](https://hlido.eu/reviews/qwen-chat/) | Qwen Chat | Chat | 40 | — |
+| [`kimi-moonshot`](https://hlido.eu/reviews/kimi-moonshot/) | Kimi (Moonshot) | Chat | 53 | — |
 | [`replika`](https://hlido.eu/reviews/replika/) | Replika | Companion | 53 | — |
-| [`yi-01ai`](https://hlido.eu/reviews/yi-01ai/) | Yi (01.AI) | AI Agent | 53 | — |
+| [`yi-01ai`](https://hlido.eu/reviews/yi-01ai/) | Yi (01.AI) | Chat | 53 | — |
 | [`scenario-gg`](https://hlido.eu/reviews/scenario-gg/) | Scenario | Image | 65 | — |
 | [`playground-ai`](https://hlido.eu/reviews/playground-ai/) | Playground AI | Image | 78 | — |
 | [`nightcafe`](https://hlido.eu/reviews/nightcafe/) | NightCafe | Image | 53 | — |
