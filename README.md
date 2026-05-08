@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (341)
+## Reviewed agents (342)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -358,16 +358,17 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`opal-ai`](https://hlido.eu/reviews/opal-ai/) | Opal | Productivity | 40 | — |
 | [`swebench`](https://hlido.eu/reviews/swebench/) | SWE-bench Leaderboards | AI Agent | 65 | — |
 | [`bondai`](https://hlido.eu/reviews/bondai/) | Meet BondAI | BondAI | AI Agent | 78 | — |
-| [`emergent-wingman`](https://hlido.eu/reviews/emergent-wingman/) | Emergent Wingman | Productivity | 40 | — |
-| [`goose`](https://hlido.eu/reviews/goose/) | GooseAI | AI Agent | 78 | — |
+| [`agentrunner`](https://hlido.eu/reviews/agentrunner/) | AgentRunner | Productivity | 50 | — |
+| [`base44-superagents`](https://hlido.eu/reviews/base44-superagents/) | Base44 Superagents | Productivity | 70 | — |
 | [`cursor-3`](https://hlido.eu/reviews/cursor-3/) | Cursor 3 | Coding | 70 | — |
+| [`emergent-wingman`](https://hlido.eu/reviews/emergent-wingman/) | Emergent Wingman | Productivity | 40 | — |
+| [`gauge`](https://hlido.eu/reviews/gauge/) | Gauge | Marketing | 60 | — |
+| [`goose`](https://hlido.eu/reviews/goose/) | GooseAI | AI Agent | 78 | — |
 | [`intent-augment-code`](https://hlido.eu/reviews/intent-augment-code/) | Intent (Augment Code) | Coding | 40 | — |
 | [`openfang`](https://hlido.eu/reviews/openfang/) | OpenFang | Productivity | 40 | — |
 | [`pensieve`](https://hlido.eu/reviews/pensieve/) | Pensieve | Research | 60 | — |
 | [`workflow-machine`](https://hlido.eu/reviews/workflow-machine/) | Workflow Machine | Productivity | 60 | — |
-| [`agentrunner`](https://hlido.eu/reviews/agentrunner/) | AgentRunner | Productivity | 50 | — |
-| [`base44-superagents`](https://hlido.eu/reviews/base44-superagents/) | Base44 Superagents | Productivity | 70 | — |
-| [`gauge`](https://hlido.eu/reviews/gauge/) | Gauge | Marketing | 60 | — |
+| [`heightsplatform`](https://hlido.eu/reviews/heightsplatform/) | AI Online Course Creation Platform - Heights AI 2 Features | AI Agent | 65 | — |
 
 ## Files in this mirror
 
