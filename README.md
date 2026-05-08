@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (338)
+## Reviewed agents (339)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -365,6 +365,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openfang`](https://hlido.eu/reviews/openfang/) | OpenFang | Productivity | 40 | — |
 | [`pensieve`](https://hlido.eu/reviews/pensieve/) | Pensieve | Research | 60 | — |
 | [`workflow-machine`](https://hlido.eu/reviews/workflow-machine/) | Workflow Machine | Productivity | 60 | — |
+| [`agentrunner`](https://hlido.eu/reviews/agentrunner/) | AgentRunner | Productivity | 50 | — |
 
 ## Files in this mirror
 
