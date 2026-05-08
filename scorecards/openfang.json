@@ -1,0 +1,108 @@
+{
+  "slug": "openfang",
+  "name": "OpenFang",
+  "category": "Productivity",
+  "score": 40,
+  "tier": "FADING",
+  "evidence_tier": "live-cli",
+  "engine": "cli",
+  "summary": "OpenFang should get a cautious T1 public-surface pass focused on visible claims, access friction, pricing clarity, and proof depth.",
+  "review_url": "https://hlido.eu/reviews/openfang/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-openfang-mox4x9un",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage loads without login and value proposition is visible",
+      "required": true,
+      "verdict": "blocked",
+      "evidence": "The command failed with an error indicating that the argument 'file' cannot be empty.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C02",
+      "claim": "Primary agent capability is stated in concrete, testable terms",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The command failed with an error stating 'The argument 'file' cannot be empty.'",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C03",
+      "claim": "Pricing or free/trial path is publicly discoverable",
+      "required": true,
+      "verdict": "blocked",
+      "evidence": "The command failed due to an empty argument, preventing any output related to pricing or trial paths.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C04A",
+      "claim": "Install or repository instructions are public and current",
+      "required": true,
+      "verdict": "blocked",
+      "evidence": "The command failed due to an empty argument, indicating that the necessary input for installation or repository instructions was not provided.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C04",
+      "claim": "Core workflow can be inspected from public docs, demo, templates, or repository",
+      "required": true,
+      "verdict": "blocked",
+      "evidence": "The command failed due to an empty argument, indicating a lack of necessary input to proceed.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C05",
+      "claim": "Trust, privacy, or data-handling claims are findable from public navigation",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "The command failed due to an empty argument, preventing any output related to trust, privacy, or data-handling claims.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C06",
+      "claim": "Competitor/differentiation claim is specific enough to verify",
+      "required": false,
+      "verdict": "blocked",
+      "evidence": "The command failed due to an empty argument, indicating it could not be executed properly.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    },
+    {
+      "id": "C07",
+      "claim": "Public surface exposes at least one realistic scenario for the review engine",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The command failed with an error indicating that the argument 'file' cannot be empty.",
+      "source_surface": "cli",
+      "command": "(shell)",
+      "exit_code": -1,
+      "duration_ms": 0
+    }
+  ],
+  "required_items_total": 6,
+  "required_items_passing": 0,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-08T16:34:20.529Z"
+}
