@@ -154,6 +154,67 @@
           "name"
         ]
       }
+    },
+    {
+      "name": "subscribe",
+      "description": "Preview - Wave 3 will add persistent webhook + RSS subscriptions. For now this returns the agent's current state plus advisory polling instructions (RSS at /changelog/feed.xml or polling /data/attestations/{slug}.json). Use this to register interest in being notified when a slug's verdict changes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "The Hlido slug to subscribe to (e.g. 'cursor', 'aider')."
+          },
+          "channel": {
+            "type": "string",
+            "enum": ["rss", "json", "webhook"],
+            "description": "Preferred notification channel. webhook is advisory only until Wave 3 ships."
+          }
+        },
+        "required": ["slug"]
+      }
+    },
+    {
+      "name": "explain",
+      "description": "Structured natural-language explanation of why a Hlido-reviewed agent has its current score. Pulls claim-by-claim evidence from the published scorecard. Pass an optional dimension to filter; omit for the full picture. Returns each claim with verdict (PASS|FAIL|PARTIAL|UNKNOWN), a quoted evidence snippet (240 chars max), plus a top-line synthesis.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "The agent's Hlido slug."
+          },
+          "dimension": {
+            "type": "string",
+            "description": "Optional dimension/source-surface filter (e.g. 'homepage', 'docs', 'pricing')."
+          }
+        },
+        "required": ["slug"]
+      }
+    },
+    {
+      "name": "recommend",
+      "description": "Constraint-driven recommendation across Hlido's reviewed agents. Pass any combination of category, min_score, tier, use_case, max_results. Returns a ranked shortlist with why_match for each result.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "constraints": {
+            "type": "object",
+            "properties": {
+              "category": { "type": "string" },
+              "min_score": { "type": "integer" },
+              "tier": {
+                "type": "string",
+                "enum": ["VITAL", "STEADY", "FADING", "FLATLINE"]
+              },
+              "use_case": { "type": "string" },
+              "max_results": { "type": "integer", "default": 5 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["constraints"]
+      }
     }
   ]
 }
