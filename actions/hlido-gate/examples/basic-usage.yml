@@ -1,0 +1,32 @@
+# Hlido Gate — drop this file at .github/workflows/hlido-gate.yml in YOUR
+# vendor repo and replace `slug: cursor` with your published Hlido slug.
+#
+# What it does:
+#   - Fetches the latest signed Hlido Trust Attestation for your slug.
+#   - Posts (or replaces) a sticky PR comment with score / tier / last-tested.
+#   - In `mode: warn` it never breaks CI; flip to `mode: fail` once you trust
+#     the signal and want PRs blocked when score drops below `min-score`.
+#
+# Don't have a Hlido review yet? Submit at https://hlido.eu/submit/
+# (free public review, 1-7 day turnaround).
+
+name: Hlido Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write   # required so the action can post / update the sticky comment
+  contents: read
+
+jobs:
+  hlido-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ankitkapur1992-hlido/hlido-public/actions/hlido-gate@main
+        with:
+          slug: cursor          # YOUR Hlido slug (replace) — see https://hlido.eu/reviews/
+          min-score: 70         # below this, we warn (or fail in fail mode)
+          mode: warn            # change to 'fail' once you trust the signal
+          comment-pr: "true"    # post sticky PR comment with the score
