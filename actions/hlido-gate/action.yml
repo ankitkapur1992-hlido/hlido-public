@@ -1,0 +1,230 @@
+name: "Hlido Gate"
+description: "Fail PRs on Hlido trust score regression. Drop-in CI check for AI agent vendors with a published Hlido review."
+author: "Hlido"
+branding:
+  icon: "shield"
+  color: "orange"
+
+inputs:
+  slug:
+    description: "Hlido slug for this vendor (must already be published on hlido.eu/reviews/{slug}/). Submit via https://hlido.eu/submit/."
+    required: true
+  min-score:
+    description: "Minimum allowed Hlido score (0-100). Run fails (in fail mode) when the latest signed attestation is below this threshold."
+    required: false
+    default: "70"
+  max-regression:
+    description: "Advisory only in v1: max allowed score drop from previously-known score. Vendors track this themselves; the input is reserved for v2 (history-aware checks). Always passes in v1."
+    required: false
+    default: "5"
+  mode:
+    description: "Behavior on threshold breach: 'warn' (post comment + exit 0) or 'fail' (post comment + exit 1). Use 'warn' to roll out, 'fail' once you trust the signal."
+    required: false
+    default: "warn"
+  comment-pr:
+    description: "When 'true' and event is pull_request, post a sticky comment with the current score. Subsequent runs replace the comment via the <!-- hlido-gate --> marker."
+    required: false
+    default: "true"
+  attestation-base-url:
+    description: "Override the attestation base URL. Default points at the canonical hlido.eu CDN. Override only for testing."
+    required: false
+    default: "https://hlido.eu/data/attestations"
+
+outputs:
+  score:
+    description: "Score from the latest signed attestation (integer 0-100, or empty if fetch failed)."
+    value: ${{ steps.gate.outputs.score }}
+  tier:
+    description: "Tier from the latest signed attestation (VITAL / STEADY / FADING / FLATLINE)."
+    value: ${{ steps.gate.outputs.tier }}
+  last-tested:
+    description: "ISO date the attestation was last refreshed."
+    value: ${{ steps.gate.outputs.last_tested }}
+  decision:
+    description: "Final decision: 'pass', 'warn', or 'fail'."
+    value: ${{ steps.gate.outputs.decision }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Hlido Gate
+      id: gate
+      shell: bash
+      env:
+        HLIDO_SLUG: ${{ inputs.slug }}
+        HLIDO_MIN_SCORE: ${{ inputs.min-score }}
+        HLIDO_MAX_REGRESSION: ${{ inputs.max-regression }}
+        HLIDO_MODE: ${{ inputs.mode }}
+        HLIDO_COMMENT_PR: ${{ inputs.comment-pr }}
+        HLIDO_BASE_URL: ${{ inputs.attestation-base-url }}
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        set -u
+        # ------------------------------------------------------------------
+        # Hlido Gate — composite-action payload.
+        # Fetches the latest signed Trust Attestation for {slug}, parses
+        # score / tier / last_tested, posts a sticky PR comment (replacing
+        # any previous gate comment via the <!-- hlido-gate --> marker),
+        # writes a $GITHUB_STEP_SUMMARY block, and exits 0 or 1 based on
+        # mode + min-score.
+        # ------------------------------------------------------------------
+
+        SLUG="${HLIDO_SLUG}"
+        MIN_SCORE="${HLIDO_MIN_SCORE}"
+        MODE="${HLIDO_MODE}"
+        BASE_URL="${HLIDO_BASE_URL%/}"
+        COMMENT_PR="${HLIDO_COMMENT_PR}"
+        URL="${BASE_URL}/${SLUG}.json"
+
+        if [ -z "${SLUG}" ]; then
+          echo "::error::hlido-gate: input 'slug' is required."
+          exit 1
+        fi
+
+        # Validate dependencies (curl + jq are pre-installed on ubuntu-latest).
+        if ! command -v jq >/dev/null 2>&1; then
+          echo "::error::hlido-gate: jq not found in PATH. Install jq on the runner."
+          exit 1
+        fi
+
+        echo "::group::Fetching attestation from ${URL}"
+        HTTP_CODE=$(curl -sS -L -o /tmp/hlido-attestation.json -w "%{http_code}" "${URL}" || echo "000")
+        echo "HTTP ${HTTP_CODE}"
+        echo "::endgroup::"
+
+        if [ "${HTTP_CODE}" != "200" ]; then
+          MSG="hlido-gate: could not fetch attestation for slug='${SLUG}' (HTTP ${HTTP_CODE}). Verify the slug is published at https://hlido.eu/reviews/${SLUG}/ — submit via https://hlido.eu/submit/ if missing."
+          echo "::warning::${MSG}"
+          {
+            echo "## Hlido Gate"
+            echo ""
+            echo "**Status:** unable to fetch attestation"
+            echo ""
+            echo "- Slug: \`${SLUG}\`"
+            echo "- URL: ${URL}"
+            echo "- HTTP: ${HTTP_CODE}"
+            echo ""
+            echo "Verify the slug is published at <https://hlido.eu/reviews/${SLUG}/> or submit it at <https://hlido.eu/submit/>."
+          } >> "${GITHUB_STEP_SUMMARY}"
+          # Don't break vendor CI on a transient fetch problem — soft-pass.
+          echo "decision=pass" >> "${GITHUB_OUTPUT}"
+          exit 0
+        fi
+
+        # Validate JSON shape — bail clearly if attestation is malformed.
+        if ! jq -e . /tmp/hlido-attestation.json >/dev/null 2>&1; then
+          echo "::error::hlido-gate: attestation at ${URL} is not valid JSON."
+          exit 1
+        fi
+
+        SCORE=$(jq -r '.score // empty' /tmp/hlido-attestation.json)
+        TIER=$(jq -r '.tier // empty' /tmp/hlido-attestation.json)
+        NAME=$(jq -r '.name // .slug // empty' /tmp/hlido-attestation.json)
+        LAST_TESTED=$(jq -r '.last_tested // empty' /tmp/hlido-attestation.json)
+        REVIEW_URL=$(jq -r '.review_url // empty' /tmp/hlido-attestation.json)
+        SCORECARD_URL=$(jq -r '.scorecard_url // empty' /tmp/hlido-attestation.json)
+        EVIDENCE_COUNT=$(jq -r '.evidence_count // 0' /tmp/hlido-attestation.json)
+
+        if [ -z "${SCORE}" ] || [ "${SCORE}" = "null" ]; then
+          echo "::error::hlido-gate: attestation has no 'score' field — slug='${SLUG}' may not be fully published yet."
+          exit 1
+        fi
+
+        # Numeric comparison (jq returns int already, but guard against floats).
+        if ! [[ "${SCORE}" =~ ^[0-9]+$ ]]; then
+          echo "::error::hlido-gate: score '${SCORE}' is not an integer."
+          exit 1
+        fi
+
+        # Decide outcome.
+        DECISION="pass"
+        STATUS_LINE=":white_check_mark: **Pass** — score ${SCORE} >= min-score ${MIN_SCORE}"
+        if [ "${SCORE}" -lt "${MIN_SCORE}" ]; then
+          if [ "${MODE}" = "fail" ]; then
+            DECISION="fail"
+            STATUS_LINE=":x: **Fail** — score ${SCORE} < min-score ${MIN_SCORE} (mode: fail)"
+          else
+            DECISION="warn"
+            STATUS_LINE=":warning: **Warning** — score ${SCORE} < min-score ${MIN_SCORE} (mode: warn — set mode: fail to block)"
+          fi
+        fi
+
+        # ------------------------------------------------------------------
+        # Step summary (always emitted — replaces $GITHUB_STEP_SUMMARY block).
+        # ------------------------------------------------------------------
+        {
+          echo "## Hlido Gate"
+          echo ""
+          echo "${STATUS_LINE}"
+          echo ""
+          echo "| Field | Value |"
+          echo "|---|---|"
+          echo "| Slug | \`${SLUG}\` |"
+          echo "| Name | ${NAME:-—} |"
+          echo "| Score | **${SCORE}** / 100 |"
+          echo "| Tier | ${TIER:-—} |"
+          echo "| Min score (threshold) | ${MIN_SCORE} |"
+          echo "| Evidence count | ${EVIDENCE_COUNT} |"
+          echo "| Last tested | ${LAST_TESTED:-—} |"
+          echo "| Mode | ${MODE} |"
+          echo ""
+          if [ -n "${REVIEW_URL}" ]; then echo "- Review: <${REVIEW_URL}>"; fi
+          if [ -n "${SCORECARD_URL}" ]; then echo "- Scorecard: <${SCORECARD_URL}>"; fi
+          echo "- Attestation: <${URL}>"
+          echo ""
+          echo "_Powered by [Hlido](https://hlido.eu) — independent trust layer for AI agents._"
+        } >> "${GITHUB_STEP_SUMMARY}"
+
+        # ------------------------------------------------------------------
+        # Sticky PR comment (only on pull_request events, when comment-pr=true).
+        # The marker line lets repeat runs replace the existing comment instead
+        # of stacking duplicates. Uses pre-installed `gh` CLI; vendor CI already
+        # provides GITHUB_TOKEN.
+        # ------------------------------------------------------------------
+        if [ "${COMMENT_PR}" = "true" ] && [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+          PR_NUMBER=$(jq -r '.pull_request.number // empty' "${GITHUB_EVENT_PATH}")
+          if [ -n "${PR_NUMBER}" ]; then
+            MARKER="<!-- hlido-gate -->"
+            BODY_FILE=$(mktemp)
+            {
+              echo "${MARKER}"
+              echo "### Hlido Gate · \`${SLUG}\`"
+              echo ""
+              echo "${STATUS_LINE}"
+              echo ""
+              echo "**Score** \`${SCORE}/100\` &nbsp;·&nbsp; **Tier** \`${TIER:-—}\` &nbsp;·&nbsp; **Last tested** \`${LAST_TESTED:-—}\`"
+              echo ""
+              if [ -n "${REVIEW_URL}" ]; then echo "[Review](${REVIEW_URL}) &nbsp;·&nbsp; "; fi
+              if [ -n "${SCORECARD_URL}" ]; then echo "[Scorecard](${SCORECARD_URL}) &nbsp;·&nbsp; "; fi
+              echo "[Attestation](${URL})"
+              echo ""
+              echo "<sub>Powered by [Hlido](https://hlido.eu) — auto-updated on every push to this PR. <code>min-score=${MIN_SCORE}</code> · <code>mode=${MODE}</code></sub>"
+            } > "${BODY_FILE}"
+
+            # Find existing comment by marker; replace it if present, else create.
+            EXISTING_ID=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" \
+              --jq "[.[] | select(.body | startswith(\"${MARKER}\"))][0].id // empty" 2>/dev/null || true)
+
+            if [ -n "${EXISTING_ID}" ]; then
+              echo "Updating existing hlido-gate comment id=${EXISTING_ID}"
+              gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${EXISTING_ID}" \
+                -f body="$(cat "${BODY_FILE}")" >/dev/null || echo "::warning::Failed to update existing PR comment (continuing)."
+            else
+              echo "Posting new hlido-gate comment to PR #${PR_NUMBER}"
+              gh pr comment "${PR_NUMBER}" --body-file "${BODY_FILE}" >/dev/null || echo "::warning::Failed to post PR comment (continuing)."
+            fi
+          fi
+        fi
+
+        # Outputs.
+        echo "score=${SCORE}" >> "${GITHUB_OUTPUT}"
+        echo "tier=${TIER}" >> "${GITHUB_OUTPUT}"
+        echo "last_tested=${LAST_TESTED}" >> "${GITHUB_OUTPUT}"
+        echo "decision=${DECISION}" >> "${GITHUB_OUTPUT}"
+
+        # Final exit.
+        if [ "${DECISION}" = "fail" ]; then
+          echo "::error::hlido-gate: ${STATUS_LINE}"
+          exit 1
+        fi
+        exit 0
