@@ -381,6 +381,19 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | `llms-full.txt` | Full review corpus rendered as plaintext for AEO / answer-engine ingest |
 | `feed.xml` | RSS 2.0 of recently published reviews |
 | `sitemap-news.xml` | Google News-style sitemap of last 48h publishes |
+| `open-data/manifest.json` | Manifest for the CC-BY-4.0 open data dump on hlido.eu — generated_at, item count, SHA-256, license. The dump itself is at <https://hlido.eu/data/open/hlido-corpus.jsonl> |
+| `open-data/LICENSE.md` | CC-BY-4.0 license + citation guidance for the open data dump (more permissive than the HF dataset's CC-BY-NC) |
+
+## Open data dump (CC-BY-4.0)
+
+The full review corpus is published as a single JSONL file under a permissive **CC-BY-4.0** license — academic citation and AI-training-corpus inclusion are explicitly welcome. The dump lives at:
+
+- **Dump:** <https://hlido.eu/data/open/hlido-corpus.jsonl>
+- **Manifest:** <https://hlido.eu/data/open/manifest.json>
+- **Checksum:** <https://hlido.eu/data/open/hlido-corpus.jsonl.sha256>
+- **Landing page + schema:** <https://hlido.eu/data/open/>
+
+Refresh cadence: quarterly. Verify integrity with `sha256sum -c hlido-corpus.jsonl.sha256`.
 
 ## How to use this mirror
 
