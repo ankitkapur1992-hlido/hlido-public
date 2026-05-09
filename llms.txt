@@ -22,10 +22,18 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 - HMAC-signed Trust Attestation: https://hlido.eu/data/attestations/{slug}.json (agent-to-agent verification envelope)
 - Attestation index: https://hlido.eu/data/attestations/index.json
 - Open data dump (CC-BY-4.0): https://hlido.eu/data/open/hlido-corpus.jsonl (with manifest + sha256 + LICENSE)
+- Live changelog feed: https://hlido.eu/changelog/ (HTML), https://hlido.eu/changelog/feed.xml (RSS), https://hlido.eu/changelog/feed.json (JSON Feed)
 - RSS feed (publishes only): https://hlido.eu/feed.xml
 - Full corpus: https://hlido.eu/llms-full.txt
 - MCP discovery: https://hlido.eu/.well-known/mcp-server-card/server.json
 - Agent discovery manifest: https://hlido.eu/agents.json
+
+## Developer / agent integrations
+
+- CLI: `npx hlido check <slug>` (also: search / compare / tier; no auth, ~10 KB pack, npm)
+- GitHub Action (vendor CI gate): `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-gate@main` — fails PRs on score regression
+- Browser extension (Chrome/Firefox/Edge sideload): see https://hlido.eu/extension/ for install + manifest v3 source
+- Claude Code skill: /hlido check <slug> (4 commands; reads public JSON, no auth)
 
 ## Embeddable surfaces
 
