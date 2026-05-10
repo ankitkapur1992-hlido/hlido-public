@@ -1,0 +1,32 @@
+name: methodology-leak-guard
+
+# Defensive guard for Hlido's IP moat:
+# fail any change that exposes scoring weights, the Laddoo formula, or
+# rubric internals on public-facing surfaces.
+#
+# See feedback_methodology_private.md and feedback_huggingface_disclosure.md.
+
+on:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  methodology-leak-guard:
+    name: methodology-leak-guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run methodology-leak guard
+        run: |
+          chmod +x scripts/check-methodology-leak.sh
+          bash scripts/check-methodology-leak.sh
