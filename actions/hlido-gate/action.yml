@@ -108,6 +108,13 @@ runs:
           } >> "${GITHUB_STEP_SUMMARY}"
           # Don't break vendor CI on a transient fetch problem — soft-pass.
           echo "decision=pass" >> "${GITHUB_OUTPUT}"
+          # Wave 4 Item #2 — record the soft-pass too so the rollup sees the
+          # attempt. Best-effort, never fails the action.
+          curl -fsS -m 5 \
+            -H "content-type: application/json" \
+            -H "user-agent: hlido-gate/0.1 (gha)" \
+            -X POST "https://hlido.eu/v1/telemetry/event" \
+            -d "{\"surface\":\"gha\",\"version\":\"hlido-gate/0.1\",\"event\":\"gate-check\",\"slug\":\"${SLUG}\",\"ok\":false}" >/dev/null 2>&1 || true
           exit 0
         fi
 
@@ -221,6 +228,21 @@ runs:
         echo "tier=${TIER}" >> "${GITHUB_OUTPUT}"
         echo "last_tested=${LAST_TESTED}" >> "${GITHUB_OUTPUT}"
         echo "decision=${DECISION}" >> "${GITHUB_OUTPUT}"
+
+        # ------------------------------------------------------------------
+        # Wave 4 Item #2 — distribution-surface telemetry.
+        # Anonymous fire-and-forget POST so the founder can see how many CI
+        # runs the action protects per day. Never fails the action on
+        # telemetry error (|| true). No personal data; just a stable surface
+        # tag, the action version, decision, and slug.
+        # ------------------------------------------------------------------
+        TELEMETRY_PAYLOAD=$(jq -n --arg slug "${SLUG}" --arg dec "${DECISION}" \
+          '{surface:"gha", version:"hlido-gate/0.1", event:"gate-check", slug:$slug, ok:($dec != "fail"), duration_ms:0}')
+        curl -fsS -m 5 \
+          -H "content-type: application/json" \
+          -H "user-agent: hlido-gate/0.1 (gha)" \
+          -X POST "https://hlido.eu/v1/telemetry/event" \
+          -d "${TELEMETRY_PAYLOAD}" >/dev/null 2>&1 || true
 
         # Final exit.
         if [ "${DECISION}" = "fail" ]; then
