@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Report | Hlido</title>
+  <meta name="description" content="Independent AI agent failure report on the Hlido Incident Registry.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260503cats">
+  <style>
+    .incident-detail { background: var(--paper); color: var(--ink); }
+    .incident-detail .wrap { max-width: 820px; }
+    .incident-detail h1 { font-family: 'Fraunces', serif; font-weight: 500; margin: 16px 0 8px; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0 24px; font-size: 14px; color: var(--ink-muted, #666); }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+    .sev-low { background: #e8f5e9; color: #1b5e20; }
+    .sev-medium { background: #fff8e1; color: #f57f17; }
+    .sev-high { background: #fff3e0; color: #e65100; }
+    .sev-critical { background: #ffebee; color: #b71c1c; }
+    section { margin: 32px 0; }
+    section h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 22px; margin: 0 0 12px; }
+    .summary, .repro, .response { font-size: 15px; line-height: 1.6; white-space: pre-wrap; }
+    .ea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .ea-grid .box { padding: 14px; border: 1px solid var(--rule, #e5e5e5); border-radius: 8px; background: var(--paper-alt, #fafafa); }
+    .ea-grid h3 { margin: 0 0 6px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-muted, #666); }
+    .evidence-list ul { padding-left: 20px; }
+    .evidence-list a { word-break: break-all; }
+    .response-card { padding: 16px; border-left: 4px solid var(--rule, #ccc); background: var(--paper-alt, #fafafa); margin: 12px 0; border-radius: 0 6px 6px 0; }
+    .response-card.responder-vendor { border-left-color: #1565c0; }
+    .response-card.responder-hlido { border-left-color: #2e7d32; }
+    .response-card.responder-submitter { border-left-color: #f57f17; }
+    .response-card .who { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-muted, #666); margin-bottom: 6px; }
+    .vendor-status { padding: 12px 16px; border-radius: 8px; background: var(--paper-alt, #fafafa); border: 1px solid var(--rule, #e5e5e5); margin: 12px 0; font-size: 14px; }
+    .just-submitted { padding: 16px; background: #e8f5e9; border-radius: 8px; margin: 16px 0; color: #1b5e20; }
+    #loading { padding: 48px; text-align: center; color: var(--ink-muted, #666); }
+    #not-found { padding: 48px; text-align: center; }
+    .agent-link { font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 2px 8px; background: var(--paper-alt, #f0f0f0); border-radius: 4px; }
+  </style>
+</head>
+<body class="incident-detail">
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="/" class="brand">Hlido</a>
+      <nav><a href="/reviews/">Reviews</a> <a href="/incidents/">Incidents</a> <a href="/badge/">Badge</a></nav>
+    </div>
+  </header>
+  <noscript>
+    <div class="wrap"><p>This page requires JavaScript. The raw incident JSON is at <code>/v1/incidents/&lt;id&gt;</code>.</p></div>
+  </noscript>
+  <main class="wrap" id="root">
+    <div id="loading">Loading incident…</div>
+    <article id="content" hidden>
+      <div id="just-submitted" class="just-submitted" hidden>
+        Thanks — your report has been received. We&apos;ll email you within 7 days with the publication decision. The page below is empty until we publish.
+      </div>
+      <a href="/incidents/" style="font-size:13px;color:var(--ink-muted,#666);">&larr; All incidents</a>
+      <h1 id="title"></h1>
+      <div class="meta-row" id="meta"></div>
+      <div class="vendor-status" id="vendor-status" hidden></div>
+      <section>
+        <h2>Summary</h2>
+        <div class="summary" id="summary"></div>
+      </section>
+      <section class="ea-grid">
+        <div class="box">
+          <h3>Expected</h3>
+          <div id="expected"></div>
+        </div>
+        <div class="box">
+          <h3>Actual</h3>
+          <div id="actual"></div>
+        </div>
+      </section>
+      <section id="repro-section" hidden>
+        <h2>Reproduction steps</h2>
+        <div class="repro" id="repro"></div>
+      </section>
+      <section class="evidence-list">
+        <h2>Evidence</h2>
+        <ul id="evidence"></ul>
+      </section>
+      <section id="responses-section">
+        <h2>Responses</h2>
+        <div id="responses"></div>
+      </section>
+    </article>
+    <div id="not-found" hidden>
+      <h1>Incident not found</h1>
+      <p>This incident may not have been published yet, or may have been rejected.</p>
+      <p><a href="/incidents/">&larr; Back to all incidents</a></p>
+    </div>
+  </main>
+  <footer class="site-foot wrap">
+    <p>&copy; Hlido &middot; <a href="/methodology/">Methodology</a> &middot; <a href="/privacy/">Privacy</a></p>
+  </footer>
+  <script>
+    (function () {
+      function escapeHtml(s) {
+        return String(s || '').replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      function fmtDate(iso) {
+        if (!iso) return '';
+        try { return new Date(iso).toUTCString().replace(' GMT', ' UTC'); } catch (e) { return iso; }
+      }
+      // Path: /incidents/inc_2026-05-10_aider_a3b9/
+      const m = window.location.pathname.match(/^\/incidents\/(inc_[A-Za-z0-9_-]+)/);
+      if (!m) {
+        document.getElementById('loading').textContent = 'Invalid incident URL.';
+        return;
+      }
+      const id = m[1];
+      const justSubmitted = /[?&]just_submitted=1/.test(window.location.search);
+      if (justSubmitted) document.getElementById('just-submitted').hidden = false;
+
+      fetch('/v1/incidents/' + encodeURIComponent(id))
+        .then(function (r) {
+          if (r.status === 404) return null;
+          return r.json();
+        })
+        .then(function (j) {
+          document.getElementById('loading').hidden = true;
+          if (!j || !j.incident) {
+            document.getElementById('not-found').hidden = false;
+            document.title = 'Incident not found | Hlido';
+            return;
+          }
+          const i = j.incident;
+          document.title = '[' + i.severity.toUpperCase() + '] ' + i.title + ' | Hlido Incidents';
+          document.getElementById('content').hidden = false;
+          document.getElementById('title').textContent = i.title;
+          document.getElementById('meta').innerHTML =
+            '<span class="badge sev-' + escapeHtml(i.severity) + '">' + escapeHtml(i.severity) + '</span>' +
+            '<span class="badge">' + escapeHtml(i.category) + '</span>' +
+            '<span class="agent-link"><a href="/reviews/' + escapeHtml(i.slug) + '/">' + escapeHtml(i.slug) + '</a></span>' +
+            '<span>Observed ' + escapeHtml(fmtDate(i.observed_at)) + '</span>' +
+            (i.published_at ? '<span>Published ' + escapeHtml(fmtDate(i.published_at)) + '</span>' : '') +
+            (i.submitter_handle ? '<span>by ' + escapeHtml(i.submitter_handle) : '') + '</span>';
+          if (i.vendor_response_due_at) {
+            const due = new Date(i.vendor_response_due_at);
+            const expired = Date.now() > due.getTime();
+            const has = (i.responses || []).some(function (r) { return r.responder === 'vendor'; });
+            document.getElementById('vendor-status').hidden = false;
+            document.getElementById('vendor-status').textContent =
+              has ? 'Vendor has responded.'
+                : expired ? 'Vendor 48-hour response window has closed without a response.'
+                : 'Vendor was notified ' + fmtDate(i.vendor_notified_at) + '. They have until ' + fmtDate(i.vendor_response_due_at) + ' to respond.';
+          }
+          document.getElementById('summary').textContent = i.summary || '';
+          document.getElementById('expected').textContent = i.expected || '';
+          document.getElementById('actual').textContent = i.actual || '';
+          if (i.repro_steps) {
+            document.getElementById('repro-section').hidden = false;
+            document.getElementById('repro').textContent = i.repro_steps;
+          }
+          document.getElementById('evidence').innerHTML = (i.evidence_urls || []).map(function (u) {
+            return '<li><a rel="noopener nofollow ugc" target="_blank" href="' + escapeHtml(u) + '">' + escapeHtml(u) + '</a></li>';
+          }).join('') || '<li>(no evidence URLs recorded)</li>';
+          const resp = i.responses || [];
+          if (!resp.length) {
+            document.getElementById('responses').innerHTML = '<p style="color:var(--ink-muted,#666);font-size:14px;">No responses yet.</p>';
+          } else {
+            document.getElementById('responses').innerHTML = resp.map(function (r) {
+              return '<div class="response-card responder-' + escapeHtml(r.responder) + '">' +
+                '<div class="who">' + escapeHtml(r.responder) + ' &middot; ' + escapeHtml(fmtDate(r.posted_at)) + '</div>' +
+                '<div class="response">' + escapeHtml(r.response_text) + '</div>' +
+                '</div>';
+            }).join('');
+          }
+        })
+        .catch(function () {
+          document.getElementById('loading').hidden = true;
+          document.getElementById('not-found').hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>
