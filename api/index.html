@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hlido Recommendation API | Programmatic shortlist for buyer agents</title>
+  <meta name="description" content="The Hlido Recommendation API gives buyer agents a vetted, evidence-backed shortlist of AI agents on demand. Free tier: 100 calls/day. Dev: EUR 9/mo. Team: EUR 19/mo.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hlido.eu/api/">
+  <meta property="og:title" content="Hlido Recommendation API">
+  <meta property="og:description" content="Programmatic shortlist of Hlido-reviewed AI agents. REST, OpenAPI 3.1, free tier. EUR pricing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hlido.eu/api/">
+  <meta property="og:site_name" content="Hlido">
+  <meta property="og:image" content="https://hlido.eu/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hlido Recommendation API">
+  <meta name="twitter:description" content="Programmatic shortlist of Hlido-reviewed AI agents. REST, OpenAPI 3.1, free tier.">
+  <meta name="twitter:image" content="https://hlido.eu/assets/og-card.svg">
+  <meta name="twitter:site" content="@hlido_eu">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260503cats">
+  <style>
+    .api-page { background: var(--paper); color: var(--ink); }
+    .api-page .page-hero { padding: 80px 0 56px; background: linear-gradient(180deg, var(--paper) 0%, var(--paper-alt) 100%); }
+    .api-page .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .api-page h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: 48px; line-height: 1.1; margin: 0 0 16px; }
+    .api-page .lead { font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 720px; margin: 0 0 32px; }
+    .api-page h2 { font-family: "Fraunces", serif; font-weight: 500; font-size: 32px; margin: 56px 0 16px; }
+    .api-page h3 { font-weight: 600; font-size: 18px; margin: 0 0 8px; }
+    .api-page p { line-height: 1.6; margin: 0 0 12px; }
+    .api-page .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 32px 0; }
+    .api-page .tier-card { background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
+    .api-page .tier-card.featured { border-color: var(--accent, #d97757); box-shadow: 0 6px 24px rgba(217, 119, 87, 0.12); }
+    .api-page .tier-card .price { font-family: "Fraunces", serif; font-size: 36px; font-weight: 500; margin: 8px 0 4px; }
+    .api-page .tier-card .price small { font-size: 16px; font-weight: 400; color: var(--muted); }
+    .api-page .tier-card ul { list-style: none; padding: 0; margin: 16px 0; flex: 1; }
+    .api-page .tier-card li { padding: 6px 0; font-size: 14px; }
+    .api-page .tier-card li::before { content: "+ "; color: var(--accent); font-weight: 600; }
+    .api-page .btn { display: inline-block; background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; cursor: pointer; border: none; font-family: inherit; font-size: inherit; }
+    .api-page .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+    .api-page pre { background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 8px; padding: 16px; overflow-x: auto; font-family: "JetBrains Mono", monospace; font-size: 13px; line-height: 1.5; margin: 0; }
+    .api-page code { font-family: "JetBrains Mono", monospace; font-size: 13px; background: var(--paper-alt); padding: 2px 6px; border-radius: 4px; }
+    .api-page .field-grid { display: grid; grid-template-columns: 200px 1fr; gap: 12px 24px; margin: 16px 0; font-size: 14px; }
+    .api-page .field-grid dt { font-family: "JetBrains Mono", monospace; color: var(--muted); }
+    .api-page .field-grid dd { margin: 0; }
+    .api-page form.checkout-form { display: flex; gap: 8px; margin-top: 12px; }
+    .api-page form.checkout-form input { flex: 1; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; font-size: 14px; font-family: inherit; }
+    .api-page form.checkout-form button { padding: 10px 16px; }
+    .api-page .feature-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .api-page .feature-table th, .api-page .feature-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+    .api-page .feature-table th { font-weight: 600; color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .api-page .feature-table td.tier-col { text-align: center; }
+    .code-tabs { margin: 16px 0 32px; }
+    .code-tab-btns { display: flex; gap: 4px; border-bottom: 1px solid var(--rule); margin-bottom: 0; flex-wrap: wrap; }
+    .code-tab-btn { background: transparent; border: 1px solid transparent; border-bottom: none; padding: 8px 14px; font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--muted); cursor: pointer; border-radius: 6px 6px 0 0; }
+    .code-tab-btn[aria-selected="true"] { background: var(--paper-alt); border-color: var(--rule); color: var(--ink); }
+    .code-tab-panel { display: none; }
+    .code-tab-panel[data-active="true"] { display: block; }
+    .api-page .nav-bar { padding: 16px 0; border-bottom: 1px solid var(--rule); background: var(--paper); }
+    .api-page .nav-bar .container { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .api-page .nav-bar a { color: var(--ink); text-decoration: none; font-size: 14px; }
+    .api-page .nav-bar a.brand { font-weight: 700; margin-right: auto; }
+    .api-page details.faq { border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; background: var(--paper-alt); }
+    .api-page details.faq summary { cursor: pointer; font-weight: 600; }
+    .api-page details.faq[open] summary { margin-bottom: 8px; }
+    @media (max-width: 720px) {
+      .api-page h1 { font-size: 36px; }
+      .api-page .pricing-grid { grid-template-columns: 1fr; }
+      .api-page .field-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="api-page">
+  <header class="nav-bar">
+    <div class="container">
+      <a class="brand" href="/">Hlido</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/api/" aria-current="page">API</a>
+      <a href="/incidents/">Incidents</a>
+      <a href="/compare/">Compare</a>
+      <a href="/mcp">MCP</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>The Recommendation API</h1>
+        <p class="lead">
+          Programmatic access to Hlido's review corpus. Buyer agents pass a free-text need
+          plus optional constraints; Hlido returns a ranked shortlist with rationale,
+          evidence URL, and a signed scorecard. Same ranker as the MCP server, exposed as
+          REST for tools that don't speak JSON-RPC.
+        </p>
+        <p>
+          <a class="btn" href="#pricing">See pricing</a>
+          <a class="btn btn-ghost" href="https://petstore.swagger.io/?url=https://hlido.eu/v1/openapi.json">Open Swagger UI</a>
+          <a class="btn btn-ghost" href="/v1/openapi.json">OpenAPI 3.1 JSON</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Quickstart</h2>
+        <p>Pick the surface that fits your stack. Free tier needs no key.</p>
+        <div class="code-tabs" role="tablist" aria-label="Recommendation API examples">
+          <div class="code-tab-btns">
+            <button type="button" class="code-tab-btn" role="tab" aria-selected="true" data-tab="curl">curl</button>
+            <button type="button" class="code-tab-btn" role="tab" aria-selected="false" data-tab="cli">@hlido/cli</button>
+            <button type="button" class="code-tab-btn" role="tab" aria-selected="false" data-tab="ts">TypeScript fetch</button>
+            <button type="button" class="code-tab-btn" role="tab" aria-selected="false" data-tab="py">Python requests</button>
+          </div>
+          <div class="code-tab-panel" data-tab="curl" data-active="true" role="tabpanel">
+<pre>curl -X POST https://hlido.eu/v1/recommend \
+  -H "Content-Type: application/json" \
+  -d '{
+    "need": "code review tool with git integration",
+    "constraints": { "category": "Coding", "min_tier": "STEADY" },
+    "k": 1
+  }'</pre>
+          </div>
+          <div class="code-tab-panel" data-tab="cli" role="tabpanel">
+<pre># Free tier, no auth required
+npx @hlido/cli recommend "code review tool"
+
+# Paid tier, top-5 results
+HLIDO_API_KEY=hlk_live_... npx @hlido/cli recommend \
+  "voice agent for outbound sales" --k 5</pre>
+          </div>
+          <div class="code-tab-panel" data-tab="ts" role="tabpanel">
+<pre>const r = await fetch("https://hlido.eu/v1/recommend", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer " + process.env.HLIDO_API_KEY,
+  },
+  body: JSON.stringify({
+    need: "code review tool",
+    constraints: { category: "Coding", min_tier: "STEADY" },
+    k: 5,
+  }),
+});
+const { results } = await r.json();
+console.log(results.map(x =&gt; x.slug + " " + x.score));</pre>
+          </div>
+          <div class="code-tab-panel" data-tab="py" role="tabpanel">
+<pre>import os, requests
+
+r = requests.post(
+    "https://hlido.eu/v1/recommend",
+    headers={"Authorization": f"Bearer {os.environ['HLIDO_API_KEY']}"},
+    json={"need": "code review tool", "k": 5},
+    timeout=10,
+)
+r.raise_for_status()
+for hit in r.json()["results"]:
+    print(hit["slug"], hit["score"], hit["evidence_url"])</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p>EUR-denominated, monthly. Stripe Tax enabled (VAT-inclusive in EU, exclusive elsewhere).</p>
+        <div class="pricing-grid">
+
+          <div class="tier-card">
+            <h3>Free</h3>
+            <div class="price">&euro;0<small>/mo</small></div>
+            <ul>
+              <li>100 calls/day per IP</li>
+              <li>Top-1 results only</li>
+              <li>Category filter</li>
+              <li>No API key needed</li>
+            </ul>
+            <p style="font-size: 13px; color: var(--muted); margin-top: auto;">
+              Anonymous quota is IP-keyed for 24h UTC. Best-effort SLA.
+            </p>
+          </div>
+
+          <div class="tier-card featured">
+            <h3>Dev</h3>
+            <div class="price">&euro;9<small>/mo</small></div>
+            <ul>
+              <li>10,000 calls/month</li>
+              <li>Top-k up to 10</li>
+              <li>All constraints</li>
+              <li>Live API key</li>
+              <li>99.0% target SLA</li>
+            </ul>
+            <a class="btn" href="/api/api-key-checkout?tier=dev" style="margin-top:auto;">Get a Dev key</a>
+          </div>
+
+          <div class="tier-card">
+            <h3>Team</h3>
+            <div class="price">&euro;19<small>/mo</small></div>
+            <ul>
+              <li>100,000 calls/month</li>
+              <li>Top-k up to 25</li>
+              <li>All constraints + custom rate burst</li>
+              <li>Live API key</li>
+              <li>99.5% target SLA</li>
+            </ul>
+            <a class="btn" href="/api/api-key-checkout?tier=team" style="margin-top:auto;">Get a Team key</a>
+          </div>
+
+        </div>
+        <h3 style="margin-top:32px;">Feature comparison</h3>
+        <table class="feature-table" aria-label="Feature comparison across tiers">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col" class="tier-col">Free</th>
+              <th scope="col" class="tier-col">Dev</th>
+              <th scope="col" class="tier-col">Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Monthly price</th><td class="tier-col">&euro;0</td><td class="tier-col">&euro;9</td><td class="tier-col">&euro;19</td></tr>
+            <tr><th scope="row">Calls / period</th><td class="tier-col">100/day per IP</td><td class="tier-col">10,000/mo</td><td class="tier-col">100,000/mo</td></tr>
+            <tr><th scope="row">Top-k results</th><td class="tier-col">1</td><td class="tier-col">up to 10</td><td class="tier-col">up to 25</td></tr>
+            <tr><th scope="row">Category filter</th><td class="tier-col">Yes</td><td class="tier-col">Yes</td><td class="tier-col">Yes</td></tr>
+            <tr><th scope="row">All constraints (tier, score, freshness)</th><td class="tier-col">No</td><td class="tier-col">Yes</td><td class="tier-col">Yes</td></tr>
+            <tr><th scope="row">Custom rate burst</th><td class="tier-col">No</td><td class="tier-col">No</td><td class="tier-col">Yes</td></tr>
+            <tr><th scope="row">SLA target</th><td class="tier-col">Best-effort</td><td class="tier-col">99.0%</td><td class="tier-col">99.5%</td></tr>
+            <tr><th scope="row">API key</th><td class="tier-col">Not required</td><td class="tier-col">Live key</td><td class="tier-col">Live key</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: 13px; color: var(--muted);">
+          API keys can be managed at <a href="/account/">/account/</a> after sign-up.
+          Lost keys must be re-minted; plaintext is shown once at creation and never
+          re-fetchable.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Endpoints</h2>
+        <dl class="field-grid">
+          <dt>POST /v1/recommend</dt>
+          <dd>Constraint-driven shortlist. Free tier forced to k=1.</dd>
+          <dt>GET /v1/agents/{slug}</dt>
+          <dd>Public scorecard summary (whitelist). ETag + 304.</dd>
+          <dt>GET /v1/categories</dt>
+          <dd>13 canonical categories + counts.</dd>
+          <dt>GET /v1/health</dt>
+          <dd>Uptime + last_registry_update.</dd>
+          <dt>GET /v1/usage</dt>
+          <dd>Caller's tier + remaining quota.</dd>
+          <dt>GET /v1/stats/public</dt>
+          <dd>Daily aggregate counts.</dd>
+          <dt>GET /v1/incidents</dt>
+          <dd>Search published incidents (filter by slug, severity, since).</dd>
+          <dt>GET /v1/incidents/feed.xml</dt>
+          <dd>RSS feed of newly published incidents.</dd>
+        </dl>
+        <p>Full spec: <a href="/v1/openapi.json"><code>/v1/openapi.json</code></a> &middot; Browse interactively in <a href="https://petstore.swagger.io/?url=https://hlido.eu/v1/openapi.json">Swagger UI</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>FAQ</h2>
+        <details class="faq">
+          <summary>What are the rate limits in detail?</summary>
+          <p><strong>Free:</strong> 100 calls per IP per UTC day, top-1 only. Bursts above 10 req/sec are throttled with HTTP 429 + Retry-After.</p>
+          <p><strong>Dev:</strong> 10,000 calls/month, ~333/day soft cap, 30 req/sec sustained.</p>
+          <p><strong>Team:</strong> 100,000 calls/month, no daily cap, 100 req/sec sustained, custom burst negotiable. Contact <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a> if you need more headroom.</p>
+        </details>
+        <details class="faq">
+          <summary>What's the SLA and what happens if you miss it?</summary>
+          <p>Targets are 99.0% (Dev) and 99.5% (Team) measured monthly across all <code>/v1/*</code> endpoints, excluding scheduled maintenance windows announced 48h in advance. If we miss the target, paying customers receive a service credit pro-rated against their monthly fee, applied to the next invoice.</p>
+        </details>
+        <details class="faq">
+          <summary>What's the refund policy?</summary>
+          <p>30-day money-back guarantee on the first invoice for any reason. Beyond that, refunds are pro-rated for the remaining days in the current month if you cancel. Annual prepay (if available) is non-refundable except where required by EU consumer law.</p>
+        </details>
+        <details class="faq">
+          <summary>Are scoring methodology weights exposed?</summary>
+          <p>No. Scoring weights, dimension formulas, and the per-claim rubric stay private — that's the moat. Outcomes (slug, score, tier, summary, evidence URL, last_tested_at) are public-safe and the only fields the REST surface returns.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I authenticate?</summary>
+          <p>Bearer token: <code>Authorization: Bearer hlk_live_...</code>. Free tier requires no header. Keys are minted at <a href="/account/">/account/</a> after sign-up; treat them as secrets.</p>
+        </details>
+        <details class="faq">
+          <summary>Where do I report a bug or request a feature?</summary>
+          <p>Email <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a>. The public incident-submission form is in invitation-only beta until editorial cover finalises. Public roadmap pending.</p>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Methodology privacy</h2>
+        <p>
+          Hlido's scoring weights, dimension formulas, and per-claim rubric stay
+          private &mdash; that's the moat. Outcomes (slug, score, tier, summary,
+          evidence URL, last_tested_at) are public-safe and the only fields
+          exposed by the REST surface. We never expose dimension internals,
+          peer-review fields, or anything from the brain pipeline state.
+        </p>
+        <p>
+          See our <a href="/legal/">terms</a> for detail, or read the <a href="/methodology/">methodology overview</a>
+          for what we test (without the weights).
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Other surfaces</h2>
+        <ul>
+          <li>MCP server (JSON-RPC, no auth, 12 tools): <a href="/mcp">/mcp</a></li>
+          <li>Public registry JSON: <a href="/data/review-registry.json">/data/review-registry.json</a></li>
+          <li>Per-agent scorecard JSON: <code>/data/scorecards/{slug}.json</code></li>
+          <li>CLI: <code>npm install -g @hlido/cli</code> &rarr; <code>hlido recommend "&lt;need&gt;"</code></li>
+          <li>Incident registry: <a href="/incidents/">/incidents/</a> &middot; <a href="/v1/incidents/feed.xml">RSS</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var btns = document.querySelectorAll(".code-tab-btn");
+      var panels = document.querySelectorAll(".code-tab-panel");
+      btns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          var key = b.getAttribute("data-tab");
+          btns.forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
+          panels.forEach(function (p) { p.setAttribute("data-active", String(p.getAttribute("data-tab") === key)); });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
