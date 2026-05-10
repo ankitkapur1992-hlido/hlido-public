@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit an Incident | Hlido</title>
+  <meta name="description" content="Report an AI agent failure to the Hlido Incident Registry. Reviewed by staff, published with vendor response window and automatic re-test.">
+  <link rel="canonical" href="https://hlido.eu/incidents/submit/">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260503cats">
+  <style>
+    .submit-page { background: var(--paper); color: var(--ink); }
+    .submit-page .wrap { max-width: 760px; }
+    .submit-page h1 { font-family: 'Fraunces', serif; font-weight: 500; }
+    form.incident-form { display: grid; gap: 16px; margin: 24px 0 64px; }
+    form.incident-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+    form.incident-form input[type="text"],
+    form.incident-form input[type="url"],
+    form.incident-form input[type="email"],
+    form.incident-form input[type="datetime-local"],
+    form.incident-form select,
+    form.incident-form textarea {
+      padding: 10px 12px; border: 1px solid var(--rule, #ddd); border-radius: 6px;
+      font-family: inherit; font-size: 14px; background: var(--paper, #fff); color: var(--ink, #222);
+    }
+    form.incident-form textarea { min-height: 100px; resize: vertical; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+    form.incident-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    form.incident-form .help { font-size: 12px; color: var(--ink-muted, #666); font-weight: 400; }
+    form.incident-form button { padding: 12px 24px; background: var(--ink, #111); color: var(--paper, #fff); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px; }
+    form.incident-form button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .disclosure { padding: 16px; background: #fff8e1; border-left: 4px solid #f57f17; border-radius: 6px; font-size: 14px; }
+    .evidence-list { display: grid; gap: 8px; }
+    .evidence-list input { width: 100%; }
+    .add-evidence { font-size: 13px; background: none; border: 1px dashed var(--rule, #ccc); padding: 6px 12px; border-radius: 6px; cursor: pointer; color: var(--ink, #333); }
+    .submit-result { padding: 16px; border-radius: 8px; margin-top: 16px; display: none; }
+    .submit-result.success { background: #e8f5e9; color: #1b5e20; display: block; }
+    .submit-result.error { background: #ffebee; color: #b71c1c; display: block; }
+    .private-beta-banner { padding: 14px 18px; background: #fff8e1; border-left: 4px solid #f57f17; border-radius: 6px; margin: 16px 0; font-size: 14px; color: #6f4f00; }
+    body.form-private-beta .submit-active { display: none; }
+    body.form-private-beta form.incident-form { opacity: 0.55; pointer-events: none; }
+  </style>
+</head>
+<body class="submit-page form-private-beta">
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="/" class="brand">Hlido</a>
+      <nav><a href="/reviews/">Reviews</a> <a href="/api/">API</a> <a href="/incidents/">Incidents</a> <a href="/compare/">Compare</a> <a href="/badge/">Badge</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1>Submit an incident</h1>
+    <div class="private-beta-banner" role="status">
+      <strong>Invitation-only beta &mdash; public submissions are not yet open.</strong>
+      The incident registry is currently invitation-only while editorial cover is finalised. The form below is preserved as a reference shape; submissions made here will not be processed. To request invite access for credible reporting, email <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a> with evidence URLs and a one-line summary.
+    </div>
+    <p>Help us build the public failure database for AI agents. Every submission is reviewed by Hlido staff before publication.</p>
+    <div class="disclosure">
+      <strong>Before you submit &mdash; what counts as evidence:</strong>
+      <ul style="margin:6px 0 0 18px;padding:0;">
+        <li><strong>Screenshots</strong> &mdash; the agent's UI, error message, or output, with timestamps visible.</li>
+        <li><strong>Log dumps</strong> &mdash; pasted to a public gist or pastebin, with API request/response pairs and any reasoning traces.</li>
+        <li><strong>Reproduction steps</strong> &mdash; minimal, numbered, deterministic where possible.</li>
+        <li><strong>Recordings</strong> &mdash; screen recordings (Loom, Asciinema for CLI) showing the failure end-to-end.</li>
+        <li><strong>Public posts</strong> &mdash; the vendor's own status page, GitHub issue, or social-media acknowledgement.</li>
+      </ul>
+      <p style="margin:10px 0 0;font-size:13px;">Read <a href="/incidents/how-to/">How to write a good incident report</a> for detail. Submissions are reviewed before publication; we&apos;ll email you within 7 days with the decision. When we publish, the vendor gets 48 hours to respond and a re-test is queued. False or malicious reports may result in submission rights being revoked.</p>
+    </div>
+    <form class="incident-form" id="incident-form">
+      <label>Agent slug
+        <input type="text" name="slug" required pattern="[a-z0-9][a-z0-9-]*" placeholder="aider, cursor, claude-code, …">
+        <span class="help">Must match a slug already on hlido.eu/reviews/.</span>
+      </label>
+      <div class="row">
+        <label>Severity
+          <select name="severity" required>
+            <option value="">Select…</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+          </select>
+        </label>
+        <label>Category
+          <select name="category" required>
+            <option value="">Select…</option>
+            <option value="hallucination">Hallucination</option>
+            <option value="regression">Regression</option>
+            <option value="safety">Safety</option>
+            <option value="availability">Availability</option>
+            <option value="cost">Cost</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
+      <label>Title
+        <input type="text" name="title" required minlength="8" maxlength="100" placeholder="One-line description (8–100 chars)">
+      </label>
+      <label>Summary
+        <textarea name="summary" required minlength="100" maxlength="2000" placeholder="What happened? 100–2000 chars. Markdown supported (bold, italics, lists, headings, blockquotes, inline links)."></textarea>
+        <span class="help">Markdown: <code>**bold**</code> <code>_italic_</code> <code>`code`</code> &mdash; HTML stripped automatically.</span>
+      </label>
+      <div class="row">
+        <label>Expected behavior
+          <textarea name="expected" required minlength="10" maxlength="500" placeholder="What should the agent have done?"></textarea>
+        </label>
+        <label>Actual behavior
+          <textarea name="actual" required minlength="10" maxlength="500" placeholder="What did the agent actually do?"></textarea>
+        </label>
+      </div>
+      <label>When did the failure happen? (UTC)
+        <input type="datetime-local" name="observed_at" required>
+        <span class="help">Within the last 180 days.</span>
+      </label>
+      <label>
+        <input type="checkbox" name="reproducible">
+        Reproducible
+      </label>
+      <label>Reproduction steps (optional)
+        <textarea name="repro_steps" maxlength="4000" placeholder="If reproducible, list the steps."></textarea>
+      </label>
+      <fieldset style="border:1px solid var(--rule,#ddd);border-radius:6px;padding:12px;">
+        <legend style="font-size:14px;font-weight:500;padding:0 6px;">Evidence URLs (1–10 required)</legend>
+        <div class="evidence-list" id="evidence-list">
+          <input type="url" name="evidence" required placeholder="https://… (screenshot, log, post, …)">
+        </div>
+        <button type="button" class="add-evidence" id="add-evidence" style="margin-top:8px;">+ Add another URL</button>
+      </fieldset>
+      <label>Your email (private — only used for status updates)
+        <input type="email" name="submitter_email" required placeholder="you@example.com">
+      </label>
+      <label>Public attribution (optional)
+        <input type="text" name="submitter_handle" maxlength="80" placeholder='e.g. "@anonymous" or "Jane Doe (independent researcher)"'>
+        <span class="help">Leave blank to be listed as anonymous.</span>
+      </label>
+      <button type="submit" id="submit-btn">Submit for review</button>
+      <div class="submit-result" id="submit-result"></div>
+    </form>
+  </main>
+  <footer class="site-foot wrap">
+    <p>&copy; Hlido &middot; <a href="/methodology/">Methodology</a> &middot; <a href="/privacy/">Privacy</a></p>
+  </footer>
+  <script>
+    (function () {
+      const form = document.getElementById('incident-form');
+      const result = document.getElementById('submit-result');
+      const submitBtn = document.getElementById('submit-btn');
+      const evList = document.getElementById('evidence-list');
+      document.getElementById('add-evidence').addEventListener('click', function () {
+        if (evList.children.length >= 10) return;
+        const input = document.createElement('input');
+        input.type = 'url';
+        input.name = 'evidence';
+        input.required = true;
+        input.placeholder = 'https://…';
+        evList.appendChild(input);
+      });
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        result.className = 'submit-result';
+        result.textContent = '';
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting…';
+        const fd = new FormData(form);
+        const evidenceUrls = Array.from(form.querySelectorAll('input[name="evidence"]'))
+          .map(function (i) { return i.value.trim(); })
+          .filter(Boolean);
+        const observedRaw = fd.get('observed_at');
+        // datetime-local lacks timezone; assume UTC.
+        const observedIso = observedRaw ? new Date(observedRaw + 'Z').toISOString() : '';
+        const body = {
+          slug: (fd.get('slug') || '').toString().trim().toLowerCase(),
+          severity: fd.get('severity'),
+          category: fd.get('category'),
+          title: (fd.get('title') || '').toString().trim(),
+          summary: (fd.get('summary') || '').toString(),
+          evidence_urls: evidenceUrls,
+          observed_at: observedIso,
+          reproducible: fd.get('reproducible') === 'on',
+          repro_steps: (fd.get('repro_steps') || '').toString() || null,
+          expected: (fd.get('expected') || '').toString().trim(),
+          actual: (fd.get('actual') || '').toString().trim(),
+          submitter_email: (fd.get('submitter_email') || '').toString().trim().toLowerCase(),
+          submitter_handle: (fd.get('submitter_handle') || '').toString().trim() || null
+        };
+        try {
+          const r = await fetch('/v1/incidents', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+          });
+          const j = await r.json();
+          if (r.status === 201) {
+            window.location = j.tracking_url + '?just_submitted=1';
+            return;
+          }
+          result.className = 'submit-result error';
+          result.textContent = 'Error: ' + (j.error || 'unknown') + (j.field ? ' (' + j.field + ')' : '');
+        } catch (err) {
+          result.className = 'submit-result error';
+          result.textContent = 'Network error: ' + err.message;
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit for review';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
