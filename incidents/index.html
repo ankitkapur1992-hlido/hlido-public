@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Registry | Hlido</title>
+  <meta name="description" content="The NTSB for AI agents — independent reports of agent failures, vendor responses, and automated re-tests. Subscribe via RSS.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hlido.eu/incidents/">
+  <link rel="alternate" type="application/rss+xml" title="Hlido Incident Registry RSS" href="/v1/incidents/feed.xml">
+  <meta property="og:title" content="Hlido Incident Registry — NTSB for AI agents">
+  <meta property="og:description" content="Independent reports of agent failures, vendor responses, automated re-tests.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hlido.eu/incidents/">
+  <meta property="og:site_name" content="Hlido">
+  <meta property="og:image" content="https://hlido.eu/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260503cats">
+  <style>
+    .incidents-page { background: var(--paper); color: var(--ink); }
+    .incidents-page .page-hero { padding: 64px 0 32px; }
+    .incidents-page h1 { font-family: 'Fraunces', serif; font-weight: 500; }
+    .filter-bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 24px 0; }
+    .filter-bar select, .filter-bar input { padding: 8px 12px; font-size: 14px; border: 1px solid var(--rule, #ddd); border-radius: 6px; font-family: inherit; }
+    .incident-list { display: grid; gap: 16px; margin: 24px 0; }
+    .incident-card { padding: 20px; border: 1px solid var(--rule, #e5e5e5); border-radius: 10px; background: var(--paper-alt, #fafafa); transition: border-color .15s; }
+    .incident-card:hover { border-color: var(--ink, #222); }
+    .incident-card a { color: inherit; text-decoration: none; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+    .sev-low { background: #e8f5e9; color: #1b5e20; }
+    .sev-medium { background: #fff8e1; color: #f57f17; }
+    .sev-high { background: #fff3e0; color: #e65100; }
+    .sev-critical { background: #ffebee; color: #b71c1c; }
+    .meta { font-size: 13px; color: var(--ink-muted, #666); margin: 4px 0 8px; }
+    .summary-preview { color: var(--ink, #333); font-size: 15px; line-height: 1.5; }
+    .empty-state { padding: 48px 24px; text-align: center; color: var(--ink-muted, #666); border: 1px dashed var(--rule, #ddd); border-radius: 10px; }
+    .submit-cta { margin: 32px 0; padding: 24px; border: 1px solid var(--rule, #ddd); border-radius: 12px; background: var(--paper); }
+    .submit-cta a.btn { display: inline-block; padding: 10px 20px; background: var(--ink, #111); color: var(--paper, #fff); border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .submit-cta a.btn[disabled], .submit-cta a.btn[aria-disabled="true"] { background: #999; cursor: not-allowed; pointer-events: none; }
+    .feed-link { font-size: 13px; color: var(--ink-muted, #666); margin-left: 8px; }
+    .legend-bar { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin: 12px 0 24px; padding: 12px 16px; border: 1px solid var(--rule, #ddd); border-radius: 8px; background: var(--paper-alt, #fafafa); font-size: 13px; }
+    .legend-bar strong { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-muted, #666); margin-right: 4px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .rss-cta { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: #ee802f; color: #fff !important; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .rss-cta:hover { background: #d96f1f; }
+    .rss-cta::before { content: "\2606"; }
+    .private-beta-banner { padding: 14px 18px; background: #fff8e1; border-left: 4px solid #f57f17; border-radius: 6px; margin: 16px 0; font-size: 14px; color: #6f4f00; }
+    .form-private-beta .submit-active { display: none; }
+    .sparkline-wrap { margin: 16px 0 24px; padding: 16px; border: 1px solid var(--rule, #ddd); border-radius: 8px; background: var(--paper, #fff); }
+    .sparkline-wrap h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; margin: 0 0 12px; }
+    .sparkline-row { display: grid; grid-template-columns: 100px 1fr 64px; gap: 12px; align-items: center; padding: 4px 0; font-size: 13px; }
+    .sparkline-bar { height: 8px; background: var(--rule, #eee); border-radius: 4px; overflow: hidden; }
+    .sparkline-bar > span { display: block; height: 100%; background: var(--ink, #333); }
+    .sparkline-row[data-sev="critical"] .sparkline-bar > span { background: #b71c1c; }
+    .sparkline-row[data-sev="high"] .sparkline-bar > span { background: #e65100; }
+    .sparkline-row[data-sev="medium"] .sparkline-bar > span { background: #f57f17; }
+    .sparkline-row[data-sev="low"] .sparkline-bar > span { background: #1b5e20; }
+    .sparkline-count { font-family: 'JetBrains Mono', monospace; text-align: right; }
+  </style>
+</head>
+<body class="incidents-page">
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="/" class="brand">Hlido</a>
+      <nav><a href="/reviews/">Reviews</a> <a href="/api/">API</a> <a href="/incidents/" aria-current="page">Incidents</a> <a href="/compare/">Compare</a> <a href="/badge/">Badge</a></nav>
+    </div>
+  </header>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Incident Registry</h1>
+      <p>NTSB-style failure reports for AI agents. Each incident is reviewed by Hlido staff before publication; vendors get 48&nbsp;hours to respond, and a re-test of the affected agent is queued automatically.
+      </p>
+      <p>
+        <a class="rss-cta" href="/v1/incidents/feed.xml">Subscribe to RSS feed</a>
+        <a class="feed-link" href="/v1/incidents">JSON API</a>
+      </p>
+    </div>
+  </section>
+  <main class="wrap">
+    <div class="legend-bar" aria-label="Severity legend">
+      <strong>Severity:</strong>
+      <span class="legend-item"><span class="badge sev-critical">Critical</span> data loss, safety, or unrecoverable</span>
+      <span class="legend-item"><span class="badge sev-high">High</span> outage, blocked workflow</span>
+      <span class="legend-item"><span class="badge sev-medium">Medium</span> degraded behaviour</span>
+      <span class="legend-item"><span class="badge sev-low">Low</span> minor or cosmetic</span>
+    </div>
+    <div class="private-beta-banner" role="status">
+      <strong>Invitation-only beta.</strong> Public submission is closed while editorial cover is finalised. Browse and subscribe today; the public submit form opens in a follow-up announcement. Existing reports already published. To request invite access for credible reporters, email <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a>.
+    </div>
+    <div class="sparkline-wrap" aria-label="30-day incident volume by severity">
+      <h2>Last 30 days</h2>
+      <div data-sparkline-rows>
+        <p class="meta">Loading 30-day rolling volume&hellip;</p>
+      </div>
+    </div>
+    <div class="filter-bar" role="group" aria-label="Filter incidents">
+      <label>Severity:
+        <select id="filter-severity">
+          <option value="">All</option>
+          <option value="critical">Critical</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </label>
+      <label>Category:
+        <select id="filter-category">
+          <option value="">All</option>
+          <option value="hallucination">Hallucination</option>
+          <option value="regression">Regression</option>
+          <option value="safety">Safety</option>
+          <option value="availability">Availability</option>
+          <option value="cost">Cost</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>Search:
+        <input id="filter-search" type="search" placeholder="title, slug, …">
+      </label>
+    </div>
+    <div id="incident-list" class="incident-list" aria-live="polite">
+      <div class="empty-state">Loading incidents…</div>
+    </div>
+  </main>
+  <footer class="site-foot wrap">
+    <p>&copy; Hlido &middot; <a href="/methodology/">Methodology</a> &middot; <a href="/privacy/">Privacy</a></p>
+  </footer>
+  <script>
+    (function () {
+      const listEl = document.getElementById('incident-list');
+      const sevEl = document.getElementById('filter-severity');
+      const catEl = document.getElementById('filter-category');
+      const searchEl = document.getElementById('filter-search');
+      let allIncidents = [];
+
+      function escapeHtml(s) {
+        return String(s || '').replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      function fmtDate(iso) {
+        if (!iso) return '';
+        try { return new Date(iso).toISOString().slice(0, 10); } catch (e) { return ''; }
+      }
+      function previewSummary(s) {
+        const stripped = String(s || '')
+          .replace(/\*\*([^*]+)\*\*/g, '$1')
+          .replace(/_([^_]+)_/g, '$1')
+          .replace(/`([^`]+)`/g, '$1')
+          .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+          .replace(/^[#>\-*\d.\s]+/gm, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        return stripped.length > 240 ? stripped.slice(0, 237) + '…' : stripped;
+      }
+      function render(items) {
+        if (!items.length) {
+          listEl.innerHTML = '<div class="empty-state">No incidents match your filters yet. Submission is invitation-only during private beta &mdash; email <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a> for access.</div>';
+          return;
+        }
+        listEl.innerHTML = items.map(function (i) {
+          return '<article class="incident-card">' +
+            '<a href="/incidents/' + escapeHtml(i.id) + '/">' +
+            '<span class="badge sev-' + escapeHtml(i.severity) + '">' + escapeHtml(i.severity) + '</span> ' +
+            '<span class="badge">' + escapeHtml(i.category) + '</span> ' +
+            '<strong>' + escapeHtml(i.slug) + '</strong>' +
+            '<h3 style="margin:8px 0 4px;font-family:Fraunces,serif;">' + escapeHtml(i.title) + '</h3>' +
+            '<div class="meta">Observed ' + escapeHtml(fmtDate(i.observed_at)) + ' &middot; Published ' + escapeHtml(fmtDate(i.published_at)) +
+            (i.submitter_handle ? ' &middot; by ' + escapeHtml(i.submitter_handle) : '') + '</div>' +
+            '<div class="summary-preview">' + escapeHtml(previewSummary(i.summary)) + '</div>' +
+            '</a></article>';
+        }).join('');
+      }
+      function applyFilters() {
+        const sev = sevEl.value;
+        const cat = catEl.value;
+        const q = (searchEl.value || '').toLowerCase().trim();
+        const filtered = allIncidents.filter(function (i) {
+          if (sev && i.severity !== sev) return false;
+          if (cat && i.category !== cat) return false;
+          if (q) {
+            const hay = (i.title + ' ' + i.slug + ' ' + i.summary).toLowerCase();
+            if (hay.indexOf(q) === -1) return false;
+          }
+          return true;
+        });
+        render(filtered);
+      }
+      sevEl.addEventListener('change', applyFilters);
+      catEl.addEventListener('change', applyFilters);
+      searchEl.addEventListener('input', applyFilters);
+      fetch('/v1/incidents?limit=200')
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          allIncidents = (j && j.incidents) || [];
+          applyFilters();
+          renderSparkline(allIncidents);
+        })
+        .catch(function () {
+          listEl.innerHTML = '<div class="empty-state">Couldn\'t load incidents. Try the <a href="/v1/incidents/feed.xml">RSS feed</a>.</div>';
+        });
+
+      function renderSparkline(items) {
+        const rowsEl = document.querySelector('[data-sparkline-rows]');
+        if (!rowsEl) return;
+        const cutoff = Date.now() - 30 * 86400 * 1000;
+        const counts = { critical: 0, high: 0, medium: 0, low: 0 };
+        (items || []).forEach(function (i) {
+          const t = Date.parse(i.published_at || i.observed_at || '') || 0;
+          if (t < cutoff) return;
+          if (counts.hasOwnProperty(i.severity)) counts[i.severity] += 1;
+        });
+        const max = Math.max(1, counts.critical, counts.high, counts.medium, counts.low);
+        rowsEl.innerHTML = ['critical', 'high', 'medium', 'low'].map(function (sev) {
+          const pct = Math.round((counts[sev] / max) * 100);
+          const label = sev[0].toUpperCase() + sev.slice(1);
+          return '<div class="sparkline-row" data-sev="' + sev + '">'
+            + '<span>' + label + '</span>'
+            + '<span class="sparkline-bar"><span style="width:' + pct + '%"></span></span>'
+            + '<span class="sparkline-count">' + counts[sev] + '</span>'
+            + '</div>';
+        }).join('');
+      }
+    })();
+  </script>
+</body>
+</html>
