@@ -1,0 +1,444 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Hlido Recommendation API",
+    "version": "wave4-v1",
+    "description": "Public REST surface for Hlido's agent review corpus. Buyer agents call /v1/recommend with a free-text need + constraints and get a ranked shortlist with rationale + evidence URL. Free tier: 100 calls/day, top-1 results, no key. Paid: hlk_live_* Bearer.",
+    "contact": {
+      "name": "Hlido",
+      "url": "https://hlido.eu",
+      "email": "ankit@hlido.eu"
+    },
+    "license": { "name": "Proprietary — see https://hlido.eu/legal/" }
+  },
+  "servers": [
+    { "url": "https://hlido.eu/v1", "description": "Production" }
+  ],
+  "tags": [
+    { "name": "recommendations", "description": "Constraint-driven shortlist of reviewed agents." },
+    { "name": "directory", "description": "Read-only access to the canonical review corpus." },
+    { "name": "ops", "description": "Health, quota, and aggregate stats." },
+    { "name": "incidents", "description": "Public registry of agent failures (Wave 4 PR #44)." }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "hlk_live"
+      }
+    },
+    "schemas": {
+      "Tier": {
+        "type": "string",
+        "enum": ["VITAL", "STEADY", "FADING", "FLATLINE"]
+      },
+      "Category": {
+        "type": "string",
+        "enum": [
+          "AI Agent", "Coding", "Customer Experience", "Workflow & Automation",
+          "Infrastructure", "Voice", "Productivity", "Image & Design",
+          "Frameworks & Eval", "Specialized verticals", "Chat & Companion",
+          "Research", "Marketing & Content"
+        ]
+      },
+      "RecommendRequest": {
+        "type": "object",
+        "required": ["need"],
+        "properties": {
+          "need": { "type": "string", "minLength": 3, "maxLength": 500, "description": "Free-text description of the buyer's need." },
+          "constraints": {
+            "type": "object",
+            "properties": {
+              "category": { "$ref": "#/components/schemas/Category" },
+              "min_tier": { "$ref": "#/components/schemas/Tier" },
+              "budget_eur": { "type": "number", "description": "Advisory only (surfaced in rationale, not used for filtering)." },
+              "languages": { "type": "array", "items": { "type": "string" }, "maxItems": 5 },
+              "deployment": { "type": "string", "enum": ["cloud", "self-host", "cli", "web", "api"], "description": "Advisory only." }
+            },
+            "additionalProperties": false
+          },
+          "k": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 25,
+            "description": "Default 3 for paid tiers; FORCED to 1 for free tier regardless of input."
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecommendResult": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "tier": { "$ref": "#/components/schemas/Tier" },
+          "score": { "type": "integer", "minimum": 0, "maximum": 100, "nullable": true },
+          "category": { "$ref": "#/components/schemas/Category" },
+          "rationale": { "type": "string" },
+          "evidence_url": { "type": "string", "format": "uri" },
+          "score_url": { "type": "string", "format": "uri" }
+        },
+        "required": ["slug", "name", "tier", "score", "category", "rationale", "evidence_url", "score_url"]
+      },
+      "RecommendResponse": {
+        "type": "object",
+        "properties": {
+          "request_id": { "type": "string", "pattern": "^req_[0-9a-f]{32}$" },
+          "model_version": { "type": "string", "example": "wave4-v1" },
+          "cached": { "type": "boolean" },
+          "tier_note": { "type": "string", "description": "Present on free-tier responses only." },
+          "results": { "type": "array", "items": { "$ref": "#/components/schemas/RecommendResult" } }
+        },
+        "required": ["request_id", "model_version", "cached", "results"]
+      },
+      "AgentDetail": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "category": { "$ref": "#/components/schemas/Category" },
+          "score": { "type": "integer", "minimum": 0, "maximum": 100, "nullable": true },
+          "tier": { "$ref": "#/components/schemas/Tier" },
+          "summary": { "type": "string" },
+          "evidence_url": { "type": "string", "format": "uri" },
+          "score_url": { "type": "string", "format": "uri" },
+          "last_tested_at": { "type": "string", "format": "date", "nullable": true },
+          "model_version": { "type": "string" }
+        }
+      },
+      "CategoriesResponse": {
+        "type": "object",
+        "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "$ref": "#/components/schemas/Category" },
+                "count": { "type": "integer" }
+              },
+              "required": ["name", "count"]
+            }
+          },
+          "total": { "type": "integer" },
+          "as_of": { "type": "string" },
+          "model_version": { "type": "string" }
+        }
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "ok": { "type": "boolean" },
+          "version": { "type": "string" },
+          "last_registry_update": { "type": "string", "nullable": true },
+          "registry_items": { "type": "integer" }
+        }
+      },
+      "UsageResponse": {
+        "type": "object",
+        "properties": {
+          "tier": { "type": "string", "enum": ["free", "dev", "team"] },
+          "period": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "enum": ["day", "month"] },
+              "start": { "type": "string", "format": "date-time" },
+              "end": { "type": "string", "format": "date-time" }
+            }
+          },
+          "limit": { "type": "integer" },
+          "used": { "type": "integer" },
+          "remaining": { "type": "integer" },
+          "resets_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "StatsPublicResponse": {
+        "type": "object",
+        "properties": {
+          "as_of": { "type": "string", "nullable": true },
+          "calls_last_7d": { "type": "integer" },
+          "top_categories_returned": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "share": { "type": "number" }
+              }
+            }
+          },
+          "top_slugs_returned": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": { "type": "string" },
+                "share": { "type": "number" }
+              }
+            }
+          },
+          "model_version": { "type": "string" }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "enum": [
+              "invalid_json", "invalid_body", "missing_field",
+              "quota_exceeded", "unauthorized", "invalid_api_key",
+              "configuration_error", "internal_error", "not_found"
+            ]
+          },
+          "request_id": { "type": "string" }
+        },
+        "required": ["error"]
+      },
+      "IncidentSeverity": {
+        "type": "string",
+        "enum": ["low", "medium", "high", "critical"]
+      },
+      "IncidentSummary": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "pattern": "^inc_[A-Za-z0-9_-]+$" },
+          "slug": { "type": "string" },
+          "severity": { "$ref": "#/components/schemas/IncidentSeverity" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "observed_at": { "type": "string", "format": "date-time", "nullable": true },
+          "published_at": { "type": "string", "format": "date-time", "nullable": true },
+          "status": { "type": "string", "enum": ["pending_review", "published", "rejected"] }
+        },
+        "required": ["id", "slug", "severity", "title", "status"]
+      },
+      "IncidentDetail": {
+        "allOf": [
+          { "$ref": "#/components/schemas/IncidentSummary" },
+          {
+            "type": "object",
+            "properties": {
+              "evidence_urls": { "type": "array", "items": { "type": "string", "format": "uri" } },
+              "submitter_handle": { "type": "string", "nullable": true },
+              "vendor_response": { "type": "string", "nullable": true },
+              "model_version": { "type": "string" }
+            }
+          }
+        ]
+      },
+      "IncidentListResponse": {
+        "type": "object",
+        "properties": {
+          "items": { "type": "array", "items": { "$ref": "#/components/schemas/IncidentSummary" } },
+          "total": { "type": "integer" },
+          "as_of": { "type": "string", "nullable": true },
+          "model_version": { "type": "string" }
+        },
+        "required": ["items"]
+      },
+      "IncidentSubmitRequest": {
+        "type": "object",
+        "required": ["slug", "severity", "title", "summary"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,80}$" },
+          "severity": { "$ref": "#/components/schemas/IncidentSeverity" },
+          "title": { "type": "string", "minLength": 5, "maxLength": 200 },
+          "summary": { "type": "string", "minLength": 20, "maxLength": 4000 },
+          "evidence_urls": { "type": "array", "items": { "type": "string", "format": "uri" }, "maxItems": 10 },
+          "observed_at": { "type": "string", "format": "date-time" },
+          "submitter_handle": { "type": "string", "maxLength": 80 },
+          "submitter_email": { "type": "string", "format": "email", "description": "Hashed at intake; never stored in plaintext." }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "paths": {
+    "/recommend": {
+      "post": {
+        "summary": "Constraint-driven shortlist",
+        "tags": ["recommendations"],
+        "security": [{ "bearerAuth": [] }, {}],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/RecommendRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ranked shortlist.",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/RecommendResponse" } }
+            }
+          },
+          "400": { "description": "Invalid body.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "429": { "description": "Quota exceeded.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/agents/{slug}": {
+      "get": {
+        "summary": "Public scorecard summary (whitelist)",
+        "tags": ["directory"],
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,80}$" } },
+          { "name": "If-None-Match", "in": "header", "schema": { "type": "string" }, "description": "Send the previous ETag for 304 responses." }
+        ],
+        "responses": {
+          "200": {
+            "description": "Whitelisted scorecard fields.",
+            "headers": {
+              "ETag": { "schema": { "type": "string" } },
+              "Cache-Control": { "schema": { "type": "string", "example": "public, max-age=300, s-maxage=600" } }
+            },
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AgentDetail" } } }
+          },
+          "304": { "description": "ETag match, body empty." },
+          "404": { "description": "Slug not in registry.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/categories": {
+      "get": {
+        "summary": "13 canonical categories + counts",
+        "tags": ["directory"],
+        "parameters": [
+          { "name": "If-None-Match", "in": "header", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Canonical category list.",
+            "headers": {
+              "ETag": { "schema": { "type": "string" } },
+              "Cache-Control": { "schema": { "type": "string", "example": "public, max-age=3600" } }
+            },
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CategoriesResponse" } } }
+          },
+          "304": { "description": "ETag match, body empty." }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Uptime + last_registry_update",
+        "tags": ["ops"],
+        "responses": {
+          "200": {
+            "description": "Health snapshot.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/HealthResponse" } } }
+          }
+        }
+      }
+    },
+    "/usage": {
+      "get": {
+        "summary": "Caller's tier + remaining quota",
+        "tags": ["ops"],
+        "security": [{ "bearerAuth": [] }, {}],
+        "responses": {
+          "200": {
+            "description": "Tier + quota.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UsageResponse" } } }
+          }
+        }
+      }
+    },
+    "/stats/public": {
+      "get": {
+        "summary": "Daily aggregate counts",
+        "tags": ["ops"],
+        "responses": {
+          "200": {
+            "description": "Aggregate stats.",
+            "headers": {
+              "Cache-Control": { "schema": { "type": "string", "example": "public, max-age=3600" } }
+            },
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/StatsPublicResponse" } } }
+          }
+        }
+      }
+    },
+    "/incidents": {
+      "get": {
+        "summary": "List published incidents (filter + paginate)",
+        "tags": ["incidents"],
+        "parameters": [
+          { "name": "slug", "in": "query", "schema": { "type": "string" }, "description": "Filter by agent slug." },
+          { "name": "severity", "in": "query", "schema": { "$ref": "#/components/schemas/IncidentSeverity" } },
+          { "name": "since", "in": "query", "schema": { "type": "string" }, "description": "ISO-8601 datetime or relative (e.g. 'now-30d')." },
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 100, "default": 25 } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published incidents matching the filter.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/IncidentListResponse" } } }
+          }
+        }
+      },
+      "post": {
+        "summary": "Submit a new incident report (private beta — gated)",
+        "tags": ["incidents"],
+        "description": "Submissions enter a moderation queue with status=pending_review until staff publish. Public submissions are gated until media liability cover binds; the endpoint exists but currently accepts only authorized submitters.",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/IncidentSubmitRequest" } } }
+        },
+        "responses": {
+          "202": {
+            "description": "Submission accepted for review.",
+            "content": { "application/json": { "schema": { "type": "object", "properties": { "id": { "type": "string" }, "status": { "type": "string", "enum": ["pending_review"] } } } } }
+          },
+          "400": { "description": "Invalid body.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "429": { "description": "Rate-limited.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/incidents/{id}": {
+      "get": {
+        "summary": "Single incident detail (published only)",
+        "tags": ["incidents"],
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string", "pattern": "^inc_[A-Za-z0-9_-]+$" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Incident detail.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/IncidentDetail" } } }
+          },
+          "404": { "description": "Not published or not found.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/incidents/feed.xml": {
+      "get": {
+        "summary": "RSS 2.0 feed of latest 50 published incidents",
+        "tags": ["incidents"],
+        "responses": {
+          "200": {
+            "description": "RSS 2.0 XML feed.",
+            "content": {
+              "application/rss+xml": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/health": {
+      "get": {
+        "summary": "Incidents worker health probe",
+        "tags": ["ops"],
+        "responses": {
+          "200": {
+            "description": "Health snapshot.",
+            "content": { "application/json": { "schema": { "type": "object", "properties": { "ok": { "type": "boolean" }, "version": { "type": "string" } } } } }
+          }
+        }
+      }
+    }
+  }
+}
