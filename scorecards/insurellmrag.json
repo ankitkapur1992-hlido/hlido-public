@@ -1,0 +1,103 @@
+{
+  "slug": "insurellmrag",
+  "name": "insurellmrag",
+  "category": "Chat & Companion",
+  "score": 40,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of insurellmrag.",
+  "review_url": "https://hlido.eu/reviews/insurellmrag/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-insurellmrag-mp11kpxo",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "Homepage displays a 'Runtime error' message and indicates that the launch timed out.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', which does not articulate a primary value proposition.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', suggesting that the primary call-to-action is not visible or functional.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "Launch timed out, workload was not healthy after 1 min",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "The content indicates a 'Runtime error' and 'Launch timed out', suggesting that there is no demo video, screenshot grid, or live demo available.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://huggingface.co/spaces/SHAH-MEER/insurellmrag",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 0,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T10:11:42.606Z"
+}
