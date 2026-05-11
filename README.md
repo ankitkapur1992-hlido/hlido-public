@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (564)
+## Reviewed agents (597)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -591,6 +591,39 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`tdsproject2`](https://hlido.eu/reviews/tdsproject2/) | TDSPROJECT2 | AI Agent | 57 | — |
 | [`hs-unit4-agent`](https://hlido.eu/reviews/hs-unit4-agent/) | hs-unit4-agent | AI Agent | 57 | — |
 | [`voice-agent`](https://hlido.eu/reviews/voice-agent/) | Voice_Agent | AI Agent | 57 | — |
+| [`magic-patterns`](https://hlido.eu/reviews/magic-patterns/) | Magic Patterns | Image & Design | 90 | — |
+| [`bolt-new-v2`](https://hlido.eu/reviews/bolt-new-v2/) | Bolt.new (StackBlitz) | Coding | 90 | — |
+| [`coplay`](https://hlido.eu/reviews/coplay/) | Coplay | Coding | 90 | — |
+| [`sema4-ai`](https://hlido.eu/reviews/sema4-ai/) | Sema4.ai | Workflow & Automation | 90 | — |
+| [`runner-h-h-company`](https://hlido.eu/reviews/runner-h-h-company/) | Runner H (H Company) | AI Agent | 90 | — |
+| [`proxy-convergence`](https://hlido.eu/reviews/proxy-convergence/) | Proxy (Convergence AI) | AI Agent | 40 | — |
+| [`replit-ai-agent`](https://hlido.eu/reviews/replit-ai-agent/) | Replit AI (Ghostwriter) | Coding | 90 | — |
+| [`genie-cosine`](https://hlido.eu/reviews/genie-cosine/) | Genie (Cosine AI) | Coding | 90 | — |
+| [`vapi-voice-agents`](https://hlido.eu/reviews/vapi-voice-agents/) | Vapi Voice Agents Platform | Voice | 90 | — |
+| [`retell-voice`](https://hlido.eu/reviews/retell-voice/) | Retell Voice | Voice | 90 | — |
+| [`phonely`](https://hlido.eu/reviews/phonely/) | Phonely | Voice | 90 | — |
+| [`sierra-platform`](https://hlido.eu/reviews/sierra-platform/) | Sierra (CX agent platform) | Customer Experience | 90 | — |
+| [`parloa`](https://hlido.eu/reviews/parloa/) | Parloa | Customer Experience | 90 | — |
+| [`decagon-platform`](https://hlido.eu/reviews/decagon-platform/) | Decagon AI Agent | Customer Experience | 90 | — |
+| [`11x-ai`](https://hlido.eu/reviews/11x-ai/) | 11x.ai | Productivity | 90 | — |
+| [`artisan-ai`](https://hlido.eu/reviews/artisan-ai/) | Artisan AI | Productivity | 73 | — |
+| [`rox-ai`](https://hlido.eu/reviews/rox-ai/) | Rox | Productivity | 90 | — |
+| [`elicit-research`](https://hlido.eu/reviews/elicit-research/) | Elicit | Research | 90 | — |
+| [`granola-ai`](https://hlido.eu/reviews/granola-ai/) | Granola AI | Productivity | 90 | — |
+| [`exa-search-api`](https://hlido.eu/reviews/exa-search-api/) | Exa Search | Research | 90 | — |
+| [`autogen-microsoft`](https://hlido.eu/reviews/autogen-microsoft/) | Microsoft AutoGen | Frameworks & Eval | 90 | — |
+| [`arize-phoenix`](https://hlido.eu/reviews/arize-phoenix/) | Arize Phoenix | Frameworks & Eval | 90 | — |
+| [`agentops-ai`](https://hlido.eu/reviews/agentops-ai/) | AgentOps | Frameworks & Eval | 90 | — |
+| [`hyperbolic-ai`](https://hlido.eu/reviews/hyperbolic-ai/) | Hyperbolic | Infrastructure | 90 | — |
+| [`mem-0-ai`](https://hlido.eu/reviews/mem-0-ai/) | Mem0 AI | Infrastructure | 90 | — |
+| [`langgraph-platform`](https://hlido.eu/reviews/langgraph-platform/) | LangGraph Platform | Frameworks & Eval | 90 | — |
+| [`weaviate-platform`](https://hlido.eu/reviews/weaviate-platform/) | Weaviate Cloud | Infrastructure | 90 | — |
+| [`clay-platform`](https://hlido.eu/reviews/clay-platform/) | Clay (data enrichment AI) | Productivity | 90 | — |
+| [`cline-2`](https://hlido.eu/reviews/cline-2/) | Cline (latest) | Coding | 90 | — |
+| [`warp-ai-terminal`](https://hlido.eu/reviews/warp-ai-terminal/) | Warp AI Terminal | Coding | 90 | — |
+| [`roocode`](https://hlido.eu/reviews/roocode/) | Roo Code | Coding | 73 | — |
+| [`ampcode`](https://hlido.eu/reviews/ampcode/) | AmpCode by Sourcegraph | Coding | 90 | — |
+| [`zed-industries-ai`](https://hlido.eu/reviews/zed-industries-ai/) | Zed AI | Coding | 90 | — |
 
 ## Files in this mirror
 
