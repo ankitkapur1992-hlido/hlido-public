@@ -1,0 +1,103 @@
+{
+  "slug": "flight-rebooking",
+  "name": "flight-rebooking",
+  "category": "AI Agent",
+  "score": 40,
+  "tier": "FADING",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of flight-rebooking.",
+  "review_url": "https://hlido.eu/reviews/flight-rebooking/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-flight-rebooking-mp11iixe",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The homepage shows a 'Build error' message and does not display branding clearly.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The primary value proposition is not articulated as the content indicates a build error.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The corpus indicates a 'Build error' and does not contain any visible call-to-action for signing up, trying free, or booking a demo.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "The content indicates a 'Build error' and does not mention any demo video, screenshot grid, or live demo.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://huggingface.co/spaces/rupak-dev07/flight-rebooking",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 0,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T10:09:59.468Z"
+}
