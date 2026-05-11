@@ -23,11 +23,15 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (342)
+## Reviewed agents (384)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
+| [`klariqo`](https://hlido.eu/reviews/klariqo/) | Klariqo | Voice | 58 | FADING |
+| [`baton`](https://hlido.eu/reviews/baton/) | Baton | Frameworks & Eval | 64 | FADING |
+| [`openowl`](https://hlido.eu/reviews/openowl/) | OpenOwl | Workflow & Automation | 50 | FADING |
 | [`naoma-ai-demo-agent`](https://hlido.eu/reviews/naoma-ai-demo-agent/) | Naoma AI Demo Agent | Customer Experience | 80 | — |
+| [`holo`](https://hlido.eu/reviews/holo/) | Holo | Marketing & Content | 50 | FADING |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
 | [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 80 | — |
 | [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 90 | — |
@@ -369,6 +373,44 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`pensieve`](https://hlido.eu/reviews/pensieve/) | Pensieve | Research | 60 | — |
 | [`workflow-machine`](https://hlido.eu/reviews/workflow-machine/) | Workflow Machine | Productivity | 60 | — |
 | [`heightsplatform`](https://hlido.eu/reviews/heightsplatform/) | AI Online Course Creation Platform - Heights AI 2 Features | AI Agent | 65 | — |
+| [`writesonic`](https://hlido.eu/reviews/writesonic/) | Writesonic | Marketing & Content | 90 | — |
+| [`flux-imessage-agents`](https://hlido.eu/reviews/flux-imessage-agents/) | Flux | Productivity | 90 | — |
+| [`ai2sql`](https://hlido.eu/reviews/ai2sql/) | SQL Query Builder & Generator - AI Powered Database Assistant | AI Agent | 53 | — |
+| [`headlinesai-pro`](https://hlido.eu/reviews/headlinesai-pro/) | Free AI Title Generator – Get Catchy & SEO-Friendly Titles | NetusAI | Marketing & Content | 78 | — |
+| [`canary`](https://hlido.eu/reviews/canary/) | Canary | Coding | 90 | — |
+| [`cal-com`](https://hlido.eu/reviews/cal-com/) | Cal.com AI | Productivity | 90 | — |
+| [`aiforgoogleslides`](https://hlido.eu/reviews/aiforgoogleslides/) | AI for Google Slides - Free Google Slides AI tool | Coding | 65 | — |
+| [`app-rapidtextai`](https://hlido.eu/reviews/app-rapidtextai/) | RapidTextAI - Advanced AI article generator, Content, and Image Generation Tools | Image & Design | 65 | — |
+| [`avatarai-me`](https://hlido.eu/reviews/avatarai-me/) | AI Avatar Generator - Create Custom AI Avatars of Yourself | Professional Photo Shoots with AI | Image & Design | 65 | — |
+| [`aws-amazon`](https://hlido.eu/reviews/aws-amazon/) | Agentic Coding Experience - Amazon Q Developer - AWS | Coding | 90 | — |
+| [`chatwithcloud`](https://hlido.eu/reviews/chatwithcloud/) | ChatWithCloud - Chat with your AWS Cloud from Terminal | Chat & Companion | 78 | — |
+| [`astra`](https://hlido.eu/reviews/astra/) | Astra | Productivity | 40 | — |
+| [`civitai`](https://hlido.eu/reviews/civitai/) | Civitai | Share your models | AI Agent | 65 | — |
+| [`enact`](https://hlido.eu/reviews/enact/) | Enact | Productivity | 90 | — |
+| [`crossnode`](https://hlido.eu/reviews/crossnode/) | Crossnode | Productivity | 90 | — |
+| [`fathom-3-0`](https://hlido.eu/reviews/fathom-3-0/) | Fathom 3.0 | Productivity | 40 | — |
+| [`d-id`](https://hlido.eu/reviews/d-id/) | D-ID | The #1 Choice for AI Generated Video Creation Platform | Image & Design | 78 | — |
+| [`imgcmd`](https://hlido.eu/reviews/imgcmd/) | imgcmd | Image & Design | 73 | — |
+| [`far-site`](https://hlido.eu/reviews/far-site/) | FARSITE - Government Contract Compliance Software | AI Agent | 53 | — |
+| [`leap`](https://hlido.eu/reviews/leap/) | Leap | Coding | 73 | — |
+| [`editgpt`](https://hlido.eu/reviews/editgpt/) | Proofread, edit and track changes to your content using ChatGPT. | editGPT | Chat & Companion | 78 | — |
+| [`hubspot-breeze-prospecting-agent`](https://hlido.eu/reviews/hubspot-breeze-prospecting-agent/) | HubSpot Breeze Prospecting Agent | Productivity | 57 | — |
+| [`flexapp`](https://hlido.eu/reviews/flexapp/) | AI Mobile App Designer — Beautiful UI in Minutes | GenDesigns | Image & Design | 65 | — |
+| [`get-meetgeek`](https://hlido.eu/reviews/get-meetgeek/) | MeetGeek | AI Note Taker and Meeting Assistant | Workflow & Automation | 65 | — |
+| [`get-murf`](https://hlido.eu/reviews/get-murf/) | Free AI Voice Generator & Text to Speech Online | Murf AI | Voice | 65 | — |
+| [`rewind-ai`](https://hlido.eu/reviews/rewind-ai/) | Rewind AI | AI Agent | 40 | — |
+| [`adobe-firefly-ai-assistant`](https://hlido.eu/reviews/adobe-firefly-ai-assistant/) | Adobe Firefly AI Assistant | Image & Design | 73 | — |
+| [`clide`](https://hlido.eu/reviews/clide/) | Clide | Coding | 40 | — |
+| [`mercury`](https://hlido.eu/reviews/mercury/) | Mercury | Productivity | 90 | — |
+| [`nelly`](https://hlido.eu/reviews/nelly/) | Nelly | Productivity | 90 | — |
+| [`opencode`](https://hlido.eu/reviews/opencode/) | OpenCode | Coding | 90 | — |
+| [`openagents`](https://hlido.eu/reviews/openagents/) | OpenAgents | Productivity | 73 | — |
+| [`origami`](https://hlido.eu/reviews/origami/) | Origami | Productivity | 90 | — |
+| [`raydian`](https://hlido.eu/reviews/raydian/) | Raydian | Coding | 90 | — |
+| [`smooth-cli`](https://hlido.eu/reviews/smooth-cli/) | Smooth CLI | Coding | 73 | — |
+| [`startfa-st`](https://hlido.eu/reviews/startfa-st/) | Startfa.st | AI Agent | 90 | — |
+| [`stackai-auto-agents`](https://hlido.eu/reviews/stackai-auto-agents/) | StackAI Auto-Agents | Productivity | 73 | — |
+| [`tracium`](https://hlido.eu/reviews/tracium/) | Tracium | Infrastructure | 90 | — |
 
 ## Files in this mirror
 
