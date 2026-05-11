@@ -1,0 +1,98 @@
+{
+  "slug": "mcp-abap-adt-pg-vector-rag",
+  "name": "@mcp-abap-adt/pg-vector-rag",
+  "category": "Coding",
+  "score": 73,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of mcp-abap-adt-pg-vector-rag.",
+  "review_url": "https://hlido.eu/reviews/mcp-abap-adt-pg-vector-rag/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-mcp-abap-adt-pg-vector-rag-mp10qe1f",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"fr0ster/llm-agent\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing pages.",
+      "source_surface": "homepage|pricing"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage contains a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "unknown",
+      "evidence": "No evidence returned",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://github.com/fr0ster/llm-agent#readme",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://github.com/pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": "https://github.com/open-source/sponsors",
+      "ok": true
+    },
+    {
+      "id": "integrations",
+      "url": "https://github.com/features/spark",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://github.com/fr0ster/llm-agent/tree/main/examples",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://github.com/fr0ster/llm-agent/blob/main/CHANGELOG.md",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T09:48:33.552Z"
+}
