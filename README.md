@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (385)
+## Reviewed agents (564)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -412,6 +412,185 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`stackai-auto-agents`](https://hlido.eu/reviews/stackai-auto-agents/) | StackAI Auto-Agents | Productivity | 73 | — |
 | [`tracium`](https://hlido.eu/reviews/tracium/) | Tracium | Infrastructure | 90 | — |
 | [`verdent`](https://hlido.eu/reviews/verdent/) | Verdent | Coding | 90 | — |
+| [`cleocode-lafs`](https://hlido.eu/reviews/cleocode-lafs/) | @cleocode/lafs | Coding | 57 | — |
+| [`tencent-ai-agent-server`](https://hlido.eu/reviews/tencent-ai-agent-server/) | @tencent-ai/agent-server | Coding | 73 | — |
+| [`beeai-framework`](https://hlido.eu/reviews/beeai-framework/) | beeai-framework | Coding | 73 | — |
+| [`contextgraph-agent`](https://hlido.eu/reviews/contextgraph-agent/) | @contextgraph/agent | AI Agent | 73 | — |
+| [`voltagent-core`](https://hlido.eu/reviews/voltagent-core/) | @voltagent/core | Coding | 73 | — |
+| [`build-skill`](https://hlido.eu/reviews/build-skill/) | build-skill | Coding | 73 | — |
+| [`oci-generativeaiagent`](https://hlido.eu/reviews/oci-generativeaiagent/) | oci-generativeaiagent | Coding | 90 | — |
+| [`ai-agent-test`](https://hlido.eu/reviews/ai-agent-test/) | ai-agent-test | Coding | 90 | — |
+| [`21st-extension-toolbar`](https://hlido.eu/reviews/21st-extension-toolbar/) | @21st-extension/toolbar | Coding | 73 | — |
+| [`paperclipai`](https://hlido.eu/reviews/paperclipai/) | paperclipai | Coding | 73 | — |
+| [`winsznx-lend402`](https://hlido.eu/reviews/winsznx-lend402/) | @winsznx/lend402 | Coding | 90 | — |
+| [`lleverage-ai-agent-threads`](https://hlido.eu/reviews/lleverage-ai-agent-threads/) | @lleverage-ai/agent-threads | Coding | 73 | — |
+| [`openkrew`](https://hlido.eu/reviews/openkrew/) | openkrew | Coding | 90 | — |
+| [`clipboard-health-ai-rules`](https://hlido.eu/reviews/clipboard-health-ai-rules/) | @clipboard-health/ai-rules | Coding | 57 | — |
+| [`jay-ai-agent`](https://hlido.eu/reviews/jay-ai-agent/) | @jay-ai/agent | Coding | 73 | — |
+| [`alice-space-alice`](https://hlido.eu/reviews/alice-space-alice/) | @alice_space/alice | Coding | 73 | — |
+| [`contractspec-lib-ai-agent`](https://hlido.eu/reviews/contractspec-lib-ai-agent/) | @contractspec/lib.ai-agent | Coding | 90 | — |
+| [`pocketflow`](https://hlido.eu/reviews/pocketflow/) | pocketflow | Frameworks & Eval | 90 | — |
+| [`neoagent`](https://hlido.eu/reviews/neoagent/) | neoagent | Coding | 73 | — |
+| [`frumu-tandem-client`](https://hlido.eu/reviews/frumu-tandem-client/) | @frumu/tandem-client | AI Agent | 90 | — |
+| [`create-bubblelab-app`](https://hlido.eu/reviews/create-bubblelab-app/) | create-bubblelab-app | Coding | 73 | — |
+| [`nori-ai-cli`](https://hlido.eu/reviews/nori-ai-cli/) | nori-ai-cli | Coding | 73 | — |
+| [`ff-labs-fff-bun`](https://hlido.eu/reviews/ff-labs-fff-bun/) | @ff-labs/fff-bun | Coding | 73 | — |
+| [`mypensieve`](https://hlido.eu/reviews/mypensieve/) | mypensieve | AI Agent | 73 | — |
+| [`openduo-duoduo`](https://hlido.eu/reviews/openduo-duoduo/) | @openduo/duoduo | AI Agent | 90 | — |
+| [`compilr-dev-agents`](https://hlido.eu/reviews/compilr-dev-agents/) | @compilr-dev/agents | Coding | 90 | — |
+| [`beav3r-sdk`](https://hlido.eu/reviews/beav3r-sdk/) | @beav3r/sdk | AI Agent | 73 | — |
+| [`leaper-agent`](https://hlido.eu/reviews/leaper-agent/) | leaper-agent | AI Agent | 90 | — |
+| [`mcp-abap-adt-openai-llm`](https://hlido.eu/reviews/mcp-abap-adt-openai-llm/) | @mcp-abap-adt/openai-llm | Coding | 73 | — |
+| [`mcp-abap-adt-anthropic-llm`](https://hlido.eu/reviews/mcp-abap-adt-anthropic-llm/) | @mcp-abap-adt/anthropic-llm | Coding | 73 | — |
+| [`donobu`](https://hlido.eu/reviews/donobu/) | donobu | Coding | 90 | — |
+| [`mcp-abap-adt-deepseek-llm`](https://hlido.eu/reviews/mcp-abap-adt-deepseek-llm/) | @mcp-abap-adt/deepseek-llm | Coding | 73 | — |
+| [`higgsfield-cli`](https://hlido.eu/reviews/higgsfield-cli/) | @higgsfield/cli | Coding | 90 | — |
+| [`mcp-abap-adt-sap-aicore-llm`](https://hlido.eu/reviews/mcp-abap-adt-sap-aicore-llm/) | @mcp-abap-adt/sap-aicore-llm | Coding | 73 | — |
+| [`mcp-abap-adt-qdrant-rag`](https://hlido.eu/reviews/mcp-abap-adt-qdrant-rag/) | @mcp-abap-adt/qdrant-rag | Coding | 73 | — |
+| [`mcp-abap-adt-openai-embedder`](https://hlido.eu/reviews/mcp-abap-adt-openai-embedder/) | @mcp-abap-adt/openai-embedder | Coding | 73 | — |
+| [`elvatis-com-aahp-runner`](https://hlido.eu/reviews/elvatis-com-aahp-runner/) | @elvatis_com/aahp-runner | AI Agent | 73 | — |
+| [`pathcourse-langchain`](https://hlido.eu/reviews/pathcourse-langchain/) | @pathcourse/langchain | AI Agent | 73 | — |
+| [`nopeek`](https://hlido.eu/reviews/nopeek/) | nopeek | Coding | 90 | — |
+| [`sym-bot-xmesh-agent`](https://hlido.eu/reviews/sym-bot-xmesh-agent/) | @sym-bot/xmesh-agent | AI Agent | 73 | — |
+| [`mcp-abap-adt-pg-vector-rag`](https://hlido.eu/reviews/mcp-abap-adt-pg-vector-rag/) | @mcp-abap-adt/pg-vector-rag | Coding | 73 | — |
+| [`studio-foundation-runner`](https://hlido.eu/reviews/studio-foundation-runner/) | @studio-foundation/runner | Coding | 90 | — |
+| [`ipads-skvm-skvm`](https://hlido.eu/reviews/ipads-skvm-skvm/) | @ipads-skvm/skvm | Coding | 90 | — |
+| [`mcp-abap-adt-ollama-embedder`](https://hlido.eu/reviews/mcp-abap-adt-ollama-embedder/) | @mcp-abap-adt/ollama-embedder | Coding | 73 | — |
+| [`luxyie-ai-cli`](https://hlido.eu/reviews/luxyie-ai-cli/) | luxyie.ai-cli | Coding | 90 | — |
+| [`alpha-cli-toolkit`](https://hlido.eu/reviews/alpha-cli-toolkit/) | alpha-cli-toolkit | AI Agent | 90 | — |
+| [`possumtech-antlrmap`](https://hlido.eu/reviews/possumtech-antlrmap/) | @possumtech/antlrmap | Coding | 90 | — |
+| [`llmtxt`](https://hlido.eu/reviews/llmtxt/) | llmtxt | Coding | 73 | — |
+| [`wu529778790-open-im`](https://hlido.eu/reviews/wu529778790-open-im/) | @wu529778790/open-im | Coding | 73 | — |
+| [`herdctl`](https://hlido.eu/reviews/herdctl/) | herdctl | AI Agent | 73 | — |
+| [`claude-gombwe`](https://hlido.eu/reviews/claude-gombwe/) | claude-gombwe | AI Agent | 73 | — |
+| [`create-lancelot`](https://hlido.eu/reviews/create-lancelot/) | create-lancelot | AI Agent | 73 | — |
+| [`pdh-ai-cli`](https://hlido.eu/reviews/pdh-ai-cli/) | pdh-ai-cli | Coding | 90 | — |
+| [`orion-ai`](https://hlido.eu/reviews/orion-ai/) | orion-ai | Coding | 73 | — |
+| [`benjam16-umbrella`](https://hlido.eu/reviews/benjam16-umbrella/) | @benjam16/umbrella | AI Agent | 73 | — |
+| [`leixusam-foundry`](https://hlido.eu/reviews/leixusam-foundry/) | @leixusam/foundry | AI Agent | 90 | — |
+| [`fireqa-agent`](https://hlido.eu/reviews/fireqa-agent/) | fireqa-agent | Coding | 90 | — |
+| [`postbridge-langchain`](https://hlido.eu/reviews/postbridge-langchain/) | postbridge-langchain | Frameworks & Eval | 90 | — |
+| [`aliasjeff-acli`](https://hlido.eu/reviews/aliasjeff-acli/) | @aliasjeff/acli | Coding | 90 | — |
+| [`extend-ai-cli-darwin-arm64`](https://hlido.eu/reviews/extend-ai-cli-darwin-arm64/) | @extend-ai/cli-darwin-arm64 | Coding | 73 | — |
+| [`extend-ai-cli-win32-x64`](https://hlido.eu/reviews/extend-ai-cli-win32-x64/) | @extend-ai/cli-win32-x64 | Coding | 73 | — |
+| [`eetr-agent-streemr`](https://hlido.eu/reviews/eetr-agent-streemr/) | @eetr/agent-streemr | Frameworks & Eval | 90 | — |
+| [`u0z-zero-graph`](https://hlido.eu/reviews/u0z-zero-graph/) | @u0z/zero-graph | Frameworks & Eval | 90 | — |
+| [`langchain-langgraph-supervisor`](https://hlido.eu/reviews/langchain-langgraph-supervisor/) | @langchain/langgraph-supervisor | Frameworks & Eval | 73 | — |
+| [`deepagents`](https://hlido.eu/reviews/deepagents/) | deepagents | Frameworks & Eval | 73 | — |
+| [`create-langgraph`](https://hlido.eu/reviews/create-langgraph/) | create-langgraph | Frameworks & Eval | 73 | — |
+| [`langchain-langgraph-sdk`](https://hlido.eu/reviews/langchain-langgraph-sdk/) | @langchain/langgraph-sdk | Frameworks & Eval | 73 | — |
+| [`langchain-openai`](https://hlido.eu/reviews/langchain-openai/) | @langchain/openai | Frameworks & Eval | 57 | — |
+| [`langchain-mcp-adapters`](https://hlido.eu/reviews/langchain-mcp-adapters/) | @langchain/mcp-adapters | Frameworks & Eval | 57 | — |
+| [`langchain-community`](https://hlido.eu/reviews/langchain-community/) | @langchain/community | Frameworks & Eval | 73 | — |
+| [`langchain-agentfolio`](https://hlido.eu/reviews/langchain-agentfolio/) | langchain-agentfolio | Frameworks & Eval | 90 | — |
+| [`langchain-google-genai`](https://hlido.eu/reviews/langchain-google-genai/) | @langchain/google-genai | Frameworks & Eval | 57 | — |
+| [`langchain-langgraph-swarm`](https://hlido.eu/reviews/langchain-langgraph-swarm/) | @langchain/langgraph-swarm | Frameworks & Eval | 73 | — |
+| [`elelem`](https://hlido.eu/reviews/elelem/) | elelem | Frameworks & Eval | 90 | — |
+| [`stripe-agent-toolkit`](https://hlido.eu/reviews/stripe-agent-toolkit/) | @stripe/agent-toolkit | Frameworks & Eval | 73 | — |
+| [`langchain-anthropic`](https://hlido.eu/reviews/langchain-anthropic/) | @langchain/anthropic | Frameworks & Eval | 57 | — |
+| [`osohq-langchain`](https://hlido.eu/reviews/osohq-langchain/) | @osohq/langchain | Frameworks & Eval | 90 | — |
+| [`langchain-aws`](https://hlido.eu/reviews/langchain-aws/) | @langchain/aws | Frameworks & Eval | 57 | — |
+| [`langchain-copilotkit`](https://hlido.eu/reviews/langchain-copilotkit/) | langchain-copilotkit | Frameworks & Eval | 90 | — |
+| [`langchain-textsplitters`](https://hlido.eu/reviews/langchain-textsplitters/) | @langchain/textsplitters | Frameworks & Eval | 57 | — |
+| [`langchainhub`](https://hlido.eu/reviews/langchainhub/) | langchainhub | Frameworks & Eval | 73 | — |
+| [`pocketflow-js`](https://hlido.eu/reviews/pocketflow-js/) | pocketflow-js | Frameworks & Eval | 90 | — |
+| [`serverless`](https://hlido.eu/reviews/serverless/) | serverless | Frameworks & Eval | 90 | — |
+| [`livekit-agents-plugin-openai`](https://hlido.eu/reviews/livekit-agents-plugin-openai/) | @livekit/agents-plugin-openai | Frameworks & Eval | 73 | — |
+| [`backpackflow`](https://hlido.eu/reviews/backpackflow/) | backpackflow | Frameworks & Eval | 73 | — |
+| [`pocketflow-core`](https://hlido.eu/reviews/pocketflow-core/) | @pocketflow/core | Frameworks & Eval | 90 | — |
+| [`llm-dev-ops-llm-schema-registry-integrations`](https://hlido.eu/reviews/llm-dev-ops-llm-schema-registry-integrations/) | @llm-dev-ops/llm-schema-registry-integrations | Frameworks & Eval | 73 | — |
+| [`open-mercato-ai-assistant`](https://hlido.eu/reviews/open-mercato-ai-assistant/) | @open-mercato/ai-assistant | Frameworks & Eval | 73 | — |
+| [`litechain`](https://hlido.eu/reviews/litechain/) | litechain | Frameworks & Eval | 90 | — |
+| [`ax-llm-ax`](https://hlido.eu/reviews/ax-llm-ax/) | @ax-llm/ax | Frameworks & Eval | 73 | — |
+| [`llm-spend-guard`](https://hlido.eu/reviews/llm-spend-guard/) | llm-spend-guard | Frameworks & Eval | 90 | — |
+| [`hopfield`](https://hlido.eu/reviews/hopfield/) | hopfield | Frameworks & Eval | 73 | — |
+| [`outputai-llm`](https://hlido.eu/reviews/outputai-llm/) | @outputai/llm | Frameworks & Eval | 90 | — |
+| [`mastra-core`](https://hlido.eu/reviews/mastra-core/) | @mastra/core | Frameworks & Eval | 90 | — |
+| [`claude-skills-library`](https://hlido.eu/reviews/claude-skills-library/) | claude-skills-library | Frameworks & Eval | 90 | — |
+| [`nlux-react`](https://hlido.eu/reviews/nlux-react/) | @nlux/react | Frameworks & Eval | 90 | — |
+| [`vulnbuster`](https://hlido.eu/reviews/vulnbuster/) | VulnBuster | AI Agent | 40 | — |
+| [`gradio-agentchatbot`](https://hlido.eu/reviews/gradio-agentchatbot/) | gradio_agentchatbot | Chat & Companion | 57 | — |
+| [`site-agent`](https://hlido.eu/reviews/site-agent/) | site-agent | AI Agent | 57 | — |
+| [`cs-agent`](https://hlido.eu/reviews/cs-agent/) | cs-agent | Chat & Companion | 57 | — |
+| [`referatai`](https://hlido.eu/reviews/referatai/) | referatai | Chat & Companion | 57 | — |
+| [`openai-chatgpt-turbo-ui`](https://hlido.eu/reviews/openai-chatgpt-turbo-ui/) | OpenAI_chatgpt-turbo-UI | Chat & Companion | 40 | — |
+| [`xylaria`](https://hlido.eu/reviews/xylaria/) | Xylaria | Chat & Companion | 40 | — |
+| [`fara-browseruse`](https://hlido.eu/reviews/fara-browseruse/) | Fara-BrowserUse | AI Agent | 57 | — |
+| [`fleetmind-in-action`](https://hlido.eu/reviews/fleetmind-in-action/) | fleetmind-in-action | AI Agent | 40 | — |
+| [`ai-recruiting-agent`](https://hlido.eu/reviews/ai-recruiting-agent/) | AI_Recruiting_Agent | AI Agent | 57 | — |
+| [`chatgpt-assistant`](https://hlido.eu/reviews/chatgpt-assistant/) | ChatGPT-Assistant | Chat & Companion | 57 | — |
+| [`hy-embodied-0-5`](https://hlido.eu/reviews/hy-embodied-0-5/) | HY-Embodied-0.5 | Chat & Companion | 57 | — |
+| [`pixdiet`](https://hlido.eu/reviews/pixdiet/) | PixDiet | Chat & Companion | 40 | — |
+| [`self-chat`](https://hlido.eu/reviews/self-chat/) | self-chat | Chat & Companion | 57 | — |
+| [`graphstrike`](https://hlido.eu/reviews/graphstrike/) | graphstrike | AI Agent | 57 | — |
+| [`shillrank-agent`](https://hlido.eu/reviews/shillrank-agent/) | shillrank-agent | AI Agent | 40 | — |
+| [`finario-ai-agent-and-mcp`](https://hlido.eu/reviews/finario-ai-agent-and-mcp/) | Finario-AI-Agent-and-MCP | AI Agent | 57 | — |
+| [`orynxml-backend`](https://hlido.eu/reviews/orynxml-backend/) | orynxml-backend | Chat & Companion | 57 | — |
+| [`synergy-ai`](https://hlido.eu/reviews/synergy-ai/) | Synergy-ai | Chat & Companion | 57 | — |
+| [`huggingface-chatbot-cascade`](https://hlido.eu/reviews/huggingface-chatbot-cascade/) | Huggingface_Chatbot_Cascade | Chat & Companion | 57 | — |
+| [`babel-1-world-engine`](https://hlido.eu/reviews/babel-1-world-engine/) | Babel-1-World-Engine | AI Agent | 57 | — |
+| [`api`](https://hlido.eu/reviews/api/) | API | Chat & Companion | 57 | — |
+| [`paper-survey-agent`](https://hlido.eu/reviews/paper-survey-agent/) | paper-survey-agent | AI Agent | 40 | — |
+| [`metaenv`](https://hlido.eu/reviews/metaenv/) | MetaEnv | AI Agent | 57 | — |
+| [`admissions-env`](https://hlido.eu/reviews/admissions-env/) | admissions_env | AI Agent | 57 | — |
+| [`flight-rebooking`](https://hlido.eu/reviews/flight-rebooking/) | flight-rebooking | AI Agent | 40 | — |
+| [`meeting-scheduler-openenv`](https://hlido.eu/reviews/meeting-scheduler-openenv/) | meeting-scheduler-openenv | AI Agent | 57 | — |
+| [`itil-reflexion-agent`](https://hlido.eu/reviews/itil-reflexion-agent/) | itil-reflexion-agent | AI Agent | 57 | — |
+| [`champion-council-private`](https://hlido.eu/reviews/champion-council-private/) | Champion_Council_private | AI Agent | 57 | — |
+| [`siteagent`](https://hlido.eu/reviews/siteagent/) | siteagent | AI Agent | 57 | — |
+| [`pixdiet-old-mistral`](https://hlido.eu/reviews/pixdiet-old-mistral/) | PixDiet-Old-Mistral | Chat & Companion | 40 | — |
+| [`pubmed-rag`](https://hlido.eu/reviews/pubmed-rag/) | pubmed_rag | Chat & Companion | 40 | — |
+| [`trip-planner-v1-tools`](https://hlido.eu/reviews/trip-planner-v1-tools/) | trip_planner_v1_tools | Chat & Companion | 57 | — |
+| [`finflow`](https://hlido.eu/reviews/finflow/) | FinFLow | Chat & Companion | 57 | — |
+| [`insurellmrag`](https://hlido.eu/reviews/insurellmrag/) | insurellmrag | Chat & Companion | 40 | — |
+| [`gpt`](https://hlido.eu/reviews/gpt/) | gpt | Chat & Companion | 40 | — |
+| [`linguaicoach`](https://hlido.eu/reviews/linguaicoach/) | linguAIcoach | Chat & Companion | 57 | — |
+| [`scholarbot`](https://hlido.eu/reviews/scholarbot/) | ScholarBot | Chat & Companion | 57 | — |
+| [`irtaza`](https://hlido.eu/reviews/irtaza/) | irtaza | Chat & Companion | 57 | — |
+| [`sentiment-chat-app`](https://hlido.eu/reviews/sentiment-chat-app/) | sentiment-chat-app | Chat & Companion | 57 | — |
+| [`chatgks`](https://hlido.eu/reviews/chatgks/) | chatGKS | Chat & Companion | 57 | — |
+| [`research-ai-assistant`](https://hlido.eu/reviews/research-ai-assistant/) | Research_AI_Assistant | Chat & Companion | 57 | — |
+| [`dataengenv`](https://hlido.eu/reviews/dataengenv/) | DataEngEnv | AI Agent | 57 | — |
+| [`multi-cloud-optimizer`](https://hlido.eu/reviews/multi-cloud-optimizer/) | multi_cloud_optimizer | AI Agent | 57 | — |
+| [`customer-support-env`](https://hlido.eu/reviews/customer-support-env/) | customer-support-env | AI Agent | 57 | — |
+| [`clinical-trial-optimizer`](https://hlido.eu/reviews/clinical-trial-optimizer/) | clinical-trial-optimizer | AI Agent | 57 | — |
+| [`macro-signal-env`](https://hlido.eu/reviews/macro-signal-env/) | macro-signal-env | AI Agent | 57 | — |
+| [`data-cleaning-env`](https://hlido.eu/reviews/data-cleaning-env/) | data-cleaning-env | AI Agent | 57 | — |
+| [`agentic-customer-experience-simulation`](https://hlido.eu/reviews/agentic-customer-experience-simulation/) | Agentic_Customer_Experience_Simulation | AI Agent | 57 | — |
+| [`devops-incident-response`](https://hlido.eu/reviews/devops-incident-response/) | devops-incident-response | AI Agent | 57 | — |
+| [`auditrix`](https://hlido.eu/reviews/auditrix/) | Auditrix | AI Agent | 57 | — |
+| [`my-env`](https://hlido.eu/reviews/my-env/) | my-env | AI Agent | 57 | — |
+| [`adaptive-backend-traffic-controller`](https://hlido.eu/reviews/adaptive-backend-traffic-controller/) | adaptive-backend-traffic-controller | AI Agent | 57 | — |
+| [`messy-data-triage-gym`](https://hlido.eu/reviews/messy-data-triage-gym/) | messy-data-triage-gym | AI Agent | 57 | — |
+| [`smartgrid-rl-env-backup`](https://hlido.eu/reviews/smartgrid-rl-env-backup/) | smartgrid-rl-env-backup | AI Agent | 57 | — |
+| [`incidentops-openenv`](https://hlido.eu/reviews/incidentops-openenv/) | incidentops-openenv | AI Agent | 57 | — |
+| [`last-mile-logistics-env-v1`](https://hlido.eu/reviews/last-mile-logistics-env-v1/) | last-mile-logistics-env-v1 | AI Agent | 57 | — |
+| [`code-review-env`](https://hlido.eu/reviews/code-review-env/) | code-review-env | AI Agent | 57 | — |
+| [`shopeasy-support-gym`](https://hlido.eu/reviews/shopeasy-support-gym/) | shopeasy-support-gym | AI Agent | 57 | — |
+| [`cybersoc-arena`](https://hlido.eu/reviews/cybersoc-arena/) | cybersoc-arena | AI Agent | 57 | — |
+| [`graphstrike-model-training`](https://hlido.eu/reviews/graphstrike-model-training/) | graphstrike-model-training | AI Agent | 57 | — |
+| [`training-space`](https://hlido.eu/reviews/training-space/) | training-space | AI Agent | 57 | — |
+| [`compliance-gym-lending`](https://hlido.eu/reviews/compliance-gym-lending/) | compliance-gym-lending | AI Agent | 57 | — |
+| [`saas-audit-env`](https://hlido.eu/reviews/saas-audit-env/) | saas-audit-env | AI Agent | 57 | — |
+| [`policyqa-commandrplus-rag-agent`](https://hlido.eu/reviews/policyqa-commandrplus-rag-agent/) | PolicyQA-CommandRPlus-RAG-Agent | AI Agent | 57 | — |
+| [`radify`](https://hlido.eu/reviews/radify/) | radify | AI Agent | 57 | — |
+| [`osogritvoice`](https://hlido.eu/reviews/osogritvoice/) | OSOGRITVOICE | AI Agent | 40 | — |
+| [`gritvoice45`](https://hlido.eu/reviews/gritvoice45/) | GRITVOICE45 | AI Agent | 57 | — |
+| [`atharva`](https://hlido.eu/reviews/atharva/) | atharva | AI Agent | 57 | — |
+| [`gaia-eval-l1-20`](https://hlido.eu/reviews/gaia-eval-l1-20/) | gaia-eval-l1-20 | AI Agent | 57 | — |
+| [`basic-agent-training`](https://hlido.eu/reviews/basic-agent-training/) | Basic_Agent_Training | AI Agent | 57 | — |
+| [`voice-ocr-agent`](https://hlido.eu/reviews/voice-ocr-agent/) | Voice_OCR_Agent | AI Agent | 40 | — |
+| [`dynamic-function-calling-agent`](https://hlido.eu/reviews/dynamic-function-calling-agent/) | Dynamic-Function-Calling-Agent | AI Agent | 57 | — |
+| [`home-assistant-diagnostics-agent`](https://hlido.eu/reviews/home-assistant-diagnostics-agent/) | Home-Assistant-Diagnostics-Agent | AI Agent | 57 | — |
+| [`localspark-ai`](https://hlido.eu/reviews/localspark-ai/) | localspark-ai | AI Agent | 57 | — |
+| [`quiz-agent4`](https://hlido.eu/reviews/quiz-agent4/) | quiz-agent4 | AI Agent | 57 | — |
+| [`quiz-agent3`](https://hlido.eu/reviews/quiz-agent3/) | quiz-agent3 | AI Agent | 40 | — |
+| [`tdsfinal`](https://hlido.eu/reviews/tdsfinal/) | tdsfinal | AI Agent | 57 | — |
+| [`lavent-marketing-agent`](https://hlido.eu/reviews/lavent-marketing-agent/) | lavent-marketing-agent | AI Agent | 57 | — |
+| [`quiz-agent1`](https://hlido.eu/reviews/quiz-agent1/) | quiz-agent1 | AI Agent | 40 | — |
+| [`tdsproject2`](https://hlido.eu/reviews/tdsproject2/) | TDSPROJECT2 | AI Agent | 57 | — |
+| [`hs-unit4-agent`](https://hlido.eu/reviews/hs-unit4-agent/) | hs-unit4-agent | AI Agent | 57 | — |
+| [`voice-agent`](https://hlido.eu/reviews/voice-agent/) | Voice_Agent | AI Agent | 57 | — |
 
 ## Files in this mirror
 
