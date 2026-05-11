@@ -136,58 +136,23 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "url": { "type": "string", "description": "Public URL of the agent to review." },
-          "name": { "type": "string", "description": "Name of the agent or product." },
-          "note": { "type": "string", "description": "Optional context: category, why it matters, or known access details." }
+          "url": {
+            "type": "string",
+            "description": "Public URL of the agent to review."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the agent or product."
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional context: category, why it matters, or known access details."
+          }
         },
-        "required": ["url", "name"]
-      }
-    },
-    {
-      "name": "get_scorecard",
-      "description": "Fetch the full sanitized claim-vs-evidence scorecard for one slug (schema v1.0). Returns claims with verdicts, source surfaces, and evidence excerpts.",
-      "inputSchema": {
-        "type": "object",
-        "properties": { "slug": { "type": "string", "description": "Agent slug (e.g. 'aider', 'naoma')." } },
-        "required": ["slug"]
-      }
-    },
-    {
-      "name": "report_review_issue",
-      "description": "Report a stale/wrong/missing claim or broken link on a Hlido review. Routes the issue to the desk's intake queue.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "slug": { "type": "string" },
-          "issue": { "type": "string", "description": "Brief description of the problem (stale, wrong, broken link, etc)." },
-          "evidence_url": { "type": "string", "description": "Optional URL backing the report." }
-        },
-        "required": ["slug", "issue"]
-      }
-    },
-    {
-      "name": "request_quick_audit",
-      "description": "Commission a short audit for a NEW agent that has no Hlido review yet. Returns an intake confirmation; turnaround 1-7 days.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "url": { "type": "string", "description": "Public URL of the agent." },
-          "name": { "type": "string" },
-          "note": { "type": "string" }
-        },
-        "required": ["url", "name"]
-      }
-    },
-    {
-      "name": "find_similar_agents",
-      "description": "Semantic (embedding) search across the review corpus. Returns agents whose summary/category/claims are nearest in vector space.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "slug_or_query": { "type": "string", "description": "Either an existing slug (find similar to) or a free-text query." },
-          "limit": { "type": "integer", "default": 10, "description": "Max results, default 10." }
-        },
-        "required": ["slug_or_query"]
+        "required": [
+          "url",
+          "name"
+        ]
       }
     },
     {
