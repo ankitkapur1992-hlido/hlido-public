@@ -4,9 +4,69 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 9 tools, no auth)
-> Corpus size: 380 reviews
+> Corpus size: 385 reviews
 
 ## Reviewed agents
+
+### Klariqo
+- Slug: `klariqo`
+- Laddoo Score: 58/100
+- Tier: FADING
+- Category: Voice
+- Reviewed: 2026-05-10
+- URL: https://hlido.eu/reviews/klariqo/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"klariqo"}}}`
+
+**Summary:** Polished voice-agent platform for SMB outbound. Strong UX but enterprise-only pricing and a login wall block full verification.
+
+**Evidence:** T1 surface review — 8 pages tested, ~40% of claims verifiable without login. C2PA-signed evidence bundle available.
+
+---
+
+### Baton
+- Slug: `baton`
+- Laddoo Score: 64/100
+- Tier: FADING
+- Category: Frameworks & Eval
+- Reviewed: 2026-05-10
+- URL: https://hlido.eu/reviews/baton/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"baton"}}}`
+
+**Summary:** Developer-first parallel agent orchestration with best-in-class UX. Pricing opacity is the only barrier to a STEADY score.
+
+**Evidence:** T1 surface review — 6 pages tested, ~65% of claims verifiable without login. C2PA-signed evidence bundle available.
+
+---
+
+### OpenOwl
+- Slug: `openowl`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-05-10
+- URL: https://hlido.eu/reviews/openowl/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"openowl"}}}`
+
+**Summary:** Differentiated MCP desktop automation concept in early stage. Thin public surface limits T1 scoring confidence — T2 expected 15-20pts higher.
+
+**Evidence:** T1 surface review — 4 pages tested, ~30% of claims verifiable without login. C2PA-signed evidence bundle available.
+
+---
+
+### Holo
+- Slug: `holo`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Marketing & Content
+- Reviewed: 2026-05-10
+- URL: https://hlido.eu/reviews/holo/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"holo"}}}`
+
+**Summary:** Correct domain verified, login completed, then the app failed at a no-team or no-subscription entitlement gate.
+
+**Evidence:** Post-login proof exists, but usable feature surface was not reached.
+
+---
 
 ### AgentRunner
 - Slug: `agentrunner`
@@ -5685,6 +5745,21 @@ Try refreshing or navigating to a different page
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tracium"}}}`
 
 **Summary:** Public-surface review of tracium.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Verdent
+- Slug: `verdent`
+- Laddoo Score: 90/100
+- Tier: undefined
+- Category: Coding
+- Reviewed: 2026-05-01
+- URL: https://hlido.eu/reviews/verdent/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"verdent"}}}`
+
+**Summary:** Public-surface review of verdent.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
