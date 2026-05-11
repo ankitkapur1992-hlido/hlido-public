@@ -1,0 +1,102 @@
+{
+  "slug": "openkrew",
+  "name": "openkrew",
+  "category": "Coding",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of openkrew.",
+  "review_url": "https://hlido.eu/reviews/openkrew/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-openkrew-mp10gbhp",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"OpenKrew — Distributed AI Agent Teams\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "A team of agents. One control plane.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "§ PRICING\n\n§ Start free. Scale when you need to.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The link to 'pricing' is available on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "Built for real work, not demos.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://openkrew.com/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://openkrew.com/#pricing",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T09:40:21.930Z"
+}
