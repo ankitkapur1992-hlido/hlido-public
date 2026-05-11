@@ -1,0 +1,100 @@
+{
+  "slug": "herdctl",
+  "name": "herdctl",
+  "category": "AI Agent",
+  "score": 73,
+  "tier": "STEADY",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of herdctl.",
+  "review_url": "https://hlido.eu/reviews/herdctl/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-herdctl-mp10tuxs",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"herdctl - Autonomous Agent Fleet Management | herdctl\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "herdctl is an open-source orchestration layer that turns Claude Code into autonomous agents.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "The corpus does not mention any visible call-to-action such as 'sign up', 'try free', or 'book demo'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage includes a link labeled 'Getting Started' which suggests an access path.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Watch a complete walkthrough of herdctl's core features: fleet management, scheduled agents, chat integration, and session continuity.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://herdctl.dev/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": "https://herdctl.dev/integrations/web-dashboard/",
+      "ok": true
+    },
+    {
+      "id": "templates",
+      "url": "https://herdctl.dev/guides/examples/",
+      "ok": true
+    },
+    {
+      "id": "changelog",
+      "url": "https://herdctl.dev/whats-new/",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 2,
+  "confidence": "low",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T09:51:00.719Z"
+}
