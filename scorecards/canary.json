@@ -1,0 +1,101 @@
+{
+  "slug": "canary",
+  "name": "Canary",
+  "category": "Coding",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of canary.",
+  "review_url": "https://hlido.eu/reviews/canary/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-canary-mp0vx02s",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Canary — AI Vibe Testing Agents\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "AI writes your code. Canary tests it.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "The homepage includes a visible call-to-action button labeled 'Get Early Access'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage includes links for 'Login' and 'Get Early Access'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Watch our launch and hear from our customers.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.runcanary.ai/",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": "https://www.runcanary.ai/blog/qa-bench-v0",
+      "ok": true
+    },
+    {
+      "id": "demo",
+      "url": "https://www.runcanary.ai/login?redirect_url=https%3A%2F%2Fwww.runcanary.ai%2Fplayground",
+      "ok": true
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T07:33:31.396Z"
+}
