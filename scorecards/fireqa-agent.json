@@ -1,0 +1,102 @@
+{
+  "slug": "fireqa-agent",
+  "name": "fireqa-agent",
+  "category": "Coding",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of fireqa-agent.",
+  "review_url": "https://hlido.eu/reviews/fireqa-agent/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-fireqa-agent-mp10wo97",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"fireqa-agent - npm\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "FireQA Agent CLI — connect your AI CLI (Claude Code, Codex, Gemini) to FireQA.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Sign Up\" is listed as a link on the homepage.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage contains links to 'Pricing' and 'Sign Up'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.npmjs.com/package/fireqa-agent",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.npmjs.com/products",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T09:53:04.351Z"
+}
