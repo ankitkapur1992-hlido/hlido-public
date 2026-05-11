@@ -1,0 +1,102 @@
+{
+  "slug": "aliasjeff-acli",
+  "name": "@aliasjeff/acli",
+  "category": "Coding",
+  "score": 90,
+  "tier": "VITAL",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "summary": "Public-surface review of aliasjeff-acli.",
+  "review_url": "https://hlido.eu/reviews/aliasjeff-acli/",
+  "reviewed_at": "2026-05-01",
+  "run_id": "run-aliasjeff-acli-mp10x6ae",
+  "claims": [
+    {
+      "id": "homepage_loads",
+      "claim": "Homepage loads with branding visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"@aliasjeff/acli - npm\"",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "primary_value_prop",
+      "claim": "Primary value proposition is articulated in first viewport",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "ACLIx is a command-line interface assistant that utilizes large language models to execute tasks and answer queries within a terminal environment.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "cta_present",
+      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "\"Sign Up\" is visible on the homepage and pricing surfaces.",
+      "source_surface": "homepage|pricing"
+    },
+    {
+      "id": "pricing_or_access",
+      "claim": "Pricing or access path (login / get started) is reachable",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage includes links to 'Pricing' and 'Sign Up'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "evidence_or_demo",
+      "claim": "Demo video, screenshot grid, or live demo is present",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "The homepage includes a section titled 'Demo' which indicates the presence of a demo video or similar content.",
+      "source_surface": "homepage"
+    }
+  ],
+  "surfaces_visited": [
+    {
+      "id": "homepage",
+      "url": "https://www.npmjs.com/package/@aliasjeff/acli",
+      "ok": true
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.npmjs.com/products",
+      "ok": true
+    },
+    {
+      "id": "docs",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "integrations",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "templates",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "changelog",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    },
+    {
+      "id": "demo",
+      "url": null,
+      "ok": false,
+      "reason": "not-found"
+    }
+  ],
+  "required_items_total": 3,
+  "required_items_passing": 3,
+  "confidence": "medium",
+  "schema_version": "1.0",
+  "generated_at": "2026-05-11T09:53:27.282Z"
+}
