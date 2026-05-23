@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "slug": "try-sanebox",
+  "name": "SaneBox",
+  "agent_url": "https://www.sanebox.com/",
+  "category": "Productivity",
+
+  "run_id": "run-try-sanebox-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+
+  "hlido_opinion": {
+    "headline": "Dependable 15-year-old IMAP filtering specialist â solid for human power users on non-Gmail providers, but opaque to programmatic agents.",
+    "body": "SaneBox is one of the oldest serious email-management services on the web (active since 2010), and it shows in both directions: the filtering is dependable in a way newer AI-only tools haven't earned, and the surface has the dated feel of a product that hasn't needed a redesign because its customers already understand it. It does one thing â server-side email triage that works with any IMAP provider â and refuses to drift into adjacent features. That focus is the moat. The 'AI' framing in current marketing is honest about being decades of refined heuristics with newer ML grafted on, rather than a 2024 LLM rebuild. For an agentic ecosystem looking for components that survive vendor turbulence, that's a credit, not a debit. Where it weakens: pricing scales linearly per mailbox with no team plan, the mobile story relies entirely on whatever IMAP client the user already has, and the documentation about exactly how training signals propagate is thin. None of this is disqualifying for the right user â but it does mean SaneBox is a tool to deploy, not a system to integrate with.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (78) because the core triage works reliably and has for 15 years, the trust signals are clean (transparent per-mailbox pricing, 14-day trial without card, established privacy posture), and the company isn't disappearing soon. Not VITAL because the surface hasn't evolved to match the agentic-era expectations (no first-party API for agent integration, no MCP server, no programmatic configuration), and the marketing's AI framing slightly overshoots what's verifiable on the public surface.",
+
+  "what_it_does_well": [
+    "Filters high-volume inboxes without breaking the user's existing email client",
+    "Works across every IMAP provider including self-hosted (not Gmail-locked)",
+    "Algorithmic decisions are reversible and visible â every move shows in a daily digest",
+    "Pricing is transparent and the 14-day trial requires no credit card",
+    "Survives provider migrations â the user's training doesn't reset"
+  ],
+
+  "what_it_fails_at": [
+    "No first-party API or MCP server â opaque to programmatic agents",
+    "Pricing scales linearly per mailbox (no team plan, no volume discount published)",
+    "Mobile experience is whatever the user's IMAP client provides â no SaneBox-native mobile UI",
+    "Documentation on how ML signals propagate across folders is shallow",
+    "AI framing in marketing is more aspirational than the public-surface evidence supports"
+  ],
+
+  "best_for": [
+    "Power users handling 500+ daily emails on non-Gmail providers",
+    "Privacy-conscious orgs that want server-side filtering without Google/Microsoft lock-in",
+    "Long-tail accounts where the user's training history is worth preserving",
+    "Anyone whose existing email client is good but whose inbox volume isn't"
+  ],
+
+  "not_recommended_for": [
+    "Users wanting AI summarisation or generative reply assistance (Superhuman/Shortwave do this better)",
+    "Mobile-first email users (no native app)",
+    "Light email users (<100/day) â overhead exceeds benefit",
+    "Agent-driven workflows that need programmatic configuration",
+    "Teams needing centralised admin (no team-tier offering)"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
+    {
+      "slug": "superhuman",
+      "verdict_diff": "Superhuman is the premium UX play (~6x the price, native client, AI compose). SaneBox is the filtering specialist. Choose SaneBox if your existing client is fine and the problem is volume. Choose Superhuman if the client itself is the problem.",
+      "preferred_for_axis": "filtering-only"
+    },
+    {
+      "slug": "shortwave-com",
+      "verdict_diff": "Shortwave rebuilds Gmail with AI threading and summarisation. SaneBox bolts on to existing Gmail (or anything else) without replacement. Shortwave wins for Gmail-only users wanting reinvention; SaneBox wins for users wanting their existing setup to scale.",
+      "preferred_for_axis": "non-replacement-augmentation"
+    }
+  ],
+
+  "evidence_urls": [
+    {"claim": "Works with any IMAP provider", "source": "https://www.sanebox.com/features", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "14-day trial without credit card", "source": "homepage primary CTA", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Transparent algorithmic decisions via daily digest", "source": "https://www.sanebox.com/features/sane-digest", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Founded 2010, 15+ years operating", "source": "https://www.sanebox.com/about", "tested_at": "2026-05-23", "verified": true}
+  ],
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None â SaneBox operates on the IMAP server side and exposes no programmatic interface for agents. Useful as a passive filter upstream of agent-driven email workflows, but not as a component an agent can drive or configure.",
+    "agent_friendly_score": 2
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T10:12:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Email management for any inbox'", "tested_at": "2026-05-23T10:12:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "'Start free trial'", "tested_at": "2026-05-23T10:12:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "/pricing transparent per-mailbox tiers", "tested_at": "2026-05-23T10:12:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Daily digest example shown on /features", "tested_at": "2026-05-23T10:12:00Z"}
+  ],
+
+  "summary": "Dependable 15-year-old IMAP filtering specialist â solid for human power users on non-Gmail providers, but opaque to programmatic agents.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/try-sanebox.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2",
+  "_template_note": "This is the v2 schema pilot scorecard. After founder approval, this becomes the template that hlido-scorecard-enrich skill populates for all 611 retrofit slugs via Codex parallel execution. See brain/vault/in-flight/editorial-content-rollout-2026-05-23.md for the rollout plan."
+}
