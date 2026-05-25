@@ -1,103 +1,142 @@
 {
+  "schema_version": "2.0",
   "slug": "ai2sql",
   "name": "SQL Query Builder & Generator - AI Powered Database Assistant",
+  "agent_url": "https://ai2sql.io",
   "category": "AI Agent",
-  "score": 53,
+  "run_id": "run-ai2sql-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 50,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "AI-powered SQL query builder enables you to quickly build SQL queries without any knowledge of SQL for beginners.",
-  "review_url": "https://hlido.eu/reviews/ai2sql/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ai2sql-mp0vwkqg",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Generate Complex SQL in 10 Seconds — No Coding Required",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://ai2sql.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 50,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:33:01.644Z"
+  "hlido_opinion": {
+    "headline": "AI2SQL presents a basic SQL query generation tool, but lacks essential transparency and functionality for serious users.",
+    "body": "AI2SQL attempts to simplify SQL query generation for users without coding knowledge, claiming to serve over 50,000 users. However, the lack of verification for user claims, absence of a clear value proposition, and failure to meet basic checklist criteria indicate significant weaknesses. The interface appears cluttered with marketing fluff and lacks substantive documentation or support for users. This makes it less appealing for those looking for a reliable tool to integrate into their workflows. Alternatives like 'SQLizer' and 'DbSchema' provide more robust features and user support, making them better choices for users seeking effective SQL solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) due to a lack of verified claims, failure to meet basic operational standards, and unclear differentiation from competitors. Improvement in documentation and user support could elevate its standing.",
+  "what_it_does_well": [
+    "Claims to generate SQL queries from natural language descriptions",
+    "Targets users with no coding experience"
+  ],
+  "what_it_fails_at": [
+    "No verified user claims or testimonials",
+    "Fails all checklist criteria, indicating poor operational readiness",
+    "Lacks transparency in functionality and support",
+    "No clear differentiation from competitors in the market"
+  ],
+  "best_for": [
+    "Beginners looking for a very basic introduction to SQL query generation",
+    "Users who may not require extensive features or support"
+  ],
+  "not_recommended_for": [
+    "Experienced users seeking reliable SQL tools with robust features",
+    "Organizations needing verified user support and documentation",
+    "Users looking for integration into existing workflows"
+  ],
+  "red_flags": [
+    "No verified claims about active users or queries generated",
+    "Failure to meet basic operational standards raises concerns about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "sqlizer",
+      "verdict_diff": "SQLizer offers more robust features and better support for users needing reliable SQL generation. Choose SQLizer for a more comprehensive tool.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "dbschema",
+      "verdict_diff": "DbSchema provides extensive database design capabilities and user support, making it a better choice for serious database users. Choose DbSchema for advanced functionalities.",
+      "preferred_for_axis": "advanced-functionality"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Claims to support over 50,000 users",
+      "source": "https://ai2sql.io",
+      "tested_at": "2026-05-23",
+      "verified": false
+    },
+    {
+      "claim": "Generates SQL from natural language",
+      "source": "https://ai2sql.io",
+      "tested_at": "2026-05-23",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks API or integration capabilities for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Lacks clear value proposition",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No transparent pricing information",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No verifiable demo available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "AI2SQL presents a basic SQL query generation tool, but lacks essential transparency and functionality for serious users.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ai2sql.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
