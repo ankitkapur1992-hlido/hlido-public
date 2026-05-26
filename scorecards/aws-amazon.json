@@ -1,99 +1,136 @@
 {
+  "schema_version": "2.0",
   "slug": "aws-amazon",
   "name": "Agentic Coding Experience - Amazon Q Developer - AWS",
+  "agent_url": "https://aws.amazon.com/q/developer/build?sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
   "category": "Coding",
-  "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Your AI code assistant built to handle large projects, Amazon Q Developer: Build works alongside you from idea to production code.        ",
-  "review_url": "https://hlido.eu/reviews/aws-amazon/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-aws-amazon-mp0w03fh",
-  "claims": [
+  "run_id": "run-aws-amazon-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 50,
+  "tier": "FADING",
+  "laddoo_score": 50,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Struggling to define its value proposition \u2014 Amazon Q Developer lacks clarity and integration for coding workflows.",
+    "body": "Amazon Q Developer aims to be an AI coding assistant, but it currently fails to deliver a compelling user experience or clear functionality. The website lacks essential information about the product's capabilities and integration pathways, which is critical for users seeking a coding assistant. With a score of 50, it reflects a product that is not only fading but also struggling to establish a foothold in a competitive landscape. The absence of verified claims and the failure of all checklist items indicate significant gaps in transparency and usability. Without a clear path to integration or user guidance, it is challenging to recommend this tool for any coding projects.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) due to the lack of verified claims, failure to meet basic checklist criteria, and insufficient information on product capabilities. Improvement would require a clearer articulation of its value proposition and better integration support for users.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear information about product capabilities or integration pathways",
+    "All checklist items failed, indicating poor transparency and usability",
+    "Lacks verified claims to support marketing assertions",
+    "User experience on the site is unclear and uninviting"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Developers seeking a reliable coding assistant",
+    "Users needing clear integration with existing coding workflows",
+    "Anyone looking for transparency in product capabilities"
+  ],
+  "red_flags": [
+    "Complete failure of all checklist items indicates serious usability issues",
+    "Lack of verified claims raises concerns about product reliability"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Amazon Q Developer: Your AI code assistant",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a well-defined coding assistant experience with strong integration into development environments. Amazon Q Developer lacks clarity and integration, making Copilot a better choice for developers.",
+      "preferred_for_axis": "integration and usability"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a button labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a clear AI coding assistant with established user workflows. Amazon Q Developer does not currently provide a comparable user experience or documentation.",
+      "preferred_for_axis": "user experience"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Website lacks clear product capabilities",
+      "source": "https://aws.amazon.com/q/developer/build?sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
+      "tested_at": "2026-05-23",
+      "verified": false
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "All checklist items failed",
+      "source": "internal checklist review",
+      "tested_at": "2026-05-23",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the product does not currently support integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Documentation What is Amazon Q Developer? Learn more",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"DevOps Integrations\"",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition stated",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No actionable call to action found",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Data collection: Opt-out available",
-      "source_surface": "pricing"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality present",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://aws.amazon.com/q/developer/build/?sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://aws.amazon.com/q/developer/pricing/?p=qdev&z=subnav&loc=7&sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://aws.amazon.com/q/developer/build/?sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0#aws-page-content-main",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://aws.amazon.com/q/developer/integrations/?refid=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://aws.amazon.com/new/?nc1=f_cc&sc_channel=el&trk=fd6bb27a-13b0-4286-8269-c7b1cfaa29f0",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:36:27.019Z"
+  "summary": "Struggling to define its value proposition \u2014 Amazon Q Developer lacks clarity and integration for coding workflows.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/aws-amazon.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
