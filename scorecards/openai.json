@@ -1,41 +1,144 @@
 {
+  "schema_version": "2.0",
   "slug": "openai",
-  "name": "API Platform | OpenAI",
-  "agent_url": "https://openai.com/api",
-  "category": "Coding",
-  "run_id": "run-openai-azz34jnf",
-  "run_at": "2026-05-14T08:23:40.949Z",
-  "source": "hlido-drain-worker",
+  "name": "OpenAI",
+  "agent_url": "https://openai.com",
+  "category": "AI Agent",
+  "run_id": "run-openai-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 90,
+  "tier": "VITAL",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "The dominant frontier lab whose API powers most of the agentic-economy stack \u2014 pricing leverage, capability breadth, but rising platform concentration risk.",
+    "body": "OpenAI is the single biggest gravitational pull in the AI ecosystem as of mid-2026 \u2014 the GPT family, the Realtime API, Operator, and the developer platform together set the defaults that every other agent-building team either adopts or actively rejects. The competitive moat is the combination of model capability + go-to-market reach + price discipline (gpt-4o-mini at $0.15/1M input still has no peer at that quality-cost ratio). Where it strengthens is sheer breadth: tools, structured outputs, function calling, file search, Realtime audio \u2014 pick any agent capability and OpenAI ships a reference. Where it weakens is the platform concentration risk: by 2026 a meaningful chunk of all AI product revenue routes through OpenAI billing, and any pricing or policy change cascades across the stack. The MCP-friendly future (Anthropic-led) puts pressure on OpenAI to open up; how they respond will shape the next 18 months.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because OpenAI APIs are foundational infrastructure for the agentic economy and operational maturity (uptime, docs, billing) is best-in-category. Not 95+ because the concentration risk and the relative opacity of model training/safety decisions remain real downsides for enterprise buyers.",
+  "what_it_does_well": [
+    "Best-in-class price/quality ratio at gpt-4o-mini tier",
+    "Broadest capability surface (tools/structured/realtime/files)",
+    "Operational maturity \u2014 billing/uptime/docs at scale",
+    "Reference implementations for every emerging agent pattern"
+  ],
+  "what_it_fails_at": [
+    "Platform concentration creates buyer lock-in concerns",
+    "MCP / open-protocol support trails Anthropic",
+    "Model training + safety decisions relatively opaque vs Anthropic"
+  ],
+  "best_for": [
+    "Production agent backends optimising for cost-quality ratio",
+    "Teams that want the broadest capability surface in one vendor",
+    "Latency-sensitive Realtime audio + agentic workflows"
+  ],
+  "not_recommended_for": [
+    "Buyers requiring strict vendor diversification",
+    "Workflows where MCP-native composition matters more than raw capability",
+    "Cases needing fully open model weights"
+  ],
+  "red_flags": [
+    "Concentration risk for buyers running production volume on a single vendor"
+  ],
+  "compared_to": [
+    {
+      "slug": "anthropic-computer-use",
+      "verdict_diff": "Anthropic leads on safety posture + MCP integration. OpenAI leads on capability breadth + price discipline. Most production agent teams use both.",
+      "preferred_for_axis": "capability-breadth-vs-safety-and-mcp"
+    },
+    {
+      "slug": "cohere",
+      "verdict_diff": "Cohere is the focused enterprise alternative \u2014 narrower capability set but stronger enterprise data posture.",
+      "preferred_for_axis": "broad-platform-vs-enterprise-focused"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Reference docs",
+      "source": "https://platform.openai.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Pricing transparency",
+      "source": "https://openai.com/api/pricing",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct API integration via OpenAI SDK in any language. The most-integrated agent backend in the ecosystem.",
+    "agent_friendly_score": 9
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
       "id": "cta_present",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
       "id": "pricing_or_access",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "laddoo_score": 90,
-  "score": 90,
-  "tier": "VITAL",
-  "summary": "Public-surface review of API Platform | OpenAI.",
-  "confidence": "medium"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "The dominant frontier lab whose API powers most of the agentic-economy stack \u2014 pricing leverage, capability breadth, but rising platform concentration risk.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/openai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
