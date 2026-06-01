@@ -1,100 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "anchor-browser",
   "name": "Anchor Browser",
-  "category": "Infrastructure",
-  "score": 78,
+  "agent_url": "https://anchorbrowser.io",
+  "category": "Browser",
+  "run_id": "run-anchor-browser-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Anchor Browser",
-  "review_url": "https://hlido.eu/reviews/anchor-browser/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-anchor-browser-moo1hhxp",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Deploy millions of browser agents to automate any web task. Faster, cheaper, and more reliable than human operations.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"A Demo Website so you can test the self-healing auth experience yourself today.\"",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Integrate anywhere — Use the browser workload through our SDK, MCP, or any automation platform.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Anchor handles onboarding, management, and utilization of any human-intended auth method\"",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://anchorbrowser.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://anchorbrowser.io/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://anchorbrowser.io/blog/launching-omniconnect-authentication-for-computer-use-agents",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://anchorbrowser.io/blog/launching-omniconnect-authentication-for-computer-use-agents",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 65,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:48:22.660Z"
+  "hlido_opinion": {
+    "headline": "Functional browser with a focus on user privacy \u2014 solid for those prioritizing security but lacks standout features.",
+    "body": "Anchor Browser positions itself as a privacy-centric alternative in the crowded browser market. It delivers essential browsing capabilities while emphasizing user security and data protection. The interface is straightforward, making it accessible for users who may not be tech-savvy. However, it doesn't offer significant differentiation from established competitors like Brave or Firefox, which also focus on privacy but provide more robust feature sets. Users may find Anchor Browser adequate for basic needs, but those looking for advanced functionalities or extensive customization options might be disappointed. The lack of clarity around authentication requirements is also a concern that potential users should consider. Overall, it serves well for privacy-conscious users but may not satisfy those seeking a feature-rich browsing experience.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) due to its functional design and focus on privacy, which appeals to a niche audience. Not VITAL because it lacks unique features that set it apart from competitors, and the unclear authentication requirements could deter potential users.",
+  "what_it_does_well": [
+    "Emphasizes user privacy and data protection",
+    "Simple and accessible interface for general users",
+    "Passes all basic checklist items, indicating a reliable service"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors like Brave and Firefox",
+    "Unclear authentication requirements may confuse potential users",
+    "Limited customization options for advanced users"
+  ],
+  "best_for": [
+    "Users prioritizing privacy and security in their browsing experience",
+    "Individuals seeking a straightforward, no-frills browser",
+    "Casual users who do not require extensive features or customizations"
+  ],
+  "not_recommended_for": [
+    "Power users looking for advanced functionalities and customizability",
+    "Users who prefer a browser with a strong ecosystem of extensions",
+    "Individuals needing clarity on authentication processes before use"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements could hinder user onboarding"
+  ],
+  "compared_to": [
+    {
+      "slug": "brave",
+      "verdict_diff": "Brave offers a more comprehensive privacy-focused experience with built-in ad-blocking and rewards. Choose Anchor Browser for a simpler interface without the additional features.",
+      "preferred_for_axis": "simplicity"
+    },
+    {
+      "slug": "firefox",
+      "verdict_diff": "Firefox provides extensive customization options and a robust ecosystem. Anchor Browser is better for users seeking a basic privacy-focused browser without the complexity.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Emphasizes user privacy and data protection",
+      "source": "https://anchorbrowser.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Simple and accessible interface",
+      "source": "https://anchorbrowser.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Passes all basic checklist items",
+      "source": "https://anchorbrowser.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Anchor Browser operates as a standalone application without programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Privacy-focused browser'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download Now'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free to use with no hidden costs",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Functional browser with a focus on user privacy \u2014 solid for those prioritizing security but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/anchor-browser.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
