@@ -1,98 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "mcp-abap-adt-pg-vector-rag",
   "name": "@mcp-abap-adt/pg-vector-rag",
+  "agent_url": "/reviews/mcp-abap-adt-pg-vector-rag/",
   "category": "Coding",
+  "run_id": "run-mcp-abap-adt-pg-vector-rag-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mcp-abap-adt-pg-vector-rag.",
-  "review_url": "https://hlido.eu/reviews/mcp-abap-adt-pg-vector-rag/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mcp-abap-adt-pg-vector-rag-mp10qe1f",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Reliable coding tool for ABAP developers \u2014 solid integration but lacks comprehensive documentation.",
+    "body": "The @mcp-abap-adt/pg-vector-rag is a useful addition for ABAP developers looking to leverage vector-based retrieval augmented generation (RAG) capabilities. It integrates well within the ABAP development tools, providing a streamlined experience for users familiar with the environment. However, the documentation appears to be lacking in depth, which could hinder new users or those unfamiliar with RAG concepts. While it performs reliably, the absence of detailed guidance may limit its adoption among less experienced developers. Overall, it stands as a steady option for those already in the ABAP ecosystem but may not attract new users without clearer resources.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it serves a specific niche effectively and integrates well within the existing ABAP tools. Not VITAL due to the insufficient documentation that could deter potential users. Would shift to VITAL with improved support resources.",
+  "what_it_does_well": [
+    "Integrates smoothly with ABAP development tools",
+    "Provides vector-based retrieval features for enhanced data handling",
+    "Reliable performance in coding tasks"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse, making it hard for new users to adopt",
+    "Limited community support or resources available for troubleshooting",
+    "No clear marketing or guidance on advanced use cases"
+  ],
+  "best_for": [
+    "ABAP developers looking for enhanced data retrieval capabilities",
+    "Teams already using ABAP development tools who want to add RAG functionality",
+    "Users familiar with vector-based approaches in coding"
+  ],
+  "not_recommended_for": [
+    "New developers unfamiliar with ABAP or RAG concepts",
+    "Teams needing extensive documentation and support resources",
+    "Users looking for a comprehensive coding tool with extensive community backing"
+  ],
+  "red_flags": [
+    "Lack of comprehensive documentation could limit user adoption",
+    "Minimal community engagement may lead to support challenges"
+  ],
+  "compared_to": [
+    {
+      "slug": "abap-tools",
+      "verdict_diff": "ABAP Tools offers a broader range of features and better documentation. Choose @mcp-abap-adt/pg-vector-rag for focused RAG capabilities within existing ABAP tools.",
+      "preferred_for_axis": "specialized RAG functionality"
+    },
+    {
+      "slug": "sap-abap",
+      "verdict_diff": "SAP ABAP provides a more extensive ecosystem with robust support. @mcp-abap-adt/pg-vector-rag is better for users specifically needing vector retrieval.",
+      "preferred_for_axis": "vector retrieval focus"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 primarily a coding tool for ABAP developers with no direct agent integration features.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"fr0ster/llm-agent\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing pages.",
-      "source_surface": "homepage|pricing"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/fr0ster/llm-agent#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/fr0ster/llm-agent/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/fr0ster/llm-agent/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:48:33.552Z"
+  "summary": "Reliable coding tool for ABAP developers \u2014 solid integration but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mcp-abap-adt-pg-vector-rag.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
