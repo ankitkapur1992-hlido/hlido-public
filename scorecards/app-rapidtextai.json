@@ -1,100 +1,150 @@
 {
+  "schema_version": "2.0",
   "slug": "app-rapidtextai",
   "name": "RapidTextAI - Advanced AI article generator, Content, and Image Generation Tools",
+  "agent_url": "https://app.rapidtextai.com",
   "category": "Image & Design",
+  "run_id": "run-app-rapidtextai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Advanced AI article generator powered by GPT-4, Grok, Gemini, Deepseek and more. Create comprehensive, SEO-optimized content from 3,000+ word blog posts to converting ad copy in minutes. Features built-in AI detection bypass and humanization tools to ensure your content remains undetectable and authentic",
-  "review_url": "https://hlido.eu/reviews/app-rapidtextai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-app-rapidtextai-mp0vzfbj",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid AI content generator with strong multi-language support \u2014 but lacks clarity on model specifics and API access.",
+    "body": "RapidTextAI positions itself as a capable AI article generator, leveraging advanced models like GPT-5 and others to produce content quickly and in multiple languages. The platform promises high-quality, SEO-optimized articles, which is appealing for content creators. However, the lack of clarity regarding the specific AI models in use and the gated API access raises concerns about transparency and usability for developers. While it may serve well for users needing fast content, those looking for deeper integration or verification of model capabilities might find it lacking. The overall value proposition is solid, but potential users should be aware of these limitations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) because it delivers on its promise of fast content generation and multi-language support, but it lacks transparency regarding AI model specifics and API access, which are critical for tech-savvy users. It would shift to VITAL with clearer documentation and more accessible API features.",
+  "what_it_does_well": [
+    "Generates comprehensive articles quickly, reportedly in seconds",
+    "Supports content creation in over 50 languages with high fluency",
+    "Offers SEO-optimized content tailored for search engine visibility",
+    "Provides a suite of integrations including API access and plugins"
+  ],
+  "what_it_fails_at": [
+    "Lacks clarity on the specific AI models used beyond marketing claims",
+    "API access is gated, limiting pre-evaluation for potential users",
+    "No detailed information on how the content generation process handles user inputs or customization"
+  ],
+  "best_for": [
+    "Content creators needing fast article generation without deep technical integration",
+    "Users looking for multi-language content creation capabilities",
+    "Individuals or teams focused on SEO-optimized writing"
+  ],
+  "not_recommended_for": [
+    "Developers seeking robust API access and documentation for integration",
+    "Users who require transparency on AI model performance and capabilities",
+    "Those needing highly customized or specialized content generation"
+  ],
+  "red_flags": [
+    "Gated API documentation may hinder evaluators from verifying capabilities",
+    "Vague claims about AI models could mislead users about the technology's sophistication"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Generate High-Quality Articles In Seconds with AI",
-      "source_surface": "homepage"
+      "slug": "copy.ai",
+      "verdict_diff": "Copy.ai offers a more established platform with clear API access and model transparency. Choose RapidTextAI for faster article generation; choose Copy.ai for better integration and support.",
+      "preferred_for_axis": "integration and transparency"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "slug": "writesonic",
+      "verdict_diff": "Writesonic provides a broader range of content types and clearer model specifications. RapidTextAI excels in speed, while Writesonic offers more comprehensive features.",
+      "preferred_for_axis": "feature breadth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Generates articles in seconds",
+      "source": "https://app.rapidtextai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "docs"
+      "claim": "Supports 50+ languages",
+      "source": "https://app.rapidtextai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "SEO optimized content",
+      "source": "https://app.rapidtextai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "API access is available but requires registration, limiting immediate integration testing.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Access RapidText AI wherever you work with our comprehensive suite of integrations",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI-powered article generation",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Generate Article' button visible",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "All API requests require authentication using your API key.",
-      "source_surface": "docs"
+      "evidence": "API access mentioned but gated",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Examples of generated articles shown",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://app.rapidtextai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://app.rapidtextai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://app.rapidtextai.com/api-documentations",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://app.rapidtextai.com/zapier-integration",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:35:44.123Z"
+  "summary": "Solid AI content generator with strong multi-language support \u2014 but lacks clarity on model specifics and API access.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/app-rapidtextai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
