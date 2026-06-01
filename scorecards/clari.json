@@ -1,100 +1,151 @@
 {
+  "schema_version": "2.0",
   "slug": "clari",
   "name": "Clari",
-  "category": "Customer Experience",
+  "agent_url": "https://www.clari.com",
+  "category": "Sales",
+  "run_id": "run-clari-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Clari",
-  "review_url": "https://hlido.eu/reviews/clari/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-clari-moo2ae2k",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid sales forecasting tool with a robust feature set \u2014 effective for teams but lacks some integration depth.",
+    "body": "Clari has established itself as a reliable sales forecasting and pipeline management tool, providing users with insights to drive revenue growth. Its features include real-time analytics, forecasting accuracy, and collaboration tools that facilitate communication among sales teams. However, while Clari excels in its core functionalities, it may not integrate as seamlessly with certain CRMs compared to competitors like Salesforce or HubSpot. The user interface is intuitive, making it accessible for teams of varying technical expertise. Potential users should be aware of the pricing structure, which can be a barrier for smaller teams. Overall, Clari is a strong choice for organizations focused on enhancing their sales processes, but users should evaluate integration capabilities based on their existing systems.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Clari's core functionalities are well-established and effective for sales teams, with a solid user base and positive feedback. Not VITAL due to potential integration limitations with other systems and a pricing model that may not suit smaller organizations. Would shift to VITAL with enhanced integration capabilities and more competitive pricing options.",
+  "what_it_does_well": [
+    "Provides real-time sales analytics and forecasting",
+    "User-friendly interface that supports team collaboration",
+    "Effective for managing sales pipelines and tracking performance",
+    "Offers insights that help drive revenue growth",
+    "Strong customer support and resources available"
+  ],
+  "what_it_fails_at": [
+    "Integration with some CRM systems can be limited",
+    "Pricing may be high for smaller teams or startups",
+    "Customization options are not as extensive as some competitors",
+    "Lacks certain advanced features found in other sales platforms"
+  ],
+  "best_for": [
+    "Sales teams looking for robust forecasting and analytics tools",
+    "Organizations focused on improving revenue growth and pipeline management",
+    "Mid-sized to large enterprises with established sales processes",
+    "Teams that prioritize user-friendly interfaces and collaboration"
+  ],
+  "not_recommended_for": [
+    "Small startups with limited budgets",
+    "Teams requiring extensive CRM integration or customization",
+    "Users looking for a free or low-cost sales solution",
+    "Organizations needing advanced sales features not offered by Clari"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Revenue Intelligence Meets Real-Time Action\" clearly states the value proposition on the homepage.",
-      "source_surface": "homepage"
+      "slug": "salesforce",
+      "verdict_diff": "Salesforce offers deeper CRM integration and customization options, making it better for organizations needing extensive sales management features. Clari excels in simplicity and ease of use for forecasting.",
+      "preferred_for_axis": "CRM integration"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "slug": "hubspot",
+      "verdict_diff": "HubSpot provides a more affordable entry point for smaller teams with strong marketing capabilities. Clari is better suited for dedicated sales forecasting and analytics.",
+      "preferred_for_axis": "affordability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Real-time sales analytics and forecasting",
+      "source": "https://www.clari.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Take a Platform Tour\" and \"See Clari in action\" suggest that there are accessible demos.",
-      "source_surface": "homepage"
+      "claim": "User-friendly interface",
+      "source": "https://www.clari.com/about",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Strong customer support",
+      "source": "https://www.clari.com/support",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Clari can be integrated into sales workflows through its API and webhooks, allowing for real-time data exchange and automation.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Clari seamlessly integrates with the tools you rely on, from CRM and customer engagement platforms to data and security systems.",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Sales forecasting and pipeline management'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Request a demo'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Clari agrees that it will collect, store and process my personal data in accordance with the terms of service and privacy policy.",
-      "source_surface": "pricing"
+      "evidence": "Pricing details available on /pricing",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature overview available on /features",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.clari.com/?home_solutions=pipeline",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.clari.com/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.clari.com/products/integrations/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.clari.com/blog/2025-g2-best-software-winner/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:10:51.564Z"
+  "summary": "Solid sales forecasting tool with a robust feature set \u2014 effective for teams but lacks some integration depth.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/clari.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
