@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-community",
   "name": "@langchain/community",
+  "agent_url": "/reviews/langchain-community/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-community-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-community.",
-  "review_url": "https://hlido.eu/reviews/langchain-community/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-community-mp111lap",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid community-driven framework for LangChain enthusiasts \u2014 reliable but lacks extensive verification for broader applications.",
+    "body": "The @langchain/community framework offers a collaborative space for developers interested in LangChain, providing access to resources, discussions, and shared knowledge. Its community-driven nature fosters engagement and support among users, making it a valuable asset for those already invested in the LangChain ecosystem. However, the lack of extensive verification for claims and features may limit its appeal to users seeking a more robust and validated framework. While it serves as a good starting point for LangChain enthusiasts, potential users should be aware of the need for further validation in real-world applications.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the community aspect is strong and fosters engagement, but the absence of verified claims and extensive documentation prevents it from being rated higher. It could move to VITAL with more robust verification and broader application examples.",
+  "what_it_does_well": [
+    "Fosters a strong community for LangChain developers",
+    "Provides access to shared resources and discussions",
+    "Encourages collaboration and support among users"
+  ],
+  "what_it_fails_at": [
+    "Lacks extensive verification for claims and features",
+    "Limited documentation on broader applications",
+    "Not ideal for users seeking a validated framework"
+  ],
+  "best_for": [
+    "Developers already engaged in the LangChain ecosystem",
+    "Users looking for a collaborative space to share knowledge",
+    "Enthusiasts wanting to explore LangChain without needing extensive validation"
+  ],
+  "not_recommended_for": [
+    "Users seeking a fully validated framework for production use",
+    "Developers needing comprehensive documentation and support",
+    "Individuals looking for a more established framework with proven results"
+  ],
+  "red_flags": [
+    "Lack of verification for claims and features could hinder trust",
+    "Limited resources for users unfamiliar with LangChain"
+  ],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain offers a more robust and validated framework compared to the community-driven approach of @langchain/community. Choose LangChain for a more established solution.",
+      "preferred_for_axis": "validation and robustness"
+    },
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face provides extensive documentation and support for machine learning frameworks, while @langchain/community focuses on community engagement. Choose Hugging Face for comprehensive resources.",
+      "preferred_for_axis": "documentation and support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework does not currently support direct integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"🦜️🧑‍🤝‍🧑 LangChain Community\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear primary value proposition found.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
+      "evidence": "No demo or evidence provided.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs-community/tree/main/libs/community/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs-community/blob/main/libs/community/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:57:16.056Z"
+  "summary": "Solid community-driven framework for LangChain enthusiasts \u2014 reliable but lacks extensive verification for broader applications.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-community.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
