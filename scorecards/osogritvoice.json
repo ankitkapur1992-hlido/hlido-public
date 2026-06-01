@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "osogritvoice",
   "name": "OSOGRITVOICE",
+  "agent_url": "/reviews/osogritvoice/",
   "category": "AI Agent",
+  "run_id": "run-osogritvoice-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of osogritvoice.",
-  "review_url": "https://hlido.eu/reviews/osogritvoice/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-osogritvoice-mp11s5nk",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Basic AI agent with limited transparency and functionality \u2014 not competitive against established players.",
+    "body": "OSOGRITVOICE presents itself as an AI agent but lacks the necessary features and transparency expected in this category. With a score of 40, it struggles to differentiate itself from better-established alternatives. The absence of verifiable claims and unclear authentication requirements raise concerns about reliability and usability. Without a clear value proposition or unique features, it is difficult to recommend OSOGRITVOICE over more robust options available in the market.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (40) because while it functions as an AI agent, it lacks essential features and transparency that would elevate it to a higher tier. It remains in the market but does not exhibit strong competitive advantages. A significant improvement in functionality or verifiable claims could change this tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks transparency regarding authentication and functionality",
+    "No verifiable claims or features listed on the site",
+    "Limited differentiation from existing AI agent solutions"
+  ],
+  "best_for": [
+    "Users seeking basic AI agent functionality without specific requirements",
+    "Early adopters willing to experiment with new tools"
+  ],
+  "not_recommended_for": [
+    "Users needing reliable and feature-rich AI agents",
+    "Businesses looking for established solutions with clear value propositions",
+    "Anyone requiring transparency in data handling and functionality"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may indicate potential access issues",
+    "Absence of verified claims raises concerns about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more comprehensive and reliable AI agent experience with a well-documented feature set. OSOGRITVOICE lacks the same level of transparency and functionality.",
+      "preferred_for_axis": "functionality"
+    },
+    {
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow provides a robust platform for creating conversational agents with extensive integration options. OSOGRITVOICE does not match this level of capability.",
+      "preferred_for_axis": "integration"
+    },
+    {
+      "slug": "rasa",
+      "verdict_diff": "Rasa is an open-source alternative that allows for greater customization and control over AI agents. OSOGRITVOICE lacks the flexibility and transparency that Rasa offers.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 OSOGRITVOICE does not provide clear integration paths for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage displays a 'Runtime error' message, indicating that it did not load properly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', which contradicts the claim of a clear value proposition.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The corpus indicates a 'Runtime error' and does not show any visible call-to-action for signing up, trying free, or booking a demo.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus indicates a 'Runtime error' and 'Launch timed out', suggesting that the pricing or access path is not functioning properly.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Runtime error' and 'Launch timed out', suggesting that no demo video, screenshot grid, or live demo is available.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/OSOCONSULT/OSOGRITVOICE",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:17:29.883Z"
+  "summary": "Basic AI agent with limited transparency and functionality \u2014 not competitive against established players.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/osogritvoice.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
