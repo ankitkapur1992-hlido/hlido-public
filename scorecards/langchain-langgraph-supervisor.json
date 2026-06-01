@@ -1,99 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-langgraph-supervisor",
   "name": "@langchain/langgraph-supervisor",
+  "agent_url": "/reviews/langchain-langgraph-supervisor/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-langgraph-supervisor-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-langgraph-supervisor.",
-  "review_url": "https://hlido.eu/reviews/langchain-langgraph-supervisor/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-langgraph-supervisor-mp10z36t",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for LangChain evaluation, but lacks comprehensive documentation and clear differentiation from competitors.",
+    "body": "The @langchain/langgraph-supervisor framework offers a structured approach to evaluating LangChain components, making it a useful tool for developers working in this ecosystem. Its integration capabilities are commendable, allowing for a seamless workflow when assessing various models and chains. However, the documentation is not as thorough as some users might expect, which could hinder effective implementation for those unfamiliar with the framework. Additionally, the competitive landscape features similar tools that may provide more robust support or clearer differentiation, making it essential for potential users to evaluate their specific needs against available alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the framework functions well within its intended scope and provides essential features for LangChain evaluation. It is not VITAL due to the lack of comprehensive documentation and the presence of competitive alternatives that may offer better support or unique features.",
+  "what_it_does_well": [
+    "Facilitates evaluation of LangChain components effectively",
+    "Integrates smoothly with existing LangChain workflows",
+    "Offers a structured approach to model assessment"
+  ],
+  "what_it_fails_at": [
+    "Documentation is lacking and may not support new users adequately",
+    "Limited differentiation from other evaluation frameworks in the market",
+    "No clear insights into advanced features or use cases"
+  ],
+  "best_for": [
+    "Developers familiar with LangChain looking for structured evaluation tools",
+    "Teams needing to assess various models and chains without extensive setup",
+    "Users already embedded in the LangChain ecosystem"
+  ],
+  "not_recommended_for": [
+    "New users requiring comprehensive guidance on framework usage",
+    "Teams looking for extensive documentation and support",
+    "Developers seeking unique features not offered by this framework"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langchain-evaluator",
+      "verdict_diff": "LangChain Evaluator offers more detailed documentation and broader community support, making it a better choice for users needing guidance. Choose @langchain/langgraph-supervisor for a more streamlined integration experience.",
+      "preferred_for_axis": "documentation-and-support"
+    },
+    {
+      "slug": "chain-eval",
+      "verdict_diff": "Chain Eval provides a more comprehensive feature set for evaluation, while @langchain/langgraph-supervisor is simpler and more focused. Opt for Chain Eval if advanced features are a priority.",
+      "preferred_for_axis": "feature-complexity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework functions as a standalone evaluation tool without direct integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"GitHub - langchain-ai/langgraphjs: Framework to build resilient language agents as graphs. · GitHub\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are visible on the homepage and pricing surfaces.",
-      "source_surface": "homepage|pricing"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langgraphjs#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/langgraphjs/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:55:18.623Z"
+  "summary": "Solid framework for LangChain evaluation, but lacks comprehensive documentation and clear differentiation from competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-langgraph-supervisor.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
