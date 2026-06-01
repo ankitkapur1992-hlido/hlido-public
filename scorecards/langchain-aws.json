@@ -1,99 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-aws",
   "name": "@langchain/aws",
+  "agent_url": "/reviews/langchain-aws/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-aws-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-aws.",
-  "review_url": "https://hlido.eu/reviews/langchain-aws/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-aws-mp114yi1",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic AWS integration for LangChain \u2014 functional but lacks depth and clarity.",
+    "body": "The @langchain/aws package provides a basic integration layer for AWS services within the LangChain framework. While it serves its purpose, the documentation and examples are sparse, making it challenging for users to fully leverage its capabilities. The integration itself functions as expected, but the lack of comprehensive guides and use cases limits its appeal for developers seeking robust solutions. Compared to alternatives like 'langchain-gcp' or 'langchain-azure', which offer clearer documentation and more extensive features, @langchain/aws falls short in providing a compelling case for adoption.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because the integration works but lacks the depth and clarity needed for widespread adoption. Not VITAL due to insufficient documentation and examples, which could deter potential users. A more robust documentation effort could elevate its tier significantly.",
+  "what_it_does_well": [
+    "Provides basic AWS service integration for LangChain",
+    "Functions correctly for simple use cases",
+    "Compatible with existing LangChain workflows"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks detailed examples",
+    "Limited community support and resources available",
+    "Does not stand out against competitors in terms of features"
+  ],
+  "best_for": [
+    "Developers already familiar with LangChain looking for basic AWS integration",
+    "Users needing quick solutions without extensive documentation",
+    "Legacy users who have previously adopted LangChain but need AWS support"
+  ],
+  "not_recommended_for": [
+    "Developers seeking comprehensive documentation and support",
+    "Users looking for advanced AWS features and integrations",
+    "New users unfamiliar with LangChain or AWS integrations"
+  ],
+  "red_flags": [
+    "Lack of clear documentation may lead to implementation challenges",
+    "Limited community engagement could hinder troubleshooting and support"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "langchain-gcp",
+      "verdict_diff": "LangChain-GCP offers better documentation and more features, making it a stronger choice for users needing Google Cloud integration. Choose @langchain/aws for basic AWS needs only.",
+      "preferred_for_axis": "documentation and feature depth"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" and \"Sign up\" links are present on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
+      "slug": "langchain-azure",
+      "verdict_diff": "LangChain-Azure provides a more comprehensive approach to Azure services with clearer guidance, while @langchain/aws lacks similar depth. Opt for Azure if looking for a more robust framework.",
+      "preferred_for_axis": "comprehensive integration"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks sufficient documentation for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/providers/langchain-aws/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs/blob/main/libs/providers/langchain-aws/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:59:51.247Z"
+  "summary": "Basic AWS integration for LangChain \u2014 functional but lacks depth and clarity.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-aws.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
