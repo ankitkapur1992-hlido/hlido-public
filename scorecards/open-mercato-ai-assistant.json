@@ -1,99 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "open-mercato-ai-assistant",
   "name": "@open-mercato/ai-assistant",
+  "agent_url": "/reviews/open-mercato-ai-assistant/",
   "category": "Frameworks & Eval",
+  "run_id": "run-open-mercato-ai-assistant-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of open-mercato-ai-assistant.",
-  "review_url": "https://hlido.eu/reviews/open-mercato-ai-assistant/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-open-mercato-ai-assistant-mp119gk4",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for AI assistance, but lacks clear differentiation in a competitive landscape.",
+    "body": "The @open-mercato/ai-assistant framework provides a competent solution for integrating AI capabilities into various applications. Its functionality appears robust, but the lack of detailed information on unique features or advantages makes it hard to see how it stands out against competitors. The absence of verified claims raises concerns about the reliability of its advertised capabilities. While it seems to meet the basic needs for AI integration, potential users may find better-defined alternatives that offer clearer benefits.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) due to the framework's functional adequacy and operational maturity. However, it lacks unique selling points and verified claims that would elevate it to VITAL status. Clear differentiation or more robust evidence of effectiveness would improve its standing.",
+  "what_it_does_well": [
+    "Provides a framework for integrating AI functionalities into applications",
+    "Appears to be operationally mature with a basic set of features",
+    "Suitable for developers looking to implement AI assistance without extensive overhead"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear differentiation from competing frameworks",
+    "No verified claims to substantiate advertised capabilities",
+    "Limited information on unique features or advantages"
+  ],
+  "best_for": [
+    "Developers seeking a straightforward AI integration solution",
+    "Teams looking for a basic framework without extensive customization needs",
+    "Users who prioritize functionality over unique features"
+  ],
+  "not_recommended_for": [
+    "Organizations needing highly specialized AI capabilities",
+    "Users looking for a framework with extensive community support or documentation",
+    "Developers seeking cutting-edge features that stand out in the market"
+  ],
+  "red_flags": [
+    "No verified claims available, raising concerns about reliability",
+    "Lack of clear differentiation may lead to user frustration when evaluating alternatives"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"AI-Engineering Foundation Framework built with AI and designed for AI.\"",
-      "source_surface": "homepage"
+      "slug": "tensorflow",
+      "verdict_diff": "TensorFlow offers a more robust ecosystem for machine learning and AI projects, with extensive community support and documentation. Choose TensorFlow for more advanced capabilities.",
+      "preferred_for_axis": "advanced capabilities"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "AI-Engineering Foundation Framework built with AI and designed for AI.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "pytorch",
+      "verdict_diff": "PyTorch provides a flexible framework with strong community backing and a focus on research, making it suitable for experimental projects. Opt for PyTorch if you need cutting-edge features.",
+      "preferred_for_axis": "research and experimentation"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework appears to be a standalone solution without specific integration paths for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/open-mercato/open-mercato#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/open-mercato/open-mercato/commit/f1c595ddbc1141f8cdf670ded28ff10544a86175",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:03:24.247Z"
+  "summary": "Solid framework for AI assistance, but lacks clear differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/open-mercato-ai-assistant.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
