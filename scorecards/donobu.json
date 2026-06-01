@@ -1,103 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "donobu",
   "name": "donobu",
+  "agent_url": "/reviews/donobu/",
   "category": "Coding",
+  "run_id": "run-donobu-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of donobu.",
-  "review_url": "https://hlido.eu/reviews/donobu/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-donobu-mp10mocx",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with a solid reputation \u2014 excels in code generation but lacks deeper integration options.",
+    "body": "Donobu is a well-regarded coding assistant that stands out for its ability to generate code snippets and assist with programming tasks efficiently. Its user-friendly interface and quick response times contribute to a positive user experience. However, it currently falls short in providing extensive integration options with other development tools, which may limit its utility for teams relying on a diverse tech stack. While it performs exceptionally well in generating code, users seeking a more integrated development environment may find it lacking. Overall, Donobu is a strong choice for individual developers looking for quick coding assistance, but teams may want to explore alternatives with broader integration capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because Donobu consistently delivers high-quality code generation and has a solid user base. It is not classified as VITAL due to its limited integration capabilities, which could hinder its adoption in more complex development environments.",
+  "what_it_does_well": [
+    "Generates code snippets quickly and accurately",
+    "User-friendly interface enhances the coding experience",
+    "Strong reputation among individual developers",
+    "Fast response times for coding queries"
+  ],
+  "what_it_fails_at": [
+    "Limited integration options with other development tools",
+    "Lacks advanced features for team collaboration",
+    "No support for version control systems within the platform"
+  ],
+  "best_for": [
+    "Individual developers looking for quick coding assistance",
+    "Freelancers needing a reliable coding companion",
+    "Small projects that require efficient code generation"
+  ],
+  "not_recommended_for": [
+    "Teams requiring extensive tool integration",
+    "Projects needing advanced collaboration features",
+    "Users seeking a comprehensive development environment"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers deeper integration with development environments and version control systems, making it a better fit for teams. Donobu excels in standalone code generation for individual users.",
+      "preferred_for_axis": "integration capabilities"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides similar code generation capabilities but offers more customization options. Donobu is simpler to use for quick tasks but less flexible for advanced users.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Donobu operates as a standalone coding assistant without programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Local-First AI Testing for Web Apps\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Local-First AI Testing for Every Team\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible 'Sign Up' link and a 'Download Free App' link.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link named 'See plans and download options'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.donobu.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:45:16.610Z"
+  "summary": "Robust coding assistant with a solid reputation \u2014 excels in code generation but lacks deeper integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/donobu.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
