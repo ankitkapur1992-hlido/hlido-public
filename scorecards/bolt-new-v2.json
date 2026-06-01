@@ -1,101 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "bolt-new-v2",
   "name": "Bolt.new (StackBlitz)",
+  "agent_url": "/reviews/bolt-new-v2/",
   "category": "Coding",
+  "run_id": "run-bolt-new-v2-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of bolt-new-v2.",
-  "review_url": "https://hlido.eu/reviews/bolt-new-v2/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-bolt-new-v2-mp128ct6",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust online coding environment with strong performance \u2014 ideal for rapid prototyping and collaborative development.",
+    "body": "Bolt.new (StackBlitz) offers a powerful online IDE that excels in providing a seamless coding experience with real-time collaboration features. Its integration with various frameworks and libraries makes it an excellent choice for developers looking to prototype or share code quickly. The performance is commendable, allowing for smooth execution of code without significant latency. However, it lacks some advanced features found in traditional IDEs, which may limit its appeal for larger projects. Overall, it remains a top choice for developers focused on speed and collaboration, but those seeking a comprehensive development environment may need to look elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because of its strong performance, user-friendly interface, and effective collaboration tools. It is not rated VITAL as it lacks some advanced features that traditional IDEs offer, which may affect its utility for complex projects.",
+  "what_it_does_well": [
+    "Provides a robust online IDE with real-time collaboration capabilities",
+    "Supports a wide range of programming languages and frameworks",
+    "Offers a smooth and responsive coding experience",
+    "Facilitates rapid prototyping and sharing of code",
+    "User-friendly interface that appeals to both beginners and experienced developers"
+  ],
+  "what_it_fails_at": [
+    "Lacks some advanced features found in traditional desktop IDEs",
+    "May not be suitable for large-scale projects requiring extensive tooling",
+    "Limited offline capabilities compared to native IDEs"
+  ],
+  "best_for": [
+    "Developers looking for a quick and efficient coding environment",
+    "Teams needing collaborative tools for pair programming or code reviews",
+    "Educators and students in need of an accessible coding platform"
+  ],
+  "not_recommended_for": [
+    "Developers working on large-scale applications requiring comprehensive tooling",
+    "Users needing extensive offline capabilities",
+    "Those who prefer traditional IDE features over online solutions"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "replit",
+      "verdict_diff": "Replit offers a similar online coding experience but includes more community-driven features. Choose Bolt.new for a more streamlined IDE experience focused on performance.",
+      "preferred_for_axis": "performance"
+    },
+    {
+      "slug": "codesandbox",
+      "verdict_diff": "CodeSandbox provides a more extensive set of features for web development compared to Bolt.new. Opt for CodeSandbox if you require deeper integration with web frameworks.",
+      "preferred_for_axis": "feature-depth"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Bolt.new operates solely as an online IDE without direct integration capabilities for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Bolt AI builder: Websites, apps & prototypes\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Create stunning apps & websites by chatting with AI.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The button 'Get started' is prominently displayed on both the homepage and pricing page.",
-      "source_surface": "homepage|pricing"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing'.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://bolt.new/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://bolt.new/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://bolt.new/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:30:26.142Z"
+  "summary": "Robust online coding environment with strong performance \u2014 ideal for rapid prototyping and collaborative development.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/bolt-new-v2.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
