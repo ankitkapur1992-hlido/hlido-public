@@ -1,116 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "nebius",
   "name": "Nebius",
-  "category": "Infrastructure",
+  "agent_url": "https://nebius.com/services/studio",
+  "category": "Infra",
+  "run_id": "run-nebius-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Nebius",
-  "review_url": "https://hlido.eu/reviews/nebius/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-nebius-moo260rl",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "The homepage returned a 'Page not found' error.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "The homepage leads to a 'Page not found' error.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "Page doesn't exist",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://nebius.com/services/studio",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
+  "laddoo_score": 40,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:07:11.618Z",
-  "external_benchmarks": [
+  "hlido_opinion": {
+    "headline": "Nebius struggles to establish relevance in the Infra category \u2014 lacks clear value propositions and differentiation.",
+    "body": "Nebius presents itself as an infra service provider, but the lack of accessible information on its offerings and value propositions raises concerns. The absence of a clear public surface review and unverified claims suggest that the product may not be well-positioned in a competitive landscape. Without substantial evidence of utility or unique features, Nebius appears to be fading in relevance. Potential users should approach with caution, as the lack of transparency and clarity could lead to unmet expectations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) due to insufficient public information and unclear value propositions. A shift to a higher tier would require demonstrable improvements in transparency and user engagement.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear value propositions and differentiation in the infra space",
+    "No visible public-surface review or user testimonials",
+    "Absence of verified claims or detailed service descriptions"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable infra solutions with clear value propositions",
+    "Organizations needing transparent service descriptions and user feedback",
+    "Potential customers who prioritize established providers with proven track records"
+  ],
+  "red_flags": [
+    "Lack of accessible information raises concerns about service reliability",
+    "No verified claims could indicate a lack of operational transparency"
+  ],
+  "compared_to": [
     {
-      "name": "SWE-bench",
-      "score": 0.406,
-      "score_unit": "resolved_issues_pct",
-      "rank": 134,
-      "as_of": "2024-11-13",
-      "source_url": "https://raw.githubusercontent.com/SWE-bench/swe-bench.github.io/master/data/leaderboards.json",
-      "ingest_date": "2026-05-10T12:03:47.414Z",
-      "match_confidence": 0.95
+      "slug": "aws",
+      "verdict_diff": "AWS offers a comprehensive suite of infra services with established reliability and extensive documentation. Nebius lacks the same level of transparency and service clarity.",
+      "preferred_for_axis": "reliability and service variety"
+    },
+    {
+      "slug": "azure",
+      "verdict_diff": "Azure provides robust infra solutions with clear value propositions and extensive support. Nebius does not present a compelling alternative.",
+      "preferred_for_axis": "support and documentation"
+    },
+    {
+      "slug": "google-cloud",
+      "verdict_diff": "Google Cloud is known for its user-friendly interface and extensive resources. Nebius's unclear positioning makes it a less favorable choice.",
+      "preferred_for_axis": "user experience"
     }
   ],
-  "benchmarks_updated_at": "2026-05-10T12:03:50.520Z"
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lack of information makes integration pathways unclear.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value propositions found.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No visible call to action identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demos or evidence of service efficacy found.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Nebius struggles to establish relevance in the Infra category \u2014 lacks clear value propositions and differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/nebius.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
