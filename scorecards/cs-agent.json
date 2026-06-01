@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "cs-agent",
-  "name": "cs-agent",
+  "name": "CS Agent",
+  "agent_url": "/reviews/cs-agent/",
   "category": "Chat & Companion",
+  "run_id": "run-cs-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of cs-agent.",
-  "review_url": "https://hlido.eu/reviews/cs-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cs-agent-mp11dkml",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Basic chatbot solution with limited differentiation \u2014 adequate for simple tasks but lacks advanced features.",
+    "body": "CS Agent presents itself as a straightforward chatbot solution, suitable for basic customer interactions. However, it struggles to stand out in a crowded market filled with more sophisticated alternatives. The lack of verified claims regarding its capabilities raises concerns about its reliability and effectiveness. While it may serve users with minimal needs, those seeking advanced functionalities or integrations should consider more robust options. The absence of clear documentation or features makes it difficult to assess its true value in comparison to competitors.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its basic functionality that meets minimal user needs. The tier is not higher because it lacks advanced features and verifiable claims, which are critical for establishing trust and reliability in the chatbot space.",
+  "what_it_does_well": [
+    "Provides basic chatbot functionality for simple customer interactions",
+    "User-friendly interface for straightforward deployment",
+    "Can handle basic FAQ scenarios without complex setup"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features such as NLP or machine learning capabilities",
+    "No verified claims or documentation to support its effectiveness",
+    "Limited integration options with other platforms or tools"
+  ],
+  "best_for": [
+    "Small businesses needing a simple chatbot for basic inquiries",
+    "Users with minimal technical requirements looking for quick deployment",
+    "Organizations not requiring advanced customer interaction capabilities"
+  ],
+  "not_recommended_for": [
+    "Businesses needing sophisticated AI-driven customer support",
+    "Users looking for extensive integrations with other software",
+    "Organizations that require detailed analytics or reporting features"
+  ],
+  "red_flags": [
+    "No verified claims regarding capabilities or performance",
+    "Lack of clear documentation may hinder user understanding and deployment"
+  ],
+  "compared_to": [
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin offers a comprehensive suite of customer support tools with advanced features and integrations. Choose CS Agent only for very basic needs.",
+      "preferred_for_axis": "feature-completeness"
+    },
+    {
+      "slug": "drift",
+      "verdict_diff": "Drift provides a more robust chatbot experience with better integration and AI capabilities. CS Agent is not suitable for users looking for advanced functionalities.",
+      "preferred_for_axis": "advanced-capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 CS Agent does not appear to support integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action observed.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/Agents-MCP-Hackathon/cs-agent",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:06:07.170Z"
+  "summary": "Basic chatbot solution with limited differentiation \u2014 adequate for simple tasks but lacks advanced features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cs-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
