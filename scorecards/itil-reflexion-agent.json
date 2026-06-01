@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "itil-reflexion-agent",
-  "name": "itil-reflexion-agent",
+  "name": "ITIL Reflexion Agent",
+  "agent_url": "/reviews/itil-reflexion-agent/",
   "category": "AI Agent",
+  "run_id": "run-itil-reflexion-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of itil-reflexion-agent.",
-  "review_url": "https://hlido.eu/reviews/itil-reflexion-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-itil-reflexion-agent-mp11j5z0",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional AI agent for ITIL processes, but lacks depth and verification.",
+    "body": "The ITIL Reflexion Agent presents itself as a tool aimed at enhancing ITIL (Information Technology Infrastructure Library) processes through AI. While it operates within a recognized framework, the lack of available information and transparency around its functionalities raises concerns. There are no verified claims regarding its effectiveness or specific features, which makes it difficult for potential users to assess its value. The current tier reflects a basic operational status, but without more concrete evidence or user testimonials, it remains a cautious recommendation. Users seeking robust ITIL support might find better alternatives that offer clearer benefits and proven results.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to the basic functionality it claims to provide within the ITIL framework, but it lacks sufficient verification and user feedback to elevate its status. A clearer demonstration of effectiveness or user testimonials could improve its tier.",
+  "what_it_does_well": [
+    "Operates within the recognized ITIL framework",
+    "Addresses common ITIL processes"
+  ],
+  "what_it_fails_at": [
+    "Lacks verified claims about effectiveness and specific features",
+    "No user testimonials or case studies available",
+    "Transparency regarding functionalities is minimal"
+  ],
+  "best_for": [
+    "Organizations already familiar with ITIL looking for basic AI support",
+    "Users who prioritize framework adherence over advanced features"
+  ],
+  "not_recommended_for": [
+    "Users seeking robust, proven AI solutions for ITIL processes",
+    "Organizations needing detailed functionality and verification"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability",
+    "Limited information may indicate a lack of maturity in the product"
+  ],
+  "compared_to": [
+    {
+      "slug": "itil-automation-tool",
+      "verdict_diff": "ITIL Automation Tool offers more comprehensive features and user testimonials, making it a stronger choice for organizations seeking effective ITIL solutions. Choose ITIL Reflexion Agent for basic support only.",
+      "preferred_for_axis": "feature depth"
+    },
+    {
+      "slug": "service-now",
+      "verdict_diff": "ServiceNow provides a well-established platform with extensive ITIL support and proven results. ITIL Reflexion Agent may appeal to those looking for a simpler tool, but lacks the depth of ServiceNow.",
+      "preferred_for_axis": "established solutions"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration capabilities for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage states, 'This Space is sleeping due to inactivity,' which does not articulate a primary value proposition.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/VuduVations/itil-reflexion-agent",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:10:29.689Z"
+  "summary": "Functional AI agent for ITIL processes, but lacks depth and verification.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/itil-reflexion-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
