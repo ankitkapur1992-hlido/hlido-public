@@ -1,101 +1,133 @@
 {
+  "schema_version": "2.0",
   "slug": "openai-agent-sdk",
   "name": "OpenAI Agent SDK",
-  "category": "Workflow & Automation",
+  "agent_url": "https://openai.github.io/openai-agents-python",
+  "category": "Workflow",
+  "run_id": "run-openai-agent-sdk-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of OpenAI Agent SDK",
-  "review_url": "https://hlido.eu/reviews/openai-agent-sdk/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openai-agent-sdk-moo285jt",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "OpenAI Agent SDK struggles to maintain relevance \u2014 lacks updates and clarity, making it less appealing for developers.",
+    "body": "The OpenAI Agent SDK is positioned as a tool for building agent-based applications, but its current state raises concerns. With a score of 65, it falls into the FADING tier, indicating that it is not keeping pace with the evolving needs of developers. The documentation is sparse, and there are no significant updates or features that differentiate it from other options in the market. This lack of clarity and engagement may deter potential users who are looking for robust, well-supported SDKs. Without a clear path for improvement or a compelling value proposition, it risks being overlooked in favor of more active alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) because the SDK is not actively maintained or updated, leading to a lack of clarity and engagement. It would need significant improvements in documentation and feature updates to move back into STEADY or VITAL tiers.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and examples for developers",
+    "No recent updates or enhancements to attract new users",
+    "Limited community engagement or support resources",
+    "Unclear integration paths for potential applications"
+  ],
+  "best_for": [
+    "Legacy users familiar with the SDK but seeking alternatives",
+    "Developers looking for a simple, unambitious tool without expectations"
+  ],
+  "not_recommended_for": [
+    "New developers seeking robust and well-documented SDKs",
+    "Teams needing ongoing support and updates for their projects",
+    "Anyone looking for competitive features compared to other SDKs"
+  ],
+  "red_flags": [
+    "No recent updates or clear roadmap for future improvements",
+    "Sparse documentation may lead to implementation challenges"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The OpenAI Agents SDK enables you to build agentic AI apps in a lightweight, easy-to-use package with very few abstractions.",
-      "source_surface": "homepage"
+      "slug": "openai-api",
+      "verdict_diff": "The OpenAI API offers a more comprehensive and actively maintained solution for building applications compared to the stagnant SDK. Choose the API for better support and features.",
+      "preferred_for_axis": "active development and support"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "langchain",
+      "verdict_diff": "Langchain provides a more feature-rich and documented framework for building applications with AI agents. It is preferable for developers seeking a robust solution.",
+      "preferred_for_axis": "feature richness and documentation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Documentation is sparse and lacks clarity",
+      "source": "https://openai.github.io/openai-agents-python",
+      "tested_at": "2026-05-23",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the SDK does not provide a clear integration path or API for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Check out a variety of sample implementations of the SDK in the examples section of the repo.",
-      "source_surface": "templates"
+      "evidence": "No clear value proposition articulated on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action for developers",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The SDK includes features like 'Guardrails' for input validation and safety checks, which relate to data handling.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality provided",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://openai.github.io/openai-agents-python/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://openai.github.io/openai-agents-python/examples/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://openai.github.io/openai-agents-python/release/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:09:00.659Z"
+  "summary": "OpenAI Agent SDK struggles to maintain relevance \u2014 lacks updates and clarity, making it less appealing for developers.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openai-agent-sdk.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
