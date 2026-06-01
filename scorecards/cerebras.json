@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "cerebras",
   "name": "Cerebras",
-  "category": "Infrastructure",
+  "agent_url": "https://cerebras.ai",
+  "category": "AI Agent",
+  "run_id": "run-cerebras-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cerebras",
-  "review_url": "https://hlido.eu/reviews/cerebras/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cerebras-mongh8m3",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, 'The Fastest AI Infrastructure' and 'Industry-leading speed, quality, and scale'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the pricing page is accessible directly from the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "This website or its third-party tools process personal data.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.cerebras.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:00:07.119Z"
+  "hlido_opinion": {
+    "headline": "Cerebras struggles to maintain relevance in a competitive AI landscape \u2014 lacks clear differentiation and transparency.",
+    "body": "Cerebras presents itself as an AI agent but currently appears to be fading in visibility and impact within the crowded AI sector. The website offers little in terms of concrete information or compelling use cases, making it difficult for potential users to understand its value proposition. Without clear differentiation from competitors and a lack of transparency regarding its capabilities or applications, Cerebras risks being overlooked. The absence of verified claims further diminishes confidence in its offerings. Users looking for robust AI solutions may find better alternatives that provide clearer insights and proven results.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of clear differentiation, minimal public-facing information, and unverified claims. To improve, Cerebras would need to enhance its visibility and provide more substantial evidence of its capabilities and applications.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear differentiation from other AI agents in the market",
+    "Minimal information available on the website regarding capabilities",
+    "No verified claims or case studies to support its effectiveness",
+    "Transparency issues regarding the technology and its applications",
+    "Overall visibility in the AI sector is low"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking well-documented AI solutions with proven results",
+    "Those who prioritize transparency and clear differentiation",
+    "Enterprises requiring robust support and case studies",
+    "Individuals looking for innovative AI applications"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about credibility",
+    "Minimal public-facing information could indicate a lack of maturity or readiness"
+  ],
+  "compared_to": [
+    {
+      "slug": "openai",
+      "verdict_diff": "OpenAI offers a well-documented and widely recognized suite of AI tools with clear use cases. Cerebras lacks the same level of visibility and proven applications.",
+      "preferred_for_axis": "visibility and proven effectiveness"
+    },
+    {
+      "slug": "google-ai",
+      "verdict_diff": "Google AI provides extensive resources and applications across various sectors, making it a more reliable choice. Cerebras does not present a compelling alternative.",
+      "preferred_for_axis": "comprehensive offerings"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Cerebras does not appear to offer any integration points for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No effective call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demonstrations or evidence of effectiveness found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Cerebras struggles to maintain relevance in a competitive AI landscape \u2014 lacks clear differentiation and transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cerebras.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
