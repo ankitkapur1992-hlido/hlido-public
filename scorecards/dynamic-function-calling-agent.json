@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "dynamic-function-calling-agent",
   "name": "Dynamic-Function-Calling-Agent",
+  "agent_url": "/reviews/dynamic-function-calling-agent/",
   "category": "AI Agent",
+  "run_id": "run-dynamic-function-calling-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of dynamic-function-calling-agent.",
-  "review_url": "https://hlido.eu/reviews/dynamic-function-calling-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-dynamic-function-calling-agent-mp11tko8",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic function-calling capabilities in AI agents \u2014 lacks depth and integration for serious use.",
+    "body": "The Dynamic-Function-Calling-Agent provides a foundational approach to enabling function calls within AI agents. However, it lacks the depth and sophistication found in more established alternatives. The current offering appears to be a stepping stone rather than a robust solution, with limited documentation and unclear integration pathways. Users looking for a mature agent capable of complex interactions may find this tool insufficient. While it may serve as a basic introduction to function-calling agents, those with serious needs should consider more comprehensive options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) reflects a basic functionality that works but lacks the maturity and depth needed for serious applications. It remains in this tier due to the absence of significant operational decay, though it is not competitive against more advanced agents.",
+  "what_it_does_well": [
+    "Provides basic function-calling capabilities for AI agents",
+    "Can serve as an introductory tool for users new to function-calling agents"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and support",
+    "Integration pathways are unclear and poorly defined",
+    "Limited functionality compared to more established agents"
+  ],
+  "best_for": [
+    "Users looking for a simple introduction to function-calling in AI agents",
+    "Educational purposes or basic experimentation with function-calling"
+  ],
+  "not_recommended_for": [
+    "Users needing robust and sophisticated AI agent capabilities",
+    "Developers seeking clear integration pathways and comprehensive documentation"
+  ],
+  "red_flags": [
+    "Unclear documentation may hinder effective use and integration",
+    "Limited functionality could lead to user frustration"
+  ],
+  "compared_to": [
+    {
+      "slug": "advanced-function-calling-agent",
+      "verdict_diff": "Advanced Function-Calling Agent offers deeper integration and more sophisticated capabilities. Choose this if you need a comprehensive solution for complex AI interactions.",
+      "preferred_for_axis": "depth of functionality"
+    },
+    {
+      "slug": "basic-function-calling-agent",
+      "verdict_diff": "Basic Function-Calling Agent provides a more user-friendly interface and better documentation. Opt for this if you prioritize ease of use over advanced features.",
+      "preferred_for_axis": "user-friendliness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 unclear integration pathways limit agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Hugging Face's logo is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/jlov7/Dynamic-Function-Calling-Agent",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:18:35.178Z"
+  "summary": "Basic function-calling capabilities in AI agents \u2014 lacks depth and integration for serious use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/dynamic-function-calling-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
