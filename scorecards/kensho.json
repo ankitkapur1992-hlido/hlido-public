@@ -1,103 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "kensho",
   "name": "Kensho",
-  "category": "Specialized verticals",
+  "agent_url": "https://www.kensho.com",
+  "category": "Finance",
+  "run_id": "run-kensho-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Kensho",
-  "review_url": "https://hlido.eu/reviews/kensho/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-kensho-moo21jvo",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "WE ILLUMINATE INSIGHTS IN THE WORLDʼS DATA",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://kensho.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:03:46.828Z"
+  "hlido_opinion": {
+    "headline": "Kensho struggles to maintain relevance in a competitive finance landscape \u2014 lacks clear differentiation and transparency.",
+    "body": "Kensho, a finance-focused platform, currently presents a fading presence in a crowded market. The lack of updated information and transparency on their website raises concerns about its operational status and capabilities. As of now, there are no verified claims or clear offerings detailed on their public surface, making it difficult for potential users to ascertain what value they might derive from the service. In a sector filled with innovative competitors, Kensho's absence of distinct features or a clear value proposition leaves it vulnerable. Users seeking robust financial tools may find better alternatives that provide clearer insights and functionalities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to the lack of verifiable claims, transparency, and distinct offerings on their public surface. The tier could improve with a clearer articulation of value propositions and updated information reflecting current capabilities.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No verifiable claims or clear offerings presented on the website",
+    "Lacks transparency regarding operational status and features",
+    "No recent updates or innovations to attract users"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and innovative financial tools",
+    "Investors looking for transparent and well-documented services",
+    "Anyone needing clear differentiation in finance solutions"
+  ],
+  "red_flags": [
+    "Absence of verifiable claims raises concerns about operational viability",
+    "Lack of updates suggests potential stagnation or decline in service quality"
+  ],
+  "compared_to": [
+    {
+      "slug": "bloomberg",
+      "verdict_diff": "Bloomberg offers a comprehensive suite of financial tools and data analysis, whereas Kensho lacks clear offerings. Choose Bloomberg for a robust, well-supported financial platform.",
+      "preferred_for_axis": "comprehensive financial tools"
+    },
+    {
+      "slug": "morningstar",
+      "verdict_diff": "Morningstar provides detailed investment research and analysis, making it a better choice for users seeking in-depth financial insights compared to Kensho's unclear offerings.",
+      "preferred_for_axis": "investment research"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Kensho does not present clear integration options for agents.",
+    "agent_friendly_score": 0
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found on the homepage",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No actionable call-to-action visible",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality presented",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Kensho struggles to maintain relevance in a competitive finance landscape \u2014 lacks clear differentiation and transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/kensho.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
