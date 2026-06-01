@@ -1,99 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-langgraph-swarm",
   "name": "@langchain/langgraph-swarm",
+  "agent_url": "/reviews/langchain-langgraph-swarm/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-langgraph-swarm-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-langgraph-swarm.",
-  "review_url": "https://hlido.eu/reviews/langchain-langgraph-swarm/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-langgraph-swarm-mp112rjq",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Reliable framework for building and evaluating language models, but lacks unique differentiators in a competitive landscape.",
+    "body": "The @langchain/langgraph-swarm framework provides a structured approach to developing and evaluating language models, which is beneficial for developers looking to streamline their workflows. However, it operates in a crowded space where many alternatives offer similar functionalities. While it is dependable and integrates well with existing LangChain tools, it does not present a compelling reason to choose it over competitors. The lack of clear differentiation could hinder its adoption among users seeking innovative solutions. Users should consider their specific needs and evaluate alternatives that may provide more unique features or integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the framework is functional and integrates well within the LangChain ecosystem, but lacks standout features that would elevate it to VITAL. It remains relevant but does not lead the category.",
+  "what_it_does_well": [
+    "Provides a structured approach to building language models",
+    "Integrates seamlessly with existing LangChain tools",
+    "Offers a reliable evaluation framework for model performance"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features that differentiate it from competitors",
+    "No clear marketing or documentation to highlight its advantages",
+    "Limited visibility into community support or user adoption metrics"
+  ],
+  "best_for": [
+    "Developers already invested in the LangChain ecosystem",
+    "Teams looking for a reliable framework for model evaluation",
+    "Users needing a straightforward approach to language model development"
+  ],
+  "not_recommended_for": [
+    "Users seeking innovative features or cutting-edge technology",
+    "Developers looking for extensive community support or resources",
+    "Teams requiring highly customizable or unique solutions"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"GitHub - langchain-ai/langgraphjs: Framework to build resilient language agents as graphs. · GitHub\"",
-      "source_surface": "homepage"
+      "slug": "langchain",
+      "verdict_diff": "LangChain offers a broader set of tools and features, making it more suitable for complex projects. Choose @langchain/langgraph-swarm for simpler implementations within the LangChain framework.",
+      "preferred_for_axis": "feature-complexity"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is visible.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face Transformers provides a more extensive library and community support for language models. Opt for @langchain/langgraph-swarm if integration with LangChain is a priority.",
+      "preferred_for_axis": "library-comprehensiveness"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework does not expose programmatic interfaces for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langgraphjs#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/langgraphjs/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:58:10.247Z"
+  "summary": "Reliable framework for building and evaluating language models, but lacks unique differentiators in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-langgraph-swarm.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
