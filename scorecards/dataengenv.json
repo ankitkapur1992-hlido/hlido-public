@@ -1,103 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "dataengenv",
   "name": "DataEngEnv",
+  "agent_url": "/reviews/dataengenv/",
   "category": "AI Agent",
+  "run_id": "run-dataengenv-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of dataengenv.",
-  "review_url": "https://hlido.eu/reviews/dataengenv/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-dataengenv-mp11mheq",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional AI agent for data engineering tasks, but lacks differentiation and clarity on integration capabilities.",
+    "body": "DataEngEnv presents itself as a tool for data engineering, but it struggles to stand out in a crowded market. While it may perform basic tasks adequately, the lack of transparency regarding its integration capabilities and specific use cases raises concerns. Users might find it functional for straightforward data tasks, but those seeking advanced features or seamless integration with existing workflows may need to look elsewhere. The absence of verified claims and unclear authentication requirements further complicate its usability. Overall, DataEngEnv serves a niche but doesn't assert itself strongly against competitors.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its basic functionality in the data engineering space, but it lacks strong differentiation and clear integration paths. Not VITAL because it doesn't provide compelling features that stand out against competitors, and the uncertainty around authentication adds to its weaknesses.",
+  "what_it_does_well": [
+    "Offers basic functionalities for data engineering tasks",
+    "Potentially useful for users with straightforward data processing needs",
+    "Can serve as a starting point for basic data-related workflows"
+  ],
+  "what_it_fails_at": [
+    "Lacks clarity on integration capabilities with other tools",
+    "No verified claims to support its effectiveness",
+    "Uncertainty regarding authentication requirements"
+  ],
+  "best_for": [
+    "Users looking for a basic data engineering tool without complex requirements",
+    "Individuals or teams starting out in data engineering tasks"
+  ],
+  "not_recommended_for": [
+    "Advanced users needing robust integration with existing systems",
+    "Teams requiring verified performance metrics or claims",
+    "Users looking for a comprehensive data engineering solution"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may hinder user access",
+    "Lack of verified claims raises questions about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "dataiku",
+      "verdict_diff": "Dataiku offers a more comprehensive suite of data engineering tools with better integration capabilities. Choose DataEngEnv for basic tasks; choose Dataiku for a robust platform.",
+      "preferred_for_axis": "comprehensive functionality"
+    },
+    {
+      "slug": "airflow",
+      "verdict_diff": "Airflow provides advanced workflow management for data pipelines, while DataEngEnv is more basic in functionality. Choose Airflow for complex data orchestration.",
+      "preferred_for_axis": "workflow management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 unclear how this tool integrates with agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\" is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No clear primary value proposition identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No pricing or access details available.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality available.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/CoBeDigger/DataEngEnv",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:13:03.421Z"
+  "summary": "Functional AI agent for data engineering tasks, but lacks differentiation and clarity on integration capabilities.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/dataengenv.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
