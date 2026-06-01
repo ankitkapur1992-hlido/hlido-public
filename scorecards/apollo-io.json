@@ -1,103 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "apollo-io",
   "name": "Apollo.io",
-  "category": "Customer Experience",
-  "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Apollo.io",
-  "review_url": "https://hlido.eu/reviews/apollo-io/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-apollo-io-moo0zfq0",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage indicates 'Something went wrong' and 'Sorry about that! Please try again later.'",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "The surface returned an error message indicating that something went wrong and suggested logging in.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.tiktok.com/@useapollo.io",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
+  "agent_url": "https://www.apollo.io",
+  "category": "Sales",
+  "run_id": "run-apollo-io-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:34:09.142Z"
+  "hlido_opinion": {
+    "headline": "Sales tool with potential, but significant public-surface issues hinder trust and usability.",
+    "body": "Apollo.io presents itself as a sales engagement platform, but several critical failures on its public-facing site raise concerns. The homepage fails to load properly, and there are no clear indications of its value proposition, calls to action, or transparent pricing. This lack of accessibility and clarity makes it difficult for potential users to gauge the platform's capabilities or trust its offerings. Without resolving these foundational issues, Apollo.io risks losing credibility in a competitive sales technology landscape. While the underlying service may have merit, the current public surface does not inspire confidence for new users or agents looking to integrate with it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) due to the presence of a service that appears to have potential, but the significant failures on the public surface detract from its credibility. This tier could change to FADING if the site remains unresponsive or fails to address these issues over time.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load properly.",
+    "No clear value proposition presented.",
+    "Absence of calls to action on the site.",
+    "Lack of transparent pricing information.",
+    "No evidence or demo available for evaluation."
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable sales tools with clear value propositions.",
+    "Agents looking for well-documented and accessible platforms.",
+    "Sales teams needing immediate access to pricing and demo information."
+  ],
+  "red_flags": [
+    "Significant public-facing issues that undermine trust.",
+    "No clear communication of service offerings or value."
+  ],
+  "compared_to": [
+    {
+      "slug": "hubspot",
+      "verdict_diff": "HubSpot offers a comprehensive sales platform with clear value propositions and reliable public-facing content. Apollo.io currently lacks these essential elements, making HubSpot a more trustworthy option.",
+      "preferred_for_axis": "trustworthiness and clarity"
+    },
+    {
+      "slug": "salesforce",
+      "verdict_diff": "Salesforce provides a well-established sales platform with extensive documentation and support. Apollo.io's current public surface does not match this level of professionalism.",
+      "preferred_for_axis": "professionalism and support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the public surface does not provide sufficient information for integration.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Sales tool with potential, but significant public-surface issues hinder trust and usability.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/apollo-io.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
