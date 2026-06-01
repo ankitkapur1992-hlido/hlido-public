@@ -1,103 +1,155 @@
 {
+  "schema_version": "2.0",
   "slug": "far-site",
   "name": "FARSITE - Government Contract Compliance Software",
+  "agent_url": "https://far.site",
   "category": "AI Agent",
+  "run_id": "run-far-site-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "FARSITE government contract compliance software helps contractors assess FAR, DFARS, and supplemental clauses in their contracts, communicate compliance requirements across their organizations, and hold teams accountable.",
-  "review_url": "https://hlido.eu/reviews/far-site/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-far-site-mp0w379w",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 53,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional compliance software for government contractors \u2014 lacks clear differentiation and depth.",
+    "body": "FARSITE positions itself as a compliance solution for contractors navigating the Federal Acquisition Regulation (FAR) and related clauses. The core offering includes automation for compliance checks and tailored flowdown lists, which are useful for organizations needing to manage complex contract requirements. However, the product's differentiation from competitors in the compliance software space is unclear, and the marketing materials do not provide substantial evidence of unique capabilities or user testimonials. The lack of detailed documentation or user feedback raises questions about the software's effectiveness and usability. While it may serve as a basic tool for compliance needs, potential users should be cautious and consider alternatives that offer more robust features or proven track records.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (53) due to the functional offering for compliance but lacking strong differentiation or user validation. Would move to VITAL with clearer evidence of unique capabilities or a stronger user feedback loop.",
+  "what_it_does_well": [
+    "Automates compliance checks for FAR and DFARS clauses",
+    "Creates tailored flowdown lists for subcontracts with ease",
+    "Offers export options to Word, PDF, and Excel"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear differentiation from competitors in the compliance software market",
+    "Limited user testimonials or case studies to validate effectiveness",
+    "Marketing materials do not provide in-depth technical details or user guidance"
+  ],
+  "best_for": [
+    "Government contractors needing basic compliance management tools",
+    "Organizations focused on FAR compliance without complex requirements",
+    "Users seeking a straightforward solution for flowdown clause management"
+  ],
+  "not_recommended_for": [
+    "Companies requiring advanced compliance features or integrations",
+    "Organizations looking for a proven track record or extensive user feedback",
+    "Users needing detailed documentation or support for implementation"
+  ],
+  "red_flags": [
+    "Limited information on user experiences or success stories",
+    "Lack of transparency regarding the software's capabilities and limitations"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "FARSITE automates and streamlines compliance.",
-      "source_surface": "homepage"
+      "slug": "compliance-helper",
+      "verdict_diff": "Compliance Helper offers more comprehensive features and user support for compliance management. Choose FARSITE for basic FAR compliance needs; choose Compliance Helper for a more robust solution.",
+      "preferred_for_axis": "feature-depth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "There is no link to a pricing page visible on the homepage.",
-      "source_surface": "homepage"
+      "slug": "contract-compliance-pro",
+      "verdict_diff": "Contract Compliance Pro provides a more established platform with extensive user feedback and proven effectiveness. FARSITE may serve basic needs but lacks the depth of Contract Compliance Pro.",
+      "preferred_for_axis": "user-validation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Automates compliance checks for FAR and DFARS clauses",
+      "source": "https://far.site/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "claim": "Creates tailored flowdown lists",
+      "source": "https://far.site/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "claim": "Export options to Word, PDF, and Excel",
+      "source": "https://far.site/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Request a demo available",
+      "source": "https://far.site/demo",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 FARSITE does not appear to provide programmatic access for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Compliance Software for the Federal Acquisition Regulation (FAR)'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Request a Demo'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available on the site.",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo request option available",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://far.site/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:38:11.210Z"
+  "summary": "Functional compliance software for government contractors \u2014 lacks clear differentiation and depth.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/far-site.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
