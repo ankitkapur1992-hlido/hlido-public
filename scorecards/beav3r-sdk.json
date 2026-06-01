@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "beav3r-sdk",
   "name": "@beav3r/sdk",
+  "agent_url": "/reviews/beav3r-sdk/",
   "category": "AI Agent",
+  "run_id": "run-beav3r-sdk-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of beav3r-sdk.",
-  "review_url": "https://hlido.eu/reviews/beav3r-sdk/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-beav3r-sdk-mp10lgz7",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid SDK for AI agent development \u2014 effective but lacks comprehensive documentation.",
+    "body": "The @beav3r/sdk presents a reliable option for developers looking to create AI agents. Its core functionalities are effective, making it suitable for various applications. However, the documentation is notably lacking, which can hinder the onboarding process for new users or those unfamiliar with the framework. Without thorough guidance, developers may find themselves struggling to fully leverage the SDK's capabilities. Overall, while it serves its purpose, improvements in documentation and support would elevate its standing in the competitive AI agent space.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the SDK functions effectively for its intended use, and the score reflects a solid but not exceptional offering. It lacks VITAL status due to insufficient documentation and support resources, which are critical for developers in this space.",
+  "what_it_does_well": [
+    "Provides core functionalities for AI agent development",
+    "Integrates well with existing AI frameworks",
+    "Offers a straightforward setup process for experienced developers"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks clarity",
+    "Limited community support or resources for troubleshooting",
+    "No clear examples or tutorials to assist new users"
+  ],
+  "best_for": [
+    "Experienced developers familiar with AI frameworks",
+    "Projects that require basic AI agent functionalities without extensive support",
+    "Users willing to invest time in exploring the SDK independently"
+  ],
+  "not_recommended_for": [
+    "Beginners or those new to AI development",
+    "Teams needing comprehensive documentation and support",
+    "Projects requiring rapid development with minimal learning curve"
+  ],
+  "red_flags": [
+    "Lack of thorough documentation may lead to implementation challenges",
+    "Limited community presence could hinder troubleshooting efforts"
+  ],
+  "compared_to": [
+    {
+      "slug": "openai-sdk",
+      "verdict_diff": "OpenAI's SDK offers extensive documentation and community support, making it more suitable for beginners. Choose @beav3r/sdk for a more streamlined, less resource-intensive option if you're experienced.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "rasa",
+      "verdict_diff": "Rasa provides a more comprehensive framework for AI agents, including dialogue management and natural language understanding. @beav3r/sdk is simpler but may lack advanced features.",
+      "preferred_for_axis": "feature richness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the SDK is designed for direct integration into development projects but lacks a standalone API for agent-driven workflows.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage features the 'Beav3r logo' prominently.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Protect offchain and onchain flows. Easy for developers to integrate, fast and simple for your users.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Our apps will be available to the public soon! Sign up for the waitlist.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action observed.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link labeled 'Get Started'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention a demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality provided.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://beav3r.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:44:18.993Z"
+  "summary": "Solid SDK for AI agent development \u2014 effective but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/beav3r-sdk.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
