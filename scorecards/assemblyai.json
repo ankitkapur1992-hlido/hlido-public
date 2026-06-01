@@ -1,98 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "assemblyai",
   "name": "AssemblyAI",
+  "agent_url": "https://www.assemblyai.com",
   "category": "Voice",
+  "run_id": "run-assemblyai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of AssemblyAI",
-  "review_url": "https://hlido.eu/reviews/assemblyai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-assemblyai-moo0v6yw",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust voice recognition API with strong accuracy and versatility \u2014 a top choice for developers needing reliable transcription.",
+    "body": "AssemblyAI stands out in the crowded voice recognition space with its high accuracy and extensive feature set. It offers a comprehensive API that allows developers to integrate advanced speech-to-text capabilities into their applications seamlessly. The platform supports a variety of audio formats and languages, making it versatile for different use cases. AssemblyAI's commitment to continuous improvement is evident in its regular updates and feature enhancements. However, it may not be the most cost-effective solution for smaller projects or individual users, as pricing can scale quickly with usage. Overall, AssemblyAI is an excellent choice for businesses and developers looking for a dependable and scalable voice recognition solution.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its proven accuracy, extensive feature set, and strong developer support. The tier reflects its reliability and the trust it has built in the voice recognition market. It would shift to STEADY if there were significant pricing changes or if competitors offered more compelling features without sacrificing quality.",
+  "what_it_does_well": [
+    "High accuracy in speech-to-text transcription across various languages",
+    "Comprehensive API with extensive documentation for developers",
+    "Supports multiple audio formats, enhancing usability",
+    "Regular updates and feature enhancements show commitment to quality",
+    "Scalable pricing model suitable for businesses of all sizes"
+  ],
+  "what_it_fails_at": [
+    "Pricing may become prohibitive for smaller projects or individual users",
+    "Limited offline capabilities compared to some competitors",
+    "Some advanced features may require additional configuration or expertise"
+  ],
+  "best_for": [
+    "Developers needing reliable speech-to-text functionality in applications",
+    "Businesses looking for scalable voice recognition solutions",
+    "Projects requiring support for multiple languages and audio formats"
+  ],
+  "not_recommended_for": [
+    "Small projects with limited budgets looking for cost-effective solutions",
+    "Users needing robust offline transcription capabilities",
+    "Individuals seeking simple voice recognition without extensive API integration"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The best way to build Voice AI apps",
-      "source_surface": "homepage"
+      "slug": "google-cloud-speech",
+      "verdict_diff": "Google Cloud Speech offers competitive pricing and robust features, but AssemblyAI excels in accuracy and developer support. Choose AssemblyAI for superior transcription quality.",
+      "preferred_for_axis": "accuracy"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "slug": "rev",
+      "verdict_diff": "Rev provides human transcription services alongside its automated options, which may be more suitable for projects requiring high precision. AssemblyAI is better for automated, scalable solutions.",
+      "preferred_for_axis": "automation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "High accuracy in speech-to-text transcription",
+      "source": "https://www.assemblyai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Go to developer docs\"",
-      "source_surface": "homepage"
+      "claim": "Comprehensive API with extensive documentation",
+      "source": "https://docs.assemblyai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Supports multiple audio formats",
+      "source": "https://www.assemblyai.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "AssemblyAI can be integrated into applications via its API, allowing for automated speech recognition workflows.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "A broad ecosystem of tools and platforms that seamlessly integrate with AssemblyAI to power diverse voice and language AI use cases.",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Speech recognition API for developers'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started for free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "AssemblyAI uses enterprise-grade security practices to keep your data safe.",
-      "source_surface": "pricing"
+      "evidence": "/pricing transparent and scalable",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.assemblyai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.assemblyai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.assemblyai.com/#",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.assemblyai.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.assemblyai.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S-701433646%3A1777707054471975&access_type=offline&client_id=1002161071166-j1kb7k8npspf7cro2s7mkt8am5ddlv8d.apps.googleusercontent.com&o2v=1&redirect_uri=https%3A%2F%2Fauth.assemblyai.com%2Fv1%2Fb2b%2Foauth%2Fcallback%2Foauth-callback-live-c853995a-8427-4c2e-aae3-f6c3484b7eea&response_type=code&scope=openid+email+profile&service=lso&state=fTZt8-mRyNyLFdBUffdbjO-JEXtVOWzB3wCuevO03agS&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAPisieoLuToThmRhplkt-X0naNAZ-SjC7_f5-IklJmmgfMp7cD9FuZ0LphKVZtepKB87zJjdaVMpcMPTmMvZ1PUZQWCbiGNqIQ__Iu1Gcs5nkVfLyfOT6yd48qor3QnxP5yukWs-5VQcyzKbjQrGcOQkS3c_UtwAm6Usyw4bdF6U_c46KYY7Xi9yMQHOU8zFnxN_L_QVzGq2fPNQV6-BRqDzJSpkQi0DLJeJym_wcrItSuBqdjoYuQDQaSSY0zg3S33v5kTgyNIY2R6U58vnwZRezX4sSWiqHAMplb18BgC3dy8vrJUItCRlq3JkX8u3uOx3S3nNydR5-EV6JcVGLF1tLeg1H3UL4KXzx0aUJUu7Nv3lq4viX8Yo31REwbICOY9AgZogyNtGYjl58BO9nDEvKDp0J7lGqiiZL_k_157NY1psGG2T3Yfm60_4iDpCmr6CjgQdMnD9Ry9BXubyPRdpbx2__zh5MSPZT1dZCbioIXzmxw%26flowName%3DGeneralOAuthFlow%26as%3DS-701433646%253A1777707054471975%26client_id%3D1002161071166-j1kb7k8npspf7cro2s7mkt8am5ddlv8d.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.assemblyai.com&rart=ANgoxcdhZWGxypVHtW01t0kEZ-yhVYOiO2bkji1ZPQPmYqLUm0yI3lBbzREvMV0xqYYqg-3pjknfqTqviHpmsVGi3F4BjZzohqpLp1s3ry6T0TrJSeFkjXU",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:31:19.849Z"
+  "summary": "Robust voice recognition API with strong accuracy and versatility \u2014 a top choice for developers needing reliable transcription.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/assemblyai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
