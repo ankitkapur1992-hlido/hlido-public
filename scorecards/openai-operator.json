@@ -1,103 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "openai-operator",
   "name": "OpenAI Operator",
-  "category": "Infrastructure",
+  "agent_url": "https://operator.chatgpt.com",
+  "category": "AI Agent",
+  "run_id": "run-openai-operator-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of OpenAI Operator",
-  "review_url": "https://hlido.eu/reviews/openai-operator/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openai-operator-mongtpvc",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "OpenAI Operator struggles to differentiate itself in a saturated market \u2014 lacks clear value proposition.",
+    "body": "OpenAI Operator appears to be another entry in the crowded AI agent landscape, but it currently lacks a compelling differentiation strategy. The public surface offers minimal information, leaving potential users unclear on its unique capabilities or how it stands out against competitors. The absence of verified claims or detailed features raises concerns about its operational maturity and reliability. Given the current state, it seems to be fading in relevance, especially as more robust alternatives emerge. Without a clear direction or improvement in transparency, it risks becoming obsolete in a fast-evolving market.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to lack of clear differentiation, minimal public information, and absence of verified claims. The tier could improve with a more defined value proposition and enhanced transparency regarding features and capabilities.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks a clear value proposition compared to competitors",
+    "Minimal public information available for evaluation",
+    "No verified claims or features presented",
+    "Uncertain operational maturity and reliability",
+    "Struggles to stand out in a crowded AI agent market"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable and well-documented AI agent solution",
+    "Those needing clear differentiation from existing AI tools",
+    "Individuals looking for transparent operational capabilities"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about reliability",
+    "Minimal public surface information suggests potential operational issues"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Get responses tailored to you",
-      "source_surface": "homepage"
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT is a well-established AI agent with robust features and a clear value proposition. OpenAI Operator needs to demonstrate similar strengths to compete effectively.",
+      "preferred_for_axis": "feature-richness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "microsoft-copilot",
+      "verdict_diff": "Microsoft Copilot offers integrated solutions with clear use cases and strong backing. OpenAI Operator lacks this level of integration and clarity.",
+      "preferred_for_axis": "integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of public information makes it unclear how agents could effectively integrate with OpenAI Operator.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "I found a link labeled 'See plans and pricing' on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The text states, 'Log in to get answers based on saved chats, plus create images and upload files.'",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "you agree to our Terms and have read our Privacy Policy",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://chatgpt.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:09:45.289Z"
+  "summary": "OpenAI Operator struggles to differentiate itself in a saturated market \u2014 lacks clear value proposition.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openai-operator.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
