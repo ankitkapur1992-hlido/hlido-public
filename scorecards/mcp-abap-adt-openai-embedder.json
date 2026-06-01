@@ -1,98 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "mcp-abap-adt-openai-embedder",
   "name": "@mcp-abap-adt/openai-embedder",
+  "agent_url": "/reviews/mcp-abap-adt-openai-embedder/",
   "category": "Coding",
+  "run_id": "run-mcp-abap-adt-openai-embedder-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mcp-abap-adt-openai-embedder.",
-  "review_url": "https://hlido.eu/reviews/mcp-abap-adt-openai-embedder/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mcp-abap-adt-openai-embedder-mp10ohnz",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid coding tool for ABAP developers leveraging OpenAI \u2014 steady but lacks standout features.",
+    "body": "The @mcp-abap-adt/openai-embedder serves as a useful tool for developers working with ABAP who want to integrate OpenAI capabilities into their workflows. While it performs adequately in embedding AI functionalities, it does not present a unique value proposition compared to other coding tools in the market. It is straightforward to use, but it lacks advanced features that could enhance its utility for complex projects. The documentation and support resources are essential for users to fully leverage its capabilities, yet they are not particularly robust. This tool is suitable for developers looking for basic AI integration without the need for extensive customization or advanced features. However, those seeking a more comprehensive solution may find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it provides reliable functionality for ABAP development with OpenAI integration, but lacks differentiating features that would elevate it to VITAL status. Improvement in documentation and feature set could change this tier.",
+  "what_it_does_well": [
+    "Integrates OpenAI capabilities into ABAP development environments",
+    "User-friendly interface for embedding AI functionalities",
+    "Adequate performance for basic AI tasks in coding"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features for complex coding tasks",
+    "Documentation and support resources are not comprehensive",
+    "No unique value proposition compared to competitors"
+  ],
+  "best_for": [
+    "ABAP developers seeking basic AI integration",
+    "Teams looking for straightforward tools without extensive customization",
+    "Users who prioritize ease of use over advanced functionality"
+  ],
+  "not_recommended_for": [
+    "Developers needing robust AI capabilities for complex projects",
+    "Users who require extensive documentation and support",
+    "Teams looking for highly customizable coding tools"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"fr0ster/llm-agent\"",
-      "source_surface": "homepage"
+      "slug": "abap-ai-tools",
+      "verdict_diff": "ABAP AI Tools offers a more comprehensive feature set for integrating AI into ABAP workflows. Choose @mcp-abap-adt/openai-embedder for simpler needs without complex requirements.",
+      "preferred_for_axis": "feature-complexity"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is visible on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "openai-abap-integration",
+      "verdict_diff": "OpenAI ABAP Integration provides deeper customization options and better documentation. Opt for @mcp-abap-adt/openai-embedder for a more straightforward approach.",
+      "preferred_for_axis": "ease-of-use"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the tool operates within ABAP environments without an external API or integration path.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/fr0ster/llm-agent#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/fr0ster/llm-agent/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/fr0ster/llm-agent/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:47:07.416Z"
+  "summary": "Solid coding tool for ABAP developers leveraging OpenAI \u2014 steady but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mcp-abap-adt-openai-embedder.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
