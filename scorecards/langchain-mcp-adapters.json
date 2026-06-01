@@ -1,98 +1,121 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-mcp-adapters",
   "name": "@langchain/mcp-adapters",
+  "agent_url": "/reviews/langchain-mcp-adapters/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-mcp-adapters-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-mcp-adapters.",
-  "review_url": "https://hlido.eu/reviews/langchain-mcp-adapters/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-mcp-adapters-mp1115si",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional MCP adapter framework with limited visibility \u2014 solid for Langchain users but lacks comprehensive documentation.",
+    "body": "The @langchain/mcp-adapters package serves as a useful tool for integrating MCPs with Langchain, but it currently suffers from a lack of detailed documentation and clarity on its capabilities. While it functions as intended within the Langchain ecosystem, potential users may find it challenging to implement effectively without robust guidance. The absence of clear examples and use cases detracts from its usability, particularly for those new to the framework. As it stands, it is a viable option for existing Langchain users familiar with MCPs, but it may not attract new users due to its opaque nature. Improvements in documentation and community support could elevate its standing significantly.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because it provides functional integration within the Langchain framework, but the lack of thorough documentation and support limits its appeal and usability. It could shift to VITAL with improved documentation and community engagement.",
+  "what_it_does_well": [
+    "Integrates MCPs effectively within the Langchain ecosystem",
+    "Offers basic functionality for users familiar with Langchain",
+    "Maintains compatibility with existing Langchain components"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and clear usage examples",
+    "Limited community support and resources for troubleshooting",
+    "Unclear authentication requirements, which may hinder onboarding"
+  ],
+  "best_for": [
+    "Existing Langchain users looking to integrate MCPs",
+    "Developers comfortable navigating frameworks with minimal guidance",
+    "Users who prioritize functionality over extensive documentation"
+  ],
+  "not_recommended_for": [
+    "New users unfamiliar with Langchain or MCPs",
+    "Developers seeking detailed documentation and community support",
+    "Teams needing rapid onboarding and clear usage instructions"
+  ],
+  "red_flags": [
+    "Insufficient documentation may lead to implementation challenges",
+    "Unclear authentication requirements could complicate usage"
+  ],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "Langchain itself offers a more comprehensive framework with better documentation and community support. Choose Langchain if you need a well-supported environment; choose @langchain/mcp-adapters for specific MCP integrations.",
+      "preferred_for_axis": "comprehensiveness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework operates within the Langchain ecosystem without direct API or CLI access.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing surfaces.",
-      "source_surface": "homepage|pricing"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/langchain-mcp-adapters/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/langchain-mcp-adapters/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs/blob/main/libs/langchain-mcp-adapters/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:57:07.963Z"
+  "summary": "Functional MCP adapter framework with limited visibility \u2014 solid for Langchain users but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-mcp-adapters.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
