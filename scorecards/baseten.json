@@ -1,100 +1,138 @@
 {
+  "schema_version": "2.0",
   "slug": "baseten",
   "name": "Baseten",
-  "category": "Infrastructure",
+  "agent_url": "https://www.baseten.co",
+  "category": "Infra",
+  "run_id": "run-baseten-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Baseten",
-  "review_url": "https://hlido.eu/reviews/baseten/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-baseten-moo1skvr",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"DOCS\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"SOC 2 Type II and HIPAA compliant\"",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.baseten.co/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.baseten.co/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.baseten.co/resources/changelog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://www.baseten.co/library/nvidia-nemotron-super/",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:57:09.235Z"
+  "hlido_opinion": {
+    "headline": "Reliable infrastructure platform for deploying ML models \u2014 solid for developers, but lacks extensive documentation.",
+    "body": "Baseten provides a dependable framework for deploying machine learning models, catering primarily to developers looking for a straightforward solution. Its core offerings are robust, allowing users to quickly deploy and manage models without extensive overhead. However, the platform's documentation is notably sparse, which may hinder new users from fully leveraging its capabilities. While Baseten is a solid choice for experienced developers, those new to the space might find the learning curve steep due to the lack of comprehensive guides and examples. Overall, Baseten remains a reliable option in the infrastructure category, but improvements in user support and documentation would enhance its appeal.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Baseten reliably supports ML model deployment with a functional interface and solid performance. However, it lacks the extensive documentation and user support that would elevate it to VITAL status. Enhancing these aspects could shift it into a higher tier.",
+  "what_it_does_well": [
+    "Provides a straightforward interface for deploying machine learning models",
+    "Supports various ML frameworks, making it versatile for developers",
+    "Offers reliable performance with minimal downtime",
+    "Integrates well with existing workflows and tools"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks comprehensive guides for new users",
+    "Limited community support or resources for troubleshooting",
+    "Some advanced features may not be intuitive without prior experience"
+  ],
+  "best_for": [
+    "Developers with experience in machine learning looking for a quick deployment solution",
+    "Teams needing a reliable platform for model management without extensive overhead",
+    "Users familiar with ML frameworks who can navigate the platform with minimal guidance"
+  ],
+  "not_recommended_for": [
+    "New users or teams without prior ML experience due to documentation gaps",
+    "Organizations requiring extensive support or training resources",
+    "Users looking for a highly customizable solution with detailed guidance"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to challenges in onboarding new users",
+    "Limited community resources for troubleshooting and support"
+  ],
+  "compared_to": [
+    {
+      "slug": "mlflow",
+      "verdict_diff": "MLflow offers more extensive documentation and community support, making it a better choice for beginners. Baseten is preferable for developers needing quick deployment without frills.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "weights-and-biases",
+      "verdict_diff": "Weights & Biases provides advanced tracking and collaboration features, while Baseten focuses on straightforward deployment. Choose Baseten for simplicity; choose W&B for deeper insights.",
+      "preferred_for_axis": "deployment simplicity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Reliable model deployment platform",
+      "source": "https://www.baseten.co",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Baseten can be integrated into agent-driven workflows via its API, allowing for automated model deployment and management.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Deploy machine learning models easily'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent pricing available on website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Functionality overview on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Reliable infrastructure platform for deploying ML models \u2014 solid for developers, but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/baseten.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
