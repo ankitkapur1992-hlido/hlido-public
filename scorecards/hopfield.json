@@ -1,99 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "hopfield",
-  "name": "hopfield",
+  "name": "Hopfield",
+  "agent_url": "/reviews/hopfield/",
   "category": "Frameworks & Eval",
+  "run_id": "run-hopfield-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of hopfield.",
-  "review_url": "https://hlido.eu/reviews/hopfield/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-hopfield-mp11anms",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Reliable framework for neural network evaluation, but lacks standout features against competitors.",
+    "body": "Hopfield is a framework designed for evaluating neural networks, providing a solid foundation for developers looking to assess model performance. While it operates reliably within its niche, it does not offer distinctive features that would set it apart from other frameworks in the same category. The documentation and community support appear adequate, but potential users may find better-suited alternatives with more robust ecosystems. The current tier reflects a steady performance without significant innovation or expansion in capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the framework functions reliably for its intended purpose, but it lacks unique features or significant community engagement that would elevate it to VITAL status. It would move to a higher tier with notable enhancements or a clearer competitive advantage.",
+  "what_it_does_well": [
+    "Provides a solid foundation for evaluating neural networks",
+    "Functions reliably within its intended use case",
+    "Documentation is adequate for basic usage"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors",
+    "Limited community engagement and support",
+    "No clear differentiation in capabilities"
+  ],
+  "best_for": [
+    "Developers needing a straightforward evaluation framework for neural networks",
+    "Users looking for a reliable but basic tool without advanced features",
+    "Teams already familiar with Hopfield's approach"
+  ],
+  "not_recommended_for": [
+    "Users seeking a feature-rich or highly customizable evaluation framework",
+    "Developers needing extensive community support or resources",
+    "Teams looking for cutting-edge capabilities in neural network evaluation"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"GitHub - 0xcadams/hopfield: 🐇 Typescript-first LLM framework with static type inference, testability, and composability.\"",
-      "source_surface": "homepage"
+      "slug": "tensorflow",
+      "verdict_diff": "TensorFlow offers a broader set of features and a larger community, making it a better choice for users needing extensive support and capabilities. Choose Hopfield for simplicity; choose TensorFlow for a comprehensive solution.",
+      "preferred_for_axis": "feature-rich ecosystem"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "This repository was archived by the owner on Jan 6, 2025. It is now read-only.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "pytorch",
+      "verdict_diff": "PyTorch provides dynamic computation graphs and a more flexible programming model, which may appeal to users needing advanced customization. Opt for Hopfield for straightforward evaluation tasks; opt for PyTorch for flexibility.",
+      "preferred_for_axis": "flexibility and customization"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Hopfield does not appear to have programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/0xcadams/hopfield#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/0xcadams/hopfield/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:04:29.791Z"
+  "summary": "Reliable framework for neural network evaluation, but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/hopfield.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
