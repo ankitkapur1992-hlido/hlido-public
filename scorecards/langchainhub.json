@@ -1,102 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "langchainhub",
-  "name": "langchainhub",
+  "name": "LangChain Hub",
+  "agent_url": "/reviews/langchainhub/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchainhub-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchainhub.",
-  "review_url": "https://hlido.eu/reviews/langchainhub/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchainhub-mp1162zu",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for LLM applications with a growing community \u2014 lacks depth in documentation and integration support.",
+    "body": "LangChain Hub serves as a framework for building applications with large language models (LLMs), and its community is expanding, which is a positive indicator for future growth. However, it currently suffers from insufficient documentation and integration support, making it challenging for new users to get started effectively. While it is a viable option for developers familiar with LLMs, those seeking extensive guidance or a more integrated experience may find it lacking. The tier remains STEADY due to its active community and foundational capabilities, but it must address documentation and support gaps to elevate its standing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) reflects a solid framework with an active community but highlights the need for improved documentation and integration support. A shift to VITAL would require substantial enhancements in user guidance and integration capabilities.",
+  "what_it_does_well": [
+    "Provides a foundational framework for building LLM applications",
+    "Active and growing community support",
+    "Integrates with various LLMs, offering flexibility for developers"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks depth, hindering new user onboarding",
+    "Limited integration support for third-party tools and services",
+    "No clear guidelines for best practices in application development"
+  ],
+  "best_for": [
+    "Developers familiar with LLMs looking for a flexible framework",
+    "Teams wanting to experiment with LLM applications without heavy initial investment",
+    "Users who can navigate community resources for support"
+  ],
+  "not_recommended_for": [
+    "New developers seeking comprehensive documentation and support",
+    "Teams requiring robust integration with existing tools and workflows",
+    "Users looking for a plug-and-play solution without technical expertise"
+  ],
+  "red_flags": [
+    "Documentation gaps may lead to frustration for new users",
+    "Limited support for integrations could hinder broader adoption"
+  ],
+  "compared_to": [
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face offers extensive documentation and a more mature ecosystem for LLM applications. Choose LangChain Hub for a more flexible framework but expect to handle more setup.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides a more streamlined experience with extensive resources. LangChain Hub is better for custom applications but lacks the same level of user guidance.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 LangChain Hub is primarily a framework without direct API or integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"langchainhub TypeScript icon, indicating that this package has built-in type declarations\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage features a heading 'LangChain Hub SDK' which suggests a primary value proposition, but lacks detailed articulation in the first viewport.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\" is visible on the homepage and pricing page.",
-      "source_surface": "homepage|pricing"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Pricing', 'Sign Up', and 'Sign In'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage or pricing page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/langchainhub",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:00:25.594Z"
+  "summary": "Solid framework for LLM applications with a growing community \u2014 lacks depth in documentation and integration support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchainhub.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
