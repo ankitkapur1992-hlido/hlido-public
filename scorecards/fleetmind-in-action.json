@@ -1,103 +1,118 @@
 {
+  "schema_version": "2.0",
   "slug": "fleetmind-in-action",
-  "name": "fleetmind-in-action",
+  "name": "FleetMind in Action",
+  "agent_url": "/reviews/fleetmind-in-action/",
   "category": "AI Agent",
+  "run_id": "run-fleetmind-in-action-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of fleetmind-in-action.",
-  "review_url": "https://hlido.eu/reviews/fleetmind-in-action/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-fleetmind-in-action-mp11eid9",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Basic AI agent with limited visibility and unclear value proposition \u2014 not competitive against established alternatives.",
+    "body": "FleetMind in Action presents itself as an AI agent, but lacks sufficient information and transparency to evaluate its effectiveness or unique offerings. The absence of verifiable claims and unclear operational details raise concerns about its reliability and usability. Users seeking a robust AI agent experience may find better options in established competitors that provide clearer value and functionality. Without substantial evidence of performance or distinct features, FleetMind remains a low-confidence choice in the AI agent landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (40) due to the lack of verifiable information and unclear value proposition. The tier could change if more concrete evidence of functionality and performance becomes available.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks verifiable claims about functionality and performance",
+    "No clear differentiation from other AI agents",
+    "Limited transparency regarding operational details",
+    "Uncertain reliability and usability for potential users"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable and transparent AI agent",
+    "Those needing clear operational details and performance metrics",
+    "Individuals looking for competitive features compared to established alternatives"
+  ],
+  "red_flags": [
+    "Absence of verifiable claims raises concerns about reliability",
+    "Lack of transparency may indicate potential issues with usability"
+  ],
+  "compared_to": [
+    {
+      "slug": "established-ai-agent",
+      "verdict_diff": "Established AI agents provide clearer value propositions and verifiable performance metrics. FleetMind lacks the transparency and reliability that users expect from competitive options.",
+      "preferred_for_axis": "transparency-and-reliability"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 no clear integration capabilities or documentation available.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage displays a 'Runtime error' message, indicating that it did not load properly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Runtime error' and does not articulate a value proposition.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', suggesting that access to the service is not functioning properly.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Runtime error' and 'Launch timed out', suggesting that no demo video, screenshot grid, or live demo is available.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/MCP-1st-Birthday/fleetmind-in-action",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:06:52.321Z"
+  "summary": "Basic AI agent with limited visibility and unclear value proposition \u2014 not competitive against established alternatives.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/fleetmind-in-action.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
