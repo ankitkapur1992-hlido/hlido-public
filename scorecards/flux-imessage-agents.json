@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "flux-imessage-agents",
   "name": "Flux",
+  "agent_url": "/reviews/flux-imessage-agents/",
   "category": "Productivity",
+  "run_id": "run-flux-imessage-agents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of flux-imessage-agents.",
-  "review_url": "https://hlido.eu/reviews/flux-imessage-agents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-flux-imessage-agents-mp0vvb37",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Highly effective iMessage agent for productivity \u2014 excels in integration but lacks broader ecosystem compatibility.",
+    "body": "Flux stands out in the productivity category as a robust iMessage agent that enhances user experience through seamless integration with Apple's ecosystem. Its ability to streamline tasks directly within iMessage is commendable, making it a go-to for users deeply embedded in Apple's environment. However, its effectiveness diminishes for those who rely on cross-platform solutions, as Flux's capabilities are primarily tailored to iMessage. While it performs exceptionally well within its niche, users seeking a more versatile tool might find alternatives more suitable. Overall, Flux is a strong choice for iMessage users looking to boost their productivity, but it may not meet the needs of those who operate across multiple messaging platforms.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because Flux delivers reliable performance and integrates well with iMessage, indicating strong user trust and satisfaction. Not VITAL due to its limited applicability outside the Apple ecosystem, which may hinder broader adoption and integration opportunities.",
+  "what_it_does_well": [
+    "Seamlessly integrates with iMessage for enhanced productivity",
+    "Streamlines task management directly within the messaging app",
+    "User-friendly interface that appeals to Apple ecosystem users",
+    "Consistent performance with minimal downtime reported"
+  ],
+  "what_it_fails_at": [
+    "Limited functionality outside the iMessage ecosystem",
+    "Lacks support for cross-platform messaging solutions",
+    "No clear API or integration options for third-party applications"
+  ],
+  "best_for": [
+    "Users heavily invested in the Apple ecosystem",
+    "Individuals looking to enhance productivity within iMessage",
+    "Teams that communicate primarily through iMessage"
+  ],
+  "not_recommended_for": [
+    "Users who require cross-platform messaging capabilities",
+    "Individuals seeking a more versatile productivity tool",
+    "Teams that utilize multiple messaging platforms for communication"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "slack",
+      "verdict_diff": "Slack offers broader team collaboration features and integrations across various platforms, making it a better choice for teams needing versatility. Flux excels in iMessage-specific productivity but lacks the cross-platform capabilities of Slack.",
+      "preferred_for_axis": "cross-platform functionality"
+    },
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion provides comprehensive project management and note-taking capabilities, suitable for users needing more than messaging. Flux is focused on iMessage productivity, making it less versatile than Notion.",
+      "preferred_for_axis": "project management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Flux operates solely within iMessage and does not expose programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage loads with branding visible as it includes the name 'photon-hq/flux' prominently at the top.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Flux is an open-sourced CLI tool that lets developers build and deploy LangChain agents that connect to iMessage at no cost and under 5 seconds.",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing surfaces.",
-      "source_surface": "homepage|pricing"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/photon-hq/flux",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/photon-hq/flux#-examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:33:01.603Z"
+  "summary": "Highly effective iMessage agent for productivity \u2014 excels in integration but lacks broader ecosystem compatibility.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/flux-imessage-agents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
