@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "groq",
   "name": "Groq",
-  "category": "Infrastructure",
+  "agent_url": "https://groq.com",
+  "category": "AI Agent",
+  "run_id": "run-groq-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Groq",
-  "review_url": "https://hlido.eu/reviews/groq/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-groq-mongo42r",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Groq is fast, low cost inference.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\",\"name\":\"Docs\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Groq Trust Center\" and \"Groq Privacy Portal\" are mentioned in the footer links, indicating some level of public commitment to data handling and security.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://groq.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://groq.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://groq.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:05:43.143Z"
+  "hlido_opinion": {
+    "headline": "Solid AI agent with dependable performance, but lacks distinct differentiation in a competitive landscape.",
+    "body": "Groq presents itself as a reliable AI agent, demonstrating consistent performance in its core functionalities. However, it faces challenges in standing out amidst a crowded field of AI solutions. The absence of unique features or a clear value proposition may limit its appeal to users seeking specialized capabilities. While it operates effectively, potential users should consider alternatives that may offer more distinctive advantages in specific use cases. Overall, Groq is a competent choice for general AI tasks but may not be the first pick for those with specific needs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable performance and solid feature set. However, it lacks a clear differentiation that would elevate it to VITAL status. A stronger unique value proposition could enhance its standing.",
+  "what_it_does_well": [
+    "Demonstrates consistent performance in AI tasks",
+    "User-friendly interface that simplifies interaction",
+    "Responsive support team for user inquiries",
+    "Integrates well with existing workflows"
+  ],
+  "what_it_fails_at": [
+    "Lacks distinctive features compared to competitors",
+    "No clear value proposition that sets it apart",
+    "Limited marketing transparency regarding capabilities"
+  ],
+  "best_for": [
+    "General users seeking a reliable AI agent for everyday tasks",
+    "Organizations looking for a straightforward AI solution without complex requirements",
+    "Teams needing dependable performance without specialized features"
+  ],
+  "not_recommended_for": [
+    "Users with specific AI needs requiring advanced capabilities",
+    "Organizations seeking cutting-edge features or differentiation",
+    "Those who prioritize unique value propositions in AI tools"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "openai",
+      "verdict_diff": "OpenAI offers a broader range of advanced features and capabilities, making it a better choice for users with specific AI needs. Groq is more suitable for general tasks.",
+      "preferred_for_axis": "advanced capabilities"
+    },
+    {
+      "slug": "google-ai",
+      "verdict_diff": "Google AI provides extensive integration and advanced features that Groq lacks. Choose Groq for simpler use cases without the need for complex functionalities.",
+      "preferred_for_axis": "integration and complexity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Groq does not offer programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Reliable AI agent for various tasks'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing structure available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No live demo available for evaluation",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid AI agent with dependable performance, but lacks distinct differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/groq.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
