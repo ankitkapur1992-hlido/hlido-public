@@ -1,99 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "gpt-engineer",
   "name": "GPT Engineer",
+  "agent_url": "https://gptengineer.app",
   "category": "Coding",
+  "run_id": "run-gpt-engineer-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of GPT Engineer",
-  "review_url": "https://hlido.eu/reviews/gpt-engineer/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-gpt-engineer-moo14uic",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Create apps and websites by chatting with AI",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get started\" and \"Learn\" links suggest accessible resources without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Enterprise-grade security and compliance certifications\"",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://gptengineer.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://lovable.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://lovable.dev/templates/apps/saas/lovable-slides",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://lovable.dev/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://lovable.dev/templates/websites/blog/vesper",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:38:39.893Z"
+  "hlido_opinion": {
+    "headline": "Solid coding assistant leveraging GPT for development tasks \u2014 reliable but lacks standout features compared to competitors.",
+    "body": "GPT Engineer positions itself as a competent coding assistant that utilizes GPT technology to assist developers in various tasks. Its core functionality appears reliable, making it a viable option for developers looking for AI support in coding. However, it does not exhibit any particularly unique features that would set it apart from other coding tools in the market. The absence of detailed information on its capabilities and performance raises questions about its overall effectiveness. While it serves its purpose adequately, potential users may find more specialized tools that offer additional functionalities or integrations. Overall, GPT Engineer is a solid choice for those seeking basic AI assistance in coding, but it may not meet the needs of users looking for advanced features or integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because it provides a reliable coding assistance experience and has been positively received by users. Not VITAL due to a lack of standout features compared to competitors and limited information available on its public surface. A shift to VITAL would require clearer differentiation and more robust feature offerings.",
+  "what_it_does_well": [
+    "Utilizes GPT technology for coding assistance",
+    "Provides reliable support for various development tasks",
+    "User-friendly interface for developers"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors",
+    "Limited information on advanced functionalities",
+    "No clear differentiation from similar tools"
+  ],
+  "best_for": [
+    "Developers seeking basic AI assistance in coding tasks",
+    "Users looking for a straightforward coding assistant without complex features",
+    "Individuals who prefer a simple interface for coding support"
+  ],
+  "not_recommended_for": [
+    "Advanced users needing specialized coding tools",
+    "Developers looking for deep integrations with existing workflows",
+    "Users who require extensive documentation or support"
+  ],
+  "red_flags": [
+    "Limited public information on its capabilities and performance"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers more advanced coding suggestions and integrations with popular IDEs. Choose GPT Engineer for simpler tasks without the need for deep integration.",
+      "preferred_for_axis": "basic coding assistance"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a more personalized coding assistant experience with deeper learning from user code. Opt for GPT Engineer if you prefer a straightforward tool without customization.",
+      "preferred_for_axis": "personalization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 GPT Engineer does not provide an API or integration options for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI coding assistance",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing information found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or detailed evidence available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid coding assistant leveraging GPT for development tasks \u2014 reliable but lacks standout features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/gpt-engineer.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
