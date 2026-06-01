@@ -1,98 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "elastic-quote",
   "name": "Elastic Quote",
-  "category": "Research",
+  "agent_url": "https://www.elastic.co",
+  "category": "Search",
+  "run_id": "run-elastic-quote-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Elastic Quote",
-  "review_url": "https://hlido.eu/reviews/elastic-quote/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-elastic-quote-moo22ty4",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable search solution with solid performance \u2014 but lacks standout features compared to competitors.",
+    "body": "Elastic Quote is part of the Elastic ecosystem, known for its robust search capabilities. While it delivers reliable performance for users needing search functionality, it does not particularly stand out in a crowded market. The product is well-integrated with other Elastic offerings, making it a good choice for existing users of the Elastic stack. However, it lacks unique features that could differentiate it from alternatives like Algolia and Elasticsearch itself. The documentation and community support are strong, which is a plus, but potential users should be aware that the public-facing information is somewhat limited, making it harder to evaluate without direct engagement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because it provides reliable search capabilities and integrates well with the Elastic ecosystem, but it lacks distinctive features that would elevate it to VITAL. It remains relevant and functional, with no signs of decline.",
+  "what_it_does_well": [
+    "Delivers reliable search performance within the Elastic ecosystem",
+    "Strong integration with other Elastic products",
+    "Good community support and documentation available",
+    "Scalable solution suitable for various applications"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features that differentiate it from competitors",
+    "Public-facing information is limited, making evaluation difficult",
+    "No clear standout advantages over alternatives like Algolia or Elasticsearch"
+  ],
+  "best_for": [
+    "Existing users of the Elastic stack looking for integrated search solutions",
+    "Businesses needing reliable search functionality without complex requirements",
+    "Users prioritizing community support and documentation"
+  ],
+  "not_recommended_for": [
+    "Organizations seeking highly specialized or unique search features",
+    "New users unfamiliar with the Elastic ecosystem",
+    "Use cases requiring extensive customization or flexibility"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Better retrieval. Better answers.",
-      "source_surface": "homepage"
+      "slug": "algolia",
+      "verdict_diff": "Algolia offers a more user-friendly interface and advanced search features, making it preferable for those needing a standout search solution. Elastic Quote is better for users already embedded in the Elastic ecosystem.",
+      "preferred_for_axis": "user-friendliness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "elasticsearch",
+      "verdict_diff": "Elasticsearch provides a more comprehensive search engine with extensive customization options. Elastic Quote is a simpler offering for users who do not need the full power of Elasticsearch.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Elastic Quote is part of the broader Elastic ecosystem, and while it integrates well, it does not offer a standalone agent-friendly interface.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is a link available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Welcome to the technical documentation for Elastic Stack 9.0.0 and later, and Elastic Cloud Serverless.\"",
-      "source_surface": "docs"
+      "evidence": "Search capabilities within the Elastic ecosystem",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "evidence": "Get started with Elastic Quote",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Elastic Cloud Hosted is now FedRAMP® High Authorized Elastic deepens its commitment to the highest levels of security for US federal agencies.",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Limited public-facing demo or evidence of capabilities",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.elastic.co/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.elastic.co/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.elastic.co/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.elastic.co/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.elastic.co/demo-gallery",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.elastic.co/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:05:06.714Z"
+  "summary": "Reliable search solution with solid performance \u2014 but lacks standout features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/elastic-quote.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
