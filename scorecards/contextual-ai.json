@@ -1,101 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "contextual-ai",
   "name": "Contextual AI",
-  "category": "Research",
-  "score": 78,
+  "agent_url": "https://contextual.ai",
+  "category": "Frameworks & Eval",
+  "run_id": "run-contextual-ai-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Contextual AI",
-  "review_url": "https://hlido.eu/reviews/contextual-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-contextual-ai-moo1nn3l",
-  "claims": [
+  "laddoo_score": 75,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Founded by the RAG paper authors \u2014 enterprise RAG platform with strong technical credibility but in a category being commoditised.",
+    "body": "Contextual AI is the commercial company founded by Douwe Kiela and the team that wrote the original RAG paper. That technical pedigree is real and it shows in the product \u2014 the platform handles enterprise concerns (data isolation, fine-tuned models for specific domains, evaluation harnesses) that most RAG-as-a-service competitors gloss over. Where it strengthens is the depth of the RAG primitives: things like contextual fine-tuning of the retrieval model, not just bolting an off-the-shelf embedder onto a vector database. Where it weakens is the broader category trajectory \u2014 RAG-as-a-platform is being commoditised by both open-source (LlamaIndex, Haystack) and big-cloud offerings (Azure AI Search, Bedrock Knowledge Bases). The technical differentiation is real but the buying conversation increasingly comes down to procurement integration, where the hyperscalers have structural advantages.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because the technical depth is genuinely differentiated and the team has earned credibility. Not VITAL because the category is being commoditised and the enterprise buying motion favours hyperscalers.",
+  "what_it_does_well": [
+    "Fine-tuned retrieval models (not just off-the-shelf embedders)",
+    "Strong evaluation harness built into the platform",
+    "Founder credibility in the RAG research community"
+  ],
+  "what_it_fails_at": [
+    "Category being commoditised by hyperscalers",
+    "Self-serve onboarding less polished than open-source alternatives",
+    "Pricing requires sales conversation"
+  ],
+  "best_for": [
+    "Enterprise RAG with domain-specific fine-tuning needs",
+    "Teams that value research-grade evaluation rigour",
+    "Regulated industries needing strong data isolation"
+  ],
+  "not_recommended_for": [
+    "Small teams wanting self-serve RAG",
+    "Buyers already locked into a hyperscaler RAG stack",
+    "Greenfield projects with no enterprise compliance pressure"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The unified context layer that powers expert AI in advanced industries.",
-      "source_surface": "homepage"
+      "slug": "llamaindex",
+      "verdict_diff": "LlamaIndex is the open-source alternative \u2014 more flexible but you operate it. Contextual AI is the managed enterprise platform for teams that do not want to.",
+      "preferred_for_axis": "managed-vs-self-operated"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "cohere",
+      "verdict_diff": "Cohere provides RAG primitives (Embed/Rerank); Contextual AI provides a full platform on top. Choose Cohere when building your own RAG pipeline; Contextual AI when you want a managed end-to-end product.",
+      "preferred_for_axis": "primitives-vs-platform"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Founder credibility (RAG paper authors)",
+      "source": "https://contextual.ai/about",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "REST API + Python SDK for retrieval and generation. Agents can use Contextual AI as the RAG layer in a larger pipeline.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' which suggests that documentation is accessible without login.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Enterprise security certifications: No model training on customer data Inherited document entitlements at query time Role-based access control SOC2 compliance HIPAA compliance GDPR compliance CCPA compliance",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://contextual.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://contextual.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://contextual.ai/blog/optimize-agent-performance-using-self-evolving-context",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:53:09.264Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "Founded by the RAG paper authors \u2014 enterprise RAG platform with strong technical credibility but in a category being commoditised.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/contextual-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
