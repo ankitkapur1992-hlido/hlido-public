@@ -1,99 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "21st-extension-toolbar",
   "name": "@21st-extension/toolbar",
+  "agent_url": "/reviews/21st-extension-toolbar/",
   "category": "Coding",
+  "run_id": "run-21st-extension-toolbar-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of 21st-extension-toolbar.",
-  "review_url": "https://hlido.eu/reviews/21st-extension-toolbar/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-21st-extension-toolbar-mp10dxf2",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional coding extension with a steady presence, but lacks distinctive features to stand out.",
+    "body": "The @21st-extension/toolbar offers a reliable set of tools for coding, appealing to developers looking for straightforward functionality. However, it doesn't present any unique features or capabilities that would differentiate it from similar extensions in the market. While the extension serves its purpose adequately, users seeking advanced features or integrations may find it lacking compared to competitors. The absence of verified claims and unclear authentication requirements further complicates its evaluation. Overall, it\u2019s a solid choice for basic needs but may not satisfy those looking for more robust solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it provides functional coding tools that meet basic user needs, but lacks unique features or strong differentiation from competitors. Not VITAL due to the absence of verified claims and unclear authentication requirements, which limit its appeal for more demanding users.",
+  "what_it_does_well": [
+    "Offers a reliable set of coding tools for developers",
+    "Meets basic functionality needs without major issues",
+    "Consistent performance in standard coding tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks distinctive features that set it apart from competitors",
+    "No verified claims available to assess its capabilities",
+    "Unclear authentication requirements could deter potential users"
+  ],
+  "best_for": [
+    "Developers looking for basic coding tools without frills",
+    "Users who prioritize reliability over advanced features",
+    "Individuals or teams with straightforward coding needs"
+  ],
+  "not_recommended_for": [
+    "Developers seeking advanced features or integrations",
+    "Users requiring verified claims for functionality assessment",
+    "Teams that need a highly customizable coding environment"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability",
+    "Unclear authentication requirements may complicate use"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "21st.dev — AI Agent Registry, UI Components & Developer Tools for the Agentic Internet | 21st",
-      "source_surface": "homepage"
+      "slug": "code-toolbar",
+      "verdict_diff": "Code Toolbar offers more advanced features and integrations compared to @21st-extension/toolbar, making it a better choice for users who need enhanced functionality.",
+      "preferred_for_axis": "advanced features"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "21st is backed by Y Combinator. Excited for what's ahead!",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as 'sign up', 'try free', or 'book demo' on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Log in\" button is present on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"App Demo\" appears multiple times in the context of various agents on the homepage.",
-      "source_surface": "homepage"
+      "slug": "dev-tools-extension",
+      "verdict_diff": "Dev Tools Extension provides a more comprehensive set of tools and better user support, which may appeal to developers looking for a robust solution.",
+      "preferred_for_axis": "comprehensive tools"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the extension lacks integration capabilities that would allow for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://21st.dev/home",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://21st.dev/community/agents/reapollo/api-designer",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://21st.dev/community/agents/reapollo/github-agent",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://21st.dev/community/agents/reapollo/proposal-builder",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://21st.dev/community/blog/agent-registry",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:38:47.883Z"
+  "summary": "Functional coding extension with a steady presence, but lacks distinctive features to stand out.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/21st-extension-toolbar.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
