@@ -1,102 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "dia-browser",
   "name": "Dia (The Browser Company)",
-  "category": "Infrastructure",
+  "agent_url": "https://www.diabrowser.com",
+  "category": "Browser",
+  "run_id": "run-dia-browser-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Dia (The Browser Company)",
-  "review_url": "https://hlido.eu/reviews/dia-browser/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-dia-browser-moo20bx4",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "A browser that works with you",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Your data is never sold or used to build ad profiles — and with Sync, it's end-to-end encrypted.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.diabrowser.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.diabrowser.com/release-notes/latest",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:02:50.902Z"
+  "hlido_opinion": {
+    "headline": "Dia struggles to carve out a niche in a saturated browser market \u2014 lacks compelling features and user engagement.",
+    "body": "Dia, from The Browser Company, is currently facing challenges in establishing itself within the competitive browser landscape. With a score of 53, it falls into the FADING tier, indicating a lack of momentum and potential user interest. The browser does not present a clear value proposition or unique features that differentiate it from established players like Chrome or Firefox. Additionally, the absence of verified claims and a lack of user engagement signals that Dia may not be meeting the expectations of modern users. Without significant improvements or innovations, it risks being overshadowed by more established browsers.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to a lack of compelling features and verified user engagement. It would need to demonstrate significant improvements or unique selling points to shift to a higher tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear value proposition or unique features to differentiate from competitors",
+    "Lack of verified user engagement or feedback",
+    "Struggles to attract attention in a crowded market"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users looking for innovative browser features",
+    "Individuals seeking a reliable and established browser experience",
+    "Anyone needing strong community support or user feedback"
+  ],
+  "red_flags": [
+    "No verified claims or user testimonials available",
+    "Low score indicates potential disengagement from the user base"
+  ],
+  "compared_to": [
+    {
+      "slug": "chrome",
+      "verdict_diff": "Chrome offers extensive features, a large user base, and strong community support. Dia lacks the same level of engagement and feature set.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "firefox",
+      "verdict_diff": "Firefox provides robust privacy features and a strong community. Dia does not currently offer a comparable alternative.",
+      "preferred_for_axis": "privacy and community support"
+    },
+    {
+      "slug": "safari",
+      "verdict_diff": "Safari is optimized for Apple devices with seamless integration. Dia does not provide any unique advantages for Apple users.",
+      "preferred_for_axis": "device optimization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Dia does not currently offer any integration options for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or user feedback available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Dia struggles to carve out a niche in a saturated browser market \u2014 lacks compelling features and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/dia-browser.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
