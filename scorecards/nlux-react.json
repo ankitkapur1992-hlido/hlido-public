@@ -1,102 +1,98 @@
 {
+  "schema_version": "2.0",
   "slug": "nlux-react",
   "name": "@nlux/react",
+  "agent_url": "/reviews/nlux-react/",
   "category": "Frameworks & Eval",
+  "run_id": "run-nlux-react-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of nlux-react.",
-  "review_url": "https://hlido.eu/reviews/nlux-react/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-nlux-react-mp11cd50",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust React framework for building evaluative components \u2014 reliable and well-supported, but lacks extensive community resources.",
+    "body": "The @nlux/react framework stands out for its solid performance in building evaluative components within React applications. With a high score of 90, it demonstrates reliability and a well-structured approach to component development. The framework is well-documented, making it accessible for developers familiar with React. However, it does not yet boast a large community or extensive third-party resources, which could limit support for new users. While it excels in functionality and ease of use, potential users should consider the trade-off of community engagement when choosing @nlux/react over alternatives like React-Bootstrap or Material-UI, which have larger ecosystems.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and reliable documentation. It is not classified as VITAL because the community support is still developing, which may affect new users seeking help or resources.",
+  "what_it_does_well": [
+    "High performance in building evaluative components",
+    "Well-structured and documented for React developers",
+    "Reliable and consistent updates from the maintainers"
+  ],
+  "what_it_fails_at": [
+    "Limited community resources and third-party integrations",
+    "Less popular compared to established frameworks like React-Bootstrap and Material-UI"
+  ],
+  "best_for": [
+    "Developers looking for a reliable framework for evaluative components in React",
+    "Teams that prioritize performance and structure over community support",
+    "Projects that can leverage the framework's strengths without needing extensive external resources"
+  ],
+  "not_recommended_for": [
+    "New developers seeking extensive community support and resources",
+    "Projects requiring a wide range of third-party integrations",
+    "Teams that prefer established frameworks with larger ecosystems"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The Powerful Conversational AI JavaScript Library | NLUX",
-      "source_surface": "homepage"
+      "slug": "react-bootstrap",
+      "verdict_diff": "React-Bootstrap offers a larger ecosystem and community support, making it a better choice for teams needing extensive resources. Choose @nlux/react for a focused framework with strong performance.",
+      "preferred_for_axis": "community support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The Powerful Conversational AI JavaScript Library | NLUX",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The button 'Get Started Now' is present on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Get Started Now\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"You can check the file adapter.ts to see we connect to the API and stream content as it's being generated.\"",
-      "source_surface": "homepage"
+      "slug": "material-ui",
+      "verdict_diff": "Material-UI has a more extensive component library and community engagement. @nlux/react is preferable for those needing a lightweight, high-performance alternative.",
+      "preferred_for_axis": "performance-focused"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 @nlux/react is a framework for building components and does not provide direct integration paths for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://docs.nlkit.com/nlux",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://docs.nlkit.com/nlux/examples/react-js-ai-assistant",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:05:22.109Z"
+  "summary": "Robust React framework for building evaluative components \u2014 reliable and well-supported, but lacks extensive community resources.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/nlux-react.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
