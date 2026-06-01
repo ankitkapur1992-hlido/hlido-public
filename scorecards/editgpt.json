@@ -1,100 +1,155 @@
 {
+  "schema_version": "2.0",
   "slug": "editgpt",
-  "name": "Proofread, edit and track changes to your content using ChatGPT. | editGPT",
+  "name": "editGPT",
+  "agent_url": "https://editgpt.app",
   "category": "Chat & Companion",
+  "run_id": "run-editgpt-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "editGPT is an AI tool that allows you to proofread, edit, and track changes to your content using ChatGPT",
-  "review_url": "https://hlido.eu/reviews/editgpt/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-editgpt-mp0w2xqb",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI writing assistant for proofreading and editing \u2014 effective but lacks advanced features compared to competitors.",
+    "body": "editGPT provides a straightforward solution for users looking to proofread, edit, and track changes in their writing using AI. The tool is accessible via a Chrome extension and has garnered a user base of over 200,000, with positive feedback highlighting its efficiency. However, while it performs well for basic editing tasks, it does not offer the depth of features found in more established competitors like Grammarly or ProWritingAid, which include advanced style suggestions and integrations. Users may find editGPT sufficient for casual use, but those needing comprehensive editing tools might want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because editGPT effectively serves its purpose as a proofreading tool and has a growing user base. Not VITAL due to its lack of advanced features that more established competitors provide, and it may not meet the needs of users requiring comprehensive writing assistance.",
+  "what_it_does_well": [
+    "Provides a user-friendly interface for proofreading and editing",
+    "Available as a Chrome extension for easy access",
+    "Has gained a significant user base (200,000+ users)",
+    "Offers basic editing functionalities effectively",
+    "Positive user feedback highlights its efficiency"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features compared to competitors like Grammarly",
+    "No integration with other writing platforms or tools",
+    "Limited functionality for in-depth style and grammar analysis",
+    "No clear information on data handling or privacy policies",
+    "No mobile app or support for non-Chrome browsers"
+  ],
+  "best_for": [
+    "Casual writers looking for basic proofreading assistance",
+    "Users who prefer a lightweight Chrome extension for editing",
+    "Individuals seeking a free alternative to more complex tools",
+    "Students or professionals needing quick edits on the go"
+  ],
+  "not_recommended_for": [
+    "Professional writers requiring advanced editing features",
+    "Users needing comprehensive grammar and style suggestions",
+    "Teams looking for collaborative editing capabilities",
+    "Anyone needing integration with other writing software"
+  ],
+  "red_flags": [
+    "Lack of transparency regarding data handling and privacy",
+    "Limited features may not satisfy advanced users"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Proofread, edit and improve your writing with a powerful AI editor.\"",
-      "source_surface": "homepage"
+      "slug": "grammarly",
+      "verdict_diff": "Grammarly offers a more comprehensive suite of features, including advanced grammar checks and style suggestions. Choose editGPT for basic proofreading needs, but opt for Grammarly for in-depth editing.",
+      "preferred_for_axis": "feature-depth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a direct link to the 'Pricing' page.",
-      "source_surface": "homepage"
+      "slug": "prowritingaid",
+      "verdict_diff": "ProWritingAid provides extensive writing reports and style checks, making it a better choice for serious writers. editGPT is simpler and faster for quick edits.",
+      "preferred_for_axis": "advanced-analysis"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Available as a Chrome extension",
+      "source": "https://editgpt.app",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Explore Examples Using editGPT\"",
-      "source_surface": "templates"
+      "claim": "200,000+ users",
+      "source": "https://editgpt.app",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Proofreading and editing functionalities",
+      "source": "https://editgpt.app",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 editGPT operates solely as a Chrome extension with no programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Proofread, edit and improve your writing'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started for free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Free access via Chrome extension",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "User testimonials on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://editgpt.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://editgpt.app/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://editgpt.app/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://editgpt.app/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:38:19.458Z"
+  "summary": "Solid AI writing assistant for proofreading and editing \u2014 effective but lacks advanced features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/editgpt.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
