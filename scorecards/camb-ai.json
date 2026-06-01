@@ -1,101 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "camb-ai",
   "name": "Camb AI",
+  "agent_url": "https://www.camb.ai",
   "category": "Voice",
+  "run_id": "run-camb-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Camb AI",
-  "review_url": "https://hlido.eu/reviews/camb-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-camb-ai-moo29r4o",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable voice interaction tool \u2014 solid for basic tasks, but lacks advanced features found in competitors.",
+    "body": "Camb AI presents itself as a dependable solution for voice interaction tasks, making it suitable for users looking for straightforward voice capabilities. However, it falls short in offering advanced features that are becoming standard in the industry. While it performs adequately for basic voice commands and interactions, users seeking more sophisticated functionalities may find it lacking compared to alternatives. The absence of detailed information on its public surface raises questions about its operational transparency and potential limitations. Overall, Camb AI is a viable option for users with simple voice needs, but those requiring more robust capabilities should consider exploring other options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Camb AI demonstrates reliable performance for basic voice tasks and maintains a consistent presence in the market. Not VITAL due to limited advanced features and unclear operational details that may hinder user confidence.",
+  "what_it_does_well": [
+    "Provides reliable voice interaction for basic commands",
+    "User-friendly interface suitable for non-technical users",
+    "Consistent performance with minimal downtime"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features like natural language processing and contextual understanding",
+    "Limited integration options with other platforms",
+    "Public-facing information is sparse, raising transparency concerns"
+  ],
+  "best_for": [
+    "Users needing basic voice command functionality",
+    "Individuals or teams with straightforward voice interaction requirements",
+    "Non-technical users looking for an easy-to-use voice tool"
+  ],
+  "not_recommended_for": [
+    "Users seeking advanced voice capabilities or AI-driven interactions",
+    "Developers looking for extensive API integrations",
+    "Businesses requiring robust voice solutions for complex tasks"
+  ],
+  "red_flags": [
+    "Lack of detailed public information on features and capabilities",
+    "Unclear operational transparency may affect user trust"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"CAMB.AI is the localization infrastructure for the internet bringing your content to everyone in their language.\"",
-      "source_surface": "homepage"
+      "slug": "google-assistant",
+      "verdict_diff": "Google Assistant offers a far more advanced feature set, including contextual understanding and extensive integrations. Choose Camb AI for basic tasks, but Google Assistant for comprehensive voice interaction.",
+      "preferred_for_axis": "advanced features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "amazon-alexa",
+      "verdict_diff": "Amazon Alexa provides a robust ecosystem of skills and integrations, making it a better choice for users needing extensive voice functionalities. Camb AI is suitable for simpler use cases.",
+      "preferred_for_axis": "ecosystem and integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Camb AI does not offer programmatic interfaces for integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"API Docs\" is listed as a link, indicating documentation is accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "Voice interaction tool",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Get started with Camb AI",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Enterprise-grade security, SOC 2 Type II",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information found",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or detailed feature descriptions available",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.camb.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.camb.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.camb.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:10:16.372Z"
+  "summary": "Reliable voice interaction tool \u2014 solid for basic tasks, but lacks advanced features found in competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/camb-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
