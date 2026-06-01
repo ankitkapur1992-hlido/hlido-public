@@ -1,32 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "agentmail",
-  "name": "agentmail",
+  "name": "AgentMail",
+  "agent_url": "https://agentmail.to",
   "category": "AI Agent",
+  "run_id": "run-agentmail-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "unknown",
-  "summary": {
-    "strategic_alpha": {
-      "predicted": 75,
-      "reasoning": "Real infrastructure gap — agents need email and no prior solution was agent-native. $6M seed + YC validates market. MCP server shows framework-thinking. Differentiated from generic SMTP tools."
-    },
-    "execution_grit": {
-      "predicted": 70,
-      "reasoning": "Public API docs, free tier testable without enterprise gate, real-time events verifiable via webhook test. SOC 2 Type II is credible trust signal. Claims concrete and checkable."
-    },
-    "craft_and_soul": {
-      "predicted": 65,
-      "reasoning": "Developer-first product with clean API design. agentmail.to docs site likely well-structured (YC-backed teams usually execute on DX). No fluff — functional focus."
-    },
-    "value_signal": {
-      "predicted": 65,
-      "reasoning": "Free tier with 3 inboxes is genuine entry point. $20/mo for 10 inboxes is fair for infra service. Pricing is public and transparent — good score."
-    }
+  "laddoo_score": 53,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Emerging email solution for agents, but lacks maturity and user traction.",
+    "body": "AgentMail is positioned as a dedicated email solution for agents, addressing a gap in the market for agent-native email tools. The backing of a $6M seed round and Y Combinator lends credibility to its potential. However, the product is still in its infancy, with a FADING tier reflecting its current lack of user traction and maturity. While the public API and free tier are promising, the overall execution and feature set need further development to compete effectively with established players. The absence of verified claims and unclear authentication requirements raise concerns about its readiness for widespread adoption. For now, AgentMail shows potential but requires significant growth to be a viable option for agents.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  "review_url": "https://hlido.eu/reviews/agentmail/",
-  "reviewed_at": "2026-05-01",
-  "claims": [],
-  "confidence": "high",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T09:57:48.233Z"
+  "tier_rationale": "FADING (53) due to the lack of user traction and maturity in the product. The potential is there, but it needs to evolve to meet market expectations and build a user base. A shift to STEADY would require demonstrable growth in user adoption and feature refinement.",
+  "what_it_does_well": [
+    "Targets a specific niche of agent-native email solutions",
+    "Backed by significant funding and Y Combinator, indicating market validation",
+    "Offers a public API and free tier for testing"
+  ],
+  "what_it_fails_at": [
+    "Lacks user traction and maturity in the market",
+    "Unclear authentication requirements and verification of claims",
+    "Limited feature set compared to established email solutions"
+  ],
+  "best_for": [
+    "Early adopters interested in agent-native email solutions",
+    "Developers looking for a public API to integrate email functionalities",
+    "Startups exploring new email infrastructure options"
+  ],
+  "not_recommended_for": [
+    "Organizations needing a mature and reliable email solution",
+    "Users requiring extensive features and support",
+    "Agents looking for proven tools with established user bases"
+  ],
+  "red_flags": [
+    "Unverified claims regarding functionality and performance",
+    "Lack of clarity on authentication requirements"
+  ],
+  "compared_to": [
+    {
+      "slug": "sendgrid",
+      "verdict_diff": "SendGrid is a well-established email service with robust features and reliability. AgentMail is still developing its offerings and lacks the maturity of SendGrid's infrastructure.",
+      "preferred_for_axis": "maturity and reliability"
+    },
+    {
+      "slug": "mailgun",
+      "verdict_diff": "Mailgun offers a comprehensive email API with extensive documentation and user support. AgentMail is currently less developed and lacks the same level of user engagement.",
+      "preferred_for_axis": "feature richness"
+    },
+    {
+      "slug": "postmark",
+      "verdict_diff": "Postmark is focused on transactional email with a strong reputation for deliverability. AgentMail is still building its reputation and needs to prove its reliability.",
+      "preferred_for_axis": "reputation and deliverability"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "AgentMail can be integrated into workflows via its public API and webhooks, allowing for real-time email handling.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Email solution for agents'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started for free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free tier available for testing",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No verified user testimonials or case studies available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Emerging email solution for agents, but lacks maturity and user traction.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/agentmail.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
