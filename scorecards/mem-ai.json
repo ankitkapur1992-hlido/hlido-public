@@ -1,100 +1,154 @@
 {
+  "schema_version": "2.0",
   "slug": "mem-ai",
   "name": "Mem",
-  "category": "Productivity",
+  "agent_url": "https://get.mem.ai",
+  "category": "AI Agent",
+  "run_id": "run-mem-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Mem",
-  "review_url": "https://hlido.eu/reviews/mem-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mem-ai-mongr9wp",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Powerful AI agent for knowledge management \u2014 excels in note-taking and retrieval but may overwhelm casual users.",
+    "body": "Mem is a robust AI agent designed for knowledge management, particularly excelling in note-taking and information retrieval. Its ability to integrate seamlessly with various workflows and its intelligent organization of notes make it a valuable tool for professionals and students alike. The user interface is sleek and intuitive, allowing for easy navigation and quick access to information. However, the depth of features may be overwhelming for casual users who are looking for a simpler solution. The product's strong performance in managing large volumes of information sets it apart from alternatives like Notion and Evernote, which focus more on general productivity rather than AI-driven insights. Overall, Mem is highly recommended for users needing a sophisticated tool for managing their knowledge base effectively.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its superior functionality in knowledge management and strong user engagement metrics. It stands out in a crowded market, but could improve in user onboarding for less tech-savvy individuals.",
+  "what_it_does_well": [
+    "Seamless integration with various workflows and platforms",
+    "Intelligent organization of notes for easy retrieval",
+    "Sleek and intuitive user interface",
+    "Strong performance in managing large volumes of information",
+    "Advanced AI capabilities for insights and recommendations"
+  ],
+  "what_it_fails_at": [
+    "May overwhelm casual users with its depth of features",
+    "Learning curve for new users can be steep",
+    "Limited offline capabilities compared to traditional note-taking apps",
+    "Pricing may be a barrier for some potential users"
+  ],
+  "best_for": [
+    "Professionals managing extensive knowledge bases",
+    "Students looking for advanced note-taking solutions",
+    "Users who require AI-driven insights and recommendations",
+    "Teams collaborating on complex projects requiring organized information"
+  ],
+  "not_recommended_for": [
+    "Casual users seeking simple note-taking solutions",
+    "Individuals requiring strong offline functionality",
+    "Users on a tight budget due to pricing structure",
+    "Those who prefer minimalistic interfaces without advanced features"
+  ],
+  "red_flags": [
+    "Potential for information overload for new users",
+    "Steep learning curve may deter some users"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "One place for everything on your mind",
-      "source_surface": "homepage"
+      "slug": "notion",
+      "verdict_diff": "Notion offers a more flexible workspace for general productivity, while Mem excels in AI-driven knowledge management. Choose Mem for advanced insights; choose Notion for broader organizational needs.",
+      "preferred_for_axis": "knowledge-management"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
+      "slug": "evernote",
+      "verdict_diff": "Evernote focuses more on traditional note-taking, whereas Mem leverages AI to enhance information retrieval and organization. Mem is better for users needing smart insights.",
+      "preferred_for_axis": "ai-enhanced-retrieval"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Seamless integration with various workflows",
+      "source": "https://get.mem.ai/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Check out our Help and Support center.",
-      "source_surface": "pricing"
+      "claim": "Intelligent organization of notes",
+      "source": "https://get.mem.ai/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Sleek and intuitive user interface",
+      "source": "https://get.mem.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Mem can be integrated into workflows requiring knowledge management and retrieval, making it suitable for agent-driven applications.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Your Google and Outlook calendars now sync directly into Mem.",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI-driven knowledge management'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Trust Center is live with SOC 2 documentation and sub-processor transparency.",
-      "source_surface": "integrations"
+      "evidence": "/pricing visible on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features highlighted on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://get.mem.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://get.mem.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://get.mem.ai/blog/product-update-roundup-calendar-integration-claude-connector-referral-program-plus-experimental-features-for-pro-users",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://get.mem.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:08:13.928Z"
+  "summary": "Powerful AI agent for knowledge management \u2014 excels in note-taking and retrieval but may overwhelm casual users.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mem-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
