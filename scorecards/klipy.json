@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "klipy",
   "name": "Klipy",
+  "agent_url": "https://klipy.com",
   "category": "AI Agent",
+  "run_id": "run-klipy-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Klipy",
-  "review_url": "https://hlido.eu/reviews/klipy/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-klipy-monezmqm",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "This website uses a security service to protect against malicious bots.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "This website uses a security service to protect against malicious bots.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://klipy.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
+  "laddoo_score": 40,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:18:25.209Z"
+  "hlido_opinion": {
+    "headline": "Struggling AI agent with unclear value proposition \u2014 lacks features and support to compete effectively.",
+    "body": "Klipy presents itself as an AI agent, but upon review, it appears to lack a clear value proposition and essential features that would make it competitive in the crowded AI agent market. The absence of verifiable claims and a transparent operational model raises concerns about its reliability and utility. As it stands, Klipy does not offer compelling reasons for users to choose it over more established alternatives. Without significant improvements or a clearer focus, it risks becoming obsolete. Users looking for robust AI agent solutions may want to consider more established options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) due to the lack of verifiable features, unclear value proposition, and minimal engagement with the user community. This tier reflects a product that is struggling to maintain relevance. A significant improvement in functionality or user feedback could elevate it to a higher tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks a clear value proposition and specific features",
+    "No verifiable claims or operational transparency",
+    "Minimal user engagement or community support",
+    "Does not effectively compete with established AI agents"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and feature-rich AI agents",
+    "Individuals or teams requiring robust support and documentation",
+    "Those looking for a clear and compelling use case for AI agents"
+  ],
+  "red_flags": [
+    "Absence of verifiable claims raises concerns about reliability",
+    "Lack of community engagement suggests potential neglect or low user interest"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-established, feature-rich AI experience with extensive community support and documentation, making it a far superior choice for users seeking reliable AI solutions. Klipy lacks these essential elements.",
+      "preferred_for_axis": "reliability and support"
+    },
+    {
+      "slug": "google-bard",
+      "verdict_diff": "Google Bard provides a comprehensive AI agent experience with strong integration and support, while Klipy fails to demonstrate a competitive edge in features or user engagement.",
+      "preferred_for_axis": "feature richness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Klipy does not present a clear integration path for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No effective call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demonstrable features or claims",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Struggling AI agent with unclear value proposition \u2014 lacks features and support to compete effectively.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/klipy.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
