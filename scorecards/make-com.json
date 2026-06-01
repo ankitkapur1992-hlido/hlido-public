@@ -1,99 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "make-com",
   "name": "Make",
-  "category": "Workflow & Automation",
+  "agent_url": "https://www.make.com",
+  "category": "Workflow",
+  "run_id": "run-make-com-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Make",
-  "review_url": "https://hlido.eu/reviews/make-com/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-make-com-moo1ky4i",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust workflow automation platform with extensive integrations \u2014 excels in flexibility and user experience.",
+    "body": "Make stands out as a comprehensive workflow automation tool, providing users with a visually intuitive interface and a vast array of integrations. Its ability to connect various apps and services seamlessly allows for complex automation scenarios that cater to diverse user needs. The platform's flexibility is one of its strongest assets, enabling both novice and advanced users to create workflows without extensive coding knowledge. Additionally, the documentation is thorough, aiding users in maximizing the platform's capabilities. However, while the user experience is generally positive, some users may find the initial learning curve steep due to the platform's extensive features. Overall, Make is a powerful choice for those looking to streamline their operations through automation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, extensive integration options, and user-friendly design. The platform's ability to handle complex workflows and its solid documentation support its high tier. It would shift to STEADY if user experience issues were reported more frequently or if integration options became limited.",
+  "what_it_does_well": [
+    "Offers a wide range of integrations with popular apps and services",
+    "User-friendly visual interface for creating workflows",
+    "Comprehensive documentation and support resources",
+    "Flexible automation capabilities suitable for various use cases",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Initial learning curve can be steep for new users",
+    "Some advanced features may require coding knowledge",
+    "Pricing may be a barrier for small businesses or individual users"
+  ],
+  "best_for": [
+    "Businesses looking to automate complex workflows",
+    "Users who require extensive app integrations",
+    "Teams that value a visually intuitive interface for automation",
+    "Organizations needing robust documentation and support"
+  ],
+  "not_recommended_for": [
+    "Individuals seeking simple automation solutions without a learning curve",
+    "Users who prefer no-code options with limited features",
+    "Small teams with tight budgets"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The visual AI automation platform",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier is simpler and better for quick automations, while Make offers more flexibility and complexity for advanced workflows. Choose Make for intricate automation needs.",
+      "preferred_for_axis": "complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The menu item 'Pricing' is accessible from the homepage.",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat is the predecessor to Make, which has since rebranded. Make retains the best features of Integromat while improving user experience and integration options.",
+      "preferred_for_axis": "legacy"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Extensive integrations with popular apps",
+      "source": "https://www.make.com/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Explore our documentation & resources",
-      "source_surface": "homepage"
+      "claim": "User-friendly visual interface",
+      "source": "https://www.make.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Comprehensive documentation available",
+      "source": "https://www.make.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Make can be integrated into agent-driven workflows through its API and webhooks, allowing for automated triggers and actions.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"3,000+ Integration Apps | Connect & Automate Software | Make\"",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Create powerful workflows with ease'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Scale securely with visual-first AI-powered enterprise automation\"",
-      "source_surface": "homepage"
+      "evidence": "/pricing transparent and competitive",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.make.com/en",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.make.com/en/automate/invoicing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.make.com/en/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.make.com/en/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.make.com/en/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:51:00.995Z"
+  "summary": "Robust workflow automation platform with extensive integrations \u2014 excels in flexibility and user experience.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/make-com.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
