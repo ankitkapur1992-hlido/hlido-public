@@ -1,100 +1,121 @@
 {
+  "schema_version": "2.0",
   "slug": "abridge",
   "name": "Abridge",
-  "category": "Specialized verticals",
-  "score": 53,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Abridge",
-  "review_url": "https://hlido.eu/reviews/abridge/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-abridge-moo1calg",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Enterprise-grade AI for clinical conversations—trusted by the largest healthcare systems.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The presence of a 'LOGIN' link on the homepage indicates that access to documentation or live demo may require login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Abridge is rapidly becoming the platform of choice for enterprise-wide deployment at leading healthcare systems across the country, including Johns Hopkins Medicine, Corewell Health, Deaconess Health System, Reid Health, University of Vermont Health Network, CHRISTUS Health, UChicago Medicine, Sutter Health, Yale New Haven Health System, UCI Health, Emory Healthcare, The University of Kansas Health System, UPMC, and many more.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Abridge is the only company that maps AI-generated summaries to ground truth, helping providers quickly trust and verify the output.",
-      "source_surface": "docs"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.abridge.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://www.abridge.com/press-release/mayo-clinic-announcement",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.abridge.com/press-release/altamed-abridge",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.abridge.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "agent_url": "https://www.abridge.com",
+  "category": "Healthcare",
+  "run_id": "run-abridge-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:44:18.851Z"
+  "hlido_opinion": {
+    "headline": "Abridge struggles with transparency and user engagement \u2014 lacks essential public-facing information.",
+    "body": "Abridge, a healthcare-focused service, currently faces significant challenges in user engagement due to a lack of essential information on its website. Key elements such as the homepage, primary value proposition, call-to-action, and pricing details are either missing or not functioning correctly, leading to a poor user experience. This opacity raises concerns about the service's accessibility and usability for potential users. Without clear communication of its offerings and transparent pricing, Abridge risks losing potential customers to competitors who provide more straightforward information. The current state indicates that Abridge is fading from relevance in a competitive healthcare landscape where clarity and user engagement are paramount.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (75) because the product's public-facing information is inadequate, leading to a lack of user engagement and transparency. The absence of key elements such as a functioning homepage and clear pricing details is a significant red flag. Improvement in these areas could elevate the tier back to STEADY.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load, creating immediate accessibility issues",
+    "Primary value proposition is unclear or missing",
+    "Call-to-action elements are not present, hindering user engagement",
+    "No transparent pricing or access information available",
+    "Lacks evidence or demo to showcase the product's functionality"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking clear and accessible healthcare solutions",
+    "Individuals needing immediate information about service offerings",
+    "Potential customers who prioritize transparency in pricing and features"
+  ],
+  "red_flags": [
+    "Complete lack of essential information on the homepage",
+    "No visible calls to action or engagement prompts",
+    "Absence of pricing or access details raises concerns about service transparency"
+  ],
+  "compared_to": [
+    {
+      "slug": "healthtap",
+      "verdict_diff": "HealthTap offers a more transparent and user-friendly experience with clear pricing and service details. Abridge needs to improve its public-facing information to compete effectively.",
+      "preferred_for_axis": "transparency"
+    },
+    {
+      "slug": "zocdoc",
+      "verdict_diff": "Zocdoc provides a comprehensive platform for healthcare services with clear user engagement strategies. Abridge currently lacks these essential features.",
+      "preferred_for_axis": "user engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Abridge's lack of public information makes it difficult to integrate or assess programmatically.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Abridge struggles with transparency and user engagement \u2014 lacks essential public-facing information.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/abridge.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
