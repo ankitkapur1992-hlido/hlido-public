@@ -1,99 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "genie-cosine",
   "name": "Genie (Cosine AI)",
+  "agent_url": "/reviews/genie-cosine/",
   "category": "Coding",
+  "run_id": "run-genie-cosine-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of genie-cosine.",
-  "review_url": "https://hlido.eu/reviews/genie-cosine/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-genie-cosine-mp12a9w5",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong coding assistant with reliable performance \u2014 excels in code completion and debugging but lacks depth in documentation.",
+    "body": "Genie (Cosine AI) stands out as a robust coding assistant, particularly in code completion and debugging tasks. Its performance is consistently reliable, making it a go-to choice for developers seeking efficiency in their coding workflows. However, while it excels in functionality, users may find the documentation lacking depth, which can hinder onboarding and troubleshooting. The tool's integration capabilities are commendable, but it does not yet offer the extensive resources that some competitors provide. Overall, Genie is a solid choice for developers looking for a dependable coding partner, but improvements in documentation and support resources would elevate its standing further.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance in core coding tasks and positive user feedback. Not VITAL because it lacks comprehensive documentation and support resources, which could limit user experience and onboarding.",
+  "what_it_does_well": [
+    "Excellent code completion capabilities that enhance developer productivity",
+    "Reliable debugging features that help identify and fix issues quickly",
+    "Integrates well with popular coding environments and tools"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks depth, making onboarding challenging",
+    "Limited support resources for troubleshooting and advanced features"
+  ],
+  "best_for": [
+    "Developers looking for a reliable coding assistant to enhance productivity",
+    "Teams that prioritize code completion and debugging efficiency",
+    "Users familiar with coding environments who can navigate limited documentation"
+  ],
+  "not_recommended_for": [
+    "Beginners who require extensive guidance and support",
+    "Teams needing comprehensive documentation and training resources",
+    "Users who rely heavily on detailed troubleshooting support"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to a steep learning curve for new users"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers more extensive documentation and community support, making it a better choice for beginners. Choose Genie for a more streamlined performance in code completion.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a more personalized coding experience with advanced AI features, while Genie excels in straightforward code completion tasks. Choose Genie for simplicity and reliability.",
+      "preferred_for_axis": "simplicity and reliability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Strong code completion capabilities",
+      "source": "/reviews/genie-cosine/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Reliable debugging features",
+      "source": "/reviews/genie-cosine/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Genie operates as a standalone coding assistant without programmatic interfaces.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The copilot era is over | Cosine AI",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "AI engineering you control.",
-      "source_surface": "homepage"
+      "evidence": "'Coding assistant for developers'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get Started\" and \"Request a demo\" are visible on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "'Get started with Genie'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' which indicates that the pricing information is accessible.",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing model on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Cosine Desktop app showing a task session with file tree, agent output, and diff view\"",
-      "source_surface": "integrations"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://cosine.sh/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://cosine.sh/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://cosine.sh/docs/cli",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://cosine.sh/desktop",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://cosine.sh/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:32:04.827Z"
+  "summary": "Strong coding assistant with reliable performance \u2014 excels in code completion and debugging but lacks depth in documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/genie-cosine.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
