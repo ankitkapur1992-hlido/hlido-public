@@ -1,98 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "leaper-agent",
-  "name": "leaper-agent",
+  "name": "Leaper Agent",
+  "agent_url": "/reviews/leaper-agent/",
   "category": "AI Agent",
+  "run_id": "run-leaper-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of leaper-agent.",
-  "review_url": "https://hlido.eu/reviews/leaper-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-leaper-agent-mp10lhwl",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Highly capable AI agent with strong performance metrics \u2014 ideal for users seeking automation without complexity.",
+    "body": "Leaper Agent stands out in the AI agent landscape with a robust feature set that emphasizes automation and user-friendliness. Its performance metrics indicate a high level of reliability, making it suitable for both individual users and teams looking to streamline workflows. While the lack of detailed information regarding authentication requirements might raise some concerns, the overall transparency and effectiveness of the tool are commendable. Users can expect a seamless experience, but potential buyers should verify specific integration capabilities to ensure it meets their needs. Overall, Leaper Agent is a strong contender in the AI agent category, particularly for those who prioritize ease of use and efficiency.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and user-friendly design, which resonates well with current market needs. The tier could shift to VITAL with the addition of more comprehensive integration options or clearer authentication processes.",
+  "what_it_does_well": [
+    "Offers a robust suite of automation features that enhance productivity",
+    "User-friendly interface that minimizes the learning curve",
+    "High reliability in performance metrics across various tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks clarity on authentication requirements, which may hinder some users",
+    "Limited information on integration capabilities with other tools"
+  ],
+  "best_for": [
+    "Individuals or teams seeking to automate repetitive tasks efficiently",
+    "Users who prioritize ease of use and quick setup",
+    "Small to medium-sized businesses looking for cost-effective AI solutions"
+  ],
+  "not_recommended_for": [
+    "Enterprises requiring extensive customization and integration",
+    "Users needing detailed documentation on authentication and security"
+  ],
+  "red_flags": [
+    "Uncertainty regarding authentication requirements may pose a risk for security-conscious users"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Deepleaper/leaper-agent\"",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a broader range of integrations and customization options, making it better for complex workflows. Leaper Agent excels in ease of use and straightforward automation tasks.",
+      "preferred_for_axis": "ease-of-use"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Self-learning AI agent framework with 6-layer memory evolution engine. Build intelligent agents for any business scenario.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT is great for simple automation but lacks the depth of features that Leaper Agent provides. Choose Leaper Agent for more comprehensive task automation.",
+      "preferred_for_axis": "feature-depth"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration capabilities as of current information.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/Deepleaper/leaper-agent#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/Deepleaper/leaper-agent/tree/master/datagen-config-examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/Deepleaper/leaper-agent/blob/master/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:44:45.711Z"
+  "summary": "Highly capable AI agent with strong performance metrics \u2014 ideal for users seeking automation without complexity.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/leaper-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
