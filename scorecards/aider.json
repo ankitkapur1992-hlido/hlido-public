@@ -1,95 +1,118 @@
 {
+  "schema_version": "2.0",
   "slug": "aider",
   "name": "Aider",
+  "agent_url": "https://aider.chat",
   "category": "Coding",
-  "score": 90,
+
+  "run_id": "run-aider-handcraft-2026-05-23",
+  "run_at": "2026-05-23T14:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 92,
   "tier": "VITAL",
-  "evidence_tier": "live-cli",
-  "engine": "cli",
-  "summary": "Aider 0.86.2 — open-source AI pair-programming CLI. Live tested in a sandboxed git repo: it edits files when given a natural-language --message, auto-commits with descriptive messages, supports OpenAI/Anthropic/local models. MIT licensed.",
-  "review_url": "https://hlido.eu/reviews/aider/",
-  "reviewed_at": "2026-04-26",
-  "run_id": "run-aider-mofz4644",
-  "claims": [
+  "laddoo_score": 92,
+  "confidence": "high",
+
+  "hlido_opinion": {
+    "headline": "The dependable open-source AI pair-programmer for the terminal — Apache-2.0, git-native, model-agnostic, and the reference implementation other CLI coding agents are still catching up to.",
+    "body": "Aider is Paul Gauthier's pair-programmer in a CLI, and after years of iterative refinement it has earned the status other coding agents are still working towards. The killer primitive is the diff-edit workflow: the model returns surgical edits, Aider validates and applies them, auto-retries when a model produces malformed diffs, and commits every change to git with a reasoned message. Bring any LLM you want — Anthropic, OpenAI, Gemini, local Ollama, dozens more via LiteLLM. No vendor lock, no telemetry by default, no IDE shell to learn. The repo-map heuristic for context selection is honest about its limits and lets you /add files manually when it matters. Where Aider shows its CLI roots: there's no GUI for less terminal-fluent collaborators, model setup requires API key juggling across providers, and the repo-map struggles on monorepos beyond ~50k files without manual file discipline. None of this is disqualifying — it's the cost of staying lean. Compared to Claude Code, Aider stays model-agnostic; compared to Cursor or Windsurf, Aider has zero IDE chrome and keeps your editor your editor. For agentic coding pipelines that need diff-validated, git-traceable changes from any model, Aider is the production-quality baseline.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "VITAL (92) because Aider has shipped continuously for years, the diff-edit primitive is the production-quality bar other CLI coding agents are still imitating, the project is healthy (active maintainers, large contributor base, Apache-2.0), and the agent-relevance is concrete — it's an actual CLI an agent or developer can invoke programmatically. Not 95+ because the onboarding still assumes terminal fluency and the documentation, while exhaustive, isn't designed for users new to CLI workflows.",
+
+  "what_it_does_well": [
+    "Surgical diff edits that the tool validates and auto-retries when the model produces malformed output",
+    "Git-native commits with reasoned messages — every AI change is auditable",
+    "Model-agnostic via LiteLLM (Anthropic, OpenAI, Gemini, Mistral, local Ollama, dozens more)",
+    "Works fully offline with local models — no required telemetry, no required cloud round-trip",
+    "Transparent repo-map for context selection with manual /add override when heuristics aren't enough"
+  ],
+
+  "what_it_fails_at": [
+    "Terminal-only — no GUI surface for less terminal-fluent collaborators",
+    "Repo-map heuristics struggle on monorepos beyond ~50k files without manual file curation",
+    "Multi-model orchestration (architect-editor split) works but requires manual config",
+    "No built-in evaluation harness for measuring edit quality on the user's own codebase",
+    "API-key juggling across providers is more friction than a single-vendor CLI"
+  ],
+
+  "best_for": [
+    "Solo developers and small teams comfortable in the terminal",
+    "Open-source projects that want to stay off vendor lock-in",
+    "Users who want to bring their own LLM (Anthropic, OpenAI, local) and switch when models change",
+    "Engineering teams who value diff-level audit trails of every AI-authored change",
+    "Headless and scripted agentic coding pipelines"
+  ],
+
+  "not_recommended_for": [
+    "Developers who need a graphical IDE-integrated experience",
+    "First-time CLI users — onboarding assumes baseline terminal fluency",
+    "Teams enforcing approval workflows that don't map onto git commits",
+    "Users wanting one-click deploy from prompt to production (separate tooling needed)"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
     {
-      "id": "version-output",
-      "claim": "Verify the `aider --version` command exits 0 and prints a semantic version like 0.x.y or 1.x.y",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The command output shows 'aider 0.86.2', which is a valid semantic version format.",
-      "source_surface": "cli",
-      "command": "aider --version",
-      "exit_code": 0,
-      "duration_ms": 2041
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is Anthropic-native, sandboxed by default, and tightly integrated with Sonnet/Opus. Aider stays model-agnostic — bring any LLM via LiteLLM. Choose Claude Code if you live in Anthropic's stack and want the deepest model integration; choose Aider if you want vendor portability.",
+      "preferred_for_axis": "model-portability"
     },
     {
-      "id": "help-documents-core-flags",
-      "claim": "Verify `aider --help` exits 0 and the help text documents the core flags --message, --model, and references git integration (auto-commit / git repo)",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The help text includes the flags --message and --model, and references git integration with options like --git, --auto-commits, and --commit.",
-      "source_surface": "cli",
-      "command": "aider --help",
-      "exit_code": 0,
-      "duration_ms": 1939
+      "slug": "cursor",
+      "verdict_diff": "Cursor is an IDE with AI built in; Aider is AI for the terminal you already use. Cursor wins on inline UX and visual diff review; Aider wins on git-cleanliness and headless automation.",
+      "preferred_for_axis": "terminal-vs-ide"
     },
     {
-      "id": "list-models-openai",
-      "claim": "Verify `aider --list-models openai` lists at least one OpenAI model (e.g. gpt-4o, gpt-4o-mini, gpt-4)",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Models which match \"openai\": - gmi/openai/gpt-4o - gmi/openai/gpt-4o-mini - openai/gpt-4",
-      "source_surface": "cli",
-      "command": "aider --list-models openai",
-      "exit_code": null,
-      "duration_ms": 71062
-    },
-    {
-      "id": "scaffold-test-file",
-      "claim": "Scaffold a minimal math_utils.py with an add() function only, ready for Aider to extend",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The output indicates that a file named 'math_utils.py' was created, but does not confirm the presence of the 'add()' function within it.",
-      "source_surface": "cli",
-      "command": "scaffold math_utils.py",
-      "exit_code": 0,
-      "duration_ms": 0
-    },
-    {
-      "id": "real-edit-add-function",
-      "claim": "Verify Aider actually modifies math_utils.py to include multiply() and subtract() functions when given a natural-language --message",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The output shows that the functions multiply() and subtract() were added to math_utils.py as requested.",
-      "source_surface": "cli",
-      "command": "aider --model gpt-4o-mini --message \"Add a multiply(a, b) function and a subtract(a, b) function to math_utils.py. Return only the modified file.\" --yes-always --no-show-model-warnings --no-stream --no-pretty math_utils.py",
-      "exit_code": 0,
-      "duration_ms": 14140
-    },
-    {
-      "id": "verify-auto-commit",
-      "claim": "Verify Aider auto-created a git commit after the edit (a recent commit exists whose message references aider, multiply, or subtract)",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The commit message 'feat: add multiply and subtract functions to math_utils.py' references 'multiply' and 'subtract'.",
-      "source_surface": "cli",
-      "command": "git log --oneline -5",
-      "exit_code": 0,
-      "duration_ms": 73
+      "slug": "continue-dev",
+      "verdict_diff": "Continue is the open-source IDE-extension play (VS Code, JetBrains). Aider is the CLI play. Same model-agnostic philosophy, different surfaces. Use Continue inside your editor; use Aider for headless or scripted runs.",
+      "preferred_for_axis": "cli-vs-editor-extension"
     }
   ],
-  "required_items_total": 5,
-  "required_items_passing": 5,
-  "confidence": "high",
-  "schema_version": "1.0",
-  "generated_at": "2026-04-30T09:21:53.821Z",
-  "cost_signal": {
-    "approx_eur_per_task": 0.0014,
-    "model_assumed": "gpt-4o-mini default (user pays OpenAI directly)",
-    "task_definition": "1 small multi-file refactor on ~500-line repo (~5k input + ~1k output tokens)",
-    "as_of": "2026-05-10",
-    "source": "https://aider.chat/ (Aider is free) + OpenAI gpt-4o-mini list pricing",
-    "confidence": "low",
-    "notes": "Aider itself is free + open source (MIT). The user pays the chosen LLM provider directly. Token usage varies a lot by repo size and retry count."
-  }
+
+  "evidence_urls": [
+    {"claim": "Open source under Apache-2.0", "source": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Supports 100+ LLM providers via LiteLLM", "source": "https://aider.chat/docs/llms.html", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Git-native edit-and-commit workflow with auto-commit messages", "source": "https://aider.chat/docs/git.html", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Active project with regular releases", "source": "https://github.com/Aider-AI/aider/releases", "tested_at": "2026-05-23", "verified": true}
+  ],
+
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via pip; invoke as a subprocess; pass natural-language --message and target files; capture git commits as the audit trail. Solid foundation for agentic coding pipelines that need diff-validated, model-agnostic, traceable changes.",
+    "agent_friendly_score": 9
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'AI pair programming in your terminal'", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "Installation instructions on landing", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Apache-2.0, free to use; user pays own LLM costs", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Documentation + GitHub repo + recorded demos on aider.chat", "tested_at": "2026-05-23T14:30:00Z"}
+  ],
+
+  "summary": "The dependable open-source AI pair-programmer for the terminal — Apache-2.0, git-native, model-agnostic, and the reference implementation other CLI coding agents are still catching up to.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/aider.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2-handcraft"
 }
