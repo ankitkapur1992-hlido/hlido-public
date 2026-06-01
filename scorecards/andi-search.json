@@ -1,103 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "andi-search",
   "name": "Andi Search",
+  "agent_url": "https://andisearch.com",
   "category": "Research",
-  "score": 53,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Andi Search",
-  "review_url": "https://hlido.eu/reviews/andi-search/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-andi-search-moo18z4j",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Andi is an AI search agent that can answer anything, find everything, and create great content for you.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Accurate. Private and anonymous. No ads, spam or tracking.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://andisearch.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "run_id": "run-andi-search-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
+  "tier": "STEADY",
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:41:28.689Z"
+  "hlido_opinion": {
+    "headline": "Andi Search shows potential as a research tool, but significant surface issues hinder usability and trust.",
+    "body": "Andi Search has positioned itself as a research tool, but a review of its public surface reveals critical shortcomings. The homepage fails to load properly, which immediately raises questions about reliability. Additionally, there is no clear articulation of its primary value proposition, and essential elements like calls to action and pricing information are absent. This lack of transparency and functionality makes it difficult for potential users to assess its value. While the concept of a dedicated research tool is appealing, without a robust and reliable interface, Andi Search struggles to establish credibility. Until these foundational issues are addressed, users may find better alternatives in established research platforms.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) due to the concept's appeal, but significant failures in the public surface (homepage loading, missing value proposition, and lack of pricing) prevent it from being more than a potential option. Improvement in these areas could elevate its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load, raising immediate trust concerns",
+    "No clear primary value proposition presented",
+    "Absence of calls to action limits user engagement",
+    "Lack of pricing or access information creates uncertainty",
+    "No evidence or demo available to assess functionality"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable research tool with transparent functionality",
+    "Individuals who require clear pricing and access details before engagement",
+    "Those looking for a platform with demonstrable features or demos"
+  ],
+  "red_flags": [
+    "Critical surface issues: homepage not loading and missing essential information",
+    "Lack of transparency may indicate underlying operational problems"
+  ],
+  "compared_to": [
+    {
+      "slug": "google-scholar",
+      "verdict_diff": "Google Scholar offers a well-established and reliable research platform with comprehensive access to academic papers. Andi Search lacks the foundational reliability and transparency needed to compete effectively.",
+      "preferred_for_axis": "reliability"
+    },
+    {
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley provides a robust research management tool with clear value propositions and pricing. Andi Search currently fails to present itself effectively in comparison.",
+      "preferred_for_axis": "feature clarity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the site currently lacks the necessary functionality to integrate with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Andi Search shows potential as a research tool, but significant surface issues hinder usability and trust.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/andi-search.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
