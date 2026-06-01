@@ -1,101 +1,154 @@
 {
+  "schema_version": "2.0",
   "slug": "chatwithcloud",
-  "name": "ChatWithCloud - Chat with your AWS Cloud from Terminal",
+  "name": "ChatWithCloud",
+  "agent_url": "https://chatwithcloud.ai",
   "category": "Chat & Companion",
+  "run_id": "run-chatwithcloud-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "CLI to Chat with your AWS Cloud from Terminal using generative AI.",
-  "review_url": "https://hlido.eu/reviews/chatwithcloud/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-chatwithcloud-mp0w0yww",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Versatile CLI tool for AWS interactions \u2014 effective for cost analysis and troubleshooting, but lacks clarity on security and modification capabilities.",
+    "body": "ChatWithCloud offers a command-line interface that leverages generative AI to facilitate natural language interactions with AWS resources. Users can perform cost analysis, security assessments, and troubleshooting directly from their terminal, which is a significant advantage for those comfortable with CLI environments. The service stands out for its ability to provide insights into AWS spending and security posture without requiring an OpenAI API key. However, the marketing lacks detailed information on security measures and the extent of modifications users can perform on their AWS resources, which could be a concern for potential users. Overall, it serves as a solid option for AWS users looking to simplify their cloud management, but clarity on certain operational aspects is needed.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the tool effectively enables AWS interactions through a user-friendly CLI and provides valuable insights into cost and security. It lacks some clarity on security and modification capabilities, which could affect user trust and adoption in sensitive environments.",
+  "what_it_does_well": [
+    "Enables natural language interactions with AWS through a CLI",
+    "Provides detailed cost analysis and optimization suggestions",
+    "Facilitates security assessments of IAM policies",
+    "Offers troubleshooting assistance for AWS infrastructure issues",
+    "No OpenAI API key required for basic use"
+  ],
+  "what_it_fails_at": [
+    "Lacks detailed information on security measures and data handling",
+    "Unclear on whether users can modify AWS resources or only read data",
+    "Limited visibility into the underlying AI model and its capabilities",
+    "Marketing does not clearly differentiate from competitors like Amazon Q"
+  ],
+  "best_for": [
+    "AWS users comfortable with command-line interfaces",
+    "Individuals or teams looking for cost optimization insights",
+    "Users needing assistance with troubleshooting AWS issues",
+    "Those who prefer a managed service without needing an OpenAI API key"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive security compliance and transparency",
+    "Individuals unfamiliar with AWS or command-line tools",
+    "Those needing detailed modification capabilities on AWS resources",
+    "Users seeking a fully integrated GUI experience"
+  ],
+  "red_flags": [
+    "Lack of clarity on security and data handling practices",
+    "Uncertainty regarding modification capabilities of AWS resources"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "ChatWithCloud is a CLI allowing you to interact with AWS Cloud using human language inside your Terminal thanks to generative AI.",
-      "source_surface": "homepage"
+      "slug": "amazon-q",
+      "verdict_diff": "Amazon Q is a more established tool with a broader feature set for AWS management. ChatWithCloud is simpler and more focused on cost analysis and troubleshooting, making it suitable for users who prioritize ease of use over extensive features.",
+      "preferred_for_axis": "ease of use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to the pricing page labeled 'AWS S3 Pricing Calculator'.",
-      "source_surface": "homepage"
+      "slug": "aws-cli",
+      "verdict_diff": "AWS CLI offers comprehensive control over AWS services but lacks the natural language processing capabilities of ChatWithCloud. Choose ChatWithCloud for a more user-friendly experience with conversational interfaces.",
+      "preferred_for_axis": "natural language interaction"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Enables natural language interactions with AWS",
+      "source": "https://chatwithcloud.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "ChatWithCloud can be tried on your own in Terminal, no OpenAI API Key needed.",
-      "source_surface": "homepage"
+      "claim": "Provides cost analysis and optimization suggestions",
+      "source": "https://chatwithcloud.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "No OpenAI API key required for basic use",
+      "source": "https://chatwithcloud.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 ChatWithCloud operates as a CLI tool and does not expose an API for programmatic interaction.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage lists integration options such as 'npm', 'brew', 'pnpm', and 'Bun'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:45:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "CLI allowing natural language interactions with AWS",
+      "tested_at": "2026-05-23T12:45:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Try on your own in Terminal'",
+      "tested_at": "2026-05-23T12:45:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Is it secure?\"",
-      "source_surface": "homepage"
+      "evidence": "Lifetime License and Managed Subscription options available",
+      "tested_at": "2026-05-23T12:45:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo images on the homepage",
+      "tested_at": "2026-05-23T12:45:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://chatwithcloud.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://chatwithcloud.ai/tools/aws-s3-simple-pricing-calculator/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://chatwithcloud.ai/aws-practical-examples/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:36:51.179Z"
+  "summary": "Versatile CLI tool for AWS interactions \u2014 effective for cost analysis and troubleshooting, but lacks clarity on security and modification capabilities.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/chatwithcloud.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
