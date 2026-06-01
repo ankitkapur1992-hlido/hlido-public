@@ -1,101 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "lavender-ai",
   "name": "Lavender",
-  "category": "Customer Experience",
+  "agent_url": "https://www.lavender.ai",
+  "category": "Sales",
+  "run_id": "run-lavender-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Lavender",
-  "review_url": "https://hlido.eu/reviews/lavender-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-lavender-ai-moo10h7k",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid sales enablement tool with a focus on personalization \u2014 effective for teams, but lacks standout features against top competitors.",
+    "body": "Lavender positions itself as a sales enablement solution that emphasizes personalized outreach. It offers tools to enhance email communication and improve engagement rates, making it a viable option for sales teams looking to optimize their outreach efforts. The platform's focus on personalization is commendable, and it appears to deliver on its promises of improving response rates. However, it doesn't significantly differentiate itself from other established players in the market. Competitors like Outreach and SalesLoft provide more comprehensive features and integrations that may appeal to larger teams or those needing advanced capabilities. While Lavender is a reliable choice for smaller teams or those just starting with sales enablement, its lack of standout features may limit its appeal to more demanding users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its effective personalization features and reliable performance, but lacks the advanced capabilities and integrations that would elevate it to VITAL status. A more robust feature set or unique selling proposition could change this tier.",
+  "what_it_does_well": [
+    "Offers tools for personalized email outreach to improve engagement",
+    "User-friendly interface that is accessible for sales teams",
+    "Integrates with common CRM platforms to streamline workflows",
+    "Provides analytics to track email performance and response rates"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features compared to larger competitors like Outreach",
+    "Limited integrations with specialized sales tools",
+    "No clear differentiation in a crowded sales enablement market",
+    "Documentation and support resources could be more comprehensive"
+  ],
+  "best_for": [
+    "Small to medium-sized sales teams looking for a straightforward outreach tool",
+    "Sales professionals who prioritize email personalization",
+    "Teams new to sales enablement seeking an easy-to-use platform"
+  ],
+  "not_recommended_for": [
+    "Large sales organizations needing advanced features and integrations",
+    "Teams requiring extensive customization options",
+    "Users looking for a comprehensive sales engagement platform"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Your intelligent AI sales agent. Never Write a Cold Email Again.\"",
-      "source_surface": "homepage"
+      "slug": "outreach",
+      "verdict_diff": "Outreach offers a more comprehensive feature set and integrations, making it suitable for larger teams. Choose Lavender for simpler, personalized outreach needs.",
+      "preferred_for_axis": "feature-complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "salesloft",
+      "verdict_diff": "SalesLoft provides advanced analytics and integrations that cater to larger organizations. Lavender is more accessible for smaller teams focused on personalization.",
+      "preferred_for_axis": "team-size"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Lavender operates as a standalone sales enablement tool without programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to the 'Pricing' page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage mentions a 'Schedule a Team Demo' and 'Learn more about Ora here', which suggests some level of accessibility to demos or documentation without login, but does not explicitly confirm it.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "We integrate with Gmail, Outlook, Outreach, Salesloft, HubSpot, Apollo, Groove, Gong and more.",
-      "source_surface": "pricing"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We take your privacy seriously. We are SOC2-certified and GDPR-compliant.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.lavender.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.lavender.ai/coach#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.lavender.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:35:13.450Z"
+  "summary": "Solid sales enablement tool with a focus on personalization \u2014 effective for teams, but lacks standout features against top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/lavender-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
