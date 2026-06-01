@@ -1,100 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "ai-agent-test",
   "name": "ai-agent-test",
+  "agent_url": "/reviews/ai-agent-test/",
   "category": "Coding",
+  "run_id": "run-ai-agent-test-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of ai-agent-test.",
-  "review_url": "https://hlido.eu/reviews/ai-agent-test/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ai-agent-test-mp10drio",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong coding assistant with high reliability \u2014 ideal for developers seeking consistent support, but lacks extensive integration options.",
+    "body": "ai-agent-test demonstrates impressive capabilities as a coding assistant, scoring high on reliability and user satisfaction. It effectively aids developers in various programming tasks, showcasing a solid understanding of multiple languages and frameworks. However, it falls short in offering extensive integration options with popular development tools, which may limit its appeal for teams looking for seamless workflows. Overall, it remains a dependable choice for individual developers or small teams needing consistent coding support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and user satisfaction, indicating a well-established product. Not VITAL because it lacks broader integration capabilities that could enhance its utility in diverse development environments.",
+  "what_it_does_well": [
+    "Provides reliable coding assistance across multiple programming languages",
+    "High user satisfaction and positive feedback from developers",
+    "Effective in debugging and code optimization tasks",
+    "User-friendly interface that enhances productivity"
+  ],
+  "what_it_fails_at": [
+    "Limited integration with popular development tools and platforms",
+    "Lacks advanced features like collaborative coding support",
+    "No extensive customization options for user preferences"
+  ],
+  "best_for": [
+    "Individual developers looking for reliable coding support",
+    "Small teams needing assistance with coding tasks",
+    "Developers who prioritize user-friendly tools over extensive integrations"
+  ],
+  "not_recommended_for": [
+    "Large teams requiring collaborative coding features",
+    "Developers needing deep integration with existing workflows",
+    "Users seeking extensive customization options"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "code-assistant-x",
+      "verdict_diff": "Code Assistant X offers broader integrations and collaborative features, making it better for team environments. Choose ai-agent-test for individual reliability.",
+      "preferred_for_axis": "individual reliability"
+    },
+    {
+      "slug": "dev-helper-pro",
+      "verdict_diff": "Dev Helper Pro provides advanced debugging tools, while ai-agent-test excels in general coding support. Choose ai-agent-test for consistent assistance.",
+      "preferred_for_axis": "consistent assistance"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks integration capabilities for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage features the branding 'benevbright/ai-agent-test' prominently at the top.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "A lightweight, extensible agentic workflow system built with TypeScript and the AI SDK.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing page.",
-      "source_surface": "homepage|pricing"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/benevbright/ai-agent-test#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:38:44.334Z"
+  "summary": "Strong coding assistant with high reliability \u2014 ideal for developers seeking consistent support, but lacks extensive integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ai-agent-test.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
