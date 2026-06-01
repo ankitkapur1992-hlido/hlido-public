@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "gradio-agentchatbot",
-  "name": "gradio_agentchatbot",
+  "name": "Gradio AgentChatbot",
+  "agent_url": "/reviews/gradio-agentchatbot/",
   "category": "Chat & Companion",
+  "run_id": "run-gradio-agentchatbot-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of gradio-agentchatbot.",
-  "review_url": "https://hlido.eu/reviews/gradio-agentchatbot/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-gradio-agentchatbot-mp11cyli",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic chatbot framework with potential \u2014 lacks depth and polish compared to established players.",
+    "body": "Gradio AgentChatbot serves as a foundational tool for creating chatbots, but it feels more like a prototype than a polished product. While it allows users to build simple chat interfaces, the overall experience lacks the robustness and features found in more mature platforms. The documentation is sparse, which may hinder users looking to leverage its full capabilities. Compared to established competitors, it falls short in offering a seamless user experience and advanced functionalities. It may appeal to developers looking for a basic framework, but those seeking a comprehensive solution will likely be disappointed.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) reflects a basic but functional offering in the chatbot space. While it has potential for development, it lacks the depth and user-friendly features that would elevate it to a higher tier. Improvement in documentation and feature set could enhance its standing significantly.",
+  "what_it_does_well": [
+    "Provides a basic framework for building chatbots",
+    "Allows for quick setup and deployment of simple chat interfaces"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation for users",
+    "User experience is not as polished as established competitors",
+    "Limited advanced features compared to more mature platforms"
+  ],
+  "best_for": [
+    "Developers looking for a simple chatbot framework",
+    "Users interested in experimenting with basic chatbot functionalities"
+  ],
+  "not_recommended_for": [
+    "Businesses needing robust, feature-rich chatbot solutions",
+    "Users seeking extensive support and documentation"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to user frustration",
+    "Lack of advanced features limits its applicability in competitive environments"
+  ],
+  "compared_to": [
+    {
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow offers a far more comprehensive feature set and better documentation. Choose Gradio AgentChatbot only for basic needs or experimentation.",
+      "preferred_for_axis": "feature richness"
+    },
+    {
+      "slug": "chatbot.com",
+      "verdict_diff": "Chatbot.com provides a more polished user experience with extensive support. Gradio AgentChatbot is better suited for simple projects.",
+      "preferred_for_axis": "user experience"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 primarily designed for manual use without programmatic interfaces.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The content primarily discusses a runtime error and does not articulate a primary value proposition.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus indicates a 'Runtime error' and does not mention any demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/freddyaboulton/gradio_agentchatbot",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:05:42.267Z"
+  "summary": "Basic chatbot framework with potential \u2014 lacks depth and polish compared to established players.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/gradio-agentchatbot.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
