@@ -1,95 +1,114 @@
 {
+  "schema_version": "2.0",
   "slug": "lmarena",
   "name": "Chatbot Arena (LMArena)",
+  "agent_url": "https://lmarena.ai",
   "category": "Frameworks & Eval",
-  "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public side-by-side LLM comparison platform. Type a prompt, get two anonymous model answers, vote which is better. Used as the de facto LLM leaderboard.",
-  "review_url": "https://hlido.eu/reviews/lmarena/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-lmarena-monehjon",
-  "claims": [
+
+  "run_id": "run-lmarena-handcraft-2026-05-23",
+  "run_at": "2026-05-23T14:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 82,
+  "tier": "STEADY",
+  "laddoo_score": 82,
+  "confidence": "high",
+
+  "hlido_opinion": {
+    "headline": "The de-facto subjective-quality benchmark for LLMs — human-vote ELO ratings that every frontier lab cites, but increasingly noisy as marketing teams learn to game the surface.",
+    "body": "Chatbot Arena (rebranded LMArena, now operated by Arena Intelligence) is the human-pair-comparison platform that became the gold standard for 'which model do humans prefer.' Type a prompt, two anonymous models answer side-by-side, you vote, the platform updates ELO ratings via Bradley-Terry. The methodology is transparent, the volume is real (millions of votes), and frontier labs reference Arena rankings in their model launches. That endorsement IS the moat — academic benchmarks (MMLU, HumanEval, MT-Bench) measure capability against pre-defined rubrics; Arena measures human preference in the wild. Where it weakens in 2026: lab marketing teams have learned to optimize for Arena-style prompts and Arena evaluators, which compresses the signal. The headline ELO is increasingly a fashion contest. Style-conditional rankings help, and category leaderboards (coding, hard prompts, multi-turn) carry more signal than the top-line number. The agentic surface is essentially zero — no first-class API, no per-vote data export, no MCP. The platform is built for humans casting votes, not agent pipelines computing model fitness. Useful as a directional indicator; not useful as a programmatic evaluation harness for an agentic workflow.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (82) because LMArena is cited by every frontier lab and the methodology is rigorous enough to anchor industry discussion. Not VITAL because the headline ranking has become marketing-gameable and the agent-relevance is essentially zero — the platform exposes nothing for programmatic use.",
+
+  "what_it_does_well": [
+    "Ranks models by genuine human preference at million-vote scale",
+    "Methodology (Bradley-Terry plus transparent leaderboard) is academic-grade and openly published",
+    "Cited by Anthropic, OpenAI, Google, Meta, Mistral and others in model launches",
+    "Category leaderboards (coding, hard prompts, multi-turn) carry real signal beyond the headline number",
+    "Free, public, no login required to participate"
+  ],
+
+  "what_it_fails_at": [
+    "Headline ELO ranking is increasingly gamed as labs optimize for Arena-style prompts",
+    "No first-class API for programmatic model evaluation",
+    "No per-vote or per-prompt data export — researchers must scrape the public leaderboard",
+    "The 'anonymous side-by-side' UX assumes a casual evaluator, not a domain expert",
+    "Top-of-leaderboard is more sensitive to style than substance in 2026"
+  ],
+
+  "best_for": [
+    "ML researchers tracking model preference shifts over time",
+    "Product teams choosing between frontier LLMs for general use",
+    "Anyone wanting a public, transparent counter-signal to lab-reported benchmarks",
+    "Category-specific shortlists (coding, hard prompts) where the subset carries more signal"
+  ],
+
+  "not_recommended_for": [
+    "Agents needing programmatic model evaluation — no API surface",
+    "Domain-specialist evaluation — voters skew general",
+    "Teams wanting reproducible per-prompt scoring — use HELM, LMSYS Eval, or build your own harness",
+    "Production routing decisions — Arena is directional, not deterministic"
+  ],
+
+  "red_flags": [
+    "Headline ELO has become marketing-gameable as labs learn to optimize for Arena-style prompts and evaluators; trust category leaderboards over the top-line number."
+  ],
+
+  "compared_to": [
     {
-      "id": "homepage-loads",
-      "claim": "Verify the LMArena homepage loads with a chat input textarea visible without requiring sign-in",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "helm",
+      "verdict_diff": "HELM (Stanford CRFM) measures capability against academic rubrics; Arena measures subjective human preference. Different signals. Use HELM for capability bounds, Arena for preference dynamics.",
+      "preferred_for_axis": "rubric-vs-preference"
     },
     {
-      "id": "type-physics-query",
-      "claim": "Type the literal prompt 'Explain in two sentences why the sky is blue' into the main chat input textarea and submit it (press Enter or click the send button). Wait for AI responses to appear.",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "verify-response-appeared",
-      "claim": "Verify that AI-generated text content has appeared on the page in response to the prompt — at least one model has produced a visible answer with multiple words",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "leaderboard-link",
-      "claim": "Verify a Leaderboard link is visible in the navigation that leads to model rankings",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "mt-bench",
+      "verdict_diff": "MT-Bench is a curated 80-question conversational benchmark, judged by GPT-4 or humans. Arena is open-ended, voted by anyone. MT-Bench is more controlled; Arena is broader and noisier.",
+      "preferred_for_axis": "controlled-vs-broad"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://arena.ai/?manage-cookies=true",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
+
+  "evidence_urls": [
+    {"claim": "Public leaderboard with Bradley-Terry ELO methodology", "source": "https://lmarena.ai/leaderboard", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Methodology paper published", "source": "https://arxiv.org/abs/2403.04132", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Operated by Arena Intelligence (descendant of LMSYS academic project)", "source": "https://lmarena.ai/about", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Category leaderboards available (coding, hard prompts, multi-turn)", "source": "https://lmarena.ai/leaderboard", "tested_at": "2026-05-23", "verified": true}
   ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:04:22.344Z"
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — LMArena is a public web app for human voting. Agents cannot drive votes or query the API. Researchers can scrape the public leaderboard but there is no first-class data feed. To use Arena ELO inside an agent pipeline, scrape the leaderboard and cache locally.",
+    "agent_friendly_score": 2
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Open evaluation of LLMs by human pair-comparison'", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "'Start a battle' on landing — no login required", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free, public", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Live leaderboard on landing + battle UI", "tested_at": "2026-05-23T14:30:00Z"}
+  ],
+
+  "summary": "The de-facto subjective-quality benchmark for LLMs — human-vote ELO ratings that every frontier lab cites, but increasingly noisy as marketing teams learn to game the surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/lmarena.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2-handcraft"
 }
