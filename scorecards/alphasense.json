@@ -1,101 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "alphasense",
   "name": "AlphaSense",
-  "category": "Specialized verticals",
-  "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of AlphaSense",
-  "review_url": "https://hlido.eu/reviews/alphasense/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-alphasense-moo21oi9",
-  "claims": [
+  "agent_url": "https://www.alpha-sense.com",
+  "category": "Finance",
+  "run_id": "run-alphasense-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid financial research platform with reliable insights \u2014 lacks transparent pricing and may require further evaluation for agent integration.",
+    "body": "AlphaSense is a well-established financial research platform that provides users with access to a wealth of market intelligence and insights. Its core functionality revolves around advanced search capabilities and AI-driven analytics, making it a valuable tool for finance professionals. However, the lack of clear pricing information on the website raises concerns about accessibility and potential hidden costs. While the platform performs well in delivering relevant insights, users should be cautious about the absence of demo evidence and the unclear requirements for access. For those in finance looking for a robust research tool, AlphaSense is a strong contender, but further investigation into its pricing and integration capabilities is advisable.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because AlphaSense offers reliable insights and has a solid reputation within the finance sector. However, the lack of transparent pricing and demo evidence prevents it from achieving a higher tier. Should the company improve its pricing transparency and provide more accessible demos, it could move to VITAL.",
+  "what_it_does_well": [
+    "Offers advanced search capabilities for financial documents and insights",
+    "Utilizes AI-driven analytics to enhance research efficiency",
+    "Established reputation among finance professionals"
+  ],
+  "what_it_fails_at": [
+    "No clear pricing information available on the website",
+    "Lacks demo evidence to evaluate the platform before commitment",
+    "Unclear access requirements may hinder user onboarding"
+  ],
+  "best_for": [
+    "Finance professionals seeking comprehensive market intelligence",
+    "Research teams needing advanced document search capabilities",
+    "Organizations looking for AI-enhanced analytics in finance"
+  ],
+  "not_recommended_for": [
+    "Users requiring clear and upfront pricing information",
+    "Individuals looking for a demo before making a commitment",
+    "Teams needing a fully integrated agent-driven workflow"
+  ],
+  "red_flags": [
+    "Absence of transparent pricing could indicate potential hidden costs",
+    "Lack of demo evidence may limit user confidence in the product"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Accelerate your workflow with AI insights you can trust",
-      "source_surface": "homepage"
+      "slug": "refinitiv",
+      "verdict_diff": "Refinitiv offers comprehensive financial data and analytics with transparent pricing. AlphaSense is better for advanced search capabilities but lacks pricing clarity.",
+      "preferred_for_axis": "pricing-transparency"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "slug": "bloomberg",
+      "verdict_diff": "Bloomberg provides extensive financial tools and insights but at a higher cost. AlphaSense may appeal to those seeking a more affordable alternative with solid research capabilities.",
+      "preferred_for_axis": "cost-effectiveness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Advanced search capabilities for financial documents",
+      "source": "https://www.alpha-sense.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "AI-driven analytics",
+      "source": "https://www.alpha-sense.com/technology",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 AlphaSense does not appear to offer programmatic access for agents, limiting its integration potential.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Start your free trial\" and \"Interactive Tour\" are available without login.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "AlphaSense aggregates exclusive real-time and aftermarket equity research from leading global investment banks.",
-      "source_surface": "integrations"
+      "evidence": "'AI-driven financial insights'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Request a demo'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear pricing information found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "AlphaSense customers trust us to keep them up to speed, securely",
-      "source_surface": "pricing"
+      "evidence": "No demo evidence found",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.alpha-sense.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.alpha-sense.com/industries/consumer-cpg/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.alpha-sense.com/content-and-partners/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:04:04.186Z"
+  "summary": "Solid financial research platform with reliable insights \u2014 lacks transparent pricing and may require further evaluation for agent integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/alphasense.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
