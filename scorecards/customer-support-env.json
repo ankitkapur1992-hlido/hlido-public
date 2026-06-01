@@ -1,103 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "customer-support-env",
   "name": "customer-support-env",
+  "agent_url": "/reviews/customer-support-env/",
   "category": "AI Agent",
+  "run_id": "run-customer-support-env-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of customer-support-env.",
-  "review_url": "https://hlido.eu/reviews/customer-support-env/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-customer-support-env-mp11muac",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic AI support tool with limited differentiation \u2014 functional but lacks standout features.",
+    "body": "Customer Support Env serves as a basic AI-driven support tool, but it struggles to distinguish itself in a competitive market. While it offers essential functionalities for automating customer interactions, the lack of unique features or a compelling value proposition makes it hard to recommend over more established alternatives. The user experience is functional but not particularly engaging, and the absence of verified claims about its capabilities raises concerns about reliability. For organizations seeking robust AI support solutions, this tool may not meet expectations when compared to more innovative competitors.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) reflects the tool's operational functionality but highlights its lack of standout features or differentiation in a crowded market. It remains viable but does not inspire confidence for long-term use without significant updates or improvements.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks unique features compared to competitors",
+    "User experience is basic and not engaging",
+    "No verified claims about its capabilities",
+    "Limited differentiation in a crowded market"
+  ],
+  "best_for": [
+    "Organizations looking for basic automation in customer support",
+    "Users who need a straightforward solution without advanced features"
+  ],
+  "not_recommended_for": [
+    "Businesses seeking innovative or feature-rich AI support tools",
+    "Users who prioritize user experience and engagement"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "zendesk",
+      "verdict_diff": "Zendesk offers a comprehensive suite of customer support tools with advanced features and integrations, making it a better choice for organizations seeking robust solutions. Customer Support Env is basic and lacks the depth of functionality.",
+      "preferred_for_axis": "feature-rich solutions"
+    },
+    {
+      "slug": "intercom",
+      "verdict_diff": "Intercom provides a more engaging user experience and extensive features for customer interaction, while Customer Support Env remains basic and less appealing to users.",
+      "preferred_for_axis": "user engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks sufficient integration capabilities for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Hugging Face's logo is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/kavyabumiya/customer-support-env",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:13:24.851Z"
+  "summary": "Basic AI support tool with limited differentiation \u2014 functional but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/customer-support-env.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
