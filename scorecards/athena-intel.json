@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "athena-intel",
-  "name": "Athena Intelligence",
-  "category": "Workflow & Automation",
-  "score": 53,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Athena Intelligence",
-  "review_url": "https://hlido.eu/reviews/athena-intel/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-athena-intel-mongfyta",
-  "claims": [
+  "name": "Athena Intel",
+  "agent_url": "https://www.athenaintelligence.ai",
+  "category": "Research",
+  "run_id": "run-athena-intel-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
+  "tier": "STEADY",
+  "laddoo_score": 65,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Functional research-assistant AI for analysts \u2014 competent but in a crowded space without a sharp differentiator.",
+    "body": "Athena Intel is one of several AI research-assistant products targeting financial and consulting analysts \u2014 agents that summarise reports, extract data, and produce briefings on demand. The category is crowded (AlphaSense, Hebbia, Perplexity for Enterprise, Glean, internal builds at every major bank) and Athena Intel does not yet have a sharp differentiator visible from the public surface. The product appears competent \u2014 the demos work, the positioning is clear \u2014 but the buying decision in this space is typically driven by either deep enterprise data integrations or specific vertical expertise, neither of which Athena Intel emphasises on their marketing site. A reasonable default for teams that want a working analyst-AI without overthinking the choice; not a category leader.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) because the product works as advertised and the team has credible execution. Lower end of STEADY because the differentiation against established competitors is not visible from the public surface.",
+  "what_it_does_well": [
+    "Clean working demo on the homepage",
+    "Clear positioning for the analyst persona"
+  ],
+  "what_it_fails_at": [
+    "No visible differentiation against AlphaSense / Hebbia / Glean",
+    "Enterprise data-integration story underdeveloped on public site"
+  ],
+  "best_for": [
+    "Smaller analyst teams wanting a turnkey AI without RFP overhead"
+  ],
+  "not_recommended_for": [
+    "Enterprises requiring deep vertical data integrations",
+    "Buyers needing transparent pricing for budget approval"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "slug": "alphasense",
+      "verdict_diff": "AlphaSense is the established financial-research leader with deep data integrations. Athena Intel is the smaller, more agile alternative for teams that do not need AlphaSense data depth.",
+      "preferred_for_axis": "data-depth-vs-agility"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Working demo on homepage",
+      "source": "https://www.athenaintelligence.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No public agent-integration path. Used through the web interface only.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Meet Athena, Your Enterprise-Ready Digital Coworker",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a direct link to the pricing page, making it unclear how to access it in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Olympus seamlessly integrates with all enterprise data sources, eliminating the need to navigate multiple systems.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Athena can be deployed into your company’s Virtual Private Cloud (VPC), ensuring that your data always remains within your security perimeter.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.athenaintel.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:59:13.669Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "Functional research-assistant AI for analysts \u2014 competent but in a crowded space without a sharp differentiator.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/athena-intel.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
