@@ -1,103 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "humane-ai-pin",
   "name": "Humane AI Pin",
+  "agent_url": "https://humane.com",
   "category": "AI Agent",
+  "run_id": "run-humane-ai-pin-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Humane AI Pin",
-  "review_url": "https://hlido.eu/reviews/humane-ai-pin/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-humane-ai-pin-moo23qhi",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The foundation of HP’s workplace evolution, is a powerful AI orchestrator — an intelligence at the center of your data and devices.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The homepage includes links to 'Privacy' and 'Your privacy choices', suggesting some level of public statements regarding data handling.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.hp-iq.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:05:23.484Z"
+  "hlido_opinion": {
+    "headline": "Humane AI Pin struggles to establish relevance in a saturated market \u2014 lacks clear differentiation and operational transparency.",
+    "body": "The Humane AI Pin appears to be a product that has not yet carved out a distinct niche in the competitive landscape of AI agents. With a score of 53, it is categorized as FADING, indicating a lack of momentum and possibly diminishing user interest. The absence of verifiable claims or clear operational details raises concerns about its viability and user trust. Without a compelling value proposition or unique features that set it apart from established competitors, the Humane AI Pin risks being overlooked by potential users. It is crucial for the team behind this product to enhance transparency and clarify its offerings to regain traction in the market.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to a lack of clear differentiation and verifiable claims. The product does not appear to be gaining traction in a crowded market. A shift to STEADY would require a clear articulation of unique features and operational transparency.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear value proposition or unique features compared to competitors",
+    "Lack of verifiable claims or operational transparency",
+    "Weak market presence and user engagement"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable and established AI agent",
+    "Those looking for clear operational details and transparency",
+    "Individuals interested in innovative AI solutions with proven track records"
+  ],
+  "red_flags": [
+    "No verifiable claims or operational details available",
+    "Weak market presence raises concerns about long-term viability"
+  ],
+  "compared_to": [
+    {
+      "slug": "google-assistant",
+      "verdict_diff": "Google Assistant offers a robust, well-integrated AI experience with a wealth of features and established user trust, while Humane AI Pin lacks clear differentiation.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "amazon-alexa",
+      "verdict_diff": "Amazon Alexa provides a comprehensive ecosystem with numerous integrations and a strong user base, making it a safer choice over the unproven Humane AI Pin.",
+      "preferred_for_axis": "market presence"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks operational clarity and integration capabilities.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Humane AI Pin struggles to establish relevance in a saturated market \u2014 lacks clear differentiation and operational transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/humane-ai-pin.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
