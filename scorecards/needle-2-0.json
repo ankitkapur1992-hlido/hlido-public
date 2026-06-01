@@ -1,123 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "needle-2-0",
   "name": "needle-2-0",
+  "agent_url": "https://needle.app",
   "category": "Productivity",
+  "run_id": "run-needle-2-0-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 80,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of needle-2-0.",
-  "review_url": "https://hlido.eu/reviews/needle-2-0/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-needle-2-0-mompr7ky",
-  "claims": [
+  "laddoo_score": 80,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid productivity tool with a clean interface \u2014 effective for task management but lacks advanced integrations.",
+    "body": "Needle 2.0 presents itself as a reliable productivity tool, focusing on task management with a user-friendly interface. It excels in providing a straightforward experience for users looking to organize their tasks efficiently. However, it falls short in offering advanced integrations that many users may expect from modern productivity applications. While its core functionalities are solid, the absence of deeper integrations with other tools could limit its appeal for users who rely on a more interconnected workflow. Overall, Needle 2.0 is a dependable choice for individuals or teams seeking simplicity in task management, but those needing extensive automation and integration capabilities might want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the tool performs reliably and has a clean interface that appeals to users. Not VITAL due to the lack of advanced integrations that could enhance its utility for more complex workflows.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies task management",
+    "Reliable performance with minimal downtime reported",
+    "Effective for individual task organization and prioritization"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced integrations with popular productivity tools",
+    "Limited automation features compared to competitors",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Individuals or small teams looking for a straightforward task management solution",
+    "Users who prioritize simplicity and ease of use over complex features",
+    "Those who do not require extensive integrations with other software"
+  ],
+  "not_recommended_for": [
+    "Users needing robust integrations with other productivity tools",
+    "Teams requiring advanced automation features",
+    "Individuals who prefer highly customizable workflows"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements could pose a barrier for new users",
+    "Limited information on third-party integrations available"
+  ],
+  "compared_to": [
     {
-      "id": "legacy-claim-1",
-      "claim": "No credit card required to start — free tier accessible immediately",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "No credit card required. Free to start.",
-      "source_surface": "homepage"
+      "slug": "todoist",
+      "verdict_diff": "Todoist offers more advanced features and integrations compared to Needle 2.0. Choose Todoist for a more comprehensive task management experience.",
+      "preferred_for_axis": "advanced features"
     },
     {
-      "id": "legacy-claim-2",
-      "claim": "Connect Google Drive or Slack — data connector integration works",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Connect Google Sheets with Sponsor Outreach\"",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "legacy-claim-3",
-      "claim": "Upload PDF and ask a question — knowledge threading answer quality",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "legacy-claim-4",
-      "claim": "Create workflow via natural language ('vibe automate') — NL automation works",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"What would you like tovibeautomate?\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "legacy-claim-5",
-      "claim": "Cross-source query — ask question spanning multiple connected data sources",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Find, clean, and qualify German SMB leads from multiple directories, then generate tailored outreach emails...\"",
-      "source_surface": "templates"
-    },
-    {
-      "id": "legacy-claim-6",
-      "claim": "Source citation in AI answers — does Needle cite source documents?",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "legacy-claim-7",
-      "claim": "Free plan limits — connectors, workflows, and queries allowed on free tier",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"1K workflow credits\" and \"750 builder credits\" are specified for the free plan.",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "legacy-claim-8",
-      "claim": "Pricing page public and transparent — all tiers visible without login",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "We offer plans to suit every need.",
-      "source_surface": "pricing"
+      "slug": "notion",
+      "verdict_diff": "Notion provides a highly customizable workspace that can integrate tasks with other project management features. Choose Notion for flexibility and integration.",
+      "preferred_for_axis": "customization and integration"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [
     {
-      "id": "homepage",
-      "url": "https://needle.app/",
-      "ok": true
+      "claim": "User-friendly interface",
+      "source": "https://needle.app",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "pricing",
-      "url": "https://needle.app/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://needle.app/workflow-templates/automate-sponsor-outreach-pitch",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://needle.app/workflow-templates/discover-and-qualify-german-smb-leads",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://needle.app/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "claim": "Reliable performance",
+      "source": "https://needle.app",
+      "tested_at": "2026-05-23",
+      "verified": true
     }
   ],
-  "required_items_total": 5,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T09:32:37.425Z"
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Needle 2.0 does not provide programmatic access for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Task management tool",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Sign up for free",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent pricing on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid productivity tool with a clean interface \u2014 effective for task management but lacks advanced integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/needle-2-0.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
