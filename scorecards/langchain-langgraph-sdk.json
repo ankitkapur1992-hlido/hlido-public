@@ -1,99 +1,101 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-langgraph-sdk",
   "name": "@langchain/langgraph-sdk",
+  "agent_url": "/reviews/langchain-langgraph-sdk/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-langgraph-sdk-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-langgraph-sdk.",
-  "review_url": "https://hlido.eu/reviews/langchain-langgraph-sdk/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-langgraph-sdk-mp1108pb",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional SDK for LangChain graph integration \u2014 solid for developers but lacks extensive documentation.",
+    "body": "The @langchain/langgraph-sdk offers a straightforward approach for integrating graph-based functionalities into LangChain applications. Its core capabilities are functional and provide a reliable foundation for developers looking to leverage graph structures within their workflows. However, the documentation is noticeably sparse, which can hinder new users from fully understanding or utilizing the SDK's potential. While it serves as a competent tool for those already familiar with LangChain, it may not be the best choice for newcomers needing comprehensive guidance. Compared to alternatives like 'graph-ql-sdk' or 'neo4j-driver', which offer more robust documentation and community support, this SDK falls short in terms of accessibility for less experienced developers.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the SDK provides essential functionalities for graph integration and shows operational maturity. Not VITAL due to the lack of extensive documentation and community resources, which limits its appeal for new users. Would shift to VITAL with improved documentation and support resources.",
+  "what_it_does_well": [
+    "Provides essential graph integration functionalities for LangChain applications",
+    "Offers a reliable foundation for developers familiar with LangChain",
+    "Integrates smoothly with existing LangChain workflows"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse, making it challenging for new users",
+    "Limited community support compared to other graph SDKs",
+    "Lacks advanced features that some competitors provide"
+  ],
+  "best_for": [
+    "Developers experienced with LangChain looking to add graph capabilities",
+    "Teams already using LangChain who need basic graph functionalities",
+    "Users familiar with SDK integration who can navigate limited documentation"
+  ],
+  "not_recommended_for": [
+    "New developers seeking comprehensive guidance and support",
+    "Teams requiring advanced graph features not available in this SDK",
+    "Users looking for a well-documented and community-supported tool"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to implementation challenges for new users"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"GitHub - langchain-ai/langgraphjs: Framework to build resilient language agents as graphs. · GitHub\"",
-      "source_surface": "homepage"
+      "slug": "graph-ql-sdk",
+      "verdict_diff": "Graph-QL SDK offers more comprehensive documentation and community support, making it a better choice for new users. Choose @langchain/langgraph-sdk for simpler LangChain integration.",
+      "preferred_for_axis": "documentation-support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "neo4j-driver",
+      "verdict_diff": "Neo4j Driver provides advanced graph features and extensive resources, which may appeal to users needing more than basic integration. @langchain/langgraph-sdk is better for straightforward LangChain graph needs.",
+      "preferred_for_axis": "feature-complexity"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the SDK is designed for direct integration into LangChain applications and does not expose programmatic interfaces for agents.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langgraphjs#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/langgraphjs/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:56:19.938Z"
+  "summary": "Functional SDK for LangChain graph integration \u2014 solid for developers but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-langgraph-sdk.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
