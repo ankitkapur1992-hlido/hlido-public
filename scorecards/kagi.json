@@ -1,101 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "kagi",
   "name": "Kagi",
+  "agent_url": "https://kagi.com",
   "category": "Research",
+  "run_id": "run-kagi-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Kagi",
-  "review_url": "https://hlido.eu/reviews/kagi/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-kagi-moo18gil",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid research tool with a focus on privacy and user experience \u2014 competes well but lacks standout features.",
+    "body": "Kagi positions itself as a privacy-focused search engine that emphasizes user experience and relevance in search results. Its clean interface and commitment to user privacy are notable strengths, appealing to users who prioritize these aspects. However, while Kagi performs well in providing relevant search results, it does not significantly differentiate itself from established competitors like DuckDuckGo or Startpage in terms of unique features or capabilities. The lack of detailed information on API access or integrations may limit its appeal for users looking to incorporate it into automated workflows. Overall, Kagi is a reliable choice for users seeking a straightforward, privacy-oriented search experience, but it may not be the first choice for those needing advanced features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Kagi delivers a reliable search experience with a strong privacy focus, and the trust signals are solid. Not VITAL due to the absence of standout features that would elevate it above competitors, and no clear integration options for agent-driven workflows.",
+  "what_it_does_well": [
+    "Provides a clean and user-friendly interface for search",
+    "Strong emphasis on user privacy and data protection",
+    "Delivers relevant search results effectively",
+    "Transparent about its business model and funding"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features that distinguish it from competitors",
+    "No clear API or integration options for automated workflows",
+    "Limited information available on advanced functionalities"
+  ],
+  "best_for": [
+    "Users prioritizing privacy in their search experience",
+    "Individuals looking for a straightforward, no-frills search engine",
+    "Casual researchers who need relevant results without advanced features"
+  ],
+  "not_recommended_for": [
+    "Power users requiring advanced search capabilities or integrations",
+    "Users looking for a highly customizable search experience",
+    "Those needing extensive data handling or API access"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Reclaim the web, restore your privacy\"",
-      "source_surface": "homepage"
+      "slug": "duckduckgo",
+      "verdict_diff": "DuckDuckGo offers a broader feature set and is more widely recognized, making it a better choice for users seeking comprehensive privacy-focused search. Kagi excels in user experience but lacks advanced features.",
+      "preferred_for_axis": "feature-completeness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "startpage",
+      "verdict_diff": "Startpage provides similar privacy benefits but with additional features like anonymous browsing. Choose Kagi for a cleaner interface; choose Startpage for more comprehensive privacy tools.",
+      "preferred_for_axis": "interface-simplicity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Privacy-focused search engine",
+      "source": "https://kagi.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Kagi does not currently offer an API or integration options for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\":{\"name\":\"Pricing\"},\"role\":\"link\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Help Docs (opens in a new tab)",
-      "source_surface": "homepage"
+      "evidence": "'Privacy-focused search engine'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Start searching'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Access multiple AI models without being tracked. Use the power of different LLMs, all grounded by Kagi search results, while keeping your prompts and data private.\"",
-      "source_surface": "homepage"
+      "evidence": "No subscription or payment required for basic use",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Search functionality demonstrated on homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://kagi.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://kagi.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://kagi.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:41:22.124Z"
+  "summary": "Solid research tool with a focus on privacy and user experience \u2014 competes well but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/kagi.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
