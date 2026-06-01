@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "notion-ai",
   "name": "Notion AI",
-  "category": "Research",
+  "agent_url": "https://www.notion.so/product/ai",
+  "category": "AI Agent",
+  "run_id": "run-notion-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Notion AI",
-  "review_url": "https://hlido.eu/reviews/notion-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-notion-ai-mongswhh",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Notion AI shows potential but struggles with clarity and integration \u2014 fading in a competitive landscape.",
+    "body": "Notion AI is positioned as an AI assistant within the Notion ecosystem, aimed at enhancing productivity through intelligent suggestions and content generation. However, it currently lacks robust differentiation from other AI tools in the market. The integration within Notion is a double-edged sword; while it allows seamless use for existing Notion users, it may alienate potential users outside the Notion environment. The product's fading status is attributed to unclear marketing messaging, limited visibility of its unique features, and a lack of substantial updates that would reinvigorate interest. For users already invested in Notion, it may still offer value, but for new users, the offering is less compelling compared to standalone AI solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) because the product lacks clear differentiation and updates that would attract new users. It remains useful for existing Notion users but fails to capture broader interest. A more compelling value proposition or significant feature updates could change this tier.",
+  "what_it_does_well": [
+    "Integrates seamlessly within the Notion workspace for existing users",
+    "Offers basic AI-driven content generation and suggestions",
+    "Maintains a user-friendly interface consistent with Notion's design ethos"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear differentiation from other AI tools in the market",
+    "Limited visibility of unique features compared to competitors",
+    "No significant updates or enhancements recently to attract new users"
+  ],
+  "best_for": [
+    "Existing Notion users looking for basic AI assistance",
+    "Teams already using Notion who want to enhance their productivity",
+    "Users seeking a simple AI tool within an established workspace"
+  ],
+  "not_recommended_for": [
+    "New users looking for standalone AI solutions with broader capabilities",
+    "Users needing advanced AI features or integrations",
+    "Individuals seeking a competitive edge with cutting-edge AI tools"
+  ],
+  "red_flags": [
+    "Unclear marketing messaging regarding the unique value of Notion AI",
+    "Lack of recent updates or feature enhancements to maintain user interest"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Meet your 24/7 AI team\" and \"Infinite minds, built for teamwork. Answer questions, prioritize tasks, and write reports—all while you sleep.\"",
-      "source_surface": "homepage"
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more robust and flexible AI experience with broader applications outside of a single platform. Choose ChatGPT for versatile AI capabilities.",
+      "preferred_for_axis": "versatility"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "copy.ai",
+      "verdict_diff": "Copy.ai specializes in content generation with a clearer focus on marketing and copywriting needs. Notion AI is less specialized and more integrated into a productivity tool.",
+      "preferred_for_axis": "specialization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Notion AI operates within the Notion platform and does not expose programmatic interfaces for external agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We have contractual agreements with our AI subprocessors that prohibit the use of customer data to train their models.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.notion.com/product/ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:09:12.891Z"
+  "summary": "Notion AI shows potential but struggles with clarity and integration \u2014 fading in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/notion-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
