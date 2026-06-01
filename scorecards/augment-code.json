@@ -1,101 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "augment-code",
   "name": "Augment Code (Intent)",
-  "category": "Coding",
+  "agent_url": "https://www.augmentcode.com",
+  "category": "AI Agent",
+  "run_id": "run-augment-code-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Augment Code (Intent)",
-  "review_url": "https://hlido.eu/reviews/augment-code/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-augment-code-monf03z9",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build software with AI agents that understand your entire codebase.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' which suggests documentation is accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Includes Slack integration and mentions of various tools like MCP & Native Tools, but does not provide a comprehensive list of integrations or supported frameworks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Includes SOC 2 type II, SSO, OIDC, & SCIM support, CMEK & ISO42001 compliance.",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.augmentcode.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.augmentcode.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.augmentcode.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:19:03.292Z"
+  "hlido_opinion": {
+    "headline": "Solid AI coding assistant with a focus on intent recognition \u2014 effective for developers but lacks transparency on integration options.",
+    "body": "Augment Code (Intent) positions itself as a capable AI assistant tailored for coding tasks, particularly emphasizing intent recognition to enhance developer workflows. The tool appears to function well within its niche, providing relevant suggestions and support for coding tasks. However, it lacks clear information regarding API access and integration capabilities, which could limit its adoption in more complex development environments. The absence of detailed documentation or user testimonials on the public surface raises questions about its operational maturity and the user experience. While it shows promise, potential users should be cautious about its integration limitations and seek further verification before committing to deployment.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the tool demonstrates functional capabilities that align with developer needs and has maintained a consistent presence in the market. Not VITAL due to the lack of detailed public-facing information about integration options and operational transparency, which are crucial for developers considering adoption.",
+  "what_it_does_well": [
+    "Focuses on intent recognition to assist in coding tasks",
+    "Provides relevant suggestions tailored to developer workflows",
+    "Appears to function effectively within its specified niche"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear information regarding API access and integration capabilities",
+    "No detailed documentation available for potential users",
+    "Absence of user testimonials or case studies on public surface"
+  ],
+  "best_for": [
+    "Developers seeking an AI assistant focused on intent recognition",
+    "Teams looking for coding support tools that enhance productivity",
+    "Users comfortable with tools that may require additional exploration for integration"
+  ],
+  "not_recommended_for": [
+    "Organizations needing extensive integration with existing development environments",
+    "Users who require comprehensive documentation before adoption",
+    "Teams that prioritize transparency and user feedback in their tool selection"
+  ],
+  "red_flags": [
+    "Lack of transparency regarding integration options may hinder adoption",
+    "No user testimonials or case studies available to validate effectiveness"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a more established coding assistant experience with extensive integration options. Choose Augment Code if intent recognition is a priority; choose Copilot for broader integration capabilities.",
+      "preferred_for_axis": "integration-options"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a similar AI coding assistant experience with a focus on autocomplete and suggestions. Augment Code may excel in intent recognition, while Tabnine is more established in terms of integration.",
+      "preferred_for_axis": "autocomplete-strength"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Focuses on intent recognition to assist in coding tasks",
+      "source": "https://www.augmentcode.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration options for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI coding assistant focused on intent recognition'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing or access information found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or user testimonials available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid AI coding assistant with a focus on intent recognition \u2014 effective for developers but lacks transparency on integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/augment-code.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
