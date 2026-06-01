@@ -1,100 +1,96 @@
 {
+  "schema_version": "2.0",
   "slug": "clipboard-health-ai-rules",
   "name": "@clipboard-health/ai-rules",
+  "agent_url": "/reviews/clipboard-health-ai-rules/",
   "category": "Coding",
+  "run_id": "run-clipboard-health-ai-rules-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of clipboard-health-ai-rules.",
-  "review_url": "https://hlido.eu/reviews/clipboard-health-ai-rules/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-clipboard-health-ai-rules-mp10g0ex",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic AI rules engine for coding \u2014 functional but lacks depth and clear differentiation.",
+    "body": "The @clipboard-health/ai-rules tool serves as a basic AI rules engine for coding tasks, offering a straightforward approach to rule generation. However, it struggles with depth and lacks a clear competitive edge against more established alternatives. While it may serve users looking for simple rule-based automation, the absence of advanced features or integration capabilities limits its appeal. Users seeking robust coding tools with extensive libraries or advanced AI capabilities might find better options elsewhere. The current offering feels more like a foundational layer than a comprehensive solution, which may not meet the needs of more demanding users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to basic functionality that meets minimal needs, but lacks advanced features or clear differentiation from competitors. It remains relevant but does not stand out in a crowded market. A shift towards more robust features or integrations could elevate its tier.",
+  "what_it_does_well": [
+    "Provides a straightforward interface for generating coding rules",
+    "Functional for basic rule-based automation tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks depth in features and capabilities compared to competitors",
+    "No clear differentiation or unique selling proposition",
+    "Limited integration options with other coding tools"
+  ],
+  "best_for": [
+    "Users needing basic rule generation for simple coding tasks",
+    "Individuals or small teams looking for a straightforward automation tool"
+  ],
+  "not_recommended_for": [
+    "Advanced developers seeking powerful coding tools with extensive libraries",
+    "Users needing deep integration with existing coding environments"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more comprehensive automation platform with extensive app integrations and advanced features. Choose @clipboard-health/ai-rules for simple rule generation without the complexity.",
+      "preferred_for_axis": "simplicity"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT provides a user-friendly interface for automation with a broader range of integrations. @clipboard-health/ai-rules is more focused but lacks the versatility.",
+      "preferred_for_axis": "integration breadth"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the tool does not currently support integration with agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/ClipboardHealth/core-utils#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:40:34.175Z"
+  "summary": "Basic AI rules engine for coding \u2014 functional but lacks depth and clear differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/clipboard-health-ai-rules.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
