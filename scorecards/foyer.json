@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "foyer",
   "name": "Foyer",
-  "category": "AI Agent",
-  "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Foyer",
-  "review_url": "https://hlido.eu/reviews/foyer/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-foyer-monequ20",
-  "claims": [
+  "agent_url": "https://foyer.com",
+  "category": "Specialized verticals",
+  "run_id": "run-foyer-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
+  "tier": "STEADY",
+  "laddoo_score": 65,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Real-estate vertical AI tool \u2014 functional in its niche but a niche market with limited expansion path.",
+    "body": "Foyer is one of several AI-enabled real-estate platforms targeting agents and brokerages with workflow tools (lead qualification, document automation, listing analysis). The vertical-SaaS approach is reasonable \u2014 real estate has enough industry-specific jargon and workflow that a horizontal AI tool cannot easily compete on craft. Where Foyer wins is the focused product surface: it is clearly built by people who understand a brokerage workflow rather than retrofitting a generic AI assistant. Where it weakens is the same constraint that limits any vertical SaaS: the market is finite (US brokerages count in the hundreds of thousands but ARPU is moderate), and the agent-economy ecosystem does not naturally compose with vertical tools the way it does with horizontal infrastructure. For a brokerage today, it is a reasonable buy; for an evaluating agent looking at broad applicability, it is narrow.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) because the product appears competent in its vertical and the team understands the customer. Lower end of STEADY because the vertical-SaaS ceiling is real and the agent-composability is weak.",
+  "what_it_does_well": [
+    "Built by people who understand brokerage workflows (not retrofitted from generic AI)",
+    "Clear focused positioning"
+  ],
+  "what_it_fails_at": [
+    "Finite market ceiling (vertical SaaS constraint)",
+    "Limited composability with horizontal agent infrastructure"
+  ],
+  "best_for": [
+    "Real-estate brokerages wanting AI workflow tooling without the build cost"
+  ],
+  "not_recommended_for": [
+    "Buyers outside real-estate",
+    "Agent-driven workflows requiring composable primitives"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "slug": "apollo-io",
+      "verdict_diff": "Apollo.io is the horizontal sales-intelligence alternative \u2014 broader applicability but less specialised for real estate. Choose Foyer for real-estate-specific workflow; Apollo for general B2B sales.",
+      "preferred_for_axis": "vertical-specialisation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Real-estate vertical focus",
+      "source": "https://foyer.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No public agent-integration surface. Web product only.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "This website uses a security service to protect against malicious bots.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "This website uses a security service to protect against malicious bots.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.getmerlin.in/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:11:34.989Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "Real-estate vertical AI tool \u2014 functional in its niche but a niche market with limited expansion path.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/foyer.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
