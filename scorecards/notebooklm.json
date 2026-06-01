@@ -1,102 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "notebooklm",
   "name": "NotebookLM",
+  "agent_url": "https://notebooklm.google",
   "category": "Research",
+  "run_id": "run-notebooklm-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of NotebookLM",
-  "review_url": "https://hlido.eu/reviews/notebooklm/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-notebooklm-moo19g1v",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Emerging research tool with unclear utility \u2014 lacks clear differentiation in a competitive space.",
+    "body": "NotebookLM is positioned as a research assistant, but it struggles to establish a strong identity in a crowded market. The tool appears to be in its early stages, lacking comprehensive functionality or clear use cases that would set it apart from established competitors. While it may serve niche needs, its fading score indicates a lack of traction or user engagement. Users seeking robust research tools might find better value in alternatives that offer more mature features and clearer benefits. Without significant enhancements or clearer positioning, NotebookLM risks being overlooked in favor of more established solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to unclear utility and lack of differentiation in a competitive landscape. The product needs to evolve significantly to regain user interest and relevance.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear use cases or functionalities that distinguish it from competitors",
+    "No verified claims or user testimonials to support its effectiveness",
+    "Uncertain authentication requirements may hinder user onboarding",
+    "Limited visibility into ongoing development or updates"
+  ],
+  "best_for": [
+    "Early adopters interested in experimenting with new research tools",
+    "Users seeking a simple interface for basic research tasks"
+  ],
+  "not_recommended_for": [
+    "Researchers needing robust and reliable tools with proven capabilities",
+    "Users looking for comprehensive support and documentation"
+  ],
+  "red_flags": [
+    "No verified claims or testimonials, raising concerns about reliability",
+    "Unclear roadmap or future development plans"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your research and thinking partner, grounded in the information you trust, built with the latest Gemini models.",
-      "source_surface": "homepage"
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley offers a more established platform with robust features for managing and sharing research papers. Choose NotebookLM only if looking for something experimental.",
+      "preferred_for_axis": "feature maturity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the pricing page is labeled 'Plans' and is accessible directly from the homepage.",
-      "source_surface": "homepage"
+      "slug": "zotero",
+      "verdict_diff": "Zotero provides comprehensive tools for citation management and research organization. NotebookLM lacks the depth and user engagement found in Zotero.",
+      "preferred_for_axis": "research management"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "slug": "endnote",
+      "verdict_diff": "EndNote is a well-established reference management tool with extensive features. NotebookLM is still developing its core offerings and lacks comparable functionality.",
+      "preferred_for_axis": "reference management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 NotebookLM does not currently offer any programmatic interfaces for integration.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We value your privacy and never use your organization's data to train NotebookLM.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://notebooklm.google/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://notebooklm.google/plans",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:41:57.842Z"
+  "summary": "Emerging research tool with unclear utility \u2014 lacks clear differentiation in a competitive space.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/notebooklm.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
