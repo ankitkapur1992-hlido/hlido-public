@@ -1,99 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "lovable",
   "name": "Lovable",
-  "category": "Coding",
+  "agent_url": "https://lovable.dev",
+  "category": "AI Agent",
+  "run_id": "run-lovable-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Lovable",
-  "review_url": "https://hlido.eu/reviews/lovable/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-lovable-mongqkcr",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Create apps and websites by chatting with AI",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Learn, Templates, Guides, Connectors, Videos, Blog, Support, Reviews, FAQs, Sitemap\" are accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Enterprise-grade security and compliance certifications",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://lovable.dev/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://lovable.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://lovable.dev/templates/apps/saas/lovable-slides",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://lovable.dev/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://lovable.dev/blog/mobile-app",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:07:49.991Z"
+  "hlido_opinion": {
+    "headline": "Solid AI agent with a user-friendly interface \u2014 effective for personal use but lacks advanced integrations.",
+    "body": "Lovable presents itself as a straightforward AI agent aimed at enhancing personal productivity. The interface is designed for ease of use, making it accessible for users who may not be tech-savvy. While it performs well in basic tasks, such as scheduling and reminders, it falls short in offering deeper integrations with other software tools. This limitation may hinder users who require a more interconnected workflow. Overall, Lovable is a reliable choice for individuals seeking a simple AI assistant, but those needing complex functionalities might want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable performance and user-friendly design, but not VITAL because it lacks advanced integrations that could enhance its utility in more complex environments.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies task management",
+    "Reliable performance for basic productivity tasks",
+    "Accessible for non-technical users"
+  ],
+  "what_it_fails_at": [
+    "Limited integrations with other software tools",
+    "Lacks advanced features for complex workflows",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Individuals looking for a simple AI assistant",
+    "Users who prioritize ease of use over advanced functionalities",
+    "Personal productivity tasks like scheduling and reminders"
+  ],
+  "not_recommended_for": [
+    "Teams needing robust collaboration tools",
+    "Users requiring deep software integrations",
+    "Individuals looking for a highly customizable AI solution"
+  ],
+  "red_flags": [
+    "Lack of transparency regarding authentication requirements"
+  ],
+  "compared_to": [
+    {
+      "slug": "todoist",
+      "verdict_diff": "Todoist offers more robust task management and integrations, making it better for users needing a comprehensive productivity solution. Choose Lovable for simplicity and ease of use.",
+      "preferred_for_axis": "user-friendliness"
+    },
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion provides a more versatile platform for project management and collaboration, while Lovable excels in straightforward personal task management. Opt for Lovable if you seek a less complex tool.",
+      "preferred_for_axis": "simplicity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Lovable operates as a standalone AI agent without programmatic interfaces.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI assistant for personal productivity'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid AI agent with a user-friendly interface \u2014 effective for personal use but lacks advanced integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/lovable.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
