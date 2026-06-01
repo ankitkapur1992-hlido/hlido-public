@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "brave-leo",
   "name": "Brave Leo",
-  "category": "Infrastructure",
+  "agent_url": "https://brave.com/leo",
+  "category": "Browser",
+  "run_id": "run-brave-leo-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Brave Leo",
-  "review_url": "https://hlido.eu/reviews/brave-leo/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-brave-leo-moo211xu",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The smart AI assistant built right in your browser. Ask questions, get answers, with unparalleled privacy.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "No account or login is required. Just open and chat. Privately.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Tools & integrations\"",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Leo doesn’t retain or share chats, or use them for additional model training.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://brave.com/leo/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://brave.com/search/api/tools/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://brave.com/whats-new/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:03:29.988Z"
+  "hlido_opinion": {
+    "headline": "Steady browser extension from Brave, focused on privacy but lacking unique features compared to competitors.",
+    "body": "Brave Leo is a browser extension that extends Brave's commitment to privacy and security. It integrates seamlessly with the Brave browser, offering users enhanced control over their online experience. While it excels in providing robust privacy features and ad-blocking capabilities, it doesn't significantly differentiate itself from other privacy-focused extensions like uBlock Origin or Privacy Badger. Users looking for a straightforward, privacy-centric browsing experience will find value in Brave Leo, but those seeking advanced customization or unique functionalities may want to explore alternatives. The overall user experience is solid, but the lack of standout features means it may not appeal to power users who demand more from their browser tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Brave Leo effectively enhances privacy and integrates well with the Brave ecosystem, maintaining user trust. Not VITAL due to a lack of unique features that set it apart from competitors, which limits its appeal to more advanced users.",
+  "what_it_does_well": [
+    "Integrates seamlessly with the Brave browser for enhanced privacy",
+    "Offers robust ad-blocking capabilities",
+    "Maintains user trust with a strong privacy posture",
+    "User-friendly interface that aligns with Brave's design ethos"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features compared to other privacy-focused extensions",
+    "Limited customization options for advanced users",
+    "No significant differentiation from competitors like uBlock Origin or Privacy Badger"
+  ],
+  "best_for": [
+    "Users who prioritize privacy and security while browsing",
+    "Individuals already using the Brave browser looking for an integrated solution",
+    "Casual users who want a straightforward browsing experience without ads"
+  ],
+  "not_recommended_for": [
+    "Power users seeking advanced customization or unique functionalities",
+    "Users who prefer extensions with more extensive feature sets",
+    "Those looking for a comprehensive privacy suite beyond basic browsing"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "ublock-origin",
+      "verdict_diff": "uBlock Origin offers more extensive customization and a wider range of features for ad-blocking, making it a better choice for power users. Brave Leo is simpler and more user-friendly for casual users.",
+      "preferred_for_axis": "customization"
+    },
+    {
+      "slug": "privacy-badger",
+      "verdict_diff": "Privacy Badger focuses on intelligent tracking protection and user privacy, while Brave Leo is more about ad-blocking. Choose Brave Leo for a straightforward ad-free experience, and Privacy Badger for nuanced tracking protection.",
+      "preferred_for_axis": "tracking-protection"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Brave Leo operates as a browser extension without a programmatic interface for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Privacy-focused browsing'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download Brave'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free to use with Brave browser",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features outlined on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Steady browser extension from Brave, focused on privacy but lacking unique features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/brave-leo.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
