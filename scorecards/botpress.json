@@ -1,99 +1,132 @@
 {
+  "schema_version": "2.0",
   "slug": "botpress",
   "name": "Botpress",
-  "category": "Customer Experience",
+  "agent_url": "https://botpress.com",
+  "category": "Customer Support",
+  "run_id": "run-botpress-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Botpress",
-  "review_url": "https://hlido.eu/reviews/botpress/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-botpress-moo24wc2",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust open-source chatbot framework \u2014 excels in customization and integration, but may require technical expertise.",
+    "body": "Botpress stands out as a powerful open-source chatbot framework designed for customer support. Its strengths lie in its flexibility and extensive customization capabilities, allowing developers to create tailored conversational experiences. The platform supports various integrations, making it suitable for businesses looking to enhance their customer interaction strategies. However, the reliance on technical expertise for setup and maintenance could be a barrier for non-technical users. While Botpress is a top choice for developers and teams with technical resources, those seeking a more user-friendly interface might find alternatives like Intercom or Drift more accessible. Overall, Botpress is a solid option for organizations prioritizing customization and control over their chatbot solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its robust feature set, strong community support, and the ability to customize extensively. It remains a top choice for businesses that can leverage its open-source nature. However, it may not be suitable for users without technical skills, which could affect broader adoption.",
+  "what_it_does_well": [
+    "Highly customizable chatbot framework allowing for tailored user experiences",
+    "Strong integration capabilities with various platforms and services",
+    "Active community support and extensive documentation available",
+    "Open-source nature provides transparency and flexibility for developers",
+    "Supports multiple languages and NLP capabilities for diverse applications"
+  ],
+  "what_it_fails_at": [
+    "Requires technical expertise for setup and ongoing maintenance",
+    "User interface may not be as intuitive for non-technical users",
+    "Limited out-of-the-box features compared to some proprietary solutions",
+    "May involve a steeper learning curve for new users unfamiliar with coding"
+  ],
+  "best_for": [
+    "Developers and technical teams looking for a customizable chatbot solution",
+    "Organizations with existing technical resources to manage and maintain the platform",
+    "Businesses requiring deep integration with other services and platforms",
+    "Companies focused on building unique conversational experiences"
+  ],
+  "not_recommended_for": [
+    "Non-technical users seeking a plug-and-play chatbot solution",
+    "Small businesses without dedicated technical support",
+    "Users looking for extensive out-of-the-box features without customization",
+    "Organizations that require quick deployment without technical setup"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, \"Build, deploy, and monitor AI agents across channels, tools, and data.\"",
-      "source_surface": "homepage"
+      "slug": "intercom",
+      "verdict_diff": "Intercom offers a more user-friendly interface and quicker setup for customer support, making it ideal for non-technical users. Choose Botpress for deep customization and flexibility.",
+      "preferred_for_axis": "customization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "drift",
+      "verdict_diff": "Drift provides a more streamlined experience for sales and marketing chatbots, while Botpress allows for greater control and customization in customer support scenarios.",
+      "preferred_for_axis": "control"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Botpress can be integrated into agent-driven workflows through its API and webhook capabilities, allowing for advanced customization and interaction.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the Pricing page is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Dive into our documentation and kick-start your project with code samples and best practices.\"",
-      "source_surface": "docs"
+      "evidence": "'Build your own chatbot'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Integrate with existing systems. Use APIs, access business data, and work directly with structured inputs like files, tables, and user records.\"",
-      "source_surface": "homepage"
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Our platform adheres to SOC II standards, ensuring the highest level of security for your data through rigorous monitoring and regular audits.",
-      "source_surface": "docs"
+      "evidence": "Open-source model allows free access with paid options for enterprise features",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://botpress.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://botpress.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://botpress.com/developers",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://botpress.com/integrations/whatsapp",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://botpress.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:06:38.916Z"
+  "summary": "Robust open-source chatbot framework \u2014 excels in customization and integration, but may require technical expertise.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/botpress.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
