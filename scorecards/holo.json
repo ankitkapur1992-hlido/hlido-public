@@ -1,101 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "holo",
   "name": "Holo",
+  "agent_url": "/reviews/holo/",
   "category": "Marketing & Content",
-  "score": null,
-  "tier": "UNSCORED",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Correct domain verified, login completed, then the app failed at a no-team or no-subscription entitlement gate.",
-  "review_url": "https://hlido.eu/reviews/holo/",
-  "reviewed_at": "2026-03-29",
-  "run_id": "run-holo-mp0w2ek8",
-  "claims": [
+  "run_id": "run-holo-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 50,
+  "tier": "FADING",
+  "laddoo_score": 50,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Struggling marketing tool with unclear value proposition \u2014 lacks differentiation in a crowded space.",
+    "body": "Holo appears to be a marketing and content tool, but its current positioning and functionality are unclear. The lack of verifiable claims and a transparent value proposition raises concerns about its viability. In a market saturated with established players, Holo needs to significantly enhance its offerings or clarify its unique selling points to regain traction. As it stands, the absence of user testimonials or case studies further diminishes confidence in its effectiveness. Without a clear path for improvement, Holo remains a fading option for potential users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) due to a lack of clarity in its value proposition and absence of verifiable claims. Improvement could come from clearer communication of features and user benefits.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Unclear value proposition with no distinct features highlighted",
+    "No user testimonials or case studies available",
+    "Lack of verifiable claims undermines trust",
+    "No clear differentiation from competitors in the marketing space"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable marketing tools with proven effectiveness",
+    "Organizations needing clear ROI from their marketing investments",
+    "Content creators looking for robust support and features"
+  ],
+  "red_flags": [
+    "Absence of user feedback or case studies raises concerns about effectiveness",
+    "Lack of transparency regarding features and benefits"
+  ],
+  "compared_to": [
+    {
+      "slug": "hubspot",
+      "verdict_diff": "HubSpot offers a comprehensive suite of marketing tools with proven effectiveness and extensive resources. Holo lacks the same level of clarity and support.",
+      "preferred_for_axis": "comprehensive marketing solutions"
+    },
+    {
+      "slug": "buffer",
+      "verdict_diff": "Buffer provides clear social media management tools with a transparent value proposition. Holo does not currently offer comparable clarity.",
+      "preferred_for_axis": "social media management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Holo lacks clear integration points for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Holo – Trust your body to care for what matters.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Trust your body to care for what matters.\"",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible call-to-action link labeled 'Start testing'.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links such as 'Plans' and 'Start testing' which indicate accessible pricing and getting started options.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or user evidence available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://tryholo.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://tryholo.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://tryholo.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:37:43.786Z"
+  "summary": "Struggling marketing tool with unclear value proposition \u2014 lacks differentiation in a crowded space.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/holo.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
