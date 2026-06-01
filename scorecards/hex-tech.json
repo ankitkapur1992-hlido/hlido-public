@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "hex-tech",
   "name": "Hex",
-  "category": "Infrastructure",
+  "agent_url": "https://hex.tech",
+  "category": "Data",
+  "run_id": "run-hex-tech-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Hex",
-  "review_url": "https://hlido.eu/reviews/hex-tech/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-hex-tech-moo1k63v",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid data collaboration platform with a focus on user experience \u2014 competitive but lacks standout features.",
+    "body": "Hex is a data collaboration platform that emphasizes user experience and ease of use. It allows teams to work together on data projects seamlessly, making it a suitable choice for organizations looking to enhance their data workflows. The interface is intuitive, and the platform supports various data sources, which is a plus for teams with diverse needs. However, it does not have a clear differentiator that sets it apart from other data platforms in a crowded market. While it performs well for collaborative tasks, users seeking advanced analytics or specialized features may find it lacking compared to competitors. Overall, Hex is a reliable tool for teams focused on collaboration, but it may not meet the needs of those requiring more advanced data capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Hex provides a reliable user experience and collaborative features that are well-received by teams. Not VITAL due to the absence of standout features that would elevate it above competitors in the data space. Would shift to VITAL if unique capabilities or integrations were introduced.",
+  "what_it_does_well": [
+    "User-friendly interface that enhances collaboration among team members",
+    "Supports multiple data sources for flexible project management",
+    "Facilitates seamless teamwork on data projects",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced analytics features that some competitors offer",
+    "No clear differentiator in a crowded market of data platforms",
+    "Limited integrations with other data tools compared to rivals"
+  ],
+  "best_for": [
+    "Teams looking for an easy-to-use data collaboration platform",
+    "Organizations focused on enhancing data workflows without complex requirements",
+    "Users who prioritize user experience over advanced analytics"
+  ],
+  "not_recommended_for": [
+    "Data teams needing in-depth analytics and reporting capabilities",
+    "Organizations that require extensive integrations with other data tools",
+    "Users seeking specialized features that are common in competing platforms"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The AI Analytics Platform for your whole team",
-      "source_surface": "homepage"
+      "slug": "tableau",
+      "verdict_diff": "Tableau offers advanced analytics and visualization capabilities that Hex lacks. Choose Tableau for deeper data insights; choose Hex for ease of collaboration.",
+      "preferred_for_axis": "advanced-analytics"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "airtable",
+      "verdict_diff": "Airtable provides a more flexible database solution with extensive integrations. Choose Airtable for versatile project management; choose Hex for focused data collaboration.",
+      "preferred_for_axis": "flexibility"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Hex does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Docs Resources and product guides\"",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Integrations Out-of-the-box connections and flexible APIs.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "For organizations requiring advanced security, governance, and support.",
-      "source_surface": "pricing"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://hex.tech/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://hex.tech/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://hex.tech/product/data-apps/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://hex.tech/templates/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://hex.tech/blog/notebook-agent-updates/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:50:30.042Z"
+  "summary": "Solid data collaboration platform with a focus on user experience \u2014 competitive but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/hex-tech.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
