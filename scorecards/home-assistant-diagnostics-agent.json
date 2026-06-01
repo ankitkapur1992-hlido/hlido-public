@@ -1,103 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "home-assistant-diagnostics-agent",
   "name": "Home-Assistant-Diagnostics-Agent",
+  "agent_url": "/reviews/home-assistant-diagnostics-agent/",
   "category": "AI Agent",
+  "run_id": "run-home-assistant-diagnostics-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of home-assistant-diagnostics-agent.",
-  "review_url": "https://hlido.eu/reviews/home-assistant-diagnostics-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-home-assistant-diagnostics-agent-mp11tjtl",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional diagnostics tool for Home Assistant \u2014 solid for troubleshooting but lacks advanced features and integration options.",
+    "body": "The Home-Assistant-Diagnostics-Agent serves as a basic diagnostics tool for users of Home Assistant, facilitating troubleshooting and system checks. Its core functionality is straightforward, allowing users to identify issues within their Home Assistant setups. However, it does not offer advanced features or extensive integration capabilities that could enhance its utility in more complex environments. The lack of clarity around authentication requirements and unverified claims may hinder user confidence. While it fulfills its primary role, users seeking a more robust diagnostic solution may find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functional utility in basic diagnostics for Home Assistant users. Not VITAL because it lacks advanced features and integration options that would make it indispensable for power users. Would shift to FADING if user engagement or updates stagnate significantly.",
+  "what_it_does_well": [
+    "Provides basic diagnostics for Home Assistant setups",
+    "Helps users identify common issues within their configurations",
+    "User-friendly interface for troubleshooting"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features for in-depth diagnostics",
+    "Limited integration options with other tools or platforms",
+    "Unclear authentication requirements may deter potential users"
+  ],
+  "best_for": [
+    "Home Assistant users needing basic troubleshooting tools",
+    "Users who prefer straightforward diagnostics without complexity",
+    "Individuals new to Home Assistant looking for initial support"
+  ],
+  "not_recommended_for": [
+    "Power users requiring advanced diagnostic capabilities",
+    "Users needing extensive integration with other home automation tools",
+    "Those looking for a comprehensive monitoring solution"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may create barriers for new users",
+    "Lack of verified claims raises concerns about reliability"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Home Assistant Diagnostics Agent - a Hugging Face Space by MCP-1st-Birthday\"",
-      "source_surface": "homepage"
+      "slug": "home-assistant-advanced-diagnostics",
+      "verdict_diff": "Home Assistant Advanced Diagnostics offers deeper insights and integration capabilities, making it a better choice for complex setups. Choose it for comprehensive diagnostics over the basic functionality of Home-Assistant-Diagnostics-Agent.",
+      "preferred_for_axis": "advanced-features"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The text states, 'This Space is sleeping due to inactivity,' which does not articulate a primary value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "slug": "home-assistant-monitoring-tool",
+      "verdict_diff": "Home Assistant Monitoring Tool provides real-time monitoring and alerts, which can be more beneficial for proactive users. Opt for it if ongoing system health is a priority.",
+      "preferred_for_axis": "real-time-monitoring"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the tool operates independently with no programmatic interface for integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/MCP-1st-Birthday/Home-Assistant-Diagnostics-Agent",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:18:38.500Z"
+  "summary": "Functional diagnostics tool for Home Assistant \u2014 solid for troubleshooting but lacks advanced features and integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/home-assistant-diagnostics-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
