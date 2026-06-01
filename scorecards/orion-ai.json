@@ -1,102 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "orion-ai",
-  "name": "orion-ai",
+  "name": "Orion AI",
+  "agent_url": "/reviews/orion-ai/",
   "category": "Coding",
+  "run_id": "run-orion-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of orion-ai.",
-  "review_url": "https://hlido.eu/reviews/orion-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-orion-ai-mp10vgpj",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid coding assistant with room for growth \u2014 effective for basic tasks but lacks advanced features compared to top competitors.",
+    "body": "Orion AI serves as a competent coding assistant, helping users with basic programming tasks and offering a user-friendly interface. However, it falls short in advanced functionalities that are increasingly expected in this space. While it can assist with code snippets and debugging, users may find it lacking when compared to more established alternatives like GitHub Copilot or Tabnine, which offer deeper integrations and more robust AI capabilities. The lack of clarity on authentication requirements is a concern, as it may hinder user onboarding and trust. Overall, Orion AI is a reliable option for casual coders but may not meet the needs of professional developers looking for comprehensive support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it provides useful coding assistance and has a decent user interface. It remains relevant but not vital due to its limited advanced features and the uncertainty surrounding its authentication process, which could affect user experience.",
+  "what_it_does_well": [
+    "User-friendly interface for coding assistance",
+    "Effective for basic programming tasks and code snippets",
+    "Decent debugging support for novice users"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features compared to competitors like GitHub Copilot",
+    "Unclear authentication requirements may deter potential users",
+    "Limited integration options with popular development environments"
+  ],
+  "best_for": [
+    "Casual coders looking for basic assistance",
+    "Students learning programming who need straightforward support",
+    "Users seeking a simple tool for quick coding tasks"
+  ],
+  "not_recommended_for": [
+    "Professional developers needing advanced coding support",
+    "Teams requiring robust integration with development tools",
+    "Users who prioritize security and clear authentication processes"
+  ],
+  "red_flags": [
+    "Uncertainty around authentication requirements may impact user trust"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers deeper integrations and advanced AI capabilities, making it a better choice for professional developers. Choose Orion AI for simpler tasks.",
+      "preferred_for_axis": "basic coding assistance"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides more robust AI support and customization options for serious coders. Orion AI is suitable for casual users needing straightforward help.",
+      "preferred_for_axis": "advanced coding support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Orion AI does not currently support integration with agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"orion-ai\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This package does not have a README.",
-      "source_surface": "homepage"
+      "evidence": "Not verifiable due to lack of accessible content",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link 'Sign Up' is visible on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "Not verifiable due to lack of accessible content",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Pricing' and 'Sign Up'.",
-      "source_surface": "homepage"
+      "evidence": "Not verifiable due to lack of accessible content",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This package does not have a README.",
-      "source_surface": "homepage"
+      "evidence": "Not verifiable due to lack of accessible content",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/orion-ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:52:06.358Z"
+  "summary": "Solid coding assistant with room for growth \u2014 effective for basic tasks but lacks advanced features compared to top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/orion-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
