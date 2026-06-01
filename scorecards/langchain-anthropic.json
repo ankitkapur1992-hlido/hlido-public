@@ -1,99 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-anthropic",
   "name": "@langchain/anthropic",
+  "agent_url": "/reviews/langchain-anthropic/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-anthropic-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-anthropic.",
-  "review_url": "https://hlido.eu/reviews/langchain-anthropic/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-anthropic-mp113x6a",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional but underwhelming framework for Anthropic integration \u2014 lacks depth and broader context.",
+    "body": "The @langchain/anthropic framework provides a basic integration for Anthropic's models but falls short in terms of comprehensive documentation and community support. While it serves its purpose for developers looking to connect with Anthropic's offerings, it lacks the depth and richness found in more established frameworks. The absence of robust examples and detailed use cases makes it challenging for new users to fully leverage its capabilities. As a result, it may not be the first choice for those looking for a well-rounded solution in the increasingly competitive landscape of AI frameworks. Users seeking a more feature-rich experience might consider alternatives like LangChain's core offerings or other frameworks that provide better documentation and community engagement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functionality in connecting with Anthropic's models, but it lacks the depth and community engagement that would elevate it to a higher tier. Improvement in documentation and support could shift it to VITAL.",
+  "what_it_does_well": [
+    "Provides basic integration with Anthropic's models",
+    "Functional for developers familiar with LangChain",
+    "Can serve as a starting point for simple projects"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and detailed examples",
+    "Limited community support and engagement",
+    "Not competitive against more established frameworks"
+  ],
+  "best_for": [
+    "Developers already familiar with LangChain looking to integrate Anthropic",
+    "Small projects that require basic functionality without extensive support",
+    "Users who can navigate the limitations of the framework"
+  ],
+  "not_recommended_for": [
+    "New users seeking extensive documentation and community support",
+    "Complex projects requiring a robust framework",
+    "Developers looking for a feature-rich alternative"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "langchain-core",
+      "verdict_diff": "LangChain's core offerings provide a more comprehensive framework with better documentation and community support. Choose LangChain if you need a more robust solution.",
+      "preferred_for_axis": "comprehensive support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" and \"Sign up\" links are present on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face Transformers offers a wider range of models and extensive community resources. Opt for it if you're looking for a well-supported framework.",
+      "preferred_for_axis": "model variety and community"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework is primarily for developers integrating Anthropic models without a dedicated API or programmatic interface.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/providers/langchain-anthropic/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs/blob/main/libs/providers/langchain-anthropic/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:58:59.685Z"
+  "summary": "Functional but underwhelming framework for Anthropic integration \u2014 lacks depth and broader context.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-anthropic.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
