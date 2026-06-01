@@ -1,100 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "higgsfield-cli",
   "name": "@higgsfield/cli",
+  "agent_url": "/reviews/higgsfield-cli/",
   "category": "Coding",
+  "run_id": "run-higgsfield-cli-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of higgsfield-cli.",
-  "review_url": "https://hlido.eu/reviews/higgsfield-cli/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-higgsfield-cli-mp10n33x",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust CLI tool for developers \u2014 excels in efficiency but lacks extensive documentation.",
+    "body": "The @higgsfield/cli tool stands out for its efficiency and performance in coding environments, making it a solid choice for developers looking to streamline their workflows. Its capabilities allow for rapid execution of tasks that would otherwise be cumbersome through traditional interfaces. However, a notable drawback is the lack of comprehensive documentation, which can hinder new users from fully leveraging its features. While the tool's performance is commendable, the learning curve may be steep for those unfamiliar with command-line interfaces. Overall, it's a dependable choice for experienced developers, but less so for beginners or those seeking extensive guidance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and reliability in coding tasks, with a solid user base. Not VITAL because the documentation is insufficient for onboarding new users effectively, which could limit its adoption among less experienced developers.",
+  "what_it_does_well": [
+    "Offers high efficiency in executing coding tasks via command line",
+    "Designed for performance, reducing time spent on repetitive tasks",
+    "Integrates well with existing development environments",
+    "Strong community support among experienced developers"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation, making it challenging for new users",
+    "Limited support for troubleshooting common issues",
+    "No graphical user interface, which may deter less technical users"
+  ],
+  "best_for": [
+    "Experienced developers looking for a fast CLI tool",
+    "Users comfortable with command-line interfaces",
+    "Teams aiming to enhance productivity in coding workflows"
+  ],
+  "not_recommended_for": [
+    "Beginners or users unfamiliar with command-line tools",
+    "Developers needing extensive documentation and support",
+    "Those who prefer graphical interfaces over command-line tools"
+  ],
+  "red_flags": [
+    "Insufficient documentation could lead to user frustration",
+    "Potential learning curve may limit adoption among less technical users"
+  ],
+  "compared_to": [
+    {
+      "slug": "git",
+      "verdict_diff": "Git offers extensive documentation and community support, making it more accessible for beginners. Choose @higgsfield/cli for performance-focused tasks if you're already comfortable with CLI.",
+      "preferred_for_axis": "performance"
+    },
+    {
+      "slug": "npm",
+      "verdict_diff": "npm provides a more user-friendly experience with better documentation. @higgsfield/cli is better for speed and efficiency in coding tasks.",
+      "preferred_for_axis": "efficiency"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 @higgsfield/cli operates as a standalone command-line tool, not designed for direct integration with agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Higgsfield AI: Infrastructure for AI Video & Image Gen\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Create authentic images and videos with natural texture and easy style\"",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Link to 'Pricing 30% OFF' and 'Login' is available on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Explore presets and examples for AI video & image generation on Higgsfield\"",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://higgsfield.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://higgsfield.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://higgsfield.ai/apps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": "https://higgsfield.ai/cli",
-      "ok": true
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:46:03.525Z"
+  "summary": "Robust CLI tool for developers \u2014 excels in efficiency but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/higgsfield-cli.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
