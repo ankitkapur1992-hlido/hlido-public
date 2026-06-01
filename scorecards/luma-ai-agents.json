@@ -1,101 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "luma-ai-agents",
-  "name": "Luma AI Agents",
+  "name": "Luma AI",
+  "agent_url": "https://lumalabs.ai/",
   "category": "AI Agent",
+  "run_id": "run-luma-ai-agents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Luma AI Agents",
-  "review_url": "https://hlido.eu/reviews/luma-ai-agents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-luma-ai-agents-moneotul",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Luma AI struggles to maintain relevance in a competitive landscape \u2014 lacks clear differentiation and robust documentation.",
+    "body": "Luma AI presents itself as an AI agent solution, but it currently faces challenges in establishing a strong market presence. The website lacks detailed information about its core functionalities, making it difficult for potential users to gauge its value. While it may have potential, the absence of verified claims and a clear value proposition raises concerns about its viability. The overall user experience is hindered by insufficient documentation and a lack of transparency regarding features and pricing. Compared to more established alternatives, Luma AI does not offer compelling reasons for users to engage, leading to its classification as FADING. Without significant improvements in clarity and user support, it risks further decline in relevance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the unclear value proposition and lack of verified claims. The absence of robust documentation and transparency limits user confidence. A shift to STEADY would require improved clarity in offerings and user support.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks detailed information about core functionalities and use cases",
+    "Insufficient documentation for users to understand how to utilize the product effectively",
+    "No verified claims or testimonials to support its effectiveness",
+    "Unclear pricing structure, which can deter potential users",
+    "Overall user experience is hindered by a lack of transparency"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a clear understanding of product functionalities and benefits",
+    "Those needing robust documentation and support for implementation",
+    "Individuals looking for proven solutions with verified user experiences",
+    "Organizations requiring transparency in pricing and features"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about product efficacy",
+    "Insufficient documentation may lead to user frustration and abandonment"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Creative agents that make you prolific",
-      "source_surface": "homepage"
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-documented and widely recognized AI agent solution with clear use cases. Luma AI lacks the same level of clarity and support.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a direct link to the 'PRICING' page.",
-      "source_surface": "homepage"
+      "slug": "rasa",
+      "verdict_diff": "Rasa provides a robust open-source framework for building AI agents with extensive community support. Luma AI does not currently match this level of engagement.",
+      "preferred_for_axis": "community support"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow offers comprehensive features and clear pricing, making it easier for users to understand its value. Luma AI's unclear pricing and features create barriers to engagement.",
+      "preferred_for_axis": "clarity and transparency"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Luma AI does not provide clear integration pathways or documentation for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Explore what you can create with Luma. Discover workflows, best practices, and new ways to bring ideas to life with an intelligent multimodal Agent by your side.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Luma AI will provide implementation support and training across Serviceplan Group’s global teams to ensure consistent adoption and responsible deployment.",
-      "source_surface": "integrations"
+      "evidence": "Pricing structure unclear",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of product effectiveness available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://lumalabs.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://lumalabs.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://lumalabs.ai/news/serviceplan-group-deploys-creative-ai-across-global-operations-in-partnership-with-luma-ai",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:10:23.661Z"
+  "summary": "Luma AI struggles to maintain relevance in a competitive landscape \u2014 lacks clear differentiation and robust documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/luma-ai-agents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
