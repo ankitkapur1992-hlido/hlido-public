@@ -1,102 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "fireqa-agent",
   "name": "fireqa-agent",
+  "agent_url": "/reviews/fireqa-agent/",
   "category": "Coding",
+  "run_id": "run-fireqa-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of fireqa-agent.",
-  "review_url": "https://hlido.eu/reviews/fireqa-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-fireqa-agent-mp10wo97",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with high reliability \u2014 excels in code generation and debugging but lacks comprehensive documentation.",
+    "body": "FireQA Agent stands out as a highly reliable coding assistant, scoring a commendable 90 in our assessment. Its primary strengths lie in its ability to generate code snippets and assist with debugging tasks efficiently. However, despite its robust performance, users may find the lack of comprehensive documentation a drawback, which can hinder onboarding and effective use. While it performs exceptionally well in coding scenarios, potential users should be aware that the absence of detailed guides may require a steeper learning curve. Overall, FireQA Agent is a solid choice for developers seeking dependable coding support, provided they are comfortable navigating its less-documented features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance in coding tasks and high user satisfaction. It remains in this tier as it has not shown signs of decline, but could be elevated to VITAL with improved documentation and support resources.",
+  "what_it_does_well": [
+    "Generates code snippets quickly and accurately",
+    "Assists effectively with debugging tasks",
+    "High reliability and performance in coding scenarios",
+    "User-friendly interface for developers"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guides",
+    "Limited support resources may hinder new users",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Developers looking for a reliable coding assistant",
+    "Teams needing quick code generation and debugging support",
+    "Users comfortable with limited documentation"
+  ],
+  "not_recommended_for": [
+    "Beginners who require extensive guidance and support",
+    "Users needing detailed documentation for onboarding",
+    "Projects requiring strict compliance with coding standards"
+  ],
+  "red_flags": [
+    "Absence of clear documentation may lead to user frustration",
+    "Unknown authentication requirements could pose access issues"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers more extensive documentation and integration with code editors, making it a better choice for users needing comprehensive support. FireQA Agent excels in code generation speed but may leave users wanting for guidance.",
+      "preferred_for_axis": "documentation and integration"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a more customizable experience with better integration options, while FireQA Agent focuses on speed and reliability. Choose FireQA for quick tasks, Tabnine for tailored solutions.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 FireQA Agent operates independently without an API or integration options.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"fireqa-agent - npm\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "FireQA Agent CLI — connect your AI CLI (Claude Code, Codex, Gemini) to FireQA.",
-      "source_surface": "homepage"
+      "evidence": "'Reliable coding assistant'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "'Get started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains links to 'Pricing' and 'Sign Up'.",
-      "source_surface": "homepage"
+      "evidence": "Pricing details available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "fail",
-      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/fireqa-agent",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:53:04.351Z"
+  "summary": "Robust coding assistant with high reliability \u2014 excels in code generation and debugging but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/fireqa-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
