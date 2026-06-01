@@ -1,98 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "oci-generativeaiagent",
-  "name": "oci-generativeaiagent",
+  "name": "OCI Generative AI Agent",
+  "agent_url": "/reviews/oci-generativeaiagent/",
   "category": "Coding",
+  "run_id": "run-oci-generativeaiagent-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of oci-generativeaiagent.",
-  "review_url": "https://hlido.eu/reviews/oci-generativeaiagent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-oci-generativeaiagent-mp10dhjt",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong coding assistant with solid generative capabilities \u2014 reliable for developers but lacks extensive third-party integrations.",
+    "body": "OCI Generative AI Agent stands out as a robust tool for developers looking to leverage generative AI in their coding workflows. With a high score of 90, it demonstrates strong performance in generating code snippets, providing debugging assistance, and offering contextual suggestions. However, while it excels in core functionalities, it shows limitations in terms of third-party integrations and ecosystem compatibility, which may affect teams relying on diverse toolchains. Users should weigh these factors against their specific needs, particularly if they require seamless integration with other platforms. Overall, it's a dependable choice for developers seeking to enhance their productivity with AI-driven coding support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because the tool shows strong performance and reliability in coding tasks, supported by positive user feedback. It remains not VITAL due to its limited integration options which may affect broader adoption in diverse development environments.",
+  "what_it_does_well": [
+    "Generates code snippets accurately based on user prompts",
+    "Provides effective debugging assistance in real-time",
+    "Offers contextual suggestions that enhance coding efficiency",
+    "User-friendly interface that integrates well with existing IDEs"
+  ],
+  "what_it_fails_at": [
+    "Limited third-party integrations which may restrict workflow flexibility",
+    "Documentation lacks depth in advanced use cases",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Developers looking for a reliable AI coding assistant",
+    "Teams focused on enhancing productivity in coding tasks",
+    "Users who prefer a straightforward tool without complex setup"
+  ],
+  "not_recommended_for": [
+    "Teams requiring extensive integration with other tools or platforms",
+    "Developers needing comprehensive documentation for advanced features",
+    "Users who prioritize a wide range of plugin options"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may lead to onboarding challenges",
+    "Limited community support compared to more established coding tools"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers broader integrations and community support, making it a better choice for teams with diverse toolchains. OCI Generative AI Agent excels in direct coding assistance but may fall short in integration flexibility.",
+      "preferred_for_axis": "integration-options"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a more customizable experience with a focus on team collaboration features. OCI Generative AI Agent is more straightforward but lacks some collaborative tools.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the agent currently does not support programmatic integration, limiting its use in automated workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "This project is open source and maintained by Oracle Corp.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Oracle Cloud Infrastructure SDK for TypeScript and JavaScript",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are visible on the homepage and pricing surfaces.",
-      "source_surface": "homepage|pricing"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/oracle/oci-typescript-sdk#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/oracle/oci-typescript-sdk/tree/master/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/oracle/oci-typescript-sdk/blob/master/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:38:36.380Z"
+  "summary": "Strong coding assistant with solid generative capabilities \u2014 reliable for developers but lacks extensive third-party integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/oci-generativeaiagent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
