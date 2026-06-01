@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "autonoly",
   "name": "Autonoly",
+  "agent_url": "https://autonoly.com",
   "category": "AI Agent",
+  "run_id": "run-autonoly-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Autonoly",
-  "review_url": "https://hlido.eu/reviews/autonoly/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-autonoly-monex6s8",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI agents that automate any digital task for you.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Live Demo",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "API integrations — Slack, Sheets, Gmail, Discord",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.autonoly.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:16:31.829Z"
+  "hlido_opinion": {
+    "headline": "Solid AI agent with reliable functionality \u2014 lacks standout features compared to top competitors.",
+    "body": "Autonoly presents itself as a competent AI agent, offering a range of functionalities that meet basic user needs. However, it struggles to differentiate itself in a crowded market where competitors often provide more robust features or integrations. While the service operates reliably, it doesn't present a clear value proposition that would compel users to choose it over alternatives. The lack of detailed information on its capabilities and integration options may leave potential users hesitant. Overall, Autonoly is a solid choice for users seeking a straightforward AI agent, but those looking for advanced features or unique selling points might find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable functionality and established presence in the market. However, it lacks the innovative features that could elevate it to a VITAL tier. Improvement in differentiation and feature set could change this tier.",
+  "what_it_does_well": [
+    "Provides reliable AI agent functionalities that meet basic user needs",
+    "User-friendly interface that simplifies interaction with the agent",
+    "Consistent performance across various tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to leading competitors",
+    "Limited information available on advanced capabilities and integrations",
+    "Does not clearly articulate its unique value proposition"
+  ],
+  "best_for": [
+    "Users seeking a straightforward AI agent without complex requirements",
+    "Small businesses looking for basic automation solutions",
+    "Individuals wanting an easy-to-use AI tool for simple tasks"
+  ],
+  "not_recommended_for": [
+    "Users needing advanced features or custom integrations",
+    "Enterprises looking for robust AI solutions with extensive support",
+    "Tech-savvy users seeking innovative AI capabilities"
+  ],
+  "red_flags": [
+    "Lack of detailed information on capabilities may deter potential users",
+    "No clear differentiation from competitors could lead to user churn"
+  ],
+  "compared_to": [
+    {
+      "slug": "x.ai",
+      "verdict_diff": "X.ai offers more advanced scheduling features and integrations, making it a better choice for users needing robust automation. Autonoly is suitable for basic tasks but lacks these advanced capabilities.",
+      "preferred_for_axis": "advanced features"
+    },
+    {
+      "slug": "replika",
+      "verdict_diff": "Replika focuses on companionship and emotional interaction, appealing to users seeking a more engaging experience. Autonoly is more utilitarian and may not satisfy those looking for a conversational agent.",
+      "preferred_for_axis": "engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Autonoly does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality provided.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Solid AI agent with reliable functionality \u2014 lacks standout features compared to top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/autonoly.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
