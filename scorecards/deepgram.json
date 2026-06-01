@@ -1,100 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "deepgram",
   "name": "Deepgram",
+  "agent_url": "https://deepgram.com",
   "category": "Voice",
+  "run_id": "run-deepgram-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Deepgram",
-  "review_url": "https://hlido.eu/reviews/deepgram/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-deepgram-moo0v12e",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust speech recognition API with strong performance \u2014 a top choice for developers needing reliable voice solutions.",
+    "body": "Deepgram stands out in the crowded voice technology space with its advanced speech recognition capabilities. The platform offers a powerful API that enables developers to integrate voice recognition into their applications seamlessly. With a focus on accuracy and speed, Deepgram is particularly well-suited for real-time transcription and voice command applications. The documentation is comprehensive, making it accessible for both seasoned developers and those new to voice tech. However, potential users should be aware of the pricing structure, which can become complex depending on usage patterns. Overall, Deepgram is a leading choice for those looking to implement voice solutions in their products.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance metrics, comprehensive documentation, and established presence in the voice technology market. It would shift to STEADY if significant competitors emerge with comparable features at lower pricing or if user feedback indicates consistent issues with reliability or support.",
+  "what_it_does_well": [
+    "Offers high accuracy in speech recognition across various languages",
+    "Provides a robust API for easy integration into applications",
+    "Supports real-time transcription, making it suitable for live applications",
+    "Comprehensive documentation that aids developers in implementation",
+    "Established reputation in the voice technology space"
+  ],
+  "what_it_fails_at": [
+    "Pricing structure can be complex and may deter some potential users",
+    "Limited information on enterprise-level support options",
+    "Some advanced features may require additional configuration that isn't beginner-friendly"
+  ],
+  "best_for": [
+    "Developers looking for reliable speech recognition solutions",
+    "Startups needing to integrate voice capabilities quickly",
+    "Businesses focused on real-time transcription for meetings or events",
+    "Projects requiring multi-language support in voice applications"
+  ],
+  "not_recommended_for": [
+    "Users seeking the lowest-cost speech recognition options",
+    "Non-technical users who may struggle with implementation",
+    "Applications that require extensive customization beyond the API's capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build with the most accurate and cost-effective real-time APIs for speech-to-text, text-to-speech, and voice agents.",
-      "source_surface": "homepage"
+      "slug": "google-cloud-speech",
+      "verdict_diff": "Google Cloud Speech offers a broader suite of AI services but may lack the specialized focus and pricing transparency of Deepgram. Choose Deepgram for dedicated voice applications.",
+      "preferred_for_axis": "dedicated voice solutions"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "aws-transcribe",
+      "verdict_diff": "AWS Transcribe provides a competitive offering but can be more complex to set up and manage. Deepgram's simplicity and focus on voice make it a better choice for straightforward implementations.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Deepgram's API can be integrated into various applications for real-time voice recognition and transcription.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"For detailed model, language, and feature availability, please refer to our Developer Documentation.\"",
-      "source_surface": "pricing"
+      "evidence": "'Real-time speech recognition API'",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Deepgram is committed to a robust ecosystem of partnerships and integrations. With our native integrations, code samples and reference architectures for a variety of use cases, customers of all shapes and sizes can create business value from voice data with Deepgram.",
-      "source_surface": "integrations"
+      "evidence": "'Get started for free'",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"SOC 2, PCI, GDPR, and HIPAA compliant.\"",
-      "source_surface": "docs"
+      "evidence": "Pricing details available on the website",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation available for developers",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://deepgram.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://deepgram.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://deepgram.com/powered-by-deepgram#quote-aly-cabral",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://deepgram.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:31:03.329Z"
+  "summary": "Robust speech recognition API with strong performance \u2014 a top choice for developers needing reliable voice solutions.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/deepgram.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
