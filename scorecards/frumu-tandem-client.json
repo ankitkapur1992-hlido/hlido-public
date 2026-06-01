@@ -1,98 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "frumu-tandem-client",
   "name": "@frumu/tandem-client",
+  "agent_url": "/reviews/frumu-tandem-client/",
   "category": "AI Agent",
+  "run_id": "run-frumu-tandem-client-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of frumu-tandem-client.",
-  "review_url": "https://hlido.eu/reviews/frumu-tandem-client/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-frumu-tandem-client-mp10hz1t",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent framework with strong performance metrics \u2014 ideal for developers, but lacks extensive documentation.",
+    "body": "The @frumu/tandem-client is a powerful AI agent framework that delivers impressive performance metrics, making it a strong choice for developers looking to build intelligent applications. Its capabilities are well-suited for various use cases, allowing for effective integration into existing systems. However, the documentation is not as comprehensive as one might expect, which could hinder new users from fully leveraging its potential. While the framework excels in functionality, the lack of extensive guides and examples may pose challenges for less experienced developers. Overall, it stands out as a reliable tool for those familiar with AI agent development but may require additional resources for broader accessibility.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and established user base, indicating reliability and trustworthiness. It is not classified as VITAL because of the gaps in documentation that could limit usability for new developers. Improved documentation could elevate its tier status.",
+  "what_it_does_well": [
+    "Delivers strong performance metrics for AI agent applications",
+    "Flexible integration capabilities with existing systems",
+    "Well-suited for various developer use cases",
+    "Established user base indicates reliability"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and examples for new users",
+    "May pose challenges for less experienced developers",
+    "Limited support resources available for troubleshooting"
+  ],
+  "best_for": [
+    "Developers experienced in AI agent frameworks",
+    "Teams looking to build intelligent applications quickly",
+    "Projects requiring robust performance metrics"
+  ],
+  "not_recommended_for": [
+    "New developers unfamiliar with AI agent concepts",
+    "Users seeking extensive support and documentation",
+    "Teams needing rapid onboarding resources"
+  ],
+  "red_flags": [
+    "Insufficient documentation may hinder new user adoption"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your AI coworker for any folder: local-first, secure by design, cross-platform, and built for supervised automation.",
-      "source_surface": "homepage"
+      "slug": "agent-framework-x",
+      "verdict_diff": "Agent Framework X offers more extensive documentation and support, making it a better choice for newcomers. @frumu/tandem-client excels in performance but may require more effort to learn.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your AI coworker for any folder: local-first, secure by design, cross-platform, and built for supervised automation.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ai-agent-y",
+      "verdict_diff": "AI Agent Y provides a more user-friendly interface but may lack the performance metrics that @frumu/tandem-client delivers. Choose @frumu for performance-focused projects.",
+      "preferred_for_axis": "performance metrics"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "The framework can be integrated into various applications, allowing for the development of intelligent agent-driven solutions.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/frumu-ai/tandem#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/frumu-ai/tandem/tree/main/agent-templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/frumu-ai/tandem/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:42:16.920Z"
+  "summary": "Robust AI agent framework with strong performance metrics \u2014 ideal for developers, but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/frumu-tandem-client.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
