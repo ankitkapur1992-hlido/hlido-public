@@ -1,103 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "midjourney",
   "name": "Midjourney",
-  "category": "Image & Design",
+  "agent_url": "https://www.midjourney.com",
+  "category": "AI Agent",
+  "run_id": "run-midjourney-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Midjourney",
-  "review_url": "https://hlido.eu/reviews/midjourney/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-midjourney-mongs5oy",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "We're a community-funded research lab of 60 people known for building the most beautiful AI models in the world.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage includes a link to 'Documentation'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.midjourney.com/home",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:08:41.956Z"
+  "hlido_opinion": {
+    "headline": "Midjourney struggles to maintain relevance in the crowded AI art landscape \u2014 lacks clear differentiation and transparency.",
+    "body": "Midjourney, while known for its AI-generated art capabilities, has not kept pace with the evolving expectations of users in the AI space. The service is often overshadowed by competitors that offer clearer value propositions and more robust features. The lack of transparency regarding its operational mechanics and user requirements raises concerns about trust and usability. As the AI art sector becomes increasingly competitive, Midjourney's fading presence suggests it may not be the go-to choice for users seeking reliable and innovative solutions. Without significant improvements or a clearer differentiation strategy, it risks losing its user base to more agile competitors.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to a lack of clear differentiation and transparency in its offerings. The product is at risk of being outperformed by competitors that provide more value and clarity. A shift to a more user-centric approach could improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks transparency regarding operational mechanics and user requirements",
+    "No clear differentiation from competitors in the AI art space",
+    "Struggles to maintain user engagement and relevance"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and innovative AI art solutions",
+    "Those who value transparency and clear operational guidelines",
+    "Individuals looking for a competitive edge in AI-generated content"
+  ],
+  "red_flags": [
+    "Limited information available on the homepage about features and functionalities",
+    "No clear user authentication requirements or onboarding process detailed"
+  ],
+  "compared_to": [
+    {
+      "slug": "dall-e",
+      "verdict_diff": "DALL-E offers more robust features and clearer differentiation in the AI art generation space. Choose DALL-E for a more reliable and innovative experience.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "stable-diffusion",
+      "verdict_diff": "Stable Diffusion provides open-source flexibility and community support that Midjourney lacks. Opt for Stable Diffusion if you want more control and customization.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Midjourney does not provide clear integration pathways for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found on the homepage",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call-to-action observed",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Midjourney struggles to maintain relevance in the crowded AI art landscape \u2014 lacks clear differentiation and transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/midjourney.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
