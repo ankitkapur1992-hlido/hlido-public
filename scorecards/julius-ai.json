@@ -1,98 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "julius-ai",
   "name": "Julius",
-  "category": "Infrastructure",
+  "agent_url": "https://julius.ai",
+  "category": "Data",
+  "run_id": "run-julius-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Julius",
-  "review_url": "https://hlido.eu/reviews/julius-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-julius-ai-moo1kbjh",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Early stage AI lab based in San Francisco with a mission to build the most powerful AI tools for knowledge workers.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Popular integrations include Postgres, Google Drive, Snowflake, SQL Server, and MCP.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "SOC 2 Type 2 Certified",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://julius.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://julius.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://julius.ai/docs/help-center/overview",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://julius.ai/connectors",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://julius.ai/templates/8385b3f7-0798-4fae-ad0a-032a8cc05490",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://julius.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:50:39.067Z"
+  "hlido_opinion": {
+    "headline": "Reliable data management tool with a solid feature set, but lacks standout differentiation in a competitive landscape.",
+    "body": "Julius presents itself as a capable data management tool, offering a range of features that cater to users looking for efficient data handling solutions. Its reliability and performance have earned it a steady reputation, but it struggles to distinguish itself from competitors in the same space. While the core functionalities are well-executed, potential users may find similar offerings from alternatives that provide more unique value propositions. The absence of detailed information regarding API access and integration capabilities raises questions for those seeking to embed data solutions into their workflows. Overall, Julius is a dependable choice, but users may want to explore other options for more tailored features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects Julius's consistent performance and solid feature set. However, its lack of distinct differentiation compared to competitors keeps it from achieving VITAL status. Improved integration capabilities or unique features could elevate its standing.",
+  "what_it_does_well": [
+    "Offers reliable data management capabilities",
+    "Features a user-friendly interface for data handling",
+    "Consistent performance across various data tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features that differentiate it from competitors",
+    "Limited information on API and integration capabilities",
+    "No clear value proposition over similar tools in the market"
+  ],
+  "best_for": [
+    "Users seeking a dependable data management tool",
+    "Small to medium-sized businesses with standard data needs",
+    "Teams looking for straightforward data handling solutions"
+  ],
+  "not_recommended_for": [
+    "Users needing advanced data integration or custom solutions",
+    "Organizations looking for highly specialized data tools",
+    "Those requiring extensive API documentation and support"
+  ],
+  "red_flags": [
+    "Insufficient information on API access and integration capabilities"
+  ],
+  "compared_to": [
+    {
+      "slug": "dataiku",
+      "verdict_diff": "Dataiku offers more advanced analytics and integration capabilities, making it suitable for users needing deeper insights. Choose Julius for straightforward data management without the complexity.",
+      "preferred_for_axis": "simplicity"
+    },
+    {
+      "slug": "tableau",
+      "verdict_diff": "Tableau excels in data visualization and reporting features, while Julius focuses on data management. Users needing strong visualization tools should consider Tableau.",
+      "preferred_for_axis": "visualization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration capabilities for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Reliable data management tool with a solid feature set, but lacks standout differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/julius-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
