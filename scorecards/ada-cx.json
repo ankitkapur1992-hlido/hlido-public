@@ -1,100 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "ada-cx",
   "name": "Ada",
-  "category": "Customer Experience",
-  "score": 78,
+  "agent_url": "https://www.ada.cx",
+  "category": "Customer Support",
+  "run_id": "run-ada-cx-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Ada",
-  "review_url": "https://hlido.eu/reviews/ada-cx/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ada-cx-moo11ep4",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI customer service agents that resolve, act, and continuously improve. Designed for scale. Trusted by global brands.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Documentation and resources are accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Seamlessly connect your AI agent with your customer service tech stack.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"HIPAA, SOC2, GDPR, AIUC-1 compliance safeguard sensitive data with industry-leading security practices.\"",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.ada.cx/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.ada.cx/platform/integrations/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.ada.cx/resources/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.ada.cx/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 72,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:36:09.177Z"
+  "hlido_opinion": {
+    "headline": "Customer support chatbot with solid fundamentals but lacks transparency on key operational details.",
+    "body": "Ada presents itself as a capable customer support chatbot, but its public-facing information is notably lacking. The absence of clear pricing, a visible call-to-action, and a demonstration of its capabilities raises concerns for potential users. While the product may function adequately, the opacity around its features and access requirements makes it difficult to evaluate effectively. Without a clear value proposition or transparent engagement process, Ada risks losing potential customers to competitors who provide more upfront information. For those who prioritize clarity and accessibility in customer support solutions, alternatives may offer a more straightforward path.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) due to the product's established presence in the market and basic functionality. However, it does not qualify as VITAL because of significant gaps in transparency and user engagement, as evidenced by the failed checklist items indicating a lack of essential information on the homepage.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load properly, limiting access to information",
+    "No clear primary value proposition presented",
+    "Call-to-action is not visible or compelling",
+    "Pricing or access details are absent",
+    "No evidence or demonstration of product capabilities provided"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking transparent pricing and clear engagement processes",
+    "Organizations that require demonstrable product capabilities before commitment",
+    "Customers needing immediate access to product information"
+  ],
+  "red_flags": [
+    "Complete lack of essential information on the homepage raises concerns about transparency",
+    "Uncertainty regarding the authentication requirement adds to user hesitation"
+  ],
+  "compared_to": [
+    {
+      "slug": "intercom",
+      "verdict_diff": "Intercom offers a more robust customer support platform with clear pricing and extensive features, making it a better option for users who need transparency and comprehensive support.",
+      "preferred_for_axis": "transparency-and-features"
+    },
+    {
+      "slug": "zendesk",
+      "verdict_diff": "Zendesk provides a well-established support solution with clear access paths and a wealth of resources, which Ada currently lacks.",
+      "preferred_for_axis": "established-support-solution"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of public information makes it unclear how an agent would interact with Ada.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Customer support chatbot with solid fundamentals but lacks transparency on key operational details.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ada-cx.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
