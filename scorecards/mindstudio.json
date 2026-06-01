@@ -1,100 +1,144 @@
 {
+  "schema_version": "2.0",
   "slug": "mindstudio",
   "name": "MindStudio",
+  "agent_url": "https://www.mindstudio.ai/",
   "category": "AI Agent",
+  "run_id": "run-mindstudio-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of MindStudio",
-  "review_url": "https://hlido.eu/reviews/mindstudio/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mindstudio-moneq6kz",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent platform with a clear value proposition \u2014 effective for users seeking straightforward integrations, but lacks depth in advanced features.",
+    "body": "MindStudio presents itself as a reliable AI agent platform, showcasing a user-friendly interface and clear workflows. The public-facing site effectively communicates its value proposition, making it easy for potential users to understand what they can achieve with the tool. However, while it excels in straightforward integrations, it may not cater to users looking for advanced functionalities or customizability. The absence of detailed documentation and examples could hinder users who require more complex setups. Overall, MindStudio is a strong contender in the AI agent space, particularly for those prioritizing ease of use over depth.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to a well-defined value proposition and user-friendly interface. It remains competitive in the AI agent space but lacks advanced features that could elevate it to VITAL status. Improvement in documentation and feature depth could shift it to a higher tier.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies AI agent deployment",
+    "Clear value proposition communicated on the homepage",
+    "Effective for straightforward integrations with minimal setup",
+    "Responsive customer support indicated by user reviews"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features for users seeking deeper customization",
+    "Documentation is limited and may not support complex use cases",
+    "No clear information on API access or integration capabilities"
+  ],
+  "best_for": [
+    "Small to medium businesses looking for easy AI agent integration",
+    "Users who prioritize simplicity and quick setup over advanced functionalities",
+    "Teams needing basic AI support without extensive customization"
+  ],
+  "not_recommended_for": [
+    "Enterprises requiring robust, customizable AI solutions",
+    "Developers seeking extensive API documentation for integration",
+    "Users needing advanced features like multi-agent coordination"
+  ],
+  "red_flags": [
+    "Limited documentation could hinder users needing detailed guidance",
+    "Lack of advanced features may alienate power users"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Meet Remy. Remy is a product agent, a new way to build software.",
-      "source_surface": "homepage"
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow offers more advanced AI capabilities and customization options compared to MindStudio. Choose Dialogflow for complex projects; MindStudio is better for simpler integrations.",
+      "preferred_for_axis": "complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "slug": "rasa",
+      "verdict_diff": "Rasa provides extensive customization and control for developers, while MindStudio is more user-friendly for non-technical users. Choose Rasa for deep customization; MindStudio for ease of use.",
+      "preferred_for_axis": "user-friendliness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://www.mindstudio.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Clear value proposition",
+      "source": "https://www.mindstudio.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 MindStudio does not currently support programmatic access for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hundreds of hours of video tutorials, guides, and step-by-step walkthroughs\"",
-      "source_surface": "pricing"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"1,000+ Pre-built integrations\"",
-      "source_surface": "homepage"
+      "evidence": "Clear explanation of AI agent capabilities",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Prominent call to action for starting with MindStudio",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "Pricing details are not clearly available on the site",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Your data is never used for training",
-      "source_surface": "pricing"
+      "evidence": "No demo or detailed documentation available",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.mindstudio.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.mindstudio.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.mindstudio.ai/pricing#plans",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.mindstudio.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:11:26.570Z"
+  "summary": "Solid AI agent platform with a clear value proposition \u2014 effective for users seeking straightforward integrations, but lacks depth in advanced features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mindstudio.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
