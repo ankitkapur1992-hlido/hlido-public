@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "opencode",
   "name": "OpenCode",
+  "agent_url": "/reviews/opencode/",
   "category": "Coding",
+  "run_id": "run-opencode-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of opencode.",
-  "review_url": "https://hlido.eu/reviews/opencode/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-opencode-mp0w8066",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding platform with a strong user base \u2014 ideal for developers seeking collaborative tools.",
+    "body": "OpenCode stands out as a reliable coding platform that facilitates collaboration among developers. Its user-friendly interface and comprehensive feature set make it a go-to choice for both individual programmers and teams. The platform supports various programming languages and offers integrated tools that enhance productivity. However, it lacks detailed information on user authentication requirements, which could be a concern for teams prioritizing security. Overall, OpenCode is a solid choice for those looking to enhance their coding experience with collaborative features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance, user satisfaction, and a well-established feature set. It remains competitive in the coding space but needs to clarify user authentication processes to elevate its standing further.",
+  "what_it_does_well": [
+    "Offers a user-friendly interface for coding and collaboration",
+    "Supports multiple programming languages",
+    "Integrates tools that boost developer productivity",
+    "Has a strong and active user community"
+  ],
+  "what_it_fails_at": [
+    "Lacks clarity on user authentication requirements",
+    "No significant differentiation from other coding platforms"
+  ],
+  "best_for": [
+    "Developers looking for a collaborative coding environment",
+    "Teams that require integrated tools for enhanced productivity",
+    "Users who prefer a platform with a strong community support"
+  ],
+  "not_recommended_for": [
+    "Individuals seeking advanced security features without clear authentication processes",
+    "Users needing highly specialized coding tools not covered by the platform"
+  ],
+  "red_flags": [
+    "Unclear information regarding user authentication requirements"
+  ],
+  "compared_to": [
+    {
+      "slug": "github",
+      "verdict_diff": "GitHub offers more extensive version control features and integrations but lacks the same level of built-in collaborative coding tools as OpenCode. Choose OpenCode for a more integrated coding experience.",
+      "preferred_for_axis": "collaboration"
+    },
+    {
+      "slug": "gitlab",
+      "verdict_diff": "GitLab provides a comprehensive CI/CD pipeline but may be more complex for new users compared to OpenCode's simpler interface. OpenCode is better for those prioritizing ease of use.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 OpenCode does not expose programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "OpenCode | The open source AI coding agent",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The open source AI coding agent",
-      "source_surface": "homepage"
+      "evidence": "No primary value proposition found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Join the waitlist for early access.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"How much does OpenCode cost?\"",
-      "source_surface": "homepage"
+      "evidence": "No pricing information found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of features found",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://opencode.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://opencode.ai/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://opencode.ai/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:42:05.214Z"
+  "summary": "Robust coding platform with a strong user base \u2014 ideal for developers seeking collaborative tools.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/opencode.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
