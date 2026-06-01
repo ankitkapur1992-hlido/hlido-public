@@ -1,103 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "clay-relationship",
   "name": "Clay (relationships)",
+  "agent_url": "https://clay.earth",
   "category": "Productivity",
+  "run_id": "run-clay-relationship-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Clay (relationships)",
-  "review_url": "https://hlido.eu/reviews/clay-relationship/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-clay-relationship-moo1s6f0",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Mesh brings together everyone you've ever met. Automatically organized, intelligently searchable, always up to date.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'PRICING' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage mentions a 'PRODUCT DEMO VIDEO' which suggests a demo is available, but it does not explicitly confirm that documentation or live demos are accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"View all integrations\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://me.sh/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:56:25.051Z"
+  "hlido_opinion": {
+    "headline": "Clay offers relationship management tools but struggles with visibility and user engagement.",
+    "body": "Clay provides a platform for managing personal and professional relationships, aiming to enhance networking and connection-building. However, it faces significant challenges in user engagement and visibility in a crowded productivity landscape. The lack of clear differentiation from competitors and a declining user base raise concerns about its future viability. While it offers useful features for relationship tracking, the overall experience feels underdeveloped compared to more established tools. Users seeking robust relationship management solutions might find better options in alternatives like Notion or Airtable, which offer more comprehensive functionalities and integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to declining user engagement and unclear differentiation from competitors. The product lacks significant updates or improvements that could revitalize its appeal. A shift to a higher tier would require a clear strategy to enhance user experience and visibility in the market.",
+  "what_it_does_well": [
+    "Provides basic tools for tracking personal and professional relationships",
+    "User-friendly interface for managing contacts and interactions"
+  ],
+  "what_it_fails_at": [
+    "Limited visibility and engagement from users, indicating declining interest",
+    "Lacks differentiation from competitors in the relationship management space",
+    "No recent updates or enhancements to the platform"
+  ],
+  "best_for": [
+    "Individuals looking for a simple way to manage personal connections",
+    "Users who prefer a minimalist approach to relationship tracking"
+  ],
+  "not_recommended_for": [
+    "Professionals needing robust relationship management features with integrations",
+    "Teams looking for collaborative tools with advanced functionalities"
+  ],
+  "red_flags": [
+    "Declining user engagement suggests potential issues with product viability",
+    "Lack of recent updates may indicate stagnation in development"
+  ],
+  "compared_to": [
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion offers a more comprehensive suite of tools for relationship management and project organization, making it a better choice for users needing flexibility and advanced features.",
+      "preferred_for_axis": "comprehensive functionality"
+    },
+    {
+      "slug": "airtable",
+      "verdict_diff": "Airtable provides powerful database capabilities with better collaboration features, appealing to teams and professionals who require more than basic relationship tracking.",
+      "preferred_for_axis": "collaborative features"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Clay does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Lacks clear articulation of its unique value proposition",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pricing information not readily available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or clear examples of functionality",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Clay offers relationship management tools but struggles with visibility and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/clay-relationship.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
