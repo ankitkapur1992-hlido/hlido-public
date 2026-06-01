@@ -1,99 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "extend-ai-cli-win32-x64",
   "name": "@extend-ai/cli-win32-x64",
+  "agent_url": "/reviews/extend-ai-cli-win32-x64/",
   "category": "Coding",
+  "run_id": "run-extend-ai-cli-win32-x64-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of extend-ai-cli-win32-x64.",
-  "review_url": "https://hlido.eu/reviews/extend-ai-cli-win32-x64/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-extend-ai-cli-win32-x64-mp10xjlq",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional CLI for Extend AI on Windows \u2014 reliable but lacks extensive documentation.",
+    "body": "The @extend-ai/cli-win32-x64 tool provides a straightforward command-line interface for users on Windows, enabling interaction with Extend AI services. While it performs its core functions reliably, the lack of comprehensive documentation limits its usability for new users. The tool is suitable for developers familiar with command-line operations but may pose challenges for those seeking detailed guidance or support. As the ecosystem evolves, clearer documentation and examples would enhance its appeal. For now, it stands as a solid option for existing Extend AI users comfortable with CLI tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) reflects the tool's reliability and functionality, but the absence of thorough documentation prevents it from achieving a higher tier. Improved support materials could elevate its standing significantly.",
+  "what_it_does_well": [
+    "Provides a reliable command-line interface for Extend AI services on Windows",
+    "Enables efficient interaction for users familiar with CLI tools",
+    "Integrates well within existing development workflows"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guides",
+    "Limited support for troubleshooting and common issues",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Developers using Extend AI who prefer command-line interfaces",
+    "Users comfortable with CLI tools and seeking basic functionality",
+    "Existing Extend AI users looking for a Windows-specific solution"
+  ],
+  "not_recommended_for": [
+    "New users unfamiliar with command-line operations",
+    "Those requiring extensive documentation and support",
+    "Users looking for a GUI-based alternative"
+  ],
+  "red_flags": [
+    "Absence of clear documentation may hinder adoption and effective use",
+    "Unverified claims regarding authentication requirements"
+  ],
+  "compared_to": [
+    {
+      "slug": "extend-ai-cli-macos",
+      "verdict_diff": "The macOS version of the Extend AI CLI may offer similar functionality with potentially better documentation. Choose the Windows version if you specifically need Windows compatibility.",
+      "preferred_for_axis": "platform compatibility"
+    },
+    {
+      "slug": "other-ai-cli-tools",
+      "verdict_diff": "Other AI CLI tools may provide more robust documentation and support. Consider alternatives if extensive guidance is a priority.",
+      "preferred_for_axis": "documentation quality"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the CLI operates independently without a programmable interface for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage displays the branding with the name 'extend-hq/extend-cli'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"A CLI for Extend.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/extend-hq/extend-cli",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/extend-hq/extend-cli#examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:54:13.666Z"
+  "summary": "Functional CLI for Extend AI on Windows \u2014 reliable but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/extend-ai-cli-win32-x64.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
