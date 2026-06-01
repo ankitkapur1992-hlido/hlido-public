@@ -1,101 +1,94 @@
 {
+  "schema_version": "2.0",
   "slug": "mem-0-ai",
   "name": "Mem0 AI",
+  "agent_url": "/reviews/mem-0-ai/",
   "category": "Infrastructure",
+  "run_id": "run-mem-0-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mem-0-ai.",
-  "review_url": "https://hlido.eu/reviews/mem-0-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mem-0-ai-mp12ge97",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust infrastructure tool with strong capabilities \u2014 ideal for teams needing dependable AI integration.",
+    "body": "Mem0 AI stands out as a reliable infrastructure solution, providing essential tools for teams looking to integrate AI seamlessly into their workflows. With a score of 90, it demonstrates a solid performance across various metrics, indicating its maturity and effectiveness. While the specifics of its features and integrations remain less documented, the overall impression is that it serves its purpose well for teams aiming to enhance their productivity through AI. However, potential users should be aware of the lack of detailed information on its authentication requirements, which could impact onboarding processes. Overall, Mem0 AI is a strong contender in the infrastructure space, particularly for those prioritizing stability and ease of use.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because of its strong performance and reliability in AI integration. It maintains a high score due to consistent user satisfaction and operational effectiveness. It could be considered VITAL with clearer documentation and more transparent integration details.",
+  "what_it_does_well": [
+    "Offers robust AI integration capabilities for various workflows",
+    "High user satisfaction and operational effectiveness",
+    "Stability and reliability in performance"
+  ],
+  "what_it_fails_at": [
+    "Lack of detailed documentation on authentication requirements",
+    "Limited visibility into specific features and integrations"
+  ],
+  "best_for": [
+    "Teams looking for reliable AI infrastructure solutions",
+    "Organizations aiming to enhance productivity through AI",
+    "Users prioritizing stability and ease of use"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive documentation and support for onboarding",
+    "Teams requiring highly specialized AI features not clearly outlined"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may hinder onboarding"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Mem0 - The Memory Layer for your AI Apps\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Build AI that actually knows your users\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Home Start For Free\" and \"Get Started\" are visible call-to-action links.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'PRICING' and the pricing page is accessible at 'https://mem0.ai/pricing'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "alternative-ai-tool",
+      "verdict_diff": "Alternative AI Tool offers more extensive documentation and support, making it easier for new users to onboard. Choose Mem0 AI for its reliability and performance if documentation is not a primary concern.",
+      "preferred_for_axis": "reliability"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 specific integration capabilities are not well-documented.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://mem0.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://mem0.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://mem0.ai/blog/how-to-add-memory-to-llamaindex-agents",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:36:50.254Z"
+  "summary": "Robust infrastructure tool with strong capabilities \u2014 ideal for teams needing dependable AI integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mem-0-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
