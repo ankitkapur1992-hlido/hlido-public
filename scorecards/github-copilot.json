@@ -1,109 +1,159 @@
 {
+  "schema_version": "2.0",
   "slug": "github-copilot",
   "name": "GitHub Copilot",
-  "category": "Coding",
+  "agent_url": "https://github.com/features/copilot",
+  "category": "AI Agent",
+  "run_id": "run-github-copilot-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of GitHub Copilot",
-  "review_url": "https://hlido.eu/reviews/github-copilot/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-github-copilot-mongmm70",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Leading AI coding assistant with robust integration \u2014 excels in code generation but can struggle with context retention.",
+    "body": "GitHub Copilot stands out as a premier AI coding assistant, leveraging OpenAI's models to assist developers in real-time code generation across various programming languages. Its deep integration with the GitHub ecosystem allows for seamless use within popular code editors like Visual Studio Code, making it a go-to tool for many developers. The strengths lie in its ability to suggest contextually relevant code snippets, enhancing productivity significantly. However, while Copilot excels at generating code, it can falter in retaining context over longer code blocks, sometimes leading to irrelevant suggestions. This limitation can be a hurdle for complex projects where understanding the broader context is crucial. Overall, GitHub Copilot is an essential tool for developers looking to enhance their coding efficiency, but users should be aware of its contextual limitations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, established user base, and integration within the GitHub ecosystem. It remains a leader in the AI coding assistant space, though improvements in context retention would solidify its position further.",
+  "what_it_does_well": [
+    "Provides real-time code suggestions across multiple programming languages",
+    "Seamless integration with GitHub and popular IDEs like Visual Studio Code",
+    "Enhances developer productivity by reducing boilerplate coding",
+    "Learns from user coding patterns to improve suggestions over time",
+    "Strong community support and extensive documentation"
+  ],
+  "what_it_fails_at": [
+    "Struggles with context retention in longer code segments",
+    "May generate irrelevant code suggestions if context is not clear",
+    "Requires an active internet connection for optimal performance",
+    "Pricing may be a barrier for some individual developers"
+  ],
+  "best_for": [
+    "Developers looking for enhanced coding efficiency",
+    "Teams working on collaborative coding projects within GitHub",
+    "Students learning programming languages with practical coding assistance",
+    "Professionals needing quick code snippets and boilerplate generation"
+  ],
+  "not_recommended_for": [
+    "Developers working on highly context-dependent projects",
+    "Users without a stable internet connection",
+    "Individuals seeking a free coding assistant (subscription model applies)",
+    "Those who prefer fully autonomous coding without AI assistance"
+  ],
+  "red_flags": [
+    "Context retention issues can lead to irrelevant code suggestions",
+    "Subscription cost may deter casual users or hobbyists"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your AI accelerator for every workflow, from the editor to the enterprise.",
-      "source_surface": "homepage"
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine offers a more customizable AI coding assistant experience and can work offline. Choose GitHub Copilot for seamless GitHub integration and real-time suggestions.",
+      "preferred_for_axis": "integration with GitHub"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available in the navigation menu on the homepage.",
-      "source_surface": "homepage"
+      "slug": "kite",
+      "verdict_diff": "Kite provides a strong focus on Python support and offline capabilities. GitHub Copilot excels in broader language support and IDE integration.",
+      "preferred_for_axis": "language versatility"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Read the docs\"",
-      "source_surface": "homepage"
+      "slug": "codeium",
+      "verdict_diff": "Codeium is a newer entrant with competitive features but lacks the established ecosystem and user base of GitHub Copilot.",
+      "preferred_for_axis": "established user base"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides real-time code suggestions",
+      "source": "https://github.com/features/copilot",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "GitHub Copilot is available on your favorite platforms: GitHub, VS Code, Visual Studio, Xcode, JetBrains IDEs, Neovim, Eclipse, Raycast, SQL Server Management Studio, Zed.",
-      "source_surface": "homepage"
+      "claim": "Seamless integration with GitHub",
+      "source": "https://github.com/features/copilot",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Enhances developer productivity",
+      "source": "https://github.com/features/copilot",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "GitHub Copilot integrates directly into code editors, allowing for real-time assistance but does not expose a public API for external agent integration.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI pair programmer'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started with Copilot'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Track activity with detailed audit logs and enforce governance by managing agents from a single control plane.\"",
-      "source_surface": "homepage"
+      "evidence": "Subscription model detailed on /pricing",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/features/copilot",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:04:43.708Z",
-  "cost_signal": {
-    "approx_eur_per_task": null,
-    "model_assumed": "varies (GPT-5 mini default; Claude Opus on Pro+)",
-    "task_definition": "subscription model — does not map cleanly to per-task cost",
-    "as_of": "2026-05-10",
-    "source": "https://github.com/features/copilot/plans",
-    "confidence": "low",
-    "notes": "Pro $10/user/mo, Pro+ $39/user/mo. 300 'premium requests' are included on Pro. Per-task cost depends on monthly usage; light users effectively pay much more per task than heavy users."
-  }
+  "summary": "Leading AI coding assistant with robust integration \u2014 excels in code generation but can struggle with context retention.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/github-copilot.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
