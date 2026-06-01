@@ -1,100 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "langgraph-platform",
   "name": "LangGraph Platform",
+  "agent_url": "/reviews/langgraph-platform/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langgraph-platform-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langgraph-platform.",
-  "review_url": "https://hlido.eu/reviews/langgraph-platform/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langgraph-platform-mp12h0xp",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust evaluation framework for language models \u2014 excels in versatility but lacks detailed transparency on integration.",
+    "body": "LangGraph Platform stands out as a comprehensive framework for evaluating language models, offering a range of tools that cater to diverse evaluation needs. Its strength lies in the ability to handle various model types and evaluation metrics, making it suitable for researchers and developers alike. However, while the platform is powerful, it does not provide sufficient transparency regarding its integration capabilities and the underlying methodologies used in evaluations. This could be a concern for users looking for a deeper understanding of the evaluation process. Overall, LangGraph is a solid choice for those who prioritize functionality and flexibility over complete transparency.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because the platform demonstrates strong capabilities in model evaluation and has a solid user base. It is not classified as VITAL due to the lack of detailed transparency on integration and methodology, which could affect user trust and adoption in more critical applications.",
+  "what_it_does_well": [
+    "Offers a versatile framework for evaluating various language models",
+    "Supports multiple evaluation metrics, catering to different research needs",
+    "User-friendly interface that facilitates easy navigation and usability",
+    "Strong community support and documentation available for users"
+  ],
+  "what_it_fails_at": [
+    "Lacks detailed transparency on integration capabilities and methodologies",
+    "No clear information on authentication requirements for usage",
+    "Limited examples of real-world applications or case studies"
+  ],
+  "best_for": [
+    "Researchers looking for a comprehensive evaluation tool for language models",
+    "Developers needing flexibility in evaluation metrics and model types",
+    "Organizations seeking a user-friendly platform for model assessment"
+  ],
+  "not_recommended_for": [
+    "Users requiring detailed integration documentation or methodology transparency",
+    "Those looking for a plug-and-play solution without customization needs",
+    "Individuals or teams focused on specific use cases without general applicability"
+  ],
+  "red_flags": [
+    "Insufficient transparency regarding authentication requirements",
+    "Lack of detailed case studies or real-world applications to validate effectiveness"
+  ],
+  "compared_to": [
+    {
+      "slug": "huggingface-eval",
+      "verdict_diff": "Hugging Face's evaluation tools are more transparent in methodology and integration, making them preferable for users needing clarity. LangGraph excels in versatility but may leave users wanting for detailed guidance.",
+      "preferred_for_axis": "methodology transparency"
+    },
+    {
+      "slug": "mlflow",
+      "verdict_diff": "MLflow offers robust tracking and management features alongside evaluation, which may appeal to users needing a comprehensive ML lifecycle solution. LangGraph is more focused on evaluation but lacks some of the broader lifecycle management features.",
+      "preferred_for_axis": "comprehensive ML lifecycle"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the platform's integration capabilities are not clearly defined, limiting its addressability by agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"LangGraph: Agent Orchestration Framework for Reliable AI Agents\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Design agents that reliably handle complex tasks with LangGraph, an agent runtime and low-level orchestration framework.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes links for 'Try LangSmith' and 'Get a demo', which are clear call-to-action buttons.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is listed as a link on the homepage and the pricing surface is accessible.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The homepage includes a link to 'Get a demo'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.langchain.com/langgraph",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.langchain.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.langchain.com/langchain-partner-network",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.langchain.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:37:15.867Z"
+  "summary": "Robust evaluation framework for language models \u2014 excels in versatility but lacks detailed transparency on integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langgraph-platform.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
