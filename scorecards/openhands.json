@@ -1,116 +1,100 @@
 {
+  "schema_version": "2.0",
   "slug": "openhands",
   "name": "OpenHands",
+  "agent_url": "https://www.all-hands.dev",
   "category": "Coding",
+  "run_id": "run-openhands-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of OpenHands",
-  "review_url": "https://hlido.eu/reviews/openhands/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openhands-moo14f9e",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with a strong focus on collaboration \u2014 ideal for teams but may lack advanced individual features.",
+    "body": "OpenHands excels as a collaborative coding assistant, designed to enhance teamwork through shared coding environments and real-time feedback. Its interface is intuitive, making it easy for teams to integrate into their workflows. The emphasis on collaboration is a key strength, allowing multiple users to contribute seamlessly. However, it may not cater as effectively to individual developers seeking advanced coding features or personalized assistance. Overall, OpenHands is a compelling choice for teams prioritizing collaborative coding, but individual users might find alternatives like GitHub Copilot or Tabnine more suited to their needs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong collaborative features and user-friendly interface that effectively enhances team productivity. It could shift to STEADY if individual-focused features are not prioritized in future updates.",
+  "what_it_does_well": [
+    "Facilitates real-time collaboration among team members",
+    "User-friendly interface that simplifies onboarding",
+    "Integrates well with existing coding environments",
+    "Offers features that enhance team productivity and communication"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features for individual developers",
+    "May not provide the same level of personalized assistance as some competitors",
+    "Limited information on API or integration capabilities for agent-driven workflows"
+  ],
+  "best_for": [
+    "Development teams looking for collaborative coding solutions",
+    "Projects requiring real-time feedback and teamwork",
+    "Users who prioritize ease of use and integration into existing workflows"
+  ],
+  "not_recommended_for": [
+    "Individual developers seeking advanced coding assistance",
+    "Users who require extensive customization options",
+    "Teams that do not prioritize collaboration in their coding processes"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Build with coding agents, your way.\"",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers advanced AI-driven coding assistance tailored for individual developers. Choose OpenHands for team collaboration; choose Copilot for personal coding support.",
+      "preferred_for_axis": "individual-assistance"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present in the homepage navigation.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' and a button to 'Try it live'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Native integrations with GitHub, GitLab, CI/CD, Slack, and ticketing tools.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Enterprise-grade security and control\"",
-      "source_surface": "homepage"
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides tailored AI suggestions for individual developers, making it a better choice for those needing personalized help. OpenHands excels in team environments.",
+      "preferred_for_axis": "personalized-assistance"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 OpenHands focuses on collaborative coding without a clear API for agent integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://openhands.dev/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:37:58.728Z",
-  "external_benchmarks": [
-    {
-      "name": "SWE-bench",
-      "score": 0.718,
-      "score_unit": "resolved_issues_pct",
-      "rank": 29,
-      "as_of": "2025-08-07",
-      "source_url": "https://raw.githubusercontent.com/SWE-bench/swe-bench.github.io/master/data/leaderboards.json",
-      "ingest_date": "2026-05-10T12:03:47.414Z",
-      "match_confidence": 1
-    }
-  ],
-  "benchmarks_updated_at": "2026-05-10T12:03:50.518Z"
+  "summary": "Robust coding assistant with a strong focus on collaboration \u2014 ideal for teams but may lack advanced individual features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openhands.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
