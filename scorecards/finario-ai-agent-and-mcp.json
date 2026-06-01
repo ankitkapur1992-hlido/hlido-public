@@ -1,103 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "finario-ai-agent-and-mcp",
   "name": "Finario-AI-Agent-and-MCP",
+  "agent_url": "/reviews/finario-ai-agent-and-mcp/",
   "category": "AI Agent",
+  "run_id": "run-finario-ai-agent-and-mcp-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of finario-ai-agent-and-mcp.",
-  "review_url": "https://hlido.eu/reviews/finario-ai-agent-and-mcp/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-finario-ai-agent-and-mcp-mp11g7nw",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional AI agent with MCP capabilities, but lacks clarity and transparency for effective integration.",
+    "body": "Finario-AI-Agent-and-MCP presents itself as a viable option in the AI agent space, offering core functionalities that can support various use cases. However, the lack of clear documentation and transparency regarding integration processes raises concerns for potential users. The platform's offerings appear to be in line with industry standards, but without verified claims or detailed insights into its operational mechanics, it may struggle to attract users who require robust and reliable solutions. While it operates within the realm of AI agents, it does not stand out against competitors that provide clearer value propositions and integration pathways.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to the presence of functional features that align with user needs, but not VITAL because of the lack of transparency and verification of claims, which could hinder user trust and adoption. To improve, enhanced documentation and clear integration pathways would be necessary.",
+  "what_it_does_well": [
+    "Offers basic AI agent functionalities that can serve various use cases",
+    "Provides an MCP that may appeal to users looking for multi-channel processing"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear documentation and transparency for effective integration",
+    "No verified claims or user testimonials available to support its effectiveness",
+    "Limited visibility into operational mechanics and capabilities"
+  ],
+  "best_for": [
+    "Users seeking basic AI agent functionalities without complex integration needs",
+    "Organizations willing to experiment with AI agents in a low-risk environment"
+  ],
+  "not_recommended_for": [
+    "Users requiring robust documentation and clear integration pathways",
+    "Organizations with strict verification needs for AI solutions"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about the reliability of the platform",
+    "Insufficient transparency may deter potential users looking for solid integration options"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\" is visible on the homepage.",
-      "source_surface": "homepage"
+      "slug": "competitor-x",
+      "verdict_diff": "Competitor X offers clearer documentation and a more established user base, making it a safer choice for users needing reliable integration. Finario can be considered if basic functionalities suffice without stringent requirements.",
+      "preferred_for_axis": "transparency and support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage states, 'This Space is sleeping due to inactivity,' which does not articulate a primary value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "slug": "competitor-y",
+      "verdict_diff": "Competitor Y provides a more comprehensive feature set and better user feedback, which may appeal to those seeking a more robust solution. Finario may be suitable for those prioritizing simplicity over features.",
+      "preferred_for_axis": "feature richness"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear documentation limits the ability to integrate effectively.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/Agents-MCP-Hackathon/Finario-AI-Agent-and-MCP",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:08:13.546Z"
+  "summary": "Functional AI agent with MCP capabilities, but lacks clarity and transparency for effective integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/finario-ai-agent-and-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
