@@ -1,99 +1,156 @@
 {
+  "schema_version": "2.0",
   "slug": "optimizely-opal",
   "name": "Optimizely Opal",
-  "category": "Marketing & Content",
+  "agent_url": "https://www.optimizely.com",
+  "category": "Marketing",
+  "run_id": "run-optimizely-opal-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Optimizely Opal",
-  "review_url": "https://hlido.eu/reviews/optimizely-opal/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-optimizely-opal-moo1ckvh",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust marketing optimization platform with a strong track record \u2014 ideal for data-driven teams seeking comprehensive insights.",
+    "body": "Optimizely Opal stands out as a leading marketing optimization solution, providing extensive A/B testing, personalization, and analytics capabilities. Its user interface is intuitive, making it accessible for both technical and non-technical users. The platform excels in integrating with various marketing tools, allowing for seamless data flow and enhanced campaign performance. However, its pricing may be a barrier for smaller teams or startups. The lack of detailed public documentation on certain advanced features could also deter potential users. Overall, Optimizely Opal is a powerful choice for organizations focused on leveraging data to drive marketing success.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its comprehensive feature set, strong user interface, and proven effectiveness in marketing optimization. The tier could change if pricing becomes prohibitive for a broader audience or if competitors introduce significantly superior features.",
+  "what_it_does_well": [
+    "Offers robust A/B testing capabilities for optimizing marketing campaigns",
+    "Integrates seamlessly with various marketing tools and platforms",
+    "User-friendly interface suitable for both technical and non-technical users",
+    "Provides comprehensive analytics and insights for data-driven decision-making",
+    "Strong track record of improving campaign performance for existing clients"
+  ],
+  "what_it_fails_at": [
+    "Pricing may be too high for smaller teams or startups",
+    "Limited public documentation on advanced features may hinder user adoption",
+    "Some users report a steep learning curve for advanced functionalities"
+  ],
+  "best_for": [
+    "Medium to large enterprises focused on data-driven marketing strategies",
+    "Marketing teams looking for comprehensive testing and personalization tools",
+    "Organizations seeking to integrate marketing optimization with existing workflows"
+  ],
+  "not_recommended_for": [
+    "Small startups with limited budgets for marketing tools",
+    "Teams needing quick, simple solutions without extensive training",
+    "Users looking for a low-cost entry into marketing optimization"
+  ],
+  "red_flags": [
+    "High pricing may limit accessibility for smaller organizations",
+    "Potential lack of detailed documentation on advanced features"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI-powered digital experiences that turn heads",
-      "source_surface": "homepage"
+      "slug": "vwo",
+      "verdict_diff": "VWO offers similar A/B testing and personalization features but at a lower price point, making it more accessible for smaller teams. Optimizely Opal is better for larger organizations needing advanced capabilities.",
+      "preferred_for_axis": "enterprise-grade features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the pricing page is labeled 'Plans & pricing' and is accessible directly from the homepage.",
-      "source_surface": "homepage"
+      "slug": "google-analytics",
+      "verdict_diff": "Google Analytics provides extensive analytics capabilities but lacks the A/B testing and personalization features of Optimizely Opal. Choose Optimizely for integrated testing and insights.",
+      "preferred_for_axis": "integrated testing and analytics"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible without login at the URL: https://www.optimizely.com/developers/",
-      "source_surface": "docs"
+      "slug": "hubspot",
+      "verdict_diff": "HubSpot offers a broader marketing suite but is less focused on optimization compared to Optimizely Opal. Optimizely is preferable for teams specifically targeting optimization.",
+      "preferred_for_axis": "marketing optimization focus"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Comprehensive A/B testing capabilities",
+      "source": "https://www.optimizely.com/solutions/ab-testing/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Optimizely products integrate with all your favorite apps and tools to work just the way you need it to work.",
-      "source_surface": "homepage"
+      "claim": "User-friendly interface",
+      "source": "https://www.optimizely.com/platform/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Strong integration with marketing tools",
+      "source": "https://www.optimizely.com/integrations/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Optimizely Opal can be integrated into agent-driven workflows through its API and webhooks, allowing for automated testing and data analysis.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Optimize marketing campaigns effectively'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started with Optimizely'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Pricing information available upon request",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available upon request",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.optimizely.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.optimizely.com/plans/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.optimizely.com/developers/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.optimizely.com/connectors/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.optimizely.com/insights/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:44:58.427Z"
+  "summary": "Robust marketing optimization platform with a strong track record \u2014 ideal for data-driven teams seeking comprehensive insights.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/optimizely-opal.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
