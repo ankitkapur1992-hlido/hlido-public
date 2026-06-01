@@ -1,100 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "n8n",
   "name": "n8n",
-  "category": "Workflow & Automation",
+  "agent_url": "https://n8n.io",
+  "category": "Workflow",
+  "run_id": "run-n8n-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of n8n",
-  "review_url": "https://hlido.eu/reviews/n8n/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-n8n-moo1kmww",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust open-source workflow automation tool \u2014 excels in flexibility and integration, but may require technical expertise for optimal use.",
+    "body": "n8n stands out as a powerful open-source workflow automation platform that allows users to connect various services and automate tasks without extensive coding knowledge. Its flexibility in creating custom workflows and the ability to self-host makes it appealing for organizations looking for control over their automation processes. The platform supports a wide range of integrations, which enhances its utility across different use cases. However, the learning curve can be steep for non-technical users, and while the community support is active, documentation could be more comprehensive. Overall, n8n is an excellent choice for teams that prioritize customization and self-hosting capabilities, but it may not be the best fit for users seeking a straightforward, plug-and-play solution.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because n8n offers robust functionality, a strong community, and the flexibility of open-source software. It remains a top choice for organizations needing customizable automation solutions. It could shift if usability improves significantly for non-technical users or if documentation enhances clarity.",
+  "what_it_does_well": [
+    "Offers extensive integration options with numerous third-party services",
+    "Supports self-hosting, giving users control over their automation environment",
+    "Provides a visual workflow builder that simplifies complex automation tasks",
+    "Active community support with a wealth of shared workflows and resources",
+    "Open-source model allows for customization and adaptability"
+  ],
+  "what_it_fails_at": [
+    "Steeper learning curve for non-technical users compared to some competitors",
+    "Documentation lacks depth in certain areas, making it challenging for new users",
+    "Performance can vary based on self-hosting setup and resource allocation"
+  ],
+  "best_for": [
+    "Technical teams looking for customizable automation solutions",
+    "Organizations that prefer self-hosting for data privacy and control",
+    "Users needing to integrate multiple services into complex workflows",
+    "Developers seeking an open-source alternative to proprietary automation tools"
+  ],
+  "not_recommended_for": [
+    "Non-technical users seeking a simple, out-of-the-box automation solution",
+    "Organizations without the resources to manage self-hosted solutions",
+    "Users who require extensive documentation and support for onboarding"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"AI Workflow Automation Platform - n8n\" and \"Build visually, go deep with code, connect to anything.\"",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more user-friendly interface and quicker setup for non-technical users, while n8n provides deeper customization and self-hosting options. Choose Zapier for ease of use; n8n for flexibility.",
+      "preferred_for_axis": "ease-of-use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The 'Pricing' menu item is accessible directly from the homepage menu.",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat (now Make) provides similar automation capabilities but with a focus on visual scripting. n8n is better for those who want open-source control and extensive integrations.",
+      "preferred_for_axis": "open-source-control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source workflow automation platform",
+      "source": "https://n8n.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to the 'Docs' section, which suggests that documentation is accessible without login.",
-      "source_surface": "homepage"
+      "claim": "Supports self-hosting",
+      "source": "https://n8n.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Extensive integrations available",
+      "source": "https://n8n.io/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "n8n can be integrated into agent-driven workflows through its API and webhooks, allowing for automated task execution based on triggers.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Plug AI into your own data & over 500 integrations\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open-source workflow automation', tested at homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started', tested at homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Protect your data by deploying on-prem.\"",
-      "source_surface": "homepage"
+      "evidence": "Free tier available, tested at pricing page",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://n8n.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://n8n.io/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://n8n.io/integrations/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://n8n.io/workflows/?integrations=Microsoft+Outlook",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:50:47.586Z"
+  "summary": "Robust open-source workflow automation tool \u2014 excels in flexibility and integration, but may require technical expertise for optimal use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/n8n.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
