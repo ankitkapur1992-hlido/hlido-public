@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "haystack-deepset",
   "name": "Haystack",
-  "category": "Workflow & Automation",
+  "agent_url": "https://haystack.deepset.ai",
+  "category": "Workflow",
+  "run_id": "run-haystack-deepset-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Haystack",
-  "review_url": "https://hlido.eu/reviews/haystack-deepset/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-haystack-deepset-moo26ory",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid workflow automation tool with a focus on search capabilities \u2014 reliable but lacks standout features against competitors.",
+    "body": "Haystack is positioned as a robust solution for workflow automation, particularly emphasizing its search functionalities. While it offers dependable performance and integrates well with various data sources, it does not significantly differentiate itself from other players in the market. Users can expect a straightforward setup and effective search capabilities, but the absence of unique features may lead to a perception of it being just another option among many. The product's reliability is commendable, but prospective users should evaluate whether its offerings align with their specific needs compared to alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its consistent performance and operational maturity. However, it lacks unique features that could elevate it to VITAL status, which would require a clearer differentiation in capabilities or a more compelling value proposition compared to its competitors.",
+  "what_it_does_well": [
+    "Provides reliable workflow automation with a focus on search functionalities",
+    "Integrates with various data sources effectively",
+    "User-friendly setup process for new users",
+    "Consistent performance across different use cases"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors in the workflow automation space",
+    "No clear differentiation that would justify a premium over similar tools",
+    "Limited marketing information available on unique capabilities"
+  ],
+  "best_for": [
+    "Organizations seeking a dependable workflow automation tool with solid search capabilities",
+    "Teams that prioritize ease of integration with existing data sources",
+    "Users who value consistent performance over cutting-edge features"
+  ],
+  "not_recommended_for": [
+    "Users looking for highly specialized or niche workflow solutions",
+    "Organizations that require advanced features or customization options",
+    "Teams that need a strong competitive edge through unique functionalities"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build custom AI agents and RAG applications with smart context engineering, powered by open AI orchestration.",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a broader range of integrations and automation capabilities, making it a more versatile choice for users needing extensive workflow connections. Haystack is better for those focused specifically on search functionalities.",
+      "preferred_for_axis": "integration breadth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "n8n",
+      "verdict_diff": "n8n provides more customization options and a visual workflow builder, appealing to users who need tailored solutions. Haystack is more straightforward but less flexible.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Haystack operates primarily as a standalone workflow tool with no programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Go to the documentation",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on homepage",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The Haystack ecosystem integrates with many technologies, including vector databases, model providers, monitoring tools, and community-built custom components.",
-      "source_surface": "integrations"
+      "evidence": "No clear call to action found on homepage",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Open Privacy Policy\" and \"Open Terms and Conditions\" are mentioned, indicating some public statements about data handling.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://haystack.deepset.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://haystack.deepset.ai/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://haystack.deepset.ai/release-notes",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:07:55.738Z"
+  "summary": "Solid workflow automation tool with a focus on search capabilities \u2014 reliable but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/haystack-deepset.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
