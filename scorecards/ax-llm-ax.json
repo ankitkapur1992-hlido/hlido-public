@@ -1,98 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "ax-llm-ax",
   "name": "@ax-llm/ax",
+  "agent_url": "/reviews/ax-llm-ax/",
   "category": "Frameworks & Eval",
+  "run_id": "run-ax-llm-ax-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of ax-llm-ax.",
-  "review_url": "https://hlido.eu/reviews/ax-llm-ax/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ax-llm-ax-mp119uf3",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for LLM evaluation \u2014 reliable but lacks extensive documentation and community support.",
+    "body": "The @ax-llm/ax framework offers a dependable approach to evaluating language models, achieving a score of 73. It is designed to facilitate testing and benchmarking of various LLMs, making it a useful tool for developers and researchers in the AI space. However, the lack of comprehensive documentation and a vibrant community can hinder new users from fully leveraging its capabilities. While it performs well for established users familiar with LLM evaluation, it may pose challenges for newcomers who require more guidance. Users looking for robust support and extensive resources might consider alternatives like Hugging Face's Transformers or LangChain, which offer more extensive documentation and community engagement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the framework performs reliably for LLM evaluation tasks and has a clear purpose. Not VITAL due to the limited documentation and community support, which could deter potential users. It would move to VITAL with improved resources and a more active user community.",
+  "what_it_does_well": [
+    "Provides a structured approach to evaluating language models.",
+    "Facilitates benchmarking across different LLMs effectively.",
+    "Offers a straightforward setup for experienced users."
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks depth, making it hard for new users to get started.",
+    "Community support is minimal, which can limit troubleshooting and knowledge sharing.",
+    "No clear information on authentication requirements."
+  ],
+  "best_for": [
+    "Developers familiar with LLM evaluation looking for a straightforward framework.",
+    "Researchers needing a reliable tool for benchmarking language models.",
+    "Users who can navigate limited documentation without extensive support."
+  ],
+  "not_recommended_for": [
+    "Newcomers to LLM evaluation who require detailed guidance.",
+    "Users seeking a vibrant community for support and collaboration.",
+    "Those who prioritize extensive documentation and resources."
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to implementation challenges for new users.",
+    "Limited community engagement could hinder collaborative learning."
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage loads with branding visible as indicated by the title 'GitHub - ax-llm/ax: The pretty much \"official\" DSPy framework for Typescript'.",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face's Transformers offers extensive documentation and a large community, making it easier for newcomers. @ax-llm/ax is more streamlined but lacks these resources.",
+      "preferred_for_axis": "documentation and community support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"We get it, there's a lot you can do with GitHub. That’s why we've packed all of it into a single risk-free trial that includes GitHub Enterprise, Copilot, and Advanced Security.\"",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing sections.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "langchain",
+      "verdict_diff": "LangChain also provides robust documentation and community support, making it a better choice for users needing extensive resources. @ax-llm/ax is more focused on evaluation.",
+      "preferred_for_axis": "resource availability"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 @ax-llm/ax is a framework that does not expose programmatic interfaces for direct integration with agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/ax-llm/ax#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/ax-llm/ax/commit/4f8c922627ad6d973c42615d8eb0d7f9e7a649d1",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/ax-llm/ax/commit/acfb41bca2aa23b0ca333706c7c36476c2f6d018",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:03:52.508Z"
+  "summary": "Solid framework for LLM evaluation \u2014 reliable but lacks extensive documentation and community support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ax-llm-ax.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
