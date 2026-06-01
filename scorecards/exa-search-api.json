@@ -1,99 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "exa-search-api",
   "name": "Exa Search",
+  "agent_url": "/reviews/exa-search-api/",
   "category": "Research",
+  "run_id": "run-exa-search-api-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of exa-search-api.",
-  "review_url": "https://hlido.eu/reviews/exa-search-api/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-exa-search-api-mp12eeu9",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust research API with strong performance metrics \u2014 ideal for developers but lacks comprehensive documentation.",
+    "body": "Exa Search stands out as a high-performing research API, boasting a score of 90, indicating its reliability and effectiveness in delivering search results. It is particularly well-suited for developers looking to integrate powerful search capabilities into their applications. However, a notable downside is the lack of comprehensive documentation, which can hinder new users from fully leveraging its capabilities. While the API performs excellently, the onboarding experience could be improved with clearer guidelines and examples. Overall, Exa Search is a solid choice for those who prioritize performance and are comfortable navigating potential documentation gaps.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to strong performance metrics and a reliable service history. Not VITAL because the documentation is insufficient for new users, which could impact user experience and integration efforts.",
+  "what_it_does_well": [
+    "Delivers high-quality search results quickly and efficiently",
+    "Strong performance metrics indicating reliability",
+    "Well-suited for developers needing robust search functionality"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation for new users",
+    "Onboarding experience could be improved with clearer guidelines",
+    "No information available on authentication requirements"
+  ],
+  "best_for": [
+    "Developers looking for a powerful search API to integrate into applications",
+    "Tech-savvy users who can navigate potential documentation gaps",
+    "Organizations needing reliable search functionality without extensive setup"
+  ],
+  "not_recommended_for": [
+    "Users who require extensive documentation and support during integration",
+    "Non-technical users unfamiliar with API usage",
+    "Teams needing quick onboarding and clear guidance"
+  ],
+  "red_flags": [
+    "Insufficient documentation may hinder user onboarding and integration efforts"
+  ],
+  "compared_to": [
+    {
+      "slug": "algolia",
+      "verdict_diff": "Algolia offers extensive documentation and support, making it more user-friendly for newcomers. Choose Exa Search for performance-focused applications where documentation is less critical.",
+      "preferred_for_axis": "performance-focused applications"
+    },
+    {
+      "slug": "elastic-search",
+      "verdict_diff": "Elastic Search provides robust features and community support, but Exa Search may outperform in speed. Opt for Exa Search if rapid results are paramount.",
+      "preferred_for_axis": "speed of results"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Exa Search can be integrated into applications via its API, allowing for programmatic search capabilities.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Exa | Web Search API, AI Search Engine, & Website Crawler\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The best search API for AI",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Try API for free\" and \"Get started\" are visible call-to-action buttons.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://exa.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://exa.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://exa.ai/docs/reference/search",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://exa.ai/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://exa.ai/blog/highlights-for-agents",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:35:16.915Z"
+  "summary": "Robust research API with strong performance metrics \u2014 ideal for developers but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/exa-search-api.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
