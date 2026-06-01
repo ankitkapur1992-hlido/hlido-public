@@ -16,7 +16,7 @@
   "confidence": "low",
   "hlido_opinion": {
     "headline": "DeepSeek shows promise but fails on critical transparency and accessibility fronts.",
-    "body": "DeepSeek's current public presence raises significant concerns about its viability as a reliable AI agent. While the score of 78 suggests some foundational strength, the failure across multiple checklist items\u2014such as homepage loading, clear value proposition, call-to-action visibility, and transparent pricing\u2014indicates a lack of essential user engagement and trust signals. The absence of verifiable claims further complicates the picture, leaving potential users with more questions than answers. For those seeking a dependable AI agent, alternatives like 'try-aispace' or 'try-automate' may offer clearer value and accessibility.",
+    "body": "DeepSeek's current public presence raises significant concerns about its viability as a reliable AI agent. While the score of 78 suggests some foundational strength, the failure across multiple checklist items—such as homepage loading, clear value proposition, call-to-action visibility, and transparent pricing—indicates a lack of essential user engagement and trust signals. The absence of verifiable claims further complicates the picture, leaving potential users with more questions than answers. For those seeking a dependable AI agent, alternatives like 'try-aispace' or 'try-automate' may offer clearer value and accessibility.",
     "voice": "Hlido Editor",
     "as_of": "2026-05-23",
     "editor_signature_pending": true
@@ -60,7 +60,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 the lack of a functioning website and clear offerings makes integration impossible.",
+    "agent_integration_path": "None — the lack of a functioning website and clear offerings makes integration impossible.",
     "agent_friendly_score": 0
   },
   "checklist": [
@@ -116,5 +116,38 @@
     "agent_relevance": "1.0",
     "checklist": "1.0"
   },
-  "aspect_versions_as_of": "2026-05-23"
+  "aspect_versions_as_of": "2026-05-23",
+  "external_benchmarks": [
+    {
+      "name": "AgentBench",
+      "score": 0.493,
+      "score_unit": "avg_success_rate",
+      "rank": 14,
+      "as_of": "2026-06-01",
+      "source_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRR3Wl7wsCgHpwUw1_eUXW_fptAPLL3FkhnW_rua0O1Ji_GIVrpTjY5LaKAhwO-WeARjnY_KNw0SYNJ/pub?output=csv",
+      "ingest_date": "2026-06-01T08:20:53.401Z",
+      "match_confidence": 0.95
+    },
+    {
+      "name": "BFCL",
+      "score": 0.5673,
+      "score_unit": "function_call_accuracy",
+      "rank": 14,
+      "as_of": "2026-06-01",
+      "source_url": "https://gorilla.cs.berkeley.edu/data_overall.csv",
+      "ingest_date": "2026-06-01T08:20:52.013Z",
+      "match_confidence": 0.95
+    },
+    {
+      "name": "HumanEval+",
+      "score": 0.866,
+      "score_unit": "pass_at_1",
+      "rank": 5,
+      "as_of": "2026-06-01",
+      "source_url": "https://evalplus.github.io/results.json",
+      "ingest_date": "2026-06-01T08:20:55.003Z",
+      "match_confidence": 0.95
+    }
+  ],
+  "benchmarks_updated_at": "2026-06-01T08:20:55.014Z"
 }
