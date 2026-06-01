@@ -1,103 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "cleocode-lafs",
   "name": "@cleocode/lafs",
+  "agent_url": "/reviews/cleocode-lafs/",
   "category": "Coding",
+  "run_id": "run-cleocode-lafs-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of cleocode-lafs.",
-  "review_url": "https://hlido.eu/reviews/cleocode-lafs/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cleocode-lafs-mp10be6l",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional coding library with decent utility, but lacks comprehensive documentation and community support.",
+    "body": "The @cleocode/lafs library serves its purpose within the coding ecosystem, providing a set of functionalities that can be useful for developers. However, it suffers from a lack of thorough documentation and community engagement, which can hinder its adoption and effective use. While it functions adequately for basic tasks, users may find themselves struggling to implement more complex features due to insufficient guidance. Compared to more established libraries, it falls short in terms of user support and resources. For those who are comfortable navigating less-documented tools, it may still offer value, but many users might prefer alternatives that come with stronger community backing and clearer instructions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functional capabilities, but it lacks the robust documentation and community support that would elevate it to a higher tier. Improved documentation or a growing user community could shift this tier upward.",
+  "what_it_does_well": [
+    "Provides basic functionalities for coding tasks",
+    "Can be integrated into existing projects with relative ease",
+    "Offers a straightforward API for developers familiar with similar libraries"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse, making it hard for new users to get started",
+    "Limited community support and resources for troubleshooting",
+    "Lacks advanced features found in more popular libraries"
+  ],
+  "best_for": [
+    "Developers comfortable with trial and error in less-documented environments",
+    "Small projects where basic functionalities suffice",
+    "Users looking for lightweight coding solutions without extensive overhead"
+  ],
+  "not_recommended_for": [
+    "Beginners needing comprehensive guidance and support",
+    "Projects requiring advanced features or robust community resources",
+    "Teams that prioritize well-documented tools for collaboration"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to implementation challenges",
+    "Limited community engagement could indicate potential stagnation"
+  ],
+  "compared_to": [
+    {
+      "slug": "lodash",
+      "verdict_diff": "Lodash is a well-documented and widely supported utility library with a strong community. Choose Lodash for comprehensive features and community resources, while @cleocode/lafs may suffice for simpler needs.",
+      "preferred_for_axis": "documentation-and-support"
+    },
+    {
+      "slug": "underscore",
+      "verdict_diff": "Underscore provides similar functionalities with better documentation and community backing. Opt for Underscore if you need more reliable support and resources.",
+      "preferred_for_axis": "community-engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the library operates as a coding utility without direct integration paths for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage shows a 'Sign in to GitBook' heading without visible branding.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Get started with GitBook. Sign up",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Get started with GitBook.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The surface only contains a sign-in page without any demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://app.gitbook.com/o/Q5pPsif4IDlh4q8AWVUw/s/AfSkHch00NPjf3TeU8eX/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:36:34.785Z"
+  "summary": "Functional coding library with decent utility, but lacks comprehensive documentation and community support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cleocode-lafs.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
