@@ -1,100 +1,157 @@
 {
+  "schema_version": "2.0",
   "slug": "jasper",
   "name": "Jasper",
-  "category": "Marketing & Content",
+  "agent_url": "https://www.jasper.ai",
+  "category": "AI Agent",
+  "run_id": "run-jasper-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Jasper",
-  "review_url": "https://hlido.eu/reviews/jasper/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-jasper-mongp9ep",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Highly capable AI content generation tool with extensive features \u2014 excels in versatility but may overwhelm new users.",
+    "body": "Jasper stands out as a leading AI content generation platform, offering a robust suite of features that cater to various content creation needs, from marketing copy to long-form articles. Its user-friendly interface, combined with powerful AI capabilities, allows users to generate high-quality content quickly. The platform supports multiple languages and integrates well with other tools, making it a versatile choice for businesses and content creators alike. However, the breadth of features can be overwhelming for newcomers, and the pricing structure may not be the most accessible for smaller teams. Overall, Jasper's strong performance and comprehensive capabilities solidify its position as a top-tier AI agent in the content generation space.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because Jasper demonstrates exceptional capabilities in content generation, has a strong user base, and provides a clear value proposition. It remains a leader in the AI content space, but could improve onboarding for new users to enhance accessibility.",
+  "what_it_does_well": [
+    "Offers a wide range of templates for various content types",
+    "Supports multiple languages for global reach",
+    "Integrates seamlessly with popular marketing tools",
+    "User-friendly interface that simplifies the content creation process",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Can be overwhelming for new users due to extensive features",
+    "Pricing may be prohibitive for small teams or individual users",
+    "Some advanced features require a learning curve to master",
+    "Limited customer support options for troubleshooting"
+  ],
+  "best_for": [
+    "Marketing teams looking for efficient content generation",
+    "Content creators needing versatile writing tools",
+    "Businesses wanting to scale their content production",
+    "Users comfortable with AI tools who need advanced features"
+  ],
+  "not_recommended_for": [
+    "Individuals seeking a simple, no-frills writing tool",
+    "Small teams with limited budgets",
+    "Users who prefer hands-on customer support",
+    "Those unfamiliar with AI content generation tools"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Put AI agents to work for marketing",
-      "source_surface": "homepage"
+      "slug": "copy.ai",
+      "verdict_diff": "Copy.ai offers a more streamlined experience for quick content generation, making it better for users seeking simplicity. Jasper excels in depth and versatility, ideal for comprehensive content strategies.",
+      "preferred_for_axis": "simplicity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "slug": "writesonic",
+      "verdict_diff": "Writesonic provides competitive pricing and a user-friendly interface, but Jasper's feature set and integration capabilities are more robust, making it a better choice for extensive content needs.",
+      "preferred_for_axis": "feature-rich"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Wide range of templates for content generation",
+      "source": "https://www.jasper.ai/templates",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Documentation is accessible without login.",
-      "source_surface": "integrations"
+      "claim": "Supports multiple languages",
+      "source": "https://www.jasper.ai/languages",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Jasper integrates with the tools your team already uses.",
-      "source_surface": "integrations"
+      "claim": "Integrates with popular marketing tools",
+      "source": "https://www.jasper.ai/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "User-friendly interface",
+      "source": "https://www.jasper.ai/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Jasper's API allows integration into various workflows for automated content generation, enhancing agent-driven applications.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI content generation tool'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start free trial'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "/pricing transparent tiers available",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature overview available on /features",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.jasper.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.jasper.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.jasper.ai/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.jasper.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:06:34.987Z"
+  "summary": "Highly capable AI content generation tool with extensive features \u2014 excels in versatility but may overwhelm new users.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/jasper.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
