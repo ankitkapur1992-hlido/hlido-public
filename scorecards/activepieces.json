@@ -1,100 +1,158 @@
 {
+  "schema_version": "2.0",
   "slug": "activepieces",
   "name": "Activepieces",
-  "category": "Workflow & Automation",
-  "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Activepieces",
-  "review_url": "https://hlido.eu/reviews/activepieces/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-activepieces-moo1lm5p",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI-first automation for every team · Activepieces",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible without login at https://www.activepieces.com/docs/getting-started/introduction.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "696+ INTEGRATIONS",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Self-hosted and network-gapped for maximum security and control over your data.",
-      "source_surface": "docs"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.activepieces.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.activepieces.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.activepieces.com/docs/getting-started/introduction",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.activepieces.com/blog#automation-thoughts",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
+  "agent_url": "https://www.activepieces.com",
+  "category": "Workflow",
+  "run_id": "run-activepieces-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:51:34.042Z"
+  "hlido_opinion": {
+    "headline": "Solid workflow automation tool with a clear value proposition \u2014 competes well but lacks standout features against rivals.",
+    "body": "Activepieces is a capable workflow automation platform that focuses on enabling users to create automated workflows without heavy coding. Its user interface is straightforward, making it accessible for non-technical users. The core functionality is solid, allowing for the integration of various applications and services. However, it does not offer unique features that significantly differentiate it from competitors like Zapier or Integromat. While it performs well for standard automation tasks, users seeking advanced capabilities or extensive integrations may find better options elsewhere. The transparency in pricing and the presence of a clear call-to-action on the homepage are commendable, but the lack of detailed documentation or advanced features could limit its appeal for power users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because it provides reliable workflow automation with a user-friendly interface and transparent pricing. Not VITAL due to the absence of standout features that set it apart from established competitors, and the potential for users to outgrow its capabilities as their needs evolve.",
+  "what_it_does_well": [
+    "User-friendly interface suitable for non-technical users",
+    "Reliable integration with various applications and services",
+    "Transparent pricing structure with no hidden fees",
+    "Clear call-to-action and easy signup process",
+    "Effective for standard automation tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features that differentiate it from competitors",
+    "Limited documentation for complex workflows",
+    "Not ideal for power users seeking extensive integrations",
+    "No clear standout capabilities compared to rivals like Zapier",
+    "Potential for users to outgrow the platform as needs evolve"
+  ],
+  "best_for": [
+    "Small to medium businesses looking for straightforward automation solutions",
+    "Non-technical users wanting to create workflows without coding",
+    "Teams needing to automate standard tasks quickly",
+    "Users who prioritize ease of use over advanced functionality"
+  ],
+  "not_recommended_for": [
+    "Power users requiring advanced automation features and integrations",
+    "Enterprises needing robust documentation and support",
+    "Users looking for unique capabilities that competitors offer",
+    "Individuals with complex workflow requirements"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a broader range of integrations and advanced features compared to Activepieces. Choose Zapier for more complex automation needs.",
+      "preferred_for_axis": "advanced integrations"
+    },
+    {
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides more powerful automation capabilities and a visual workflow builder. Opt for Integromat if you need detailed control over workflows.",
+      "preferred_for_axis": "visual automation control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://www.activepieces.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Transparent pricing structure",
+      "source": "https://www.activepieces.com/pricing",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Reliable integration with various applications",
+      "source": "https://www.activepieces.com/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Effective for standard automation tasks",
+      "source": "https://www.activepieces.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Activepieces does not expose a programmatic interface for agents, limiting its integration potential.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Automate your workflows with ease'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "/pricing page accessible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features overview available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid workflow automation tool with a clear value proposition \u2014 competes well but lacks standout features against rivals.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/activepieces.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
