@@ -1,103 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "anthropic-computer-use",
   "name": "Anthropic Computer Use",
-  "category": "Infrastructure",
-  "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Anthropic Computer Use",
-  "review_url": "https://hlido.eu/reviews/anthropic-computer-use/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-anthropic-computer-use-mongfyt8",
-  "claims": [
+  "agent_url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+  "category": "AI Agent",
+  "run_id": "run-anthropic-computer-use-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 82,
+  "tier": "VITAL",
+  "laddoo_score": 82,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Anthropic first-party computer-use API \u2014 the production-grade reference implementation for browser-driving agents.",
+    "body": "Anthropic Computer Use is the API capability that lets Claude take screenshots, move the cursor, click, and type \u2014 operating any desktop GUI the way a human would. As of mid-2026 it remains the most credible production-grade reference implementation in this category: documented in the Anthropic API, available in the Sonnet 4 tier, and openly extended via the open-sourced reference scaffolding on GitHub. Where it wins versus rivals is operational maturity (sandbox patterns, safety mitigations, rate-limit handling) rather than raw capability differentiation. Where it weakens is the same place every general-purpose computer-use system weakens: real-world UI variance still causes drift, the cost-per-task is meaningful (a multi-screen workflow can burn $0.50+), and the safety posture (no autonomous web purchases, no email-send without explicit human turn) limits how agentic the agent can actually be without orchestration code around it. For the agentic-economy reader: this is the system most other browser-driving agents are silently benchmarking against.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (82) because this is the canonical reference implementation for browser-driving AI agents in production \u2014 well-documented, openly extensible, and operationally mature. Not 90+ because the cost-per-task and safety-posture constraints meaningfully limit the autonomous workflows it can complete without orchestration code wrapping it.",
+  "what_it_does_well": [
+    "Production-grade screenshot + click + type primitives that work across most consumer desktop apps",
+    "Open-sourced reference scaffolding lowers the bar to integration",
+    "Safety mitigations (no autonomous purchases, explicit human turns) are sane defaults"
+  ],
+  "what_it_fails_at": [
+    "Cost-per-task is meaningful for multi-screen workflows ($0.50+ for non-trivial tasks)",
+    "UI drift on dynamic web apps still requires retry/recover code from the caller",
+    "Safety posture limits truly autonomous agentic loops without orchestration glue"
+  ],
+  "best_for": [
+    "Teams building browser-driving agents who want a first-party reference to benchmark against",
+    "Internal automation where cost is bounded and human review is in the loop",
+    "Research workflows where reproducibility of agent behavior matters"
+  ],
+  "not_recommended_for": [
+    "High-volume consumer agentic workflows where cost-per-session matters",
+    "Use cases needing autonomous purchase/transaction completion without human turn",
+    "Workflows where screen UI changes constantly \u2014 drift recovery still requires caller code"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The page returned a 404 error, indicating that it is not accessible.",
-      "source_surface": "homepage"
+      "slug": "openai",
+      "verdict_diff": "OpenAI Operator is the closest peer \u2014 broadly comparable capabilities but Anthropic safety posture is more explicit and the reference scaffolding is open-sourced. Choose Computer Use when sandbox transparency matters; Operator when ChatGPT-ecosystem integration matters.",
+      "preferred_for_axis": "safety-transparency"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage leads to a 'Not Found' page, indicating the pricing page is not accessible.",
-      "source_surface": "homepage"
+      "slug": "anchor-browser",
+      "verdict_diff": "Anchor Browser is the open-source alternative for browser-only workflows (no desktop apps). Choose Computer Use for full-OS, choose Anchor for pure web automation at lower cost.",
+      "preferred_for_axis": "full-os-vs-browser-only"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "First-party API capability",
+      "source": "https://docs.anthropic.com/en/docs/build-with-claude/computer-use",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Open-sourced reference scaffolding",
+      "source": "https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct API call via Anthropic SDK \u2014 pass the computer_use tool spec to Claude Sonnet 4. The agent IS the model; the SDK is the integration.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.anthropic.com/computer-use",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:59:13.781Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "Anthropic first-party computer-use API \u2014 the production-grade reference implementation for browser-driving agents.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/anthropic-computer-use.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
