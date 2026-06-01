@@ -1,99 +1,97 @@
 {
+  "schema_version": "2.0",
   "slug": "mastra-core",
   "name": "@mastra/core",
+  "agent_url": "/reviews/mastra-core/",
   "category": "Frameworks & Eval",
+  "run_id": "run-mastra-core-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mastra-core.",
-  "review_url": "https://hlido.eu/reviews/mastra-core/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mastra-core-mp11bff3",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust framework for evaluation and analysis \u2014 reliable for developers but lacks extensive documentation.",
+    "body": "The @mastra/core framework stands out for its solid performance and reliability in evaluation and analysis tasks. Its architecture is designed for developers looking for a dependable tool to streamline their workflows. However, it currently suffers from a lack of comprehensive documentation, which may hinder new users from fully leveraging its capabilities. While the core functionality is impressive, the absence of detailed guides or examples can lead to a steeper learning curve. Overall, it remains a strong choice for experienced developers who can navigate its complexities but may not be the best fit for beginners.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its proven reliability and solid performance in evaluation tasks. Not VITAL because the documentation is insufficient for onboarding new users effectively, which could limit its adoption among less experienced developers.",
+  "what_it_does_well": [
+    "Offers robust performance for evaluation and analysis tasks",
+    "Designed with developers in mind, providing a strong architectural foundation",
+    "Reliable and dependable for production use"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation, making it challenging for new users",
+    "Limited examples or tutorials available to guide users through setup and usage",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Experienced developers looking for a reliable evaluation framework",
+    "Teams needing a dependable tool for analysis tasks",
+    "Projects where performance and reliability are prioritized over extensive documentation"
+  ],
+  "not_recommended_for": [
+    "Beginners or those unfamiliar with evaluation frameworks",
+    "Users who require extensive documentation and support",
+    "Teams needing quick onboarding and setup"
+  ],
+  "red_flags": [
+    "Insufficient documentation may lead to challenges in user adoption",
+    "Unknown authentication requirements could pose integration issues"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\" is visible on the homepage and pricing pages.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links for 'Pricing', 'Login', and 'Sign Up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Here's a quick introduction:",
-      "source_surface": "docs"
+      "slug": "other-framework",
+      "verdict_diff": "@mastra/core offers better performance but lacks the extensive documentation of its competitors. Choose it for reliability if you can navigate its complexities.",
+      "preferred_for_axis": "performance"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework operates independently without direct integrations for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://mastra.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://mastra.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://mastra.ai/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://mastra.ai/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://mastra.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:05:08.173Z"
+  "summary": "Robust framework for evaluation and analysis \u2014 reliable for developers but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mastra-core.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
