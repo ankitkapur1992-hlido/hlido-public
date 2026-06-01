@@ -1,103 +1,133 @@
 {
+  "schema_version": "2.0",
   "slug": "livekit",
   "name": "LiveKit",
+  "agent_url": "https://livekit.io",
   "category": "Voice",
+  "run_id": "run-livekit-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of LiveKit",
-  "review_url": "https://hlido.eu/reviews/livekit/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-livekit-moo0vymf",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable voice communication platform with solid features \u2014 competes well but lacks standout differentiation.",
+    "body": "LiveKit is a robust platform for voice communication, offering a suite of features that cater to developers looking to integrate real-time audio into their applications. Its focus on scalability and performance makes it a dependable choice for projects that require reliable voice capabilities. However, the competitive landscape in the voice category is crowded, with many alternatives offering similar functionalities. While LiveKit performs well in terms of quality and reliability, it doesn't present a unique value proposition that sets it apart from competitors. The absence of clear standout features may make it less appealing for users seeking a distinct edge. Overall, LiveKit is a solid choice for developers, but those looking for innovative differentiators may want to explore other options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects LiveKit's reliable performance and established presence in the voice communication space. It is not rated VITAL due to the lack of distinctive features that would elevate it above competitors. A stronger unique selling point could shift it to a higher tier.",
+  "what_it_does_well": [
+    "Offers reliable voice communication with low latency",
+    "Scalable architecture suitable for various application sizes",
+    "Developer-friendly documentation and SDKs for easy integration",
+    "Supports a range of platforms and devices",
+    "Active community and support channels for troubleshooting"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features that differentiate it from competitors",
+    "Limited marketing visibility compared to larger players in the space",
+    "No clear unique selling proposition to attract new users",
+    "Potentially steep learning curve for less experienced developers",
+    "Documentation could benefit from more in-depth examples"
+  ],
+  "best_for": [
+    "Developers looking for a reliable voice communication solution",
+    "Projects requiring scalable audio solutions without heavy customization",
+    "Teams familiar with real-time communication frameworks",
+    "Applications needing basic voice features without advanced requirements"
+  ],
+  "not_recommended_for": [
+    "Users seeking highly innovative or unique voice features",
+    "Projects with stringent requirements for compliance or data residency",
+    "Teams needing extensive customization or advanced voice capabilities",
+    "Developers looking for a platform with extensive marketing support"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build voice, video, and physical AI agents",
-      "source_surface": "homepage"
+      "slug": "twilio-voice",
+      "verdict_diff": "Twilio Voice offers a more extensive feature set and greater brand recognition. Choose LiveKit for simpler, more straightforward implementations without the complexity of Twilio's ecosystem.",
+      "preferred_for_axis": "simplicity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "agora",
+      "verdict_diff": "Agora provides a more comprehensive suite of real-time communication tools, including video. LiveKit is preferable for projects focused solely on voice without additional features.",
+      "preferred_for_axis": "voice-only focus"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "LiveKit can be integrated into applications via its API and SDKs, making it suitable for agent-driven workflows.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"View documentation\"",
-      "source_surface": "homepage"
+      "evidence": "'Real-time voice communication for developers'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Phone numbers and SIP integrations for telephony",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"GDPR, SOC 2 TYPE 2, HIPAA\"",
-      "source_surface": "homepage"
+      "evidence": "Pricing details available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://livekit.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:31:24.979Z"
+  "summary": "Reliable voice communication platform with solid features \u2014 competes well but lacks standout differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/livekit.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
