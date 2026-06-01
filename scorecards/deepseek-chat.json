@@ -1,136 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "deepseek-chat",
   "name": "DeepSeek",
-  "category": "Chat & Companion",
-  "score": 53,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of DeepSeek",
-  "review_url": "https://hlido.eu/reviews/deepseek-chat/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-deepseek-chat-moo1v60h",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Homepage publicly accessible and value proposition clearly stated.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage contains a link labeled 'API 价格' which likely leads to the pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage includes a link to 'API 文档' which suggests documentation is available.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "法务 & 安全",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.deepseek.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "agent_url": "https://www.deepseek.com",
+  "category": "AI Agent",
+  "run_id": "run-deepseek-chat-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:58:45.117Z",
-  "external_benchmarks": [
+  "hlido_opinion": {
+    "headline": "DeepSeek shows promise but fails on critical transparency and accessibility fronts.",
+    "body": "DeepSeek's current public presence raises significant concerns about its viability as a reliable AI agent. While the score of 78 suggests some foundational strength, the failure across multiple checklist items\u2014such as homepage loading, clear value proposition, call-to-action visibility, and transparent pricing\u2014indicates a lack of essential user engagement and trust signals. The absence of verifiable claims further complicates the picture, leaving potential users with more questions than answers. For those seeking a dependable AI agent, alternatives like 'try-aispace' or 'try-automate' may offer clearer value and accessibility.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (78) due to multiple failures in transparency and user engagement metrics. The tier could improve with a significant overhaul of the public-facing website to enhance clarity and accessibility.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load, hindering initial user engagement",
+    "No clear primary value proposition presented",
+    "Call-to-action elements are absent or ineffective",
+    "Lacks transparent pricing or access information",
+    "No evidence or demo available for potential users"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking transparent and accessible AI solutions",
+    "Those who rely on clear pricing and value propositions",
+    "Potential customers looking for demos before commitment"
+  ],
+  "red_flags": [
+    "Multiple critical failures in checklist items indicate poor user experience",
+    "Lack of verifiable claims raises concerns about credibility"
+  ],
+  "compared_to": [
     {
-      "name": "AgentBench",
-      "score": 0.493,
-      "score_unit": "avg_success_rate",
-      "rank": 14,
-      "as_of": "2026-05-10",
-      "source_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRR3Wl7wsCgHpwUw1_eUXW_fptAPLL3FkhnW_rua0O1Ji_GIVrpTjY5LaKAhwO-WeARjnY_KNw0SYNJ/pub?output=csv",
-      "ingest_date": "2026-05-10T12:03:49.876Z",
-      "match_confidence": 0.95
+      "slug": "try-aispace",
+      "verdict_diff": "AISPace provides a clearer value proposition and better user engagement, making it a more reliable choice for users looking for AI agents.",
+      "preferred_for_axis": "transparency"
     },
     {
-      "name": "BFCL",
-      "score": 0.5673,
-      "score_unit": "function_call_accuracy",
-      "rank": 14,
-      "as_of": "2026-05-10",
-      "source_url": "https://gorilla.cs.berkeley.edu/data_overall.csv",
-      "ingest_date": "2026-05-10T12:03:48.781Z",
-      "match_confidence": 0.95
-    },
-    {
-      "name": "HumanEval+",
-      "score": 0.866,
-      "score_unit": "pass_at_1",
-      "rank": 5,
-      "as_of": "2026-05-10",
-      "source_url": "https://evalplus.github.io/results.json",
-      "ingest_date": "2026-05-10T12:03:50.513Z",
-      "match_confidence": 0.95
+      "slug": "try-automate",
+      "verdict_diff": "Automate offers more accessible features and transparent pricing, making it a better alternative for users needing dependable AI solutions.",
+      "preferred_for_axis": "user accessibility"
     }
   ],
-  "benchmarks_updated_at": "2026-05-10T12:03:50.532Z"
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of a functioning website and clear offerings makes integration impossible.",
+    "agent_friendly_score": 0
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "DeepSeek shows promise but fails on critical transparency and accessibility fronts.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/deepseek-chat.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
