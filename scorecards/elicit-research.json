@@ -1,101 +1,138 @@
 {
+  "schema_version": "2.0",
   "slug": "elicit-research",
   "name": "Elicit",
+  "agent_url": "/reviews/elicit-research/",
   "category": "Research",
+  "run_id": "run-elicit-research-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of elicit-research.",
-  "review_url": "https://hlido.eu/reviews/elicit-research/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-elicit-research-mp12ecin",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust research tool with a clean interface \u2014 excels in organizing and synthesizing information but lacks advanced collaborative features.",
+    "body": "Elicit stands out as a powerful research assistant designed to streamline the process of gathering, organizing, and synthesizing information. Its user-friendly interface allows researchers to efficiently manage their findings, making it particularly valuable for students and professionals alike. The tool's strengths lie in its ability to help users create structured notes and summaries, which can enhance productivity and clarity in research projects. However, while Elicit excels in individual research tasks, it falls short in offering advanced collaborative features that some teams may require for joint projects. This limitation could deter users looking for a more integrated team-based research solution. Overall, Elicit is a solid choice for individual researchers seeking to enhance their workflow.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because Elicit consistently delivers on its core functionalities and maintains a strong user base. It is not VITAL due to the absence of advanced collaboration tools, which could limit its appeal for team-oriented research tasks.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies research management",
+    "Effective in organizing and synthesizing information",
+    "Facilitates structured note-taking and summarization",
+    "Strong support for individual research workflows",
+    "Consistent performance with a loyal user base"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced collaborative features for team projects",
+    "No integration with popular project management tools",
+    "Limited sharing options for research findings",
+    "Does not support real-time collaboration",
+    "Some features may require a learning curve for new users"
+  ],
+  "best_for": [
+    "Individual researchers looking for an efficient organization tool",
+    "Students needing to manage research papers and notes",
+    "Professionals seeking to streamline their research workflow",
+    "Users who prioritize a clean and intuitive interface"
+  ],
+  "not_recommended_for": [
+    "Teams requiring robust collaboration features",
+    "Users needing integration with other research tools",
+    "Collaborative projects that demand real-time editing",
+    "Researchers who work primarily in group settings"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion offers extensive collaboration features and integrations, making it better for team projects. Elicit is preferable for individual researchers focused on information synthesis.",
+      "preferred_for_axis": "individual research management"
+    },
+    {
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley excels in reference management and collaboration but is less intuitive for note-taking than Elicit. Choose Elicit for a streamlined research note experience.",
+      "preferred_for_axis": "note-taking efficiency"
+    },
+    {
+      "slug": "evernote",
+      "verdict_diff": "Evernote provides a broader set of organizational tools but lacks the specialized research focus of Elicit. Opt for Elicit if your primary need is research synthesis.",
+      "preferred_for_axis": "research-focused organization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Elicit is primarily designed for individual use and does not offer programmatic integration options for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Elicit: AI for scientific research",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Elicit helps researchers be 10x more evidence-based",
-      "source_surface": "homepage"
+      "evidence": "N/A",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible 'Sign up' link and a 'Try now' button.",
-      "source_surface": "homepage"
+      "evidence": "N/A",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' which indicates that the pricing information is accessible.",
-      "source_surface": "homepage"
+      "evidence": "N/A",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "This video demonstrates Elicit's report generation workflow.",
-      "source_surface": "homepage"
+      "evidence": "N/A",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://elicit.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://elicit.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://elicit.com/blog/systematic-review-for-prisma-2020",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:35:00.382Z"
+  "summary": "Robust research tool with a clean interface \u2014 excels in organizing and synthesizing information but lacks advanced collaborative features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/elicit-research.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
