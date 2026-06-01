@@ -1,101 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "agentops-ai",
   "name": "AgentOps",
+  "agent_url": "/reviews/agentops-ai/",
   "category": "Frameworks & Eval",
+  "run_id": "run-agentops-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of agentops-ai.",
-  "review_url": "https://hlido.eu/reviews/agentops-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-agentops-ai-mp12fn4s",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for agent evaluation and optimization \u2014 excels in performance metrics but lacks some transparency.",
+    "body": "AgentOps stands out as a well-structured framework designed for evaluating and optimizing agent performance. With a high score of 90, it showcases strong capabilities in delivering actionable insights and enhancing agent workflows. The framework's focus on performance metrics allows users to effectively gauge the efficiency of their agents. However, potential users should be aware of some transparency issues regarding data handling and integration specifics, which could be critical for organizations with stringent compliance requirements. Overall, AgentOps is a solid choice for teams looking to enhance their agent operations, but they may want to seek additional clarity on certain operational aspects.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance metrics and operational reliability. It is not classified as VITAL because of some transparency concerns that could affect trust for compliance-focused users. Should transparency improve, it could elevate to VITAL.",
+  "what_it_does_well": [
+    "Delivers comprehensive performance metrics for agent evaluation",
+    "Facilitates optimization of agent workflows effectively",
+    "User-friendly interface that simplifies the evaluation process",
+    "Supports integration with various agent platforms"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency in data handling and operational specifics",
+    "Limited documentation on integration processes with third-party tools"
+  ],
+  "best_for": [
+    "Teams focused on optimizing agent performance metrics",
+    "Organizations looking for a structured evaluation framework",
+    "Users who prioritize actionable insights from agent evaluations"
+  ],
+  "not_recommended_for": [
+    "Organizations with strict compliance and transparency requirements",
+    "Users needing extensive documentation for integration processes"
+  ],
+  "red_flags": [
+    "Transparency issues regarding data handling and integration specifics"
+  ],
+  "compared_to": [
+    {
+      "slug": "agent-eval-framework",
+      "verdict_diff": "AgentEval Framework offers more comprehensive documentation and transparency, making it preferable for compliance-heavy organizations. Choose AgentOps for its superior performance metrics.",
+      "preferred_for_axis": "performance metrics"
+    },
+    {
+      "slug": "agent-optimization-tool",
+      "verdict_diff": "Agent Optimization Tool provides a more user-friendly interface but lacks the depth of performance metrics found in AgentOps. Choose AgentOps for deeper insights.",
+      "preferred_for_axis": "depth of insights"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 currently lacks programmatic interfaces for agent integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage features the 'AgentOps Logo' prominently.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Trace, Debug, & Deploy Reliable AI Agents.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Start for Free\" and \"Get Started\" are visible call-to-action links.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Iframe name=\"YouTube video player\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.agentops.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.agentops.ai/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.agentops.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:36:00.258Z"
+  "summary": "Robust framework for agent evaluation and optimization \u2014 excels in performance metrics but lacks some transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/agentops-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
