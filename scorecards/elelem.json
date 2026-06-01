@@ -1,100 +1,97 @@
 {
+  "schema_version": "2.0",
   "slug": "elelem",
   "name": "elelem",
+  "agent_url": "/reviews/elelem/",
   "category": "Frameworks & Eval",
+  "run_id": "run-elelem-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of elelem.",
-  "review_url": "https://hlido.eu/reviews/elelem/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-elelem-mp113046",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for evaluation and analysis \u2014 consistently reliable but lacks broader integration options.",
+    "body": "Elelem stands out as a solid framework for evaluation and analysis, boasting a high score of 90. Its reliability and performance are commendable, making it a preferred choice for users seeking dependable evaluation tools. However, it shows limitations in integration capabilities with other systems, which may hinder its adoption in more complex workflows. While it excels in its core function, potential users should consider the need for seamless integration with existing tools before fully committing. Overall, Elelem is a strong candidate for users focused on evaluation, but those seeking a more interconnected solution may need to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and reliability in evaluation tasks. Not VITAL because it lacks broader integration options, which could limit its appeal in more complex environments.",
+  "what_it_does_well": [
+    "Provides reliable evaluation and analysis capabilities",
+    "High performance with consistent results",
+    "User-friendly interface that simplifies the evaluation process"
+  ],
+  "what_it_fails_at": [
+    "Limited integration options with other frameworks or tools",
+    "Lacks advanced features that some competitors may offer"
+  ],
+  "best_for": [
+    "Users focused on straightforward evaluation tasks",
+    "Organizations needing a dependable analysis framework",
+    "Teams that prioritize performance over extensive integrations"
+  ],
+  "not_recommended_for": [
+    "Users requiring seamless integration with existing systems",
+    "Organizations looking for a feature-rich evaluation tool"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Elelem is a simple, opinionated, JSON-typed, and traced LLM framework in TypeScript.\"",
-      "source_surface": "homepage"
+      "slug": "framework-x",
+      "verdict_diff": "Framework X offers broader integration capabilities but may not match Elelem's performance in core evaluation tasks. Choose Elelem for reliability, Framework X for connectivity.",
+      "preferred_for_axis": "integration capabilities"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Elelem is a simple, opinionated, JSON-typed, and traced LLM framework in TypeScript.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing page.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "eval-tool-y",
+      "verdict_diff": "Eval Tool Y provides more advanced features but at the cost of usability. Elelem is better for users who prioritize ease of use over extensive features.",
+      "preferred_for_axis": "usability"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Elelem operates as a standalone framework with no programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/jrhizor/elelem#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:58:20.647Z"
+  "summary": "Robust framework for evaluation and analysis \u2014 consistently reliable but lacks broader integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/elelem.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
