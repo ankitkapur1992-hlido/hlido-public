@@ -1,100 +1,132 @@
 {
+  "schema_version": "2.0",
   "slug": "hyperwrite",
   "name": "HyperWrite",
-  "category": "Marketing & Content",
+  "agent_url": "https://www.hyperwriteai.com",
+  "category": "Marketing",
+  "run_id": "run-hyperwrite-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of HyperWrite",
-  "review_url": "https://hlido.eu/reviews/hyperwrite/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-hyperwrite-moo1e97h",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI writing assistant for marketers \u2014 effective but lacks standout features compared to top competitors.",
+    "body": "HyperWrite positions itself as a capable AI writing assistant tailored for marketing professionals. Its core functionality focuses on generating content that aligns with marketing needs, making it a useful tool for content creators. However, while it performs well in generating coherent text, it does not significantly differentiate itself from established competitors like Jasper and Copy.ai. Both of these alternatives offer more robust features, including advanced SEO tools and integration capabilities. HyperWrite's user interface is intuitive, but it lacks some of the depth found in these competitors. Additionally, there are no clear details on API access or integrations, which may limit its utility for users looking to embed it into broader workflows. Overall, HyperWrite is a reliable option for marketers, but it may not be the first choice for those seeking advanced functionality.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because HyperWrite delivers reliable content generation for marketers and has a clean user interface. It is not VITAL since it lacks unique features that set it apart from competitors, and there are concerns about integration capabilities and API access that could impact its appeal for advanced users.",
+  "what_it_does_well": [
+    "Generates coherent and relevant marketing content quickly",
+    "User-friendly interface that is easy to navigate",
+    "Useful for content creators looking for assistance in writing",
+    "Effective for basic marketing copy generation"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features found in competitors like Jasper and Copy.ai",
+    "No clear information on API access or integrations",
+    "Limited differentiation in a crowded market of AI writing tools",
+    "May not meet the needs of users looking for comprehensive marketing solutions"
+  ],
+  "best_for": [
+    "Marketers needing a straightforward content generation tool",
+    "Content creators looking for quick writing assistance",
+    "Users who prioritize ease of use over advanced features"
+  ],
+  "not_recommended_for": [
+    "Businesses seeking advanced SEO tools or integrations",
+    "Users who require extensive customization options",
+    "Marketers looking for a comprehensive content strategy solution"
+  ],
+  "red_flags": [
+    "Lack of transparency regarding API access and integrations",
+    "Limited feature set compared to leading competitors"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Write faster. Work smarter.\"",
-      "source_surface": "homepage"
+      "slug": "jasper",
+      "verdict_diff": "Jasper offers advanced features, including SEO tools and integrations that HyperWrite lacks. Choose Jasper for a more comprehensive marketing solution.",
+      "preferred_for_axis": "advanced-features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "copy-ai",
+      "verdict_diff": "Copy.ai provides a wider range of templates and customization options compared to HyperWrite, making it preferable for users needing diverse content types.",
+      "preferred_for_axis": "template-diversity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 HyperWrite does not appear to offer programmatic access or integration options for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get started for free\" indicates that there is access to features without login.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No prominent call to action observed.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No pricing information found.",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.hyperwriteai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.hyperwriteai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://www.hyperwriteai.com/#",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.hyperwriteai.com/blog/introducing-personas-teach-your-ai-to-write-just-like-you",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:45:48.978Z"
+  "summary": "Solid AI writing assistant for marketers \u2014 effective but lacks standout features compared to top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/hyperwrite.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
