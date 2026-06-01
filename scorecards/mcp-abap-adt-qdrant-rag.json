@@ -1,98 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "mcp-abap-adt-qdrant-rag",
   "name": "@mcp-abap-adt/qdrant-rag",
+  "agent_url": "/reviews/mcp-abap-adt-qdrant-rag/",
   "category": "Coding",
+  "run_id": "run-mcp-abap-adt-qdrant-rag-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mcp-abap-adt-qdrant-rag.",
-  "review_url": "https://hlido.eu/reviews/mcp-abap-adt-qdrant-rag/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mcp-abap-adt-qdrant-rag-mp10of7e",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional ABAP integration with Qdrant for RAG \u2014 reliable but lacks standout features.",
+    "body": "The @mcp-abap-adt/qdrant-rag package provides a functional integration between ABAP and Qdrant, enabling retrieval-augmented generation (RAG) capabilities. While it performs reliably within its intended use case, it does not offer significant differentiation from similar tools in the market. The documentation is sparse, which may hinder new users from fully leveraging its capabilities. Additionally, the absence of clear authentication requirements raises concerns about security and usability in production environments. Overall, it serves its purpose but lacks the polish and depth that would elevate it to a more competitive tier.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the integration works as intended and serves a specific niche, but the lack of comprehensive documentation and security clarity prevents it from being rated higher. It could move to VITAL with improved user resources and clearer authentication protocols.",
+  "what_it_does_well": [
+    "Provides a functional integration between ABAP and Qdrant for RAG tasks",
+    "Operates reliably within the specified use case",
+    "Can be useful for teams already working within the ABAP ecosystem"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse, making it difficult for new users to get started",
+    "Lacks standout features compared to similar tools in the market",
+    "Unclear authentication requirements may pose security risks"
+  ],
+  "best_for": [
+    "Developers familiar with ABAP looking to integrate with Qdrant",
+    "Teams needing a straightforward RAG solution without extensive setup",
+    "Users already invested in the ABAP ecosystem"
+  ],
+  "not_recommended_for": [
+    "New users unfamiliar with ABAP or Qdrant, due to limited documentation",
+    "Organizations requiring robust security measures without clear auth protocols",
+    "Teams looking for advanced features beyond basic integration"
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to implementation challenges for new users",
+    "Unclear authentication requirements could pose security risks"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"fr0ster/llm-agent\"",
-      "source_surface": "homepage"
+      "slug": "abap-qdrant-integration",
+      "verdict_diff": "The alternative ABAP-Qdrant integration offers more comprehensive documentation and user support. Choose this if you prioritize guidance and community resources.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing sections.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains links to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "qdrant-sdk",
+      "verdict_diff": "Qdrant SDK provides a more extensive feature set for advanced users. Opt for this if you need deeper functionality beyond basic RAG tasks.",
+      "preferred_for_axis": "feature richness"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the package operates within the ABAP environment without exposing programmatic interfaces for external agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/fr0ster/llm-agent#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/fr0ster/llm-agent/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/fr0ster/llm-agent/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:47:05.493Z"
+  "summary": "Functional ABAP integration with Qdrant for RAG \u2014 reliable but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mcp-abap-adt-qdrant-rag.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
