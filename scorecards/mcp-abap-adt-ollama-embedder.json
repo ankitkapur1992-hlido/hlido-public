@@ -1,98 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "mcp-abap-adt-ollama-embedder",
   "name": "@mcp-abap-adt/ollama-embedder",
+  "agent_url": "/reviews/mcp-abap-adt-ollama-embedder/",
   "category": "Coding",
+  "run_id": "run-mcp-abap-adt-ollama-embedder-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mcp-abap-adt-ollama-embedder.",
-  "review_url": "https://hlido.eu/reviews/mcp-abap-adt-ollama-embedder/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mcp-abap-adt-ollama-embedder-mp10rpbd",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid coding tool for ABAP development; lacks extensive user feedback and clear integration paths.",
+    "body": "The @mcp-abap-adt/ollama-embedder provides a straightforward solution for integrating Ollama into ABAP development workflows. However, it currently suffers from a lack of user feedback and comprehensive documentation, which are critical for developers looking to adopt new tools. The absence of clear integration paths and potential API support raises concerns for those seeking seamless workflows. While it shows promise, users may want to evaluate alternatives that offer more robust community support and clearer documentation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it delivers basic functionality for ABAP integration but lacks the extensive user feedback and documentation that would elevate it to VITAL. Improved community engagement and clearer integration pathways could change its tier status.",
+  "what_it_does_well": [
+    "Facilitates basic integration of Ollama into ABAP development environments",
+    "Offers a straightforward user interface for developers familiar with ABAP",
+    "Potentially useful for teams already using Ollama in other contexts"
+  ],
+  "what_it_fails_at": [
+    "Lacks extensive user feedback and reviews to gauge effectiveness",
+    "Documentation is limited, making it difficult for new users to onboard",
+    "No clear API or integration paths outlined for seamless workflow integration"
+  ],
+  "best_for": [
+    "Developers looking for basic integration of Ollama into ABAP projects",
+    "Teams already familiar with Ollama seeking to expand into ABAP development",
+    "Users who prioritize functionality over extensive documentation"
+  ],
+  "not_recommended_for": [
+    "New users seeking comprehensive onboarding resources",
+    "Teams requiring robust community support and extensive user feedback",
+    "Developers looking for clear integration paths and API support"
+  ],
+  "red_flags": [
+    "Limited documentation may hinder onboarding and effective use",
+    "Lack of user reviews raises questions about reliability and community support"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"fr0ster/llm-agent\"",
-      "source_surface": "homepage"
+      "slug": "abap-toolbox",
+      "verdict_diff": "ABAP Toolbox offers a more established set of tools with better documentation and community support. Choose it for a more comprehensive ABAP development experience.",
+      "preferred_for_axis": "community support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing page.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ollama-integration-tool",
+      "verdict_diff": "Ollama Integration Tool provides clearer API documentation and integration pathways, making it a better choice for developers needing seamless workflows.",
+      "preferred_for_axis": "integration clarity"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration pathways for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/fr0ster/llm-agent#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/fr0ster/llm-agent/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/fr0ster/llm-agent/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:49:29.330Z"
+  "summary": "Solid coding tool for ABAP development; lacks extensive user feedback and clear integration paths.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mcp-abap-adt-ollama-embedder.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
