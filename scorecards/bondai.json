@@ -1,100 +1,150 @@
 {
+  "schema_version": "2.0",
   "slug": "bondai",
   "name": "Meet BondAI | BondAI",
+  "agent_url": "https://bondai.dev",
   "category": "AI Agent",
+  "run_id": "run-bondai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Build highly capable Single and Multi-Agent Systems.",
-  "review_url": "https://hlido.eu/reviews/bondai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-bondai-mox44bfb",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust open-source AI agent framework \u2014 excels in multi-agent systems but lacks detailed user guidance.",
+    "body": "BondAI is a promising open-source tool designed for developing single and multi-agent systems. It handles various complexities such as memory management and error handling, and supports multiple integrations, including OpenAI and Microsoft Azure. The framework is built on recent research, which enhances its capabilities in creating conversable agents. However, while it offers powerful features, the documentation could be more comprehensive, particularly for new users unfamiliar with agent systems. This limits its accessibility compared to alternatives like LangChain or Haystack, which provide more extensive onboarding resources. Overall, BondAI is a solid choice for developers looking to implement sophisticated AI systems, but it may require a steeper learning curve for those new to the space.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because BondAI offers a strong set of features and integrations for developing AI agents, supported by recent research. Not VITAL due to the lack of comprehensive user documentation, which could hinder adoption among less experienced developers. Would move to VITAL with improved onboarding resources and clearer user guidance.",
+  "what_it_does_well": [
+    "Handles implementation complexities like memory and context management effectively.",
+    "Supports a wide range of integrations, including OpenAI and Microsoft Azure services.",
+    "Incorporates advanced research methodologies like ReAct and AutoGen.",
+    "Offers a CLI interface and REST/WebSocket server for flexibility in deployment."
+  ],
+  "what_it_fails_at": [
+    "Documentation lacks depth, making it challenging for new users to get started.",
+    "Limited examples or tutorials available for practical implementation guidance.",
+    "No clear community support or forums for troubleshooting and user engagement."
+  ],
+  "best_for": [
+    "Developers experienced in AI who want to build complex multi-agent systems.",
+    "Teams looking for an open-source solution to customize their AI agent frameworks.",
+    "Projects requiring integration with existing OpenAI or Azure services."
+  ],
+  "not_recommended_for": [
+    "Beginners in AI development who need extensive guidance and support.",
+    "Users looking for a plug-and-play solution without needing to configure complex systems.",
+    "Teams that prioritize comprehensive documentation and community support."
+  ],
+  "red_flags": [
+    "Documentation is sparse, which may lead to implementation challenges for new users.",
+    "Lack of community engagement or support resources could hinder troubleshooting."
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "BondAI is an open-source tool for developing AI Agent Systems.",
-      "source_surface": "homepage"
+      "slug": "langchain",
+      "verdict_diff": "LangChain offers extensive documentation and community support, making it more accessible for beginners. Choose BondAI for deeper customization and advanced features.",
+      "preferred_for_axis": "customization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "haystack",
+      "verdict_diff": "Haystack provides user-friendly onboarding and a strong community, while BondAI excels in handling complex agent systems. Choose BondAI for advanced implementations.",
+      "preferred_for_axis": "advanced-implementations"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Handles implementation complexities including memory/context management",
+      "source": "https://bondai.dev/docs/intro",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Documentation or live demo accessible without login",
-      "source_surface": "docs"
+      "claim": "Supports multiple integrations including OpenAI and Microsoft Azure",
+      "source": "https://bondai.dev/docs/intro#bondai-integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Built on recent research methodologies",
+      "source": "https://bondai.dev/docs/intro",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "BondAI can be integrated into agent-driven workflows through its CLI and REST/WebSocket server, allowing for flexible deployment and interaction.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "BondAI comes out of the box with a powerful set of integrations.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Build highly capable Single and Multi-Agent Systems'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "BondAI handles the implementation complexities including memory/context management, error handling, vector/semantic search and includes a powerful set of out of the box tools and integrations.",
-      "source_surface": "homepage"
+      "evidence": "Open-source tool available for free",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Integrations and features detailed on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://bondai.dev/docs/intro",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://bondai.dev/docs/intro#__docusaurus_skipToContent_fallback",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://bondai.dev/docs/intro#bondai-integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://bondai.dev/docs/category/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-08T16:12:03.670Z"
+  "summary": "Robust open-source AI agent framework \u2014 excels in multi-agent systems but lacks detailed user guidance.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/bondai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
