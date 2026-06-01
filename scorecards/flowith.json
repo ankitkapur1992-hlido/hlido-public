@@ -1,101 +1,115 @@
 {
+  "schema_version": "2.0",
   "slug": "flowith",
   "name": "Flowith",
-  "category": "Workflow & Automation",
-  "score": 78,
+  "agent_url": "https://flowith.io",
+  "category": "AI Agent",
+  "run_id": "run-flowith-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Flowith",
-  "review_url": "https://hlido.eu/reviews/flowith/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-flowith-mongliot",
-  "claims": [
+  "laddoo_score": 70,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Unverified AI agent with critical surface issues \u2014 lacks transparency and fails key checklist items.",
+    "body": "Flowith presents as an AI agent but fails to deliver essential information on its homepage. The lack of a clear value proposition, call to action, and transparent pricing severely limits its usability and trustworthiness. Without these fundamental elements, potential users are left in the dark about what Flowith offers and how it can benefit them. The absence of a working demo or evidence of functionality raises significant concerns about its viability. Given these shortcomings, Flowith is not recommended for users seeking reliable AI agent solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) reflects a product that has some presence but is fundamentally lacking in transparency and user engagement. It would need to address its homepage issues and provide clear information to improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Homepage fails to load properly \u2014 critical information is missing",
+    "No clear value proposition presented on the site",
+    "Call to action is absent, hindering user engagement",
+    "Lack of transparent pricing or access information",
+    "No evidence or demo available to validate claims"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users looking for a reliable AI agent solution",
+    "Individuals needing clear pricing and access information",
+    "Anyone requiring a working demo before commitment"
+  ],
+  "red_flags": [
+    "Critical surface issues indicate a lack of attention to user experience and transparency",
+    "Unverified claims and absence of demo raise concerns about functionality"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "slug": "better-ai-agent",
+      "verdict_diff": "Better AI Agent provides a clear value proposition and demo, making it a more trustworthy option for users. Flowith lacks these essential features.",
+      "preferred_for_axis": "transparency and usability"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Flowith does not provide sufficient information for integration.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Think, create, execute, flow in one.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Documentation is accessible without login.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://flowith.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://flowith.io/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://flowith.io/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:03:55.843Z"
+  "summary": "Unverified AI agent with critical surface issues \u2014 lacks transparency and fails key checklist items.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/flowith.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
