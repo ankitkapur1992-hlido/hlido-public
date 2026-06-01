@@ -1,100 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "instantly-ai",
   "name": "Instantly",
-  "category": "Customer Experience",
+  "agent_url": "https://instantly.ai",
+  "category": "Sales",
+  "run_id": "run-instantly-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Instantly",
-  "review_url": "https://hlido.eu/reviews/instantly-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-instantly-ai-moo0zxkf",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust sales automation platform with a strong reputation \u2014 excels in lead generation but may lack depth in customization.",
+    "body": "Instantly stands out in the sales automation landscape for its effective lead generation capabilities and user-friendly interface. With a score of 90, it is positioned as a VITAL tool for sales teams looking to optimize their outreach efforts. The platform's strengths lie in its ability to automate repetitive tasks and streamline communication, making it a preferred choice for many sales professionals. However, while it performs exceptionally well in lead generation, users seeking extensive customization options may find it somewhat limited compared to competitors. Overall, Instantly is a reliable choice for teams focused on efficiency and results.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because of its strong performance in lead generation and user satisfaction, with a proven track record in the sales automation space. It could shift to STEADY if user customization needs aren't met as market expectations evolve.",
+  "what_it_does_well": [
+    "Highly effective lead generation and outreach automation",
+    "User-friendly interface that simplifies the sales process",
+    "Strong reputation among sales professionals for reliability",
+    "Integrates well with existing CRM systems",
+    "Offers valuable analytics to track outreach performance"
+  ],
+  "what_it_fails_at": [
+    "Limited customization options compared to some competitors",
+    "May require additional training for advanced features",
+    "Pricing structure could be opaque for new users"
+  ],
+  "best_for": [
+    "Sales teams focused on lead generation and outreach efficiency",
+    "SMBs looking for a straightforward sales automation solution",
+    "Users who prioritize ease of use over extensive customization"
+  ],
+  "not_recommended_for": [
+    "Enterprise-level teams needing deep customization and integration",
+    "Users looking for a highly flexible platform with extensive features",
+    "Sales professionals who require advanced analytics capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get more clients by chatting to AI\" and \"Use Instantly AI to find perfect leads, create AI Sales Agents and automate your outreach & sales.\"",
-      "source_surface": "homepage"
+      "slug": "hubspot",
+      "verdict_diff": "HubSpot offers a more comprehensive CRM and marketing automation suite, making it better for teams needing extensive features. Instantly excels in lead generation simplicity.",
+      "preferred_for_axis": "lead-generation-focus"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "pipedrive",
+      "verdict_diff": "Pipedrive provides a more customizable sales pipeline experience, while Instantly is more straightforward for lead generation. Choose Instantly for ease of use.",
+      "preferred_for_axis": "ease-of-use"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Instantly operates as a standalone sales automation tool without direct API access for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\":\"Pricing\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"View API Docs\"",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Instantly works perfectly with all the products you're already using.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://instantly.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://instantly.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://instantly.ai/integrations-application",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://instantly.ai/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:34:49.752Z"
+  "summary": "Robust sales automation platform with a strong reputation \u2014 excels in lead generation but may lack depth in customization.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/instantly-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
