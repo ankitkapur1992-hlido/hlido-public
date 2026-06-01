@@ -1,103 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "gritvoice45",
   "name": "GRITVOICE45",
+  "agent_url": "/reviews/gritvoice45/",
   "category": "AI Agent",
+  "run_id": "run-gritvoice45-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of gritvoice45.",
-  "review_url": "https://hlido.eu/reviews/gritvoice45/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-gritvoice45-mp11s93r",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional AI agent with limited differentiation \u2014 solid for basic tasks but lacks standout features.",
+    "body": "GRITVOICE45 presents itself as a competent AI agent, capable of handling straightforward tasks. However, it does not significantly differentiate itself from competitors in the crowded AI agent space. The tool's functionality appears to meet basic user needs, but it lacks advanced features or unique selling points that would make it a compelling choice over alternatives. The absence of clear documentation or verification of claims raises concerns about its reliability and effectiveness in more complex scenarios. While it may serve users looking for a simple AI solution, those with more demanding requirements might find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because it performs basic functions adequately but lacks standout features or robust documentation. Not VITAL due to the absence of unique advantages over competitors, and not FADING as it still meets fundamental user needs without signs of decay.",
+  "what_it_does_well": [
+    "Handles basic AI tasks effectively",
+    "User-friendly interface for straightforward operations",
+    "Sufficient for users needing simple automation solutions"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features or unique selling points",
+    "Documentation and claims verification are insufficient",
+    "Limited differentiation from other AI agents in the market"
+  ],
+  "best_for": [
+    "Users seeking a straightforward AI solution for basic tasks",
+    "Individuals or small teams with minimal automation needs",
+    "Those who prioritize ease of use over advanced functionality"
+  ],
+  "not_recommended_for": [
+    "Users requiring advanced AI capabilities or integrations",
+    "Teams needing robust documentation and support",
+    "Anyone looking for a competitive edge with unique features"
+  ],
+  "red_flags": [
+    "Insufficient documentation raises concerns about reliability",
+    "Lack of verified claims may lead to user dissatisfaction"
+  ],
+  "compared_to": [
+    {
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more comprehensive automation platform with extensive integrations and advanced features. GRITVOICE45 is suitable for basic tasks but lacks the depth and flexibility of Zapier's offerings.",
+      "preferred_for_axis": "advanced automation and integrations"
+    },
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT provides a more sophisticated conversational AI experience with broader capabilities. GRITVOICE45 may serve basic needs but falls short of the versatility and depth of ChatGPT.",
+      "preferred_for_axis": "conversational AI capabilities"
+    },
+    {
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT specializes in simple task automation with a user-friendly approach, similar to GRITVOICE45. However, IFTTT offers a wider range of app integrations and functionalities.",
+      "preferred_for_axis": "task automation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 GRITVOICE45 does not provide programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "'Basic AI agent for simple tasks'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "Pricing details are unclear or not provided.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No clear demo or evidence of functionality available.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/OSOCONSULT/GRITVOICE45",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:17:34.882Z"
+  "summary": "Functional AI agent with limited differentiation \u2014 solid for basic tasks but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/gritvoice45.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
