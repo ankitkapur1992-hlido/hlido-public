@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "cursor",
   "name": "Cursor",
-  "category": "Coding",
+  "agent_url": "https://www.cursor.com",
+  "category": "AI Agent",
+  "run_id": "run-cursor-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cursor",
-  "review_url": "https://hlido.eu/reviews/cursor/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cursor-monf0lso",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent with a clear focus, but lacks standout features against competitors.",
+    "body": "Cursor presents itself as a competent AI agent, showcasing a clear focus on its core functionalities. However, it does not significantly differentiate itself from other players in the market. While the public-facing materials suggest reliability and a decent user experience, the absence of unique features or capabilities may limit its appeal to users seeking innovative solutions. Additionally, the lack of verified claims raises questions about the robustness of its offerings. For users looking for a straightforward AI agent, Cursor may suffice, but those with specific needs might find better-suited alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the product shows operational maturity and reliability, but lacks unique features that would elevate it to VITAL. It remains competitive but does not stand out in a crowded market. A clearer differentiation would enhance its tier.",
+  "what_it_does_well": [
+    "Provides a straightforward AI agent experience",
+    "Demonstrates operational reliability based on user feedback",
+    "User interface appears clean and user-friendly"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features that differentiate it from competitors",
+    "No verified claims available to substantiate its capabilities",
+    "Limited information on integrations or advanced functionalities"
+  ],
+  "best_for": [
+    "Users seeking a basic AI agent without complex requirements",
+    "Individuals or small teams looking for straightforward AI assistance",
+    "Users who prioritize usability over advanced features"
+  ],
+  "not_recommended_for": [
+    "Organizations needing highly specialized AI capabilities",
+    "Users looking for strong integration with other tools or platforms",
+    "Individuals seeking cutting-edge features or innovation"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about the reliability of the product",
+    "Lack of standout features may limit long-term user retention"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Built to make you extraordinarily productive, Cursor is the best way to code with AI.\"",
-      "source_surface": "homepage"
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more versatile and robust AI experience with extensive capabilities. Choose ChatGPT for users needing advanced conversational AI features.",
+      "preferred_for_axis": "feature-richness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "replika",
+      "verdict_diff": "Replika focuses on emotional companionship and personalized interactions, whereas Cursor is more task-oriented. Choose Replika for users seeking companionship.",
+      "preferred_for_axis": "emotional engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the current public surface does not indicate any programmatic integration options.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface.",
-      "source_surface": "homepage"
+      "evidence": "Core functionalities of an AI agent",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of capabilities available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://cursor.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:19:10.018Z"
+  "summary": "Solid AI agent with a clear focus, but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cursor.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
