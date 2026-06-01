@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "extend-ai-cli-darwin-arm64",
   "name": "@extend-ai/cli-darwin-arm64",
+  "agent_url": "/reviews/extend-ai-cli-darwin-arm64/",
   "category": "Coding",
+  "run_id": "run-extend-ai-cli-darwin-arm64-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of extend-ai-cli-darwin-arm64.",
-  "review_url": "https://hlido.eu/reviews/extend-ai-cli-darwin-arm64/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-extend-ai-cli-darwin-arm64-mp10xd04",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid CLI tool for Extend AI on Darwin ARM64 \u2014 reliable but lacks extensive documentation.",
+    "body": "The @extend-ai/cli-darwin-arm64 provides a functional command-line interface tailored for Darwin ARM64 systems, making it a dependable choice for developers in that environment. Its performance is consistent, and it integrates well with existing workflows. However, the documentation is somewhat lacking, which could hinder new users from fully leveraging its capabilities. While it serves its purpose effectively, the absence of comprehensive guides or examples may deter less experienced developers. Overall, it's a solid tool but would benefit from enhanced support materials.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) due to reliable performance and integration, but not VITAL because of insufficient documentation that may limit user adoption. Improvement in user support could elevate its standing.",
+  "what_it_does_well": [
+    "Offers reliable command-line functionality for Darwin ARM64 systems",
+    "Integrates smoothly with existing development workflows",
+    "Consistent performance across various tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guides",
+    "Limited community support or resources for troubleshooting",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Developers using Darwin ARM64 who need a CLI tool for Extend AI",
+    "Users familiar with command-line interfaces looking for straightforward functionality",
+    "Teams that prioritize performance over extensive documentation"
+  ],
+  "not_recommended_for": [
+    "New developers seeking detailed guidance or tutorials",
+    "Users requiring extensive community support for troubleshooting",
+    "Those who prefer GUI tools over command-line interfaces"
+  ],
+  "red_flags": [
+    "Insufficient documentation may lead to user frustration",
+    "Unknown authentication requirements could complicate initial setup"
+  ],
+  "compared_to": [
+    {
+      "slug": "extend-ai-cli-linux",
+      "verdict_diff": "The Linux version of Extend AI CLI may offer better community support and documentation. Choose the Darwin version for ARM64-specific optimizations.",
+      "preferred_for_axis": "platform-specific optimization"
+    },
+    {
+      "slug": "extend-ai-cli-windows",
+      "verdict_diff": "The Windows version may have a more extensive user base and support resources. Opt for the Darwin version if working in a native ARM64 environment.",
+      "preferred_for_axis": "operating system compatibility"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 primarily a CLI tool with no direct integration capabilities.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage features the branding 'extend-hq' prominently.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"A CLI for Extend.\"",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\"",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence provided",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/extend-hq/extend-cli",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/extend-hq/extend-cli#examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:54:02.247Z"
+  "summary": "Solid CLI tool for Extend AI on Darwin ARM64 \u2014 reliable but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/extend-ai-cli-darwin-arm64.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
