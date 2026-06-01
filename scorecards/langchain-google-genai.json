@@ -1,99 +1,99 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-google-genai",
   "name": "@langchain/google-genai",
+  "agent_url": "/reviews/langchain-google-genai/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-google-genai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-google-genai.",
-  "review_url": "https://hlido.eu/reviews/langchain-google-genai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-google-genai-mp112l7w",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A solid but unremarkable framework for Google GenAI integration \u2014 lacks standout features compared to competitors.",
+    "body": "The @langchain/google-genai framework provides a basic structure for integrating Google GenAI capabilities into applications. While it serves its purpose adequately, it does not offer significant differentiation from similar frameworks in the market. The documentation is sparse, and there are concerns about the lack of community engagement and support, which may hinder adoption for more complex projects. Users looking for robust features or extensive support might find better options in alternatives like Hugging Face's Transformers or OpenAI's API integrations. Overall, it is a viable choice for specific use cases but does not stand out in a crowded field.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functional adequacy for basic integrations, but it lacks the community support and advanced features that would elevate it to VITAL status. A more engaged user base or improved documentation could change this tier.",
+  "what_it_does_well": [
+    "Provides a basic framework for integrating Google GenAI capabilities.",
+    "Functional for straightforward applications without complex requirements."
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation for advanced use cases.",
+    "Minimal community engagement and support, limiting user resources.",
+    "No standout features compared to other frameworks in the same space."
+  ],
+  "best_for": [
+    "Developers seeking a simple integration with Google GenAI for basic tasks.",
+    "Projects where advanced features are not a priority."
+  ],
+  "not_recommended_for": [
+    "Users needing extensive documentation or community support.",
+    "Complex applications requiring advanced features or customization."
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to challenges in implementation.",
+    "Limited community engagement could hinder troubleshooting and support."
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face offers a more robust framework with extensive documentation and community support. Choose Hugging Face for advanced features and a larger ecosystem.",
+      "preferred_for_axis": "feature-rich support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is visible in the navigation menu.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"link\",\"name\":\"Pricing\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides a well-documented and powerful alternative for developers needing advanced AI capabilities. Opt for OpenAI if seeking deeper integration and features.",
+      "preferred_for_axis": "advanced integration capabilities"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework does not expose programmatic interfaces for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/providers/langchain-google-genai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs/blob/main/libs/providers/langchain-google-genai/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:57:53.780Z"
+  "summary": "A solid but unremarkable framework for Google GenAI integration \u2014 lacks standout features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-google-genai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
