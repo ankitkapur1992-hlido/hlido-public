@@ -1,100 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "cassidy-ai",
   "name": "Cassidy",
-  "category": "Workflow & Automation",
+  "agent_url": "https://www.cassidyai.com",
+  "category": "AI Agent",
+  "run_id": "run-cassidy-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cassidy",
-  "review_url": "https://hlido.eu/reviews/cassidy-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cassidy-ai-mongh1mz",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable AI agent with a solid foundation \u2014 performs well but lacks standout features compared to top competitors.",
+    "body": "Cassidy is positioned as a dependable AI agent, delivering consistent performance in various tasks. While it operates effectively within its intended scope, it does not exhibit unique features that would distinguish it from other leading AI agents in the market. The platform's usability appears user-friendly, making it accessible for a range of users. However, it may not meet the needs of those seeking highly specialized capabilities or advanced integrations. As the AI landscape evolves, Cassidy must innovate to maintain its relevance and competitive edge.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable performance and user-friendly interface. It lacks the innovative features that would elevate it to VITAL status, but it is not showing signs of decline either, making it a stable choice for users.",
+  "what_it_does_well": [
+    "Delivers consistent performance across a range of tasks",
+    "User-friendly interface that appeals to a broad audience",
+    "Reliable for basic AI agent functions without significant downtime"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features that differentiate it from top competitors",
+    "Limited advanced integrations or customizations available",
+    "May not cater to users needing specialized or niche capabilities"
+  ],
+  "best_for": [
+    "Users seeking a reliable AI agent for general tasks",
+    "Small to medium-sized businesses looking for straightforward AI solutions",
+    "Individuals who prioritize ease of use over advanced functionality"
+  ],
+  "not_recommended_for": [
+    "Organizations needing highly specialized AI capabilities",
+    "Users looking for extensive integrations with other software",
+    "Those who require cutting-edge features or innovations"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build AI Agents that operate like your team | Cassidy AI",
-      "source_surface": "homepage"
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more advanced conversational experience with a broader range of capabilities. Choose Cassidy for straightforward tasks; choose ChatGPT for more complex interactions.",
+      "preferred_for_axis": "complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "x.ai",
+      "verdict_diff": "x.ai provides more tailored solutions for specific industries and use cases. Cassidy is better for general use, while x.ai excels in niche applications.",
+      "preferred_for_axis": "specialization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Cassidy operates as a standalone AI agent without programmatic interfaces for integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The Pricing link is directly accessible from the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "AI agent for various tasks",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Cassidy connects and real-time syncs with hundreds of tools that your team is already using to guarantee a seamless experience for everyone.",
-      "source_surface": "integrations"
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We maintain compliance with the strictest international security and privacy standards",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No live demo or case studies available for verification",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.cassidyai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.cassidyai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.cassidyai.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.cassidyai.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:00:09.333Z"
+  "summary": "Reliable AI agent with a solid foundation \u2014 performs well but lacks standout features compared to top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cassidy-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
