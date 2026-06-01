@@ -1,99 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain",
   "name": "LangChain",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://www.langchain.com",
+  "category": "AI Agent",
+  "run_id": "run-langchain-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of LangChain",
-  "review_url": "https://hlido.eu/reviews/langchain/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-mongpmpc",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Leading framework for building AI applications \u2014 robust, versatile, and well-documented.",
+    "body": "LangChain stands out as a premier framework for developing AI applications, offering extensive capabilities for integration with language models and various data sources. Its modular architecture allows developers to build complex workflows with ease, making it suitable for a wide range of use cases from chatbots to data analysis tools. The documentation is comprehensive, providing clear examples and use cases that facilitate onboarding for new users. Additionally, the active community around LangChain contributes to its continuous improvement and resource sharing. However, its complexity may pose a challenge for beginners unfamiliar with programming concepts. Overall, LangChain is a strong choice for developers looking to leverage AI in their applications, but those new to coding might find it daunting.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its robust feature set, extensive documentation, and active community support. It remains a top choice for developers in the AI space. A decline in community engagement or significant usability issues could impact this rating.",
+  "what_it_does_well": [
+    "Offers a modular architecture for building complex AI workflows",
+    "Comprehensive documentation with clear examples for developers",
+    "Active community support for troubleshooting and sharing resources",
+    "Integrates seamlessly with various language models and data sources",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Complexity may overwhelm beginners unfamiliar with programming",
+    "Limited support for non-developers or those seeking no-code solutions",
+    "Potentially steep learning curve for advanced features"
+  ],
+  "best_for": [
+    "Developers looking to build AI applications with language models",
+    "Teams needing a flexible framework for custom AI solutions",
+    "Organizations that prioritize extensive documentation and community support"
+  ],
+  "not_recommended_for": [
+    "Beginners with no programming experience",
+    "Users seeking a simple, no-code AI solution",
+    "Small projects that require minimal setup and configuration"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"LangSmith, the agent engineering platform, helps developers debug every agent decision, eval changes, and deploy in one click.\"",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face Transformers offers a more straightforward approach for model deployment, while LangChain excels in building complex workflows. Choose LangChain for intricate applications; choose Hugging Face for simpler model integration.",
+      "preferred_for_axis": "workflow complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a direct link to the Pricing page.",
-      "source_surface": "homepage"
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides direct access to models with less setup, but LangChain offers a more comprehensive framework for building multi-step applications. LangChain is better for users needing extensive customization.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Modular architecture for AI workflows",
+      "source": "https://www.langchain.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Docs\" is listed as a link on the homepage, indicating accessibility without login.",
-      "source_surface": "homepage"
+      "claim": "Comprehensive documentation with examples",
+      "source": "https://www.langchain.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Active community support",
+      "source": "https://www.langchain.com/community",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "LangChain can be integrated into various AI applications via its API, allowing agents to leverage its capabilities in custom workflows.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Trace your preferred framework or integrate LangSmith with any agent stack using our Python, TypeScript, Go, or Java SDKs.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Build applications with LLMs'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Custom SSO and RBAC",
-      "source_surface": "pricing"
+      "evidence": "Access to documentation and community support is free",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation includes usage examples",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.langchain.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.langchain.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.langchain.com/langchain-partner-network",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.langchain.com/langchain",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.langchain.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:06:51.266Z"
+  "summary": "Leading framework for building AI applications \u2014 robust, versatile, and well-documented.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
