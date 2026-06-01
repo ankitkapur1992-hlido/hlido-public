@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "create-langgraph",
-  "name": "create-langgraph",
+  "name": "Create LangGraph",
+  "agent_url": "/reviews/create-langgraph/",
   "category": "Frameworks & Eval",
+  "run_id": "run-create-langgraph-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of create-langgraph.",
-  "review_url": "https://hlido.eu/reviews/create-langgraph/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-create-langgraph-mp1103ev",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for language graph creation \u2014 reliable for developers, but lacks extensive documentation.",
+    "body": "Create LangGraph stands out as a dependable framework for building language graphs, appealing primarily to developers looking for a straightforward solution. Its core functionality is solid, allowing for efficient graph construction and manipulation. However, the documentation is a notable weak point; it does not provide comprehensive guidance, which may hinder new users or those unfamiliar with graph theory. While the framework performs well, its lack of robust support materials could limit its adoption among less experienced developers. Overall, it serves as a useful tool for those who can navigate its limitations effectively.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the framework is functional and serves its purpose well, but the lack of extensive documentation keeps it from being a top-tier choice. It could move to VITAL with improved support materials or community engagement.",
+  "what_it_does_well": [
+    "Provides a reliable framework for constructing language graphs",
+    "Efficient manipulation of graph structures",
+    "Appeals to developers looking for straightforward solutions"
+  ],
+  "what_it_fails_at": [
+    "Documentation is limited and lacks depth",
+    "May not be suitable for users unfamiliar with graph theory",
+    "Community support appears minimal"
+  ],
+  "best_for": [
+    "Developers experienced with graph theory",
+    "Projects requiring quick implementation of language graphs",
+    "Users who can work independently without extensive guidance"
+  ],
+  "not_recommended_for": [
+    "Beginners or those unfamiliar with graph concepts",
+    "Users needing comprehensive documentation and support",
+    "Teams looking for a highly collaborative framework"
+  ],
+  "red_flags": [
+    "Limited documentation may lead to implementation challenges",
+    "Minimal community engagement could hinder support"
+  ],
+  "compared_to": [
+    {
+      "slug": "graph-tool",
+      "verdict_diff": "Graph-tool offers more comprehensive documentation and community support, making it a better choice for users needing guidance. Create LangGraph is simpler but may leave users wanting more resources.",
+      "preferred_for_axis": "documentation and community support"
+    },
+    {
+      "slug": "networkx",
+      "verdict_diff": "NetworkX provides a more extensive set of features for graph manipulation and analysis. Create LangGraph is more straightforward but may lack advanced capabilities.",
+      "preferred_for_axis": "feature richness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Create LangGraph does not provide programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"GitHub - langchain-ai/langgraphjs: Framework to build resilient language agents as graphs. · GitHub\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear primary value proposition found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langgraphjs#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/langgraphjs/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:56:00.999Z"
+  "summary": "Solid framework for language graph creation \u2014 reliable for developers, but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/create-langgraph.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
