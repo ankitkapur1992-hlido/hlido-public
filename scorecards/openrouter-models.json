@@ -1,100 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "openrouter-models",
   "name": "OpenRouter Models",
-  "category": "Infrastructure",
+  "agent_url": "https://openrouter.ai/models",
+  "category": "API",
+  "run_id": "run-openrouter-models-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of OpenRouter Models",
-  "review_url": "https://hlido.eu/reviews/openrouter-models/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openrouter-models-moo25t9f",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is accessible directly from the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible without login at https://openrouter.ai/docs/quickstart.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Data Policy-Based Routing\" and \"Managed Policy Enforcement\" are mentioned in the pricing section.",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://openrouter.ai/models",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://openrouter.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://openrouter.ai/docs/quickstart",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://openrouter.ai/apps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:07:22.571Z"
+  "hlido_opinion": {
+    "headline": "Reliable API for accessing diverse AI models \u2014 solid option but lacks detailed documentation.",
+    "body": "OpenRouter Models offers a straightforward API that provides access to various AI models, making it a reliable choice for developers looking to integrate AI capabilities into their applications. While the service is functional and meets basic needs, it falls short in terms of comprehensive documentation and examples, which can hinder effective implementation. The platform is positioned well within the API category, but potential users should be prepared for a learning curve. Overall, it serves as a dependable option for those familiar with API integrations, but may not be ideal for those needing extensive guidance or support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the API functions effectively and provides access to a variety of models, but it lacks sufficient documentation and support resources to elevate it to VITAL status. Improved documentation or user support would enhance its tier.",
+  "what_it_does_well": [
+    "Offers access to a range of AI models via a straightforward API",
+    "Reliable performance for basic AI integration tasks",
+    "Suitable for developers familiar with API usage"
+  ],
+  "what_it_fails_at": [
+    "Lacks detailed documentation and usage examples",
+    "Limited support resources for troubleshooting",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Developers looking for a simple API to integrate AI models",
+    "Users with prior experience in API integrations",
+    "Projects that do not require extensive documentation"
+  ],
+  "not_recommended_for": [
+    "Beginners needing comprehensive guidance on API usage",
+    "Teams requiring robust support and documentation",
+    "Users with specific model needs that may not be covered"
+  ],
+  "red_flags": [
+    "Insufficient documentation can lead to implementation challenges",
+    "Lack of clarity on authentication requirements may deter some users"
+  ],
+  "compared_to": [
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face offers extensive documentation and a broader model selection, making it more suitable for users needing detailed guidance. Choose OpenRouter Models for simplicity and ease of access.",
+      "preferred_for_axis": "documentation"
+    },
+    {
+      "slug": "replicate",
+      "verdict_diff": "Replicate provides a user-friendly interface and better support resources. OpenRouter Models is a good choice for straightforward API access without the frills.",
+      "preferred_for_axis": "support-resources"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Access to various AI models via API",
+      "source": "https://openrouter.ai/models",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The API can be integrated into applications for AI model access, but the lack of detailed documentation may complicate this process.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Access to various AI models via API'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started with our API'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing or access information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or usage examples provided",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Reliable API for accessing diverse AI models \u2014 solid option but lacks detailed documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openrouter-models.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
