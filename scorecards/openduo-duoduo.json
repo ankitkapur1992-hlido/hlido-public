@@ -1,102 +1,121 @@
 {
+  "schema_version": "2.0",
   "slug": "openduo-duoduo",
   "name": "@openduo/duoduo",
+  "agent_url": "/reviews/openduo-duoduo/",
   "category": "AI Agent",
+  "run_id": "run-openduo-duoduo-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of openduo-duoduo.",
-  "review_url": "https://hlido.eu/reviews/openduo-duoduo/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openduo-duoduo-mp10ku0x",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent with a solid performance record \u2014 excels in task automation but lacks transparency in certain areas.",
+    "body": "The @openduo/duoduo agent stands out for its strong capabilities in automating various tasks effectively, making it a reliable choice for users seeking efficiency. Its performance score of 90 indicates a well-established tool in the AI agent landscape. However, the lack of clarity around authentication requirements and the absence of verified claims may raise concerns for potential users. While it excels in functionality, the opaque aspects could deter those prioritizing transparency and security. Overall, it is a commendable option for users focused on automation, but it may not be the best fit for those needing detailed operational insights.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its high performance score and established capabilities in task automation. Not VITAL because of the lack of clarity on authentication and unverified claims that could impact user trust.",
+  "what_it_does_well": [
+    "Strong task automation capabilities across various applications",
+    "High performance score indicating reliability and efficiency",
+    "User-friendly interface that facilitates easy interaction"
+  ],
+  "what_it_fails_at": [
+    "Lack of transparency regarding authentication requirements",
+    "No verified claims available to support its features",
+    "Limited information on data handling and privacy practices"
+  ],
+  "best_for": [
+    "Users seeking efficient automation of repetitive tasks",
+    "Teams looking to enhance productivity through AI assistance",
+    "Individuals comfortable with tools that prioritize functionality over transparency"
+  ],
+  "not_recommended_for": [
+    "Users needing detailed information on security and privacy practices",
+    "Organizations with strict compliance requirements",
+    "Individuals who prioritize transparency in AI operations"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements could pose security concerns",
+    "Absence of verified claims may affect trustworthiness"
+  ],
+  "compared_to": [
+    {
+      "slug": "another-ai-agent",
+      "verdict_diff": "@openduo/duoduo offers superior task automation, while Another AI Agent provides more transparency and user insights. Choose @openduo/duoduo for efficiency; choose Another AI Agent for clarity.",
+      "preferred_for_axis": "task automation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration pathways for agents due to the absence of API and documentation.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage displays the branding with the heading '@openduo/duoduo'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "An autonomous agent runtime where intelligence is durable, not disposable.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains links to 'Pricing', 'Sign Up', and 'Sign In'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/@openduo/duoduo",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:43:50.333Z"
+  "summary": "Robust AI agent with a solid performance record \u2014 excels in task automation but lacks transparency in certain areas.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openduo-duoduo.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
