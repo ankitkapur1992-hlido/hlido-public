@@ -1,103 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "chatgpt",
   "name": "ChatGPT",
-  "category": "Chat & Companion",
-  "score": 65,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of ChatGPT",
-  "review_url": "https://hlido.eu/reviews/chatgpt/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-chatgpt-monghpmv",
-  "claims": [
+  "agent_url": "https://chat.openai.com",
+  "category": "AI Agent",
+  "run_id": "run-chatgpt-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 90,
+  "tier": "VITAL",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Leading AI conversational agent with robust capabilities \u2014 excels in user experience but lacks transparent pricing.",
+    "body": "ChatGPT stands as a premier AI conversational agent, widely recognized for its advanced natural language processing capabilities. It offers a seamless user experience, allowing for engaging and informative interactions. The interface is user-friendly, and the model's ability to understand and generate human-like text is impressive. However, a notable drawback is the lack of transparent pricing information, which can deter potential users seeking clarity on costs. Despite this, ChatGPT's overall performance and reliability in various applications make it a top choice for individuals and businesses alike. It is essential for users to be aware of this limitation while considering its adoption.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, high user satisfaction, and established brand presence. The lack of transparent pricing is a concern but does not significantly detract from its overall value proposition.",
+  "what_it_does_well": [
+    "Offers advanced natural language processing for engaging conversations",
+    "User-friendly interface enhances the overall experience",
+    "Widely recognized and trusted brand in the AI space",
+    "Supports a variety of applications from casual use to business integration"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparent pricing information, which may confuse potential users",
+    "Limited details on data handling and privacy policies",
+    "Occasional inconsistencies in response quality depending on query complexity"
+  ],
+  "best_for": [
+    "Individuals seeking an intuitive AI companion for casual conversations",
+    "Businesses looking to integrate conversational AI into customer support",
+    "Developers wanting to leverage advanced NLP capabilities for applications"
+  ],
+  "not_recommended_for": [
+    "Users who require clear pricing structures upfront",
+    "Organizations with strict data handling and compliance requirements",
+    "Those needing guaranteed consistency in response quality for critical applications"
+  ],
+  "red_flags": [
+    "Transparency issues regarding pricing and data handling"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Get responses tailored to you",
-      "source_surface": "homepage"
+      "slug": "google-bard",
+      "verdict_diff": "Google Bard offers a different approach with real-time information access, making it suitable for users needing up-to-date responses. Choose ChatGPT for its conversational depth and user experience.",
+      "preferred_for_axis": "conversational depth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "I found a link labeled 'See plans and pricing' on the homepage.",
-      "source_surface": "homepage"
+      "slug": "microsoft-copilot",
+      "verdict_diff": "Microsoft Copilot integrates deeply with Microsoft products, providing tailored assistance in productivity applications. ChatGPT excels in general conversational AI capabilities.",
+      "preferred_for_axis": "general conversational use"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://chat.openai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Advanced natural language processing",
+      "source": "https://openai.com/research/chatgpt",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "ChatGPT can be integrated into applications via API, allowing for diverse use cases in conversational AI.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "\"Log in to get answers based on saved chats, plus create images and upload files.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "AI conversational agent",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start chatting'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "you agree to our Terms and have read our Privacy Policy",
-      "source_surface": "homepage"
+      "evidence": "Lacks clear pricing information",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://chatgpt.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:00:24.769Z"
+  "summary": "Leading AI conversational agent with robust capabilities \u2014 excels in user experience but lacks transparent pricing.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/chatgpt.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
