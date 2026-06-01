@@ -1,103 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "orynxml-backend",
   "name": "orynxml-backend",
+  "agent_url": "/reviews/orynxml-backend/",
   "category": "Chat & Companion",
+  "run_id": "run-orynxml-backend-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of orynxml-backend.",
-  "review_url": "https://hlido.eu/reviews/orynxml-backend/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-orynxml-backend-mp11gl01",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic chatbot backend service \u2014 functional but lacks distinctive features and clarity on integration.",
+    "body": "The orynxml-backend service provides a foundational chatbot backend, but it struggles to stand out in a crowded market. While it is operational, the lack of clear documentation and specific use cases makes it challenging for potential users to assess its value. The absence of verification for key claims raises concerns about reliability. As it stands, orynxml-backend is a viable option for users seeking basic functionality, but it may not meet the needs of those looking for advanced features or robust integration capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because the service is operational and functional but lacks clear differentiation and transparency. It remains in this tier due to its basic capabilities, but it could easily shift to FADING if no improvements are made in documentation or feature set.",
+  "what_it_does_well": [
+    "Provides basic chatbot backend functionality",
+    "Operational for simple use cases",
+    "Can be integrated with existing chat solutions"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear documentation and integration guidelines",
+    "No verified claims regarding performance or features",
+    "Limited differentiation from competitors"
+  ],
+  "best_for": [
+    "Users needing a straightforward chatbot backend without advanced requirements",
+    "Small projects or prototypes where basic functionality suffices"
+  ],
+  "not_recommended_for": [
+    "Users seeking robust features or extensive customization",
+    "Projects requiring detailed documentation and support"
+  ],
+  "red_flags": [
+    "Lack of verification for key claims raises reliability concerns",
+    "Absence of clear integration documentation"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatbase",
+      "verdict_diff": "Chatbase offers a more polished and feature-rich experience, with better documentation and support. Choose orynxml-backend for basic needs; choose Chatbase for a comprehensive solution.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin provides enterprise-level capabilities and support, making it suitable for larger organizations. orynxml-backend is better for small-scale projects.",
+      "preferred_for_axis": "enterprise vs. small-scale"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear documentation for integration with agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\" is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/Speedofmastery/orynxml-backend",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:08:26.439Z"
+  "summary": "Basic chatbot backend service \u2014 functional but lacks distinctive features and clarity on integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/orynxml-backend.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
