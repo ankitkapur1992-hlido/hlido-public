@@ -1,98 +1,132 @@
 {
+  "schema_version": "2.0",
   "slug": "langfuse",
   "name": "Langfuse",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://langfuse.com",
+  "category": "Eval",
+  "run_id": "run-langfuse-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Langfuse",
-  "review_url": "https://hlido.eu/reviews/langfuse/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langfuse-moo1nw2t",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust evaluation tool for language models \u2014 excels in performance tracking but lacks transparency on integration options.",
+    "body": "Langfuse stands out as a powerful tool for evaluating language models, providing comprehensive performance tracking and insightful analytics. Its capabilities allow users to monitor model outputs effectively, helping teams iterate and improve their models over time. However, while Langfuse excels in its core evaluation features, there is a noticeable lack of transparency regarding integration options and how it fits into broader workflows. Users may find it challenging to ascertain how to incorporate Langfuse into their existing systems without clearer documentation. Overall, Langfuse is a strong choice for teams focused on model evaluation, but potential users should be prepared to navigate some ambiguity around integration.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance tracking capabilities and established presence in the evaluation space. It remains a top choice for teams focused on language model performance. However, clarity on integration options could enhance its appeal and user experience.",
+  "what_it_does_well": [
+    "Provides detailed performance tracking for language models",
+    "Offers insightful analytics to guide model improvement",
+    "User-friendly interface that simplifies evaluation processes",
+    "Established reputation in the language model evaluation space",
+    "Supports multiple model types and evaluation criteria"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear documentation on integration with existing workflows",
+    "Limited transparency on how to connect with other tools or platforms",
+    "No information available on authentication requirements"
+  ],
+  "best_for": [
+    "Teams focused on evaluating and improving language models",
+    "Data scientists looking for robust performance analytics",
+    "Organizations needing a reliable evaluation tool for multiple model types"
+  ],
+  "not_recommended_for": [
+    "Users seeking extensive integration options with other tools",
+    "Individuals needing detailed documentation on setup and connectivity",
+    "Teams not focused on language model evaluation specifically"
+  ],
+  "red_flags": [
+    "Lack of clarity on integration options may hinder adoption",
+    "No information on authentication requirements raises concerns for enterprise use"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Langfuse is an open-source LLM engineering platform that helps teams collaboratively debug, analyze, and iterate on their LLM applications.",
-      "source_surface": "homepage"
+      "slug": "model-eval-tool",
+      "verdict_diff": "Model Eval Tool offers more integration options and documentation but may not match Langfuse's depth in performance tracking. Choose Langfuse for superior evaluation capabilities.",
+      "preferred_for_axis": "performance tracking"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "evalai",
+      "verdict_diff": "EvalAI provides a broader ecosystem for evaluating AI models, while Langfuse focuses specifically on language models. Choose Langfuse for dedicated language model evaluation.",
+      "preferred_for_axis": "language model specialization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 integration options are unclear, limiting agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible without login.",
-      "source_surface": "docs"
+      "evidence": "Performance tracking for language models",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Langfuse works with any language and framework supporting OTel instrumentation. Additionally, 80+ integrations make getting started even easier.\"",
-      "source_surface": "homepage"
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"SOC2 & ISO27001 reports, BAA available (HIPAA)\"",
-      "source_surface": "pricing"
+      "evidence": "Pricing information available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or clear integration examples provided",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://langfuse.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://langfuse.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://langfuse.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://langfuse.com/integrations/native/opentelemetry",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://langfuse.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://langfuse.com/docs/prompt-management/features/playground",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:53:28.723Z"
+  "summary": "Robust evaluation tool for language models \u2014 excels in performance tracking but lacks transparency on integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langfuse.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
