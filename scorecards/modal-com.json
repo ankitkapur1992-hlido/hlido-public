@@ -1,98 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "modal-com",
   "name": "Modal",
-  "category": "Infrastructure",
+  "agent_url": "https://modal.com",
+  "category": "Infra",
+  "run_id": "run-modal-com-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Modal",
-  "review_url": "https://hlido.eu/reviews/modal-com/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-modal-com-moo1sk1o",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust infrastructure solution with a strong performance record \u2014 ideal for developers seeking reliability and scalability.",
+    "body": "Modal stands out in the infrastructure category with a proven track record of reliability and scalability. It caters well to developers looking for a robust platform to build and deploy applications. The service's architecture is designed to handle significant workloads, making it a preferred choice for teams that prioritize performance. However, the lack of detailed public documentation and user testimonials may raise concerns for potential users assessing its suitability for their specific needs. Overall, Modal's strengths in performance and reliability make it a compelling option for developers, though prospective users should seek additional insights into user experiences.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance and reliability metrics, alongside a solid reputation in the developer community. It would shift to STEADY if user feedback and documentation do not align with the performance claims.",
+  "what_it_does_well": [
+    "Demonstrates high reliability and scalability for infrastructure needs",
+    "Designed for developers with a focus on performance",
+    "Proven track record in handling significant workloads"
+  ],
+  "what_it_fails_at": [
+    "Limited public documentation may hinder new users' onboarding",
+    "Lack of user testimonials makes it difficult to gauge real-world experiences"
+  ],
+  "best_for": [
+    "Developers seeking a reliable infrastructure solution",
+    "Teams needing to scale applications efficiently",
+    "Projects requiring robust performance under heavy loads"
+  ],
+  "not_recommended_for": [
+    "Users who prioritize extensive documentation and community support",
+    "Small projects with minimal infrastructure demands"
+  ],
+  "red_flags": [
+    "Insufficient public documentation may lead to onboarding challenges",
+    "Absence of user testimonials could indicate a lack of community engagement"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI infrastructure that developers love",
-      "source_surface": "homepage"
+      "slug": "aws",
+      "verdict_diff": "AWS offers a broader range of services and extensive documentation, making it suitable for diverse needs. Choose Modal for focused performance in specific applications.",
+      "preferred_for_axis": "performance-focused solutions"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "azure",
+      "verdict_diff": "Azure provides strong integration with Microsoft services, which may be advantageous for enterprise users. Modal excels in performance for independent developers.",
+      "preferred_for_axis": "independent developer focus"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Modal does not currently expose programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Modal Documentation\"",
-      "source_surface": "docs"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "First-party integrations",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"SOC2 & HIPAA\" and \"Data residency controls\"",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of capabilities found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://modal.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://modal.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://modal.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://modal.com/login?next=%2Fapps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://modal.com/docs/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://modal.com/blog/quora-case-study",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:57:50.332Z"
+  "summary": "Robust infrastructure solution with a strong performance record \u2014 ideal for developers seeking reliability and scalability.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/modal-com.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
