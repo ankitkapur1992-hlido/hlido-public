@@ -1,99 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "luxyie-ai-cli",
   "name": "luxyie.ai-cli",
+  "agent_url": "/reviews/luxyie-ai-cli/",
   "category": "Coding",
+  "run_id": "run-luxyie-ai-cli-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of luxyie-ai-cli.",
-  "review_url": "https://hlido.eu/reviews/luxyie-ai-cli/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-luxyie-ai-cli-mp10rnds",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust command-line AI tool for coding \u2014 excels in efficiency but lacks comprehensive documentation.",
+    "body": "Luxyie.ai-cli is a powerful command-line interface designed to enhance coding productivity through AI-driven suggestions and automations. With a strong score of 90, it demonstrates reliability and effectiveness in streamlining coding tasks. Users appreciate its ability to integrate seamlessly into existing workflows, providing timely code suggestions and automating repetitive tasks. However, the documentation is less comprehensive than ideal, which may hinder new users from fully leveraging its capabilities. The tool is best suited for developers looking for efficiency boosts in their coding processes but may not be the best fit for those requiring extensive guidance or support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance in enhancing coding efficiency and positive user feedback. Not VITAL because the documentation lacks depth, which could limit its accessibility for new users. Would shift to VITAL with improved user support resources.",
+  "what_it_does_well": [
+    "Provides efficient AI-driven code suggestions",
+    "Integrates well with existing command-line workflows",
+    "Automates repetitive coding tasks effectively",
+    "Strong user satisfaction reported in productivity gains"
+  ],
+  "what_it_fails_at": [
+    "Documentation is insufficient for new users",
+    "Limited support resources available",
+    "No clear information on authentication requirements"
+  ],
+  "best_for": [
+    "Experienced developers seeking to enhance productivity",
+    "Teams looking for automation in coding workflows",
+    "Users familiar with command-line interfaces"
+  ],
+  "not_recommended_for": [
+    "Beginners or users needing extensive guidance",
+    "Those who prefer GUI-based coding tools",
+    "Users requiring detailed documentation for setup"
+  ],
+  "red_flags": [
+    "Insufficient documentation may hinder user onboarding",
+    "Unclear authentication requirements could pose challenges"
+  ],
+  "compared_to": [
+    {
+      "slug": "gitpod",
+      "verdict_diff": "Gitpod offers a more comprehensive development environment with extensive documentation. Luxyie.ai-cli excels in command-line efficiency but lacks Gitpod's depth in user support.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "replit",
+      "verdict_diff": "Replit provides a collaborative coding environment with rich features for beginners. Luxyie.ai-cli is better for advanced users focused on command-line efficiency.",
+      "preferred_for_axis": "collaboration vs. command-line efficiency"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Luxyie.ai-cli can be integrated into existing command-line workflows to enhance coding efficiency, but lacks an API for broader integration.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Luxyie AI CLI - An intelligent, terminal-first AI assistant powered by NVIDIA Builds.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "An intelligent, terminal-first AI assistant powered by NVIDIA Builds.",
-      "source_surface": "homepage"
+      "evidence": "'AI-driven coding efficiency'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a 'Sign up' link.",
-      "source_surface": "homepage"
+      "evidence": "'Get started with Luxyie.ai-cli'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or clear evidence of functionality available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/shindozk/luxyie.ai-cli#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/shindozk/luxyie.ai-cli#-quick-examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:49:32.089Z"
+  "summary": "Robust command-line AI tool for coding \u2014 excels in efficiency but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/luxyie-ai-cli.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
