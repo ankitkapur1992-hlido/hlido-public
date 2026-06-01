@@ -1,99 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-textsplitters",
   "name": "@langchain/textsplitters",
+  "agent_url": "/reviews/langchain-textsplitters/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-textsplitters-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-textsplitters.",
-  "review_url": "https://hlido.eu/reviews/langchain-textsplitters/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-textsplitters-mp1157jd",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional text splitting utility within LangChain \u2014 serves a niche but lacks broader integration appeal.",
+    "body": "The @langchain/textsplitters package provides essential functionality for breaking down text into manageable chunks, which is a critical task for many NLP applications. However, its utility is somewhat limited to those already invested in the LangChain ecosystem. While it performs its core function adequately, it does not offer extensive features or integrations that would make it stand out in a crowded field of text processing tools. Users seeking more comprehensive solutions might consider alternatives that provide richer functionality or better integration capabilities. Without significant enhancements or broader applicability, it remains a tool for specific use cases rather than a must-have framework.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because the tool is functional and serves a specific need within the LangChain framework, but lacks broader appeal and integration capabilities that would elevate it to a higher tier. It would move to VITAL with significant enhancements and a clearer value proposition for a wider audience.",
+  "what_it_does_well": [
+    "Provides basic functionality for splitting text into chunks",
+    "Integrates seamlessly within the LangChain ecosystem",
+    "Useful for developers already using LangChain for NLP tasks"
+  ],
+  "what_it_fails_at": [
+    "Limited features compared to broader text processing tools",
+    "Lacks extensive documentation or community support",
+    "Not suitable for users outside the LangChain ecosystem"
+  ],
+  "best_for": [
+    "Developers already using LangChain for their projects",
+    "NLP applications requiring basic text splitting functionality",
+    "Users looking for lightweight solutions without extensive overhead"
+  ],
+  "not_recommended_for": [
+    "Users seeking comprehensive text processing tools",
+    "Developers needing extensive documentation or community support",
+    "Those looking for integrations with other frameworks or libraries"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "spaCy",
+      "verdict_diff": "spaCy offers a more comprehensive NLP toolkit with advanced text processing capabilities, making it a better choice for users needing extensive features. Choose @langchain/textsplitters for lightweight tasks within LangChain.",
+      "preferred_for_axis": "comprehensive-nlp-capabilities"
+    },
+    {
+      "slug": "nltk",
+      "verdict_diff": "NLTK provides a wide range of text processing tools and is well-documented, making it suitable for educational purposes and research. @langchain/textsplitters is more focused on integration within LangChain.",
+      "preferred_for_axis": "educational-and-research"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the package operates within the LangChain framework and does not expose an API for external integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear primary value proposition found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/langchain-textsplitters/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/langchain-ai/langchainjs/blob/main/libs/langchain-textsplitters/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:00:11.975Z"
+  "summary": "Functional text splitting utility within LangChain \u2014 serves a niche but lacks broader integration appeal.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-textsplitters.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
