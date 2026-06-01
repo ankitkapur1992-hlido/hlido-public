@@ -1,103 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "code-review-env",
   "name": "code-review-env",
+  "agent_url": "/reviews/code-review-env/",
   "category": "AI Agent",
+  "run_id": "run-code-review-env-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of code-review-env.",
-  "review_url": "https://hlido.eu/reviews/code-review-env/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-code-review-env-mp11q5jm",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic code review tool with limited visibility \u2014 functional but lacks depth and integration options.",
+    "body": "Code-review-env provides a straightforward solution for code review processes, but it falls short in terms of advanced features and integration capabilities. While it serves its purpose for basic reviews, users may find it lacking when compared to more robust alternatives that offer deeper insights and better integration with existing workflows. The absence of clear documentation and limited visibility into its capabilities may hinder its adoption among teams looking for comprehensive solutions. For those who need a simple code review tool without extensive requirements, it may suffice, but others might want to explore more feature-rich options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because it delivers basic functionality consistently, but lacks the advanced features and integrations that would elevate it to a higher tier. It remains relevant for users with minimal needs but risks fading if it does not evolve.",
+  "what_it_does_well": [
+    "Provides basic code review capabilities",
+    "User-friendly interface for straightforward reviews",
+    "Consistent performance for simple tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features for in-depth code analysis",
+    "Limited integration options with other development tools",
+    "Insufficient documentation for users to fully leverage its capabilities"
+  ],
+  "best_for": [
+    "Small teams or individual developers needing basic code review functionality",
+    "Users who prioritize simplicity over advanced features",
+    "Projects with minimal code review requirements"
+  ],
+  "not_recommended_for": [
+    "Larger teams requiring extensive collaboration tools",
+    "Developers needing detailed insights and analytics from code reviews",
+    "Users looking for seamless integration with CI/CD pipelines"
+  ],
+  "red_flags": [
+    "Lack of clear documentation may lead to user frustration",
+    "Limited feature set could hinder scalability for growing teams"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Hugging Face's logo is visible on the homepage.",
-      "source_surface": "homepage"
+      "slug": "reviewboard",
+      "verdict_diff": "Reviewboard offers a more comprehensive code review experience with better integration options. Choose Reviewboard for a feature-rich environment; Code-review-env is more suitable for basic needs.",
+      "preferred_for_axis": "feature-depth"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage states, 'This Space is sleeping due to inactivity.' which does not articulate a primary value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not provide any links or information regarding pricing or access paths.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "slug": "gerrit",
+      "verdict_diff": "Gerrit provides advanced code review capabilities and integration with Git workflows. Opt for Gerrit if you need a more robust solution; Code-review-env is a simpler alternative.",
+      "preferred_for_axis": "integration"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Code-review-env does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/pratyush015/code-review-env",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:15:56.085Z"
+  "summary": "Basic code review tool with limited visibility \u2014 functional but lacks depth and integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/code-review-env.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
