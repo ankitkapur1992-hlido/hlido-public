@@ -1,103 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "linguaicoach",
   "name": "linguAIcoach",
+  "agent_url": "/reviews/linguaicoach/",
   "category": "Chat & Companion",
+  "run_id": "run-linguaicoach-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of linguaicoach.",
-  "review_url": "https://hlido.eu/reviews/linguaicoach/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-linguaicoach-mp11la87",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic language coaching tool with limited features \u2014 functional but lacks depth compared to rivals.",
+    "body": "linguAIcoach presents itself as a straightforward language coaching solution, but it falls short of offering a robust feature set that users might expect from more established competitors. While it serves its purpose as a basic tool for language learners, the lack of advanced functionalities and integrations makes it less appealing for serious users. The platform does not currently provide clear information on user authentication requirements, which could hinder trust and usability. Overall, linguAIcoach is a viable option for casual learners but may not satisfy those seeking a comprehensive language learning experience.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to basic functionality that meets minimal user needs but lacks advanced features and clarity on authentication. It remains relevant but not compelling compared to more feature-rich alternatives. A shift to VITAL would require significant enhancements in user experience and feature depth.",
+  "what_it_does_well": [
+    "Provides basic language coaching functionalities for beginners",
+    "User interface is straightforward and easy to navigate"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features and integrations found in competitors",
+    "No clear information on authentication requirements, affecting trust",
+    "Limited support for diverse learning styles and methodologies"
+  ],
+  "best_for": [
+    "Casual language learners looking for a simple tool",
+    "Users who prefer straightforward interfaces without complexity"
+  ],
+  "not_recommended_for": [
+    "Serious language learners seeking comprehensive resources",
+    "Users needing advanced features like speech recognition or personalized learning paths"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may deter potential users"
+  ],
+  "compared_to": [
+    {
+      "slug": "duolingo",
+      "verdict_diff": "Duolingo offers a more engaging and gamified learning experience with a broader feature set. Choose linguAIcoach for simplicity; choose Duolingo for a richer learning environment.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "babbel",
+      "verdict_diff": "Babbel provides structured lessons and real-life conversation practice, making it more suitable for serious learners. linguAIcoach is better for casual use.",
+      "preferred_for_axis": "structured learning"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 linguAIcoach does not currently support integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No prominent call to action observed.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/alvaroalon2/linguAIcoach",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:12:07.719Z"
+  "summary": "Basic language coaching tool with limited features \u2014 functional but lacks depth compared to rivals.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/linguaicoach.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
