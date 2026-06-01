@@ -1,103 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "guide-ai",
-  "name": "Guide",
+  "name": "Guide.AI",
+  "agent_url": "https://guide-ai.com/",
   "category": "AI Agent",
+  "run_id": "run-guide-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Guide",
-  "review_url": "https://hlido.eu/reviews/guide-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-guide-ai-moneulyr",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Owning a premium domain name like guide.app can help you grow your brand footprint, significantly improve reach and profitability, and position your entity as a premium brand.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention any integration list or supported frameworks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Google has built-in HTTPS security for all .APP websites.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://enaming.com/domain/guide-app",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:14:42.630Z"
+  "hlido_opinion": {
+    "headline": "Guide.AI shows promise but lacks clear differentiation \u2014 currently positioned as a fading option in the AI agent landscape.",
+    "body": "Guide.AI presents a web UI that suggests potential for AI-driven workflows, yet lacks sufficient verification of its claims or features. The absence of clear documentation and user testimonials raises concerns about its viability and trustworthiness. As it stands, Guide.AI does not stand out against more established competitors, making it a less attractive option for users seeking reliable AI solutions. The fading tier reflects the uncertainty surrounding its operational status and the need for more substantial evidence of its capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to insufficient verification of claims, lack of clear differentiation, and a general absence of user engagement or testimonials. A shift to STEADY would require demonstrable user feedback and a clearer articulation of its unique value proposition.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No verified claims or testimonials available to assess product effectiveness",
+    "Lacks clear documentation or user guides to support potential users",
+    "Insufficient differentiation from competitors in the AI agent space"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and well-documented AI solutions",
+    "Those who require established user feedback before adoption",
+    "Individuals looking for a clear value proposition in AI agents"
+  ],
+  "red_flags": [
+    "No clear evidence of operational viability or user engagement",
+    "Absence of documentation raises concerns about support and usability"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-documented and widely used platform with clear user feedback. Guide.AI lacks this credibility and user engagement.",
+      "preferred_for_axis": "trust and user feedback"
+    },
+    {
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow provides robust documentation and integration options, making it a more reliable choice for developers. Guide.AI currently does not match this level of support.",
+      "preferred_for_axis": "documentation and support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear functionality limits integration potential.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Guide.AI shows promise but lacks clear differentiation \u2014 currently positioned as a fading option in the AI agent landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/guide-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
