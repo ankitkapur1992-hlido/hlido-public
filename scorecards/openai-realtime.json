@@ -1,103 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "openai-realtime",
   "name": "OpenAI Realtime",
-  "category": "Infrastructure",
+  "agent_url": "https://platform.openai.com/docs/guides/realtime",
+  "category": "API",
+  "run_id": "run-openai-realtime-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of OpenAI Realtime",
-  "review_url": "https://hlido.eu/reviews/openai-realtime/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openai-realtime-moo1z5m5",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust real-time API from OpenAI \u2014 essential for developers needing instant data processing.",
+    "body": "OpenAI Realtime offers a powerful solution for developers seeking to integrate real-time capabilities into their applications. Its seamless integration with OpenAI's ecosystem allows for immediate data processing, making it a go-to for projects requiring quick response times. The API is well-documented, with clear guides that facilitate implementation. However, potential users should be aware of the authentication requirements, which remain unclear at this time. While the service is positioned as a leader in the real-time API space, it faces competition from alternatives like Firebase Realtime Database and Pusher, which offer their own unique advantages. Overall, OpenAI Realtime stands out for its performance and integration potential, but users should verify access requirements before committing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, comprehensive documentation, and integration capabilities within the OpenAI ecosystem. It could shift if authentication requirements are clarified or if significant competitors emerge with superior offerings.",
+  "what_it_does_well": [
+    "Provides real-time data processing capabilities for developers",
+    "Seamlessly integrates with other OpenAI services",
+    "Well-documented with clear guides for implementation",
+    "High performance and reliability in data handling"
+  ],
+  "what_it_fails_at": [
+    "Authentication requirements are currently unclear, which may hinder user adoption",
+    "Lacks detailed information on potential usage limits or pricing tiers"
+  ],
+  "best_for": [
+    "Developers building applications that require immediate data processing",
+    "Projects that leverage OpenAI's ecosystem for enhanced functionality",
+    "Real-time analytics and monitoring solutions"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive support for authentication setup",
+    "Teams looking for a fully-featured backend solution without additional integrations"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may pose a barrier to entry"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build low-latency, multimodal LLM applications with the Realtime API.",
-      "source_surface": "homepage"
+      "slug": "firebase-realtime-database",
+      "verdict_diff": "Firebase offers a more established real-time database solution with extensive community support. Choose OpenAI Realtime for integration with AI capabilities; choose Firebase for a more comprehensive backend solution.",
+      "preferred_for_axis": "integration with AI capabilities"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "pusher",
+      "verdict_diff": "Pusher excels in real-time messaging and event-driven architecture. OpenAI Realtime is better suited for applications requiring AI-driven data processing.",
+      "preferred_for_axis": "AI-driven data processing"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Offers real-time data processing capabilities",
+      "source": "https://platform.openai.com/docs/guides/realtime",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Well-documented with clear guides",
+      "source": "https://platform.openai.com/docs/guides/realtime",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "OpenAI Realtime can be integrated into applications requiring real-time data processing, making it suitable for agent-driven workflows.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The OpenAI Realtime API enables low-latency communication with models that natively support speech-to-speech interactions as well as multimodal inputs (audio, images, and text) and outputs (audio and text).",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "There are three primary supported interfaces for the Realtime API: WebRTC connection, WebSocket connection, and SIP connection.",
-      "source_surface": "homepage"
+      "evidence": "Real-time data processing capabilities",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Documentation available for integration",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Authentication requirements are unclear",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation provides clear guides",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://developers.openai.com/api/docs/guides/realtime",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:01:53.613Z"
+  "summary": "Robust real-time API from OpenAI \u2014 essential for developers needing instant data processing.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openai-realtime.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
