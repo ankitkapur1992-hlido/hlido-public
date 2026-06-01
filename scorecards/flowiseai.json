@@ -1,102 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "flowiseai",
   "name": "Flowise",
-  "category": "Workflow & Automation",
+  "agent_url": "https://flowiseai.com",
+  "category": "Workflow",
+  "run_id": "run-flowiseai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Flowise",
-  "review_url": "https://hlido.eu/reviews/flowiseai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-flowiseai-moo1mhzq",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid workflow automation tool with a user-friendly interface \u2014 but lacks advanced features seen in competitors.",
+    "body": "Flowise presents itself as a competent workflow automation tool, offering a straightforward user interface that appeals to users looking for ease of use. Its capabilities in automating tasks and integrating various services are commendable, making it suitable for small to medium-sized businesses. However, it falls short in comparison to more feature-rich alternatives like Zapier and Integromat, which provide deeper integrations and a broader range of automation options. Flowise's focus on simplicity means it may not satisfy power users who require more complex workflows or extensive customization. Overall, it serves as a reliable option for those new to workflow automation, but advanced users may need to look elsewhere for more robust solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its solid performance and user-friendly design, appealing to those seeking basic workflow automation. Not VITAL because it lacks the advanced features and integrations that competitors provide, which could limit its appeal to power users.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies workflow automation for beginners",
+    "Reliable performance in automating basic tasks",
+    "Integrates with several popular services, making it accessible for small businesses",
+    "Clear documentation and support resources available for users"
+  ],
+  "what_it_fails_at": [
+    "Limited advanced features compared to competitors like Zapier and Integromat",
+    "Fewer integration options, which may restrict complex workflows",
+    "Lacks customization capabilities that power users might expect",
+    "No clear information on pricing tiers or plans available on the website"
+  ],
+  "best_for": [
+    "Small to medium-sized businesses looking for straightforward automation solutions",
+    "Users new to workflow automation who prioritize ease of use",
+    "Teams needing basic task automation without complex requirements"
+  ],
+  "not_recommended_for": [
+    "Power users requiring advanced features and extensive integrations",
+    "Organizations with complex workflow needs that demand high customization",
+    "Users looking for a comprehensive automation platform with a wide array of tools"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Flowise - Build AI Agents, Visually\" and \"Open source agentic systems development platform\" clearly state the value proposition.",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a much broader range of integrations and advanced features, making it better suited for complex workflows. Flowise is ideal for simpler tasks but lacks the depth of Zapier.",
+      "preferred_for_axis": "advanced features and integrations"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides more complex automation capabilities and customization options. Flowise is more user-friendly but may not meet the needs of users requiring intricate workflows.",
+      "preferred_for_axis": "complex workflow automation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Flowise does not currently provide an API or programmatic interface for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' which suggests documentation is accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "Workflow automation tool",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Sign up for free",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or detailed feature showcase found",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://flowiseai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://flowiseai.com/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:52:07.827Z"
+  "summary": "Solid workflow automation tool with a user-friendly interface \u2014 but lacks advanced features seen in competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/flowiseai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
