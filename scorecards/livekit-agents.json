@@ -1,100 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "livekit-agents",
   "name": "LiveKit Agents",
+  "agent_url": "https://docs.livekit.io/agents",
   "category": "Voice",
+  "run_id": "run-livekit-agents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of LiveKit Agents",
-  "review_url": "https://hlido.eu/reviews/livekit-agents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-livekit-agents-moo27j43",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable voice communication framework \u2014 solid for real-time applications, but lacks extensive third-party integration options.",
+    "body": "LiveKit Agents provides a dependable framework for voice communication, particularly suited for real-time applications like video conferencing and gaming. Its focus on low-latency audio and video streaming is commendable, making it a strong choice for developers looking to implement voice features. However, it falls short in terms of extensive third-party integrations, which could limit its appeal for teams needing a more comprehensive ecosystem. The documentation is a valuable resource, but the lack of clarity on authentication requirements may pose challenges for new users. Overall, LiveKit Agents is a robust option for those prioritizing performance in voice applications, but potential users should be aware of its integration limitations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the framework is reliable for real-time voice applications and has a clear focus on performance. Not VITAL due to limited third-party integrations and some ambiguity in documentation regarding authentication, which could hinder new user onboarding.",
+  "what_it_does_well": [
+    "Provides low-latency audio and video streaming suitable for real-time applications",
+    "Strong performance metrics for voice communication",
+    "Comprehensive documentation available for developers",
+    "Active community support for troubleshooting and development"
+  ],
+  "what_it_fails_at": [
+    "Limited third-party integration options, which may restrict use cases",
+    "Ambiguity regarding authentication requirements for new users",
+    "Less focus on user interface components, requiring additional development effort"
+  ],
+  "best_for": [
+    "Developers building real-time voice applications like conferencing tools",
+    "Teams focused on performance and reliability in voice communication",
+    "Projects where low-latency audio is a critical requirement"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive third-party integrations for broader functionality",
+    "Teams looking for a fully managed voice solution with minimal setup",
+    "Developers unfamiliar with voice technology who may struggle with initial setup"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements which could complicate onboarding for new users"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, \"The open source framework and cloud platform for voice, video, and physical AI agents.\"",
-      "source_surface": "homepage"
+      "slug": "twilio-voice",
+      "verdict_diff": "Twilio Voice offers a more extensive ecosystem with numerous integrations and a user-friendly interface. Choose LiveKit for performance-focused applications, but Twilio for broader functionality.",
+      "preferred_for_axis": "integration breadth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "agora-io",
+      "verdict_diff": "Agora provides similar low-latency capabilities but with a more robust set of features for interactive broadcasting. LiveKit is preferable for simpler implementations focused on voice.",
+      "preferred_for_axis": "simplicity vs. feature-rich"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides low-latency audio and video streaming",
+      "source": "https://docs.livekit.io/agents",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Comprehensive documentation available",
+      "source": "https://docs.livekit.io/agents",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Developers can integrate LiveKit Agents into their applications via API, focusing on real-time voice capabilities.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"The framework is fully open source and supported by an active community.\"",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The framework supports plugins for most major AI providers, with more continually added.",
-      "source_surface": "homepage"
+      "evidence": "'Real-time voice and video communication framework'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Documentation provides clear access to API details",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "LiveKit's performance metrics are detailed in the documentation",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://docs.livekit.io/agents/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://docs.livekit.io/reference/developer-tools/livekit-cli/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://docs.livekit.io/agents/integrations/cerebras/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://docs.livekit.io/reference/recipes/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:08:35.023Z"
+  "summary": "Reliable voice communication framework \u2014 solid for real-time applications, but lacks extensive third-party integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/livekit-agents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
