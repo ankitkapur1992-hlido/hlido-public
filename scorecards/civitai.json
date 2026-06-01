@@ -1,101 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "civitai",
   "name": "Civitai | Share your models",
+  "agent_url": "https://civitai.com",
   "category": "AI Agent",
+  "run_id": "run-civitai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "# Whoops!\n\n# Something went wrong :(\n\nTry refreshing or navigating to a different page\n\n[home](https://civitai.com/)\n\n[models](https://civitai.com/models)\n\n[images](https://civitai.com/images)\n\n[videos](https://civitai.com/videos)\n\n[posts](https://civitai.com/posts)\n\n[articles](https://civitai.com/a",
-  "review_url": "https://hlido.eu/reviews/civitai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-civitai-mp0w197a",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Civitai | Discover and Create AI Art\" clearly states the value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\",\"name\":\"Pricing\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "We care about your privacy!",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://civitai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://civitai.com/pricing?utm_campaign=support_pro",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://civitai.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "tier": "STEADY",
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:36:56.391Z"
+  "hlido_opinion": {
+    "headline": "Civitai shows promise as a model-sharing platform but currently suffers from significant accessibility issues.",
+    "body": "Civitai aims to be a community-driven platform for sharing AI models, yet its current state presents challenges. The site is experiencing technical difficulties, leading to an error message that hampers access to its features. This raises concerns about reliability and user experience. While the concept of sharing models is valuable, the execution is hindered by these issues. Without a stable interface and clear functionality, potential users may hesitate to engage with the platform. For those interested in model sharing, alternatives like Hugging Face or Model Hub may offer more reliable experiences. Civitai needs to address its accessibility issues to enhance its standing in the competitive AI agent landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (65) due to the concept of model sharing being relevant, but significant accessibility issues currently hinder user engagement. Improvement in site reliability would elevate its tier.",
+  "what_it_does_well": [
+    "Aims to provide a community for sharing AI models",
+    "Potential for user engagement through model contributions",
+    "Focus on collaborative development in the AI space"
+  ],
+  "what_it_fails_at": [
+    "Currently inaccessible due to technical errors on the site",
+    "Lacks clear documentation or support for users",
+    "No verified claims or features available for evaluation"
+  ],
+  "best_for": [
+    "AI enthusiasts looking for a model-sharing community (once operational)",
+    "Developers interested in contributing to AI model development",
+    "Users seeking to explore collaborative AI projects"
+  ],
+  "not_recommended_for": [
+    "Users needing immediate access to functional AI model repositories",
+    "Those requiring reliable support and documentation",
+    "Individuals unfamiliar with navigating technical difficulties"
+  ],
+  "red_flags": [
+    "Significant technical issues leading to site inaccessibility",
+    "Lack of verified claims or operational features"
+  ],
+  "compared_to": [
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face offers a more robust and accessible platform for model sharing with extensive documentation and community support. Choose Civitai if seeking a niche community focus, but Hugging Face is superior for reliability.",
+      "preferred_for_axis": "reliability"
+    },
+    {
+      "slug": "modelhub",
+      "verdict_diff": "Model Hub provides a stable environment for sharing models with clear usability. Civitai may appeal to those seeking a more community-driven experience but lacks the operational stability of Model Hub.",
+      "preferred_for_axis": "operational stability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Site is currently experiencing technical difficulties",
+      "source": "https://civitai.com/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the platform is currently non-functional and lacks integration capabilities.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Site is currently down, preventing verification.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action available due to site issues.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No access to pricing or access details due to site issues.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No evidence or demo available due to site issues.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Civitai shows promise as a model-sharing platform but currently suffers from significant accessibility issues.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/civitai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
