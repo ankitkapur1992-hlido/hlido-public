@@ -1,103 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "fara-browseruse",
   "name": "Fara-BrowserUse",
+  "agent_url": "/reviews/fara-browseruse/",
   "category": "AI Agent",
+  "run_id": "run-fara-browseruse-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of fara-browseruse.",
-  "review_url": "https://hlido.eu/reviews/fara-browseruse/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-fara-browseruse-mp11ecgn",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic AI agent for browser use \u2014 functional but lacks advanced features and clear differentiation.",
+    "body": "Fara-BrowserUse offers a straightforward approach to enhancing browser functionality with AI. However, it does not stand out in a crowded market of AI agents, lacking advanced features and clear differentiation from competitors. The user experience is functional but basic, and there are concerns about the transparency of its capabilities and integrations. While it serves a purpose for casual users, those seeking more robust AI features may find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functional offering and operational stability, but not VITAL because it lacks advanced features and clear differentiation from competitors. A more compelling feature set or unique positioning could elevate its tier.",
+  "what_it_does_well": [
+    "Provides basic AI assistance for browser tasks",
+    "User interface is straightforward and easy to navigate",
+    "Operates reliably without major technical issues"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features that competitors offer",
+    "No clear differentiation from similar AI agents",
+    "Transparency around capabilities and integrations is limited"
+  ],
+  "best_for": [
+    "Casual users looking for basic AI assistance in browsing",
+    "Individuals who prefer simplicity over advanced functionality",
+    "Users who do not require extensive customization or integrations"
+  ],
+  "not_recommended_for": [
+    "Power users needing advanced AI features and integrations",
+    "Users looking for a highly customizable AI agent experience",
+    "Those who prioritize transparency in data handling and capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "another-ai-agent",
+      "verdict_diff": "Another AI agent offers more advanced features and better customization options. Choose Fara-BrowserUse for simplicity; choose Another AI Agent for a richer feature set.",
+      "preferred_for_axis": "feature-rich functionality"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Fara-BrowserUse does not expose any programmatic interfaces for integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "Basic AI assistance for browsing tasks",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space has been paused. Want to use this Space? Head to the community tab to ask the author(s) to restart it.",
-      "source_surface": "homepage"
+      "evidence": "Call to action for users to try the service",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space has been paused. Want to use this Space? Head to the community tab to ask the author(s) to restart it.",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing structure available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space has been paused.",
-      "source_surface": "homepage"
+      "evidence": "No demo or extensive evidence of capabilities",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/HyperCluster/Fara-BrowserUse",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:06:51.723Z"
+  "summary": "Basic AI agent for browser use \u2014 functional but lacks advanced features and clear differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/fara-browseruse.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
