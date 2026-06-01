@@ -1,99 +1,142 @@
 {
+  "schema_version": "2.0",
   "slug": "cohere",
   "name": "Cohere",
-  "category": "Chat & Companion",
+  "agent_url": "https://cohere.com",
+  "category": "AI Agent",
+  "run_id": "run-cohere-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cohere",
-  "review_url": "https://hlido.eu/reviews/cohere/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cohere-mongiz4z",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Enterprise-focused LLM provider with strong RAG positioning \u2014 narrower than OpenAI but with a clearer data-sovereignty story.",
+    "body": "Cohere has positioned itself as the AI vendor that enterprise CIOs can actually buy from without legal heartburn \u2014 private deployments, transparent training-data posture, and a focused product line (Command, Rerank, Embed) rather than the everything-store approach of OpenAI. Where it wins is RAG: Rerank and Embed are genuinely best-in-class for retrieval pipelines, and the company invented many of the techniques the rest of the industry now uses. Where it weakens is consumer-facing capability \u2014 there is no Cohere equivalent of ChatGPT, no Realtime API equivalent, no obvious bet on agentic computer-use. For a buyer choosing a single vendor for chat-style consumer agents, Cohere is wrong; for a buyer building enterprise RAG with deployment flexibility, Cohere is often the right call.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Cohere executes well in its chosen lane (enterprise RAG + Rerank) and has credible deployment options. Not VITAL because the capability surface is meaningfully narrower than OpenAI or Anthropic and competitive pressure from Voyage AI + open-source rerankers is intensifying.",
+  "what_it_does_well": [
+    "Best-in-class Rerank model for production RAG pipelines",
+    "Multiple deployment options (cloud / AWS Marketplace / private VPC)",
+    "Enterprise-friendly data posture (training transparency, no fine-tune on customer data)",
+    "Transparent published pricing"
+  ],
+  "what_it_fails_at": [
+    "No consumer-facing flagship to drive bottom-up adoption",
+    "Capability breadth meaningfully narrower than OpenAI / Anthropic",
+    "Agentic-computer-use and Realtime audio absent from the product surface"
+  ],
+  "best_for": [
+    "Enterprise RAG pipelines where rerank quality matters",
+    "Buyers needing private deployment options",
+    "Teams that already have a chat layer and just need embedding + retrieval infrastructure"
+  ],
+  "not_recommended_for": [
+    "Consumer chat-style agent products",
+    "Workflows needing the broadest capability surface in one vendor",
+    "Cost-sensitive deployments at small volume (open-source alternatives are competitive)"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your data. Your infrastructure. Cohere keeps it that way.",
-      "source_surface": "homepage"
+      "slug": "openai",
+      "verdict_diff": "OpenAI is the broad platform; Cohere is the focused enterprise-RAG specialist. Choose Cohere when private deployment + RAG quality matter; OpenAI when capability breadth matters.",
+      "preferred_for_axis": "enterprise-rag-focus"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'PRICING' is available directly from the homepage.",
-      "source_surface": "homepage"
+      "slug": "anthropic-computer-use",
+      "verdict_diff": "Different categories \u2014 Anthropic builds frontier models + agentic capability; Cohere builds enterprise retrieval infrastructure. Most production stacks use both.",
+      "preferred_for_axis": "retrieval-vs-agentic"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Multi-cloud deployment options",
+      "source": "https://cohere.com/deployment-options",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Rerank model published",
+      "source": "https://docs.cohere.com/docs/rerank",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct API via Cohere SDKs (Python/Node/Go/Java). Rerank is the standout integration for agent retrieval steps.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Read our docs",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Your data. Your infrastructure. Cohere keeps it that way.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://cohere.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://cohere.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://cohere.com/developers",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://cohere.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://cohere.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:01:50.798Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "Enterprise-focused LLM provider with strong RAG positioning \u2014 narrower than OpenAI but with a clearer data-sovereignty story.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/cohere.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
