@@ -1,103 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "flight-rebooking",
-  "name": "flight-rebooking",
+  "name": "Flight Rebooking",
+  "agent_url": "/reviews/flight-rebooking/",
   "category": "AI Agent",
+  "run_id": "run-flight-rebooking-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of flight-rebooking.",
-  "review_url": "https://hlido.eu/reviews/flight-rebooking/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-flight-rebooking-mp11iixe",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Basic flight rebooking tool with limited transparency \u2014 lacks features and verification.",
+    "body": "Flight Rebooking presents itself as an AI-driven solution for managing flight changes, but it currently suffers from a lack of clarity and verification. The absence of detailed information about its functionalities raises concerns about its reliability and effectiveness. Users may find it difficult to trust the service without clear evidence of its capabilities or user testimonials. The tool's performance in real-world scenarios remains unverified, which is a significant drawback for potential users. As it stands, Flight Rebooking may serve as a basic option, but it does not stand out in a competitive market where alternatives offer more transparency and features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (40) due to the tool's existence in the market, but it lacks user verification and detailed functionality descriptions. It remains a basic option without distinguishing features or proven reliability.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks transparency regarding its functionalities and effectiveness",
+    "No user testimonials or case studies to verify performance",
+    "Limited features compared to established competitors in the market"
+  ],
+  "best_for": [
+    "Users seeking a basic tool for flight rebooking without high expectations",
+    "Individuals who may not require advanced features or verification"
+  ],
+  "not_recommended_for": [
+    "Frequent travelers who rely on dependable and feature-rich rebooking solutions",
+    "Users who prioritize transparency and verified performance in their tools"
+  ],
+  "red_flags": [
+    "No clear evidence of tool effectiveness or user satisfaction",
+    "Lack of detailed information on functionalities raises concerns"
+  ],
+  "compared_to": [
+    {
+      "slug": "expedia",
+      "verdict_diff": "Expedia offers a comprehensive travel management experience with verified user feedback and robust features. Flight Rebooking lacks these essential aspects.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "kayak",
+      "verdict_diff": "Kayak provides a user-friendly interface with extensive options for flight changes and comparisons. Flight Rebooking does not match this level of usability.",
+      "preferred_for_axis": "user experience"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks integration capabilities or clear usage pathways for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage shows a 'Build error' message and does not display branding clearly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The primary value proposition is not articulated as the content indicates a build error.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The corpus indicates a 'Build error' and does not contain any visible call-to-action for signing up, trying free, or booking a demo.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Build error' and does not mention any demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of effectiveness available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/rupak-dev07/flight-rebooking",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:09:59.468Z"
+  "summary": "Basic flight rebooking tool with limited transparency \u2014 lacks features and verification.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/flight-rebooking.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
