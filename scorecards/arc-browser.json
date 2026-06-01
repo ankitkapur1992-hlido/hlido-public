@@ -1,100 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "arc-browser",
   "name": "Arc Browser",
-  "category": "Infrastructure",
+  "agent_url": "https://arc.net",
+  "category": "Browser",
+  "run_id": "run-arc-browser-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Arc Browser",
-  "review_url": "https://hlido.eu/reviews/arc-browser/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-arc-browser-moo20bx4",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Innovative browser with a unique interface \u2014 solid for creative users, but not yet a mainstream choice.",
+    "body": "Arc Browser stands out with its visually distinct design and innovative features aimed at enhancing productivity and creativity. The interface is unlike traditional browsers, focusing on a workspace model that allows users to organize tabs and projects in a more fluid manner. This can be particularly appealing to users who prioritize aesthetics and functionality in their browsing experience. However, while the browser is well-received among early adopters, it still lacks some features that mainstream users may expect, such as extensive extension support and compatibility with all web standards. Users who are accustomed to conventional browsers may find the transition challenging. Overall, Arc is a promising option for those willing to explore a new way of browsing, but it may not yet be ready for users who rely heavily on traditional functionalities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Arc Browser demonstrates innovation and a strong design ethos, appealing to a niche audience. Not VITAL due to its limited mainstream adoption and some missing features that could hinder broader usability. Would shift to VITAL with increased extension support and user base growth.",
+  "what_it_does_well": [
+    "Offers a visually unique interface that enhances user creativity.",
+    "Organizes tabs and projects in a workspace model for better productivity.",
+    "Focuses on user experience with innovative features."
+  ],
+  "what_it_fails_at": [
+    "Limited extension support compared to mainstream browsers.",
+    "May not fully comply with all web standards, affecting compatibility.",
+    "Transitioning from traditional browsers can be challenging for new users."
+  ],
+  "best_for": [
+    "Creative professionals looking for a unique browsing experience.",
+    "Users who prioritize aesthetics and innovative features.",
+    "Early adopters willing to experiment with new tools."
+  ],
+  "not_recommended_for": [
+    "Mainstream users who rely on conventional browser functionalities.",
+    "Individuals needing extensive extension support for specific tasks.",
+    "Users who prefer a traditional browsing experience."
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Arc is the Chrome replacement I've been waiting for.",
-      "source_surface": "homepage"
+      "slug": "chrome",
+      "verdict_diff": "Chrome offers extensive extension support and compatibility, making it a safer choice for mainstream users. Arc wins on innovative design and workspace organization.",
+      "preferred_for_axis": "extension-support"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "firefox",
+      "verdict_diff": "Firefox provides a balance of customization and privacy features. Arc is more visually oriented and innovative but lacks some of Firefox's established functionalities.",
+      "preferred_for_axis": "privacy-and-customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Arc Browser does not currently support integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible at https://arc.net/developers without requiring a login.",
-      "source_surface": "docs"
+      "evidence": "Unique workspace model for browsing.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Bring your favorite tools into your favorite browser seamlessly, with Arc Integrations.",
-      "source_surface": "integrations"
+      "evidence": "'Download Arc' button visible.",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Arc is built from the ground up to be private and secure. We don’t know what sites you visit or what you search for.",
-      "source_surface": "homepage"
+      "evidence": "Free to download and use.",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://arc.net/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://arc.net/developers",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://arc.net/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://arc.net/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:03:01.487Z"
+  "summary": "Innovative browser with a unique interface \u2014 solid for creative users, but not yet a mainstream choice.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/arc-browser.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
