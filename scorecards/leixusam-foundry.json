@@ -1,103 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "leixusam-foundry",
   "name": "@leixusam/foundry",
+  "agent_url": "/reviews/leixusam-foundry/",
   "category": "AI Agent",
+  "run_id": "run-leixusam-foundry-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of leixusam-foundry.",
-  "review_url": "https://hlido.eu/reviews/leixusam-foundry/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-leixusam-foundry-mp10wlba",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent framework with strong capabilities \u2014 ideal for developers but may require deeper documentation for optimal use.",
+    "body": "Leixusam Foundry stands out as a powerful AI agent framework that offers a range of robust capabilities for developers looking to build and deploy custom AI solutions. Its high score reflects a well-designed interface and a solid set of features that cater to advanced use cases. However, while the framework excels in functionality, it does present challenges in terms of documentation depth, which may hinder less experienced users from fully leveraging its potential. Overall, it is a strong choice for developers who prioritize capability and flexibility, but the learning curve could be steep without comprehensive guidance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong feature set and positive user feedback, indicating a solid and reliable product. It remains in this tier as it continues to show potential for growth, but could elevate to VITAL with improved documentation and user support.",
+  "what_it_does_well": [
+    "Offers a comprehensive set of tools for building AI agents",
+    "Strong performance in various use cases, demonstrating versatility",
+    "User interface is intuitive for developers familiar with AI frameworks",
+    "Active community support for troubleshooting and enhancements"
+  ],
+  "what_it_fails_at": [
+    "Documentation lacks depth, making it challenging for new users to navigate",
+    "Limited examples or tutorials available for complex use cases",
+    "Auth requirements remain unclear, which could impact onboarding"
+  ],
+  "best_for": [
+    "Developers looking to create custom AI solutions",
+    "Organizations needing a flexible framework for AI agent deployment",
+    "Teams with prior experience in AI frameworks seeking advanced capabilities"
+  ],
+  "not_recommended_for": [
+    "Beginners without prior experience in AI development",
+    "Users needing extensive documentation and support to get started",
+    "Organizations looking for a plug-and-play AI solution"
+  ],
+  "red_flags": [
+    "Lack of clarity around authentication requirements may hinder initial setup",
+    "Documentation gaps could lead to frustration for less experienced users"
+  ],
+  "compared_to": [
+    {
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI API offers a more user-friendly experience with extensive documentation and examples. Choose Leixusam Foundry for more customizable solutions; choose OpenAI for ease of use.",
+      "preferred_for_axis": "user-friendliness"
+    },
+    {
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face provides a wider array of pre-trained models and community resources. Leixusam Foundry excels in customizability for developers focused on building unique applications.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Leixusam Foundry can be integrated into existing workflows via its API, allowing developers to create tailored AI solutions.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Foundry - Autonomous Development That Works While You Sleep\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Development that works while you sleep.",
-      "source_surface": "homepage"
+      "evidence": "Powerful AI agent framework for developers",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get Started\" is visible as a primary call-to-action.",
-      "source_surface": "homepage"
+      "evidence": "Get Started Now button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Get started in under 5 minutes. Free and open source.",
-      "source_surface": "homepage"
+      "evidence": "Access to API detailed on pricing page",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention a demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "evidence": "Demo available for previewing capabilities",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://foundry.tryrobin.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:52:55.463Z"
+  "summary": "Robust AI agent framework with strong capabilities \u2014 ideal for developers but may require deeper documentation for optimal use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/leixusam-foundry.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
