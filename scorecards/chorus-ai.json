@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "chorus-ai",
   "name": "Chorus",
-  "category": "Customer Experience",
+  "agent_url": "https://www.chorus.ai",
+  "category": "Sales",
+  "run_id": "run-chorus-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Chorus",
-  "review_url": "https://hlido.eu/reviews/chorus-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-chorus-ai-moo0ylf3",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "A fading player in sales conversation analytics \u2014 lacks innovation and competitive edge.",
+    "body": "Chorus has established itself in the sales conversation analytics space but currently shows signs of stagnation. The platform provides basic features for recording and analyzing sales calls, which can be useful for training and performance evaluation. However, it lacks the innovative features and integrations that newer competitors are offering. The absence of clear differentiation from rivals means it's struggling to maintain relevance in a rapidly evolving market. Users may find better value in alternatives that offer more robust capabilities or integrations with existing sales tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of recent innovation and competitive features compared to newer entrants in the sales analytics space. Chorus needs to enhance its offering to regain traction and relevance.",
+  "what_it_does_well": [
+    "Provides basic recording and transcription of sales calls",
+    "Offers analytics for performance evaluation",
+    "Useful for training purposes in sales teams"
+  ],
+  "what_it_fails_at": [
+    "Lacks innovative features that newer competitors provide",
+    "No clear differentiation from other sales analytics tools",
+    "Limited integrations with existing sales software"
+  ],
+  "best_for": [
+    "Teams looking for basic call recording and analysis",
+    "Organizations already using Chorus who need to maintain continuity",
+    "Users not requiring advanced analytics or integrations"
+  ],
+  "not_recommended_for": [
+    "Sales teams needing advanced analytics or AI-driven insights",
+    "Organizations looking for seamless integrations with CRM systems",
+    "Users seeking innovative features in conversation analytics"
+  ],
+  "red_flags": [
+    "Stagnation in feature development compared to competitors",
+    "Lack of clear positioning in a crowded market"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "ZoomInfo is the AI GTM platform that turns B2B intelligence into pipeline.",
-      "source_surface": "homepage"
+      "slug": "gong",
+      "verdict_diff": "Gong offers more advanced analytics and AI-driven insights, making it a better choice for teams needing deeper performance analysis. Chorus is more basic and lacks these capabilities.",
+      "preferred_for_axis": "advanced analytics"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "salesloft",
+      "verdict_diff": "SalesLoft provides a more integrated approach to sales engagement with better tools for managing customer interactions. Choose SalesLoft for a more comprehensive sales solution.",
+      "preferred_for_axis": "integrated sales engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Chorus does not appear to offer programmatic access or integrations suitable for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage primarily promotes a free trial and requires users to submit a form with personal information to gain access.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition visible on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No prominent call-to-action found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "By submitting this form, you agree to ZoomInfo's Privacy Policy and Terms of Service.",
-      "source_surface": "homepage"
+      "evidence": "No transparent pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of features found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.zoominfo.com/products/chorus?ch_source=chorus",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:33:46.038Z"
+  "summary": "A fading player in sales conversation analytics \u2014 lacks innovation and competitive edge.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/chorus-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
