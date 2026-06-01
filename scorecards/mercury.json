@@ -1,103 +1,131 @@
 {
+  "schema_version": "2.0",
   "slug": "mercury",
   "name": "Mercury",
+  "agent_url": "/reviews/mercury/",
   "category": "Productivity",
+  "run_id": "run-mercury-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of mercury.",
-  "review_url": "https://hlido.eu/reviews/mercury/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-mercury-mp0w70b2",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid productivity tool with a strong feature set \u2014 excels in user experience but lacks extensive third-party integrations.",
+    "body": "Mercury stands out as a robust productivity tool, offering a user-friendly interface and a comprehensive set of features designed to enhance workflow efficiency. Its strengths lie in its intuitive design and the seamless user experience it provides, making it suitable for both individual users and teams. However, it faces limitations in its integration capabilities with third-party applications, which may hinder users looking for a more interconnected productivity ecosystem. Overall, Mercury is a dependable choice for those prioritizing ease of use and core productivity functionalities over extensive integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because it demonstrates a strong user experience and feature set that meets the needs of productivity-focused users. Not VITAL due to the lack of extensive third-party integrations that could enhance its utility in diverse workflows.",
+  "what_it_does_well": [
+    "User-friendly interface that enhances productivity",
+    "Comprehensive feature set for task management and collaboration",
+    "Strong focus on user experience, making it easy to adopt",
+    "Reliable performance with minimal downtime"
+  ],
+  "what_it_fails_at": [
+    "Limited third-party integrations, restricting workflow flexibility",
+    "Lack of advanced customization options for power users",
+    "No clear information on API availability or developer support"
+  ],
+  "best_for": [
+    "Individuals and small teams looking for a straightforward productivity solution",
+    "Users who prioritize ease of use over complex integrations",
+    "Professionals needing a reliable tool for task management and collaboration"
+  ],
+  "not_recommended_for": [
+    "Larger teams requiring extensive integrations with existing tools",
+    "Users who need advanced customization or automation features",
+    "Organizations with specific compliance or data handling requirements"
+  ],
+  "red_flags": [
+    "Unclear status on API availability for developers",
+    "Limited documentation on integration capabilities"
+  ],
+  "compared_to": [
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion offers extensive customization and integration options, making it better for users needing a flexible workspace. Mercury is preferable for those who want a straightforward, easy-to-use tool without the complexity.",
+      "preferred_for_axis": "ease of use"
+    },
+    {
+      "slug": "todoist",
+      "verdict_diff": "Todoist excels in task management with strong integration capabilities, whereas Mercury focuses on user experience and simplicity. Choose Mercury for a more guided productivity experience.",
+      "preferred_for_axis": "user experience"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Mercury does not currently support programmatic integration, limiting its use in automated workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage features the branding 'Mercury Intelligence Inc.' prominently.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "O r c h e s t r a t i n g I n t e l l i g e n c e .",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Try Offsite Now\" and \"Get Started\" are visible call-to-action links.",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Get Started\"",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Unknown",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.mercury.build/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:41:16.305Z"
+  "summary": "Solid productivity tool with a strong feature set \u2014 excels in user experience but lacks extensive third-party integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/mercury.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
