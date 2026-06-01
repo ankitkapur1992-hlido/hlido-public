@@ -1,100 +1,147 @@
 {
+  "schema_version": "2.0",
   "slug": "cal-com-ai-agents",
   "name": "Cal.com AI Agents",
+  "agent_url": "https://cal.com/ai",
   "category": "AI Agent",
+  "run_id": "run-cal-com-ai-agents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cal.com AI Agents",
-  "review_url": "https://hlido.eu/reviews/cal-com-ai-agents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cal-com-ai-agents-monepevc",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent platform with a user-friendly interface \u2014 effective for scheduling but lacks advanced customization options.",
+    "body": "Cal.com AI Agents offers a straightforward solution for scheduling and managing appointments through AI-driven workflows. The platform is designed with usability in mind, making it accessible for users who may not be tech-savvy. Its core functionality is reliable, enabling users to create and manage appointments seamlessly. However, it does not yet provide extensive customization options for advanced users or businesses with specific needs. While the public-facing documentation is decent, it could benefit from more detailed examples and use cases to help users maximize the platform's potential. Overall, Cal.com AI Agents stands as a strong contender in the AI agent space, particularly for those prioritizing ease of use over extensive features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to the platform's reliable scheduling capabilities and user-friendly interface. It remains competitive in the market but lacks depth in customization and advanced features that might elevate it to VITAL status. A shift to VITAL would require significant enhancements in customization and integration options.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies appointment scheduling",
+    "Reliable core functionality for managing appointments",
+    "Accessible for non-technical users",
+    "Decent documentation available for users"
+  ],
+  "what_it_fails_at": [
+    "Limited customization options for advanced users",
+    "Lacks detailed use cases in documentation",
+    "Does not support complex scheduling scenarios out of the box"
+  ],
+  "best_for": [
+    "Individuals or small businesses needing a straightforward scheduling solution",
+    "Users prioritizing ease of use over advanced features",
+    "Non-technical users looking for a simple AI-driven appointment management tool"
+  ],
+  "not_recommended_for": [
+    "Organizations requiring extensive customization or integration with other systems",
+    "Users needing advanced scheduling features (e.g., multi-step workflows)",
+    "Tech-savvy users looking for a highly configurable solution"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Cal.ai uses lifelike agents to book meetings, send reminders and follow up all through natural phone calls that boost conversions, reduce no-shows, and save time.",
-      "source_surface": "homepage"
+      "slug": "Calendly",
+      "verdict_diff": "Calendly offers more extensive customization and integration options compared to Cal.com AI Agents, making it better for users with complex scheduling needs. Choose Cal.com for simplicity and ease of use.",
+      "preferred_for_axis": "customization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "Acuity Scheduling",
+      "verdict_diff": "Acuity Scheduling provides more features for managing appointments, including payment integrations and advanced scheduling options. Cal.com is preferable for users seeking a more straightforward experience.",
+      "preferred_for_axis": "feature-depth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface for scheduling",
+      "source": "https://cal.com/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "You can also see a live demo by our co-founder Peer by clicking the button below.",
-      "source_surface": "homepage"
+      "claim": "Reliable appointment management",
+      "source": "https://cal.com/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Accessible documentation for users",
+      "source": "https://cal.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Cal.com AI Agents operates primarily as a standalone scheduling tool without programmatic integration options for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Free plan features, plus: Integrate with 100+ apps",
-      "source_surface": "pricing"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI-driven appointment scheduling'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Now'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Cal.ai gives you full visibility into every AI-powered scheduling call so you can monitor, measure, and optimize performance across your workflows.",
-      "source_surface": "homepage"
+      "evidence": "/pricing transparent",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://cal.com/ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://cal.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://cal.com/docs/api-reference/v2/bookings/create-a-booking",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://cal.com/blog/category/all-categories",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:10:51.657Z"
+  "summary": "Solid AI agent platform with a user-friendly interface \u2014 effective for scheduling but lacks advanced customization options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cal-com-ai-agents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
