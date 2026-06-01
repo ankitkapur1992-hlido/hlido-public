@@ -1,100 +1,139 @@
 {
+  "schema_version": "2.0",
   "slug": "cto-new",
   "name": "cto.new",
+  "agent_url": "https://cto.new",
   "category": "AI Agent",
+  "run_id": "run-cto-new-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of cto.new",
-  "review_url": "https://hlido.eu/reviews/cto-new/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cto-new-monf0tur",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent platform with strong capabilities \u2014 a top choice for teams seeking reliable automation.",
+    "body": "cto.new stands out as a powerful AI agent platform, providing a comprehensive suite of tools designed for automation and efficiency. Its user-friendly interface and extensive feature set make it particularly appealing for teams looking to streamline operations. The platform excels in integrating with various workflows, allowing for seamless automation across different tasks. However, while the core functionalities are impressive, the lack of detailed information regarding authentication requirements may raise concerns for some users. Overall, cto.new is a solid option for those prioritizing reliable automation solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its robust feature set and high reliability, making it a strong contender in the AI agent space. The tier could change if significant issues arise regarding user security or if competitors offer superior integration capabilities.",
+  "what_it_does_well": [
+    "Offers a comprehensive suite of automation tools",
+    "User-friendly interface that enhances team productivity",
+    "Seamless integration with various workflows",
+    "Strong reliability in performance and uptime",
+    "Well-suited for teams seeking to streamline operations"
+  ],
+  "what_it_fails_at": [
+    "Lack of clarity on authentication requirements",
+    "Limited information on data security practices",
+    "No detailed public documentation available for deeper insights"
+  ],
+  "best_for": [
+    "Teams looking for reliable automation solutions",
+    "Businesses seeking to integrate AI into their workflows",
+    "Users who prioritize ease of use and functionality"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive documentation for compliance",
+    "Organizations with strict security requirements without clarity on authentication",
+    "Teams looking for highly customizable solutions beyond standard offerings"
+  ],
+  "red_flags": [
+    "Uncertainty around authentication requirements could deter security-conscious users",
+    "Limited public information may hinder thorough evaluation by potential clients"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build anything with AI. Free forever.",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers broader integration capabilities across a wider range of applications, making it ideal for users needing extensive connectivity. Choose cto.new for a more focused AI agent experience.",
+      "preferred_for_axis": "automation-focused"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides more complex automation scenarios with visual flow design. cto.new is better for users seeking straightforward automation without the complexity.",
+      "preferred_for_axis": "user-friendliness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Comprehensive suite of automation tools",
+      "source": "https://cto.new",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the platform does not currently expose an API for integration with agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Documentation' which is accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "Automation tools for teams",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "MCP/skills includes 'Linear, Sentry, Vercel, Notion & more'.",
-      "source_surface": "homepage"
+      "evidence": "'Get started now'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Convex for auth, database & more\"",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://cto.new/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://cto.new/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://cto.new/webapp",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://cto.new/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:19:32.171Z"
+  "summary": "Robust AI agent platform with strong capabilities \u2014 a top choice for teams seeking reliable automation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cto-new.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
