@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "chatgpt-assistant",
   "name": "ChatGPT-Assistant",
+  "agent_url": "/reviews/chatgpt-assistant/",
   "category": "Chat & Companion",
+  "run_id": "run-chatgpt-assistant-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of chatgpt-assistant.",
-  "review_url": "https://hlido.eu/reviews/chatgpt-assistant/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-chatgpt-assistant-mp11f3ls",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional but unremarkable chatbot assistant \u2014 lacks distinctive features in a crowded field.",
+    "body": "ChatGPT-Assistant operates within a saturated market of AI-driven chatbots. While it fulfills basic conversational tasks, it does not stand out against competitors like Intercom Fin or Chatbase. The lack of transparency regarding authentication requirements raises concerns about usability and integration. As it stands, ChatGPT-Assistant is a viable option for users seeking basic chatbot functionality, but those with specific needs may find better-suited alternatives. Without clear differentiation or compelling features, it remains a middle-of-the-road choice.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to basic functionality and operational presence. However, it lacks unique features or strong positioning against established competitors, which prevents it from being classified as VITAL. Improvements in feature set or clarity on integration could elevate its status.",
+  "what_it_does_well": [
+    "Provides basic conversational capabilities for user interaction",
+    "Operates within the familiar framework of chatbot assistants",
+    "Can be integrated into existing platforms with minimal setup"
+  ],
+  "what_it_fails_at": [
+    "Lacks distinctive features that differentiate it from competitors",
+    "Transparency regarding authentication requirements is unclear",
+    "No evidence of advanced capabilities or integrations"
+  ],
+  "best_for": [
+    "Users needing a simple chatbot solution without advanced features",
+    "Small businesses looking for basic customer interaction tools",
+    "Users who prioritize ease of setup over feature richness"
+  ],
+  "not_recommended_for": [
+    "Organizations requiring robust chatbot capabilities with clear integration paths",
+    "Users looking for advanced AI features like multilingual support or deep learning",
+    "Enterprises needing detailed data handling and compliance assurances"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may hinder user onboarding",
+    "Lack of differentiation in a competitive market raises concerns about longevity"
+  ],
+  "compared_to": [
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin offers a comprehensive suite with advanced features and integrations, making it more suitable for enterprises. ChatGPT-Assistant is a simpler option for those with less demanding needs.",
+      "preferred_for_axis": "feature-rich solutions"
+    },
+    {
+      "slug": "chatbase",
+      "verdict_diff": "Chatbase provides robust analytics and customization options, which are absent in ChatGPT-Assistant. Choose Chatbase for a more tailored chatbot experience.",
+      "preferred_for_axis": "customization and analytics"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration points for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\" is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention any pricing or access path for login or getting started.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/dylanmeca/ChatGPT-Assistant",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:07:17.267Z"
+  "summary": "Functional but unremarkable chatbot assistant \u2014 lacks distinctive features in a crowded field.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/chatgpt-assistant.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
