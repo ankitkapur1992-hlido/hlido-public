@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "finflow",
   "name": "FinFLow",
+  "agent_url": "/reviews/finflow/",
   "category": "Chat & Companion",
+  "run_id": "run-finflow-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of finflow.",
-  "review_url": "https://hlido.eu/reviews/finflow/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-finflow-mp11knx9",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic chatbot solution with potential but lacks clarity and robust features \u2014 needs improvement to compete effectively.",
+    "body": "FinFLow presents itself as a basic chatbot solution within the crowded Chat & Companion category. While it may serve users looking for simple interactions, it currently lacks the depth and clarity that more established competitors offer. The absence of verified claims and detailed feature descriptions leaves potential users with more questions than answers. Without a clear value proposition or unique features, FinFLow may struggle to attract users who have a plethora of alternatives available. Improvements in documentation and feature clarity are essential for it to gain traction in a competitive landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) reflects the current state of FinFLow as a basic offering in a competitive space. It has potential but lacks the necessary features and clarity to be considered vital. A more defined value proposition and better documentation would elevate its standing.",
+  "what_it_does_well": [
+    "Offers basic chatbot functionality suitable for simple interactions",
+    "Potential for integration into existing workflows with proper enhancements"
+  ],
+  "what_it_fails_at": [
+    "Lacks detailed feature descriptions and clarity on capabilities",
+    "No verified claims or user testimonials available",
+    "Limited differentiation from competitors in the chatbot space"
+  ],
+  "best_for": [
+    "Users seeking a very basic chatbot solution without complex requirements",
+    "Early adopters willing to experiment with new tools in the chatbot space"
+  ],
+  "not_recommended_for": [
+    "Businesses needing robust chatbot features and integrations",
+    "Users looking for detailed documentation and verified claims"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about reliability and effectiveness",
+    "No clear differentiation from numerous competitors in the market"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatbase",
+      "verdict_diff": "Chatbase offers a more comprehensive feature set and clearer documentation. Choose Chatbase for a more established solution with proven capabilities.",
+      "preferred_for_axis": "feature-completeness"
+    },
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin provides a more robust enterprise solution with better support and features. FinFLow may appeal to casual users, but lacks the depth needed for serious applications.",
+      "preferred_for_axis": "enterprise-capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks sufficient details on integration capabilities.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\" is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/Agents-MCP-Hackathon/FinFLow",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:11:38.809Z"
+  "summary": "Basic chatbot solution with potential but lacks clarity and robust features \u2014 needs improvement to compete effectively.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/finflow.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
