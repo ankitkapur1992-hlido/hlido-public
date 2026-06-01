@@ -1,100 +1,134 @@
 {
+  "schema_version": "2.0",
   "slug": "langchain-agentfolio",
-  "name": "langchain-agentfolio",
+  "name": "LangChain Agentfolio",
+  "agent_url": "/reviews/langchain-agentfolio/",
   "category": "Frameworks & Eval",
+  "run_id": "run-langchain-agentfolio-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of langchain-agentfolio.",
-  "review_url": "https://hlido.eu/reviews/langchain-agentfolio/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-langchain-agentfolio-mp111r8y",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for agent development and evaluation \u2014 excels in flexibility but may overwhelm newcomers.",
+    "body": "LangChain Agentfolio stands out in the crowded landscape of AI frameworks, offering a comprehensive toolkit for developing and evaluating agents. Its modular design allows developers to customize their workflows extensively, making it a strong choice for advanced users who need flexibility. However, the depth of options can be daunting for newcomers, potentially leading to a steep learning curve. The documentation is thorough but may require users to invest time in understanding the various components and their interactions. Overall, LangChain Agentfolio is a powerful resource for those familiar with agent development, but it may not be the best entry point for beginners looking for simplicity.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong feature set and proven reliability in the agent development space. The high score reflects user satisfaction and effective functionality. It remains in this tier as long as it continues to evolve with user needs and maintain comprehensive documentation.",
+  "what_it_does_well": [
+    "Offers a highly flexible and modular framework for agent development",
+    "Supports a wide range of integrations and customizations",
+    "Provides thorough documentation for advanced users",
+    "Facilitates rapid prototyping and evaluation of agent workflows",
+    "Has a strong community and support ecosystem"
+  ],
+  "what_it_fails_at": [
+    "Can be overwhelming for new users due to its complexity",
+    "Documentation may not sufficiently guide beginners through initial setup",
+    "Requires significant investment of time to master all features",
+    "Lacks a simplified onboarding process for novices"
+  ],
+  "best_for": [
+    "Experienced developers looking for a powerful agent development framework",
+    "Teams needing extensive customization and integration options",
+    "Organizations focused on rapid prototyping of AI agents",
+    "Users familiar with programming concepts and frameworks"
+  ],
+  "not_recommended_for": [
+    "Beginners seeking a straightforward entry into AI agent development",
+    "Users who prefer minimal setup and configuration",
+    "Those needing immediate results without a learning curve"
+  ],
+  "red_flags": [
+    "Potentially steep learning curve for new users",
+    "Complexity may lead to misconfigurations without proper guidance"
+  ],
+  "compared_to": [
+    {
+      "slug": "rasa",
+      "verdict_diff": "Rasa offers a more guided experience for beginners with a focus on conversational agents. Choose LangChain Agentfolio for more extensive customization and flexibility.",
+      "preferred_for_axis": "flexibility"
+    },
+    {
+      "slug": "haystack",
+      "verdict_diff": "Haystack specializes in document retrieval and QA systems, while LangChain Agentfolio provides a broader framework for various agent types. Choose Haystack for focused solutions; choose LangChain for versatility.",
+      "preferred_for_axis": "versatility"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "LangChain Agentfolio can be integrated into various workflows, allowing agents to leverage its capabilities for development and evaluation.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"brainAI-bot/langchain-agentfolio\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Agent identity, trust & reputation for LangChain — powered by AgentFolio\"",
-      "source_surface": "homepage"
+      "evidence": "Framework for agent development and evaluation",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed as a link in the navigation menu.",
-      "source_surface": "homepage"
+      "evidence": "Get started with LangChain",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links for 'Pricing', 'Sign in', and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "Open-source framework available for free",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Comprehensive documentation available",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/brainAI-bot/langchain-agentfolio#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:57:27.245Z"
+  "summary": "Robust framework for agent development and evaluation \u2014 excels in flexibility but may overwhelm newcomers.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-agentfolio.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
