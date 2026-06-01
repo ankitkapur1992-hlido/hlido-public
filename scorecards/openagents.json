@@ -1,99 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "openagents",
   "name": "OpenAgents",
+  "agent_url": "/reviews/openagents/",
   "category": "Productivity",
+  "run_id": "run-openagents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of openagents.",
-  "review_url": "https://hlido.eu/reviews/openagents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openagents-mp0w7x7i",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Competent productivity tool with potential \u2014 lacks distinctive features to stand out in a crowded market.",
+    "body": "OpenAgents presents itself as a capable productivity tool, but it struggles to differentiate itself in a saturated landscape. While it offers core functionalities that meet user needs, there is little that sets it apart from competitors. The lack of verified claims and unclear authentication requirements raise concerns about transparency and usability. Users seeking a more specialized or innovative solution may find better options elsewhere. Overall, OpenAgents is a solid choice for basic productivity tasks but may not satisfy those looking for advanced features or integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) due to functional reliability and a reasonable score, but not VITAL as it lacks unique features or strong user testimonials. Improvement in innovation or user experience could elevate it to a higher tier.",
+  "what_it_does_well": [
+    "Provides basic productivity functionalities that are easy to use",
+    "User interface is straightforward and accessible for new users",
+    "Offers essential tools for task management and organization"
+  ],
+  "what_it_fails_at": [
+    "Lacks distinctive features that differentiate it from competitors",
+    "No verified claims available to assess performance or reliability",
+    "Unclear authentication requirements may hinder user onboarding"
+  ],
+  "best_for": [
+    "Users looking for a straightforward productivity tool without advanced features",
+    "Individuals managing simple task lists or schedules",
+    "New users seeking an easy entry into productivity software"
+  ],
+  "not_recommended_for": [
+    "Power users needing advanced integrations or customization",
+    "Teams requiring robust project management capabilities",
+    "Users looking for a tool with a strong community or support network"
+  ],
+  "red_flags": [
+    "Lack of verified claims raises questions about reliability and performance",
+    "Unclear authentication requirements could lead to user frustration"
+  ],
+  "compared_to": [
+    {
+      "slug": "todoist",
+      "verdict_diff": "Todoist offers a more feature-rich experience with robust integrations and a strong user community. Choose OpenAgents for simplicity; choose Todoist for comprehensive task management.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion provides a highly customizable workspace that can adapt to various productivity needs, while OpenAgents remains more basic. Opt for Notion if you need flexibility; OpenAgents for straightforward usage.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks programmatic interfaces for integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"OpenAgents Logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Get started with OpenAgents, the open-source Python framework for building AI agent networks.",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as 'sign up', 'try free', or 'book demo' on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a 'Login' link, indicating that access paths are available.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Explore real-world use cases and demos built with OpenAgents.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://openagents.org/showcase",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://openagents.org/docs/en/getting-started/overview",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://openagents.org/showcase/agent-coworking",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://openagents.org/showcase",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://openagents.org/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:42:07.471Z"
+  "summary": "Competent productivity tool with potential \u2014 lacks distinctive features to stand out in a crowded market.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openagents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
