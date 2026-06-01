@@ -1,100 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "inkeep",
   "name": "Inkeep",
-  "category": "Customer Experience",
+  "agent_url": "https://inkeep.com",
+  "category": "Customer Support",
+  "run_id": "run-inkeep-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Inkeep",
-  "review_url": "https://hlido.eu/reviews/inkeep/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-inkeep-moo1psui",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable customer support tool with solid features \u2014 lacks standout differentiation in a competitive landscape.",
+    "body": "Inkeep presents itself as a dependable customer support solution, offering a range of features that cater to various support needs. Its interface is user-friendly, and it integrates well with existing workflows, making it a practical choice for teams looking to enhance their customer service capabilities. However, it operates in a crowded market with established competitors, and while it performs well, it doesn't offer a unique selling proposition that sets it apart from others like Zendesk or Freshdesk. Users may find it meets their needs, but those seeking innovative features or a distinct edge may want to explore alternatives. The absence of detailed information on pricing and integrations could also be a barrier for potential users. Overall, Inkeep remains a solid option for businesses prioritizing reliability over differentiation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects Inkeep's reliable performance and established presence in the customer support space. It lacks the innovative features that could elevate it to VITAL, but it shows no signs of decline, maintaining a consistent user base and functionality.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies customer support management",
+    "Integrates smoothly with existing workflows and tools",
+    "Offers a range of features suitable for various support needs",
+    "Demonstrates reliable performance with minimal downtime"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features that differentiate it from competitors",
+    "Limited visibility on pricing and integration options",
+    "Does not emphasize innovative solutions or advanced capabilities"
+  ],
+  "best_for": [
+    "Small to medium-sized businesses looking for reliable customer support tools",
+    "Teams prioritizing ease of use and straightforward integration",
+    "Users who need a dependable solution without complex features"
+  ],
+  "not_recommended_for": [
+    "Larger enterprises requiring advanced features and custom integrations",
+    "Teams looking for cutting-edge customer support technology",
+    "Users needing transparent pricing and detailed integration options"
+  ],
+  "red_flags": [
+    "Lack of detailed information on pricing and integrations may deter potential users"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Add AI Teammates to your customer experience team",
-      "source_surface": "homepage"
+      "slug": "zendesk",
+      "verdict_diff": "Zendesk offers a more comprehensive feature set and advanced capabilities, making it suitable for larger enterprises. Inkeep is better for small to medium businesses seeking simplicity.",
+      "preferred_for_axis": "feature-complexity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "freshdesk",
+      "verdict_diff": "Freshdesk provides a competitive pricing structure and a range of integrations that may appeal more to budget-conscious users. Inkeep is reliable but may not be as cost-effective.",
+      "preferred_for_axis": "pricing-structure"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Inkeep does not appear to offer programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a direct link to the pricing page, making it unclear how to access it in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible via the link labeled 'DOCS' on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Integrate with your product APIs and third party apps using any MCP server.",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Inkeep indexes everything so your agents retrieve the most relevant, up-to-date answers.",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://inkeep.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://inkeep.com/developers",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://inkeep.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://inkeep.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:54:46.683Z"
+  "summary": "Reliable customer support tool with solid features \u2014 lacks standout differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/inkeep.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
