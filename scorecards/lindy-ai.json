@@ -1,136 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "lindy-ai",
-  "name": "lindy-ai",
+  "name": "Lindy AI",
+  "agent_url": "https://lindy.ai",
   "category": "AI Agent",
+  "run_id": "run-lindy-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 50,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": {
-    "strategic_alpha": {
-      "predicted": 75,
-      "reasoning": "4,000+ integrations + agent swarms is a strong moat; competitive intelligence use case is highly valuable and differentiated."
-    },
-    "execution_grit": {
-      "predicted": 65,
-      "reasoning": "Free tier limits + potential rate-limiting on web scrapers could undermine reliability; 4,000 integrations breadth vs depth tradeoff."
-    },
-    "craft_and_soul": {
-      "predicted": 72,
-      "reasoning": "Known for clean interface; founder (@Altimor) has 44K followers suggesting community trust and polished execution."
-    },
-    "value_signal": {
-      "predicted": 55,
-      "reasoning": "Free tier is real but limited; credit consumption opacity at scale is a known community concern."
-    }
+  "laddoo_score": 50,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Lindy AI struggles in a crowded AI agent space \u2014 4,000 integrations but lacks depth and clear differentiation.",
+    "body": "Lindy AI presents itself as a versatile AI agent with over 4,000 integrations, suggesting a broad capability to connect with various platforms. However, it faces significant challenges in establishing a clear value proposition amidst a crowded market. The free tier's limitations and potential rate-limiting on web scraping could undermine its reliability, making it difficult for users to depend on it for critical tasks. While the interface is noted for its cleanliness and the founder's community presence suggests some level of trust, these factors alone do not compensate for the lack of depth in its offerings. Without a compelling unique selling point or a clear strategy to enhance its execution, Lindy AI risks becoming irrelevant in a rapidly evolving landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  "review_url": "https://hlido.eu/reviews/lindy-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-lindy-ai-monedaf4",
-  "claims": [
+  "tier_rationale": "FADING (50) because while the integration breadth is notable, the lack of depth and clear differentiation in a competitive market diminishes its appeal. A shift to a more robust execution strategy or clearer value proposition could improve its standing.",
+  "what_it_does_well": [
+    "Offers over 4,000 integrations, providing a wide range of connectivity options",
+    "Clean interface that enhances user experience",
+    "Founder has a notable presence in the community, suggesting some level of trust"
+  ],
+  "what_it_fails_at": [
+    "Lacks depth in features and capabilities compared to competitors",
+    "Free tier limitations may hinder user engagement and reliability",
+    "No clear differentiation or unique selling point in a crowded market"
+  ],
+  "best_for": [
+    "Users seeking a wide array of integrations without specific feature depth",
+    "Individuals or teams exploring basic AI agent functionalities",
+    "Early adopters willing to experiment with new tools in the AI space"
+  ],
+  "not_recommended_for": [
+    "Businesses needing reliable, high-performance AI agents for critical tasks",
+    "Users looking for deep functionality and specialized features",
+    "Teams that require robust support and clear value propositions"
+  ],
+  "red_flags": [
+    "Potential rate-limiting on web scrapers could affect performance",
+    "Free tier limitations may restrict user experience and engagement"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage loads without login and agent builder visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Lindy helps run your day like a world-class executive assistant.\"",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more established integration platform with deeper functionality and reliability. Choose Zapier for comprehensive automation needs; Lindy AI may fall short in critical use cases.",
+      "preferred_for_axis": "depth of features"
     },
     {
-      "id": "C02",
-      "claim": "Free tier accessible without credit card",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Start with 7 days free. Cancel anytime.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Agent swarm feature accessible on free tier",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "4,000+ integrations list publicly visible",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "With hundreds of integrations, Lindy can read your Slack, cross-reference your calendar, and draft a response in Gmail, all without you asking.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Competitive intelligence use case testable in free tier",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C06",
-      "claim": "Pricing page accessible with credit breakdown",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"$49.99 / month\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C07",
-      "claim": "Response quality evaluable in 1-2 agent runs",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT provides a simpler, user-friendly automation experience with a focus on consumer applications, while Lindy AI targets a more complex integration landscape. Choose IFTTT for straightforward tasks.",
+      "preferred_for_axis": "user-friendliness"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [
     {
-      "id": "homepage",
-      "url": "https://www.lindy.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "claim": "Offers over 4,000 integrations",
+      "source": "https://lindy.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     }
   ],
-  "required_items_total": 5,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:01:03.429Z"
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Lindy AI does not currently provide programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Lacks clear articulation of unique selling points",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' button is visible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Free tier limitations are not clearly communicated",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No live demo or interactive elements on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Lindy AI struggles in a crowded AI agent space \u2014 4,000 integrations but lacks depth and clear differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/lindy-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
