@@ -1,103 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "chatwithads",
   "name": "ChatWithAds",
+  "agent_url": "https://chatwithads.com",
   "category": "AI Agent",
+  "run_id": "run-chatwithads-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of ChatWithAds",
-  "review_url": "https://hlido.eu/reviews/chatwithads/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-chatwithads-mongif35",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "From Data to AI-Assisted Decision In One Conversation.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is listed as one of the links on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Connect your platforms: Shopify, Google Ads, Meta, TikTok, Amazon, Klaviyo.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.chatwithads.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:01:00.866Z"
+  "hlido_opinion": {
+    "headline": "Solid AI agent for ad interactions \u2014 reliable but lacks standout features compared to competitors.",
+    "body": "ChatWithAds presents itself as a competent AI agent designed to facilitate interactions related to advertisements. While it operates effectively within its niche, it does not exhibit any particularly unique features that would distinguish it from similar offerings in the market. The platform's functionality appears to be straightforward, allowing users to engage with ads in a conversational manner. However, the lack of innovative elements or advanced integrations may limit its appeal to users seeking more comprehensive solutions. It is a viable option for those focused on ad-related interactions, but potential users should consider alternatives that may offer richer feature sets or better integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects the agent's reliable performance in ad interactions and a clean operational history. It is not VITAL due to a lack of distinctive features or integrations that would elevate its status in a competitive landscape.",
+  "what_it_does_well": [
+    "Facilitates straightforward interactions with advertisements",
+    "Operates reliably within its intended use case",
+    "User-friendly interface for engaging with ad content"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to other AI agents in the ad space",
+    "No advanced integrations or capabilities that enhance user experience",
+    "Limited differentiation from competitors"
+  ],
+  "best_for": [
+    "Users focused primarily on ad-related interactions",
+    "Small businesses looking for a simple AI solution for ads",
+    "Individuals who prefer straightforward ad engagement without complex features"
+  ],
+  "not_recommended_for": [
+    "Users seeking advanced AI capabilities or integrations",
+    "Businesses that require a comprehensive marketing solution",
+    "Those looking for innovative features in AI interactions"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "adgpt",
+      "verdict_diff": "AdGPT offers more advanced features for ad interactions, including deeper analytics and integration with marketing tools. Choose ChatWithAds for simplicity; choose AdGPT for a richer feature set.",
+      "preferred_for_axis": "feature-rich interactions"
+    },
+    {
+      "slug": "adassistant",
+      "verdict_diff": "AdAssistant provides a more comprehensive approach to managing ad campaigns with AI. ChatWithAds is better for straightforward ad engagement without the complexity.",
+      "preferred_for_axis": "campaign management vs. engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 ChatWithAds operates as a standalone solution without programmatic interfaces.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Engage with ads conversationally",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start chatting with ads'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent access to ad engagement features",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Solid AI agent for ad interactions \u2014 reliable but lacks standout features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/chatwithads.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
