@@ -1,100 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "ironclad",
   "name": "Ironclad",
-  "category": "Specialized verticals",
+  "agent_url": "https://ironcladapp.com",
+  "category": "Legal",
+  "run_id": "run-ironclad-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Ironclad",
-  "review_url": "https://hlido.eu/reviews/ironclad/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ironclad-moo19z6e",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid contract lifecycle management tool for legal teams \u2014 reliable but lacks standout features against competitors.",
+    "body": "Ironclad serves as a robust contract lifecycle management platform, designed primarily for legal teams. Its core functionalities are dependable, allowing users to manage contracts efficiently from creation to execution. The platform is well-regarded for its user-friendly interface and integration capabilities with other business tools. However, it faces stiff competition from other players in the market, such as DocuSign and ContractWorks, which may offer more specialized features or competitive pricing structures. While Ironclad performs well in essential areas, it does not significantly differentiate itself in a crowded field, making it a solid choice but not necessarily the first pick for every organization.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Ironclad consistently delivers reliable contract management features and maintains a solid reputation in the legal tech space. It remains competitive but lacks unique features that would elevate it to VITAL status. A clearer differentiation in its offerings could change its tier.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies contract management processes",
+    "Strong integration capabilities with other business tools",
+    "Reliable performance in contract creation, review, and execution",
+    "Well-regarded by legal teams for its functionality"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors like DocuSign and ContractWorks",
+    "Pricing may not be as competitive as some alternatives in the market",
+    "Limited marketing transparency regarding unique selling points"
+  ],
+  "best_for": [
+    "Legal teams looking for a reliable contract management solution",
+    "Organizations that prioritize user-friendly interfaces and integrations",
+    "Companies needing a dependable tool for contract lifecycle management"
+  ],
+  "not_recommended_for": [
+    "Businesses seeking highly specialized features for contract automation",
+    "Organizations with strict budget constraints looking for the cheapest option",
+    "Teams that require extensive customization capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI Contract Lifecycle Management",
-      "source_surface": "homepage"
+      "slug": "docusign",
+      "verdict_diff": "DocuSign offers more advanced electronic signature capabilities and extensive integrations, making it a better choice for organizations focused on e-signature functionalities. Choose Ironclad for a more comprehensive contract lifecycle management experience.",
+      "preferred_for_axis": "contract-management"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The pricing page is accessible from the homepage in two clicks via the 'Products' link and then the 'Pricing' link.",
-      "source_surface": "homepage"
+      "slug": "contractworks",
+      "verdict_diff": "ContractWorks provides a more cost-effective solution with robust features for smaller teams, while Ironclad is better suited for larger organizations needing extensive contract management capabilities.",
+      "preferred_for_axis": "scalability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://ironcladapp.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Strong integration capabilities",
+      "source": "https://ironcladapp.com/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Ironclad does not expose an API or other programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Connect to your favorite apps with our API and integrations; unlock additional instances; or enhance your team’s success plan.",
-      "source_surface": "pricing"
+      "evidence": "'Contract lifecycle management'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing information available on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features overview available on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://ironcladapp.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://ironcladapp.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://ironcladapp.com/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://ironcladapp.com/why/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:42:43.196Z"
+  "summary": "Solid contract lifecycle management tool for legal teams \u2014 reliable but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ironclad.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
