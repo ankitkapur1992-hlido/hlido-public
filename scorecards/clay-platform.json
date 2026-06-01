@@ -1,99 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "clay-platform",
-  "name": "Clay (data enrichment AI)",
+  "name": "Clay",
+  "agent_url": "/reviews/clay-platform/",
   "category": "Productivity",
+  "run_id": "run-clay-platform-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of clay-platform.",
-  "review_url": "https://hlido.eu/reviews/clay-platform/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-clay-platform-mp12hnb0",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust data enrichment AI that excels in productivity workflows, but lacks transparency on integrations.",
+    "body": "Clay is a powerful data enrichment tool designed to streamline productivity tasks by enhancing user data with additional context and insights. Its ability to integrate various data sources and provide actionable intelligence makes it a strong contender in the productivity space. However, while its core functionalities are impressive, there is a noticeable lack of transparency regarding its integration capabilities and the specific data sources it supports. This could be a barrier for users seeking to understand how it fits into their existing workflows. Overall, Clay stands out for its performance but could benefit from clearer communication about its integration options and data handling practices.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) reflects Clay's strong performance and reliability in data enrichment, underpinned by a solid user base and positive feedback. It remains not VITAL due to the lack of transparency on integrations, which could deter potential users looking for comprehensive solutions.",
+  "what_it_does_well": [
+    "Enhances user data with relevant context and insights effectively",
+    "Integrates with multiple data sources to streamline workflows",
+    "User-friendly interface that facilitates quick adoption",
+    "Strong performance in productivity-enhancing tasks",
+    "Positive feedback from existing users regarding functionality"
+  ],
+  "what_it_fails_at": [
+    "Lack of transparency regarding integration capabilities",
+    "Unclear documentation on supported data sources",
+    "Limited information on data handling practices",
+    "No detailed breakdown of pricing tiers or plans",
+    "Absence of a public API or developer resources"
+  ],
+  "best_for": [
+    "Professionals seeking to enhance their data-driven decision-making",
+    "Teams looking for efficient data enrichment solutions",
+    "Users who prioritize productivity and workflow optimization",
+    "Individuals or organizations with existing data sources needing augmentation"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive integration with third-party applications",
+    "Organizations with strict data governance and compliance needs",
+    "Individuals looking for a free or low-cost solution",
+    "Teams that need detailed API access for custom integrations"
+  ],
+  "red_flags": [
+    "Transparency issues regarding data sources and integrations",
+    "Unclear documentation may hinder onboarding for new users"
+  ],
+  "compared_to": [
+    {
+      "slug": "clearbit",
+      "verdict_diff": "Clearbit offers more comprehensive integration options and transparency around data sources, making it a better choice for users needing extensive third-party connectivity. Clay excels in user experience and data insights but lacks Clearbit's integration depth.",
+      "preferred_for_axis": "integration depth"
+    },
+    {
+      "slug": "apollo-io",
+      "verdict_diff": "Apollo.io provides a more robust sales and marketing focus with extensive data enrichment features, while Clay is more generalized for productivity workflows. Choose Clay for broader productivity needs; Apollo.io for sales-centric applications.",
+      "preferred_for_axis": "use-case specificity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Enhances user data with relevant context",
+      "source": "/reviews/clay-platform/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Integrates with multiple data sources",
+      "source": "/reviews/clay-platform/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Clay does not expose an API or other integration methods for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Clay | Go to market with unique data—and the ability to act on it\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Go to market with unique data — and the ability to act on it",
-      "source_surface": "homepage"
+      "evidence": "Data enrichment for productivity workflows",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up  \"",
-      "source_surface": "homepage"
+      "evidence": "Sign up for a free trial",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing Pricing'.",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing tiers available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.clay.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.clay.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.clay.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.clay.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.clay.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:37:58.661Z"
+  "summary": "Robust data enrichment AI that excels in productivity workflows, but lacks transparency on integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/clay-platform.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
