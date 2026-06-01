@@ -1,102 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "claude-skills-library",
-  "name": "claude-skills-library",
+  "name": "Claude Skills Library",
+  "agent_url": "/reviews/claude-skills-library/",
   "category": "Frameworks & Eval",
+  "run_id": "run-claude-skills-library-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of claude-skills-library.",
-  "review_url": "https://hlido.eu/reviews/claude-skills-library/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-claude-skills-library-mp11c2hk",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust skills library for Claude \u2014 a solid choice for developers seeking to enhance AI capabilities.",
+    "body": "The Claude Skills Library offers a comprehensive set of tools designed to extend the functionality of the Claude AI model. With a score of 90, it demonstrates a strong performance in providing developers with the resources needed to implement and evaluate AI skills effectively. The library is well-structured, making it easy to integrate into existing workflows. However, details regarding authentication requirements remain unclear, which could pose challenges for some users. Overall, it stands out in the Frameworks & Eval category, particularly for those looking to leverage Claude's capabilities in innovative ways.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because the library provides valuable resources that enhance Claude's capabilities, and it has a clear structure for integration. It is not classified as VITAL due to the lack of clarity on authentication requirements, which could impact user experience if not addressed.",
+  "what_it_does_well": [
+    "Offers a comprehensive set of tools for enhancing Claude's AI functionalities",
+    "Well-structured for easy integration into existing developer workflows",
+    "Strong performance metrics as indicated by the high score of 90",
+    "Facilitates effective implementation and evaluation of AI skills"
+  ],
+  "what_it_fails_at": [
+    "Unclear authentication requirements could hinder user onboarding",
+    "Limited information on community support or documentation depth",
+    "No verified claims or user testimonials available at this time"
+  ],
+  "best_for": [
+    "Developers looking to enhance AI capabilities with Claude",
+    "Teams integrating AI solutions into existing applications",
+    "Organizations seeking a structured framework for AI skill evaluation"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive community support or documentation",
+    "Those unfamiliar with AI frameworks who may require more guidance",
+    "Developers looking for a plug-and-play solution without integration effort"
+  ],
+  "red_flags": [
+    "Lack of clarity on authentication requirements could lead to integration issues"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage displays the branding 'claude-skills-library'.",
-      "source_surface": "homepage"
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI API offers a broader range of models and capabilities, but lacks the specific focus on skills that Claude provides. Choose Claude Skills Library for targeted enhancements.",
+      "preferred_for_axis": "targeted enhancement of AI skills"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"A categorized, deterministically-ranked catalog of SKILL.md files for Claude Code.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a 'Sign Up' link which is clearly visible.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Pricing', 'Sign Up', and 'Sign In'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention a demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face provides a wider array of models and community support, but Claude Skills Library is more focused on specific skills for Claude. Choose Claude for specialized development.",
+      "preferred_for_axis": "specialization in Claude"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the library serves as a resource for developers to enhance Claude's capabilities but does not provide direct programmatic access.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/claude-skills-library",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:05:09.996Z"
+  "summary": "Robust skills library for Claude \u2014 a solid choice for developers seeking to enhance AI capabilities.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/claude-skills-library.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
