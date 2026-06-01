@@ -1,98 +1,119 @@
 {
+  "schema_version": "2.0",
   "slug": "figma-make",
   "name": "Figma Make",
-  "category": "Image & Design",
+  "agent_url": "https://www.figma.com/make",
+  "category": "Design",
+  "run_id": "run-figma-make-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Figma Make",
-  "review_url": "https://hlido.eu/reviews/figma-make/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-figma-make-moo1gq6n",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage is titled 'Figma Make: Create with AI-Powered Design Tools', indicating a value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The pricing page can be accessed by clicking the 'Pricing' link from the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Our developer platform puts the power in your hands to create the tools teams need to improve efficiency, expand functionality, and bring ideas to life.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The documentation mentions 'Integrations' as a menu option, suggesting that there is information about supported frameworks.",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Manage your organization’s unique security requirements with advanced access, sharing, and compliance tools.",
-      "source_surface": "pricing"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.figma.com/make/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.figma.com/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://developers.figma.com/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.figma.com/mcp-catalog/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.figma.com/gallery/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.figma.com/release-notes/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:48:01.797Z"
+  "hlido_opinion": {
+    "headline": "Figma Make shows promise but lacks visibility and clear value proposition \u2014 a fading option in the design tool landscape.",
+    "body": "Figma Make is a tool that aims to enhance the Figma experience, but it currently struggles with visibility and user engagement. The lack of accessible information on its core functionalities makes it difficult to evaluate its effectiveness compared to established design tools. As Figma continues to evolve, the absence of clear marketing and user testimonials for Figma Make raises concerns about its longevity and relevance in a competitive market. Users looking for robust design solutions may find better alternatives with clearer value propositions and community support. Without significant improvements in visibility and user engagement, Figma Make risks being overshadowed by more established design tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of visibility and engagement, making it hard to justify its use against more established tools. A shift to a clearer value proposition and better user feedback could change this tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear information on functionalities and benefits",
+    "Poor visibility in the design tool market",
+    "No user testimonials or community support",
+    "Uncertain future given the competitive landscape"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Design professionals seeking reliable and well-supported tools",
+    "Users looking for clear guidance or community engagement",
+    "Teams needing robust design solutions with proven track records"
+  ],
+  "red_flags": [
+    "Limited information available on the tool's capabilities",
+    "No clear marketing strategy or user engagement"
+  ],
+  "compared_to": [
+    {
+      "slug": "figma",
+      "verdict_diff": "Figma itself offers a comprehensive design platform with extensive community support and resources, while Figma Make lacks visibility and clear value. Choose Figma for a well-rounded design experience.",
+      "preferred_for_axis": "visibility and community support"
+    },
+    {
+      "slug": "adobe-xd",
+      "verdict_diff": "Adobe XD provides robust design features and strong integration with other Adobe products. Figma Make does not currently match this level of functionality or support.",
+      "preferred_for_axis": "feature-rich design tools"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Figma Make lacks clear integration capabilities for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Figma Make shows promise but lacks visibility and clear value proposition \u2014 a fading option in the design tool landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/figma-make.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
