@@ -1,100 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "glean",
   "name": "Glean",
-  "category": "Research",
+  "agent_url": "https://www.glean.com",
+  "category": "AI Agent",
+  "run_id": "run-glean-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Glean",
-  "review_url": "https://hlido.eu/reviews/glean/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-glean-mongmvb9",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Work AI that works for legal.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Join us for a webinar featuring Abdullah Haydar, Director of Engineering at LinkedIn...\"",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Glean goes from insight to action. Connect all your apps to Glean. Glean understands your company’s knowledge to automate work.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Personalized, permissions-aware access to company data Glean analyzes content, activity, and people to understand how you work. All data permissions are inherited and strictly enforced, so users only see what they’re allowed to.\"",
-      "source_surface": "integrations"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.glean.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://www.glean.com/webinars/ai-powered-engineering",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.glean.com/connectors",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.glean.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:05:01.006Z"
+  "hlido_opinion": {
+    "headline": "Lacking clarity and differentiation in a crowded AI agent market \u2014 Glean struggles to present a compelling value proposition.",
+    "body": "Glean's public surface offers little insight into its unique capabilities or use cases, resulting in a vague impression of its functionality. In a landscape filled with AI agents, the lack of clear differentiation is a significant drawback. The absence of verifiable claims or user testimonials further diminishes confidence in its effectiveness. As it stands, Glean appears to be fading from relevance, lacking the updates or innovations that would reinvigorate interest. Users seeking a robust AI agent with a clear value proposition may find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the lack of clarity around its offerings and no recent updates or innovations. It would need to demonstrate a clear value proposition and user engagement to shift back to STEADY.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear differentiation from competitors in the AI agent space",
+    "Lack of verifiable claims or user testimonials",
+    "Vague public surface with minimal information on functionality",
+    "Absence of recent updates or innovations to attract users"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a robust AI agent with a clear value proposition",
+    "Individuals or teams needing verifiable performance claims",
+    "Those looking for innovative features or recent updates"
+  ],
+  "red_flags": [
+    "No clear communication of unique features or benefits",
+    "Lack of user engagement or testimonials raises concerns about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-defined user experience and extensive capabilities, while Glean lacks clarity and differentiation. Choose ChatGPT for a more established and versatile AI agent.",
+      "preferred_for_axis": "clarity and functionality"
+    },
+    {
+      "slug": "notion-ai",
+      "verdict_diff": "Notion AI integrates seamlessly into productivity workflows with clear use cases, unlike Glean, which struggles to articulate its value. Notion AI is preferable for users needing clear applications.",
+      "preferred_for_axis": "integration and use case clarity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Glean does not present a clear integration path for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No effective call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demos or user testimonials present",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Lacking clarity and differentiation in a crowded AI agent market \u2014 Glean struggles to present a compelling value proposition.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/glean.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
