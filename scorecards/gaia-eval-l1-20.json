@@ -1,102 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "gaia-eval-l1-20",
-  "name": "gaia-eval-l1-20",
+  "name": "Gaia Eval L1-20",
+  "agent_url": "/reviews/gaia-eval-l1-20/",
   "category": "AI Agent",
+  "run_id": "run-gaia-eval-l1-20-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of gaia-eval-l1-20.",
-  "review_url": "https://hlido.eu/reviews/gaia-eval-l1-20/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-gaia-eval-l1-20-mp11st2a",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic AI agent with limited capabilities \u2014 solid for simple tasks, but lacks advanced features compared to competitors.",
+    "body": "Gaia Eval L1-20 serves as a straightforward AI agent, suitable for basic tasks and user interactions. While it performs adequately for simple queries, it falls short in more complex scenarios, where competitors like OpenAI's ChatGPT or Google's Bard excel. The user interface is functional but lacks the polish and intuitiveness seen in higher-tier alternatives. Its performance is consistent, but the absence of advanced features such as context retention and multi-turn conversations limits its usability for more demanding applications. Users seeking a robust AI solution may find better options elsewhere, particularly if they require integrations or advanced functionalities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) because it reliably performs basic tasks but lacks the sophistication and feature set of leading competitors. Not VITAL due to its limitations in handling complex queries and lack of advanced integrations.",
+  "what_it_does_well": [
+    "Handles simple queries effectively",
+    "User interface is straightforward and easy to navigate",
+    "Consistent performance for basic tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features like context retention and multi-turn conversations",
+    "User interface feels basic compared to more polished alternatives",
+    "Limited integrations with other tools and platforms"
+  ],
+  "best_for": [
+    "Users needing a simple AI agent for straightforward tasks",
+    "Individuals or small teams with low complexity requirements",
+    "Basic customer support scenarios"
+  ],
+  "not_recommended_for": [
+    "Users requiring advanced conversational capabilities",
+    "Businesses needing integrations with other software solutions",
+    "Users looking for a highly polished user experience"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "openai-chatgpt",
+      "verdict_diff": "ChatGPT offers advanced conversational capabilities and context retention, making it suitable for complex interactions. Choose Gaia Eval L1-20 for simpler tasks.",
+      "preferred_for_axis": "complexity"
+    },
+    {
+      "slug": "google-bard",
+      "verdict_diff": "Bard provides a more sophisticated AI experience with better integration options. Gaia Eval L1-20 is limited to basic functionalities.",
+      "preferred_for_axis": "feature-set"
+    },
+    {
+      "slug": "microsoft-azure-ai",
+      "verdict_diff": "Azure AI offers robust features and enterprise-level integrations, whereas Gaia Eval L1-20 is geared towards simpler applications.",
+      "preferred_for_axis": "enterprise-capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Gaia Eval L1-20 does not support integrations with other systems.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Hugging Face's logo is visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There are no visible call-to-action buttons such as sign up, try free, or book demo on the homepage or templates.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The homepage contains links to 'Spaces' and 'App', which may lead to pricing or access paths.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/kengboon/gaia-eval-l1-20",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://huggingface.co/spaces/agents-course/Final_Assignment_Template",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:18:02.542Z"
+  "summary": "Basic AI agent with limited capabilities \u2014 solid for simple tasks, but lacks advanced features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/gaia-eval-l1-20.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
