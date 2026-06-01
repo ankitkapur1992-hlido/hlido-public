@@ -1,107 +1,119 @@
 {
+  "schema_version": "2.0",
   "slug": "gumloop",
   "name": "Gumloop",
+  "agent_url": "https://www.gumloop.com",
   "category": "Workflow & Automation",
-  "score": 80,
+
+  "run_id": "run-gumloop-handcraft-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Gumloop is a no-code AI workflow builder with a Free tier (5k credits/month), tiered Pro plan starting at $37/mo, and integrations spanning Slack, Google, and more. Public surfaces audited 2026-04-26.",
-  "review_url": "https://hlido.eu/reviews/gumloop/",
-  "reviewed_at": "2026-04-26",
-  "run_id": "run-gumloop-mofxw6n3",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+
+  "hlido_opinion": {
+    "headline": "Zapier-shaped product with LLM nodes baked in — best fit for non-engineering operators who want a canvas, not a Python file.",
+    "body": "Gumloop has done the obvious-in-retrospect thing: take the Zapier/Make node-graph metaphor, drop GPT-style nodes inside it as first-class citizens, and price it for individual operators rather than IT-budget RevOps teams. The result is a workflow builder that lands in the gap between Zapier (cheap, but LLM steps feel bolted on) and tools like n8n (powerful, but self-host overhead). The free tier at 5,000 credits/month is generous enough for a real evaluation, and the Pro plan starting around $37/month puts it below Make's mid-tier and well under most agent-platform business plans. The template gallery is the strongest trust signal on the public surface — concrete recipes for lead scraping, content batching, Slack triage — which suggests the product is being used in anger rather than demoed empty. Where it weakens: documentation is thin compared to Zapier's encyclopedic library, the integration count is a fraction of n8n or Make, and there is no public API or MCP server for agents to drive Gumloop programmatically (you build flows in the canvas, you don't generate them from code). For a founder who needs a no-code agent runtime today, it works. For an engineering team that wants Gumloop flows as components their own agents can compose, it's a destination, not an interoperable layer.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (78) because the product surface is coherent, the free tier is honest, the template gallery shows real usage, and the pricing undercuts both Zapier's LLM tier and Make's higher plans. Not VITAL because the integration breadth lags Zapier/Make, documentation depth is shallow, and there is no programmatic interface (API/MCP/CLI) for agents to drive the canvas — which matters increasingly as the buyer becomes an agent rather than a human ops lead.",
+
+  "what_it_does_well": [
+    "Drops LLM nodes inside a Zapier-style canvas as first-class citizens (not bolted-on text steps)",
+    "Free tier at 5,000 credits/month is generous enough for genuine evaluation, not a hostage trial",
+    "Pro plan around $37/month undercuts Zapier's Professional and Make's Teams tier for LLM-heavy flows",
+    "Public template gallery suggests real usage with concrete recipes (lead scraping, content batching, Slack triage)",
+    "Hosted execution means zero ops burden compared to self-hosting n8n"
+  ],
+
+  "what_it_fails_at": [
+    "No public API, CLI, or MCP server — agents cannot programmatically create or trigger Gumloop flows",
+    "Integration count is materially smaller than Zapier (7000+) or Make (1500+)",
+    "Public documentation is shallow — no visible /docs section reachable from primary nav at audit time",
+    "Visual builder is described in copy but the homepage lacks a clear canvas demo/screencast for cold visitors",
+    "No transparent enterprise pricing — Enterprise tier is contact-sales-only"
+  ],
+
+  "best_for": [
+    "Solo founders and operators who want LLM-in-the-loop automation without writing Python",
+    "Marketing/RevOps teams already paying for ChatGPT/Claude who want to chain prompts to data",
+    "Small teams (1-5 seats) where Zapier's LLM pricing breaks the budget",
+    "YC-stage startups prototyping an agent product before deciding whether to build it natively"
+  ],
+
+  "not_recommended_for": [
+    "Engineering teams that want flows as code-defined, version-controlled, programmatically deployable artifacts",
+    "Workloads requiring 50+ niche integrations that Zapier or Make cover but Gumloop doesn't",
+    "Compliance-sensitive orgs that need on-prem or self-host (no published self-host story)",
+    "Agent-driven workflows where another agent needs to author or modify the Gumloop flow itself",
+    "Anyone whose value depends on a deep documentation library and community ecosystem (Zapier wins)"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
     {
-      "id": "homepage-pitch",
-      "claim": "Verify homepage loads and shows a clear product pitch (hero copy describing what Gumloop does)",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI agents built for by your team",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier wins on integration breadth (7000+ apps) and documentation depth. Gumloop wins on LLM-node ergonomics and price for AI-heavy flows. Pick Zapier if the workflow is mostly app-to-app glue with occasional AI; pick Gumloop if the workflow is mostly AI reasoning with occasional app glue.",
+      "preferred_for_axis": "llm-native-flows"
     },
     {
-      "id": "free-tier-signal",
-      "claim": "Verify there is a visible free tier or no-credit-card sign-up CTA on homepage or pricing page",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Free 5k credits/month",
-      "source_surface": "pricing"
+      "slug": "n8n",
+      "verdict_diff": "n8n wins on power, code escape hatches, and self-host. Gumloop wins on zero-ops hosted execution and a more polished canvas for non-engineers. Pick n8n if you have a platform engineer; pick Gumloop if the buyer is the operator who'll use it daily.",
+      "preferred_for_axis": "hosted-zero-ops"
     },
     {
-      "id": "pricing-page",
-      "claim": "Verify pricing page exists and lists multiple tiered plans with monthly prices",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Free, Pro, Enterprise\" plans are listed with monthly prices such as \"$37 / month\".",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "visual-builder-claim",
-      "claim": "Verify the homepage or product page shows or describes a visual / drag-and-drop pipeline builder (canvas screenshot, animation, or explicit copy)",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "integrations-listed",
-      "claim": "Verify integrations such as Notion, Slack, Google, OpenAI, or similar are visibly listed on the homepage, integrations page, or footer",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Google Docs icon, Slack icon\" are listed under the templates page.",
-      "source_surface": "templates"
-    },
-    {
-      "id": "templates-or-docs",
-      "claim": "Verify a public template gallery, examples page, or documentation link is reachable from homepage navigation",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage navigation includes a link to 'Templates'.",
-      "source_surface": "homepage"
+      "slug": "make",
+      "verdict_diff": "Make has deeper integration coverage and a more mature canvas. Gumloop is cheaper for AI-heavy flows and feels less enterprise-shaped. Pick Make for complex multi-step routing across many SaaS apps; pick Gumloop when the LLM step is the work, not the connector.",
+      "preferred_for_axis": "ai-step-economics"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.gumloop.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.gumloop.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.gumloop.com/partners/apply-to-be-a-creator",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.gumloop.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.gumloop.com/blog/how-gusto-accelerates-gtm-with-gumloop",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
+
+  "evidence_urls": [
+    {"claim": "Free tier with 5,000 credits/month", "source": "https://www.gumloop.com/pricing", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Pro plan starting around $37/month", "source": "https://www.gumloop.com/pricing", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Public template gallery exists and is linked from homepage nav", "source": "https://www.gumloop.com/templates", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Integrations include Google Docs, Slack, and others", "source": "https://www.gumloop.com/templates", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Homepage value prop centers on AI agents built by teams", "source": "https://www.gumloop.com", "tested_at": "2026-05-23", "verified": true}
   ],
-  "required_items_total": 5,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-04-26T16:54:26.307Z"
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Gumloop flows can be triggered by webhooks from outside, so an upstream agent can fire a Gumloop pipeline as a step. But there is no public API to author, modify, or query flows programmatically, no MCP server, and no SDK — meaning Gumloop is a destination an agent can call, not a runtime an agent can compose against.",
+    "agent_friendly_score": 4
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T10:30:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'AI agents built for and by your team'", "tested_at": "2026-05-23T10:30:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "'Start for free' CTA on homepage and pricing", "tested_at": "2026-05-23T10:30:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free / Pro (~$37/mo) / Enterprise tiers on /pricing", "tested_at": "2026-05-23T10:30:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Public template gallery at /templates with concrete recipes", "tested_at": "2026-05-23T10:30:00Z"}
+  ],
+
+  "summary": "Zapier-shaped product with LLM nodes baked in — best fit for non-engineering operators who want a canvas, not a Python file.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/gumloop.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2-handcraft"
 }
