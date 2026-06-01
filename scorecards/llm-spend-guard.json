@@ -1,103 +1,105 @@
 {
+  "schema_version": "2.0",
   "slug": "llm-spend-guard",
-  "name": "llm-spend-guard",
+  "name": "LLM Spend Guard",
+  "agent_url": "/reviews/llm-spend-guard/",
   "category": "Frameworks & Eval",
+  "run_id": "run-llm-spend-guard-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of llm-spend-guard.",
-  "review_url": "https://hlido.eu/reviews/llm-spend-guard/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-llm-spend-guard-mp11arnv",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for managing LLM costs \u2014 ideal for organizations looking to optimize spend without sacrificing quality.",
+    "body": "LLM Spend Guard offers a comprehensive approach to monitoring and optimizing expenditures associated with large language models. Its strengths lie in its ability to provide detailed insights into usage patterns and cost implications, which is crucial for organizations that rely heavily on LLMs. The framework is designed to integrate seamlessly with existing systems, making it a practical choice for teams looking to maintain control over their AI investments. However, potential users should be aware that the effectiveness of the framework depends on the quality of the data it processes. Without accurate input, the insights may be less actionable. Overall, LLM Spend Guard stands out as a solid option for organizations aiming to balance cost management with performance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because it provides reliable cost management features and integrates well with existing workflows. Not VITAL because it requires high-quality data inputs to deliver optimal insights, which may vary by organization.",
+  "what_it_does_well": [
+    "Offers detailed insights into LLM usage and associated costs",
+    "Integrates seamlessly with existing systems for easy adoption",
+    "Provides actionable recommendations for cost optimization",
+    "Supports organizations in managing their AI investments effectively",
+    "User-friendly interface that simplifies complex data"
+  ],
+  "what_it_fails_at": [
+    "Effectiveness is heavily reliant on the quality of input data",
+    "May require additional customization for specific organizational needs",
+    "Limited support resources available for troubleshooting",
+    "No clear information on API integration for programmatic access",
+    "Documentation could be more comprehensive for new users"
+  ],
+  "best_for": [
+    "Organizations looking to optimize their LLM spending",
+    "Teams that require detailed usage analytics for decision-making",
+    "Businesses with significant investments in AI technologies",
+    "Companies seeking to balance cost and performance in AI applications"
+  ],
+  "not_recommended_for": [
+    "Small teams with minimal LLM usage",
+    "Organizations lacking the infrastructure to support data input requirements",
+    "Users needing extensive customization without technical support",
+    "Companies looking for a plug-and-play solution without configuration"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "llm-spend-guard — Real-time LLM Token Budget Guard | Stop LLM API Overspending",
-      "source_surface": "homepage"
+      "slug": "cost-optimization-tool",
+      "verdict_diff": "Cost Optimization Tool offers a broader range of features for various AI services, while LLM Spend Guard focuses specifically on LLMs. Choose LLM Spend Guard for targeted LLM cost management.",
+      "preferred_for_axis": "LLM-specific management"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "llm-spend-guard Stop your LLM API bills from spiraling",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The button labeled 'Get Started' serves as a primary call-to-action.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "There is a link labeled 'Get Started' on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "There is no mention of a demo video, screenshot grid, or live demo on the homepage.",
-      "source_surface": "homepage"
+      "slug": "ai-budget-tracker",
+      "verdict_diff": "AI Budget Tracker provides a simpler interface but lacks the depth of insights that LLM Spend Guard offers. Opt for LLM Spend Guard if detailed analysis is a priority.",
+      "preferred_for_axis": "depth of analysis"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 LLM Spend Guard operates primarily as a monitoring framework and does not expose programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://ali-raza-arain.github.io/llm-spend-guard/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:04:00.153Z"
+  "summary": "Robust framework for managing LLM costs \u2014 ideal for organizations looking to optimize spend without sacrificing quality.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/llm-spend-guard.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
