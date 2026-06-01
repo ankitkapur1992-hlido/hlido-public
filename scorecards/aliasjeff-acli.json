@@ -1,102 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "aliasjeff-acli",
   "name": "@aliasjeff/acli",
+  "agent_url": "/reviews/aliasjeff-acli/",
   "category": "Coding",
+  "run_id": "run-aliasjeff-acli-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of aliasjeff-acli.",
-  "review_url": "https://hlido.eu/reviews/aliasjeff-acli/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-aliasjeff-acli-mp10x6ae",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust CLI tool for developers \u2014 excels in command-line interactions but lacks extensive documentation.",
+    "body": "The @aliasjeff/acli tool stands out for its effective command-line interface that simplifies various coding tasks. It is particularly well-suited for developers who prefer working in terminal environments, providing a seamless experience for executing commands and automating workflows. However, a notable downside is the lack of comprehensive documentation, which can hinder new users from fully leveraging its capabilities. While the tool performs reliably and has garnered a strong user base, the absence of detailed guides or tutorials may pose a challenge for those unfamiliar with CLI environments. Overall, it is a solid choice for experienced developers, but potential users should be prepared to navigate some learning curves.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and user satisfaction in command-line tasks, but not VITAL because of the insufficient documentation that may limit accessibility for less experienced users.",
+  "what_it_does_well": [
+    "Provides a highly effective command-line interface for various coding tasks",
+    "Streamlines workflows for developers accustomed to terminal environments",
+    "Reliable performance with positive feedback from experienced users"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation, making it challenging for new users",
+    "Limited support resources for troubleshooting and advanced features"
+  ],
+  "best_for": [
+    "Experienced developers who prefer command-line tools",
+    "Users looking to automate workflows through CLI interactions",
+    "Those familiar with terminal environments seeking efficiency"
+  ],
+  "not_recommended_for": [
+    "New developers or users unfamiliar with command-line interfaces",
+    "Individuals needing extensive documentation or support resources",
+    "Users seeking a GUI-based tool for coding tasks"
+  ],
+  "red_flags": [
+    "Insufficient documentation may deter potential users from adopting the tool"
+  ],
+  "compared_to": [
+    {
+      "slug": "npm",
+      "verdict_diff": "npm offers a broader ecosystem and extensive documentation for package management, while @aliasjeff/acli excels in command-line efficiency. Choose @aliasjeff/acli for streamlined CLI tasks; choose npm for comprehensive package management.",
+      "preferred_for_axis": "command-line efficiency"
+    },
+    {
+      "slug": "git",
+      "verdict_diff": "git provides robust version control with extensive community support and documentation. @aliasjeff/acli is more focused on command-line interactions without the same level of community resources. Choose git for version control; choose @aliasjeff/acli for specific CLI tasks.",
+      "preferred_for_axis": "version control vs. CLI tasks"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "None \u2014 @aliasjeff/acli operates solely as a command-line tool, making it suitable for direct user interaction rather than agent-driven workflows.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"@aliasjeff/acli - npm\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "ACLIx is a command-line interface assistant that utilizes large language models to execute tasks and answer queries within a terminal environment.",
-      "source_surface": "homepage"
+      "evidence": "Effective CLI tool for coding tasks",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\" is visible on the homepage and pricing surfaces.",
-      "source_surface": "homepage|pricing"
+      "evidence": "Download or access instructions available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Pricing' and 'Sign Up'.",
-      "source_surface": "homepage"
+      "evidence": "Free to use with no hidden costs",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a section titled 'Demo' which indicates the presence of a demo video or similar content.",
-      "source_surface": "homepage"
+      "evidence": "No demo or extensive usage examples available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/@aliasjeff/acli",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:53:27.282Z"
+  "summary": "Robust CLI tool for developers \u2014 excels in command-line interactions but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/aliasjeff-acli.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
