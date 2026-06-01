@@ -1,102 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "autogen-microsoft",
   "name": "Microsoft AutoGen",
+  "agent_url": "/reviews/autogen-microsoft/",
   "category": "Frameworks & Eval",
+  "run_id": "run-autogen-microsoft-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of autogen-microsoft.",
-  "review_url": "https://hlido.eu/reviews/autogen-microsoft/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-autogen-microsoft-mp12farr",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for automating AI workflows \u2014 strong for enterprise integration but lacks transparency in usage metrics.",
+    "body": "Microsoft AutoGen stands out as a powerful framework designed for automating AI workflows, particularly within enterprise environments. Its integration capabilities with existing Microsoft products provide a seamless experience for organizations already embedded in the Microsoft ecosystem. The framework supports various AI models and simplifies the deployment of complex workflows, making it a solid choice for developers looking to enhance productivity. However, it suffers from a lack of transparency regarding usage metrics and performance tracking, which may raise concerns for teams focused on accountability and optimization. Overall, AutoGen is a dependable option for enterprises seeking to leverage AI automation, but potential users should be aware of its limitations in monitoring and analytics.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because AutoGen demonstrates robust capabilities and integration with Microsoft products, ensuring reliability for enterprise users. Not VITAL due to the lack of transparency in performance metrics, which could hinder its adoption for teams prioritizing data-driven insights.",
+  "what_it_does_well": [
+    "Seamless integration with existing Microsoft products enhances user experience",
+    "Supports a wide range of AI models, allowing for versatile applications",
+    "Streamlines the deployment of complex AI workflows for developers",
+    "Strong enterprise focus, catering to large organizations with specific needs"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency in usage metrics and performance tracking",
+    "Limited documentation on best practices for optimization",
+    "May not be as accessible for smaller teams or non-Microsoft users"
+  ],
+  "best_for": [
+    "Enterprises already using Microsoft products looking to automate workflows",
+    "Developers needing a robust framework for AI model deployment",
+    "Teams focused on integrating AI into existing business processes"
+  ],
+  "not_recommended_for": [
+    "Small teams seeking a lightweight or more transparent solution",
+    "Organizations not invested in the Microsoft ecosystem",
+    "Users requiring extensive performance analytics and monitoring"
+  ],
+  "red_flags": [
+    "Lack of clarity on performance metrics and usage tracking could pose risks for accountability"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"AutoGen — AutoGen\"",
-      "source_surface": "homepage"
+      "slug": "google-cloud-ai",
+      "verdict_diff": "Google Cloud AI offers more transparency in usage metrics and a broader range of tools for non-Microsoft users. Choose AutoGen for deep Microsoft integration; choose Google Cloud for broader accessibility and analytics.",
+      "preferred_for_axis": "integration vs. transparency"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "A framework for building AI agents and applications",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible 'Get Started' link as a primary call-to-action.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains links to 'Get Started' which implies access to pricing or further information.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "aws-sagemaker",
+      "verdict_diff": "AWS SageMaker provides more flexibility in terms of model training and deployment options. AutoGen excels in enterprise integration; SageMaker is better for users needing a wider variety of AI services.",
+      "preferred_for_axis": "enterprise integration vs. flexibility"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 AutoGen operates primarily within the Microsoft ecosystem and does not expose programmatic interfaces for external agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://microsoft.github.io/autogen/stable/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://microsoft.github.io/autogen/stable/reference/index.html",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:35:39.170Z"
+  "summary": "Robust framework for automating AI workflows \u2014 strong for enterprise integration but lacks transparency in usage metrics.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/autogen-microsoft.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
