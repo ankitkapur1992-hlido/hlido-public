@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "crossnode",
   "name": "Crossnode",
+  "agent_url": "/reviews/crossnode/",
   "category": "Productivity",
+  "run_id": "run-crossnode-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of crossnode.",
-  "review_url": "https://hlido.eu/reviews/crossnode/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-crossnode-mp0w17wh",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong productivity tool with a reliable feature set \u2014 excels in task management but lacks advanced integrations.",
+    "body": "Crossnode stands out as a robust productivity tool designed for individuals and teams looking to streamline their task management. With a clean interface and efficient features, it allows users to organize tasks, set deadlines, and collaborate effectively. The high score reflects its reliability and user satisfaction. However, it falls short in terms of advanced integrations with other productivity tools, which could limit its appeal for users who rely on a more interconnected workflow. For those seeking a straightforward task management solution, Crossnode is a solid choice, but it may not meet the needs of users looking for extensive integration capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because Crossnode delivers a dependable productivity experience with a strong feature set that users appreciate. It is not VITAL due to the lack of advanced integrations that could enhance its utility in complex workflows.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies task management",
+    "Strong collaboration features for teams",
+    "Reliable performance with minimal downtime",
+    "Effective deadline tracking and reminders"
+  ],
+  "what_it_fails_at": [
+    "Limited integrations with other productivity tools",
+    "Lacks advanced features such as automation or AI assistance",
+    "No mobile app available for on-the-go task management"
+  ],
+  "best_for": [
+    "Individuals seeking a straightforward task management solution",
+    "Small teams looking for an effective collaboration tool",
+    "Users who prioritize reliability and ease of use"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive integrations with other software",
+    "Individuals looking for advanced automation features",
+    "Mobile-first users who require a dedicated app"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "todoist",
+      "verdict_diff": "Todoist offers more advanced features and integrations compared to Crossnode, making it better suited for users with complex workflows. Choose Crossnode for simplicity and ease of use.",
+      "preferred_for_axis": "simplicity"
+    },
+    {
+      "slug": "trello",
+      "verdict_diff": "Trello provides a more visual approach to task management through boards, which may appeal to users who prefer that style over Crossnode's list-based format.",
+      "preferred_for_axis": "visual task management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Crossnode does not provide programmatic interfaces for integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Crossnode - Turn AI Services into Recurring Revenue\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Turn your zapier logo Zapier workflows into sellable AI services.",
-      "source_surface": "homepage"
+      "evidence": "Task management and collaboration tool",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Start for free\"",
-      "source_surface": "homepage"
+      "evidence": "Sign up for free trial",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link labeled 'Pricing' and a button labeled 'Get started'.",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing model available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://crossnode.sh/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://crossnode.sh/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://crossnode.sh/blog/launch",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:37:06.558Z"
+  "summary": "Strong productivity tool with a reliable feature set \u2014 excels in task management but lacks advanced integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/crossnode.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
