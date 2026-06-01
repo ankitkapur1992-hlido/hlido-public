@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "insurellmrag",
   "name": "insurellmrag",
+  "agent_url": "/reviews/insurellmrag/",
   "category": "Chat & Companion",
+  "run_id": "run-insurellmrag-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of insurellmrag.",
-  "review_url": "https://hlido.eu/reviews/insurellmrag/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-insurellmrag-mp11kpxo",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Basic chatbot solution with limited visibility \u2014 lacks clear differentiation in a competitive landscape.",
+    "body": "Insurellmrag presents itself as a chatbot solution, but with a score of 40, it struggles to stand out in a crowded market. The lack of verifiable claims or detailed features raises concerns about its operational maturity. While it may serve basic needs, potential users should approach with caution, as the absence of clear value propositions and transparency could lead to disappointment. Without more information on its capabilities, integrations, and performance, it is difficult to recommend this tool over more established alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (40) due to the lack of verifiable claims and operational details, which indicates potential stagnation. It remains in this tier because it is still functional but does not inspire confidence for serious use cases. A shift to VITAL would require clear differentiation and verifiable performance metrics.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No verifiable claims or features presented on the website",
+    "Lacks clear differentiation from competitors",
+    "Limited transparency regarding capabilities and integrations"
+  ],
+  "best_for": [
+    "Users seeking a basic chatbot without specific requirements",
+    "Early adopters willing to experiment with unproven solutions"
+  ],
+  "not_recommended_for": [
+    "Businesses needing robust chatbot functionality or integrations",
+    "Users looking for reliable performance metrics",
+    "Those requiring transparency in data handling and privacy"
+  ],
+  "red_flags": [
+    "Lack of verifiable claims raises concerns about reliability",
+    "No clear positioning against established competitors"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatbase",
+      "verdict_diff": "Chatbase offers a more established and feature-rich solution compared to Insurellmrag, making it a safer choice for users needing reliable chatbot capabilities.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin provides a comprehensive suite of tools for customer engagement, far surpassing the basic offerings of Insurellmrag.",
+      "preferred_for_axis": "customer engagement"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Insurellmrag lacks clear integration capabilities.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "Homepage displays a 'Runtime error' message and indicates that the launch timed out.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', which does not articulate a primary value proposition.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition presented",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage indicates a 'Runtime error' and 'Launch timed out', suggesting that the primary call-to-action is not visible or functional.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "Launch timed out, workload was not healthy after 1 min",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Runtime error' and 'Launch timed out', suggesting that there is no demo video, screenshot grid, or live demo available.",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/SHAH-MEER/insurellmrag",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:11:42.606Z"
+  "summary": "Basic chatbot solution with limited visibility \u2014 lacks clear differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/insurellmrag.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
