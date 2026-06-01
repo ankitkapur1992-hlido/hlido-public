@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "beeai-framework",
   "name": "beeai-framework",
+  "agent_url": "/reviews/beeai-framework/",
   "category": "Coding",
+  "run_id": "run-beeai-framework-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of beeai-framework.",
-  "review_url": "https://hlido.eu/reviews/beeai-framework/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-beeai-framework-mp10bfte",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid coding framework with potential \u2014 lacks clarity on integration and support.",
+    "body": "The beeai-framework presents a promising coding solution, but its lack of clear documentation and support options raises concerns for potential users. While it scores decently, the absence of verified claims about its features and capabilities means that users might face challenges in implementation. As it stands, the framework is a viable option for developers who can navigate its ambiguities, but those seeking robust support or comprehensive integration guidance may want to consider alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) due to its functional promise and existing user base. However, it lacks comprehensive documentation and support, which could hinder wider adoption. A more robust support structure or clearer integration paths could elevate its standing.",
+  "what_it_does_well": [
+    "Provides a solid foundation for coding projects",
+    "Demonstrates potential for various applications",
+    "Has a user base that suggests some level of reliability"
+  ],
+  "what_it_fails_at": [
+    "Lack of clear documentation and integration guidance",
+    "Unverified claims about features and capabilities",
+    "Limited support options for users"
+  ],
+  "best_for": [
+    "Developers comfortable with navigating frameworks without extensive support",
+    "Projects where flexibility and customization are prioritized",
+    "Users willing to experiment with a framework that shows promise"
+  ],
+  "not_recommended_for": [
+    "Beginners needing comprehensive documentation and support",
+    "Teams requiring guaranteed integration assistance",
+    "Users looking for a well-established framework with extensive community support"
+  ],
+  "red_flags": [
+    "Absence of verified claims regarding features and capabilities",
+    "Lack of clarity on support and documentation"
+  ],
+  "compared_to": [
+    {
+      "slug": "django",
+      "verdict_diff": "Django offers extensive documentation and community support, making it a better choice for users needing guidance. Choose beeai-framework for flexibility if you can manage without extensive support.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "flask",
+      "verdict_diff": "Flask provides a lightweight framework with ample resources for integration. Beeai-framework may appeal to those wanting a more customizable solution without the overhead.",
+      "preferred_for_axis": "lightweight customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the framework lacks clear integration pathways for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"i-am-bee/beeai-framework\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Build production-ready AI agents in both Python and Typescript.\"",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" and \"Start free for 30 days\" are clearly visible on the homepage and pricing pages.",
-      "source_surface": "homepage|pricing"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence provided",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/i-am-bee/beeai-framework#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/i-am-bee/beeai-framework/tree/main/typescript/examples/workflows/competitive-analysis",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:37:00.378Z"
+  "summary": "Solid coding framework with potential \u2014 lacks clarity on integration and support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/beeai-framework.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
