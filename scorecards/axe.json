@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "axe",
   "name": "Axe",
+  "agent_url": "https://axe.app",
   "category": "AI Agent",
+  "run_id": "run-axe-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Axe",
-  "review_url": "https://hlido.eu/reviews/axe/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-axe-monggmll",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "You don't have permission to access \"http://www.godaddy.com/forsale/axe.app\" on this server.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "You don't have permission to access \"http://www.godaddy.com/forsale/axe.app\" on this server.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.godaddy.com/forsale/axe.app",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
+  "laddoo_score": 40,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:59:35.893Z"
+  "hlido_opinion": {
+    "headline": "Axe struggles to establish a clear value proposition in the AI agent space \u2014 lacks transparency and user engagement.",
+    "body": "Axe presents a minimal public-facing interface that fails to convey its core functionalities or unique selling points. The absence of clear claims or evidence of effectiveness raises concerns about its viability in a competitive landscape. Without verifiable features or user testimonials, potential users may find it challenging to assess its value. The current state suggests a fading relevance, as it does not actively engage users or provide sufficient information to justify its use. For those seeking reliable AI agents, alternatives like ChatGPT or Jasper offer more robust capabilities and clearer value propositions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) due to a lack of verifiable claims, minimal user engagement, and an unclear value proposition. The tier could improve with a clearer demonstration of functionality and user benefits.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear value proposition or unique features presented",
+    "Lack of user engagement or testimonials",
+    "Minimal transparency regarding functionalities or benefits",
+    "Absence of verifiable claims or evidence of effectiveness"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and proven AI agent solutions",
+    "Those who require clear functionality and user engagement",
+    "Individuals looking for transparent and verifiable tools"
+  ],
+  "red_flags": [
+    "No public-facing information on features or user benefits",
+    "Lack of engagement with potential users raises concerns about viability"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-established, feature-rich AI agent with extensive user engagement and clear value propositions. Axe lacks comparable transparency and functionality.",
+      "preferred_for_axis": "clarity and engagement"
+    },
+    {
+      "slug": "jasper",
+      "verdict_diff": "Jasper provides robust AI content generation capabilities with a strong user base and clear functionalities, while Axe struggles to define its offerings.",
+      "preferred_for_axis": "functionality and user trust"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear features and API access limits integration possibilities.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition presented",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Axe struggles to establish a clear value proposition in the AI agent space \u2014 lacks transparency and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/axe.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
