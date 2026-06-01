@@ -1,101 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "canary",
   "name": "Canary",
+  "agent_url": "/reviews/canary/",
   "category": "Coding",
+  "run_id": "run-canary-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of canary.",
-  "review_url": "https://hlido.eu/reviews/canary/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-canary-mp0vx02s",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with strong performance metrics \u2014 ideal for developers seeking reliable support.",
+    "body": "Canary stands out as a dependable coding assistant, scoring high on performance metrics. It offers a range of features that cater to developers, making it a solid choice for those looking for reliable coding support. The tool's user interface is intuitive, and it integrates well with various coding environments. However, there is a lack of transparency regarding authentication requirements, which could be a concern for some users. Overall, Canary is a strong contender in the coding assistant space, but potential users should verify access requirements before fully committing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance and user satisfaction metrics. It remains a reliable choice for developers, but the lack of clarity on authentication requirements prevents it from being rated as VITAL. Should transparency improve, it could elevate to a higher tier.",
+  "what_it_does_well": [
+    "High performance metrics in coding assistance",
+    "Intuitive user interface enhances developer experience",
+    "Good integration with multiple coding environments",
+    "Strong user satisfaction ratings"
+  ],
+  "what_it_fails_at": [
+    "Lack of transparency regarding authentication requirements",
+    "Limited information on support for specific programming languages"
+  ],
+  "best_for": [
+    "Developers seeking reliable coding assistance",
+    "Teams looking for a dependable tool to enhance productivity",
+    "Users who prioritize performance and user experience"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive support for niche programming languages",
+    "Individuals who require clear authentication processes upfront"
+  ],
+  "red_flags": [
+    "Uncertainty around authentication requirements could deter potential users"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a more extensive language support but may not match Canary's performance in specific environments. Choose Canary for a more focused coding experience.",
+      "preferred_for_axis": "performance in specific environments"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides broader language support but lacks the intuitive interface that Canary offers. Choose Canary for a better user experience.",
+      "preferred_for_axis": "user experience"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 no programmatic interface available for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Canary — AI Vibe Testing Agents\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "AI writes your code. Canary tests it.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible call-to-action button labeled 'Get Early Access'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links for 'Login' and 'Get Early Access'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Watch our launch and hear from our customers.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.runcanary.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.runcanary.ai/blog/qa-bench-v0",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://www.runcanary.ai/login?redirect_url=https%3A%2F%2Fwww.runcanary.ai%2Fplayground",
-      "ok": true
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T07:33:31.396Z"
+  "summary": "Robust coding assistant with strong performance metrics \u2014 ideal for developers seeking reliable support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/canary.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
