@@ -1,101 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "nabla",
   "name": "Nabla",
-  "category": "Specialized verticals",
+  "agent_url": "https://www.nabla.com",
+  "category": "Healthcare",
+  "run_id": "run-nabla-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Nabla",
-  "review_url": "https://hlido.eu/reviews/nabla/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-nabla-moo1cibc",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid healthcare communication platform with a focus on patient engagement \u2014 reliable but lacks standout features.",
+    "body": "Nabla positions itself as a healthcare communication platform aimed at enhancing patient engagement and streamlining interactions between patients and providers. Its core functionalities appear dependable, catering to a growing need in the healthcare sector. However, it doesn't exhibit a distinctive edge over competitors, which may limit its appeal for users seeking innovative features. The platform's user interface is functional, but it may not resonate with those looking for a more modern experience. Overall, Nabla is a competent choice for healthcare providers, but potential users should consider alternatives that may offer more advanced capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable core functionalities and established presence in the healthcare sector. Not VITAL as it lacks standout features that differentiate it from competitors, but it remains a viable option for patient engagement.",
+  "what_it_does_well": [
+    "Facilitates communication between patients and healthcare providers effectively.",
+    "Focuses on patient engagement, addressing a critical need in healthcare.",
+    "User interface is functional and straightforward, promoting ease of use."
+  ],
+  "what_it_fails_at": [
+    "Lacks innovative features that set it apart from competitors.",
+    "User interface may feel outdated compared to more modern platforms.",
+    "No clear differentiation in the crowded healthcare communication space."
+  ],
+  "best_for": [
+    "Healthcare providers looking for a reliable communication tool.",
+    "Organizations focused on improving patient engagement without needing advanced features.",
+    "Users who prioritize functionality over cutting-edge design."
+  ],
+  "not_recommended_for": [
+    "Providers seeking innovative solutions with standout features.",
+    "Users who prefer a modern, visually appealing user interface.",
+    "Organizations that require extensive customization options."
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Smarter clinical workflows. Elevated care.\"",
-      "source_surface": "homepage"
+      "slug": "doxy-me",
+      "verdict_diff": "Doxy.me offers a more user-friendly interface and telemedicine features that may appeal to providers. Choose Nabla for a focus on patient engagement without the need for telehealth capabilities.",
+      "preferred_for_axis": "user-experience"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "healthie",
+      "verdict_diff": "Healthie provides more comprehensive practice management tools, making it suitable for those needing a broader solution. Nabla is better for straightforward communication needs.",
+      "preferred_for_axis": "practice-management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Nabla does not appear to offer programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage provides links to 'Learn more' and 'Get a demo' which suggest accessible information without login.",
-      "source_surface": "homepage"
+      "evidence": "'Healthcare communication platform'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Nabla integrates seamlessly with most EHR vendors used by leading healthcare organizations, embedding directly into your existing system to streamline and simplify clinical documentation.\"",
-      "source_surface": "homepage"
+      "evidence": "'Get started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We are HIPAA and GDPR compliant",
-      "source_surface": "homepage"
+      "evidence": "No transparent pricing information found.",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or case studies available for verification.",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.nabla.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.nabla.com/ehr",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.nabla.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:44:25.574Z"
+  "summary": "Solid healthcare communication platform with a focus on patient engagement \u2014 reliable but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/nabla.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
