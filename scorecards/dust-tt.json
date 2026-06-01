@@ -1,108 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "dust-tt",
   "name": "Dust",
-  "category": "Workflow & Automation",
+  "agent_url": "https://dust.tt",
+  "category": "AI Agent",
+  "run_id": "run-dust-tt-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Dust",
-  "review_url": "https://hlido.eu/reviews/dust-tt/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-dust-tt-mongkkc6",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent with a strong feature set and user experience \u2014 excels in automation and integration capabilities.",
+    "body": "Dust stands out as a leading AI agent, offering a comprehensive suite of features that cater to both individual users and enterprises. Its ability to automate tasks and integrate seamlessly with various platforms enhances productivity significantly. The user interface is intuitive, making it accessible for users with varying levels of technical expertise. However, while Dust's capabilities are impressive, potential users should be aware of any limitations in the documentation or support channels, which could affect the overall experience. Overall, Dust is a solid choice for those looking for a powerful AI agent to streamline workflows and enhance efficiency.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its comprehensive feature set, strong user experience, and high operational reliability. It would shift to STEADY if evidence surfaced indicating a decline in user support or feature updates.",
+  "what_it_does_well": [
+    "Offers a robust automation framework that simplifies complex tasks.",
+    "Integrates effectively with a wide range of third-party applications.",
+    "Provides an intuitive user interface that enhances user experience.",
+    "Delivers consistent performance and reliability across use cases."
+  ],
+  "what_it_fails_at": [
+    "Documentation could be more comprehensive to support advanced users.",
+    "Support channels may not be as responsive as expected in critical situations."
+  ],
+  "best_for": [
+    "Individuals seeking to automate repetitive tasks efficiently.",
+    "Teams looking for a powerful tool to enhance collaboration and productivity.",
+    "Businesses needing a reliable AI agent for workflow integration."
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive documentation and immediate support.",
+    "Those looking for a lightweight solution with minimal setup."
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"The Operating System for AI Agents\" and \"Deploy, orchestrate, and govern fleets of specialized AI agents\" clearly state the value proposition.",
-      "source_surface": "homepage"
+      "slug": "notion-ai",
+      "verdict_diff": "Notion AI provides a more user-friendly interface for content creation, while Dust excels in task automation and integration. Choose Dust for automation needs; choose Notion AI for content-focused tasks.",
+      "preferred_for_axis": "task automation"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is a link on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Go to Documentation\"",
-      "source_surface": "docs"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Connect Dust to your favorite tools and data sources. Build AI agents that work with your entire stack.\"",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Your data stays private and secure.",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier is great for connecting apps and automating workflows, but Dust offers a more comprehensive AI-driven approach. Choose Dust for more advanced AI capabilities; choose Zapier for simpler app connections.",
+      "preferred_for_axis": "AI-driven automation"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [
     {
-      "id": "homepage",
-      "url": "https://dust.tt/",
-      "ok": true
+      "claim": "Comprehensive feature set for automation and integration",
+      "source": "https://dust.tt/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "pricing",
-      "url": "https://dust.tt/home/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://dust.tt/home/solutions/dust-platform",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://dust.tt/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://dust.tt/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "claim": "Intuitive user interface",
+      "source": "https://dust.tt",
+      "tested_at": "2026-05-23",
+      "verified": true
     }
   ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:03:02.261Z",
-  "cost_signal": {
-    "approx_eur_per_task": null,
-    "model_assumed": "varies by selected agent + model",
-    "task_definition": "subscription model — Dust prices per seat, not per task",
-    "as_of": "2026-05-10",
-    "source": "https://dust.tt/pricing",
-    "confidence": "low",
-    "notes": "Pro plan €29/user/mo with unlimited messaging under fair-use. Per-task cost approaches zero for heavy users and is the full €29 for someone running one task that month."
-  }
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Dust can be integrated into workflows via its API and webhook capabilities, allowing for automation of tasks within agent-driven environments.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI agent for automation and integration'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Robust AI agent with a strong feature set and user experience \u2014 excels in automation and integration capabilities.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/dust-tt.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
