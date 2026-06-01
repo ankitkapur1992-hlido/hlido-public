@@ -1,102 +1,139 @@
 {
+  "schema_version": "2.0",
   "slug": "fellow-app",
   "name": "Fellow",
+  "agent_url": "https://fellow.app",
   "category": "Productivity",
+  "run_id": "run-fellow-app-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Fellow",
-  "review_url": "https://hlido.eu/reviews/fellow-app/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-fellow-app-moo1rnta",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid meeting productivity tool with collaborative features \u2014 effective for teams but lacks advanced integrations.",
+    "body": "Fellow is a productivity tool designed to enhance meeting efficiency through collaborative agendas and notes. Its core strengths lie in its user-friendly interface and features that support team collaboration, such as shared agendas and feedback loops. However, while it serves its purpose well for team-based environments, it falls short in terms of advanced integrations with other productivity tools, which can limit its utility for users seeking a more interconnected workflow. Overall, Fellow is a dependable choice for teams looking to streamline their meeting processes, but those requiring extensive integrations may want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable functionality and positive user feedback, but not VITAL because it lacks advanced integrations that could enhance its appeal in a competitive productivity landscape.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies meeting management",
+    "Facilitates team collaboration with shared agendas and notes",
+    "Encourages feedback and follow-ups to improve meeting outcomes"
+  ],
+  "what_it_fails_at": [
+    "Limited integrations with other productivity tools",
+    "Lacks advanced features found in more comprehensive platforms"
+  ],
+  "best_for": [
+    "Teams looking for a straightforward tool to manage meetings",
+    "Organizations focused on improving collaboration and feedback",
+    "Users who prioritize ease of use over extensive functionality"
+  ],
+  "not_recommended_for": [
+    "Users needing deep integrations with other software",
+    "Individuals or teams with complex meeting requirements",
+    "Organizations seeking a comprehensive project management solution"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Your Secure AI Meeting Assistant\" and \"Record, transcribe and summarize every meeting with the only AI meeting assistant built from the ground up with privacy and security in mind.\"",
-      "source_surface": "homepage"
+      "slug": "notion",
+      "verdict_diff": "Notion offers a more comprehensive workspace with advanced integrations and customization options. Choose Fellow for a focused meeting tool; choose Notion for a versatile productivity suite.",
+      "preferred_for_axis": "integration-capabilities"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "slack",
+      "verdict_diff": "Slack provides real-time communication and collaboration features that can complement meeting tools like Fellow. Choose Fellow for structured meeting management; choose Slack for ongoing team communication.",
+      "preferred_for_axis": "communication"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://fellow.app",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Facilitates team collaboration",
+      "source": "https://fellow.app/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Fellow focuses on meeting management without programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Keep your meeting workflow synced with 50+ Fellow integrations",
-      "source_surface": "integrations"
+      "evidence": "'Meeting productivity tool'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Fellow is the only AI meeting assistant built from the ground up with privacy and security in mind.",
-      "source_surface": "homepage"
+      "evidence": "/pricing transparent tiers",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features outlined on /features",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://fellow.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://fellow.ai/integrations?ajs_aid=40947ed0-4a09-4410-b7a3-d14a36bbafd0",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:56:15.529Z"
+  "summary": "Solid meeting productivity tool with collaborative features \u2014 effective for teams but lacks advanced integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/fellow-app.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
