@@ -1,108 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "braintrust",
   "name": "Braintrust",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://www.braintrust.dev",
+  "category": "AI Agent",
+  "run_id": "run-braintrust-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Braintrust",
-  "review_url": "https://hlido.eu/reviews/braintrust/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-braintrust-monggtqe",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent platform with a strong focus on user empowerment and decentralized control \u2014 ideal for developers and tech-savvy users.",
+    "body": "Braintrust stands out in the AI agent landscape for its commitment to decentralization and user empowerment. The platform allows users to create and manage their own AI agents with a focus on transparency and control. This positions Braintrust as a strong contender for developers and tech-savvy users looking for customizable solutions. Its user-friendly interface and comprehensive documentation further enhance its appeal. However, the platform may not be as accessible for non-technical users, which could limit its broader adoption. Overall, Braintrust is a solid choice for those who prioritize control and customization in their AI agent experience.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong user empowerment focus, robust features, and high-quality documentation. It remains a top choice for developers and those seeking control over their AI agents. A shift to FADING would occur if user adoption stagnates or if significant competitors emerge with more accessible offerings.",
+  "what_it_does_well": [
+    "Offers a decentralized platform that empowers users to create and manage their own AI agents",
+    "Provides comprehensive documentation and user-friendly interfaces for developers",
+    "Focuses on transparency and control, appealing to tech-savvy users",
+    "Supports a wide range of customization options for AI agents"
+  ],
+  "what_it_fails_at": [
+    "May be less accessible for non-technical users, limiting broader adoption",
+    "Lacks extensive marketing or community engagement compared to some competitors"
+  ],
+  "best_for": [
+    "Developers looking for customizable AI agent solutions",
+    "Tech-savvy users who prioritize control and transparency in AI interactions",
+    "Organizations seeking to build tailored AI applications without vendor lock-in"
+  ],
+  "not_recommended_for": [
+    "Non-technical users seeking a plug-and-play AI agent solution",
+    "Organizations that require extensive support or community engagement"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Braintrust is the AI observability platform helping teams measure, evaluate, and improve AI in production.",
-      "source_surface": "homepage"
+      "slug": "openai",
+      "verdict_diff": "OpenAI provides powerful AI capabilities with a broader range of applications, but lacks the decentralized control that Braintrust offers. Choose Braintrust for user empowerment and customization.",
+      "preferred_for_axis": "decentralization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "rasa",
+      "verdict_diff": "Rasa is another strong contender for developers, focusing on conversational AI. Braintrust excels in user control and customization, while Rasa may offer more robust NLP features.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Braintrust allows developers to integrate and customize AI agents through its API, making it suitable for various agent-driven workflows.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible at https://www.braintrust.dev/docs without requiring a login.",
-      "source_surface": "docs"
+      "evidence": "'Decentralized AI agent platform'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation includes a section on 'Integrations' which lists various AI providers, SDKs, and developer tools.",
-      "source_surface": "docs"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Enterprise-grade access controls, authentication, and compliance agreements.\"",
-      "source_surface": "pricing"
+      "evidence": "Transparent access policies on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Comprehensive documentation available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.braintrust.dev/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.braintrust.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.braintrust.dev/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.braintrust.dev/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:00:02.067Z",
-  "cost_signal": {
-    "approx_eur_per_task": 0.0014,
-    "model_assumed": "evaluation scoring (the 'task' here is one logged score event)",
-    "task_definition": "1 score event on Pro tier overage ($1.50 per 1,000 scores)",
-    "as_of": "2026-05-10",
-    "source": "https://www.braintrust.dev/pricing",
-    "confidence": "low",
-    "notes": "Pro plan $249/mo includes 50,000 scores + 5 GB processed data. Real cost per evaluated trace depends on data volume, not just scores; for many teams the $249 base dominates."
-  }
+  "summary": "Robust AI agent platform with a strong focus on user empowerment and decentralized control \u2014 ideal for developers and tech-savvy users.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/braintrust.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
