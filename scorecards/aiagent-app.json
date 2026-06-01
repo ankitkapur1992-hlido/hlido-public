@@ -1,101 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "aiagent-app",
   "name": "AiAgent.app",
+  "agent_url": "https://aiagent.app",
   "category": "AI Agent",
+  "run_id": "run-aiagent-app-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of AiAgent.app",
-  "review_url": "https://hlido.eu/reviews/aiagent-app/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-aiagent-app-monexiie",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI Agents: Get more done without doing more.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://aiagent.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://aiagent.app/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://aiagent.app/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:17:26.376Z"
+  "hlido_opinion": {
+    "headline": "Struggling AI agent platform with unclear value proposition \u2014 lacks competitive differentiation and transparency.",
+    "body": "AiAgent.app presents itself as an AI agent platform but suffers from a lack of clarity in its offerings and value proposition. The website provides minimal information, making it difficult for potential users to grasp its core functionalities. The absence of verified claims and unclear operational details contribute to a perception of instability. In a crowded market, where alternatives like ChatGPT and OpenAI's API provide more transparency and robust features, AiAgent.app struggles to establish itself. Without significant improvements in its public-facing information and a clearer delineation of its unique selling points, it risks losing relevance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the lack of clear value proposition and minimal public-facing information. The absence of verified claims and operational details further diminishes confidence. A shift to a more transparent communication strategy could improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clarity on core functionalities and value proposition",
+    "Minimal public-facing information limits user understanding",
+    "No verified claims or evidence of effectiveness",
+    "Struggles to differentiate itself from established competitors",
+    "Perceived instability due to lack of transparency"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable and transparent AI agent solution",
+    "Developers looking for clear API documentation and support",
+    "Businesses needing a robust and differentiated AI tool"
+  ],
+  "red_flags": [
+    "Unclear operational details may indicate instability",
+    "Lack of verified claims raises concerns about reliability"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-documented and widely recognized platform with clear functionalities. AiAgent.app lacks the transparency and established reputation of ChatGPT.",
+      "preferred_for_axis": "transparency"
+    },
+    {
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides extensive documentation and support, making it a more reliable choice for developers. AiAgent.app does not offer comparable resources.",
+      "preferred_for_axis": "developer support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear functionality and API support makes it unaddressable by agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Lacks clear presentation of value proposition",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action visible",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No transparent pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No verifiable claims or demos present",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Struggling AI agent platform with unclear value proposition \u2014 lacks competitive differentiation and transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/aiagent-app.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
