@@ -1,99 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "deepagents",
-  "name": "deepagents",
+  "name": "DeepAgents",
+  "agent_url": "/reviews/deepagents/",
   "category": "Frameworks & Eval",
+  "run_id": "run-deepagents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 73,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of deepagents.",
-  "review_url": "https://hlido.eu/reviews/deepagents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-deepagents-mp10zbht",
-  "claims": [
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid framework for agent evaluation, but lacks comprehensive documentation and clear differentiation.",
+    "body": "DeepAgents serves as a competent framework for evaluating and developing agents, particularly in research contexts. Its core functionality is reliable, but the lack of thorough documentation and user guidance may hinder adoption among less experienced users. The absence of verified claims and an unclear auth requirement raises concerns about transparency and usability. While it holds steady in the competitive landscape of agent frameworks, it does not stand out in terms of unique features or ease of integration. Users seeking a more robust ecosystem might consider alternatives with better support and community engagement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) due to its functional reliability and presence in the agent evaluation space. However, it lacks the comprehensive documentation and user support that could elevate it to VITAL status. Improved transparency and user engagement would be necessary for a higher tier.",
+  "what_it_does_well": [
+    "Provides a solid framework for agent evaluation and development.",
+    "Reliable core functionality for research applications.",
+    "Active in the agent evaluation community."
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guidance.",
+    "Unclear authentication requirements may confuse potential users.",
+    "Does not clearly differentiate itself from other frameworks."
+  ],
+  "best_for": [
+    "Researchers needing a basic framework for agent evaluation.",
+    "Developers familiar with agent concepts looking for a starting point.",
+    "Users who prioritize functionality over extensive support."
+  ],
+  "not_recommended_for": [
+    "Beginners seeking extensive documentation and user support.",
+    "Teams requiring seamless integration with existing tools.",
+    "Users looking for a highly differentiated or feature-rich framework."
+  ],
+  "red_flags": [
+    "Lack of verified claims raises concerns about reliability.",
+    "Unclear auth requirements could limit accessibility."
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Agent harness built with LangChain and LangGraph.\"",
-      "source_surface": "homepage"
+      "slug": "openai-eval",
+      "verdict_diff": "OpenAI's evaluation tools offer more extensive documentation and community support. Choose DeepAgents for a straightforward framework, but OpenAI Eval for a more robust ecosystem.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is listed in the navigation menu on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links for 'Pricing', 'Sign in', and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ray",
+      "verdict_diff": "Ray provides a more comprehensive framework for distributed applications, making it a better choice for complex projects. DeepAgents is suitable for simpler evaluations.",
+      "preferred_for_axis": "complexity and scalability"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 lacks clear integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/langchain-ai/deepagentsjs#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/langchain-ai/deepagentsjs/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:55:32.252Z"
+  "summary": "Solid framework for agent evaluation, but lacks comprehensive documentation and clear differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/deepagents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
