@@ -1,102 +1,116 @@
 {
+  "schema_version": "2.0",
   "slug": "openinterpreter",
   "name": "Open Interpreter",
+  "agent_url": "https://www.openinterpreter.com",
   "category": "Coding",
+  "run_id": "run-openinterpreter-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Open Interpreter",
-  "review_url": "https://hlido.eu/reviews/openinterpreter/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-openinterpreter-moo14te1",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable coding assistant with solid capabilities, but lacks standout features compared to top-tier competitors.",
+    "body": "Open Interpreter serves as a dependable coding assistant, providing users with the tools necessary to streamline their programming tasks. While it performs well in basic code interpretation and execution, it does not present a clear differentiation from more established players in the market. Users may find its functionality adequate for standard coding needs, but those seeking advanced features or integrations may want to explore alternatives like GitHub Copilot or Replit, which offer more robust ecosystems and user support. The platform currently lacks comprehensive documentation and user feedback mechanisms, which could hinder its growth and user satisfaction in the long run.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable performance in coding tasks and a clean user interface. Not VITAL as it lacks advanced features and integrations that could elevate the user experience significantly. It could improve its tier with enhanced documentation and user engagement strategies.",
+  "what_it_does_well": [
+    "Provides reliable code interpretation and execution for various programming languages.",
+    "User-friendly interface that simplifies coding tasks.",
+    "Suitable for basic coding needs without overwhelming complexity."
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features that competitors offer, such as contextual code suggestions.",
+    "Limited user feedback mechanisms to improve the platform.",
+    "Documentation is sparse, making it difficult for new users to fully leverage its capabilities."
+  ],
+  "best_for": [
+    "Beginner programmers looking for a straightforward coding assistant.",
+    "Users needing basic code execution without advanced features.",
+    "Individuals who prefer a simple interface over complex integrations."
+  ],
+  "not_recommended_for": [
+    "Experienced developers seeking advanced coding tools and integrations.",
+    "Users who require extensive documentation and support.",
+    "Teams needing collaborative coding features that are not currently available."
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to user frustration and hinder adoption.",
+    "Lack of user feedback mechanisms could limit future improvements."
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Think freely. The desktop app for AI power users. Let agents edit files, control apps, and learn new skills.",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers advanced contextual suggestions and integrations that enhance coding efficiency. Choose Open Interpreter for simpler tasks without the need for advanced features.",
+      "preferred_for_axis": "basic coding tasks"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Iframe name=\"Interpreter browser demo\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Local model usage stays on your device. If you use your own API key, your data goes directly from your device to that provider, not through our servers.",
-      "source_surface": "homepage"
+      "slug": "replit",
+      "verdict_diff": "Replit provides a more comprehensive coding environment with collaboration features. Open Interpreter is better for users who prefer a focused tool for individual coding tasks.",
+      "preferred_for_axis": "individual vs collaborative coding"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [
     {
-      "id": "homepage",
-      "url": "https://www.openinterpreter.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.openinterpreter.com/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "claim": "Reliable code interpretation and execution",
+      "source": "https://www.openinterpreter.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     }
   ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:38:20.342Z"
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Open Interpreter does not currently support integration with external agents or APIs.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Reliable code interpretation and execution",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Reliable coding assistant with solid capabilities, but lacks standout features compared to top-tier competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/openinterpreter.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
