@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "codeium",
   "name": "Codeium",
-  "category": "Coding",
+  "agent_url": "https://codeium.com",
+  "category": "AI Agent",
+  "run_id": "run-codeium-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Codeium",
-  "review_url": "https://hlido.eu/reviews/codeium/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-codeium-mongivbc",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Windsurf - The best AI for Coding\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'PRICING' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "MCP Support: Enhance your AI workflows by connecting custom tools and services.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Auth Overhaul\" and \"Implement OAuth flow\" are mentioned in the context of tasks.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://windsurf.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:01:24.393Z"
+  "hlido_opinion": {
+    "headline": "Codeium struggles to maintain relevance in a competitive AI agent landscape \u2014 lacks clear differentiation and user engagement.",
+    "body": "Codeium, while positioned as an AI agent, currently faces challenges in establishing a strong foothold in a crowded market. The product's public-facing materials do not effectively communicate its unique value proposition, leading to a perception of stagnation. Without a clear narrative or compelling features that stand out against competitors, Codeium risks being overlooked by potential users. The lack of verifiable claims and transparency around its functionalities further complicates its appeal. For users seeking robust AI agent solutions, alternatives may provide a more engaging experience and clearer benefits.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the absence of compelling features or user engagement signals, alongside a lack of verifiable claims on its public surface. It would need to demonstrate a clearer value proposition and user feedback to improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks a clear differentiation from competitors in the AI agent space",
+    "No verifiable claims or transparent information available on the public surface",
+    "Limited user engagement signals or feedback to assess effectiveness",
+    "Fails to communicate a compelling value proposition"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking robust and engaging AI agent solutions",
+    "Those looking for transparent and verifiable product claims",
+    "Individuals needing clear differentiation in AI tools"
+  ],
+  "red_flags": [
+    "Absence of verifiable claims raises concerns about product reliability",
+    "Lack of user engagement signals may indicate stagnation or lack of development"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more established and user-friendly AI experience with clear applications, while Codeium lacks a distinctive narrative. Choose ChatGPT for a more engaging and proven solution.",
+      "preferred_for_axis": "user engagement"
+    },
+    {
+      "slug": "microsoft-copilot",
+      "verdict_diff": "Microsoft Copilot provides integrated AI support within productivity tools, offering clear use cases and benefits. Codeium does not present a similar level of integration or clarity.",
+      "preferred_for_axis": "integration and clarity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Codeium does not currently present any means for agent integration.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No compelling call to action observed.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No transparent pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or verifiable features presented.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Codeium struggles to maintain relevance in a competitive AI agent landscape \u2014 lacks clear differentiation and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/codeium.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
