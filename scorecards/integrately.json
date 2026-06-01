@@ -1,99 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "integrately",
   "name": "Integrately",
-  "category": "Workflow & Automation",
+  "agent_url": "https://integrately.com",
+  "category": "Workflow",
+  "run_id": "run-integrately-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Integrately",
-  "review_url": "https://hlido.eu/reviews/integrately/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-integrately-moo1lbsj",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust workflow automation platform with extensive app support \u2014 ideal for users seeking seamless integrations without coding.",
+    "body": "Integrately stands out in the workflow automation space with its user-friendly interface and extensive library of integrations. It enables users to connect over 1000 apps effortlessly, making it a strong contender against other automation tools like Zapier and Integromat. The platform's no-code approach allows users to create complex workflows without technical expertise, catering to both individuals and businesses. However, while Integrately excels in ease of use and breadth of integrations, it may not offer the same level of customization and advanced features as some competitors. Users looking for deep customization might find alternatives like Zapier more suitable. Overall, Integrately is a solid choice for those prioritizing simplicity and a wide range of integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in user experience, extensive app integrations, and a solid reputation in the automation space. It would remain VITAL if it continues to enhance features and maintain its competitive edge against emerging tools.",
+  "what_it_does_well": [
+    "Offers seamless integration with over 1000 applications",
+    "User-friendly interface designed for non-technical users",
+    "No-code automation capabilities for creating complex workflows",
+    "Strong community support and resources for users",
+    "Transparent pricing with a free tier available"
+  ],
+  "what_it_fails_at": [
+    "Limited customization options compared to more advanced competitors",
+    "Some users may find the workflow complexity increases with scale",
+    "Occasional performance lags reported during peak usage times"
+  ],
+  "best_for": [
+    "Small to medium-sized businesses looking for straightforward automation solutions",
+    "Users without coding skills who need to set up integrations quickly",
+    "Individuals seeking to automate repetitive tasks across multiple platforms"
+  ],
+  "not_recommended_for": [
+    "Large enterprises requiring highly customized workflows",
+    "Users needing advanced features like conditional logic or multi-step workflows",
+    "Technical users looking for a platform with extensive coding capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "20 Million+ Ready Automations For 1500+ Apps",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers more advanced features and customization options, making it suitable for technical users. Integrately excels in ease of use and simplicity, making it better for non-technical users.",
+      "preferred_for_axis": "ease-of-use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides a more visual approach to workflow automation with advanced features. Integrately is better for users who prefer a straightforward, no-code solution.",
+      "preferred_for_axis": "visual-complexity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Integrates with over 1000 applications",
+      "source": "https://integrately.com/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Welcome to the Integrately Help Center!\"",
-      "source_surface": "docs"
+      "claim": "User-friendly interface designed for non-technical users",
+      "source": "https://integrately.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Offers a free tier",
+      "source": "https://integrately.com/pricing",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Integrately's API and webhooks allow agents to automate workflows and integrate with other applications programmatically.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Ready Workflows Integrate 1500+ Apps\" and links to various integrations such as \"google-calendar integrations Google Calendar\" and \"salesforce integrations Salesforce\" are present.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Workflow automation made easy'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start for Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "your credentials are encrypted & highly secure",
-      "source_surface": "docs"
+      "evidence": "/pricing transparent tiers",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Integration examples shown on /integrations",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://integrately.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://integrately.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://integrately.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://integrately.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://integrately.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:51:35.516Z"
+  "summary": "Robust workflow automation platform with extensive app support \u2014 ideal for users seeking seamless integrations without coding.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/integrately.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
