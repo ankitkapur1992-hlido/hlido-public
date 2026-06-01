@@ -1,98 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "airtable-ai",
   "name": "Airtable AI",
+  "agent_url": "https://www.airtable.com/platform/ai",
   "category": "Productivity",
-  "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Airtable AI",
-  "review_url": "https://hlido.eu/reviews/airtable-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-airtable-ai-moo1z4nj",
-  "claims": [
+  "run_id": "run-airtable-ai-v2-handcraft-2026-05-23",
+  "run_at": "2026-05-23T13:50:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+manual-flagship-curation",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "AI features bolted onto a mature no-code database \u2014 useful for existing Airtable shops, weak as a standalone reason to adopt.",
+    "body": "Airtable AI is the set of LLM-powered field types and workflow steps that Airtable layered onto its established no-code-database platform. The integration is honest: it is not a separate product, it is AI primitives wired into the place Airtable users already live (formulas, automations, interfaces). For existing Airtable customers this is a meaningful upgrade \u2014 generate summaries, classify records, extract from attachments without leaving the workflow. Where it weakens is as a standalone choice: nobody would buy Airtable to get its AI features, and the pricing puts AI on top of the already-not-cheap base plan. The agent-relevance is mediocre \u2014 Airtable automation runner can call AI but there is no first-party agent-driven workflow primitive that meaningfully extends the database model.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because for the existing Airtable customer base the AI features are a credible upgrade with proven utility. Not VITAL because the AI capability is not a reason to choose Airtable over a competitor and the agent-integration surface is shallow.",
+  "what_it_does_well": [
+    "Genuinely integrated with Airtable existing workflows (not a separate UI)",
+    "AI field types eliminate boilerplate code for common LLM tasks",
+    "Automation runner can chain AI steps with other no-code actions"
+  ],
+  "what_it_fails_at": [
+    "No reason to choose Airtable for AI features alone",
+    "Pricing layered on already-not-cheap base plan",
+    "Agent-integration surface is shallow vs purpose-built tools"
+  ],
+  "best_for": [
+    "Existing Airtable customers upgrading their workflows",
+    "Ops teams already invested in no-code databases",
+    "Use cases mixing structured data + LLM enrichment"
+  ],
+  "not_recommended_for": [
+    "Greenfield AI projects (better to choose AI-first platforms)",
+    "Agent-driven workflows needing deep API access",
+    "Cost-sensitive deployments"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "slug": "activepieces",
+      "verdict_diff": "Activepieces is the open-source automation alternative \u2014 broader integration surface but no first-party database. Choose Airtable AI when database-first; Activepieces when integration-first.",
+      "preferred_for_axis": "database-vs-integration-platform"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "AI field types and integrations",
+      "source": "https://www.airtable.com/platform/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Airtable REST API + automation webhooks. Agents can read/write records and trigger automations but the AI features themselves are not directly addressable.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "AI that’s built for the way your business actually works",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Resources and insights to inspire",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Seamlessly connect to the tools you use daily. Sync with critical tools using pre-built connectors and open APIs.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Your data stays secure. Our model providers never retain your data and your data is never used for model training.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T13:50:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23T13:50:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.airtable.com/platform/ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://airtable.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.airtable.com/platform/app-building",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.airtable.com/templates/project-management/expnPwND0WA2x7nhJ",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.airtable.com/whatsnew",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://www.airtable.com/lp/claude-airtable",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:02:22.539Z"
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "summary": "AI features bolted onto a mature no-code database \u2014 useful for existing Airtable shops, weak as a standalone reason to adopt.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "_handcrafted": {
+    "by": "ceo_claude/ses-e8a59259",
+    "at": "2026-05-23T13:50:00Z",
+    "reason": "LLM repeatedly failed quality gate; hand-crafted for flagship visibility"
+  },
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+  "attestation_url": "/data/attestations/airtable-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-handcraft"
 }
