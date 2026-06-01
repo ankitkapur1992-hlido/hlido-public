@@ -1,102 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "hume-ai",
   "name": "Hume AI",
+  "agent_url": "https://www.hume.ai",
   "category": "Voice",
+  "run_id": "run-hume-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Hume AI",
-  "review_url": "https://hlido.eu/reviews/hume-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-hume-ai-moo0vbup",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Building AI with emotional intelligence to create technology that truly understands humanity.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to a pricing page, only links to research, products, models, resources, and contact sales.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The live demo is accessible without login.",
-      "source_surface": "changelog"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.hume.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.hume.ai/blog/opensource-tada",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:31:04.312Z"
+  "hlido_opinion": {
+    "headline": "Hume AI's voice synthesis shows promise but lacks the maturity and features of competitors \u2014 currently fading in relevance.",
+    "body": "Hume AI has made strides in voice synthesis technology, but it struggles with visibility and differentiation in a crowded market. The product's current state suggests that while it may have potential, it has not yet established a strong foothold or user base. The lack of verified claims and transparency about its features raises concerns about its operational maturity. Without a clear value proposition or unique capabilities, Hume AI risks being overshadowed by more established competitors in the voice synthesis space. Users seeking robust and reliable voice solutions may want to consider alternatives that demonstrate stronger credibility and feature sets.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the lack of verified claims and the absence of significant differentiation from competitors. The tier could improve with clearer feature communication and enhanced user engagement metrics.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks verified claims on capabilities and performance",
+    "No clear differentiation from other voice synthesis solutions",
+    "Limited visibility and engagement in the market"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking mature and well-supported voice synthesis solutions",
+    "Developers looking for robust APIs or integrations",
+    "Organizations needing proven reliability in voice applications"
+  ],
+  "red_flags": [
+    "Absence of user testimonials or case studies",
+    "No clear product roadmap or future development plans"
+  ],
+  "compared_to": [
+    {
+      "slug": "descript",
+      "verdict_diff": "Descript offers a more comprehensive suite of audio and video editing tools alongside voice synthesis, making it a better choice for content creators. Hume AI may appeal to niche users but lacks the broad functionality.",
+      "preferred_for_axis": "feature breadth"
+    },
+    {
+      "slug": "microsoft-azure-voice",
+      "verdict_diff": "Microsoft Azure's voice capabilities are part of a larger ecosystem with extensive documentation and support. Hume AI falls short in terms of integration and enterprise readiness.",
+      "preferred_for_axis": "enterprise integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Hume AI does not currently offer programmatic access or integration capabilities.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call-to-action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of capabilities found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Hume AI's voice synthesis shows promise but lacks the maturity and features of competitors \u2014 currently fading in relevance.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/hume-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
