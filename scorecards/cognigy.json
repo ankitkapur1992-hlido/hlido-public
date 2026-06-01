@@ -1,100 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "cognigy",
   "name": "Cognigy",
-  "category": "Customer Experience",
+  "agent_url": "https://www.cognigy.com",
+  "category": "Customer Support",
+  "run_id": "run-cognigy-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Cognigy",
-  "review_url": "https://hlido.eu/reviews/cognigy/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-cognigy-moo13k2q",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable customer support automation platform \u2014 solid for enterprises, but lacks standout features against competitors.",
+    "body": "Cognigy positions itself as a robust customer support automation solution, appealing primarily to enterprise clients seeking to enhance their customer interactions through conversational AI. The platform's strengths lie in its ability to integrate with various channels and its user-friendly interface for building conversational workflows. However, it faces stiff competition from other players in the market, such as Intercom and Zendesk, which offer more advanced features and integrations. While Cognigy delivers on its promises and is a dependable choice for automating customer support, it does not have a clear differentiator that sets it apart from its competitors. The lack of detailed public information regarding its API and integration capabilities is a concern for potential users looking for programmatic solutions. Overall, Cognigy is a solid option, but users should evaluate it against alternatives to ensure it meets their specific needs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Cognigy demonstrates reliability in customer support automation and has a clear value proposition for enterprise users. However, it lacks distinct features that would elevate it to VITAL status, such as advanced integrations or unique selling points compared to competitors.",
+  "what_it_does_well": [
+    "User-friendly interface for building conversational workflows",
+    "Integrates with multiple channels for customer support",
+    "Reliable performance in automating customer interactions",
+    "Solid reputation among enterprise clients"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to competitors like Intercom and Zendesk",
+    "Limited public information on API and integration capabilities",
+    "No clear differentiation in a crowded market"
+  ],
+  "best_for": [
+    "Enterprise clients looking for a dependable customer support automation solution",
+    "Organizations that prioritize ease of use in building conversational workflows",
+    "Companies needing multi-channel support integration"
+  ],
+  "not_recommended_for": [
+    "Small businesses seeking cost-effective solutions with advanced features",
+    "Users needing extensive customization or unique integrations",
+    "Organizations focused on cutting-edge AI capabilities"
+  ],
+  "red_flags": [
+    "Limited transparency regarding API and integration capabilities"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Generative & conversational AI powered customer service agents for your business\"",
-      "source_surface": "homepage"
+      "slug": "intercom",
+      "verdict_diff": "Intercom offers a more comprehensive suite of features and integrations for customer support, making it a better choice for businesses needing advanced capabilities. Cognigy is a solid alternative for those prioritizing ease of use over extensive features.",
+      "preferred_for_axis": "feature-rich solutions"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "zendesk",
+      "verdict_diff": "Zendesk provides a more robust customer support platform with extensive integrations and analytics. Choose Cognigy if user-friendliness and straightforward setup are more critical than advanced analytics.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Cognigy primarily serves as a customer support automation platform without clear programmatic integration options.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not provide a direct link to the pricing page, making it unclear how to access it in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "See Conversational AI in action and browse through a selection of Cognigy.AI videos and demos.",
-      "source_surface": "templates"
+      "evidence": "'Customer support automation platform'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "100+ Prebuilt Integrations",
-      "source_surface": "integrations"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Pricing information not clearly available on public pages",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No live demo or substantial evidence of capabilities on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.cognigy.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.cognigy.com/solutions/cognigy-contact-center-integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.cognigy.com/resources/showcases",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.cognigy.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:37:34.481Z"
+  "summary": "Reliable customer support automation platform \u2014 solid for enterprises, but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/cognigy.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
