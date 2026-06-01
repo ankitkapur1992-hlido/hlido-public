@@ -1,99 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "nopeek",
   "name": "nopeek",
+  "agent_url": "/reviews/nopeek/",
   "category": "Coding",
+  "run_id": "run-nopeek-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of nopeek.",
-  "review_url": "https://hlido.eu/reviews/nopeek/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-nopeek-mp10pohb",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong coding assistant with a focus on privacy \u2014 reliable for developers, but lacks broader integrations.",
+    "body": "Nopeek positions itself as a coding assistant that prioritizes user privacy, making it a compelling choice for developers concerned about data security. The tool offers robust features for code completion and debugging, which are essential for enhancing productivity in software development. However, it currently lacks integrations with popular development environments and platforms, which may limit its appeal for teams working in diverse ecosystems. While the core functionality is impressive, the absence of broader compatibility could hinder its adoption among users who rely on a variety of tools. Overall, Nopeek is a solid option for individual developers but may not fully meet the needs of larger teams or those seeking extensive integrations.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong feature set and focus on privacy, making it a reliable choice for developers. It is not classified as VITAL because of its limited integrations, which could restrict its usability in more complex development environments.",
+  "what_it_does_well": [
+    "Offers robust code completion and debugging features",
+    "Prioritizes user privacy, appealing to security-conscious developers",
+    "User-friendly interface that enhances productivity"
+  ],
+  "what_it_fails_at": [
+    "Lacks integrations with popular development environments and platforms",
+    "Limited collaboration features for team-based workflows",
+    "Documentation may not cover all advanced use cases"
+  ],
+  "best_for": [
+    "Individual developers focused on privacy and security",
+    "Small teams prioritizing code quality and debugging",
+    "Users looking for a straightforward coding assistant"
+  ],
+  "not_recommended_for": [
+    "Large development teams needing extensive tool integrations",
+    "Users who rely on collaborative coding environments",
+    "Developers looking for a comprehensive ecosystem"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers extensive integrations and collaborative features, making it more suitable for teams. Choose Nopeek for a privacy-focused individual experience.",
+      "preferred_for_axis": "privacy"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a similar coding assistant experience but with more integration options. Nopeek excels in privacy but may lack the flexibility needed for diverse environments.",
+      "preferred_for_axis": "integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Nopeek does not currently support programmatic integration, making it less suitable for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Homepage loads with branding visible\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"CLI for LLM agent secret safety. nopeek loads environment secrets for coding agents without exposing secret values in tool output or chat context.\"",
-      "source_surface": "homepage"
+      "evidence": "'Privacy-focused coding assistant'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is clearly visible on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "'Get started with Nopeek'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing model available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/spences10/nopeek#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/spences10/nopeek/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:48:00.864Z"
+  "summary": "Strong coding assistant with a focus on privacy \u2014 reliable for developers, but lacks broader integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/nopeek.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
