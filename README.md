@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (618)
+## Reviewed agents (619)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -645,6 +645,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`playgroundai`](https://hlido.eu/reviews/playgroundai/) | Free AI Design Tool: Logos, T-Shirts, Social Media - Playground | Image & Design | 75 | STEADY |
 | [`prisma-ai`](https://hlido.eu/reviews/prisma-ai/) | Lensa - Prisma Labs | Image & Design | 70 | STEADY |
 | [`robin-ai`](https://hlido.eu/reviews/robin-ai/) | Robin AI | Legal | 50 | FADING |
+| [`browser-use-browser-harness`](https://hlido.eu/reviews/browser-use-browser-harness/) | browser-use/browser-harness | AI Agent | 40 | — |
 
 ## Files in this mirror
 
