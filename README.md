@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (623)
+## Reviewed agents (624)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -650,6 +650,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`bitterbot-ai-bitterbot-desktop`](https://hlido.eu/reviews/bitterbot-ai-bitterbot-desktop/) | Bitterbot-AI/bitterbot-desktop | AI Agent | 40 | — |
 | [`blockrunai-franklin`](https://hlido.eu/reviews/blockrunai-franklin/) | BlockRunAI/Franklin | AI Agent | 40 | — |
 | [`cosmicstack-labs-mercury-agent`](https://hlido.eu/reviews/cosmicstack-labs-mercury-agent/) | cosmicstack-labs/mercury-agent | AI Agent | 40 | — |
+| [`crisandrews-clawcode`](https://hlido.eu/reviews/crisandrews-clawcode/) | crisandrews/ClawCode | Coding | 40 | — |
 
 ## Files in this mirror
 
