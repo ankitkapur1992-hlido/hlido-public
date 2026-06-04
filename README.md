@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (621)
+## Reviewed agents (622)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -648,6 +648,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`browser-use-browser-harness`](https://hlido.eu/reviews/browser-use-browser-harness/) | browser-use/browser-harness | AI Agent | 40 | — |
 | [`avadsa25-codec`](https://hlido.eu/reviews/avadsa25-codec/) | AVADSA25/codec | Coding | 40 | — |
 | [`bitterbot-ai-bitterbot-desktop`](https://hlido.eu/reviews/bitterbot-ai-bitterbot-desktop/) | Bitterbot-AI/bitterbot-desktop | AI Agent | 40 | — |
+| [`blockrunai-franklin`](https://hlido.eu/reviews/blockrunai-franklin/) | BlockRunAI/Franklin | AI Agent | 40 | — |
 
 ## Files in this mirror
 
