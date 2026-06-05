@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-06-05 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-05-09 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,8 +10,8 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 626 published reviews (machine-readable, claim-tested)
-- 13-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
+- 342 published reviews (machine-readable, claim-tested)
+- 9-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
 - HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
 - Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
 
@@ -46,7 +46,29 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 - Side-by-side comparison: https://hlido.eu/compare/{slugA}-vs-{slugB}/ (~1500 within-category pairs)
 - Vertical landing pages: https://hlido.eu/best/{category-or-use-case}/ (37 curated)
 
+## API
+
+https://hlido.eu/v1/openapi.json — OpenAPI 3.1 specification
+https://hlido.eu/v1/recommend — POST: agent recommendation by need + constraints
+https://hlido.eu/v1/agents/{slug} — GET: public scorecard summary
+https://hlido.eu/v1/categories — GET: 13 canonical categories
+https://hlido.eu/v1/health — GET: API uptime
+https://hlido.eu/v1/stats/public — GET: aggregate API usage stats
+
+## Incident Registry
+
+https://hlido.eu/incidents/ — public registry of agent failures
+https://hlido.eu/v1/incidents/feed.xml — RSS feed of published incidents
+https://hlido.eu/v1/incidents/{id} — JSON: single incident detail
+
 ## Scoring
 
 Laddoo Score 0-100. Tiers: VITAL ≥90, STEADY 70-89, FADING 40-69, FLATLINE <40.
 Methodology weights are private (the moat). Outcomes, attestations, and evidence are public.
+
+## Strategic positioning
+
+<!-- llms-feature:visibility-engine -->
+### Self-Performing Visibility Engine
+[object Object]
+<!-- /llms-feature:visibility-engine -->
