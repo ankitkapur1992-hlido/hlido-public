@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (626)
+## Reviewed agents (627)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -653,6 +653,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`crisandrews-clawcode`](https://hlido.eu/reviews/crisandrews-clawcode/) | crisandrews/ClawCode | Coding | 40 | — |
 | [`dimknaf-braindb`](https://hlido.eu/reviews/dimknaf-braindb/) | dimknaf/braindb | AI Agent | 40 | — |
 | [`eggbrid2-mobileclaw`](https://hlido.eu/reviews/eggbrid2-mobileclaw/) | eggbrid2/mobileClaw | Workflow & Automation | 40 | — |
+| [`ag2ai-ag2`](https://hlido.eu/reviews/ag2ai-ag2/) | ag2ai/ag2 | AI Agent | 40 | — |
 
 ## Files in this mirror
 
