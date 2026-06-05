@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (629)
+## Reviewed agents (630)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -656,6 +656,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ag2ai-ag2`](https://hlido.eu/reviews/ag2ai-ag2/) | ag2ai/ag2 | AI Agent | 40 | — |
 | [`alibaba-page-agent`](https://hlido.eu/reviews/alibaba-page-agent/) | alibaba/page-agent | AI Agent | 40 | — |
 | [`alibaba-spring-ai-alibaba`](https://hlido.eu/reviews/alibaba-spring-ai-alibaba/) | alibaba/spring-ai-alibaba | Coding | 40 | — |
+| [`arize-ai-phoenix`](https://hlido.eu/reviews/arize-ai-phoenix/) | Arize-ai/phoenix | Frameworks & Eval | 40 | — |
 
 ## Files in this mirror
 
