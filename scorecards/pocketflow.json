@@ -1,100 +1,103 @@
 {
+  "schema_version": "2.0",
   "slug": "pocketflow",
-  "name": "pocketflow",
+  "name": "PocketFlow",
+  "agent_url": "/reviews/pocketflow/",
   "category": "Frameworks & Eval",
+  "run_id": "run-pocketflow-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of pocketflow.",
-  "review_url": "https://hlido.eu/reviews/pocketflow/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pocketflow-mp10hq3t",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for efficient model training and evaluation \u2014 strong for developers, but lacks broader community engagement.",
+    "body": "PocketFlow stands out as a powerful framework designed for optimizing deep learning models, particularly in mobile and edge environments. Its focus on efficiency and performance makes it an excellent choice for developers looking to streamline their model training and evaluation processes. The framework supports various model architectures and provides tools for quantization and pruning, which are critical for deployment in resource-constrained settings. However, while the technical capabilities are impressive, the platform's community engagement appears limited, which may hinder collaborative development and support. Users seeking a vibrant ecosystem might find alternatives more appealing. Overall, PocketFlow is a solid choice for those prioritizing performance but may not be the best fit for users looking for extensive community resources.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance in optimizing model training and evaluation, with a solid feature set. Not VITAL because of the lack of a robust community, which could limit user support and shared resources. Would shift to VITAL with increased community engagement and broader adoption.",
+  "what_it_does_well": [
+    "Optimizes deep learning models for mobile and edge environments",
+    "Supports various model architectures and techniques for quantization and pruning",
+    "Provides tools for efficient model training and evaluation",
+    "Delivers strong performance metrics for resource-constrained applications"
+  ],
+  "what_it_fails_at": [
+    "Limited community engagement and resources for user support",
+    "Less visibility in broader machine learning discussions compared to competitors",
+    "Documentation may not cover all edge cases or advanced features thoroughly"
+  ],
+  "best_for": [
+    "Developers looking to optimize models for mobile and edge devices",
+    "Teams focused on performance and efficiency in model training",
+    "Users comfortable with technical frameworks and seeking control over their model deployment"
+  ],
+  "not_recommended_for": [
+    "Beginners needing extensive community support and resources",
+    "Users looking for a well-established ecosystem with many third-party integrations",
+    "Those who prefer a more guided experience with comprehensive tutorials"
+  ],
+  "red_flags": [
+    "Limited community engagement may restrict collaborative development opportunities",
+    "Documentation gaps could pose challenges for less experienced users"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"The-Pocket/PocketFlow-Typescript\"",
-      "source_surface": "homepage"
+      "slug": "tensorflow",
+      "verdict_diff": "TensorFlow offers a more extensive community and resources, making it better for users needing support. PocketFlow excels in performance optimization for specific use cases.",
+      "preferred_for_axis": "community support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pocket Flow: A minimalist LLM framework. Let Agents build Agents!\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\" is clearly visible in the navigation menu.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "pytorch",
+      "verdict_diff": "PyTorch has a more vibrant ecosystem and user community, while PocketFlow focuses on efficient model deployment in constrained environments.",
+      "preferred_for_axis": "ecosystem vibrancy"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 PocketFlow operates primarily as a framework for model optimization and does not expose programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/The-Pocket/PocketFlow-Typescript#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T09:41:56.206Z"
+  "summary": "Robust framework for efficient model training and evaluation \u2014 strong for developers, but lacks broader community engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pocketflow.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
