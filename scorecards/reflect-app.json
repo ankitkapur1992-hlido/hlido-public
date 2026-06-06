@@ -1,100 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "reflect-app",
   "name": "Reflect",
-  "category": "Productivity",
+  "agent_url": "https://reflect.app",
+  "category": "AI Agent",
+  "run_id": "run-reflect-app-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Reflect",
-  "review_url": "https://hlido.eu/reviews/reflect-app/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-reflect-app-monguzr0",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Think better with Reflect\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The 'Pricing' link is directly accessible from the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Import events quickly with our Google Calendar and Outlook integrations.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "End-to-end encryption keeps your notes secure.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://reflect.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://reflect.app/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://reflect.app/#connected",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://reflect.app/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:10:57.840Z"
+  "hlido_opinion": {
+    "headline": "Reflect struggles to maintain relevance in the AI agent space \u2014 lacks clarity and differentiation.",
+    "body": "Reflect is positioned as an AI agent, but it faces significant challenges in establishing a clear value proposition. The public surface lacks substantial information about its functionalities, making it difficult for potential users to gauge its effectiveness or unique features. With a score of 65, Reflect is categorized as FADING, indicating that it may not meet the evolving expectations of users in a competitive landscape. Without verified claims or a compelling narrative, it risks becoming overshadowed by more established alternatives. Users seeking robust AI agent solutions might find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) because the public surface lacks clarity and differentiation, and there are no verified claims to support its value. It would need to present a stronger narrative and clearer functionalities to improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear value proposition and differentiation in a crowded market",
+    "Public surface is sparse and uninformative, hindering user understanding",
+    "No verified claims or evidence of functionality available"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking clear and robust AI agent capabilities",
+    "Individuals looking for well-documented and supported solutions",
+    "Those who prioritize established alternatives with proven track records"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability and effectiveness",
+    "Public surface lacks substantive content, indicating potential neglect or lack of development"
+  ],
+  "compared_to": [
+    {
+      "slug": "superagent",
+      "verdict_diff": "SuperAgent offers a more comprehensive and user-friendly experience with clear functionalities. Reflect lacks the same level of clarity and support.",
+      "preferred_for_axis": "user experience"
+    },
+    {
+      "slug": "agentify",
+      "verdict_diff": "Agentify provides a more transparent and feature-rich platform. Reflect's vague offerings make it less appealing in comparison.",
+      "preferred_for_axis": "feature richness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear functionalities and integration options makes it unsuitable for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No evidence or demo available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Reflect struggles to maintain relevance in the AI agent space \u2014 lacks clarity and differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/reflect-app.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
