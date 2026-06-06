@@ -23,7 +23,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **Structured machine-readable scorecards** — every review is also published as a JSON file in this repo (`scorecards/{slug}.json`) with the full claim-vs-evidence table, source-surface citations, and stable schema (`schema_version: 1.0`)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (633)
+## Reviewed agents (634)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -660,6 +660,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`asheshgoplani-agent-deck`](https://hlido.eu/reviews/asheshgoplani-agent-deck/) | asheshgoplani/agent-deck | Coding | 40 | — |
 | [`automaapp-automa`](https://hlido.eu/reviews/automaapp-automa/) | AutomaApp/automa | Workflow & Automation | 40 | — |
 | [`beever-ai-beever-atlas`](https://hlido.eu/reviews/beever-ai-beever-atlas/) | Beever-AI/beever-atlas | AI Agent | 40 | — |
+| [`browser-use-browser-use`](https://hlido.eu/reviews/browser-use-browser-use/) | browser-use/browser-use | Workflow & Automation | 40 | — |
 
 ## Files in this mirror
 
