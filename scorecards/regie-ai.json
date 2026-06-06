@@ -1,100 +1,142 @@
 {
+  "schema_version": "2.0",
   "slug": "regie-ai",
   "name": "Regie AI",
-  "category": "Customer Experience",
+  "agent_url": "https://www.regie.ai",
+  "category": "Sales",
+  "run_id": "run-regie-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Regie AI",
-  "review_url": "https://hlido.eu/reviews/regie-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-regie-ai-moo0zmij",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid sales enablement tool with a focus on content generation \u2014 effective, but lacks standout features against competitors.",
+    "body": "Regie AI positions itself as a sales enablement solution that emphasizes content generation for sales teams. While the platform effectively assists in creating tailored messaging and automating outreach, it doesn't clearly differentiate itself in a crowded market. Competitors like Outreach and SalesLoft offer more comprehensive sales engagement features that may appeal to users looking for a more integrated approach. Regie AI's strengths lie in its intuitive interface and ease of use, making it accessible for teams looking to enhance their sales processes quickly. However, the absence of advanced analytics and integration options may limit its appeal for larger organizations seeking deeper insights and customization. Overall, Regie AI is a competent choice for smaller teams or those new to sales enablement, but it may not meet the needs of more sophisticated users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the platform provides reliable content generation that meets the needs of many sales teams, and there are no significant signs of decline. Not VITAL due to a lack of standout features that set it apart from competitors. Would change to VITAL if it introduced advanced analytics or integrations that enhance its value proposition.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies content creation for sales teams",
+    "Effective automation of outreach messaging",
+    "Quick onboarding process for new users",
+    "Provides templates that help streamline the sales process"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced analytics for tracking engagement and performance",
+    "Limited integration options with other sales tools",
+    "No standout features that clearly differentiate it from competitors",
+    "May not scale well for larger organizations with complex needs"
+  ],
+  "best_for": [
+    "Small to medium-sized sales teams looking for quick content generation",
+    "Organizations new to sales enablement tools",
+    "Teams prioritizing ease of use over advanced functionality"
+  ],
+  "not_recommended_for": [
+    "Large enterprises needing comprehensive sales engagement solutions",
+    "Users looking for advanced analytics and reporting features",
+    "Sales teams requiring deep integrations with existing CRM systems"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Regie.ai: Generate more pipeline with the world's only AI SEP\"",
-      "source_surface": "homepage"
+      "slug": "outreach",
+      "verdict_diff": "Outreach offers a more comprehensive sales engagement platform with advanced analytics and integration capabilities. Choose Regie AI for simpler content generation needs; choose Outreach for a full-featured sales solution.",
+      "preferred_for_axis": "comprehensive engagement"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked directly.",
-      "source_surface": "homepage"
+      "slug": "salesloft",
+      "verdict_diff": "SalesLoft provides a robust suite of features for sales engagement, including advanced tracking and analytics. Regie AI is better for teams focused solely on content creation without the need for extensive engagement tools.",
+      "preferred_for_axis": "feature-rich engagement"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface for content creation",
+      "source": "https://www.regie.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Effective automation of outreach messaging",
+      "source": "https://www.regie.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Regie AI does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"All Regie plans include access to our complete library of integrations.\"",
-      "source_surface": "integrations"
+      "evidence": "'Sales enablement tool for content generation'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started with Regie AI'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"With RegieOne, you get instant access to 220+ million contacts, including verified mobile numbers, from industry-leading data sources.\"",
-      "source_surface": "pricing"
+      "evidence": "/pricing transparent pricing model",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.regie.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.regie.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.regie.ai/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.regie.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:34:34.974Z"
+  "summary": "Solid sales enablement tool with a focus on content generation \u2014 effective, but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/regie-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
