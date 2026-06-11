@@ -1,41 +1,116 @@
 {
+  "schema_version": "2.0",
   "slug": "agentscope-ai-agentscope",
-  "name": "agentscope-ai/agentscope",
+  "name": "AgentScope",
   "agent_url": "https://github.com/agentscope-ai/agentscope",
   "category": "AI Agent",
   "run_id": "run-agentscope-ai-agentscope-rlb9gxcl",
   "run_at": "2026-06-06T06:00:34.922Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Production-ready agent framework from Alibaba with multi-modal and MCP support â credible infrastructure for serious multi-agent systems but enterprise-origin friction shows.",
+    "body": "AgentScope 2.0 is a Python framework for building observable, composable multi-agent systems. Alibaba's engineering fingerprints are visible in useful ways: the framework has been built for production deployments, the documentation at docs.agentscope.io is thorough, and the design prioritises the kind of auditability ('agents you can see, understand and trust') that enterprise buyers care about. The multi-modal support (text, image, structured data) and MCP integration mean it keeps pace with the current expectations of agentic infrastructure. The react-agent and multi-agent patterns are first-class, not bolted on. Where the enterprise-origin shows as friction: the project is academically framed (paper references, Chinese-language primary README), the community appears concentrated in Chinese developer ecosystems despite the English documentation, and the feature list reads more like an engineering roadmap than a product. The distinction matters: LangChain and CrewAI have fought hard for English-language developer mindshare; AgentScope is technically competitive but carries an adoption gap with Western developer ecosystems that its quality alone won't bridge.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the framework is technically serious, MCP-native, production-tested inside Alibaba, and documented. Not VITAL because Western developer community adoption is unclear, the English-primary developer ecosystem has stronger incumbent options (LangChain, CrewAI), and the 'production-ready' claim for external deployments (outside Alibaba) requires independent validation.",
+  "what_it_does_well": [
+    "Production-grade multi-agent orchestration with explainability built in ('agents you can see and trust')",
+    "Multi-modal support (text, images, structured data) across agent interactions",
+    "MCP integration keeps the framework current with 2025-era tool-use patterns",
+    "Comprehensive documentation at docs.agentscope.io with tutorial and roadmap",
+    "React-agent pattern as a first-class construct, not an afterthought"
+  ],
+  "what_it_fails_at": [
+    "Western developer community adoption appears limited compared to LangChain/CrewAI incumbents",
+    "Chinese-language primary README and academic framing create friction for English-first developers",
+    "Feature set reads as an engineering roadmap â not battle-tested in diverse external production environments",
+    "No verified star count or community size signal in pipeline data",
+    "Agent debugging and observability quality unverifiable without hands-on deployment"
+  ],
+  "best_for": [
+    "Engineering teams building production multi-agent systems who want a well-documented, Alibaba-battle-tested framework",
+    "Use cases requiring multi-modal agent communication (text, image, structured data in the same pipeline)",
+    "Teams comfortable with Python who want MCP-native tool use without building adapters",
+    "Researchers building on top of a framework designed for observable, auditable agent behaviour"
+  ],
+  "not_recommended_for": [
+    "Teams that need a large English-language community, tutorials, and third-party ecosystem (LangChain is a better starting point)",
+    "Non-Python stacks",
+    "Rapid prototyping where developer experience and quick starts matter more than production architecture",
+    "Enterprise buyers who need commercial support or SLAs (open-source project, Alibaba backing, no commercial tier verified)"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "slug": "langchain-ai",
+      "verdict_diff": "LangChain has the largest English-language community, most tutorials, and broadest third-party ecosystem. AgentScope wins on production-grade multi-agent observability and Alibaba-validated architecture. Choose LangChain for community; AgentScope for production architecture.",
+      "preferred_for_axis": "production-multi-agent-architecture"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is more opinionated and easier to get started with for role-based multi-agent workflows. AgentScope is more flexible and lower-level. CrewAI wins for fast prototyping; AgentScope wins for complex production deployments needing custom patterns.",
+      "preferred_for_axis": "flexibility-vs-time-to-prototype"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of agentscope-ai/agentscope.",
-  "confidence": "low"
+  "evidence_urls": [
+    {
+      "claim": "Production-ready agent framework with MCP support",
+      "source": "https://github.com/agentscope-ai/agentscope",
+      "tested_at": "2026-06-06",
+      "verified": true
+    },
+    {
+      "claim": "Documentation at docs.agentscope.io",
+      "source": "https://docs.agentscope.io/",
+      "tested_at": "2026-06-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Python SDK for building multi-agent systems. MCP integration allows LLMs to use AgentScope-orchestrated agents as tools. Programmatically composable via the Python API.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-06T06:00:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Build and run agents you can see, understand and trust"
+    },
+    {
+      "id": "docs_accessible",
+      "pass": true,
+      "required": false,
+      "evidence": "docs.agentscope.io accessible without login"
+    }
+  ],
+  "summary": "Production-ready agent framework from Alibaba with multi-modal and MCP support â credible infrastructure for serious multi-agent systems but enterprise-origin friction shows.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/agentscope-ai-agentscope.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
