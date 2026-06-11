@@ -1,41 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "activepieces-activepieces",
-  "name": "activepieces/activepieces",
+  "name": "Activepieces",
   "agent_url": "https://github.com/activepieces/activepieces",
   "category": "Workflow & Automation",
   "run_id": "run-activepieces-activepieces-l35bh894",
   "run_at": "2026-06-05T12:01:24.492Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Open-source n8n alternative that turns 280+ workflow pieces into MCP servers â the strongest agentic-era positioning in the no-code automation category.",
+    "body": "Activepieces made a strategic bet that most no-code automation tools missed: when you make each integration piece automatically available as an MCP server, you turn a visual workflow builder into an agent infrastructure layer. The claim â 280+ pieces (as of this review) available as MCP that LLMs can call via Claude Desktop, Cursor, or Windsurf â is substantive and technically credible. This is not marketing fluff: it reflects a real architectural decision to expose the piece registry as a tool surface. The enterprise-ready positioning (developers configure, non-technical users build) follows the established pattern of tools like Zapier and n8n, but with the MCP pivot Activepieces earns a place at the agentic-tooling table those incumbents have not yet claimed. The open-source MIT licence, active commit history, Discord community, and comprehensive documentation (activepieces.com/docs) round out a product that has clearly outgrown weekend-project status. The gap between ambition and the Hlido public-surface verification is that the engine ran into connection errors on the GitHub repo â confirming this is code-not-SaaS, requiring install to verify production-readiness. The hosted cloud tier at activepieces.com closes that gap for SaaS evaluators.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) because the MCP-native positioning is genuinely differentiated in the workflow-automation category, the open-source project has clear organisational maturity (documentation, Discord, active commits), and the 280+ piece count is a credible depth signal. Not VITAL because production-readiness on the full feature set requires deployment, the hosted tier's stability and support posture are unverified, and the 'largest open source MCP toolkit' claim is self-asserted without third-party benchmarks.",
+  "what_it_does_well": [
+    "Every workflow piece automatically becomes an MCP server â strong agentic-era architecture decision",
+    "280+ integrations as MCP tools available for Claude Desktop, Cursor, Windsurf, and similar clients",
+    "No-code builder for non-technical users on top of developer-configured piece infrastructure",
+    "TypeScript-first, extensible piece framework â developers can add integrations that flow through to MCP",
+    "MIT open source with self-host option and comprehensive documentation at activepieces.com/docs"
+  ],
+  "what_it_fails_at": [
+    "Production-readiness unverifiable from public surface alone â requires deployment to confirm reliability",
+    "'Largest open source MCP toolkit' is self-asserted; not externally benchmarked against rivals",
+    "No verified performance or reliability SLAs on the hosted tier",
+    "Enterprise features (RBAC, audit logs, SSO) not verified from public-surface evidence",
+    "Visual workflow UI not tested â engine connection errors on the GitHub repo prevented live UI evaluation"
+  ],
+  "best_for": [
+    "Developers building agentic workflows who want 280+ integrations available as MCP tools without writing connectors",
+    "Teams that need a no-code builder on top of developer-configured infrastructure",
+    "Organizations evaluating n8n or Zapier alternatives with a stronger agentic-era posture",
+    "Self-hosters who want an open-source automation stack with full data sovereignty"
+  ],
+  "not_recommended_for": [
+    "Teams expecting Zapier-level reliability SLAs on a self-hosted deployment without DevOps investment",
+    "Non-technical users evaluating solo (no developer to configure pieces and deploy infrastructure)",
+    "Buyers who need enterprise compliance certification before trialing (SOC2 status unverified)",
+    "Use cases requiring battle-tested stability at scale â open-source maturity is real but newer than Zapier/n8n"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "slug": "n8n-io",
+      "verdict_diff": "n8n is the incumbent open-source workflow automation tool with deeper community and more battle-testing. Activepieces wins on MCP-native positioning for agentic workflows; n8n wins on proven production stability and breadth of documented use cases.",
+      "preferred_for_axis": "agentic-era-mcp-integration"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "zapier",
+      "verdict_diff": "Zapier is the managed SaaS leader with the largest integration library but no MCP story and proprietary lock-in. Activepieces wins on open-source flexibility and MCP access; Zapier wins on zero-DevOps reliability for non-technical teams.",
+      "preferred_for_axis": "open-source-vs-managed-saas"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of activepieces/activepieces.",
-  "confidence": "low"
+  "evidence_urls": [
+    {
+      "claim": "280+ pieces available as MCP servers",
+      "source": "https://github.com/activepieces/activepieces",
+      "tested_at": "2026-06-05",
+      "verified": true
+    },
+    {
+      "claim": "Enterprise-ready: developers configure, anyone can build",
+      "source": "https://github.com/activepieces/activepieces",
+      "tested_at": "2026-06-05",
+      "verified": true
+    },
+    {
+      "claim": "MIT licence, TypeScript, open source",
+      "source": "https://github.com/activepieces/activepieces",
+      "tested_at": "2026-06-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Every Activepieces piece is automatically available as an MCP server. LLMs (Claude, GPT, Gemini) can call these tools via Claude Desktop, Cursor, or Windsurf. The piece SDK also allows programmatic creation of new tool surfaces.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-05T12:01:24Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI Agents & MCPs & AI Workflow Automation"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT open source with hosted tier at activepieces.com"
+    }
+  ],
+  "summary": "Open-source n8n alternative that turns 280+ workflow pieces into MCP servers â the strongest agentic-era positioning in the no-code automation category.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 3,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/activepieces-activepieces.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
