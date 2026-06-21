@@ -1,0 +1,47 @@
+{
+  "name": "@hlido/cli",
+  "version": "0.2.0",
+  "description": "Hlido CLI — independent, evidence-backed scorecards for AI agents. Inline scorecard, search, compare, and tier rankings, fetched live from hlido.eu.",
+  "keywords": [
+    "ai",
+    "agent",
+    "agents",
+    "evaluation",
+    "benchmark",
+    "scorecard",
+    "hlido",
+    "cli",
+    "review"
+  ],
+  "homepage": "https://hlido.eu",
+  "bugs": {
+    "url": "https://github.com/ankitkapur1992-hlido/hlido-public/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitkapur1992-hlido/hlido-public.git",
+    "directory": "cli"
+  },
+  "license": "MIT",
+  "author": "Hlido <hello@hlido.eu> (https://hlido.eu)",
+  "type": "module",
+  "main": "./src/api.mjs",
+  "bin": {
+    "hlido": "bin/hlido.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/hlido.mjs --version && node bin/hlido.mjs check aider"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
