@@ -1,48 +1,22 @@
-# Data License — Creative Commons Attribution 4.0 International (CC BY 4.0)
+# Licensing map — hlido-public
 
-The **review data** in this repository is licensed under the
-**Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+This repository is a public mirror of hlido.eu. Different parts carry
+different licenses. **All rights are reserved by default** except where a
+license is explicitly granted below.
 
-Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
-Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+| Part | License |
+|------|---------|
+| **Code** — `scripts/`, `cli/`, `actions/`, `integrations/`, `skills/`, `openapi.json` | **MIT** (see `LICENSE`) |
+| **Open data dump** — the curated corpus described in `open-data/` | **CC BY 4.0** (see [`open-data/LICENSE.md`](open-data/LICENSE.md)) |
+| **HuggingFace dataset** (`huggingface.co/datasets/hlido-eu/agent-benchmark`) | **CC BY-NC 4.0** (non-commercial) |
+| **Everything else** — `scorecards/`, `review-registry-public.json`, attestations, incidents, changelog, feeds | **© Hlido — all rights reserved.** Published for transparency; not licensed for redistribution. |
 
-## What this covers (the data)
+## Not granted by any license here
 
-- `scorecards/`
-- `review-registry-public.json`
-- `open-data/`
-- `attestations/`
-- `incidents/`
-- `changelog/`
-- `feed.xml`, `sitemap-news.xml`, `llms.txt`, `llms-full.txt`, `mcp-server-card.json`
-- any other evaluation content, scores, claim audits, and machine-readable
-  datasets published here
+- Hlido scoring **methodology, dimension weights, formulas, or rubric mechanics** — proprietary, never published.
+- The **Hlido** name, logo, and brand assets — trademark; no license herein grants any right to use them, and CC BY's no-endorsement term applies.
+- The platform/engine code (private).
 
-## What this does NOT cover (the code)
-
-Source code — `scripts/`, `cli/`, `actions/`, `integrations/`, `skills/`, and
-the OpenAPI spec — is licensed under the **MIT License** (see `LICENSE`).
-
-## You are free to
-
-- **Share** — copy and redistribute the data in any medium or format
-- **Adapt** — remix, transform, and build upon the data, for any purpose,
-  including commercially
-
-## Under one condition
-
-- **Attribution** — You must give appropriate credit to **Hlido**, provide a
-  link to https://hlido.eu, and indicate if changes were made. You may do so in
-  any reasonable manner, but not in any way that suggests Hlido endorses you or
-  your use.
-
-### Required attribution string
-
-> Source: Hlido — Independent AI Agent Reviews (https://hlido.eu),
-> licensed under CC BY 4.0.
-
-## Note on independence
-
-Hlido publishes independent, evidence-backed evaluations. Reuse under CC BY 4.0
-must not misrepresent the data, alter scores or verdicts while presenting them
-as Hlido's, or imply Hlido's endorsement.
+To cite a specific review, link the canonical URL on hlido.eu
+(`https://hlido.eu/reviews/{slug}/`) so readers see the full evidence and any
+updates. Questions: ankit@hlido.eu.
