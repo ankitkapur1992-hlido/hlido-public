@@ -8,10 +8,19 @@ agent-vetting tools for **CrewAI** and **LangChain**, plus a zero-dependency
 client — so you can *vet an agent before you delegate to it*.
 
 ```bash
-pip install hlido               # core (pulls hlido-trust)
-pip install "hlido[crewai]"     # + CrewAI tools
-pip install "hlido[langchain]"  # + LangChain tools
+pip install hlido
 ```
+
+**One package, one command.** Everything Hlido offers for Python agents lives under
+the single `hlido` name. The framework tools **activate automatically in the
+environment that already has that framework** — install `hlido` inside an NVIDIA
+NeMo Agent Toolkit project and the `hlido` function group registers itself
+(`nat.plugins` entry point); inside a LangChain or CrewAI project the matching tools
+import cleanly. No per-framework package, no extras to memorize.
+
+> Power-user note: optional extras (`hlido[nemo]`, `hlido[langchain]`, `hlido[crewai]`)
+> exist only to pre-pull a framework's own dependencies into a bare environment — you
+> don't need them if you're already using that framework.
 
 ```python
 from hlido import HlidoClient
