@@ -14,13 +14,28 @@ trusting another agent or tool.
 ## Install
 
 ```bash
-pip install hlido-trust                 # core, zero deps
-pip install "hlido-trust[crewai]"       # + CrewAI tools
-pip install "hlido-trust[langchain]"    # + LangChain tools
+pip install hlido          # the one command — umbrella; this package is the core it pulls
 ```
 
-> Before the PyPI release, install straight from source:
-> `pip install "git+https://github.com/ankitkapur1992-hlido/hlido-public#subdirectory=integrations/hlido-trust"`
+> **Most users should just `pip install hlido`.** The framework tools activate
+> automatically in the environment that already has that framework (NeMo / LangChain
+> / CrewAI). `hlido-trust` is the zero-dependency core the umbrella depends on; it
+> holds every framework adapter. Optional extras (`hlido-trust[crewai|langchain|nemo]`)
+> exist only to pre-pull a framework's own deps into a bare environment.
+
+### NVIDIA NeMo Agent Toolkit
+
+Inside a NeMo Agent Toolkit environment, `pip install hlido` registers the `hlido`
+function group automatically via the `nat.plugins` entry point. In a workflow config:
+
+```yaml
+function_groups:
+  hlido:
+    _type: hlido    # exposes hlido__trust_check, hlido__find_trusted,
+                    # hlido__verify_claim, hlido__get_scorecard
+```
+
+No API key — Hlido's trust surface is public.
 
 ## 30-second use — a plain guard clause (no framework)
 
