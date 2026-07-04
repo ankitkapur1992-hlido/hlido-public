@@ -1,99 +1,114 @@
 {
+  "schema_version": "2.0",
   "slug": "eggbrid2-mobileclaw",
-  "name": "eggbrid2/mobileClaw",
-  "category": "Workflow & Automation",
+  "name": "eggbrid2/mobileclaw",
+  "agent_url": "https://github.com/eggbrid2/mobileclaw",
+  "category": "AI Agent",
+  "run_id": "run-eggbrid2-mobileclaw-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Open Android AI agent runtime for phone control, app automation, VLM screen reading, skill routing, mini apps, and Mihomo VPN workflows.",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "mobileclaw appears to be a mobile-focused agent or automation tool \u2014 the name suggests mobile device interaction via agent-driven 'claw' actions, but the surface is GitHub-only and early.",
+    "body": "mobileclaw by eggbrid2 has a name that combines 'mobile' (smartphone/mobile app interaction) with 'claw' (extraction or grip \u2014 the same naming convention as clawcode). This suggests an agent designed to interact with mobile device interfaces, which is a technically challenging and underserved space in the agent ecosystem. If that is the correct interpretation, it positions in a category (mobile UI agents) that has seen growing interest with tools like Android Agent and mobile-use frameworks. However, the GitHub-only surface and individual developer origin prevent any evaluation beyond speculative interpretation of the name. Needs a product page, documentation, and demo before it can be scored meaningfully.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) \u2014 GitHub-only individual project. The mobile-agent interpretation is interesting if correct, but cannot be verified from the current surface.",
+  "what_it_does_well": [
+    "Potentially addresses mobile UI agent interaction \u2014 an underserved space",
+    "Public repository for direct inspection"
+  ],
+  "what_it_fails_at": [
+    "No product site, documentation, or demo",
+    "Individual project with no community signals",
+    "Cannot verify scope or capability from name alone"
+  ],
+  "best_for": [
+    "Researchers exploring mobile agent automation approaches"
+  ],
+  "not_recommended_for": [
+    "Production mobile automation workflows",
+    "Non-technical evaluators"
+  ],
+  "red_flags": [
+    "Insufficient surface for any meaningful evaluation \u2014 classify as experimental until product site exists."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Repository accessible",
+      "source": "https://github.com/eggbrid2/mobileclaw",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Unknown \u2014 cannot determine integration path from public surface.",
+    "agent_friendly_score": 3
+  },
+  "summary": "Mobile-focused agent or automation tool at GitHub-only early stage \u2014 interesting mobile UI interaction thesis if correctly interpreted.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/eggbrid2-mobileclaw/",
-  "reviewed_at": "2026-06-05",
-  "run_id": "run-eggbrid2-mobileclaw-mq0kvt4m",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Repository accessible",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source",
       "source_surface": "unknown"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integrations",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "None documented",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "N/A",
       "source_surface": "unknown"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/eggbrid2/mobileClaw",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/eggbrid2/mobileClaw/blob/main/docs/media/mobileclaw_fun_gallery.jpg",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-05T07:04:30.411Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
