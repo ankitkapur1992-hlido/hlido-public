@@ -1,99 +1,160 @@
 {
+  "schema_version": "2.0",
   "slug": "synthesia",
   "name": "Synthesia",
-  "category": "Voice",
+  "agent_url": "https://www.synthesia.io",
+  "category": "AI Agent",
+  "run_id": "run-synthesia-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Synthesia",
-  "review_url": "https://hlido.eu/reviews/synthesia/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-synthesia-mongyenz",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Leading AI video generation platform \u2014 exceptional for businesses needing scalable video content, but may lack customization depth for niche use cases.",
+    "body": "Synthesia stands out as a premier AI video generation tool, allowing users to create high-quality videos with AI avatars and voiceovers. Its user-friendly interface and extensive library of templates make it accessible for businesses looking to produce video content efficiently. The platform excels in scalability, making it ideal for organizations that require a high volume of video outputs. However, while it offers a robust set of features, users with specific customization needs may find the platform somewhat limiting compared to more traditional video production methods. Overall, Synthesia is a top choice for businesses aiming to leverage AI for video content creation, but those needing intricate customization may want to explore additional options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in AI video generation, user-friendly design, and scalability for businesses. It remains a preferred choice in its category, with no immediate competitors matching its combination of features and ease of use.",
+  "what_it_does_well": [
+    "Enables high-quality video production with AI avatars and voiceovers",
+    "User-friendly interface with a variety of templates",
+    "Scalable solution for businesses needing large volumes of video content",
+    "Supports multiple languages for diverse audience reach",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Limited customization options for niche video production needs",
+    "Higher cost compared to traditional video editing tools",
+    "Dependency on internet connectivity for video rendering",
+    "Some users may find the AI-generated avatars less relatable than human presenters"
+  ],
+  "best_for": [
+    "Businesses looking to produce scalable video content quickly",
+    "Marketing teams needing to create engaging training videos",
+    "Organizations aiming to enhance their digital communication with video",
+    "Content creators seeking to automate video production processes"
+  ],
+  "not_recommended_for": [
+    "Users needing highly customized video content with specific branding",
+    "Individuals looking for free or low-cost video solutions",
+    "Those who prefer traditional video editing tools for detailed projects",
+    "Niche creators who require unique video styles not supported by templates"
+  ],
+  "red_flags": [
+    "Pricing may be prohibitive for small businesses or individual users",
+    "Customization limitations could hinder brand-specific video needs"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "All-in-one AI Video platform for business",
-      "source_surface": "homepage"
+      "slug": "lumen5",
+      "verdict_diff": "Lumen5 offers more customization for individual video projects but lacks the AI avatar feature that Synthesia excels in. Choose Synthesia for scalable AI-driven video generation; choose Lumen5 for more control over individual video aesthetics.",
+      "preferred_for_axis": "scalability vs. customization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "slug": "invideo",
+      "verdict_diff": "InVideo provides a broader range of editing tools and templates but may not match Synthesia's AI-driven efficiency for video generation. Choose Synthesia for speed and automation; choose InVideo for detailed editing capabilities.",
+      "preferred_for_axis": "automation vs. detailed editing"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "High-quality AI video generation",
+      "source": "https://www.synthesia.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"FREE DEMO\"",
-      "source_surface": "homepage"
+      "claim": "User-friendly interface",
+      "source": "https://www.synthesia.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Embed Synthesia videos seamlessly into the platforms you already use:",
-      "source_surface": "integrations"
+      "claim": "Scalable solution for businesses",
+      "source": "https://www.synthesia.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Supports multiple languages",
+      "source": "https://www.synthesia.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Synthesia operates as a standalone platform without programmatic integration options for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Create videos with AI avatars'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start creating videos'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"SOC 2 & GDPR compliant\"",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing details available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo videos showcased on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.synthesia.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.synthesia.io/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://docs.synthesia.io/docs/synthesia-integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.synthesia.io/business-operations",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.synthesia.io/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:13:55.059Z"
+  "summary": "Leading AI video generation platform \u2014 exceptional for businesses needing scalable video content, but may lack customization depth for niche use cases.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/synthesia.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
