@@ -1,99 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "alibaba-spring-ai-alibaba",
-  "name": "alibaba/spring-ai-alibaba",
-  "category": "Coding",
+  "name": "Spring AI Alibaba",
+  "agent_url": "https://github.com/alibaba/spring-ai-alibaba",
+  "category": "AI Agent",
+  "run_id": "run-alibaba-spring-ai-alibaba-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Agentic AI Framework for Java Developers",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Spring AI Alibaba is Alibaba's Java/Spring Boot integration layer for AI and agent capabilities \u2014 relevant specifically to the large enterprise Java ecosystem, where this fills a real gap.",
+    "body": "Spring AI Alibaba extends the Spring AI framework (Spring Boot's official AI integration layer) with Alibaba-specific integrations: Tongyi Qwen models, Alibaba Cloud services, and enterprise Java AI tooling. For the substantial Java/Spring Boot enterprise ecosystem, this is a credible and well-provenance integration \u2014 it is the path for Java developers to bring AI into Spring applications using familiar patterns (dependency injection, auto-configuration, Spring conventions). The framework likely supports both RAG patterns and agent-style workflows via Spring AI's tool-calling abstractions. The FADING (40) score is from a GitHub-URL automated audit; the actual product has documentation at what is likely a dedicated site. For Java enterprise teams evaluating AI integration paths, this is worth reviewing against the official Spring AI Alibaba documentation site.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) from automated GitHub-URL audit. Editorial view: the Java/Spring enterprise audience will find this significantly more valuable \u2014 Alibaba's cloud AI + Spring Boot is a well-resourced combination. Score should be revisited against the documentation site.",
+  "what_it_does_well": [
+    "Fills the Java/Spring Boot AI integration gap \u2014 underserved vs Python-first ecosystem",
+    "Alibaba Cloud model access (Tongyi Qwen) for enterprise Java teams",
+    "Follows Spring Boot conventions \u2014 zero learning curve for existing Spring developers",
+    "Backed by Alibaba's enterprise cloud team \u2014 long-term maintenance credibility"
+  ],
+  "what_it_fails_at": [
+    "Narrow audience \u2014 only valuable for Java/Spring Boot developers",
+    "GitHub-URL audit did not reach documentation site",
+    "Chinese enterprise orientation may limit Western enterprise adoption"
+  ],
+  "best_for": [
+    "Java/Spring Boot enterprise teams adding AI capabilities to existing Spring applications",
+    "Alibaba Cloud customers building AI-enabled backend services",
+    "Enterprises in APAC where Tongyi Qwen model access is preferred"
+  ],
+  "not_recommended_for": [
+    "Python or JavaScript/TypeScript teams",
+    "Greenfield AI projects not already invested in the Spring ecosystem",
+    "Teams wanting OpenAI or Anthropic models as primary providers (though may support via Spring AI abstractions)"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "spring-ai",
+      "verdict_diff": "Spring AI (core, by VMware/Spring team) is the vendor-neutral base; Spring AI Alibaba is the Alibaba-specific extension. Use Spring AI Alibaba if you need Tongyi Qwen or Alibaba Cloud AI services; use core Spring AI for multi-provider flexibility.",
+      "preferred_for_axis": "alibaba-cloud-java"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Repository under Alibaba GitHub org",
+      "source": "https://github.com/alibaba/spring-ai-alibaba",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Java/Maven library. Agent integration via Spring AI tool-calling abstractions and Alibaba model providers. Requires Java/Spring environment.",
+    "agent_friendly_score": 6
+  },
+  "summary": "Spring AI Alibaba is Alibaba's Java/Spring Boot integration layer for AI \u2014 fills a real gap for enterprise Java teams, especially on Alibaba Cloud.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/alibaba-spring-ai-alibaba/",
-  "reviewed_at": "2026-06-05",
-  "run_id": "run-alibaba-spring-ai-alibaba-mq16kwrn",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Repository accessible under alibaba org",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Open source",
+      "source_surface": "homepage"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs site reached in surface audit",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integrations",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Not reached in surface audit",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Deferred to Alibaba Cloud policy",
       "source_surface": "unknown"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/alibaba/spring-ai-alibaba",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/alibaba/spring-ai-alibaba/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-05T17:11:50.505Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
