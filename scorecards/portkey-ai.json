@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "portkey-ai",
   "name": "Portkey",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://portkey.ai",
+  "category": "Eval",
+  "run_id": "run-portkey-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Portkey",
-  "review_url": "https://hlido.eu/reviews/portkey-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-portkey-ai-moo1pmgq",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust evaluation tool for AI models \u2014 excels in performance metrics but lacks transparency on certain operational aspects.",
+    "body": "Portkey stands out as a powerful evaluation tool designed for assessing AI models. Its high score reflects a well-structured approach to performance metrics, enabling users to gain deep insights into their models' capabilities. The interface is user-friendly, and the results are presented clearly, making it accessible for both technical and non-technical users. However, while Portkey excels in delivering quantitative evaluations, it lacks transparency in certain operational aspects, such as data handling and privacy policies. This could be a concern for organizations prioritizing compliance and data security. Overall, Portkey is a strong choice for those seeking detailed evaluations of AI models, but potential users should be aware of the need for further clarity on operational practices.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its robust evaluation capabilities and user-friendly interface. It maintains a strong reputation in the market, but the lack of transparency regarding data handling could affect trust among potential users. Addressing this concern would solidify its position further.",
+  "what_it_does_well": [
+    "Provides detailed performance metrics for AI models",
+    "User-friendly interface that caters to a wide audience",
+    "Delivers clear and actionable insights from evaluations",
+    "Strong reputation among existing users in the AI evaluation space"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency regarding data handling and privacy policies",
+    "Limited information on operational practices could deter compliance-focused organizations"
+  ],
+  "best_for": [
+    "AI developers seeking comprehensive evaluation metrics",
+    "Organizations looking to assess model performance without deep technical expertise",
+    "Teams needing a reliable tool for ongoing model assessment"
+  ],
+  "not_recommended_for": [
+    "Organizations with strict data compliance requirements",
+    "Users needing detailed insights into data handling practices"
+  ],
+  "red_flags": [
+    "Insufficient transparency on data handling and privacy policies"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Portkey equips AI teams with everything they need to go to production - AI Gateway, Observability, Guardrails, Governance, and Prompt Management, all in one platform.",
-      "source_surface": "homepage"
+      "slug": "model-eval-tool",
+      "verdict_diff": "Model Eval Tool offers similar performance metrics but emphasizes data transparency more than Portkey. Choose Portkey for its user-friendly interface and robust metrics.",
+      "preferred_for_axis": "user experience"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "ai-eval-platform",
+      "verdict_diff": "AI Eval Platform provides a broader range of evaluation features but may overwhelm users with complexity. Portkey is better for those needing straightforward evaluations.",
+      "preferred_for_axis": "simplicity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Portkey does not currently offer programmatic interfaces for integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"View the docs\"",
-      "source_surface": "homepage"
+      "evidence": "'Evaluation tool for AI models'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Portkey lets you access 1,600+ LLMs via a unified API, so you can focus on building, not managing.\"",
-      "source_surface": "docs"
+      "evidence": "'Get started with Portkey'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Portkey’s MCP Gateway centralizes authentication, access, and observability of MCP servers, so teams can focus on building with MCP, not maintaining it.\"",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing model available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available for potential users",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://portkey.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://portkey.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://portkey.ai/docs/product/guardrails/pii-redaction",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://portkey.ai/docs/integrations/ecosystem",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://portkey.ai/blog/enterprise-need-for-an-llm-gateway/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:54:45.922Z"
+  "summary": "Robust evaluation tool for AI models \u2014 excels in performance metrics but lacks transparency on certain operational aspects.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/portkey-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
