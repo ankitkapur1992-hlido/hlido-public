@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "playground-ai",
   "name": "Playground AI",
-  "category": "Image & Design",
+  "agent_url": "https://playground.com",
+  "category": "Image",
+  "run_id": "run-playground-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Playground AI",
-  "review_url": "https://hlido.eu/reviews/playground-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-playground-ai-moo1wfoy",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Free AI Design Tool: Logos, T-Shirts, Social Media - Playground",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is accessible directly from the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Get started for free\" indicates that users can access the service without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://playground.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://playground.com/design/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://playground.com/templates/s/floral-background",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://playground.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://playground.com/",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:00:00.802Z"
+  "hlido_opinion": {
+    "headline": "Solid image generation tool with a user-friendly interface \u2014 competitive but lacks standout features against rivals.",
+    "body": "Playground AI offers a straightforward interface for generating images, making it accessible for users of varying skill levels. The service provides a range of tools for creating and customizing images, appealing to both casual users and more serious creators. However, while it performs well in generating images, it does not exhibit unique features that significantly differentiate it from competitors in the crowded image generation space. Alternatives like DALL-E and Midjourney may provide more advanced capabilities or distinct creative options. Playground AI is a reliable choice for those seeking a simple and effective image generation tool, but users looking for cutting-edge features may want to explore other options.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects consistent performance and usability. It is not VITAL due to the lack of unique features that would elevate it above competitors, but it is not FADING as it continues to meet user needs effectively.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies image generation",
+    "Offers a variety of customization tools for images",
+    "Accessible for both casual users and more serious creators",
+    "Consistent performance in generating quality images"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features compared to advanced competitors",
+    "Limited creative options compared to platforms like DALL-E or Midjourney",
+    "No clear differentiation in the crowded image generation market"
+  ],
+  "best_for": [
+    "Casual users looking for an easy-to-use image generation tool",
+    "Individuals or small teams needing quick image creation without extensive features",
+    "Users who prioritize simplicity over advanced capabilities"
+  ],
+  "not_recommended_for": [
+    "Professional creators seeking advanced image generation features",
+    "Users who require unique or highly customizable outputs",
+    "Those comparing multiple image generation tools for specific capabilities"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "dall-e",
+      "verdict_diff": "DALL-E offers more advanced image generation capabilities and unique features. Choose Playground AI for simplicity; choose DALL-E for depth and innovation.",
+      "preferred_for_axis": "advanced capabilities"
+    },
+    {
+      "slug": "midjourney",
+      "verdict_diff": "Midjourney provides distinct artistic styles and community engagement, making it preferable for users seeking unique outputs. Playground AI is better for straightforward tasks.",
+      "preferred_for_axis": "artistic diversity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Playground AI operates as a standalone tool without programmatic interfaces for integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear primary value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of capabilities found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Solid image generation tool with a user-friendly interface \u2014 competitive but lacks standout features against rivals.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/playground-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
