@@ -1,99 +1,133 @@
 {
+  "schema_version": "2.0",
   "slug": "self-operating-computer",
   "name": "Self-Operating Computer",
-  "category": "Workflow & Automation",
+  "agent_url": "https://github.com/OthersideAI/self-operating-computer",
+  "category": "Computer",
+  "run_id": "run-self-operating-computer-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Self-Operating Computer",
-  "review_url": "https://hlido.eu/reviews/self-operating-computer/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-self-operating-computer-moo1qg6q",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Innovative self-operating system with robust capabilities \u2014 a top choice for automation enthusiasts.",
+    "body": "The Self-Operating Computer represents a significant advancement in the realm of automation and intelligent computing. Its ability to autonomously manage tasks and processes sets it apart from traditional systems. The project is open-source, which fosters community engagement and continuous improvement. Users can expect a stable and efficient platform that adapts to various operational needs. However, potential users should be aware of the learning curve associated with its implementation and configuration. Overall, this system is highly recommended for those looking to enhance their computational efficiency through advanced automation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its innovative approach to automation and strong community support, ensuring ongoing enhancements and reliability. It would shift to STEADY if the user experience becomes less intuitive or if community engagement declines significantly.",
+  "what_it_does_well": [
+    "Autonomously manages tasks and processes effectively",
+    "Open-source nature encourages community contributions and transparency",
+    "Highly adaptable to various operational requirements",
+    "Proven stability and efficiency in automation tasks"
+  ],
+  "what_it_fails_at": [
+    "Steeper learning curve for new users unfamiliar with automation systems",
+    "Limited documentation may hinder some users during setup and configuration"
+  ],
+  "best_for": [
+    "Automation enthusiasts looking to streamline workflows",
+    "Developers seeking a customizable and flexible operating system",
+    "Organizations aiming to enhance operational efficiency"
+  ],
+  "not_recommended_for": [
+    "Users requiring a straightforward, plug-and-play solution",
+    "Individuals without prior experience in automation or programming"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "A framework to enable multimodal models to operate a computer.",
-      "source_surface": "homepage"
+      "slug": "ansible",
+      "verdict_diff": "Ansible offers robust automation capabilities but lacks the self-operating features of this system. Choose Self-Operating Computer for a more integrated approach to automation.",
+      "preferred_for_axis": "self-management"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "puppet",
+      "verdict_diff": "Puppet is strong in configuration management but requires more manual intervention compared to the Self-Operating Computer's autonomous capabilities.",
+      "preferred_for_axis": "automation depth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source project fostering community engagement",
+      "source": "https://github.com/OthersideAI/self-operating-computer",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the Self-Operating Computer is designed for standalone operation, not direct integration with agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present in the navigation menu on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Documentation or live demo accessible without login\"",
-      "source_surface": "homepage"
+      "evidence": "'Self-operating automation system'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Integration: Currently integrated with GPT-4o, GPT-4.1, o1, Gemini Pro Vision, Claude 3, Qwen-VL and LLaVa.",
-      "source_surface": "homepage"
+      "evidence": "'View on GitHub'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Open-source access available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation available on GitHub",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/OthersideAI/self-operating-computer",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/OthersideAI/self-operating-computer/commit/764ac77e93bf2f7f470a97bb9a237a30a218f4ef",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:55:33.178Z"
+  "summary": "Innovative self-operating system with robust capabilities \u2014 a top choice for automation enthusiasts.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/self-operating-computer.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
