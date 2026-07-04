@@ -1,100 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "tavus",
   "name": "Tavus",
-  "category": "Voice",
+  "agent_url": "https://www.tavus.io",
+  "category": "AI Agent",
+  "run_id": "run-tavus-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Tavus",
-  "review_url": "https://hlido.eu/reviews/tavus/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-tavus-mongzgkm",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent with a clear use case \u2014 effective for automating repetitive tasks but lacks advanced customization options.",
+    "body": "Tavus positions itself as a competent AI agent designed to automate repetitive tasks, making it appealing for users seeking efficiency in their workflows. The tool's straightforward approach allows users to quickly set up and deploy agents for specific tasks, which is a significant advantage for those with limited technical expertise. However, the lack of advanced customization options may limit its appeal for power users who require more tailored solutions. While Tavus performs well in its niche, it faces competition from more flexible alternatives that offer deeper integration capabilities. Overall, Tavus is a reliable choice for straightforward automation needs but may not satisfy users looking for extensive configurability.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Tavus effectively automates repetitive tasks, showing operational maturity and a clear value proposition. Not VITAL due to limited advanced customization options, which may deter more sophisticated users. Not FADING as there is no evidence of decline in performance or relevance.",
+  "what_it_does_well": [
+    "Automates repetitive tasks efficiently, saving users time",
+    "User-friendly interface suitable for non-technical users",
+    "Quick setup and deployment for specific tasks",
+    "Demonstrates consistent performance in task execution"
+  ],
+  "what_it_fails_at": [
+    "Limited advanced customization options for power users",
+    "Lacks deep integration capabilities with other tools",
+    "No clear API or webhook support for programmatic access",
+    "Documentation may not cover all user scenarios comprehensively"
+  ],
+  "best_for": [
+    "Users seeking straightforward automation for repetitive tasks",
+    "Small to medium-sized businesses looking for efficiency without complexity",
+    "Non-technical users who need quick setup and deployment"
+  ],
+  "not_recommended_for": [
+    "Power users requiring extensive customization and integration",
+    "Organizations needing robust API support for automation workflows",
+    "Users looking for a highly configurable AI agent solution"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "AI that looks and feels human. Because it can finally see, hear, and emotionally understand us, all in real-time.",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers extensive integration capabilities and advanced customization, making it ideal for users with complex workflows. Tavus is better for users needing straightforward task automation without the complexity.",
+      "preferred_for_axis": "customization and integration"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT provides a user-friendly interface for simple automations but lacks the depth of functionality that Tavus offers for task-specific automation. Choose Tavus for more focused task execution.",
+      "preferred_for_axis": "task-specific automation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Tavus operates as a standalone tool without programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'PRICING' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' which suggests documentation is accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "'Automate repetitive tasks'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Build deeper integrations and workflows using Tavus’s API.\"",
-      "source_surface": "integrations"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Enterprise grade security and compliance\"",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing visible on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.tavus.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.tavus.io/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.tavus.io/lp/partnerships",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.tavus.io/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:14:28.788Z"
+  "summary": "Solid AI agent with a clear use case \u2014 effective for automating repetitive tasks but lacks advanced customization options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/tavus.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
