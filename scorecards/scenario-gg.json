@@ -1,98 +1,124 @@
 {
+  "schema_version": "2.0",
   "slug": "scenario-gg",
   "name": "Scenario",
-  "category": "Image & Design",
+  "agent_url": "https://www.scenario.com",
+  "category": "Image",
+  "run_id": "run-scenario-gg-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Scenario",
-  "review_url": "https://hlido.eu/reviews/scenario-gg/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-scenario-gg-moo1wdbd",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Struggling image generation tool with unclear value proposition and limited updates.",
+    "body": "Scenario, an image generation tool, currently exhibits signs of stagnation, reflected in its FADING tier status. The lack of recent updates and clear differentiation from competitors raises concerns about its viability in a rapidly evolving market. Users seeking innovative features or robust support may find better options elsewhere. The absence of verifiable claims further complicates the assessment of its capabilities. Without significant improvements or a clearer direction, Scenario risks becoming irrelevant in the crowded landscape of image generation tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of recent updates and unclear differentiation from competitors. The tier could improve with evidence of new features or a clearer value proposition.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No recent updates or feature enhancements",
+    "Unclear value proposition compared to competitors",
+    "Lack of verifiable claims about capabilities"
+  ],
+  "best_for": [
+    "Legacy users who have previously integrated Scenario into their workflows"
+  ],
+  "not_recommended_for": [
+    "New users looking for innovative image generation tools",
+    "Users needing robust support and frequent updates",
+    "Anyone seeking clear differentiation from other tools in the market"
+  ],
+  "red_flags": [
+    "Stagnation in feature development",
+    "Uncertainty about the future of the product"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Creative AI Built on Your DNA\" and \"Forget generic AI. Build custom workflows across image, video, audio and 3D.\"",
-      "source_surface": "homepage"
+      "slug": "dall-e",
+      "verdict_diff": "DALL-E offers more advanced image generation capabilities and regular updates. Choose DALL-E for cutting-edge features and support.",
+      "preferred_for_axis": "innovation"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "midjourney",
+      "verdict_diff": "Midjourney provides a more vibrant community and frequent enhancements. Opt for Midjourney if community engagement and updates matter.",
+      "preferred_for_axis": "community and updates"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Scenario does not currently support integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The 'Pricing' link is present on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"connect to your stack via API\"",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"SOC 2 Type II Compliant\"",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.scenario.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.scenario.com/#pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.scenario.com/#apps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.scenario.com/apps/ugc-product-showcase",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.scenario.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://www.scenario.com/apps/game-ui-framer-049f081",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:59:57.476Z"
+  "summary": "Struggling image generation tool with unclear value proposition and limited updates.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/scenario-gg.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
