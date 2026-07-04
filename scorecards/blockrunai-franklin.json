@@ -1,99 +1,114 @@
 {
+  "schema_version": "2.0",
   "slug": "blockrunai-franklin",
-  "name": "BlockRunAI/Franklin",
+  "name": "Franklin by Blockrun AI",
+  "agent_url": "https://github.com/blockrunai/franklin",
   "category": "AI Agent",
+  "run_id": "run-blockrunai-franklin-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "The AI agent with a wallet — spends USDC autonomously to get real work done. Apache-2.0, TypeScript.",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Franklin is an early-stage AI agent from Blockrun AI \u2014 the GitHub repository surface does not yet communicate enough to evaluate the product's scope or quality.",
+    "body": "Franklin by Blockrun AI is a GitHub-hosted AI agent project. The name 'Franklin' and the Blockrun AI organisation name both suggest a deliberate product framing rather than a personal experiment, but the public surface at time of review is insufficient to determine what the agent actually does, who it is for, or whether it is production-ready. The repository exists and is public, which is the minimum bar for evaluation. Without a product website, documentation, demo, or README depth, Hlido's engine assigns the baseline FADING (40) score reflecting that the agent exists and is publicly evaluable but lacks the surrounding surface quality that buyers and agent-consumers need. Monitor for a product site and documentation as the next meaningful signal.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) \u2014 GitHub-only surface, no product site or documentation depth visible at review time. Organisational account (blockrunai) suggests intent, but the product surface does not yet support a higher evaluation.",
+  "what_it_does_well": [
+    "Public GitHub repository accessible for direct inspection",
+    "Organisational account suggests more than solo-project scope"
+  ],
+  "what_it_fails_at": [
+    "No product website or landing page",
+    "No documentation or API contract visible",
+    "No evidence of users, deployments, or production use"
+  ],
+  "best_for": [
+    "Researchers who want to read source directly and evaluate the agent architecture"
+  ],
+  "not_recommended_for": [
+    "Production deployments",
+    "Buyers needing documented, supported tooling"
+  ],
+  "red_flags": [
+    "Insufficient public surface to evaluate scope, capability, or stability."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Repository publicly accessible",
+      "source": "https://github.com/blockrunai/franklin",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "No documented integration path. Source-level inspection required.",
+    "agent_friendly_score": 2
+  },
+  "summary": "Early-stage AI agent from Blockrun AI \u2014 GitHub-only surface insufficient for production evaluation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/blockrunai-franklin/",
-  "reviewed_at": "2026-06-04",
-  "run_id": "run-blockrunai-franklin-mpzvps5n",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage publicly accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "GitHub repository publicly accessible",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing page",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source \u2014 no pricing",
       "source_surface": "unknown"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation or demo",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs site",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integration list",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations documented",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling claims",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Not applicable for OS project",
       "source_surface": "unknown"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/BlockRunAI/Franklin",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/BlockRunAI/Franklin/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-04T19:19:59.138Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
