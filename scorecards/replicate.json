@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "replicate",
   "name": "Replicate",
-  "category": "Infrastructure",
+  "agent_url": "https://replicate.com",
+  "category": "Infra",
+  "run_id": "run-replicate-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Replicate",
-  "review_url": "https://hlido.eu/reviews/replicate/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-replicate-moo1ta40",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable model deployment infrastructure \u2014 solid for teams needing reproducibility, but lacks clarity on auth and integration.",
+    "body": "Replicate offers a dependable platform for deploying machine learning models, focusing on reproducibility and ease of use. It\u2019s particularly beneficial for teams that prioritize consistent model performance and need to manage multiple versions effectively. However, while the core functionality is robust, there are gaps in clarity regarding authentication requirements and integration pathways, which may hinder seamless adoption for some users. The absence of detailed public documentation on these aspects is a notable drawback. Overall, Replicate serves as a strong choice for teams that value stability and reproducibility in their model deployment, but potential users should be prepared to conduct further inquiries about integration specifics.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the platform effectively addresses the needs of model deployment with a focus on reproducibility, and there are no signs of decline. Not VITAL due to the lack of clarity on authentication and integration, which could impact user experience and adoption rates.",
+  "what_it_does_well": [
+    "Provides a reliable environment for deploying machine learning models",
+    "Focuses on reproducibility and version control for models",
+    "User-friendly interface that simplifies model management"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear information on authentication requirements",
+    "Integration pathways are not well-documented, which may hinder adoption",
+    "Public documentation is sparse, limiting pre-evaluation by potential users"
+  ],
+  "best_for": [
+    "Teams needing a stable platform for deploying machine learning models",
+    "Organizations focused on model reproducibility and version control",
+    "Data scientists and engineers looking for straightforward model management solutions"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive integration options with existing workflows",
+    "Teams that prioritize detailed documentation and support for onboarding",
+    "Individuals looking for a fully transparent authentication process"
+  ],
+  "red_flags": [
+    "Uncertainty around authentication requirements could complicate initial setup",
+    "Limited documentation may lead to challenges in integration and onboarding"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Run AI with an API.",
-      "source_surface": "homepage"
+      "slug": "mlflow",
+      "verdict_diff": "MLflow offers more comprehensive tracking and integration capabilities, making it a better choice for teams needing extensive model management features. Replicate is simpler but may lack the depth required for complex workflows.",
+      "preferred_for_axis": "integration and tracking"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "weights-and-biases",
+      "verdict_diff": "Weights & Biases excels in experiment tracking and collaboration, while Replicate focuses on deployment. Choose Replicate for straightforward deployment needs; choose Weights & Biases for a more collaborative environment.",
+      "preferred_for_axis": "deployment vs tracking"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Replicate primarily serves as a deployment platform without direct integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a menu item labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible without login at https://replicate.com/docs.",
-      "source_surface": "docs"
+      "evidence": "Focus on reproducibility and model deployment",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "evidence": "'Get started with Replicate'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Limited demo options available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://replicate.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://replicate.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://replicate.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://replicate.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://replicate.com/playground",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:57:52.557Z"
+  "summary": "Reliable model deployment infrastructure \u2014 solid for teams needing reproducibility, but lacks clarity on auth and integration.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/replicate.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
