@@ -1,134 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "poke",
-  "name": "poke",
+  "name": "Poke",
+  "agent_url": "https://pokee.ai",
   "category": "AI Agent",
+  "run_id": "run-poke-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 60,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": {
-    "strategic_alpha": {
-      "predicted": 72,
-      "reasoning": "Genuinely novel distribution angle — SMS/messaging as the interface removes all friction; strong VC validation at $300M valuation."
-    },
-    "execution_grit": {
-      "predicted": 60,
-      "reasoning": "Core claim (no signup needed) is verifiable at T1; multi-step automation via SMS is hard to test deeply without real usage."
-    },
-    "craft_and_soul": {
-      "predicted": 75,
-      "reasoning": "Zero-friction onboarding is the highest possible craft signal; iMessage/WhatsApp native feels seamless by design."
-    },
-    "value_signal": {
-      "predicted": 65,
-      "reasoning": "Free no-signup tier is excellent; usage-based pricing opacity is the only concern."
-    }
+  "laddoo_score": 60,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Innovative SMS-based AI agent with a unique distribution model, but lacks depth in execution and verification.",
+    "body": "Poke leverages SMS and messaging as its interface, which presents a frictionless entry point for users. This innovative approach, coupled with strong VC backing at a $300M valuation, suggests potential. However, the core claim of no signup needed is only partially verifiable at this stage, and the complexities of multi-step automation via SMS remain untested in real-world scenarios. While the onboarding experience is seamless and user-friendly, the lack of substantial user feedback and detailed operational insights raises concerns about its long-term viability and effectiveness. Without deeper verification and a more robust feature set, Poke risks fading further in a competitive landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  "review_url": "https://hlido.eu/reviews/poke/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-poke-monedrjc",
-  "claims": [
+  "tier_rationale": "FADING (60) due to the innovative concept but insufficient execution depth and lack of verified user experiences. A shift to STEADY would require demonstrable user engagement and operational success in multi-step automation.",
+  "what_it_does_well": [
+    "Utilizes SMS/messaging for a frictionless user experience",
+    "No signup required, lowering barriers to entry",
+    "Strong VC validation suggests potential for growth"
+  ],
+  "what_it_fails_at": [
+    "Lacks depth in execution and real-world testing of multi-step automation",
+    "Limited user feedback available to assess effectiveness",
+    "Core claims remain partially unverified"
+  ],
+  "best_for": [
+    "Users seeking a no-frills AI agent experience via SMS",
+    "Early adopters interested in novel distribution models",
+    "Individuals who prefer messaging interfaces over traditional apps"
+  ],
+  "not_recommended_for": [
+    "Users needing robust, verified automation capabilities",
+    "Those looking for comprehensive support and user feedback",
+    "Enterprises requiring established operational frameworks"
+  ],
+  "red_flags": [
+    "Lack of verifiable user experiences raises concerns about effectiveness",
+    "Limited operational insights could hinder long-term viability"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage loads without login and SMS number/QR code visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Homepage loads without login and SMS number/QR code visible",
-      "source_surface": "homepage"
+      "slug": "whatsapp-business",
+      "verdict_diff": "WhatsApp Business offers a well-established messaging platform with robust automation capabilities. Choose Poke for a novel, frictionless entry point; choose WhatsApp Business for comprehensive features and proven reliability.",
+      "preferred_for_axis": "feature depth"
     },
     {
-      "id": "C02",
-      "claim": "Agent demo accessible without signup (free to start claim)",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "\"Book a 30-minute call. We’ll walk you through the platform and show you how PokeeClaw fits with your team’s work.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Free tier verifiably accessible without credit card",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage|pricing|docs|integrations|templates|changelog|demo|other"
-    },
-    {
-      "id": "C04",
-      "claim": "Core messaging channels (SMS/iMessage/WhatsApp/Telegram) documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Multi-step automation example visible in public marketing",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Automate your hardest processes. Delegate the admin noise.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C06",
-      "claim": "Pricing page or usage-based tier structure accessible",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing Plan\"",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "C07",
-      "claim": "Response quality and latency evaluable in 1-2 test messages",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "chatbot-platforms",
+      "verdict_diff": "Traditional chatbot platforms provide deeper integration and functionality. Poke excels in ease of access but lacks the feature set of established alternatives.",
+      "preferred_for_axis": "integration capabilities"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Poke operates primarily through SMS, limiting programmatic integration options.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://pokee.ai/",
-      "ok": true
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "pricing",
-      "url": "https://pokee.ai/pricing",
-      "ok": true
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI agent via SMS', tested at homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started without signup'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing model found",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://pokee.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No user feedback or demo available",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "required_items_total": 5,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:01:39.348Z"
+  "summary": "Innovative SMS-based AI agent with a unique distribution model, but lacks depth in execution and verification.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/poke.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
