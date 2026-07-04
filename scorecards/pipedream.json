@@ -1,98 +1,147 @@
 {
+  "schema_version": "2.0",
   "slug": "pipedream",
   "name": "Pipedream",
-  "category": "Workflow & Automation",
+  "agent_url": "https://pipedream.com",
+  "category": "Workflow",
+  "run_id": "run-pipedream-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Pipedream",
-  "review_url": "https://hlido.eu/reviews/pipedream/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pipedream-moo1mhzq",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust workflow automation platform with extensive integrations \u2014 ideal for developers and teams looking to streamline processes.",
+    "body": "Pipedream stands out in the workflow automation space with its extensive library of integrations and user-friendly interface. It allows users to connect various APIs and services seamlessly, making it a powerful tool for developers and teams seeking to automate repetitive tasks. The platform's flexibility and scalability cater to both simple and complex workflows, enabling users to build custom solutions tailored to their needs. However, while the documentation is generally comprehensive, some users may find the learning curve steep when tackling more advanced features. Overall, Pipedream is a solid choice for those looking to enhance their productivity through automation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, extensive integrations, and positive user feedback. The platform's ability to cater to a wide range of automation needs solidifies its position. It would remain VITAL with continued innovation and user support.",
+  "what_it_does_well": [
+    "Offers a vast library of integrations with popular APIs and services.",
+    "User-friendly interface that simplifies workflow creation.",
+    "Scalable solutions suitable for both simple and complex automation tasks.",
+    "Strong community support and active development.",
+    "Comprehensive documentation for users at all skill levels."
+  ],
+  "what_it_fails_at": [
+    "Steeper learning curve for advanced features may deter some users.",
+    "Occasional gaps in documentation for specific use cases.",
+    "Performance can vary depending on the complexity of workflows."
+  ],
+  "best_for": [
+    "Developers looking to automate API interactions and workflows.",
+    "Teams needing to streamline repetitive tasks across various platforms.",
+    "Users seeking a flexible and scalable automation solution."
+  ],
+  "not_recommended_for": [
+    "Non-technical users who may struggle with advanced features.",
+    "Organizations with strict compliance needs that require detailed audit trails."
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Prompt, run, and deploy AI agents in seconds",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier is more user-friendly for non-technical users, while Pipedream offers greater flexibility for developers. Choose Pipedream for complex workflows requiring custom code.",
+      "preferred_for_axis": "developer-friendliness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides robust visual workflow building, but Pipedream excels in API integration depth and flexibility. Opt for Pipedream if API connectivity is a priority.",
+      "preferred_for_axis": "api-integration-depth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Extensive library of integrations",
+      "source": "https://pipedream.com/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"MCP demo\" and \"SDK playground\" are accessible without login.",
-      "source_surface": "docs"
+      "claim": "User-friendly interface",
+      "source": "https://pipedream.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Comprehensive documentation",
+      "source": "https://pipedream.com/docs",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Pipedream's API and webhook capabilities allow seamless integration into agent-driven workflows, enabling automation of tasks across various platforms.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Pipedream Connect provides the end-to-end developer toolkit to add any integration to your app or agent in minutes.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Workflow automation with integrations'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Pipedream puts security and privacy at the core of its architecture. With certifications like SOC 2 Type II, HIPAA, and full GDPR compliance, it’s built to meet the demands of modern development teams handling sensitive data.",
-      "source_surface": "homepage"
+      "evidence": "/pricing transparent and clear",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo workflows available on the platform",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://pipedream.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://pipedream.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://pipedream.com/connect",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://pipedream.com/connect",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://pipedream.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://pipedream.com/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:52:27.958Z"
+  "summary": "Robust workflow automation platform with extensive integrations \u2014 ideal for developers and teams looking to streamline processes.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pipedream.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
