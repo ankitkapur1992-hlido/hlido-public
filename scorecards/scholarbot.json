@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "scholarbot",
   "name": "ScholarBot",
+  "agent_url": "/reviews/scholarbot/",
   "category": "Chat & Companion",
+  "run_id": "run-scholarbot-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of scholarbot.",
-  "review_url": "https://hlido.eu/reviews/scholarbot/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-scholarbot-mp11lcvf",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Functional chatbot for academic queries, but lacks depth and differentiation in a competitive landscape.",
+    "body": "ScholarBot serves as a basic chatbot designed to assist with academic inquiries, but it struggles to stand out in a crowded market. While it performs adequately for straightforward questions, it lacks advanced features that could enhance user experience, such as personalized recommendations or integration with academic databases. The absence of verifiable claims and unclear authentication requirements further detracts from its reliability. For users seeking a robust academic assistant, alternatives like ChatGPT or ResearchGate may provide more comprehensive support.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its basic functionality and operational presence, but not VITAL as it lacks significant features or differentiation from competitors. It would move to FADING if user engagement drops or if competitors enhance their offerings significantly.",
+  "what_it_does_well": [
+    "Provides basic responses to academic-related questions",
+    "User-friendly interface for simple inquiries"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features like personalized recommendations",
+    "No integration with academic databases or resources",
+    "Unclear authentication requirements limit trust"
+  ],
+  "best_for": [
+    "Users looking for a simple chatbot for basic academic questions",
+    "Students needing quick answers without deep engagement"
+  ],
+  "not_recommended_for": [
+    "Researchers or academics needing in-depth assistance",
+    "Users looking for personalized or integrated academic tools"
+  ],
+  "red_flags": [
+    "Unverified claims about functionality and performance",
+    "Unclear authentication requirements may deter users"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more sophisticated conversational experience with deeper knowledge integration. ScholarBot is more basic and less capable of nuanced discussions.",
+      "preferred_for_axis": "depth of knowledge"
+    },
+    {
+      "slug": "researchgate",
+      "verdict_diff": "ResearchGate provides a comprehensive platform for academic networking and resource sharing, while ScholarBot lacks these community features.",
+      "preferred_for_axis": "academic networking"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 ScholarBot operates as a standalone chatbot with no programmatic interface for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"ScholarBot - a Hugging Face Space by vinny4\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "This Space is sleeping due to inactivity.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/vinny4/ScholarBot",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:12:10.279Z"
+  "summary": "Functional chatbot for academic queries, but lacks depth and differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/scholarbot.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
