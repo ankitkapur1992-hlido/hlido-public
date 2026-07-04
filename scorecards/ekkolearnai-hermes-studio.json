@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0",
+  "slug": "ekkolearnai-hermes-studio",
+  "name": "Hermes Studio",
+  "agent_url": "https://github.com/EKKOLearnAI/hermes-studio",
+  "category": "Chat & Companion",
+
+  "run_id": "run-7fed5ecc75980376-github-com",
+  "run_at": "2026-06-16T08:31:05Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.06",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+
+  "hlido_opinion": {
+    "headline": "7,900-star self-hosted Hermes Agent dashboard that ships as a desktop app, local web server, and npm package — the star count reflects real appetite for a polished local-first chat UI.",
+    "body": "Hermes Studio is the front-end control plane for Hermes Agent — the open-source alternative to hosted AI chat platforms that runs entirely on your own hardware. The 7,933 GitHub stars are notable because this is a client UI project (not a model or framework), which means the demand signal is specifically for the local-first, self-hosted positioning. The feature set is comprehensive: multi-platform chat with streaming, session management, model/provider configuration, scheduled jobs, file management, coding agent runs, and voice input via browser STT. It ships as a desktop Electron app (with auto-update from their CDN), as an npm package (`hermes-web-ui start`), and as a local web console. Vue3 as the frontend framework was a sensible choice for a self-hosted app — fast startup, mature ecosystem. The main caveat: Hermes Studio is only as good as Hermes Agent, and both projects are from the EKKO community building on NousResearch's hermes-agent. The ecosystem depth depends on whether you buy into the Hermes platform — it's less useful if you want to mix and match agents from different providers.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-16",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (74) because 7,933 stars for a self-hosted UI is genuine community demand, the feature set is production-complete, and the distribution strategy (desktop + npm + local web) shows real product thinking. Not VITAL because the product is tightly coupled to the Hermes Agent ecosystem, and the website surface requires signup to access the hosted variant.",
+
+  "what_it_does_well": [
+    "Ships as three distinct deployment modes: desktop app, npm package, local web server",
+    "Full-featured control plane: models, providers, memory, skills, plugins, logs all in one UI",
+    "Scheduled jobs UI turns Hermes Agent into an automation platform, not just a chat client",
+    "Vue3 frontend is fast and lightweight for a locally-run application",
+    "npm install + single command start (`hermes-web-ui start`) is a low-friction install path"
+  ],
+
+  "what_it_fails_at": [
+    "Tightly coupled to Hermes Agent — not useful as a generic agent frontend",
+    "GitHub login wall blocked T2 testing — public surface limited to README",
+    "Desktop auto-update downloads from EKKOLearnAI CDN (trust dependency on their infrastructure)",
+    "Voice input quality depends on browser STT or configured server provider — variable experience",
+    "No published performance benchmarks or load testing data for the local web server"
+  ],
+
+  "best_for": [
+    "Hermes Agent users who want a polished self-hosted UI beyond the CLI",
+    "Privacy-conscious users who want local AI chat without sending data to OpenAI or Anthropic directly",
+    "Developers building on the Hermes/NousResearch ecosystem",
+    "Teams wanting to run scheduled AI jobs from a local dashboard"
+  ],
+
+  "not_recommended_for": [
+    "Users not already using or planning to use Hermes Agent",
+    "Teams wanting a generic frontend for multiple agent backends (Claude, OpenAI, Gemini, etc.) — use Open WebUI instead",
+    "Mobile-first use cases — desktop and local web focus"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
+    {
+      "slug": "open-webui",
+      "verdict_diff": "Open WebUI is the generic local AI chat frontend that works with Ollama and any OpenAI-compatible backend. Hermes Studio is purpose-built for Hermes Agent with richer agent orchestration features. Open WebUI if you want provider flexibility; Hermes Studio if you're committed to the Hermes stack.",
+      "preferred_for_axis": "hermes-agent-users"
+    }
+  ],
+
+  "evidence_urls": [
+    {"claim": "7,933 GitHub stars", "source": "https://github.com/EKKOLearnAI/hermes-studio", "tested_at": "2026-06-16", "verified": true},
+    {"claim": "npm install -g hermes-web-ui && hermes-web-ui start", "source": "https://github.com/EKKOLearnAI/hermes-studio", "tested_at": "2026-06-16", "verified": true},
+    {"claim": "Vue3 frontend", "source": "https://github.com/EKKOLearnAI/hermes-studio", "tested_at": "2026-06-16", "verified": true},
+    {"claim": "Desktop app with auto-updates", "source": "https://github.com/EKKOLearnAI/hermes-studio/releases/latest", "tested_at": "2026-06-16", "verified": true}
+  ],
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Hermes Agent plugin system. Hermes Studio is a UI layer — other agents interact with it via Hermes Agent's plugin API. Not designed to be driven programmatically by external agents.",
+    "agent_friendly_score": 3
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-16T08:30:55Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs'", "tested_at": "2026-06-16T08:30:55Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "Download link + npm install command", "tested_at": "2026-06-16T08:30:55Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source", "tested_at": "2026-06-16T08:30:55Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "GIF demo in README showing chat and model management", "tested_at": "2026-06-16T08:30:55Z"}
+  ],
+
+  "summary": "7,900-star self-hosted Hermes Agent dashboard that ships as a desktop app, local web server, and npm package — the star count reflects real appetite for a polished local-first chat UI.",
+
+  "staleness_after": "2026-09-16",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-09-16",
+
+  "attestation_url": "/data/attestations/ekkolearnai-hermes-studio.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
+}
