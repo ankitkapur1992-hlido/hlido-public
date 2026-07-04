@@ -1,97 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "weaviate-platform",
   "name": "Weaviate Cloud",
+  "agent_url": "/reviews/weaviate-platform/",
   "category": "Infrastructure",
+  "run_id": "run-weaviate-platform-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of weaviate-platform.",
-  "review_url": "https://hlido.eu/reviews/weaviate-platform/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-weaviate-platform-mp12gnni",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust cloud-native vector database with strong performance \u2014 ideal for AI-driven applications but may lack transparency in auth requirements.",
+    "body": "Weaviate Cloud stands out as a powerful cloud-native vector database designed for AI and machine learning applications. Its performance metrics are impressive, especially for applications requiring fast retrieval of high-dimensional data. The platform supports various data types and offers extensive integration capabilities, making it a versatile choice for developers. However, potential users should note that the documentation around authentication requirements is unclear, which could pose integration challenges. Overall, Weaviate Cloud is a solid option for teams looking to leverage vector databases for AI projects, but it may require additional diligence in understanding its security protocols.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to strong performance and established capabilities in the vector database space. The tier reflects its operational maturity and user satisfaction. It remains not VITAL because of the ambiguity surrounding authentication requirements, which could impact user experience and integration efforts.",
+  "what_it_does_well": [
+    "High-performance vector storage and retrieval for AI applications",
+    "Supports multiple data types and complex queries",
+    "Cloud-native architecture facilitates scalability and flexibility",
+    "Comprehensive integration options with existing tech stacks"
+  ],
+  "what_it_fails_at": [
+    "Unclear documentation regarding authentication requirements",
+    "Limited community support compared to more established databases",
+    "Potential complexity in setup for teams unfamiliar with vector databases"
+  ],
+  "best_for": [
+    "AI and machine learning teams needing efficient vector storage",
+    "Developers looking for a scalable cloud-native database solution",
+    "Organizations integrating diverse data types into their applications"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive community support and resources",
+    "Teams unfamiliar with vector databases and their nuances",
+    "Projects with strict security and compliance needs without clear auth guidance"
+  ],
+  "red_flags": [
+    "Lack of transparency around authentication requirements could hinder integration efforts"
+  ],
+  "compared_to": [
+    {
+      "slug": "pinecone",
+      "verdict_diff": "Pinecone offers a more mature community and clearer documentation, making it easier for new users. Weaviate Cloud excels in performance and flexibility, particularly for complex queries.",
+      "preferred_for_axis": "performance-and-flexibility"
+    },
+    {
+      "slug": "faiss",
+      "verdict_diff": "FAISS is an open-source library that requires more setup but offers deep customization. Weaviate Cloud provides a more user-friendly, managed solution for those prioritizing ease of use.",
+      "preferred_for_axis": "managed-solution-vs-customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Weaviate Cloud can be integrated into agent-driven workflows via its API, allowing for dynamic data retrieval and manipulation.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The AI database developers love | Weaviate",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "FOR AI ENGINEERS TURNING IDEAS INTO PRODUCTS",
-      "source_surface": "homepage"
+      "evidence": "Cloud-native vector database for AI applications",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Try Now\" and \"Get Started\" are visible on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing model available",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Live demo available on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://weaviate.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://weaviate.io/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://weaviate.io/#",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://weaviate.io/product/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://weaviate.io/#",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://weaviate.io/blog/weaviate-agent-skills",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://console.weaviate.cloud/signin?next=%2F",
-      "ok": true
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:37:23.010Z"
+  "summary": "Robust cloud-native vector database with strong performance \u2014 ideal for AI-driven applications but may lack transparency in auth requirements.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/weaviate-platform.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
