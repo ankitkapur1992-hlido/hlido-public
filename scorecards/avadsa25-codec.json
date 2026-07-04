@@ -1,54 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "avadsa25-codec",
   "name": "AVADSA25/codec",
+  "agent_url": "https://github.com/AVADSA25/codec",
   "category": "Coding",
+  "run_id": "run-avadsa25-codec-mpzk6c11",
+  "run_at": "2026-06-04T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Open-Source Intelligent Command Layer",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An individual GitHub project describing itself as an 'Intelligent Command Layer' \u2014 minimal public surface, no evidence of traction, but a CHANGELOG signals ongoing development.",
+    "body": "AVADSA25/codec is a GitHub repository framing itself as an intelligent command-layer abstraction, presumably for CLI or programmatic toolchains. The description 'Open-Source Intelligent Command Layer' suggests it sits as a meta-layer over commands \u2014 potentially useful for agent-driven tool execution where commands need to be discovered, sequenced, or interpreted intelligently. The repository is one person's public GitHub project: no product site, no documentation beyond what the README likely contains, and no evidence of external users. The presence of a CHANGELOG.md is a positive signal \u2014 it means the author is versioning intentionally and tracking changes \u2014 but the overall surface is not sufficient to evaluate capability, stability, or use-case fit. This is a project to watch if you are building in the CLI-agent orchestration space, but not a tool to deploy today without direct source review.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) because the project is a single-developer GitHub repository with no product site, no external documentation, and no evidence of users beyond the author. The CHANGELOG.md is a positive signal of intentional development, but not sufficient to raise the tier.",
+  "what_it_does_well": [
+    "Maintains a CHANGELOG.md \u2014 signals intentional versioning and iterative development",
+    "Open source with a clear conceptual framing ('Intelligent Command Layer')",
+    "GitHub repository is publicly accessible for direct code review"
+  ],
+  "what_it_fails_at": [
+    "No product site, documentation site, or README-beyond-description",
+    "No evidence of external users or production deployments",
+    "No integration examples or API contract documentation",
+    "Single-developer project with no community signals (stars, issues, discussions)",
+    "Cannot evaluate capability or correctness from public surface alone"
+  ],
+  "best_for": [
+    "CLI toolchain researchers interested in command abstraction approaches",
+    "Developers willing to read source code to evaluate fit"
+  ],
+  "not_recommended_for": [
+    "Production agent-driven CLI workflows without direct source audit",
+    "Teams needing supported, documented, stable tooling"
+  ],
+  "red_flags": [
+    "Single-developer GitHub project with no community traction \u2014 high abandonment risk."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "GitHub repository accessible with CHANGELOG",
+      "source": "https://github.com/AVADSA25/codec",
+      "tested_at": "2026-06-04",
+      "verified": true
+    },
+    {
+      "claim": "CHANGELOG.md exists",
+      "source": "https://github.com/AVADSA25/codec/blob/main/CHANGELOG.md",
+      "tested_at": "2026-06-04",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Open source CLI/library project. An agent system could install and invoke it as a command-layer tool. No stable API contract or documentation; experimental use only.",
+    "agent_friendly_score": 4
+  },
+  "summary": "Individual GitHub project describing itself as an 'Intelligent Command Layer' \u2014 CHANGELOG signals ongoing development, but minimal public surface and no evidence of external traction.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/avadsa25-codec/",
   "reviewed_at": "2026-06-04",
-  "run_id": "run-avadsa25-codec-mpzk6c11",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "GitHub repo accessible with 'Open-Source Intelligent Command Layer' description",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source project \u2014 GitHub generic pricing page not relevant",
       "source_surface": "unknown"
     },
     {
       "id": "C03",
       "claim": "Documentation or live demo accessible without login",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No dedicated docs site; README only in repository",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
       "claim": "Integration list or supported frameworks documented",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations documentation found",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source project \u2014 not applicable",
       "source_surface": "unknown"
     }
   ],
@@ -93,7 +159,8 @@
   ],
   "required_items_total": 4,
   "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-04T13:57:03.164Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/avadsa25-codec.json",
+  "generated_at": "2026-06-04T13:57:03.493Z"
 }
