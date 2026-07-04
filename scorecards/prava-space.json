@@ -1,0 +1,107 @@
+{
+  "schema_version": "2.0",
+  "slug": "prava-space",
+  "name": "Prava",
+  "agent_url": "https://prava.space",
+  "category": "Infrastructure",
+
+  "run_id": "run-f013fc6a3abc4788-prava-space",
+  "run_at": "2026-06-17T12:33:20Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.06",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 67,
+  "tier": "STEADY",
+  "laddoo_score": 67,
+  "confidence": "low",
+
+  "hlido_opinion": {
+    "headline": "Payments infrastructure for AI agents — a real and timely problem, but Prava is early and the core claims are unverified without signing up.",
+    "body": "The problem Prava is solving is real and not widely addressed: AI agents need to make payments autonomously, but current payment rails weren't designed for non-human counterparties. Prava's approach — scoped Agent Tokens with expiry and spend limits, zero PCI scope for the calling application, one integration to reach all PSPs — is architecturally sound for agentic use cases. The Visa Intelligent Commerce partnership (announced in 2025) and the PCI DSS Level 2 certification are genuine differentiators that take meaningful time and legal expense to acquire. The 69 ProductHunt upvotes signals early traction from the developer community. What's weak: almost everything that matters here (actual API ergonomics, token lifecycle management, real PSP coverage, settlement reliability) lives behind the signup wall. The 'free sandbox for business accounts' and 'wallet setup in 60 seconds' claims are plausible but unverified. Prava is a category creator solving a problem the market hasn't converged on — that creates both the opportunity and the evaluation difficulty.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-17",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (67) because the problem definition is correct, the architecture is sound, and the Visa partnership + PCI certification are real differentiators. Not higher because we can't verify the core API capabilities without signup, and 69 PH upvotes is early-stage traction rather than market proof. Not FADING because there's no decay signal — this is a first mover in a category that will matter.",
+
+  "what_it_does_well": [
+    "Agent Token architecture with expiry and spend limits is the right primitive for agentic payments",
+    "Zero PCI scope for calling applications is a real compliance benefit, not just marketing",
+    "PCI DSS Level 2 certification is expensive to acquire and signals serious compliance investment",
+    "Visa Intelligent Commerce partnership gives distribution credibility in the PSP ecosystem",
+    "Free sandbox lowers the evaluation cost for developers wanting to test before committing"
+  ],
+
+  "what_it_fails_at": [
+    "Core API capabilities unverifiable without signup — programmatic evaluators can't assess in advance",
+    "No public SDK documentation or API reference linked from homepage",
+    "'Works with any PSP globally' claim not verifiably enumerated — PSP coverage list is absent",
+    "Settlement, reconciliation, and dispute handling details absent from public surface",
+    "69 PH upvotes = early traction, not market validation — customer case studies absent"
+  ],
+
+  "best_for": [
+    "Developers building autonomous agents that need to make real-money transactions on behalf of users",
+    "AI agent platforms that want to offer payment capabilities without taking on PCI scope themselves",
+    "Startups building agentic commerce workflows where the agent needs its own payment identity",
+    "Enterprises exploring Visa Intelligent Commerce for agentic purchasing"
+  ],
+
+  "not_recommended_for": [
+    "Teams that need documented PSP coverage and SLAs before committing to a payments provider",
+    "High-volume production payments without independent audit of settlement reliability",
+    "Regions where Visa Intelligent Commerce is not yet available",
+    "Use cases where human oversight of every payment is required (Prava's Agent Tokens are for autonomous operation)"
+  ],
+
+  "red_flags": [
+    "PCI DSS claims are significant — verify certification documentation before production use"
+  ],
+
+  "compared_to": [
+    {
+      "slug": "stripe",
+      "verdict_diff": "Stripe is the incumbent general-purpose payment API. Prava is a scoped layer for AI agent payments with zero PCI scope for the app. Not direct competitors — Prava could sit on top of Stripe for underlying settlement. Choose Stripe for general payments; Prava for agent-specific token primitives.",
+      "preferred_for_axis": "agentic-payments"
+    }
+  ],
+
+  "evidence_urls": [
+    {"claim": "Payments API for AI Agents with Agent Tokens", "source": "https://prava.space", "tested_at": "2026-06-17", "verified": true},
+    {"claim": "Visa Intelligent Commerce partnership", "source": "https://prava.space", "tested_at": "2026-06-17", "verified": true},
+    {"claim": "PCI DSS Level 2 Certified", "source": "https://prava.space", "tested_at": "2026-06-17", "verified": false},
+    {"claim": "Free sandbox for business accounts", "source": "https://prava.space", "tested_at": "2026-06-17", "verified": false}
+  ],
+
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "REST API + SDK. Integrate in 4-5 lines of code per marketing. Issue Agent Tokens with spend limits and expiry so agents can pay without the calling app touching card data. Sandbox available after signup. API docs at docs.prava.space.",
+    "agent_friendly_score": 7
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-17T12:32:58Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Payments API for AI Agents'", "tested_at": "2026-06-17T12:32:58Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "Signup CTA present", "tested_at": "2026-06-17T12:32:58Z"},
+    {"id": "pricing_or_access", "pass": false, "required": false, "evidence": "No pricing published on public surface", "tested_at": "2026-06-17T12:32:58Z"},
+    {"id": "evidence_or_demo", "pass": false, "required": false, "evidence": "No live demo — requires signup", "tested_at": "2026-06-17T12:32:58Z"}
+  ],
+
+  "summary": "Payments infrastructure for AI agents — a real and timely problem, but Prava is early and the core claims are unverified without signing up.",
+
+  "staleness_after": "2026-09-17",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-09-17",
+
+  "attestation_url": "/data/attestations/prava-space.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
+}
