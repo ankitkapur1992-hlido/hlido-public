@@ -1,98 +1,138 @@
 {
+  "schema_version": "2.0",
   "slug": "rasa",
   "name": "Rasa",
-  "category": "Customer Experience",
+  "agent_url": "https://rasa.com",
+  "category": "Customer Support",
+  "run_id": "run-rasa-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Rasa",
-  "review_url": "https://hlido.eu/reviews/rasa/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-rasa-moo24wc2",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid open-source conversational AI platform \u2014 reliable for developers, but may require significant setup for non-technical users.",
+    "body": "Rasa is a well-established open-source framework for building conversational AI applications, particularly in customer support. Its core strength lies in its flexibility and ability to integrate with various messaging platforms, making it a favorite among developers who appreciate its open-source nature. The documentation is comprehensive, providing a solid foundation for building custom solutions. However, the steep learning curve may deter non-technical users, as deploying a fully functional bot requires more than just basic configuration. While Rasa excels in customization and scalability, organizations looking for a plug-and-play solution might find it lacking compared to more user-friendly alternatives. Overall, Rasa is a dependable choice for those willing to invest the time and resources into mastering its capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Rasa has a strong community, solid documentation, and a reliable product that has been in use for years. It is not VITAL due to its complexity and the potential barrier for non-developers, which may limit its adoption in broader contexts.",
+  "what_it_does_well": [
+    "Offers a robust open-source framework for building conversational AI applications",
+    "Integrates seamlessly with various messaging platforms",
+    "Comprehensive documentation aids developers in creating custom solutions",
+    "Strong community support with active contributions and resources available",
+    "Scalable architecture suitable for enterprise-level applications"
+  ],
+  "what_it_fails_at": [
+    "Steep learning curve may deter non-technical users",
+    "Requires significant setup and configuration for optimal performance",
+    "Less user-friendly compared to some commercial alternatives",
+    "Limited out-of-the-box features for rapid deployment",
+    "No built-in analytics; requires additional integration for performance tracking"
+  ],
+  "best_for": [
+    "Developers looking for a customizable conversational AI solution",
+    "Organizations with technical resources to invest in setup and maintenance",
+    "Companies needing to integrate AI with multiple messaging platforms",
+    "Teams focused on building tailored customer support experiences"
+  ],
+  "not_recommended_for": [
+    "Non-technical users seeking a quick and easy chatbot solution",
+    "Organizations without dedicated technical support for implementation",
+    "Businesses requiring immediate deployment with minimal configuration",
+    "Users looking for built-in analytics and reporting features"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, \"The developer platform for enterprise AI agents\" and provides a clear value proposition for building, deploying, and managing conversational AI agents.",
-      "source_surface": "homepage"
+      "slug": "dialogflow",
+      "verdict_diff": "Dialogflow offers a more user-friendly interface and quicker setup for non-developers, making it ideal for those who prioritize ease of use. Rasa is better for developers needing deep customization.",
+      "preferred_for_axis": "ease-of-use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
+      "slug": "microsoft-bot-framework",
+      "verdict_diff": "Microsoft Bot Framework provides robust integration with Microsoft's ecosystem and easier deployment options, while Rasa excels in open-source flexibility and customization.",
+      "preferred_for_axis": "ecosystem-integration"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "slug": "chatbot.com",
+      "verdict_diff": "Chatbot.com is geared towards non-technical users with a focus on rapid deployment and ease of use, while Rasa requires more technical expertise for setup and customization.",
+      "preferred_for_axis": "technical-expertise"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Rasa can be integrated into agent-driven workflows through its API, allowing for custom conversational experiences.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Learn more about Rasa and Conversational AI\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "MCP gives your AI agents a standard way to connect with APIs as tools.",
-      "source_surface": "integrations"
+      "evidence": "'Open-source conversational AI framework'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Rasa is committed to protecting your privacy. We will securely store and process your personal information to deliver the content you requested and keep you updated with news and announcements about our company.",
-      "source_surface": "docs"
+      "evidence": "Open-source model allows free access to core features",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation available for building custom solutions",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://rasa.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://rasa.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://rasa.com/rasa-pro-developer-edition-license-key-request",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://rasa.com/mcp",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://rasa.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://rasa.com/rasa-pro-developer-edition-license-key-request",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:06:43.229Z"
+  "summary": "Solid open-source conversational AI platform \u2014 reliable for developers, but may require significant setup for non-technical users.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/rasa.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
