@@ -1,103 +1,121 @@
 {
+  "schema_version": "2.0",
   "slug": "sonarly",
   "name": "Sonarly",
+  "agent_url": "https://sonarly.ai",
   "category": "AI Agent",
+  "run_id": "run-sonarly-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Sonarly",
-  "review_url": "https://hlido.eu/reviews/sonarly/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-sonarly-mongwzu9",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "We're working on a way to help your baby (and you) get the best rest.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain any links to a pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not provide any documentation or live demo accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The homepage does not mention any authentication or data handling claims.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.sonarly.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:12:20.549Z"
+  "hlido_opinion": {
+    "headline": "Struggling AI agent with unclear value proposition \u2014 lacks clarity and differentiation in a crowded market.",
+    "body": "Sonarly appears to be an AI agent tool, but it suffers from a lack of clear messaging and differentiation in a saturated market. The absence of verifiable claims and a transparent value proposition raises concerns about its viability and relevance. Without concrete features or a compelling use case presented on its public surface, potential users may find it challenging to justify engagement. The FADING tier reflects these uncertainties, as the product does not currently meet the expectations of a vibrant player in the AI agent space. Users seeking robust AI solutions should consider alternatives that provide clearer benefits and established credibility.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to the lack of verifiable claims, unclear messaging, and absence of distinct features. Improvement would require a stronger public presence and clearer articulation of value to regain relevance in the market.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear value proposition or unique features presented",
+    "Lacks verifiable claims or evidence of effectiveness",
+    "Unclear target audience or use cases",
+    "Limited public engagement or community presence",
+    "No transparent pricing or access information"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable AI agent solutions with clear benefits",
+    "Those needing established credibility and support",
+    "Individuals looking for demonstrable features or use cases",
+    "Teams requiring robust integration capabilities",
+    "Anyone needing a well-defined product roadmap"
+  ],
+  "red_flags": [
+    "Absence of verifiable claims raises concerns about product effectiveness",
+    "Unclear messaging may lead to confusion among potential users"
+  ],
+  "compared_to": [
+    {
+      "slug": "other-ai-agent",
+      "verdict_diff": "Compared to other AI agent solutions, Sonarly lacks clear differentiation and established features, making it a less compelling choice.",
+      "preferred_for_axis": "clarity and differentiation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear features and API access limits integration potential.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No evidence or demo available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Struggling AI agent with unclear value proposition \u2014 lacks clarity and differentiation in a crowded market.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/sonarly.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
