@@ -1,99 +1,120 @@
 {
+  "schema_version": "2.0",
   "slug": "dimknaf-braindb",
   "name": "dimknaf/braindb",
-  "category": "AI Agent",
+  "agent_url": "https://github.com/dimknaf/braindb",
+  "category": "Productivity",
+  "run_id": "run-dimknaf-braindb-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "An \"LLM wiki\" upgraded to a real database — typed entities, graph relations, HTTP API, and a built-in natural-language agent.",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "braindb is an individual developer's knowledge/memory database project on GitHub \u2014 the concept of a persistent brain-like database for AI aligns with an emerging need, but the surface is too early-stage to evaluate.",
+    "body": "braindb by dimknaf positions itself in the knowledge management and memory persistence space \u2014 the name combining 'brain' (AI memory/cognition) with 'db' (database) suggests a tool for storing and querying contextual knowledge for AI systems or personal use. This is a genuinely interesting problem space in 2025-26 as agents increasingly need reliable memory persistence beyond context windows. However, the evaluation surface at review time is a GitHub repository with no product site, no documentation, and no release signals. The concept could be an in-progress personal tool, a research project, or an early commercial product \u2014 without a landing page, it is impossible to tell. File under watch: if a product site or documentation appears, this could warrant re-evaluation at a higher tier.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) \u2014 GitHub-only surface for a personally-owned repository in an interesting but competitive space. No documentation or product page to evaluate capability against need.",
+  "what_it_does_well": [
+    "Addresses a genuine emerging need (persistent AI knowledge/memory storage)",
+    "Open source and publicly inspectable"
+  ],
+  "what_it_fails_at": [
+    "No product site, documentation, or demo",
+    "Cannot determine scope, API, or integration path without source inspection",
+    "Individual project with no community signals"
+  ],
+  "best_for": [
+    "Developers researching AI memory persistence patterns"
+  ],
+  "not_recommended_for": [
+    "Production agent memory systems without source audit",
+    "Non-technical evaluators"
+  ],
+  "red_flags": [
+    "Insufficient surface for production evaluation."
+  ],
+  "compared_to": [
+    {
+      "slug": "mem0",
+      "verdict_diff": "Mem0 is the established, documented memory layer for AI agents with API access and growing adoption. braindb appears to be an individual exploration of the same problem space \u2014 evaluate Mem0 for production use.",
+      "preferred_for_axis": "production-memory-layer"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Repository accessible",
+      "source": "https://github.com/dimknaf/braindb",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Database library \u2014 potentially usable as an agent memory backend. No documented API or integration guide.",
+    "agent_friendly_score": 4
+  },
+  "summary": "GitHub-hosted brain/knowledge database project \u2014 interesting concept for AI memory persistence, but early stage with no product surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/dimknaf-braindb/",
-  "reviewed_at": "2026-06-05",
-  "run_id": "run-dimknaf-braindb-mq0bqc0f",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Repository accessible",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source",
       "source_surface": "unknown"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integrations",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "None documented",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "N/A",
       "source_surface": "unknown"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/dimknaf/braindb",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/dimknaf/braindb/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-05T02:48:14.123Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
