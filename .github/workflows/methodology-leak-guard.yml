@@ -11,6 +11,18 @@ on:
     branches: ["**"]
   push:
     branches: [main]
+    # Path filter added 2026-06-07: this guard ONLY scans public surfaces
+    # (scripts/check-methodology-leak.sh scans site/** + agents.json + llms.txt
+    # + agent-manifest.json; it does NOT scan brain/**). Running it on the 100+
+    # daily routine/bot commits to brain/** was ~3,000 GHA min/mo of pure waste
+    # with zero security value. It now fires only when a public surface that
+    # could actually leak methodology changes — full protection, ~95% fewer runs.
+    paths:
+      - "site/**"
+      - "!site/internal/**"   # local-only command center; guard excludes it from scanning anyway
+      - "agents.json"
+      - "llms.txt"
+      - "agent-manifest.json"
 
 permissions:
   contents: read
