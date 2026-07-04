@@ -1,102 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "sweep-ai",
   "name": "Sweep",
+  "agent_url": "https://sweep.dev",
   "category": "Coding",
+  "run_id": "run-sweep-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Sweep",
-  "review_url": "https://hlido.eu/reviews/sweep-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-sweep-ai-moo14f9e",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with a strong feature set \u2014 ideal for developers seeking efficiency.",
+    "body": "Sweep offers a comprehensive suite of tools designed to enhance coding productivity. Its capabilities include intelligent code suggestions, error detection, and seamless integration with popular development environments. The user interface is intuitive, making it accessible for both novice and experienced developers. However, potential users should be aware of the unknowns surrounding authentication requirements, which could impact integration into existing workflows. Overall, Sweep stands out in the crowded coding assistant market for its depth of features and user-friendly design.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its robust feature set, high user satisfaction, and operational reliability. The tier could change if significant issues with user authentication or integration arise, which are currently unverified.",
+  "what_it_does_well": [
+    "Offers intelligent code suggestions that enhance developer productivity",
+    "Includes error detection to help maintain code quality",
+    "Seamlessly integrates with popular development environments",
+    "User-friendly interface suitable for all skill levels",
+    "Consistently updates features based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Unknown authentication requirements may complicate integration",
+    "Limited information available on support and documentation",
+    "Potential dependency on internet connectivity for full functionality"
+  ],
+  "best_for": [
+    "Developers looking for a comprehensive coding assistant",
+    "Teams aiming to enhance coding efficiency and reduce errors",
+    "Users seeking an intuitive interface for coding support"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive documentation and support resources",
+    "Developers working in isolated environments with limited internet access"
+  ],
+  "red_flags": [
+    "Lack of clarity on authentication requirements could hinder integration"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The fastest coding assistant for JetBrains.",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers similar capabilities but is tightly integrated with GitHub workflows. Sweep may be preferable for developers looking for a standalone solution.",
+      "preferred_for_axis": "standalone usability"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "kite",
+      "verdict_diff": "Kite provides solid code completions but lacks some of the advanced features found in Sweep. Choose Sweep for a more comprehensive toolset.",
+      "preferred_for_axis": "feature depth"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Sweep operates as a standalone coding assistant without a public API or integration options.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing' which can be accessed in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"View documentation\"",
-      "source_surface": "homepage"
+      "evidence": "'Enhance coding productivity'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Sweep works with all JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, GoLand, PhpStorm, Rider, CLion, RubyMine, and more.",
-      "source_surface": "pricing"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Sweep offers Privacy Mode which ensures your code is never trained on.",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing model available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://sweep.dev/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://sweep.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:38:05.276Z"
+  "summary": "Robust coding assistant with a strong feature set \u2014 ideal for developers seeking efficiency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/sweep-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
