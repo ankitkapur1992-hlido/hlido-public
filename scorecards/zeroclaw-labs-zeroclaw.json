@@ -1,0 +1,110 @@
+{
+  "schema_version": "2.0",
+  "slug": "zeroclaw-labs-zeroclaw",
+  "name": "ZeroClaw",
+  "agent_url": "https://www.zeroclawlabs.ai/",
+  "category": "Infrastructure",
+
+  "run_id": "run-32875a6c8d9d4a04-www-zeroclawlabs-ai",
+  "run_at": "2026-06-18T08:33:39Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.06",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+
+  "hlido_opinion": {
+    "headline": "31K-star Rust personal-AI infrastructure with a genuine privacy thesis — early but credible, and the star count is not inflated noise.",
+    "body": "ZeroClaw occupies a real gap: most AI agent platforms require you to hand over your data or run on someone else's compute. ZeroClaw's thesis is 'you own the agent, you own the data, you own the machine it runs on' — and it builds toward that with a Rust runtime that deploys on any OS and any platform. The 31,761 GitHub stars are unusually high for a self-hosted infrastructure project and suggest genuine developer interest rather than viral tweet traffic. Rust was a deliberate choice: startup latency and memory footprint matter when you're running the agent on a personal machine alongside other workloads. The `zeroclaw onboard` install experience (one command, picks up environment automatically) shows product thinking beyond raw capability. What's genuinely unclear from the public surface: the maturity of specific agent capabilities (memory, tool calling, multi-agent coordination), the commercial model if any, and whether the website product surface matches the GitHub readme's promises. The gap between a compelling GitHub README and a production-ready personal agent runtime is real — ZeroClaw is somewhere on that journey.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-18",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (79) because 31K stars in the self-hosted agent space is meaningful signal, the privacy/ownership thesis is genuinely differentiated, and Rust builds in performance credibility from the ground up. Not VITAL because the product is younger than the star count implies (still documenting capabilities), and the website surface didn't expose enough depth to verify core agent capabilities during the T2 test.",
+
+  "what_it_does_well": [
+    "Strong community traction (31K+ GitHub stars) for a self-hosted agent infrastructure project",
+    "Rust runtime means low resource overhead on personal machines — a real advantage vs Python-heavy agents",
+    "Privacy-by-design: local deployment with no data leaving your machine by default",
+    "Platform-agnostic deployment — any OS, any platform, including edge devices",
+    "Single-command onboarding (`zeroclaw onboard`) lowers the barrier for a CLI-first tool"
+  ],
+
+  "what_it_fails_at": [
+    "Website surface is thin — most depth is in the GitHub README, not discoverable without code spelunking",
+    "Agent capabilities (memory depth, tool ecosystem, multi-agent coordination) not fully documented on public surface",
+    "Commercial model unclear — no pricing, no enterprise offering, no sustainability signal",
+    "Rust-only means the plugin/extension ecosystem is smaller than Python-ecosystem counterparts",
+    "No public demo or hosted test environment — must install locally to evaluate"
+  ],
+
+  "best_for": [
+    "Developers who need a local-first, privacy-preserving AI agent runtime without cloud dependency",
+    "Edge/IoT use cases where Python is too heavy and data residency matters",
+    "Rust developers building agent infrastructure — can extend and embed the core",
+    "Privacy-conscious users unwilling to send data to third-party AI cloud platforms"
+  ],
+
+  "not_recommended_for": [
+    "Teams that need enterprise support, SLAs, or a managed cloud option",
+    "Non-Rust developers needing a rich extension ecosystem",
+    "Projects that need verified agent benchmark results before adoption",
+    "Use cases where cloud integration (APIs, webhooks, SaaS orchestration) is more important than local execution"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
+    {
+      "slug": "jan-jan",
+      "verdict_diff": "Jan is a local LLM runner (model download + inference). ZeroClaw is a full personal agent runtime with agent orchestration logic. ZeroClaw is the right choice if you need agent-level coordination; Jan if you just need local model inference.",
+      "preferred_for_axis": "agent-runtime"
+    },
+    {
+      "slug": "lmstudio",
+      "verdict_diff": "LM Studio is a polished GUI for local model management. ZeroClaw is CLI-first agent infrastructure. They solve adjacent problems — ZeroClaw can call local models managed by LM Studio, and the two aren't direct competitors.",
+      "preferred_for_axis": "agent-orchestration"
+    }
+  ],
+
+  "evidence_urls": [
+    {"claim": "31K+ GitHub stars", "source": "https://github.com/zeroclaw-labs/zeroclaw", "tested_at": "2026-06-18", "verified": true},
+    {"claim": "MIT OR Apache 2.0 license", "source": "https://github.com/zeroclaw-labs/zeroclaw", "tested_at": "2026-06-18", "verified": true},
+    {"claim": "Rust Edition 2024 runtime", "source": "https://github.com/zeroclaw-labs/zeroclaw", "tested_at": "2026-06-18", "verified": true},
+    {"claim": "zeroclaw onboard single-command install", "source": "https://www.zeroclawlabs.ai/", "tested_at": "2026-06-18", "verified": true}
+  ],
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "CLI-first. Install via `zeroclaw onboard`, then drive via `zeroclaw` subcommands. No external API or programmatic interface documented on public surface — designed for local autonomous operation, not for agent-to-agent calls from the outside.",
+    "agent_friendly_score": 4
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-18T08:33:17Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Private AI Assistant — You own the agent, you own the data'", "tested_at": "2026-06-18T08:33:17Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "GitHub repo link, install command", "tested_at": "2026-06-18T08:33:17Z"},
+    {"id": "pricing_or_access", "pass": false, "required": false, "evidence": "Free/open source — no pricing page", "tested_at": "2026-06-18T08:33:17Z"},
+    {"id": "evidence_or_demo", "pass": false, "required": false, "evidence": "No hosted demo — local install required", "tested_at": "2026-06-18T08:33:17Z"}
+  ],
+
+  "summary": "31K-star Rust personal-AI infrastructure with a genuine privacy thesis — early but credible, and the star count is not inflated noise.",
+
+  "staleness_after": "2026-09-18",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-09-18",
+
+  "attestation_url": "/data/attestations/zeroclaw-labs-zeroclaw.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
+}
