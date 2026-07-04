@@ -1,0 +1,18 @@
+# Drop this file in your repo at .github/workflows/hlido-mcp-scan.yml
+name: Hlido MCP Scan
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  pull-requests: write
+  contents: read
+jobs:
+  mcp-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ankitkapur1992-hlido/hlido-public/actions/hlido-mcp-scan@main
+        with:
+          # default fail-on is 'poisoning' (fail only on the malice signal);
+          # tighten to 'risky' once you've reviewed your baseline.
+          fail-on: poisoning
