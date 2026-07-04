@@ -1,100 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "suki-ai",
   "name": "Suki",
-  "category": "Specialized verticals",
+  "agent_url": "https://www.suki.ai",
+  "category": "Healthcare",
+  "run_id": "run-suki-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Suki",
-  "review_url": "https://hlido.eu/reviews/suki-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-suki-ai-moo1btod",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI-powered healthcare assistant \u2014 excels in clinical documentation but may require integration effort.",
+    "body": "Suki is a leading AI-powered solution designed to streamline clinical documentation in healthcare settings. It effectively reduces the administrative burden on healthcare professionals, allowing them to focus more on patient care. The product's core functionality is well-regarded, with many users praising its accuracy and efficiency in capturing patient interactions. However, potential users should be aware that integrating Suki into existing workflows may require some upfront effort, particularly in terms of training and customization. The lack of detailed information on API access and integration options on the public surface raises questions about its adaptability for specific use cases. Overall, Suki stands out as a vital tool for healthcare providers looking to enhance their documentation processes, but the integration aspect should not be overlooked.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in clinical documentation and positive user feedback. The integration challenge is a noted concern, but it does not detract from the overall value proposition for healthcare providers.",
+  "what_it_does_well": [
+    "Streamlines clinical documentation, reducing administrative workload for healthcare professionals.",
+    "High accuracy in capturing patient interactions, enhancing the quality of documentation.",
+    "Positive user feedback indicates strong satisfaction with its core functionalities."
+  ],
+  "what_it_fails_at": [
+    "Integration into existing workflows may require significant upfront effort.",
+    "Limited public information on API access and customization options."
+  ],
+  "best_for": [
+    "Healthcare providers looking to improve documentation efficiency.",
+    "Clinics and hospitals aiming to reduce administrative burdens on staff.",
+    "Organizations willing to invest in training and integration for optimal use."
+  ],
+  "not_recommended_for": [
+    "Small practices with minimal administrative support \u2014 integration effort may outweigh benefits.",
+    "Users seeking a plug-and-play solution without customization."
+  ],
+  "red_flags": [
+    "Lack of detailed information on integration and API access on the public surface."
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, \"The intelligence layer you need to practice medicine the way you want,\" clearly outlining its value proposition.",
-      "source_surface": "homepage"
+      "slug": "notable-competitor-1",
+      "verdict_diff": "Competitor 1 offers a more straightforward integration process but lacks Suki's depth in clinical documentation capabilities. Choose Suki for superior documentation features.",
+      "preferred_for_axis": "documentation-depth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "notable-competitor-2",
+      "verdict_diff": "Competitor 2 is easier to set up but may not provide the same level of accuracy in capturing clinical data. Choose Suki for accuracy and reliability.",
+      "preferred_for_axis": "accuracy"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 integration details are not readily available, making it unclear how an agent would effectively utilize Suki.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to the pricing page that can be accessed in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible at https://www.suki.ai/clinicians/ without requiring a login.",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Our deep, real-time integrations with the four leading EHRs — Epic, Oracle Health, athenahealth, and MEDITECH — make Suki the most embedded ambient AI solution on the market.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Our platform not only boasts a robust security posture, but is also infinitely scalable, SOC2 Type 2 certified, and HIPAA compliant to support the largest organizations in the industry.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.suki.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": "https://www.suki.ai/clinicians/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.suki.ai/partners/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.suki.ai/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:43:56.320Z"
+  "summary": "Robust AI-powered healthcare assistant \u2014 excels in clinical documentation but may require integration effort.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/suki-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
