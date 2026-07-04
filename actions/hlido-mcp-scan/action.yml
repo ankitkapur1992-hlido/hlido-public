@@ -1,0 +1,183 @@
+name: "Hlido MCP Scan"
+description: "Independent safety scan of the MCP servers your repo configures — tool-poisoning + dangerous-capability + auth-posture red-flags, before they reach your agents."
+author: "Hlido"
+branding:
+  icon: "shield"
+  color: "red"
+
+inputs:
+  config-paths:
+    description: "Space-separated MCP config files to scan. Defaults to the common locations: .mcp.json .cursor/mcp.json .vscode/mcp.json claude_desktop_config.json"
+    required: false
+    default: ".mcp.json .cursor/mcp.json .vscode/mcp.json claude_desktop_config.json"
+  fail-on:
+    description: "Fail the run when any configured server is at/above this safety tier or has tool-poisoning detected: 'dangerous', 'risky', or 'caution'. Default 'poisoning' fails ONLY on tool-poisoning (the malice signal) and reports everything else."
+    required: false
+    default: "poisoning"
+  comment-pr:
+    description: "When 'true' and event is pull_request, post a sticky comment with the scan table. Repeat runs replace it via the <!-- hlido-mcp-scan --> marker."
+    required: false
+    default: "true"
+
+outputs:
+  scanned:
+    description: "Number of MCP servers found in config and scanned."
+    value: ${{ steps.scan.outputs.scanned }}
+  flagged:
+    description: "Number of servers that tripped the fail-on gate."
+    value: ${{ steps.scan.outputs.flagged }}
+  decision:
+    description: "Final decision: 'pass' or 'fail'."
+    value: ${{ steps.scan.outputs.decision }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Hlido MCP Scan
+      id: scan
+      shell: bash
+      env:
+        SCAN_CONFIG_PATHS: ${{ inputs.config-paths }}
+        SCAN_FAIL_ON: ${{ inputs.fail-on }}
+        SCAN_COMMENT_PR: ${{ inputs.comment-pr }}
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        set -u
+        # ------------------------------------------------------------------
+        # Hlido MCP Scan — composite-action payload.
+        # Extracts every MCP server from the repo's MCP config files, asks
+        # Hlido's public scan_mcp tool (https://hlido.eu/mcp) for an
+        # independent safety verdict on each, writes a step-summary table +
+        # optional sticky PR comment, and gates on fail-on.
+        # Register/methodology: https://hlido.eu/mcp/
+        # ------------------------------------------------------------------
+        MCP_ENDPOINT="https://hlido.eu/mcp"
+        FAIL_ON="${SCAN_FAIL_ON}"
+
+        if ! command -v jq >/dev/null 2>&1; then
+          echo "::error::hlido-mcp-scan: jq not found in PATH."
+          exit 1
+        fi
+
+        # ── 1. Collect server specs from config files ─────────────────────
+        # Supports the common shapes: {mcpServers:{name:{command,args}|{url}}}
+        # and VS Code's {servers:{...}}. A server is identified by its url,
+        # or its npx/uvx package, or (fallback) command+args joined.
+        TARGETS_FILE=$(mktemp)
+        for CFG in ${SCAN_CONFIG_PATHS}; do
+          [ -f "${CFG}" ] || continue
+          jq -r '
+            (.mcpServers // .servers // {}) | to_entries[] |
+            .key as $name |
+            (.value.url // .value.serverUrl //
+              (if (.value.command // "") | test("^(npx|uvx)$") then
+                ([.value.args[]? | select(startswith("-") | not)][0] // "")
+               else empty end)
+            ) as $target |
+            select($target != null and $target != "") |
+            "\($name)\t\($target)"
+          ' "${CFG}" 2>/dev/null | while IFS=$'\t' read -r NAME TARGET; do
+            printf '%s\t%s\t%s\n' "${NAME}" "${TARGET}" "${CFG}" >> "${TARGETS_FILE}"
+          done
+        done
+
+        SCANNED=$(wc -l < "${TARGETS_FILE}" | tr -d ' ')
+        if [ "${SCANNED}" = "0" ]; then
+          echo "hlido-mcp-scan: no MCP servers found in: ${SCAN_CONFIG_PATHS}"
+          echo "scanned=0" >> "${GITHUB_OUTPUT}"
+          echo "flagged=0" >> "${GITHUB_OUTPUT}"
+          echo "decision=pass" >> "${GITHUB_OUTPUT}"
+          exit 0
+        fi
+
+        # ── 2. Scan each server via the public scan_mcp tool ──────────────
+        ROWS_FILE=$(mktemp); FLAGGED=0; I=0
+        tier_rank() { case "$1" in DANGEROUS) echo 3;; RISKY) echo 2;; CAUTION) echo 1;; *) echo 0;; esac; }
+        FAIL_RANK=$(case "${FAIL_ON}" in dangerous) echo 3;; risky) echo 2;; caution) echo 1;; *) echo 99;; esac)
+
+        while IFS=$'\t' read -r NAME TARGET CFG; do
+          I=$((I+1))
+          BODY=$(jq -n --arg s "${TARGET}" '{jsonrpc:"2.0", id:1, method:"tools/call", params:{name:"scan_mcp", arguments:{server:$s, requester:"hlido-mcp-scan-action"}}}')
+          RES=$(curl -sS -m 30 -H "content-type: application/json" -H "user-agent: hlido-mcp-scan/0.1 (gha)" -d "${BODY}" "${MCP_ENDPOINT}" || echo "")
+          VERDICT=$(printf '%s' "${RES}" | jq -r '.result.content[0].text // empty' 2>/dev/null)
+          if [ -z "${VERDICT}" ]; then
+            printf '%s\t%s\t%s\t%s\t%s\t%s\n' "${NAME}" "${TARGET}" "UNREACHABLE" "-" "no" "scan call failed" >> "${ROWS_FILE}"
+            continue
+          fi
+          TIER=$(printf '%s' "${VERDICT}" | jq -r '.security_tier // "NOT_SCANNED"')
+          SCORE=$(printf '%s' "${VERDICT}" | jq -r '.security_score // "-"')
+          POISON=$(printf '%s' "${VERDICT}" | jq -r 'if .tool_poisoning_detected then "YES" else "no" end')
+          NOTE=$(printf '%s' "${VERDICT}" | jq -r '(.dangerous_capabilities // []) | unique | join(", ")')
+          [ "$(printf '%s' "${VERDICT}" | jq -r '.status // ""')" = "not_scanned_queued" ] && NOTE="queued for sandbox scan (<24h) — treat as UNKNOWN"
+          printf '%s\t%s\t%s\t%s\t%s\t%s\n' "${NAME}" "${TARGET}" "${TIER}" "${SCORE}" "${POISON}" "${NOTE}" >> "${ROWS_FILE}"
+          # Gate: tool-poisoning always trips; tier trips at/above fail-on.
+          if [ "${POISON}" = "YES" ]; then FLAGGED=$((FLAGGED+1));
+          elif [ "$(tier_rank "${TIER}")" -ge "${FAIL_RANK}" ]; then FLAGGED=$((FLAGGED+1)); fi
+        done < "${TARGETS_FILE}"
+
+        DECISION="pass"; [ "${FLAGGED}" -gt 0 ] && DECISION="fail"
+
+        # ── 3. Step summary ────────────────────────────────────────────────
+        TABLE_FILE=$(mktemp)
+        {
+          echo "| Server | Target | Safety tier | Score | Tool-poisoning | Red-flags |"
+          echo "|---|---|---|---|---|---|"
+          while IFS=$'\t' read -r NAME TARGET TIER SCORE POISON NOTE; do
+            BADGE="${TIER}"
+            [ "${TIER}" = "DANGEROUS" ] || [ "${TIER}" = "RISKY" ] && BADGE="🔴 ${TIER}"
+            [ "${TIER}" = "CAUTION" ] && BADGE="🟡 ${TIER}"
+            [ "${TIER}" = "SAFE" ] && BADGE="🟢 ${TIER}"
+            [ "${POISON}" = "YES" ] && POISON="⚠️ **YES**"
+            echo "| \`${NAME}\` | \`${TARGET}\` | ${BADGE} | ${SCORE} | ${POISON} | ${NOTE:-—} |"
+          done < "${ROWS_FILE}"
+        } > "${TABLE_FILE}"
+        {
+          echo "## Hlido MCP Scan"
+          echo ""
+          echo "**${SCANNED} MCP server(s) in config · ${FLAGGED} flagged (fail-on: ${FAIL_ON}) → ${DECISION}**"
+          echo ""
+          cat "${TABLE_FILE}"
+          echo ""
+          echo "Tier = blast radius if hijacked, not maintainer trustworthiness. NOT_SCANNED is never assumed safe."
+          echo ""
+          echo "_Independent, evidence-first — [Hlido MCP register](https://hlido.eu/mcp/) · scan yours: \`npx @hlido/cli scan <server>\`_"
+        } >> "${GITHUB_STEP_SUMMARY}"
+
+        # ── 4. Sticky PR comment ──────────────────────────────────────────
+        if [ "${SCAN_COMMENT_PR}" = "true" ] && [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+          PR_NUMBER=$(jq -r '.pull_request.number // empty' "${GITHUB_EVENT_PATH}")
+          if [ -n "${PR_NUMBER}" ]; then
+            MARKER="<!-- hlido-mcp-scan -->"
+            BODY_FILE=$(mktemp)
+            {
+              echo "${MARKER}"
+              echo "### Hlido MCP Scan — ${SCANNED} server(s), ${FLAGGED} flagged"
+              echo ""
+              cat "${TABLE_FILE}"
+              echo ""
+              echo "<sub>Independent safety scan by [Hlido](https://hlido.eu/mcp/) — auto-updated on every push. <code>fail-on=${FAIL_ON}</code></sub>"
+            } > "${BODY_FILE}"
+            EXISTING_ID=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" \
+              --jq "[.[] | select(.body | startswith(\"${MARKER}\"))][0].id // empty" 2>/dev/null || true)
+            if [ -n "${EXISTING_ID}" ]; then
+              gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${EXISTING_ID}" \
+                -f body="$(cat "${BODY_FILE}")" >/dev/null || echo "::warning::Failed to update PR comment (continuing)."
+            else
+              gh pr comment "${PR_NUMBER}" --body-file "${BODY_FILE}" >/dev/null || echo "::warning::Failed to post PR comment (continuing)."
+            fi
+          fi
+        fi
+
+        # ── 5. Outputs + telemetry + exit ─────────────────────────────────
+        echo "scanned=${SCANNED}" >> "${GITHUB_OUTPUT}"
+        echo "flagged=${FLAGGED}" >> "${GITHUB_OUTPUT}"
+        echo "decision=${DECISION}" >> "${GITHUB_OUTPUT}"
+        curl -fsS -m 5 -H "content-type: application/json" -H "user-agent: hlido-mcp-scan/0.1 (gha)" \
+          -X POST "https://hlido.eu/v1/telemetry/event" \
+          -d "{\"surface\":\"gha\",\"version\":\"hlido-mcp-scan/0.1\",\"event\":\"mcp-scan\",\"ok\":$([ "${DECISION}" = "pass" ] && echo true || echo false)}" >/dev/null 2>&1 || true
+
+        if [ "${DECISION}" = "fail" ]; then
+          echo "::error::hlido-mcp-scan: ${FLAGGED} MCP server(s) tripped the '${FAIL_ON}' gate — see the summary table."
+          exit 1
+        fi
+        exit 0
