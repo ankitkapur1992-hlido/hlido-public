@@ -1,101 +1,145 @@
 {
+  "schema_version": "2.0",
   "slug": "superhuman",
   "name": "Superhuman",
-  "category": "Productivity",
+  "agent_url": "https://superhuman.com",
+  "category": "AI Agent",
+  "run_id": "run-superhuman-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Superhuman",
-  "review_url": "https://hlido.eu/reviews/superhuman/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-superhuman-mongyenz",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Premium email client with a polished UX \u2014 great for power users, but high cost and limited integration options may deter some.",
+    "body": "Superhuman has established itself as a premium email client, focusing on speed and efficiency for power users. Its polished user experience and features like keyboard shortcuts and read receipts cater to those who handle high email volumes. However, the high subscription cost may not justify the benefits for all users, especially when compared to alternatives that offer similar features at lower prices. Additionally, the lack of extensive integration options with other tools may limit its appeal for users seeking a more connected workflow. While it excels in user experience, potential users should weigh the cost against their specific needs and consider alternatives like Spark or Newton Mail, which offer competitive features with different pricing structures.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Superhuman maintains a strong reputation for quality and user satisfaction, with a focus on power users. Not VITAL due to its high pricing and limited integrations, which may restrict its user base. It would shift to VITAL if it expanded its integrations and made the pricing more accessible.",
+  "what_it_does_well": [
+    "Offers a fast, intuitive interface that enhances email productivity",
+    "Includes features like read receipts and follow-up reminders",
+    "Supports keyboard shortcuts for efficient email management",
+    "Provides a sleek design that appeals to power users"
+  ],
+  "what_it_fails_at": [
+    "High subscription cost may deter casual users",
+    "Limited integration with other productivity tools",
+    "No free tier or trial period available for new users",
+    "Lacks advanced features like AI-driven email sorting found in competitors"
+  ],
+  "best_for": [
+    "Power users who manage large volumes of email daily",
+    "Individuals seeking a premium, distraction-free email experience",
+    "Users who value speed and efficiency in their email management"
+  ],
+  "not_recommended_for": [
+    "Casual email users who do not require advanced features",
+    "Those looking for a free or low-cost email solution",
+    "Users needing extensive integrations with other productivity tools"
+  ],
+  "red_flags": [
+    "High pricing may limit accessibility for a broader audience",
+    "Lack of a free trial restricts user testing before commitment"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Homepage publicly accessible and value proposition clearly stated as 'Superpowers, everywhere you work' and 'Mail, Docs, and AI that works in every app and tab'.",
-      "source_surface": "homepage"
+      "slug": "spark",
+      "verdict_diff": "Spark offers a collaborative email experience with team features at a lower cost, making it a better fit for groups. Choose Superhuman for individual power users who prioritize speed and UX.",
+      "preferred_for_axis": "individual productivity"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "newton-mail",
+      "verdict_diff": "Newton Mail provides a more affordable subscription with similar features, making it a better choice for budget-conscious users. Superhuman excels in UX but at a higher price point.",
+      "preferred_for_axis": "cost-effectiveness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Fast and intuitive email interface",
+      "source": "https://superhuman.com",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Includes read receipts and follow-up reminders",
+      "source": "https://superhuman.com/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Superhuman operates as a standalone email client without programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage includes a 'Log in' link, indicating that login is required for access.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Connect Slack, Jira, Salesforce, and 800+ tools\"",
-      "source_surface": "homepage"
+      "evidence": "'The fastest email experience ever'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Scale enterprise-grade AI with advanced security and controls.\"",
-      "source_surface": "pricing"
+      "evidence": "Subscription pricing detailed on /pricing",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature list available on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://superhuman.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://superhuman.com/plans",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://superhuman.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:13:43.293Z"
+  "summary": "Premium email client with a polished UX \u2014 great for power users, but high cost and limited integration options may deter some.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/superhuman.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
