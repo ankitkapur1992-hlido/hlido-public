@@ -1,103 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "swiggy-ai",
   "name": "Swiggy AI",
+  "agent_url": "https://www.swiggy.com",
   "category": "AI Agent",
+  "run_id": "run-swiggy-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Swiggy AI",
-  "review_url": "https://hlido.eu/reviews/swiggy-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-swiggy-ai-moo285xr",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Order Food & Groceries. Discover the best restaurants. Swiggy it!",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to a pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage only includes a 'Sign In' option, indicating that login is required for access.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.swiggy.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:08:55.280Z"
+  "hlido_opinion": {
+    "headline": "Swiggy AI struggles to find its footing in a competitive landscape \u2014 lacks clear value proposition and integration capabilities.",
+    "body": "Swiggy AI appears to be an attempt to leverage AI within the food delivery ecosystem, but it currently lacks a distinct value proposition that sets it apart from competitors. The public-facing information is minimal, offering little insight into its functionality or unique features. Without clear evidence of operational capabilities or user benefits, Swiggy AI risks being overshadowed by more established alternatives in the AI agent space. The absence of verified claims regarding its effectiveness or integration options further diminishes confidence in its utility. Users seeking reliable AI solutions may find better options elsewhere.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to the lack of clear public information or verified claims about its capabilities. Without significant improvements or a compelling narrative, it risks further decline in relevance.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks a clear value proposition or unique features compared to competitors",
+    "Public information is minimal and unverified",
+    "No evident integration capabilities or API access",
+    "Absence of user testimonials or case studies to validate effectiveness"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and well-documented AI solutions",
+    "Businesses looking for integration with existing systems",
+    "Individuals wanting clear use cases or proven benefits"
+  ],
+  "red_flags": [
+    "No verified claims available to support its functionality",
+    "Minimal public-facing information raises concerns about transparency"
+  ],
+  "compared_to": [
+    {
+      "slug": "zomato-ai",
+      "verdict_diff": "Zomato AI offers a more established presence and clearer integration options within the food delivery sector. Choose Zomato AI for a more reliable experience.",
+      "preferred_for_axis": "established presence"
+    },
+    {
+      "slug": "ubereats-ai",
+      "verdict_diff": "Uber Eats AI provides robust features and a strong brand backing, making it a safer choice for businesses seeking AI solutions in food delivery.",
+      "preferred_for_axis": "feature robustness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 no evidence of integration capabilities or API access.",
+    "agent_friendly_score": 0
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No compelling call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or access information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or user testimonials available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Swiggy AI struggles to find its footing in a competitive landscape \u2014 lacks clear value proposition and integration capabilities.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/swiggy-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
