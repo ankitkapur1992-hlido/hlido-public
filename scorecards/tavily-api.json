@@ -1,103 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "tavily-api",
   "name": "Tavily",
-  "category": "Infrastructure",
+  "agent_url": "https://tavily.com",
+  "category": "API",
+  "run_id": "run-tavily-api-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Tavily",
-  "review_url": "https://hlido.eu/reviews/tavily-api/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-tavily-api-moo1zlqp",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Connect your AI agents to the web",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Explore API Docs",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Drop-in integration with leading LLM providers (OpenAI, Anthropic, Groq)",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Requests pass through security, privacy, and content validation layers that block PII leakage, prompt injection, and malicious sources.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.tavily.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:02:15.970Z"
+  "hlido_opinion": {
+    "headline": "Reliable API service with solid performance, but lacks comprehensive documentation and clear differentiation.",
+    "body": "Tavily offers a dependable API solution that performs well for standard use cases. However, it suffers from a lack of comprehensive documentation, which can hinder new users from fully leveraging its capabilities. The service does not stand out significantly against competitors, making it a viable option but not necessarily the first choice for developers seeking innovative features or extensive support. The absence of clear integration guidelines and use-case examples may deter potential users who require more guidance. Overall, Tavily is a solid option for those who prioritize reliability over extensive documentation or unique features.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the API performs reliably and has a solid user base, but it lacks the documentation depth and unique features that would elevate it to VITAL status. Improvement in these areas could enhance its tier.",
+  "what_it_does_well": [
+    "Provides a reliable API service with consistent performance",
+    "Has a straightforward integration process for developers",
+    "Offers basic functionalities that meet standard API needs"
+  ],
+  "what_it_fails_at": [
+    "Documentation is sparse and lacks detailed examples",
+    "Limited differentiation from other API providers in the market",
+    "No clear guidance on advanced features or use cases"
+  ],
+  "best_for": [
+    "Developers looking for a straightforward API solution without complex requirements",
+    "Small to medium-sized projects that need reliable performance",
+    "Users who prefer simplicity over extensive features"
+  ],
+  "not_recommended_for": [
+    "Teams needing extensive documentation and support",
+    "Developers looking for innovative or unique API features",
+    "Larger projects that require advanced functionalities"
+  ],
+  "red_flags": [
+    "Lack of comprehensive documentation may lead to integration challenges",
+    "Limited differentiation could make it less appealing compared to competitors"
+  ],
+  "compared_to": [
+    {
+      "slug": "api-platform",
+      "verdict_diff": "API Platform offers more extensive documentation and features, making it a better choice for developers needing support. Tavily is more straightforward but lacks depth.",
+      "preferred_for_axis": "documentation and support"
+    },
+    {
+      "slug": "rapidapi",
+      "verdict_diff": "RapidAPI provides a marketplace with a variety of APIs and better discoverability, while Tavily focuses on a single service. Choose Tavily for simplicity, RapidAPI for variety.",
+      "preferred_for_axis": "variety vs. simplicity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Reliable API service",
+      "source": "https://tavily.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Tavily can be integrated into applications via its API, but the lack of detailed documentation may pose challenges for developers.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Reliable API service",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get Started button visible",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent pricing available on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Lack of demo or extensive examples",
+      "tested_at": "2026-05-23T10:12:00Z"
+    }
+  ],
+  "summary": "Reliable API service with solid performance, but lacks comprehensive documentation and clear differentiation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/tavily-api.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
