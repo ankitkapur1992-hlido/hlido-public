@@ -1,101 +1,118 @@
 {
+  "schema_version": "2.0",
   "slug": "ravenpack",
   "name": "RavenPack",
-  "category": "Specialized verticals",
+  "agent_url": "https://www.ravenpack.com",
+  "category": "Finance",
+  "run_id": "run-ravenpack-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of RavenPack",
-  "review_url": "https://hlido.eu/reviews/ravenpack/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ravenpack-moo219aq",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "RavenPack shows signs of decline in a competitive finance data landscape \u2014 lacks clear differentiation and user engagement.",
+    "body": "RavenPack has been a player in the finance data analytics space, but its current positioning raises concerns. The lack of recent updates or compelling new features suggests it may be struggling to keep pace with competitors. The absence of verified claims or a transparent public-facing strategy makes it hard to assess its value proposition. As the finance data sector grows increasingly competitive, RavenPack's fading presence indicates potential challenges in attracting and retaining users. Without a clear strategy for revitalization or innovation, it risks becoming irrelevant in a market filled with more agile and responsive alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of recent updates and no clear differentiation from competitors. The absence of verified claims and user engagement further diminishes confidence. A pivot towards innovation or improved communication could change this tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks recent updates or new features to engage users",
+    "No verified claims or transparency regarding data handling",
+    "Weak positioning against competitors in the finance data analytics space"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking innovative and responsive finance data solutions",
+    "Investors looking for reliable and verified analytics",
+    "Organizations needing strong customer support or engagement"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about data integrity",
+    "Lack of recent updates may indicate stagnation or decline"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "RavenPack is the leading provider of insights and technology for data-driven companies, including the most successful hedge funds, banks, and asset managers in the world.",
-      "source_surface": "homepage"
+      "slug": "factset",
+      "verdict_diff": "FactSet offers a more comprehensive suite of financial data and analytics tools, with a strong reputation for reliability. Choose FactSet for a more robust and engaged user experience.",
+      "preferred_for_axis": "comprehensive analytics"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "bloomberg",
+      "verdict_diff": "Bloomberg provides extensive financial data and tools with a well-established market presence. RavenPack lacks the same level of integration and user trust.",
+      "preferred_for_axis": "market trust"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 RavenPack does not appear to offer any programmatic interfaces for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "The homepage contains links to 'Solutions', 'Products', and 'Support', but does not explicitly mention a 'Pricing' link.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "RavenPack partners with some of the leading firms in alternative data to source high-quality datasets.",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"All FT content is made available under licensing agreements that ensure full copyright compliance and respect for intellectual property.\"",
-      "source_surface": "changelog"
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.ravenpack.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.ravenpack.com/company#partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.ravenpack.com/blog/ravenpack-financial-times-investment-content-integration",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:03:49.431Z"
+  "summary": "RavenPack shows signs of decline in a competitive finance data landscape \u2014 lacks clear differentiation and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ravenpack.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
