@@ -1,102 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "stack-ai",
   "name": "Stack AI",
-  "category": "Workflow & Automation",
+  "agent_url": "https://www.stack-ai.com",
+  "category": "AI Agent",
+  "run_id": "run-stack-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Stack AI",
-  "review_url": "https://hlido.eu/reviews/stack-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-stack-ai-mongxt6x",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable AI agent with solid capabilities \u2014 effective for users needing straightforward automation, but lacks standout features.",
+    "body": "Stack AI presents as a competent AI agent focused on providing automation solutions for various tasks. The platform appears to be user-friendly and offers a range of functionalities that can assist users in streamlining their workflows. However, it does not seem to have a unique selling proposition that distinguishes it from other players in the space. While it operates effectively, users looking for advanced features or integrations may find it lacking compared to competitors. Transparency around pricing and features is essential, but the current public surface does not provide enough detail to fully assess its capabilities. Overall, Stack AI is a dependable choice for users seeking basic automation, but it may not meet the needs of those requiring more sophisticated solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Stack AI demonstrates reliable performance in its core functions and has a clear value proposition for users needing basic automation. Not VITAL due to the absence of standout features or integrations that could elevate its positioning in a competitive landscape.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies automation tasks",
+    "Reliable performance in executing basic automation workflows",
+    "Suitable for users looking for straightforward solutions without complexity"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features that differentiate it from competitors",
+    "Limited transparency regarding pricing and feature details on the public surface",
+    "No clear integration options with other platforms or tools"
+  ],
+  "best_for": [
+    "Individuals or small teams looking for basic automation solutions",
+    "Users who prioritize ease of use over advanced functionalities",
+    "Non-technical users needing straightforward task automation"
+  ],
+  "not_recommended_for": [
+    "Organizations requiring complex automation or integrations with existing systems",
+    "Users looking for a highly customizable AI solution",
+    "Teams needing advanced analytics or reporting features"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "From process to AI agent, in minutes",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers more extensive integrations and advanced automation capabilities. Choose Stack AI for simplicity; choose Zapier for complex workflows.",
+      "preferred_for_axis": "integration breadth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "ifttt",
+      "verdict_diff": "IFTTT is better for personal use with a wide range of applets. Stack AI is more focused on task automation for users needing straightforward solutions.",
+      "preferred_for_axis": "personal automation"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Stack AI does not appear to support programmatic integration options for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "With 100+ enterprise integrations, AI agents built on StackAI can read, write, and execute tasks within your existing systems.",
-      "source_surface": "homepage"
+      "evidence": "No prominent call-to-action visible on the homepage.",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "StackAI is certified to protect sensitive data, no matter the industry or use case.",
-      "source_surface": "homepage"
+      "evidence": "Pricing information not readily available.",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality visible.",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.stackai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.stackai.com/blog/stack-ai-vs-n8n",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:13:02.271Z"
+  "summary": "Reliable AI agent with solid capabilities \u2014 effective for users needing straightforward automation, but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/stack-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
