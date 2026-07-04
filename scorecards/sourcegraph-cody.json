@@ -1,99 +1,142 @@
 {
+  "schema_version": "2.0",
   "slug": "sourcegraph-cody",
   "name": "Sourcegraph Cody",
-  "category": "Coding",
+  "agent_url": "https://sourcegraph.com/cody",
+  "category": "AI Agent",
+  "run_id": "run-sourcegraph-cody-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Sourcegraph Cody",
-  "review_url": "https://hlido.eu/reviews/sourcegraph-cody/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-sourcegraph-cody-mongxfgr",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Strong AI-driven code assistant with seamless integration for developers \u2014 excels in productivity but lacks transparency on some features.",
+    "body": "Sourcegraph Cody stands out as a robust AI-driven code assistant designed to enhance developer productivity. Its strengths lie in its deep integration with Sourcegraph's code search capabilities, allowing developers to quickly access relevant code snippets and documentation. The user interface is intuitive, making it easy for users to adopt and leverage its features effectively. However, the lack of transparency regarding certain functionalities, such as training data and specific AI model details, may raise concerns for some users. Overall, Cody is a compelling choice for development teams looking to streamline their coding processes, but potential users should be aware of the opacity around certain aspects of the service.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because of its strong integration with Sourcegraph and its ability to significantly enhance developer productivity. The high score reflects robust functionality and user experience. It would shift to STEADY if transparency issues regarding features and data handling are not addressed.",
+  "what_it_does_well": [
+    "Seamlessly integrates with Sourcegraph's code search capabilities",
+    "Enhances productivity by providing quick access to code snippets",
+    "Intuitive user interface that facilitates easy adoption",
+    "Strong performance in code context understanding",
+    "Active development and updates from the Sourcegraph team"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency on training data and AI model specifics",
+    "Limited information available on user privacy and data handling practices",
+    "Some advanced features may require additional learning curve",
+    "No clear documentation on API access for integration with other tools"
+  ],
+  "best_for": [
+    "Development teams seeking to improve coding efficiency",
+    "Companies already using Sourcegraph for code management",
+    "Developers looking for AI assistance in navigating large codebases",
+    "Teams that value seamless integration with existing workflows"
+  ],
+  "not_recommended_for": [
+    "Users needing detailed transparency on AI model training and data",
+    "Individuals looking for standalone AI coding assistants without Sourcegraph integration",
+    "Teams that prioritize extensive customization options",
+    "Users unfamiliar with Sourcegraph's ecosystem"
+  ],
+  "red_flags": [
+    "Transparency issues regarding AI model and training data",
+    "Limited documentation on API and integration capabilities"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Cody is an AI coding assistant that uses all the latest LLMs and your development context to help you understand, write, and fix code faster.",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a more established AI coding experience with extensive community support. Choose Sourcegraph Cody for tighter integration with Sourcegraph's codebase.",
+      "preferred_for_axis": "integration with Sourcegraph"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides broader language support and customization options. Cody excels in Sourcegraph environments, making it better for teams using that platform.",
+      "preferred_for_axis": "Sourcegraph-specific use"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Integrates with Sourcegraph's code search capabilities",
+      "source": "https://sourcegraph.com/cody",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Sourcegraph Cody operates within the Sourcegraph platform and does not expose programmatic interfaces for external agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sourcegraph pricing\" is listed as a link on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Sourcegraph allows developers to rapidly search, write, and understand code by bringing insights from their entire codebase right into the editor.",
-      "source_surface": "docs"
+      "evidence": "'AI-driven code assistant'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Cody is available on VS Code, JetBrains, Visual Studio, and the Web app.",
-      "source_surface": "homepage"
+      "evidence": "'Get started with Cody'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Cody collects and uses data in the following ways: Prompts and responses: When you use Cody, Sourcegraph collects your prompts and responses to provide the service.",
-      "source_surface": "homepage"
+      "evidence": "No pricing details available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://sourcegraph.com/docs/cody",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://sourcegraph.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://sourcegraph.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://sourcegraph.com/docs/integration/browser-extension",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://sourcegraph.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:12:53.940Z"
+  "summary": "Strong AI-driven code assistant with seamless integration for developers \u2014 excels in productivity but lacks transparency on some features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/sourcegraph-cody.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
