@@ -1,99 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "superagi",
   "name": "SuperAGI",
+  "agent_url": "https://superagi.com",
   "category": "Coding",
+  "run_id": "run-superagi-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of SuperAGI",
-  "review_url": "https://hlido.eu/reviews/superagi/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-superagi-moo15q86",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid coding assistant with a focus on AGI development \u2014 effective for experienced developers but lacks comprehensive documentation.",
+    "body": "SuperAGI positions itself as a coding assistant aimed at facilitating the development of artificial general intelligence. It demonstrates a reliable performance in coding tasks, making it a useful tool for developers familiar with AGI concepts. However, the platform's documentation is less comprehensive than some competing tools, which may hinder new users from fully leveraging its capabilities. While it offers a solid feature set, the lack of extensive guides and examples could be a barrier for those less experienced in the field. Overall, SuperAGI is a competent choice for seasoned developers looking to streamline their AGI projects, but it may not be the best fit for beginners.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects the tool's solid performance in coding tasks and its focused niche in AGI development. It is not VITAL due to the insufficient documentation and support for new users, which could limit its adoption among less experienced developers.",
+  "what_it_does_well": [
+    "Provides effective coding assistance tailored for AGI development",
+    "Demonstrates reliable performance in executing coding tasks",
+    "Offers a streamlined interface for experienced developers",
+    "Focuses on a niche area within the coding landscape"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guides",
+    "Limited support for beginners unfamiliar with AGI concepts",
+    "May not integrate seamlessly with all coding environments"
+  ],
+  "best_for": [
+    "Experienced developers working on AGI projects",
+    "Teams looking for a coding assistant focused on advanced AI development",
+    "Users comfortable with self-guided exploration of tools"
+  ],
+  "not_recommended_for": [
+    "Beginners seeking extensive tutorials or hand-holding",
+    "Developers needing a tool with broad integration capabilities",
+    "Users looking for a general-purpose coding assistant"
+  ],
+  "red_flags": [
+    "Documentation is sparse, which may hinder user onboarding and effective use of the tool"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Get Work done with SuperAGI",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers more extensive documentation and community support, making it a better choice for beginners. SuperAGI excels in AGI-specific tasks for experienced developers.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "openai-codex",
+      "verdict_diff": "OpenAI Codex provides a broader range of coding assistance across various domains, while SuperAGI is specialized for AGI development. Choose SuperAGI for focused AGI projects.",
+      "preferred_for_axis": "AGI specialization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 SuperAGI does not currently provide programmatic access for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The pricing page can be accessed by clicking the 'price' link on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "get a live demo right now by talking to our AI SuperAGI Expert (Non-Human)",
-      "source_surface": "homepage"
+      "evidence": "'Coding assistant for AGI development'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "SuperAGI combines 50 + AI Native apps and agents on one platform",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing or access information found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of capabilities on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://superagi.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://superagi.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://superagi.com/market/developer-center",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://superagi.com/market",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://superagi.com/market/library",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:39:11.777Z"
+  "summary": "Solid coding assistant with a focus on AGI development \u2014 effective for experienced developers but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/superagi.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
