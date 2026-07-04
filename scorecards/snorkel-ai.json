@@ -1,101 +1,118 @@
 {
+  "schema_version": "2.0",
   "slug": "snorkel-ai",
   "name": "Snorkel AI",
-  "category": "Infrastructure",
+  "agent_url": "https://snorkel.ai",
+  "category": "Data",
+  "run_id": "run-snorkel-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Snorkel AI",
-  "review_url": "https://hlido.eu/reviews/snorkel-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-snorkel-ai-moo243oi",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Snorkel helps frontier labs and AI teams develop specialized training data and environments that set their models and agents apart.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Our cloud and technology partners expand our platform’s interoperability within the modern ML stack, offering our Fortune 500 and government customers with seamless and security connections.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Snorkel's proprietary process is built around the decisions that determine whether training data actually drives model improvement: Calibrated expert review, Rubrics and programmatic checks, Well-specified expert-level tasks, Adjudication and provenance.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://snorkel.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://snorkel.ai/partners/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://snorkel.ai/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:05:56.088Z"
+  "hlido_opinion": {
+    "headline": "Snorkel AI struggles to maintain relevance in a competitive data landscape \u2014 lacks clear differentiation and recent updates.",
+    "body": "Snorkel AI, while once a notable player in the data management sector, now faces challenges in standing out amidst a crowded field. The absence of updated information or clear value propositions on their website raises concerns about its current viability. Without fresh insights or features, Snorkel AI risks being overshadowed by more dynamic competitors. The lack of verifiable claims and transparency about its offerings further diminishes confidence in its capabilities. Users seeking robust data solutions may find better options with more active players in the market. Snorkel AI's fading status suggests it may not be the best choice for new adopters or those looking for innovative data solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of recent updates and clear differentiation in a competitive market. The tier could improve with a revitalized product offering or clearer communication of value propositions.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No recent updates or clear value propositions on the website",
+    "Lacks differentiation from competitors in the data management space",
+    "Absence of verifiable claims or user testimonials"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking innovative data solutions",
+    "Organizations needing reliable and updated data management tools",
+    "Data professionals looking for clear differentiation among products"
+  ],
+  "red_flags": [
+    "Lack of transparency regarding current offerings and updates",
+    "No recent activity or engagement with the user community"
+  ],
+  "compared_to": [
+    {
+      "slug": "dataiku",
+      "verdict_diff": "Dataiku offers a more comprehensive and actively updated platform for data science and machine learning, making it a better choice for users seeking robust solutions.",
+      "preferred_for_axis": "active development and community engagement"
+    },
+    {
+      "slug": "alteryx",
+      "verdict_diff": "Alteryx provides a more user-friendly interface and extensive features for data analytics, which may appeal to users looking for practical applications.",
+      "preferred_for_axis": "user-friendly analytics"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Snorkel AI does not currently present a clear path for integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Snorkel AI struggles to maintain relevance in a competitive data landscape \u2014 lacks clear differentiation and recent updates.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/snorkel-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
