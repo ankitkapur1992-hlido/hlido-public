@@ -1,103 +1,116 @@
 {
+  "schema_version": "2.0",
   "slug": "v0",
   "name": "v0",
+  "agent_url": "https://v0.dev",
   "category": "Coding",
-  "score": 65,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of v0",
-  "review_url": "https://hlido.eu/reviews/v0/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-v0-mongzrxj",
-  "claims": [
+
+  "run_id": "run-v0-handcraft-2026-05-23",
+  "run_at": "2026-05-23T14:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium-high",
+
+  "hlido_opinion": {
+    "headline": "Vercel's UI-by-prompt tool turns chat into shippable React + Tailwind components — fast, opinionated, ecosystem-locked. The default for Vercel-stack teams; less interesting if you're not.",
+    "body": "v0.dev is Vercel's UI generator, now a first-class part of their platform. The loop is genuinely fast: type a prompt, preview the output, refine in chat, ship to Vercel. Output is React + Tailwind + shadcn/ui by default — clean, opinionated, and reflective of Vercel's own stack choices. For a marketing page or an admin dashboard inside an existing Vercel deployment graph, prompt-to-deploy can land in minutes. Pro tier (around $20/month) unlocks better models and higher generation budgets. Where the product narrows: output assumes shadcn/ui plus Tailwind plus Next.js, and deviating from that stack turns reuse into rewriting. Coherence is component-by-component, not application-level — v0 will not enforce design-system consistency across separate generations without manual prompt scaffolding. Edit cycles after the initial generation are uneven: copy and color tweaks land cleanly; structural refactors (different layout, different data shape) usually mean regenerating from scratch. The agentic surface is closed — no public API, no MCP, no CLI — so agents that need programmatic UI generation must either drive a browser session or call the underlying model directly. Compared to Bolt or Lovable, v0 stays component-first and ships cleaner React; compared to Cursor, v0 generates new code from prompts while Cursor edits the code you already have.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (76) because v0 reliably ships shippable React + Tailwind output and the prompt-to-preview loop is fast for Vercel-stack teams. Not VITAL because the value compresses rapidly outside the Vercel/shadcn/Tailwind/Next.js ecosystem, and the agentic surface is closed — no public API or MCP as of 2026-05.",
+
+  "what_it_does_well": [
+    "Clean React + Tailwind + shadcn/ui output that ships as-is",
+    "Tight integration with Vercel deployment — prompt to live URL in minutes",
+    "Fast prompt-to-preview iteration with chat-based refinement",
+    "Reasonable opinionated defaults that don't require post-generation cleanup for the standard cases"
+  ],
+
+  "what_it_fails_at": [
+    "Ecosystem lock — assumes shadcn/ui + Tailwind + Next.js; non-stack users rewrite more than they reuse",
+    "Structural refactors usually require regenerating rather than editing",
+    "No application-level design-system enforcement across separate generations",
+    "No public API or MCP — closed to programmatic agent use as of 2026-05",
+    "Tight coupling to Vercel deployment surface narrows utility for teams hosting elsewhere"
+  ],
+
+  "best_for": [
+    "Vercel-stack teams already on Next.js + Tailwind + shadcn/ui",
+    "Marketing pages and admin dashboards inside existing Vercel deployments",
+    "Designers and PMs who want React output without writing it by hand",
+    "Rapid prototyping where deploy-to-Vercel is acceptable"
+  ],
+
+  "not_recommended_for": [
+    "Teams on a non-Tailwind or non-React stack",
+    "Agents needing programmatic UI generation (no API surface)",
+    "Design systems requiring custom tokens beyond shadcn defaults",
+    "Deeply custom interactive applications (game UI, complex data viz)"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Generate working applications in minutes with AI. Publish as live websites in seconds.",
-      "source_surface": "homepage"
+      "slug": "bolt-new",
+      "verdict_diff": "Bolt is application-first (full-stack StackBlitz container); v0 is component-first. Bolt wins for prototyping a working app end-to-end; v0 wins for production-ready components dropped into an existing app.",
+      "preferred_for_axis": "component-vs-app"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "lovable",
+      "verdict_diff": "Lovable is the React-app-by-chat alternative with a broader frontend remit; v0 sits closer to Vercel-stack defaults. Lovable's output is more app-shaped; v0's output is more snippet-shaped.",
+      "preferred_for_axis": "app-shape-vs-snippet-shape"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "There is a link to 'Docs' on the homepage which suggests documentation is available.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Integrate with apps\" and \"Build with your favorite tools and APIs. Automatic integration, no accounts required.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Go from idea to production in seconds with smart, secure infrastructure",
-      "source_surface": "homepage"
+      "slug": "cursor",
+      "verdict_diff": "Cursor edits your existing code in place; v0 generates new code from prompts. Cursor wins on existing-codebase refactors; v0 wins on starting from a blank canvas.",
+      "preferred_for_axis": "existing-vs-new-code"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://v0.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
+
+  "evidence_urls": [
+    {"claim": "Generates React + Tailwind components from natural-language prompts", "source": "https://v0.dev/chat", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Pro tier pricing public", "source": "https://v0.dev/pricing", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Built on shadcn/ui defaults", "source": "https://v0.dev", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "First-class Vercel platform integration", "source": "https://vercel.com/blog/announcing-v0", "tested_at": "2026-05-23", "verified": true}
   ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:14:30.002Z"
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — v0 is a chat-and-preview interface for humans. No public API, no CLI, no MCP. Agents wanting generated components must drive a browser session or use the underlying model directly.",
+    "agent_friendly_score": 1
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Generate UI with chat'", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "Prompt input on landing", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "/pricing public; Free + Pro tiers documented", "tested_at": "2026-05-23T14:30:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Live chat playground on landing", "tested_at": "2026-05-23T14:30:00Z"}
+  ],
+
+  "summary": "Vercel's UI-by-prompt tool turns chat into shippable React + Tailwind components — fast, opinionated, ecosystem-locked. The default for Vercel-stack teams; less interesting if you're not.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/v0.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2-handcraft"
 }
