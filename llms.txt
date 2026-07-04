@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-05-09 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-07-04 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,15 +10,27 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 342 published reviews (machine-readable, claim-tested)
-- 9-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
+- 818 published reviews (machine-readable, claim-tested)
+- 13-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
 - HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
 - Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
+- Live incidents registry: independently-verified agent availability failures + self-reported retractions (https://hlido.eu/v1/incidents)
+- Weekly Reliability Report: aggregate reliability trends across reviewed agents (https://hlido.eu/reports/)
+- MCP Trust register (early first cohort): independent, safety-first scoring of MCP servers — tool-poisoning / dangerous-capability / auth-posture red-flags (https://hlido.eu/mcp/, JSON: https://hlido.eu/data/mcp-register.json)
+
+## What you can do — one canonical call each (no need to crawl this site)
+
+- Trust-check a known agent: MCP tool trust_check {"agent_or_url":"<slug>"} — or GET https://hlido.eu/data/scorecards/<slug>.json
+- Get a vetted pick for a need: MCP tool recommend {"need":"<text>"} — or POST https://hlido.eu/v1/recommend {"need":"<text>"} (free: top-1, no key)
+- Check reliability failures: MCP tool get_incidents {} — or GET https://hlido.eu/v1/incidents
+- Pull everything (bulk/training): GET https://hlido.eu/data/review-registry.json — or https://hlido.eu/llms-full.txt (full prose corpus)
+
+An agent can stop here: comprehending Hlido costs this file, acting costs one call. Full surface detail follows.
 
 ## How to consume
 
 - All reviews JSON: https://hlido.eu/data/review-registry.json
-- Per-review scorecard: https://hlido.eu/data/scorecards/{slug}.json (sanitized v1.0 schema)
+- Per-review scorecard: https://hlido.eu/data/scorecards/{slug}.json (sanitized v1.0 schema; LLM-backed agents also carry a `safety_probe` block — jailbreak/manipulation-resistance rate + open instrument + per-probe evidence, rolling out)
 - HMAC-signed Trust Attestation: https://hlido.eu/data/attestations/{slug}.json (agent-to-agent verification envelope)
 - Attestation index: https://hlido.eu/data/attestations/index.json
 - Open data dump (CC-BY-4.0): https://hlido.eu/data/open/hlido-corpus.jsonl (with manifest + sha256 + LICENSE)
@@ -26,18 +38,52 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 - RSS feed (publishes only): https://hlido.eu/feed.xml
 - Full corpus: https://hlido.eu/llms-full.txt
 - MCP discovery: https://hlido.eu/.well-known/mcp-server-card/server.json
+- AGENTS.md entry point (agents.md convention): https://hlido.eu/AGENTS.md
+- MCP config (copy-paste / auto-load): https://hlido.eu/.mcp.json
 - Agent discovery manifest: https://hlido.eu/agents.json
+- Incidents JSON: https://hlido.eu/data/incidents.json (also API: https://hlido.eu/v1/incidents, RSS: https://hlido.eu/v1/incidents/feed.xml)
+- MCP incident query: `{"method":"tools/call","params":{"name":"get_incidents","arguments":{}}}`
+- Reliability report (JSON): https://hlido.eu/reports/report.json (latest edition; aggregate reliability signals across reviewed agents, dated editions under https://hlido.eu/reports/)
+- Agentic-Commerce Readiness (ACR) index: https://hlido.eu/data/acr-index.json — per-agent ACR (0-100) + band + axes + evidence_basis: is an agent ready to be delegated to / transacted with via MCP/ACP/AP2/A2W? (independent, evidence-based; sanitized)
+
+## Agentic commerce — is an agent ready to be transacted with?
+
+- ACR open data: https://hlido.eu/data/acr-index.json (per-agent score + band: COMMERCE-READY / INTEGRABLE / SURFACE-ONLY / CLOSED, with evidence_basis)
+- ACR check via MCP: tool commerce_check {"agent_or_url":"<slug>"} — is this agent ready to be delegated to / transacted with in the agentic-commerce world (MCP/ACP/AP2/A2W)?
+- Free ACR checker (web): https://hlido.eu/check/
+- Ask about any agent (free, grounded AI Q&A over our reviews): https://hlido.eu/ask/
+- Trending agents (top-rated / freshest / rising, data-backed): https://hlido.eu/trending/ (JSON: https://hlido.eu/data/trending.json)
+- EU AI Act Article-50 Readiness Register (independent transparency-readiness signal, 800+ agents; deadline 2026-08-02): https://hlido.eu/eu-ai-act/register/ (JSON: https://hlido.eu/data/article50-register.json)
+- Vendor Stack Monitor (free, shareable trust-health page for your AI-agent vendor stack): https://hlido.eu/stack/
+- Why trust Hlido / independence pledge + who runs it (named editor, no pay-to-rank, private un-gameable weights): https://hlido.eu/about/
+- Report: https://hlido.eu/blog/agentic-commerce-readiness-index-2026-06/
+- Methodology: https://hlido.eu/methodology/agentic-commerce-readiness/
+
+## MCP-server safety — the MCP Trust register
+
+Independent, evidence-first safety scoring for MCP servers (early first cohort; safety is the headline).
+Each server is scored on MCP-specific security red-flags — tool-poisoning / hidden-instruction injection,
+dangerous capabilities (shell / file / network / secrets), and auth posture — into a tier:
+SAFE / CAUTION / RISKY / DANGEROUS (or not_scanned). Outcomes + per-flag evidence are public; never a bare number.
+An on-demand dev-facing scan (name a server, get a red-flag verdict) is the next phase — not yet live.
+
+- MCP Trust register (human): https://hlido.eu/mcp/
+- Register data (machine-readable): https://hlido.eu/data/mcp-register.json — per server: security_tier, security_score, tool_poisoning_detected, dangerous_capabilities, no_auth, findings[]
+- Per-server evidence: https://hlido.eu/data/mcp-register/{slug}.json
 
 ## Developer / agent integrations
 
-- CLI: `npx hlido check <slug>` (also: search / compare / tier; no auth, ~10 KB pack, npm)
+- Reference docs (MCP tools, data endpoints, scorecard schema, badge, CLI, licensing): https://hlido.eu/docs/
+- CLI: `npx @hlido/cli check <slug>` (also: search / compare / tier; no auth, ~10 KB pack, npm)
 - GitHub Action (vendor CI gate): `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-gate@main` — fails PRs on score regression
 - Browser extension (Chrome/Firefox/Edge sideload): see https://hlido.eu/extension/ for install + manifest v3 source
-- Claude Code skill: /hlido check <slug> (4 commands; reads public JSON, no auth)
+- Claude Code plugin: `/plugin marketplace add hlido/hlido-plugin` then `/plugin install hlido@hlido` — bundles the MCP trust tools + `/hlido:check` + `/hlido:recommend` (public data, no auth). Repo: https://github.com/hlido/hlido-plugin
 
 ## Embeddable surfaces
 
-- Live score badge per slug: https://hlido.eu/embed/{slug}/
+- README/image trust badge (SVG, works where iframes don't — GitHub, npm): https://hlido.eu/badge/{slug}.svg — Markdown `[![Hlido trust score](https://hlido.eu/badge/{slug}.svg)](https://hlido.eu/check/?agent={slug})`
+- Badge as data (shields.io endpoint schema): https://hlido.eu/badge/{slug}.json
+- Live score badge per slug (rich iframe card): https://hlido.eu/embed/{slug}/
 - Sparkline embed (score history per slug): https://hlido.eu/embed/sparkline/{slug}/
 - Vendor-side: free embeds, no paywall — paste an iframe
 
@@ -46,29 +92,14 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 - Side-by-side comparison: https://hlido.eu/compare/{slugA}-vs-{slugB}/ (~1500 within-category pairs)
 - Vertical landing pages: https://hlido.eu/best/{category-or-use-case}/ (37 curated)
 
-## API
+## Data rankings & analysis (blog)
 
-https://hlido.eu/v1/openapi.json — OpenAPI 3.1 specification
-https://hlido.eu/v1/recommend — POST: agent recommendation by need + constraints
-https://hlido.eu/v1/agents/{slug} — GET: public scorecard summary
-https://hlido.eu/v1/categories — GET: 13 canonical categories
-https://hlido.eu/v1/health — GET: API uptime
-https://hlido.eu/v1/stats/public — GET: aggregate API usage stats
-
-## Incident Registry
-
-https://hlido.eu/incidents/ — public registry of agent failures
-https://hlido.eu/v1/incidents/feed.xml — RSS feed of published incidents
-https://hlido.eu/v1/incidents/{id} — JSON: single incident detail
+Evidence-backed rankings and reliability analyses derived from the live corpus (newest first):
+- We Hands-On Tested 134 AI Coding Agents — Here's How Reliable They Actually Are (2026-06-21): https://hlido.eu/blog/coding-agent-reliability-index-2026-06/
+- The State of AI Agents, 2026 — what 664 hands-on reviews reveal (2026-06-14): https://hlido.eu/blog/state-of-ai-agents-2026/
+- Index: https://hlido.eu/blog/
 
 ## Scoring
 
 Laddoo Score 0-100. Tiers: VITAL ≥90, STEADY 70-89, FADING 40-69, FLATLINE <40.
 Methodology weights are private (the moat). Outcomes, attestations, and evidence are public.
-
-## Strategic positioning
-
-<!-- llms-feature:visibility-engine -->
-### Self-Performing Visibility Engine
-[object Object]
-<!-- /llms-feature:visibility-engine -->
