@@ -1,41 +1,122 @@
 {
+  "schema_version": "2.0",
   "slug": "cherryhq-cherry-studio",
-  "name": "CherryHQ/cherry-studio",
+  "name": "Cherry Studio",
   "agent_url": "https://github.com/CherryHQ/cherry-studio",
   "category": "Chat & Companion",
   "run_id": "run-cherryhq-cherry-studio-krwaskkm",
   "run_at": "2026-06-06T06:00:56.338Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Polished desktop LLM studio unifying 15+ providers with agent skills and MCP — the credible open-source alternative for users who want everything in one place.",
+    "body": "Cherry Studio is a desktop application that takes the 'unified LLM access' category seriously. Where most clients pick a lane (local-only, or one cloud provider), Cherry Studio supports major cloud services (OpenAI, Gemini, Anthropic, Perplexity, Poe), local runtimes (Ollama, LM Studio), and 300+ pre-built assistant personas across domains. The agent-skills integration is the most interesting recent addition: it connects to the claude-code, codex, and hermes-agent ecosystems, bridging the chat-client and agentic-coding worlds. MCP support extends this further. The GitHub repo shows active multi-language localisation (English, Chinese, Japanese, Korean, Russian, and more), suggesting genuine international traction beyond the Chinese-first developer community that originated it. WebDAV sync, Mermaid charts, PDF and Office file processing, and code highlighting make this more than a chat client. The constraint is distribution: it's a desktop download from GitHub, not a SaaS. For anyone who wants a single desktop client covering both chat and agentic coding workflows without a subscription, Cherry Studio is the strongest open-source option in this category.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because the feature breadth is genuine, the multi-language localisation signals international user traction, and the MCP and agent-skills integration keeps it current with the agentic ecosystem. Not VITAL because it's GitHub-distributed desktop software without a managed SaaS tier, and verification of claimed feature quality requires install.",
+  "what_it_does_well": [
+    "Unified access to 15+ LLM providers in a single desktop client — cloud, API, and local Ollama/LM Studio",
+    "300+ pre-built assistant personas for domain-specific use cases out of the box",
+    "Agent-skills integration (claude-code, hermes-agent, codex) bridges chat and agentic coding",
+    "MCP support extends capability surface without forking the client",
+    "Active multi-language localisation: English, Chinese, Japanese, Korean, Russian, and more"
+  ],
+  "what_it_fails_at": [
+    "GitHub-only distribution requires manual install — no SaaS or managed-cloud tier",
+    "Feature quality unverifiable without install (engine ran into connection errors)",
+    "No enterprise tier, compliance documentation, or team-sharing story",
+    "Aggregator-penalty signal in topic tags suggests some SEO optimisation over genuine differentiation",
+    "No published star count verified — adoption signal unconfirmed in pipeline run"
+  ],
+  "best_for": [
+    "Developers who want a single open-source desktop client for both chat and agentic coding workflows",
+    "Teams in multi-LLM environments switching between providers without re-configuring",
+    "Users who want local model support (Ollama) alongside cloud models in one interface",
+    "Anyone who finds web-based LLM clients limiting and prefers a native desktop experience"
+  ],
+  "not_recommended_for": [
+    "Non-technical users expecting a polished SaaS onboarding experience",
+    "Enterprise buyers needing managed compliance, SSO, or centralised admin",
+    "Mobile-first users (desktop only)",
+    "Teams wanting an agent that acts autonomously — Cherry Studio is fundamentally a chat client with agent extensions"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "slug": "jan-ai",
+      "verdict_diff": "Jan focuses on local-model-first UX with clean design. Cherry Studio adds cloud providers, agent skills, and MCP. Jan wins for pure local-model use; Cherry Studio wins for multi-provider workflows.",
+      "preferred_for_axis": "multi-provider-access"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "lobe-chat",
+      "verdict_diff": "LobeChat is the SaaS-plus-self-hosted LLM front-end with strong plugin ecosystem. Cherry Studio is pure desktop with agent-skills integration. LobeChat wins for teams wanting a web UI; Cherry Studio wins for individuals preferring native desktop.",
+      "preferred_for_axis": "desktop-native-vs-web-hosted"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of CherryHQ/cherry-studio.",
-  "confidence": "low"
+  "evidence_urls": [
+    {
+      "claim": "Supports 15+ LLM providers including OpenAI, Gemini, Anthropic, Ollama, LM Studio",
+      "source": "https://github.com/CherryHQ/cherry-studio",
+      "tested_at": "2026-06-06",
+      "verified": true
+    },
+    {
+      "claim": "300+ pre-built assistant personas",
+      "source": "https://github.com/CherryHQ/cherry-studio",
+      "tested_at": "2026-06-06",
+      "verified": true
+    },
+    {
+      "claim": "MCP and agent-skills (claude-code, hermes-agent, codex) support",
+      "source": "https://github.com/CherryHQ/cherry-studio",
+      "tested_at": "2026-06-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Cherry Studio connects to MCP servers and agent skills (claude-code, hermes-agent, codex integrations documented in repo). It is a consumer of agent capabilities, not a service other agents can drive programmatically.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-06T06:00:56Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT open source, GitHub distribution"
+    }
+  ],
+  "summary": "Polished desktop LLM studio unifying 15+ providers with agent skills and MCP — the credible open-source alternative for users who want everything in one place.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/cherryhq-cherry-studio.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
