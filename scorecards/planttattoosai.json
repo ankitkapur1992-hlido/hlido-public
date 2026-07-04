@@ -1,41 +1,145 @@
 {
+  "schema_version": "2.0",
   "slug": "planttattoosai",
   "name": "AI Plant Tattoo Generator | PlantTattoosAI",
   "agent_url": "https://planttattoosai.com",
   "category": "Image & Design",
-  "run_id": "run-planttattoosai-m7851xmo",
-  "run_at": "2026-05-14T08:24:40.280Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-planttattoosai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Solid AI tool for generating plant tattoo designs, but lacks clear user pathways and pricing transparency.",
+    "body": "PlantTattoosAI offers a straightforward way to create custom plant tattoo designs from real botanical imagery. The service claims to transform these images into skin-ready art, which is appealing for plant enthusiasts. However, the site currently lacks critical features such as transparent pricing and a clear call-to-action for users, which may hinder user engagement. Additionally, the absence of verification for claims regarding customization options raises concerns about the user experience. While the core functionality appears promising, the lack of essential user pathways and evidence may limit its appeal compared to more established alternatives in the design space.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the tool functions as intended and addresses a niche need for plant tattoo designs. However, it is not VITAL due to the lack of user engagement features and transparency, which could lead to user frustration. Improvement in these areas could elevate its standing.",
+  "what_it_does_well": [
+    "Generates unique tattoo designs from real plant images",
+    "Appeals to plant lovers looking for personalized tattoo options",
+    "Offers a simple interface for design creation"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparent pricing information",
+    "No clear call-to-action on the homepage",
+    "Unverified claims about customization options",
+    "Limited evidence or demo of the design process",
+    "User engagement pathways are unclear"
+  ],
+  "best_for": [
+    "Plant enthusiasts seeking unique tattoo designs",
+    "Users looking for a simple AI tool for tattoo generation",
+    "Individuals wanting to visualize plant tattoos before consultation with artists"
+  ],
+  "not_recommended_for": [
+    "Users needing detailed pricing information before engagement",
+    "Individuals looking for a robust platform with extensive customization options",
+    "People who prefer a well-documented user experience"
+  ],
+  "red_flags": [
+    "Lack of clear pricing and call-to-action may deter potential users",
+    "Unverified customization claims could lead to user dissatisfaction"
+  ],
+  "compared_to": [
+    {
+      "slug": "inkbox",
+      "verdict_diff": "Inkbox offers a more comprehensive tattoo design platform with clear pricing and user engagement features. Choose PlantTattoosAI for a focused plant tattoo generator; choose Inkbox for a broader tattoo experience.",
+      "preferred_for_axis": "broader user engagement"
+    },
+    {
+      "slug": "tattoodo",
+      "verdict_diff": "Tattoodo provides a community-driven platform for tattoo designs, including artist connections and extensive customization. PlantTattoosAI is more niche-focused but lacks the community aspect.",
+      "preferred_for_axis": "community-driven design"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Generates unique tattoo designs from real plant images",
+      "source": "https://planttattoosai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Simple interface for design creation",
+      "source": "https://planttattoosai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 PlantTattoosAI does not currently offer an API or integration options for agents.",
+    "agent_friendly_score": 1
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "Generates plant tattoo designs",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "evidence": "No clear call-to-action on homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false
+      "required": false,
+      "evidence": "No demo or evidence of design process",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "laddoo_score": 70,
-  "score": 70,
-  "tier": "STEADY",
-  "summary": "Public-surface review of AI Plant Tattoo Generator | PlantTattoosAI.",
-  "confidence": "low"
+  "summary": "Solid AI tool for generating plant tattoo designs, but lacks clear user pathways and pricing transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/planttattoosai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
