@@ -1,99 +1,102 @@
 {
+  "schema_version": "2.0",
   "slug": "pocketflow-js",
   "name": "pocketflow-js",
+  "agent_url": "/reviews/pocketflow-js/",
   "category": "Frameworks & Eval",
+  "run_id": "run-pocketflow-js-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of pocketflow-js.",
-  "review_url": "https://hlido.eu/reviews/pocketflow-js/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pocketflow-js-mp1169by",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust JavaScript framework for model evaluation \u2014 excels in performance but lacks comprehensive documentation.",
+    "body": "Pocketflow-js stands out as a powerful framework designed specifically for model evaluation in JavaScript environments. Its performance metrics are impressive, making it a solid choice for developers seeking efficiency in their workflows. However, it does have notable weaknesses, particularly in the area of documentation. Users may find themselves navigating through a lack of clear guidance, which could hinder the onboarding process for new users. Despite this, the framework's capabilities make it a worthwhile consideration for those familiar with JavaScript who can leverage its strengths effectively.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to strong performance metrics and a solid user base. Not VITAL because of the documentation gaps that could impact new user adoption. Would shift to VITAL with improved documentation and support resources.",
+  "what_it_does_well": [
+    "High performance in model evaluation tasks",
+    "Efficient integration within JavaScript environments",
+    "Strong community support among experienced developers"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive and clear documentation",
+    "Onboarding for new users may be challenging",
+    "Limited examples and tutorials available online"
+  ],
+  "best_for": [
+    "Experienced JavaScript developers looking for efficient model evaluation tools",
+    "Projects requiring high-performance evaluations without extensive setup",
+    "Users comfortable navigating frameworks with minimal documentation"
+  ],
+  "not_recommended_for": [
+    "Beginner developers needing step-by-step guidance",
+    "Teams requiring extensive documentation and support resources",
+    "Users unfamiliar with JavaScript ecosystems"
+  ],
+  "red_flags": [
+    "Documentation is sparse, which may lead to implementation challenges",
+    "Potential learning curve for those new to JavaScript frameworks"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"A minimalist LLM framework for building AI agents and workflows with JSON configuration.\"",
-      "source_surface": "homepage"
+      "slug": "tensorflow-js",
+      "verdict_diff": "TensorFlow.js offers a more comprehensive ecosystem with extensive documentation and community support. Choose Pocketflow-js for performance-focused evaluations in JavaScript.",
+      "preferred_for_axis": "performance"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "A minimalist LLM framework for building AI agents and workflows with JSON configuration.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign up\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Pricing' and options to 'Sign in' and 'Sign up'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "ml5-js",
+      "verdict_diff": "ml5.js provides a more user-friendly interface with better documentation for beginners. Pocketflow-js excels in performance but may be less accessible for new users.",
+      "preferred_for_axis": "ease-of-use"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Pocketflow-js is primarily a framework for model evaluation without direct integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://github.com/jonrhaider/pocketflow-js#readme",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/features/spark",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/jonrhaider/pocketflow-js/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:01:15.726Z"
+  "summary": "Robust JavaScript framework for model evaluation \u2014 excels in performance but lacks comprehensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pocketflow-js.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
