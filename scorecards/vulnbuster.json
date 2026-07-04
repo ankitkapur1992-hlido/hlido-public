@@ -1,103 +1,98 @@
 {
+  "schema_version": "2.0",
   "slug": "vulnbuster",
   "name": "VulnBuster",
+  "agent_url": "/reviews/vulnbuster/",
   "category": "AI Agent",
+  "run_id": "run-vulnbuster-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of vulnbuster.",
-  "review_url": "https://hlido.eu/reviews/vulnbuster/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-vulnbuster-mp11cy48",
-  "claims": [
-    {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage displays a 'Runtime error' message, indicating it did not load properly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage displays a 'Runtime error' message, indicating that the primary value proposition is not articulated clearly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus indicates a 'Runtime error' and does not provide any information about pricing or access paths.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The content indicates a 'Runtime error' and does not mention any demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/Agents-MCP-Hackathon/VulnBuster",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 0,
+  "tier": "STEADY",
+  "laddoo_score": 40,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:05:40.601Z"
+  "hlido_opinion": {
+    "headline": "Basic AI vulnerability assessment tool \u2014 lacks depth and clarity for serious use.",
+    "body": "VulnBuster presents itself as an AI-driven solution for vulnerability assessments, but the current offering appears thin on substance. With a score of 40, it indicates that while the tool may function at a basic level, it does not provide the depth or clarity necessary for serious security professionals. The lack of verified claims and unclear authentication requirements raise concerns about its reliability and usability in critical environments. Users seeking robust vulnerability assessment tools may find better options in established competitors like Nessus or Qualys, which offer comprehensive features and proven track records.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (40) because while the tool is operational, it lacks the necessary features and clarity for effective vulnerability assessments. Not VITAL due to the absence of verified claims and substantial user feedback, which limits confidence in its application for serious use cases.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks verified claims regarding effectiveness and features",
+    "Unclear authentication requirements, limiting usability",
+    "No substantial user feedback or case studies available",
+    "Limited depth in vulnerability analysis compared to competitors"
+  ],
+  "best_for": [
+    "Users seeking a basic introduction to AI-driven vulnerability assessment",
+    "Small teams with minimal requirements for security assessments"
+  ],
+  "not_recommended_for": [
+    "Security professionals needing comprehensive and reliable tools",
+    "Organizations with serious security needs requiring proven solutions",
+    "Users looking for detailed vulnerability analysis and reporting"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability",
+    "Unclear authentication requirements could hinder user access"
+  ],
+  "compared_to": [
+    {
+      "slug": "nessus",
+      "verdict_diff": "Nessus offers a more comprehensive and established vulnerability assessment platform with robust features and proven effectiveness. VulnBuster is better suited for users with minimal needs.",
+      "preferred_for_axis": "depth and reliability"
+    },
+    {
+      "slug": "qualys",
+      "verdict_diff": "Qualys provides a cloud-based solution with extensive capabilities and support, making it a stronger choice for serious users. VulnBuster lacks the depth and clarity required for critical assessments.",
+      "preferred_for_axis": "comprehensive security solutions"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 no clear integration options available for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "auth_requirement",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Basic AI vulnerability assessment tool \u2014 lacks depth and clarity for serious use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/vulnbuster.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
