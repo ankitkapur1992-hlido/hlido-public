@@ -276,6 +276,100 @@ export function renderRecommend({ need, payload }) {
   return lines.join("\n");
 }
 
+// MCP Trust Phase 2 — safety-tier badge for `hlido scan` (distinct taxonomy
+// from review tiers: blast radius if hijacked, not overall quality).
+export function securityTierBadge(tier) {
+  const t = String(tier || "").toUpperCase();
+  switch (t) {
+    case "SAFE":
+      return c.green(c.bold("[SAFE]"));
+    case "CAUTION":
+      return c.yellow(c.bold("[CAUTION]"));
+    case "RISKY":
+      return c.red(c.bold("[RISKY]"));
+    case "DANGEROUS":
+      return c.red(c.bold("[DANGEROUS]"));
+    case "NOT_SCANNED":
+      return c.dim("[NOT SCANNED]");
+    default:
+      return c.dim(`[${t || "UNKNOWN"}]`);
+  }
+}
+
+export function renderScan({ target, result }) {
+  const r = result || {};
+  const out = [""];
+  const title = r.name || r.slug || target;
+
+  if (r.status === "not_scanned_queued") {
+    out.push(`${securityTierBadge("NOT_SCANNED")} ${c.bold(title)}`);
+    out.push("");
+    out.push(`  ${c.yellow("This is a local (stdio) MCP server — installing it executes its code.")}`);
+    out.push(`  Hlido scans these only in an isolated sandbox. ${c.bold("Queued")} — the verdict`);
+    out.push(`  lands in the public register, typically within 24h.`);
+    out.push("");
+    out.push(`  ${c.dim("Until then treat it as UNKNOWN — never assume an unscanned server is safe.")}`);
+    out.push(`  ${c.dim("Check back:")} ${r.register_url || "https://hlido.eu/mcp/"}`);
+    out.push("");
+    return out.join("\n");
+  }
+
+  if (r.status === "unreachable" || r.ok === false) {
+    out.push(`${securityTierBadge("UNKNOWN")} ${c.bold(title)}`);
+    out.push("");
+    out.push(`  ${c.red(r.error || "scan failed")}`);
+    if (r.queued) out.push(`  Queued for a full sandbox scan — check ${r.register_url || "https://hlido.eu/mcp/"} later.`);
+    out.push("");
+    return out.join("\n");
+  }
+
+  const src =
+    r.source === "register" ? "Hlido register (full sandbox scan)" :
+    r.source === "live_scan_cached" ? "live scan (cached <24h)" : "live scan (just now)";
+  out.push(`${securityTierBadge(r.security_tier)} ${c.bold(title)}  ${formatScore(r.security_score)}${c.dim("/100 safety")}`);
+  out.push(`  ${c.dim("source:")} ${src}${r.as_of ? c.dim(`  ·  as of ${String(r.as_of).slice(0, 10)}`) : ""}`);
+  out.push("");
+
+  if (r.tool_poisoning_detected) {
+    out.push(`  ${c.red(c.bold("⚠ TOOL-POISONING DETECTED"))} — hidden instructions in tool descriptions. ${c.bold("Do not install.")}`);
+    out.push("");
+  }
+
+  const caps = r.dangerous_capabilities || [];
+  if (caps.length) {
+    out.push(`  ${c.bold("Dangerous capabilities:")} ${caps.join(", ")}`);
+  }
+  // no_auth only matters when dangerous tools exist (the analyzer's own rule) —
+  // an unauthenticated read-only server is not a red line.
+  if (r.no_auth && caps.length) {
+    out.push(`  ${c.red("No authentication")} — dangerous tools reachable by anyone.`);
+  }
+  if (typeof r.tools_advertised === "number") {
+    const rel = typeof r.tool_error_rate === "number" ? `  ·  tool error rate ${(r.tool_error_rate * 100).toFixed(0)}%` : "";
+    out.push(`  ${c.dim(`${r.tools_advertised} tools advertised${rel}`)}`);
+  }
+
+  const findings = (r.findings || []).slice(0, 8);
+  if (findings.length) {
+    out.push("");
+    out.push(`  ${c.dim("Red-flags (evidence):")}`);
+    for (const f of findings) {
+      const sev = f.sev === "critical" ? c.red(f.sev) : f.sev === "high" ? c.yellow(f.sev) : c.dim(f.sev);
+      out.push(`    ${sev}  ${f.tool ? `${c.bold(f.tool)}: ` : ""}${f.why}`);
+    }
+    if ((r.findings || []).length > 8) out.push(`    ${c.dim(`… ${(r.findings || []).length - 8} more (see evidence URL)`)}`);
+  } else if (r.security_tier === "SAFE") {
+    out.push(`  ${c.green("No red-flags across advertised tools.")}`);
+  }
+
+  out.push("");
+  out.push(`  ${c.dim("How to read this: tier = blast radius if hijacked, not maintainer trust.")}`);
+  if (r.evidence_url) out.push(`  ${c.dim("Evidence:")} ${r.evidence_url.startsWith("http") ? r.evidence_url : `https://hlido.eu${r.evidence_url}`}`);
+  out.push(`  ${c.dim("Register:")} ${r.register_url || "https://hlido.eu/mcp/"}`);
+  out.push("");
+  return out.join("\n");
+}
+
 export function renderHelp() {
   const lines = [
     "",
@@ -289,10 +383,15 @@ export function renderHelp() {
     `  ${c.bold("compare <slug1> <slug2>")}     side-by-side dimensions + verdicts`,
     `  ${c.bold("tier <VITAL|STEADY|FADING|FLATLINE>")}   top 20 in tier`,
     `  ${c.bold("recommend <need>")}            constraint-driven shortlist via REST`,
+    `  ${c.bold("audit")}                       scan project agent/MCP deps for trust issues`,
+    `  ${c.bold("scan <mcp-server>")}           on-demand safety scan of an MCP server (URL,`,
+    `                              npm/PyPI package, or repo) BEFORE you install it`,
     `  ${c.bold("help")}                        this message`,
     "",
     `${c.dim("Flags:")}`,
     `  --json        machine-readable output`,
+    `  --fail-on <dangerous|risky|caution>   scan: non-zero exit at/above this`,
+    `                tier or on tool-poisoning (CI gate; default: report only)`,
     `  --no-color    disable ANSI colors`,
     `  --version     print version and exit`,
     `  --help        this message`,
