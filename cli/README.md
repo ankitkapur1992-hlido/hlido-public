@@ -29,6 +29,7 @@ hlido search <text>                 # top 5 matches by name / category / summary
 hlido compare <slug1> <slug2>       # side-by-side dimensions + per-claim verdicts
 hlido tier <tier>                   # top 20 in VITAL | STEADY | FADING | FLATLINE
 hlido recommend <need>              # constraint-driven shortlist via /v1/recommend
+hlido scan <mcp-server>             # on-demand safety scan of an MCP server
 hlido help                          # this menu
 hlido --version
 ```
@@ -105,3 +106,23 @@ MIT. See [LICENSE](./LICENSE).
 - Issues / contact: hello@hlido.eu
 
 This CLI is a thin reader over Hlido's public data. The scoring methodology, evidence pipeline, and signed attestations are the product — this CLI is the most frictionless way to read them.
+
+### `hlido audit` — npm audit for AI agents (v0.3.0)
+
+```
+npx @hlido/cli audit
+```
+
+Scans your project (`package.json`, `requirements.txt`, MCP client configs) for AI-agent/MCP dependencies and prints an independent trust table — score, tier, stale-review flags, and free-submit pointers for unreviewed agents. Non-zero exit when something is flagged (CI-friendly). `--json` for machine output.
+
+### `hlido scan` — on-demand MCP-server safety scan (v0.4.0)
+
+```
+npx @hlido/cli scan @modelcontextprotocol/server-filesystem
+npx @hlido/cli scan https://mcp.example.com/mcp
+npx @hlido/cli scan <target> --fail-on risky     # CI gate: exit 3 at/above tier or on tool-poisoning
+```
+
+Ask **before you install**: independent safety verdict for any MCP server — tier (`SAFE`/`CAUTION`/`RISKY`/`DANGEROUS`), **tool-poisoning detection** (hidden instructions in tool descriptions — the malice signal), dangerous-capability red-flags (shell/code-eval/fs-write/egress/secrets) with per-tool evidence, and auth posture.
+
+How it answers: a server already in the [Hlido MCP register](https://hlido.eu/mcp/) returns instantly with full sandbox-scan evidence; an HTTP(S) endpoint we haven't seen is statically scanned live in seconds; a local (stdio) npm/PyPI package we haven't seen is **never executed on your machine or ours outside an isolated sandbox** — it's queued, and the verdict lands in the public register (typically <24h). An unscanned server is always reported `NOT_SCANNED`, never assumed safe. Tier = blast radius if hijacked, not maintainer trustworthiness.
