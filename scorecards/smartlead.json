@@ -1,99 +1,114 @@
 {
+  "schema_version": "2.0",
   "slug": "smartlead",
   "name": "Smartlead",
+  "agent_url": "https://smartlead.ai",
   "category": "Customer Experience",
-  "score": 78,
+
+  "run_id": "run-smartlead-handcraft-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 76,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Smartlead",
-  "review_url": "https://hlido.eu/reviews/smartlead/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-smartlead-moo10fpl",
-  "claims": [
+  "laddoo_score": 76,
+  "confidence": "medium-high",
+
+  "hlido_opinion": {
+    "headline": "Deliverability-first cold outreach stack with unlimited mailbox warm-up — strongest fit for agencies running multi-domain campaigns at scale.",
+    "body": "Smartlead's wedge in the crowded cold-email category is operational rather than aesthetic: unlimited mailbox warm-up, multi-inbox rotation, and a master-inbox view that consolidates replies across dozens of sending domains. That's the workflow that agencies and SDR-as-a-service shops actually live in, and Smartlead is priced and architected for them rather than for a marketing team running a single newsletter. The 'Unlock the Full Power of AI Outbound' framing on the homepage leans hard on AI but the public-surface evidence supports the deliverability infrastructure more than it supports the agent claims — which is the right way around for this category. Compared to Lemlist (stronger creative/personalization angle, more polished UX) or Instantly (similar deliverability pitch, often cheaper at low volume), Smartlead is the choice when the bottleneck is sending-domain capacity rather than copywriting. Weaknesses on the public surface: no developer documentation linked from homepage navigation, integration list is implied via case studies rather than enumerated explicitly, and the AI agent claims in the headline are not backed by a visible product page that lets a buyer evaluate what the agent actually does. For an agency running 50+ sending domains, Smartlead's economics are hard to beat. For a single-team B2B outbound motion, Lemlist or Instantly may be the simpler choice.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (76) because the deliverability wedge is real and well-positioned, pricing is public, and a Free Trial is accessible without sales contact — but the AI agent framing in the headline is not backed by a discrete product page on the public surface, and the integration matrix has to be inferred from case studies rather than read directly. Not VITAL until the agent/automation claims are made evaluable without a demo call.",
+
+  "what_it_does_well": [
+    "Unlimited mailbox warm-up — a hard differentiator versus tools that meter warm-up by seat",
+    "Master inbox view consolidates replies across many sending domains in one screen",
+    "Multi-domain / multi-inbox rotation built into the core product (not an add-on)",
+    "Pricing page is public and accessible without a sales gate",
+    "Free trial and book-a-demo are both available without account creation"
+  ],
+
+  "what_it_fails_at": [
+    "No developer documentation linked from homepage navigation — API docs appear to exist but are not surfaced for cold visitors",
+    "Integration matrix is implicit (inferred from case studies) rather than enumerated explicitly",
+    "The 'AI agents for outbound' headline is not backed by a product page that defines what the agent does, when it acts autonomously, or how a buyer evaluates its behavior",
+    "Authentication and data-handling claims (CAN-SPAM, GDPR specifics, deliverability data retention) are not publicly stated in a discoverable security page",
+    "No MCP server published — agent-to-agent integration is webhook/API only, not first-class"
+  ],
+
+  "best_for": [
+    "B2B outbound agencies and SDR-as-a-service shops running 10+ sending domains",
+    "Growth teams hitting deliverability ceilings with Lemlist/Instantly at scale",
+    "Founders who specifically need multi-inbox rotation built-in, not bolted on",
+    "Operators who treat warm-up volume as a cost-of-doing-business constraint"
+  ],
+
+  "not_recommended_for": [
+    "Single-team outbound motions running one or two sending domains — likely overkill",
+    "Marketing teams focused on creative personalization where Lemlist's editor is stronger",
+    "Buyers who require explicit API documentation linked from homepage before signing up",
+    "Compliance-first orgs needing a published security/data-handling page upfront",
+    "Anyone whose primary need is newsletter/marketing email rather than cold outbound (use a real ESP)"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Unlock the Full Power of AI Outbound\" and \"Automate prospecting and close more deals with AI agents and a deliverability infrastructure built to land emails in the inbox.\"",
-      "source_surface": "homepage"
+      "slug": "lemlist",
+      "verdict_diff": "Lemlist wins on creative tooling, personalization (video, images, custom landing pages), and brand polish. Smartlead wins on raw deliverability infrastructure and multi-domain economics. Pick Lemlist if the bottleneck is reply rate per message; pick Smartlead if the bottleneck is sending volume per domain.",
+      "preferred_for_axis": "multi-domain-scale"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a direct link to the 'Pricing' page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Book a Demo\" and \"Start Free Trial\" are accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "instantly-ai",
+      "verdict_diff": "Instantly competes head-on with Smartlead on the deliverability pitch and is often cheaper at lower volumes. Smartlead has a more developed master-inbox and agency-tier story. Pick Instantly to start; consider Smartlead when domain count outgrows Instantly's pricing curve or when agency-tier features (sub-accounts, white-label) become load-bearing.",
+      "preferred_for_axis": "agency-tier-economics"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.smartlead.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.smartlead.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.smartlead.ai/case-study/italian-artisan",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.smartlead.ai/email-templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.smartlead.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
+
+  "evidence_urls": [
+    {"claim": "Homepage value prop centers on AI outbound + deliverability infrastructure", "source": "https://www.smartlead.ai/", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Pricing page is public and discoverable from homepage", "source": "https://www.smartlead.ai/pricing", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Free trial and Book a Demo both available without login", "source": "https://www.smartlead.ai/", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Email templates resource exists publicly", "source": "https://www.smartlead.ai/email-templates", "tested_at": "2026-05-23", "verified": true},
+    {"claim": "Case studies present (e.g. Italian Artisan) as integration/use evidence", "source": "https://www.smartlead.ai/case-study/italian-artisan", "tested_at": "2026-05-23", "verified": true}
   ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:35:11.854Z"
+
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Smartlead exposes a REST API and webhooks for campaign creation, lead management, and reply events — usable by agents to push leads in and consume reply signals. No MCP server, no first-party SDK, no CLI. An agent can drive campaigns, but discovery of the API surface requires already being a customer rather than reading public docs.",
+    "agent_friendly_score": 5
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T10:45:00Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Unlock the Full Power of AI Outbound' — deliverability infrastructure + AI agents", "tested_at": "2026-05-23T10:45:00Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "'Book a Demo' and 'Start Free Trial' both visible on homepage", "tested_at": "2026-05-23T10:45:00Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "/pricing page public and linked from homepage", "tested_at": "2026-05-23T10:45:00Z"},
+    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Public case studies + email-templates library", "tested_at": "2026-05-23T10:45:00Z"}
+  ],
+
+  "summary": "Deliverability-first cold outreach stack with unlimited mailbox warm-up — strongest fit for agencies running multi-domain campaigns at scale.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+
+  "staleness_after": "2026-08-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-23",
+
+  "attestation_url": "/data/attestations/smartlead.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2-handcraft"
 }
