@@ -1,119 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "pensieve",
   "name": "Pensieve",
+  "agent_url": "https://pensieve.uk",
   "category": "Research",
+  "run_id": "run-pensieve-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 60,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Pensieve should get a cautious T1 public-surface pass focused on visible claims, access friction, pricing clarity, and proof depth.",
-  "review_url": "https://hlido.eu/reviews/pensieve/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pensieve-mox4xhrj",
-  "claims": [
+  "laddoo_score": 60,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Pensieve struggles with visibility and clarity \u2014 lacks compelling differentiation in the research space.",
+    "body": "Pensieve currently presents as a research tool that has not established a strong presence or clear value proposition. The website offers minimal information, leading to uncertainty about its core functionalities and benefits. Without verified claims or transparent pricing, potential users may find it difficult to assess its utility. The lack of clear access requirements and a cohesive narrative around its offerings contribute to its fading status. In a competitive landscape of research tools, Pensieve needs to enhance its visibility and clarity to attract users effectively.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (60) due to insufficient information on core functionalities, lack of verified claims, and unclear pricing. To improve, Pensieve needs to articulate its value proposition more clearly and enhance user engagement through transparent communication.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Minimal information on core functionalities and benefits",
+    "Lack of verified claims to support its offerings",
+    "Unclear pricing structure and access requirements",
+    "Weak online presence and visibility in the research tool market"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking clear and verified research tools",
+    "Individuals needing transparent pricing and access information",
+    "Researchers looking for well-established alternatives"
+  ],
+  "red_flags": [
+    "Insufficient information on the website raises concerns about reliability",
+    "Lack of user testimonials or case studies to validate claims"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage loads without login and value proposition is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Homepage loads without login and the value proposition is visible: \"Pensieve connects your tools into a living understanding of your organisation, so every interaction starts fully informed.\"",
-      "source_surface": "homepage"
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley offers a robust platform with clear functionalities and a strong user base, making it a safer choice for researchers. Pensieve lacks similar visibility and clarity.",
+      "preferred_for_axis": "visibility and user engagement"
     },
     {
-      "id": "C02",
-      "claim": "Primary agent capability is stated in concrete, testable terms",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Pensieve builds a structured knowledge graph of every person, project, decision, and customer, then distils it into curated domains, briefs, and mapped relationships.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Pricing or free/trial path is publicly discoverable",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Free during beta · No credit card required",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Core workflow can be inspected from public docs, demo, templates, or repository",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Trust, privacy, or data-handling claims are findable from public navigation",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Every AI action logged, every document versioned, every access controlled.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C06",
-      "claim": "Competitor/differentiation claim is specific enough to verify",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Others connect to your data. Pensieve understands your business.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C07",
-      "claim": "Public surface exposes at least one realistic scenario for the review engine",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Write briefs, plans, and analyses with an AI copilot that already knows your team, customers, and strategy.\"",
-      "source_surface": "homepage"
+      "slug": "zotero",
+      "verdict_diff": "Zotero provides comprehensive support for research management with a transparent pricing model. Pensieve does not currently match this level of clarity.",
+      "preferred_for_axis": "transparency and support"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear functionalities and access requirements limits integration with agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://pensieve.uk/",
-      "ok": true
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Insufficient information on core functionalities",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Unclear pricing structure",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No user testimonials or case studies found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "required_items_total": 5,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-08T16:34:35.296Z"
+  "summary": "Pensieve struggles with visibility and clarity \u2014 lacks compelling differentiation in the research space.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pensieve.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
