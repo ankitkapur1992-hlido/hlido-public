@@ -1,102 +1,87 @@
 {
+  "schema_version": "2.0",
   "slug": "poolside-ai",
   "name": "Poolside",
+  "agent_url": "https://www.poolside.ai",
   "category": "Coding",
+  "run_id": "run-poolside-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Poolside",
-  "review_url": "https://hlido.eu/reviews/poolside-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-poolside-ai-moo1nh6t",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "We build foundation models to transform how work gets done.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage does not contain a link to the pricing page, making it impossible to access in two clicks.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'DOCS' suggests that documentation is accessible.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Your data never leaves your control. Role-based access control for humans and agents by default.",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.poolside.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.poolside.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:52:53.173Z"
+  "hlido_opinion": {
+    "headline": "Struggling coding assistant with unclear value proposition \u2014 lacks differentiation in a competitive landscape.",
+    "body": "Poolside presents itself as a coding assistant, but its public surface reveals significant shortcomings. There is little information available about its specific features, capabilities, or how it stands apart from other coding tools. The lack of verified claims and the absence of user testimonials or case studies raise concerns about its effectiveness and reliability. Given the competitive landscape of coding assistants, including established players like GitHub Copilot and Tabnine, Poolside's unclear positioning and lack of differentiation make it a less appealing choice for users seeking robust coding support. Without substantial improvements or clearer value messaging, it risks fading further into obscurity.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to insufficient public information, lack of verified claims, and a weak competitive position against established coding assistants. It would need to enhance its feature set and clarify its unique value proposition to improve its tier.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear information on features and capabilities",
+    "No verified claims or user testimonials available",
+    "Unclear differentiation from competitors in the coding assistant space"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Developers seeking reliable coding assistance with proven tools",
+    "Users looking for detailed information on features before adoption",
+    "Anyone needing a competitive edge in coding support"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability",
+    "Limited public information suggests potential stagnation or lack of development"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a well-established and feature-rich coding assistant experience, making it a more reliable choice for developers. Poolside lacks the same level of clarity and proven effectiveness.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides strong AI-driven code completion with a clear value proposition. Poolside does not currently match this level of clarity or effectiveness.",
+      "preferred_for_axis": "AI-driven coding support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Poolside does not provide any clear integration options for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [],
+  "summary": "Struggling coding assistant with unclear value proposition \u2014 lacks differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/poolside-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
