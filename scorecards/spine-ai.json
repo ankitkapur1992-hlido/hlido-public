@@ -1,133 +1,136 @@
 {
+  "schema_version": "2.0",
   "slug": "spine-ai",
-  "name": "spine-ai",
+  "name": "Spine AI",
+  "agent_url": "https://www.getspine.ai",
   "category": "AI Agent",
+  "run_id": "run-spine-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": {
-    "strategic_alpha": {
-      "predicted": 70,
-      "reasoning": "Genuine differentiation with visual swarm canvas + YC-backing; solves real orchestration complexity without code."
-    },
-    "execution_grit": {
-      "predicted": 50,
-      "reasoning": "Login wall blocks T2 surface testing; autopilot and integrations unverifiable without account."
-    },
-    "craft_and_soul": {
-      "predicted": 65,
-      "reasoning": "Visual canvas is a UX differentiator; onboarding complexity around credit system may hurt first-run experience."
-    },
-    "value_signal": {
-      "predicted": 55,
-      "reasoning": "Free tier exists but 2,000 credits/month may burn quickly for medium-complexity tasks."
-    }
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Innovative orchestration tool with a visual canvas, but access barriers and unclear value may hinder adoption.",
+    "body": "Spine AI presents a unique approach to orchestration with its visual swarm canvas, which is a notable differentiator in the crowded AI agent space. Backed by Y Combinator, it aims to simplify complex workflows without coding. However, the requirement for an account to access features creates a significant barrier for potential users, limiting the ability to verify the tool's full capabilities. The free tier offers 2,000 credits per month, but this may not be sufficient for medium-scale users, raising concerns about its long-term value. The onboarding experience, particularly around the credit system, could also complicate initial interactions. Overall, while Spine AI has potential, its current access model and unclear value proposition may lead to fading interest among users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  "review_url": "https://hlido.eu/reviews/spine-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-spine-ai-monedua0",
-  "claims": [
+  "tier_rationale": "FADING (65) due to the innovative approach and YC backing, but significant barriers to access and unclear long-term value signal a decline in user interest. A shift to a more accessible model or clearer value communication could improve its standing.",
+  "what_it_does_well": [
+    "Offers a unique visual swarm canvas for orchestration tasks",
+    "Backed by Y Combinator, suggesting potential for growth",
+    "Aims to solve complex workflow issues without coding"
+  ],
+  "what_it_fails_at": [
+    "Access requires an account, limiting initial user testing",
+    "Free tier credits may not be adequate for medium-scale users",
+    "Onboarding complexity around the credit system could deter new users"
+  ],
+  "best_for": [
+    "Users seeking a visual tool for orchestrating workflows",
+    "Teams interested in low-code solutions for complex tasks",
+    "Early adopters willing to navigate access barriers for innovative tools"
+  ],
+  "not_recommended_for": [
+    "Users needing immediate access without account barriers",
+    "Individuals or teams with high-volume orchestration needs exceeding free tier limits",
+    "Those who prefer straightforward onboarding experiences"
+  ],
+  "red_flags": [
+    "Login wall prevents comprehensive testing of features",
+    "Unclear long-term value proposition for users on the free tier"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Demo page exists and is public",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Book a 30-min demo\"",
-      "source_surface": "templates"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more established platform for workflow automation with extensive integrations and no login barriers for initial exploration. Choose Spine AI for a visual approach if you're willing to navigate access issues.",
+      "preferred_for_axis": "visual orchestration"
     },
     {
-      "id": "C02",
-      "claim": "Login flow documented and free trial accessible",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Get Started for Free\" and \"Get started and explore the platform\" indicate a free trial is accessible.",
-      "source_surface": "homepage|pricing"
-    },
-    {
-      "id": "C03",
-      "claim": "Free trial (2,000 credits) accessible without credit card",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Get started and explore the platform $0 / month 2,000 credits/mo",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "C04",
-      "claim": "Visual swarm canvas visible in screenshots or demo video",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Spine makes AI agents accessible to everyone. Simply prompt, and a swarm of agents goes to work.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Single-prompt → sub-agent decomposition claim visible in public materials",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Simply prompt, and a swarm of agents goes to work.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C06",
-      "claim": "Pricing page accessible with credit breakdown",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "\"Simple, transparent pricing\"",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "C07",
-      "claim": "April 2026 integrations (Slack, Google Drive, CRM) documented publicly",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "slug": "n8n",
+      "verdict_diff": "n8n provides a similar low-code orchestration experience but is open-source and allows for self-hosting. Choose n8n for more control and flexibility without the access barriers.",
+      "preferred_for_axis": "self-hosting and flexibility"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [
     {
-      "id": "homepage",
-      "url": "https://www.getspine.ai/",
-      "ok": true
+      "claim": "Visual swarm canvas for orchestration",
+      "source": "https://www.getspine.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "pricing",
-      "url": "https://www.getspine.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://www.getspine.ai/gallery",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.getspine.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "claim": "Backed by Y Combinator",
+      "source": "https://www.getspine.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     }
   ],
-  "required_items_total": 2,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:01:44.183Z"
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 access barriers prevent agent-driven workflows from being tested or integrated effectively.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Visual orchestration without code'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free tier with credits mentioned on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Innovative orchestration tool with a visual canvas, but access barriers and unclear value may hinder adoption.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/spine-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
