@@ -15,25 +15,25 @@
   "laddoo_score": 58,
   "confidence": "medium",
   "hlido_opinion": {
-    "headline": "Capable open-source generative TTS model for dialogue â genuine quality for English and Chinese, but research-origin complexity and no SaaS path limit practical adoption.",
-    "body": "ChatTTS is a Python/PyTorch text-to-speech model optimised for natural conversational speech in English and Chinese. It appeared on Trendshift's trending repositories, suggesting genuine developer interest. The model design targets the 'daily dialogue' use case â short, conversational utterances with natural prosody â rather than the audiobook-narration style of most open-source TTS. That specialisation is valuable: systems like ElevenLabs and Play.ht dominate the SaaS TTS space but carry per-character pricing and API dependency; ChatTTS offers a local, free alternative for developers who need dialogue-quality speech without vendor lock-in. The practical friction is substantial: PyTorch inference, CUDA setup for reasonable performance, and research-grade documentation are all significant barriers for non-ML developers. The listed homepage (2noise.com) exists but is not the canonical integration path. English and Chinese are supported natively; other languages are 'coming soon'. For developers building voice agents in English or Chinese who want local, API-free synthesis with dialogue-quality prosody, ChatTTS is the strongest open-source option. For everyone else, ElevenLabs or cloud TTS APIs are the right starting point.",
+    "headline": "Capable open-source generative TTS model for dialogue — genuine quality for English and Chinese, but research-origin complexity and no SaaS path limit practical adoption.",
+    "body": "ChatTTS is a Python/PyTorch text-to-speech model optimised for natural conversational speech in English and Chinese. It appeared on Trendshift's trending repositories, suggesting genuine developer interest. The model design targets the 'daily dialogue' use case — short, conversational utterances with natural prosody — rather than the audiobook-narration style of most open-source TTS. That specialisation is valuable: systems like ElevenLabs and Play.ht dominate the SaaS TTS space but carry per-character pricing and API dependency; ChatTTS offers a local, free alternative for developers who need dialogue-quality speech without vendor lock-in. The practical friction is substantial: PyTorch inference, CUDA setup for reasonable performance, and research-grade documentation are all significant barriers for non-ML developers. The listed homepage (2noise.com) exists but is not the canonical integration path. English and Chinese are supported natively; other languages are 'coming soon'. For developers building voice agents in English or Chinese who want local, API-free synthesis with dialogue-quality prosody, ChatTTS is the strongest open-source option. For everyone else, ElevenLabs or cloud TTS APIs are the right starting point.",
     "voice": "Hlido Editor",
     "as_of": "2026-06-08",
     "editor_signature_pending": true
   },
-  "tier_rationale": "FADING (58) because the dialogue-quality TTS fills a real gap for English/Chinese local inference, and the Trendshift signal confirms developer interest. Not STEADY because the install complexity (PyTorch, CUDA) is a genuine barrier, only two languages are supported, and there is no managed API or SaaS tier â making it inaccessible to the majority of developers who need TTS.",
+  "tier_rationale": "FADING (58) because the dialogue-quality TTS fills a real gap for English/Chinese local inference, and the Trendshift signal confirms developer interest. Not STEADY because the install complexity (PyTorch, CUDA) is a genuine barrier, only two languages are supported, and there is no managed API or SaaS tier — making it inaccessible to the majority of developers who need TTS.",
   "what_it_does_well": [
-    "Dialogue-optimised prosody â sounds like natural conversation, not robotic narration",
-    "Supports English and Chinese natively â useful for bilingual applications",
-    "Fully local inference â no API key, no per-character pricing, no vendor dependency",
+    "Dialogue-optimised prosody — sounds like natural conversation, not robotic narration",
+    "Supports English and Chinese natively — useful for bilingual applications",
+    "Fully local inference — no API key, no per-character pricing, no vendor dependency",
     "Open source (research licence) with active development and community interest",
-    "Appeared on Trendshift trending repositories â real developer adoption signal"
+    "Appeared on Trendshift trending repositories — real developer adoption signal"
   ],
   "what_it_fails_at": [
-    "PyTorch + CUDA setup required â not accessible to non-ML developers",
+    "PyTorch + CUDA setup required — not accessible to non-ML developers",
     "Only English and Chinese supported; other languages 'coming soon' with no timeline",
-    "No SaaS or managed API tier â requires self-hosting with GPU inference",
-    "Research-grade documentation â integration quality depends on developer ML expertise",
+    "No SaaS or managed API tier — requires self-hosting with GPU inference",
+    "Research-grade documentation — integration quality depends on developer ML expertise",
     "No verified production deployments or performance benchmarks in the pipeline data"
   ],
   "best_for": [
@@ -52,7 +52,7 @@
   "compared_to": [
     {
       "slug": "elevenlabs",
-      "verdict_diff": "ElevenLabs is the managed SaaS TTS leader â highest quality voices, multilingual, easy API. ChatTTS is local, free, and dialogue-specialised for English/Chinese. ElevenLabs wins for quick integration; ChatTTS wins for local inference without API costs.",
+      "verdict_diff": "ElevenLabs is the managed SaaS TTS leader — highest quality voices, multilingual, easy API. ChatTTS is local, free, and dialogue-specialised for English/Chinese. ElevenLabs wins for quick integration; ChatTTS wins for local inference without API costs.",
       "preferred_for_axis": "local-free-dialogue-synthesis"
     },
     {
@@ -88,7 +88,7 @@
     "has_webhook": false,
     "has_sdk": true,
     "behavioral_testable": true,
-    "agent_integration_path": "Python library â agents can invoke ChatTTS for local TTS synthesis via Python import. No REST API or MCP tool surface. Requires local GPU inference setup.",
+    "agent_integration_path": "Python library — agents can invoke ChatTTS for local TTS synthesis via Python import. No REST API or MCP tool surface. Requires local GPU inference setup.",
     "agent_friendly_score": 4
   },
   "checklist": [
@@ -105,7 +105,7 @@
       "evidence": "A generative speech model for daily dialogue"
     }
   ],
-  "summary": "Capable open-source generative TTS model for dialogue â genuine quality for English and Chinese, but research-origin complexity and no SaaS path limit practical adoption.",
+  "summary": "Capable open-source generative TTS model for dialogue — genuine quality for English and Chinese, but research-origin complexity and no SaaS path limit practical adoption.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "staleness_after": "2026-09-08",
   "review_age_days_at_publish": 3,
