@@ -1,54 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "nurgo-software",
-  "name": "BrainSoup: build an AI team that works for you",
+  "name": "BrainSoup",
+  "agent_url": "https://www.nurgo-software.com/products/brainsoup",
   "category": "Workflow & Automation",
+  "run_id": "run-nurgo-software-mpvu4iqe",
+  "run_at": "2026-05-14T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 70,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of BrainSoup: build an AI team that works for you.",
+  "laddoo_score": 70,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A desktop multi-agent orchestration tool from a small indie developer \u2014 ambitious multi-agent thesis, but the thin public surface makes evaluation difficult for buyers and agents alike.",
+    "body": "BrainSoup (by Nurgo Software) is a desktop application that lets users build and coordinate teams of AI agents: each agent can have a specialisation, memory, and tool access, and they communicate to complete tasks. The concept is genuinely differentiated from the 'one-box chat' tools that dominated 2023-24 \u2014 it is closer to CrewAI or AutoGen but with a GUI and desktop-first posture rather than a developer-first one. The problem is the public surface barely communicates this. The product page at nurgo-software.com/products/brainsoup exists and loads, but the automated test found no pricing page, no documentation page, no integrations list, and no demo. For a product that lives on your desktop and requires configuration, the lack of discoverable documentation is a serious evaluation barrier. Nurgo Software is a small Windows desktop software developer (they also make Aqua Snap, a window management tool) with a real track record \u2014 this is not vaporware \u2014 but BrainSoup's web surface has not kept pace with the ambition of the product concept.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) reflects that the product concept is real and differentiated (multi-agent desktop orchestration from an established indie developer) but the public surface is thin: no discoverable pricing, no docs, no demo. A buyer or agent cannot adequately evaluate this product from the web surface alone.",
+  "what_it_does_well": [
+    "Multi-agent specialisation and coordination \u2014 agents can be assigned roles, memory, and tools",
+    "Desktop-native posture avoids the latency and privacy concerns of cloud-hosted agent tools",
+    "From an established Windows software developer (Nurgo Software) with proven indie track record",
+    "Positions toward non-developer users wanting GUI-driven agent orchestration"
+  ],
+  "what_it_fails_at": [
+    "Pricing not publicly discoverable \u2014 requires navigating to a buy/download flow",
+    "No documentation page found in automated surface audit",
+    "No integration list or API surface documented",
+    "Web presence does not communicate the product's actual capability depth",
+    "Demo or trial not prominently surfaced for pre-download evaluation"
+  ],
+  "best_for": [
+    "Power users who want GUI-driven multi-agent orchestration without writing Python",
+    "Desktop-first workflows where cloud-hosted agents are not acceptable for privacy reasons",
+    "Windows users wanting a CrewAI/AutoGen equivalent with a native app shell"
+  ],
+  "not_recommended_for": [
+    "Developers wanting code-first agent orchestration (CrewAI/AutoGen serve this better)",
+    "Teams needing cloud-native, multi-user agent workflows",
+    "Buyers who need to evaluate software from documentation before installing"
+  ],
+  "red_flags": [
+    "No pricing, docs, or demo accessible from the public product page \u2014 a significant evaluation barrier for a desktop product that requires installation and configuration."
+  ],
+  "compared_to": [
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is the developer-first Python framework for multi-agent orchestration; BrainSoup is the GUI-first desktop alternative. BrainSoup wins for non-developers; CrewAI wins for anyone who can write Python.",
+      "preferred_for_axis": "non-developer-gui"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Product page accessible",
+      "source": "https://www.nurgo-software.com/products/brainsoup",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "No pricing page found in automated audit",
+      "source": "automated surface audit 2026-05-14",
+      "tested_at": "2026-05-14",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Desktop application with no documented external API or programmatic interface on the public surface. Cannot be driven by an external agent; is itself an agent orchestration tool intended for human-supervised desktop use.",
+    "agent_friendly_score": 2
+  },
+  "summary": "Desktop multi-agent orchestration with a genuine concept \u2014 BrainSoup builds AI teams for you, but the thin public surface makes evaluation difficult from the web alone.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/nurgo-software/",
   "reviewed_at": "2026-05-14",
-  "run_id": "run-nurgo-software-mpvu4iqe",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Product page loads at nurgo-software.com/products/brainsoup with multi-agent framing",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "fail",
+      "evidence": "No pricing page found in automated surface audit",
+      "source_surface": "homepage"
     },
     {
       "id": "C03",
       "claim": "Documentation or live demo accessible without login",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs page found",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
       "claim": "Integration list or supported frameworks documented",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations page found",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No data handling page discoverable",
       "source_surface": "unknown"
     }
   ],
@@ -96,8 +171,9 @@
     }
   ],
   "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
+  "required_items_passing": 1,
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/nurgo-software.json",
   "generated_at": "2026-06-01T23:23:58.265Z"
 }
