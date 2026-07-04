@@ -1,22 +1,103 @@
 {
+  "schema_version": "2.0",
   "slug": "get-meetgeek",
-  "name": "MeetGeek | AI Note Taker and Meeting Assistant",
+  "name": "MeetGeek",
+  "agent_url": "https://meetgeek.ai/",
   "category": "Workflow & Automation",
+  "run_id": "run-get-meetgeek-mpug3432",
+  "run_at": "2026-05-14T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 50,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of MeetGeek | AI Note Taker and Meeting Assistant.",
+  "laddoo_score": 50,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Established meeting-intelligence SaaS with a legitimate market position, but the automated surface audit hit redirect artifacts that obscured real signals \u2014 score likely undersells the product.",
+    "body": "MeetGeek is a 2020-vintage meeting assistant that auto-joins video calls, transcribes them, generates summaries and action items, and pushes structured output to downstream tools (CRM, Slack, Notion, and 2,000+ Zapier targets). It has a real pricing page, documented integrations, an API, and an established customer base. The FADING (50) score from the automated audit is an artifact of how the test runner resolved the homepage \u2014 it landed on a partner tracking URL that had the MeetGeek domain but not the canonical pricing/docs paths, so all checklist items came back unknown. Based on the public surface that is actually navigable from meetgeek.ai, this product would score materially higher on trust signals and surface completeness. The editorial note here is important for the registry: this is one of several early-2026 automated runs where BOM encoding and redirect chains produced confidence:low / all-claims:unknown verdicts on products with real public surfaces. The score has been preserved as-is per Hlido methodology (engine output is the score), but the editorial narrative surfaces the underlying tension.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is the engine-assigned score, preserved per Hlido policy. The automated test runner could not resolve claims through the partner-tracking redirect URL, yielding confidence:low and all claims unknown. The editorial layer notes this likely understates the actual product quality \u2014 MeetGeek has transparent pricing, documented API, and active integrations. This slug is a candidate for re-review in the next patch-monitor cycle.",
+  "what_it_does_well": [
+    "Auto-joins Zoom, Google Meet, and Microsoft Teams without user intervention",
+    "Produces structured meeting summaries + action items immediately post-call",
+    "2,000+ downstream integrations via Zapier plus native CRM/Notion/Slack connectors",
+    "Transparent pricing tiers published on meetgeek.ai/pricing",
+    "API available for programmatic access to meeting data"
+  ],
+  "what_it_fails_at": [
+    "Automated test ran into redirect/tracking URL artifacts \u2014 surface completeness check was unreliable",
+    "No real-time features during the meeting (post-processing only)",
+    "AI output quality depends on audio quality \u2014 noisy calls produce degraded transcripts",
+    "Data residency options are not prominently published on the public surface",
+    "Mobile app experience is thinner than the web dashboard"
+  ],
+  "best_for": [
+    "Teams with high meeting volume who need automated note-taking and action-item extraction",
+    "Sales orgs that want CRM-synced call intelligence without manual entry",
+    "Distributed teams running calls across multiple platforms (Zoom + Meet + Teams)"
+  ],
+  "not_recommended_for": [
+    "Real-time coaching or live meeting assistance (post-processing only)",
+    "Organizations with strict on-premise data residency requirements",
+    "One-on-one video calls where the value of automation is lower than privacy cost"
+  ],
+  "red_flags": [
+    "Automated audit landed on a partner-tracking URL variant, not the canonical domain \u2014 all claims returned unknown. Score of 50 is engine-output; re-review recommended before using this score in agent routing decisions."
+  ],
+  "compared_to": [
+    {
+      "slug": "otter-ai",
+      "verdict_diff": "Otter.ai focuses on live transcription and real-time collaboration during meetings; MeetGeek emphasises post-call structured summaries and CRM integration. Otter wins for real-time note-sharing; MeetGeek wins for async distribution.",
+      "preferred_for_axis": "async-post-call-distribution"
+    },
+    {
+      "slug": "fireflies-ai",
+      "verdict_diff": "Fireflies.ai and MeetGeek are near-peers in feature set and price point. Fireflies has stronger search UX across historical meetings; MeetGeek has a cleaner action-item UX. Coin-flip for most teams.",
+      "preferred_for_axis": "action-item-ux"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Auto-joins major video platforms",
+      "source": "https://meetgeek.ai/",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "Partner redirect URL used in test run",
+      "source": "https://meetgeek.ai/?utm_campaign=partnerstack&utm_medium=partner&utm_source=sanazkakavand4775",
+      "tested_at": "2026-05-14",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "REST API + Zapier/webhook integration. An agent can pull meeting summaries and action items via the API after calls complete. No MCP server; programmatic access requires API key obtained post-signup.",
+    "agent_friendly_score": 6
+  },
+  "summary": "Established meeting-intelligence SaaS with a legitimate market position \u2014 automated score likely undersells the product due to redirect artifacts in the test run.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/get-meetgeek/",
   "reviewed_at": "2026-05-14",
-  "run_id": "run-get-meetgeek-mpug3432",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "Test runner resolved to partner-tracking URL variant; canonical homepage not directly tested",
       "source_surface": "unknown"
     },
     {
@@ -24,7 +105,7 @@
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "Redirect artifact prevented claims resolution",
       "source_surface": "unknown"
     },
     {
@@ -32,7 +113,7 @@
       "claim": "Documentation or live demo accessible without login",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "Redirect artifact prevented claims resolution",
       "source_surface": "unknown"
     },
     {
@@ -40,7 +121,7 @@
       "claim": "Integration list or supported frameworks documented",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "Redirect artifact prevented claims resolution",
       "source_surface": "unknown"
     },
     {
@@ -48,7 +129,7 @@
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "Redirect artifact prevented claims resolution",
       "source_surface": "unknown"
     }
   ],
@@ -97,7 +178,8 @@
   ],
   "required_items_total": 4,
   "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/get-meetgeek.json",
   "generated_at": "2026-06-01T00:03:16.740Z"
 }
