@@ -1,41 +1,107 @@
 {
+  "schema_version": "2.0",
   "slug": "coderluii-holyclaude",
-  "name": "CoderLuii/HolyClaude",
+  "name": "HolyClaude",
   "agent_url": "https://github.com/CoderLuii/HolyClaude",
   "category": "Coding",
   "run_id": "run-coderluii-holyclaude-g3u1yxuv",
   "run_at": "2026-06-06T18:00:37.109Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 67,
+  "tier": "FADING",
+  "laddoo_score": 67,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Docker-packaged AI coding workstation bundling Claude Code, 7 AI CLIs, and 50+ tools — impressive all-in-one scope, but the Docker install barrier and licence complexity limit who can actually use it.",
+    "body": "HolyClaude is a Docker Compose setup that packages Claude Code alongside six other AI coding CLIs (Aider, Codex, Gemini CLI, and others), a web UI for browser access, a headless Playwright browser for testing and screenshots, and over 50 development tools. The engineering ambition is real: combining multiple AI coding agents with a persistent workstation environment solves a genuine problem — developers who want to switch between AI coding assistants without re-configuring each environment. The website at holyclaude.coderluii.dev and active multi-language documentation (English, Spanish, French, Italian, Portuguese, German, Russian) suggest more than a personal side project. The friction points are structural: Docker Compose is a non-trivial install for most developers; Claude Code and Codex require separate API credentials and are subject to their own licence terms; and combining seven AI CLI tools in one container raises questions about update coordination when upstream CLIs release. The headless browser for testing is a genuine differentiator — Claude Code alone does not include this — but 'every edge case has been handled' is the kind of claim that invites scepticism without a verifiable test suite.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (67) because the concept is useful and the multi-language docs show genuine effort, but the Docker + multi-CLI install barrier, unverifiable 'every edge case handled' claim, and licence complexity of bundling multiple AI tools cap the score. Not STEADY because adoption signals are unverified and the target audience is narrower than general developers.",
+  "what_it_does_well": [
+    "Bundles Claude Code, Aider, Codex, and 4 other AI CLIs in a single Docker Compose setup — reduces per-CLI configuration overhead",
+    "Web UI enables browser-based access to the AI coding workstation without SSH",
+    "Headless Playwright browser included — supports screenshot capture and automated testing in the agent session",
+    "50+ development tools pre-installed — removes the manual setup step for common dev dependencies",
+    "Active multi-language documentation in 7 languages suggests broader audience reach"
+  ],
+  "what_it_fails_at": [
+    "Docker Compose install is a meaningful barrier for developers without container experience",
+    "Bundling multiple AI CLIs with separate API credential requirements adds friction, not removes it",
+    "'Every edge case has been handled' claim is unverifiable without a published test suite",
+    "Update coordination across 7 AI CLIs is a maintenance liability — upstream changes may break the bundle",
+    "Combining Claude Code (Anthropic licence) with other CLIs raises licence compatibility questions"
+  ],
+  "best_for": [
+    "Developers who are already Docker-fluent and want a pre-configured multi-AI coding environment",
+    "Teams experimenting with multiple AI coding agents who want a consistent base environment",
+    "Anyone who wants a browser-accessible AI coding workstation on a remote server",
+    "Developers who need screenshotting and automated browser testing alongside their AI coding sessions"
+  ],
+  "not_recommended_for": [
+    "Developers unfamiliar with Docker who want a quick AI coding setup (Claude Code directly is simpler)",
+    "Production environments where licence clarity for each bundled tool is required",
+    "Teams who only use one AI CLI — the bundle overhead exceeds the benefit for single-tool users",
+    "Enterprise buyers needing certified, auditable distributions"
+  ],
+  "red_flags": [
+    "Bundles tools with separate Anthropic, OpenAI, and other vendor licence terms — buyers should verify compliance before enterprise deployment."
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C02",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is the Anthropic-native coding agent with direct IDE and terminal integration. HolyClaude wraps Claude Code inside a Docker environment alongside 6 other CLIs. Claude Code wins for clean single-tool use; HolyClaude wins for multi-CLI experimentation in a contained environment.",
+      "preferred_for_axis": "multi-cli-experimentation"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of CoderLuii/HolyClaude.",
-  "confidence": "low"
+  "evidence_urls": [
+    {
+      "claim": "Claude Code + 7 AI CLIs + headless browser + 50+ tools in Docker",
+      "source": "https://github.com/CoderLuii/HolyClaude",
+      "tested_at": "2026-06-06",
+      "verified": true
+    },
+    {
+      "claim": "Web UI at holyclaude.coderluii.dev",
+      "source": "https://holyclaude.coderluii.dev",
+      "tested_at": "2026-06-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "HolyClaude is a Docker-based development environment. Claude Code and other CLIs inside the container can use MCP if individually configured. No programmatic API for driving HolyClaude itself from an external agent.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-06T18:00:37Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI coding workstation: Claude Code + web UI + 7 AI CLIs + headless browser + 50+ tools"
+    }
+  ],
+  "summary": "Docker-packaged AI coding workstation bundling Claude Code, 7 AI CLIs, and 50+ tools — impressive all-in-one scope, but the Docker install barrier and licence complexity limit who can actually use it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/coderluii-holyclaude.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
