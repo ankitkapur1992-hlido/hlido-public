@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hlido"
-version = "0.1.0"
-description = "Hlido — independent, evidence-backed trust scores for AI agents. Umbrella package; today it installs the hlido-trust agent-vetting tools (CrewAI + LangChain)."
+version = "0.2.0"
+description = "Hlido — independent, evidence-backed trust scores for AI agents. One package: `pip install hlido` for the core, plus framework extras hlido[nemo|langchain|crewai]."
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
@@ -20,11 +20,12 @@ classifiers = [
 ]
 # Umbrella: installing `hlido` pulls the focused trust tool. As Hlido's Python
 # surface grows, the full SDK lives under this same `hlido` namespace.
-dependencies = ["hlido-trust>=0.1.0"]
+dependencies = ["hlido-trust>=0.2.0"]
 
 [project.optional-dependencies]
-crewai = ["hlido-trust[crewai]>=0.1.0"]
-langchain = ["hlido-trust[langchain]>=0.1.0"]
+crewai = ["hlido-trust[crewai]>=0.2.0"]
+langchain = ["hlido-trust[langchain]>=0.2.0"]
+nemo = ["hlido-trust[nemo]>=0.2.0"]
 
 [project.urls]
 Homepage = "https://hlido.eu"
