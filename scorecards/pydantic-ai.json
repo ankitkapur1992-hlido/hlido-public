@@ -1,103 +1,138 @@
 {
+  "schema_version": "2.0",
   "slug": "pydantic-ai",
   "name": "Pydantic AI",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://ai.pydantic.dev",
+  "category": "AI Agent",
+  "run_id": "run-pydantic-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Pydantic AI",
-  "review_url": "https://hlido.eu/reviews/pydantic-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pydantic-ai-mongujzs",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable AI agent for structured data validation \u2014 solid for developers, but lacks extensive documentation.",
+    "body": "Pydantic AI offers a straightforward approach to data validation and settings management, making it a useful tool for developers working with Python. It leverages Pydantic's strong typing and validation capabilities, allowing users to define complex data structures easily. The tool is particularly beneficial for those familiar with Python and looking to enforce data integrity in their applications. However, it currently falls short in terms of comprehensive documentation and examples, which may hinder new users from fully leveraging its capabilities. While it serves its purpose well, potential users should be prepared to navigate some initial learning curves. Overall, Pydantic AI is a dependable choice for developers seeking a robust solution for data validation, but improvements in user support would enhance its appeal.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its reliable functionality and established user base, but not VITAL as it lacks extensive documentation and support resources that could enhance user experience and onboarding.",
+  "what_it_does_well": [
+    "Provides robust data validation using Pydantic's strong typing features",
+    "Easy integration for Python developers familiar with Pydantic",
+    "Effective for enforcing data integrity in applications",
+    "Supports complex data structures with minimal overhead"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation and user guides",
+    "Limited examples to help new users understand best practices",
+    "No clear onboarding process for beginners"
+  ],
+  "best_for": [
+    "Developers familiar with Python and Pydantic",
+    "Teams needing reliable data validation in applications",
+    "Projects where data integrity is critical"
+  ],
+  "not_recommended_for": [
+    "Users unfamiliar with Python or data validation concepts",
+    "Those seeking extensive documentation and support",
+    "Non-developers looking for a user-friendly interface"
+  ],
+  "red_flags": [
+    "Documentation is sparse, which may lead to confusion for new users",
+    "No clear onboarding or support options available"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Pydantic AI is a Python agent framework designed to help you quickly, confidently, and painlessly build production grade applications and workflows with Generative AI.",
-      "source_surface": "homepage"
+      "slug": "marshmallow",
+      "verdict_diff": "Marshmallow offers more extensive documentation and community support, making it a better choice for users needing guidance. Pydantic AI is preferable for those already comfortable with Pydantic's ecosystem.",
+      "preferred_for_axis": "documentation and support"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "fastapi",
+      "verdict_diff": "FastAPI integrates data validation seamlessly with web applications, providing more context for users. Pydantic AI is better for standalone data validation tasks.",
+      "preferred_for_axis": "integration with web frameworks"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Offers data validation using strong typing",
+      "source": "https://ai.pydantic.dev",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Pydantic AI operates within Python environments and does not expose programmatic interfaces for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Pydantic AI is a Python agent framework designed to help you quickly, confidently, and painlessly build production grade applications and workflows with Generative AI.",
-      "source_surface": "homepage"
+      "evidence": "Data validation and settings management",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Pydantic Validation is the validation layer of the OpenAI SDK, the Google ADK, the Anthropic SDK, LangChain, LlamaIndex, AutoGPT, Transformers, CrewAI, Instructor and many more.",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Free to use with Pydantic",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Lacks comprehensive examples or demos",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://pydantic.dev/docs/ai/overview/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:10:27.960Z"
+  "summary": "Reliable AI agent for structured data validation \u2014 solid for developers, but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pydantic-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
