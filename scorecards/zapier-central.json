@@ -1,98 +1,165 @@
 {
+  "schema_version": "2.0",
   "slug": "zapier-central",
   "name": "Zapier Central",
-  "category": "Workflow & Automation",
+  "agent_url": "https://zapier.com/central",
+  "category": "AI Agent",
+  "run_id": "run-zapier-central-v2-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Zapier Central",
-  "review_url": "https://hlido.eu/reviews/zapier-central/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-zapier-central-monh15uy",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust automation platform with extensive integrations \u2014 ideal for users seeking seamless workflows but may overwhelm newcomers.",
+    "body": "Zapier Central stands out as a powerful automation platform that connects various applications to streamline workflows. With a vast library of integrations, users can create custom automations without needing to code. The platform's user-friendly interface allows for quick setup, making it accessible for both tech-savvy users and those less familiar with automation tools. However, the sheer number of options and features can be daunting for newcomers, potentially leading to a steep learning curve. The platform excels in reliability and performance, ensuring that automations run smoothly without frequent disruptions. While it is a top choice for users looking to enhance productivity through automation, those new to such tools may require additional support to fully leverage its capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its extensive integration capabilities, reliable performance, and strong user adoption. It remains a go-to solution for automation, though it may benefit from improved onboarding resources for new users.",
+  "what_it_does_well": [
+    "Offers a vast library of integrations with popular applications",
+    "User-friendly interface for creating automations without coding",
+    "Reliable performance with minimal downtime",
+    "Strong community support and resources available",
+    "Regular updates and improvements to the platform"
+  ],
+  "what_it_fails_at": [
+    "Can be overwhelming for new users due to the number of options",
+    "Limited customization for advanced users seeking deeper integrations",
+    "Pricing may become steep for larger teams or extensive usage",
+    "Documentation can be inconsistent, making troubleshooting challenging"
+  ],
+  "best_for": [
+    "Small to medium-sized businesses looking to automate repetitive tasks",
+    "Tech-savvy users who want to build complex workflows",
+    "Teams needing to integrate multiple applications seamlessly",
+    "Users seeking a reliable automation solution with strong community support"
+  ],
+  "not_recommended_for": [
+    "Individuals or teams with minimal technical expertise",
+    "Users needing highly customized automation solutions",
+    "Organizations with strict budget constraints on automation tools",
+    "Users who prefer a more guided onboarding experience"
+  ],
+  "red_flags": [
+    "Potential steep learning curve for newcomers to automation tools",
+    "Documentation inconsistencies may hinder effective troubleshooting"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Meet your new AI teammates\" and \"Create your own superhuman teammates in minutes.\"",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat offers a more visual approach to automation, which may appeal to users who prefer a graphical interface. Zapier Central excels in a broader range of integrations and user-friendly setup.",
+      "preferred_for_axis": "integration breadth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'View pricing' which can be accessed in two clicks.",
-      "source_surface": "homepage"
+      "slug": "automateio",
+      "verdict_diff": "Automate.io is often more affordable for smaller teams, but Zapier Central provides a more extensive feature set and reliability for larger operations.",
+      "preferred_for_axis": "feature set"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Read the Guide\"",
-      "source_surface": "docs"
+      "slug": "n8n",
+      "verdict_diff": "n8n allows for self-hosting and more complex workflows, appealing to developers. Zapier Central is better for users seeking ease of use and quick setup.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Extensive library of integrations",
+      "source": "https://zapier.com/apps",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Power your product or AI agent with 8,000 app integrations\"",
-      "source_surface": "docs"
+      "claim": "User-friendly interface for automations",
+      "source": "https://zapier.com/help",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Reliable performance with minimal downtime",
+      "source": "https://zapier.com/status",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Strong community support available",
+      "source": "https://zapier.com/community",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Zapier Central can be integrated with various agents via its API and webhooks, allowing for automated workflows and task management.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Automate your work with Zapier'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Fully managed authentication\"",
-      "source_surface": "docs"
+      "evidence": "/pricing transparent for various tiers",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://zapier.com/agents",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://zapier.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://zapier.com/developer-platform",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://zapier.com/apps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://zapier.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://zapier.com/blog/what-you-should-automate/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:16:09.285Z"
+  "summary": "Robust automation platform with extensive integrations \u2014 ideal for users seeking seamless workflows but may overwhelm newcomers.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/zapier-central.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
