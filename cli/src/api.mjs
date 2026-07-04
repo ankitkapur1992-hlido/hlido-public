@@ -178,6 +178,42 @@ export function getUserAgent() {
   return USER_AGENT;
 }
 
+// MCP Trust Phase 2 (2026-07-04) — `hlido scan` calls the public scan_mcp MCP
+// tool rather than scanning locally: ONE canonical analyzer (server-side), and
+// every scan invocation is instrumented as real demand. No cache — a scan is a
+// point-of-use safety question; the server does its own return-fast caching.
+const MCP_ENDPOINT = "https://hlido.eu/mcp";
+
+export async function scanMcp(server, { timeoutMs = 30000 } = {}) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(MCP_ENDPOINT, {
+      method: "POST",
+      signal: ctrl.signal,
+      headers: { "content-type": "application/json", accept: "application/json", "user-agent": USER_AGENT },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "tools/call",
+        params: { name: "scan_mcp", arguments: { server, requester: "hlido-cli" } },
+      }),
+    });
+    if (!res.ok) {
+      const err = new Error(`HTTP ${res.status} from ${MCP_ENDPOINT}`);
+      err.status = res.status;
+      throw err;
+    }
+    const rpc = await res.json();
+    if (rpc.error) throw new Error(`scan_mcp error: ${rpc.error.message || JSON.stringify(rpc.error)}`);
+    const text = rpc.result?.content?.[0]?.text;
+    if (!text) throw new Error("scan_mcp returned no content");
+    return JSON.parse(text);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 // Wave 4 Item #2 — anonymous fire-and-forget distribution-surface event.
 // Never throws, never blocks the main command. Server is rate-limited to
 // 60/min per IP-hash; we don't await the response. Disable entirely by
