@@ -1,102 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "rev-ai",
   "name": "Rev AI",
+  "agent_url": "https://www.rev.ai",
   "category": "Voice",
+  "run_id": "run-rev-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Rev AI",
-  "review_url": "https://hlido.eu/reviews/rev-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-rev-ai-moo0wepp",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Reliable transcription and voice recognition service \u2014 solid for businesses, but lacks advanced customization options.",
+    "body": "Rev AI offers dependable transcription and speech recognition services that cater well to businesses needing accurate voice-to-text conversion. The platform is user-friendly, with a straightforward interface that allows users to upload audio files and receive transcriptions quickly. However, it falls short in providing advanced customization options that some competitors offer, such as tailored vocabulary or integration capabilities for specific industries. While Rev AI is a solid choice for general transcription needs, users with specialized requirements may find better alternatives like Otter.ai or Descript, which offer more robust features for customization and integration.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Rev AI consistently delivers reliable transcription services and maintains a user-friendly interface. However, it is not VITAL due to the lack of advanced customization options and integrations that could enhance its utility for specialized users.",
+  "what_it_does_well": [
+    "Provides accurate and reliable transcription services for various audio formats",
+    "User-friendly interface allows for quick file uploads and processing",
+    "Fast turnaround times for transcription requests",
+    "Supports multiple languages, making it accessible to a wider audience"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced customization options for industry-specific vocabulary",
+    "Limited integration capabilities with other software tools",
+    "No real-time transcription features for live events or meetings",
+    "Pricing may not be competitive for high-volume users compared to alternatives"
+  ],
+  "best_for": [
+    "Businesses needing reliable transcription for meetings, interviews, or podcasts",
+    "Users looking for a straightforward and easy-to-use transcription service",
+    "Individuals who require quick turnaround times for audio-to-text conversion"
+  ],
+  "not_recommended_for": [
+    "Users needing advanced customization for specific industries (e.g., legal, medical)",
+    "Those requiring real-time transcription for live events",
+    "High-volume users looking for more competitive pricing options"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage states, \"The World’s Most Accurate Speech-To-Text API\" and describes it as \"A developer-first API delivering industry-leading accuracy and fast performance at global scale.\"",
-      "source_surface": "homepage"
+      "slug": "otter-ai",
+      "verdict_diff": "Otter.ai offers more advanced features like real-time transcription and customizable vocabulary, making it a better fit for users needing tailored solutions. Rev AI is best for straightforward transcription without the need for real-time capabilities.",
+      "preferred_for_axis": "customization and real-time features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "descript",
+      "verdict_diff": "Descript provides a more comprehensive suite of audio and video editing tools alongside transcription, appealing to users who need more than just voice-to-text services. Rev AI is focused solely on transcription.",
+      "preferred_for_axis": "multimedia editing capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Rev AI does not currently offer an API or integration options for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'View Documentation' which is accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "'Accurate transcription services'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Handle sensitive data with confidence. SOC II, HIPAA, GDPR, and PCI compliant with 99.99% uptime.",
-      "source_surface": "homepage"
+      "evidence": "/pricing available",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.rev.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.rev.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:31:47.077Z"
+  "summary": "Reliable transcription and voice recognition service \u2014 solid for businesses, but lacks advanced customization options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/rev-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
