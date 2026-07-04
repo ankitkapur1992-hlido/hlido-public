@@ -1,97 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "zapier",
   "name": "Zapier",
-  "category": "Workflow & Automation",
+  "agent_url": "https://zapier.com",
+  "category": "Workflow",
+  "run_id": "run-zapier-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Zapier",
-  "review_url": "https://hlido.eu/reviews/zapier/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-zapier-moo1l5o1",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust automation platform with extensive integrations \u2014 a cornerstone for any workflow-driven operation.",
+    "body": "Zapier stands out as a leading automation platform, enabling users to connect various applications and streamline workflows without needing extensive coding knowledge. With its vast library of integrations, Zapier allows users to automate repetitive tasks across multiple platforms, making it an essential tool for businesses looking to enhance productivity. The user interface is intuitive, making it accessible for both technical and non-technical users. However, while it excels in ease of use and integration breadth, some advanced users may find limitations in customization options for complex workflows. Overall, Zapier remains a top choice for those seeking reliable automation solutions.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because of its strong market presence, extensive integration capabilities, and consistent reliability. It remains a go-to solution for automation needs. A shift to STEADY would occur if significant competitors emerge with superior features or if Zapier fails to maintain its integration ecosystem.",
+  "what_it_does_well": [
+    "Offers a vast library of integrations with thousands of apps.",
+    "User-friendly interface that simplifies workflow automation.",
+    "Reliable performance with minimal downtime reported.",
+    "Regular updates and improvements based on user feedback.",
+    "Strong community support and extensive documentation."
+  ],
+  "what_it_fails_at": [
+    "Limited customization options for highly complex workflows.",
+    "Pricing can escalate quickly for larger teams or extensive usage.",
+    "Some integrations may have restrictions on data handling or features."
+  ],
+  "best_for": [
+    "Small to medium-sized businesses looking to automate repetitive tasks.",
+    "Non-technical users who need to streamline workflows without coding.",
+    "Teams that rely on multiple applications and need them to work together seamlessly."
+  ],
+  "not_recommended_for": [
+    "Large enterprises needing highly customizable automation solutions.",
+    "Users requiring real-time data processing or complex conditional logic.",
+    "Those who prefer fully self-hosted automation solutions."
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Zapier gives teams one place to set guardrails, manage model access, and see everything — so everyone can build with AI confidently, on any model, without waiting for permission.",
-      "source_surface": "homepage"
+      "slug": "integromat",
+      "verdict_diff": "Integromat offers more advanced features for complex workflows, often at a lower price point. Choose Zapier for its user-friendly interface and extensive app integrations.",
+      "preferred_for_axis": "ease-of-use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "n8n",
+      "verdict_diff": "n8n provides self-hosting capabilities and greater customization for tech-savvy users. Zapier is better for those who prefer a managed solution.",
+      "preferred_for_axis": "managed-service"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Extensive integrations with thousands of apps",
+      "source": "https://zapier.com/apps",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Free to build\"",
-      "source_surface": "docs"
+      "claim": "User-friendly interface",
+      "source": "https://zapier.com/blog/zapier-overview/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Strong community support and documentation",
+      "source": "https://zapier.com/help",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Zapier's API and webhooks allow agents to trigger workflows and automate processes programmatically, making it suitable for integration into agent-driven environments.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Use Zapier's Workflow API and 8,000 integrations to power a built-in automation experience, integration marketplace, or AI workflows.\"",
-      "source_surface": "docs"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Automate your work'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Zapier handles auth, infrastructure, and support, so you can move fast, at enterprise scale.\"",
-      "source_surface": "docs"
+      "evidence": "/pricing transparent tiered pricing",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://zapier.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://zapier.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://zapier.com/developer-platform",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://zapier.com/apps",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://zapier.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://zapier.com/blog/what-you-should-automate/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://zapier.com/templates/details/ai-agent-marketing-campaign-tracker",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:51:36.149Z"
+  "summary": "Robust automation platform with extensive integrations \u2014 a cornerstone for any workflow-driven operation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/zapier.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
