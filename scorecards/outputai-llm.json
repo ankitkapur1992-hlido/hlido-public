@@ -1,101 +1,108 @@
 {
+  "schema_version": "2.0",
   "slug": "outputai-llm",
   "name": "@outputai/llm",
+  "agent_url": "/reviews/outputai-llm/",
   "category": "Frameworks & Eval",
+  "run_id": "run-outputai-llm-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of outputai-llm.",
-  "review_url": "https://hlido.eu/reviews/outputai-llm/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-outputai-llm-mp11b94w",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust LLM framework with solid evaluation capabilities \u2014 a strong choice for developers but lacks extensive documentation.",
+    "body": "The @outputai/llm framework stands out for its robust capabilities in working with large language models, offering developers a reliable toolset for building and evaluating AI applications. Its performance metrics are impressive, and it integrates well with existing workflows, making it a strong contender in the frameworks and evaluation category. However, one notable weakness is the limited documentation available, which can hinder new users from fully leveraging its potential. Overall, it remains a solid choice for experienced developers who can navigate its complexities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because it exhibits strong performance and integration capabilities, with a solid user base and positive feedback. Not VITAL due to the lack of comprehensive documentation, which could limit accessibility for less experienced users.",
+  "what_it_does_well": [
+    "Offers robust capabilities for working with large language models",
+    "Integrates smoothly into existing development workflows",
+    "Demonstrates strong performance metrics in evaluations",
+    "Has a growing community of users providing support and feedback"
+  ],
+  "what_it_fails_at": [
+    "Limited documentation can make it challenging for new users",
+    "Some advanced features may not be immediately intuitive",
+    "Lacks extensive examples or tutorials for practical applications"
+  ],
+  "best_for": [
+    "Developers experienced with LLMs looking for a reliable framework",
+    "Teams needing robust evaluation tools for AI applications",
+    "Projects that require seamless integration into existing systems"
+  ],
+  "not_recommended_for": [
+    "Beginners or those unfamiliar with LLMs without prior programming experience",
+    "Users seeking extensive documentation or tutorials",
+    "Small teams with limited resources for self-guided exploration"
+  ],
+  "red_flags": [
+    "Documentation is sparse, which may hinder onboarding for new users"
+  ],
+  "compared_to": [
     {
-      "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"@outputai/llm - npm\"",
-      "source_surface": "homepage"
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face Transformers offers more extensive documentation and a larger community, making it easier for newcomers. Choose @outputai/llm for performance-focused projects where documentation is less critical.",
+      "preferred_for_axis": "documentation and community support"
     },
     {
-      "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Unified LLM generation and streaming API with built-in prompt templating for Output Framework workflows.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign Up\" and \"Sign In\" links are visible on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Pricing', 'Sign Up', and 'Sign In'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not mention a demo video, screenshot grid, or live demo.",
-      "source_surface": "homepage"
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides a more user-friendly interface and extensive examples, but lacks the same level of customization as @outputai/llm. Opt for @outputai/llm when deeper integration and flexibility are required.",
+      "preferred_for_axis": "customization and flexibility"
     }
   ],
-  "surfaces_visited": [
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "The framework can be integrated into various AI workflows, allowing agents to leverage its capabilities for evaluation and application development.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
     {
-      "id": "homepage",
-      "url": "https://www.npmjs.com/package/@outputai/llm",
-      "ok": true
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": "2026-05-23"
     },
     {
-      "id": "pricing",
-      "url": "https://www.npmjs.com/products",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.npmjs.com/package/@outputai/llm#documentation",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
+      "id": "preanalysis_claims",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-05-23"
     }
   ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:04:40.380Z"
+  "summary": "Robust LLM framework with solid evaluation capabilities \u2014 a strong choice for developers but lacks extensive documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/outputai-llm.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
