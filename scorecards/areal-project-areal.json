@@ -1,41 +1,105 @@
 {
+  "schema_version": "2.0",
   "slug": "areal-project-areal",
-  "name": "areal-project/AReaL",
+  "name": "AReaL",
   "agent_url": "https://github.com/areal-project/AReaL",
   "category": "AI Agent",
   "run_id": "run-areal-project-areal-fwauybay",
   "run_at": "2026-06-06T06:00:43.860Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 55,
+  "tier": "FADING",
+  "laddoo_score": 55,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Large-scale asynchronous RL infrastructure for training LLM-based agents — research-grade system with a published paper, but not a deployable agent product.",
+    "body": "AReaL is an asynchronous reinforcement learning system for training LLM-based agents at scale, backed by a published arXiv paper (arXiv:2505.24298). The positioning — 'the RL bridge for LLM-based agent applications, made simple and flexible' — frames it as infrastructure for agent capability research rather than a deployed agent product. The documentation at areal-project.github.io/AReaL/ and the Chinese-language meeting cadence (bi-weekly community calls) indicate an active research group, likely affiliated with a Chinese academic or industrial AI lab. The system is designed for the machine-learning-systems layer: async distributed RL training, LLM-reasoning improvement, policy optimisation for agents. It is not something a developer 'deploys to power their agent' — it is what a research team uses to train better agent models. Placing this on Hlido reflects the registry's mandate to cover the full AI-agent infrastructure stack, not just SaaS products. AReaL's place in the ecosystem is upstream infrastructure; evaluating it as a product would be a category error.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (55) because the project is a legitimate research system with a published paper and active development, but it is research infrastructure rather than a deployable agent product. The score reflects the gap between its technical ambition and its accessibility as a practical tool for most agent developers.",
+  "what_it_does_well": [
+    "Published arXiv paper (arXiv:2505.24298) — research credibility is verifiable",
+    "Documentation in both English and Chinese at areal-project.github.io/AReaL/",
+    "Active community with bi-weekly meetings — not an abandoned repo",
+    "Targets asynchronous distributed RL training — relevant to large-scale agent capability research",
+    "Open source with stable release (community-contributed)"
+  ],
+  "what_it_fails_at": [
+    "Not a deployable agent product — research infrastructure for training LLMs, not a tool developers use to build applications",
+    "High entry barrier: distributed RL training requires significant ML systems expertise and compute",
+    "No managed deployment, no API, no SaaS tier",
+    "Community appears concentrated in Chinese-language ML research ecosystem",
+    "Production deployment case studies outside the research context are absent"
+  ],
+  "best_for": [
+    "ML research groups studying reinforcement learning for LLM-based agents",
+    "Academic labs needing a flexible, scalable async RL training system",
+    "Teams training custom agent models who want to avoid building RL infrastructure from scratch",
+    "Researchers looking for a reference implementation for async distributed RL with LLMs"
+  ],
+  "not_recommended_for": [
+    "Developers building agent applications who need a deployable agent runtime (wrong layer of the stack)",
+    "Teams without significant ML systems expertise and GPU compute",
+    "Anyone expecting a product interface, API, or SaaS deployment",
+    "Enterprise buyers evaluating agent platforms (this is research infrastructure)"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C02",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "verl",
+      "verdict_diff": "veRL (Volcano Engine Reinforcement Learning) is another large-scale RL training framework for LLMs, also from the Chinese ML ecosystem. Both target research-grade RL training infrastructure. Differentiation requires deep comparative benchmarking beyond the public surface.",
+      "preferred_for_axis": "distributed-rl-training"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of areal-project/AReaL.",
-  "confidence": "low"
+  "evidence_urls": [
+    {
+      "claim": "Published arXiv paper",
+      "source": "https://arxiv.org/pdf/2505.24298",
+      "tested_at": "2026-06-06",
+      "verified": true
+    },
+    {
+      "claim": "Documentation at areal-project.github.io/AReaL/",
+      "source": "https://areal-project.github.io/AReaL/",
+      "tested_at": "2026-06-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Python framework for RL training of LLM agents. Not a runtime or API — you use AReaL to train better agent models, not to deploy agents. Integration path is academic/research.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-06T06:00:43Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The RL Bridge for LLM-based Agent Applications. Made Simple and Flexible."
+    }
+  ],
+  "summary": "Large-scale asynchronous RL infrastructure for training LLM-based agents — research-grade system with a published paper, but not a deployable agent product.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/areal-project-areal.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
