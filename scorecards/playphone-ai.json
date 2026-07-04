@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "playphone-ai",
   "name": "PlayPhone AI",
+  "agent_url": "https://www.playphone.ai",
   "category": "Voice",
+  "run_id": "run-playphone-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of PlayPhone AI",
-  "review_url": "https://hlido.eu/reviews/playphone-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-playphone-ai-moo29r4o",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "blocked",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.playphone.ai/lander",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
+  "laddoo_score": 40,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:10:01.701Z"
+  "hlido_opinion": {
+    "headline": "Underdeveloped voice assistant platform with limited visibility \u2014 lacks clear value proposition and user engagement.",
+    "body": "PlayPhone AI appears to be struggling with its positioning in the voice assistant market. The website provides minimal information about its features or unique selling points, which raises concerns about its viability and user engagement. With a score of 40, it falls into the FADING tier, suggesting that it is not actively evolving or attracting a user base. Without clear communication of its capabilities or a compelling reason for users to choose it over competitors, PlayPhone AI risks becoming irrelevant. Potential users should be cautious and consider alternatives that offer more transparency and functionality.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) due to lack of visible user engagement, minimal feature disclosure, and unclear value proposition. A shift to a more active development or marketing strategy could improve its standing.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear information about features and capabilities",
+    "No visible user engagement or community presence",
+    "Uncertain value proposition compared to competitors",
+    "Website provides minimal content for evaluation",
+    "No evidence of active development or updates"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking robust voice assistant functionalities",
+    "Developers looking for a well-documented API",
+    "Businesses needing reliable voice integration solutions",
+    "Anyone wanting a proven platform with community support"
+  ],
+  "red_flags": [
+    "Minimal information on the website raises concerns about transparency and reliability",
+    "No visible user engagement or testimonials to validate claims"
+  ],
+  "compared_to": [
+    {
+      "slug": "google-assistant",
+      "verdict_diff": "Google Assistant offers a comprehensive and well-supported voice platform with extensive features. PlayPhone AI lacks the depth and community support of Google Assistant.",
+      "preferred_for_axis": "feature-richness"
+    },
+    {
+      "slug": "amazon-alexa",
+      "verdict_diff": "Amazon Alexa provides a robust ecosystem with extensive third-party integrations. PlayPhone AI does not demonstrate a comparable level of functionality or integration.",
+      "preferred_for_axis": "integration-capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 PlayPhone AI does not appear to provide any integration options for agents.",
+    "agent_friendly_score": 0
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition stated",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality present",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Underdeveloped voice assistant platform with limited visibility \u2014 lacks clear value proposition and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/playphone-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
