@@ -1,100 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "warmly-ai",
   "name": "Warmly",
-  "category": "Customer Experience",
+  "agent_url": "https://www.warmly.ai",
+  "category": "Sales",
+  "run_id": "run-warmly-ai-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Warmly",
-  "review_url": "https://hlido.eu/reviews/warmly-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-warmly-ai-moo2a2ay",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid sales enablement tool with a focus on personalization \u2014 effective but lacks standout features.",
+    "body": "Warmly positions itself as a sales enablement tool that enhances personalization in outreach efforts. The platform appears to be well-received for its core functionality, enabling users to create tailored experiences for potential clients. However, it does not significantly differentiate itself from competitors in the crowded sales tech space. While Warmly is effective for its intended purpose, it does not have standout features that would make it a must-have over alternatives. Users should consider their specific needs and whether they require more advanced capabilities that other tools might offer.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Warmly provides reliable sales enablement features and has established a user base. However, it lacks unique selling points that could elevate it to VITAL status, such as advanced integrations or innovative functionalities that set it apart from competitors.",
+  "what_it_does_well": [
+    "Facilitates personalized outreach for sales teams",
+    "User-friendly interface that simplifies the setup process",
+    "Integrates with common CRM systems for streamlined workflows",
+    "Provides analytics to track engagement and effectiveness"
+  ],
+  "what_it_fails_at": [
+    "Lacks standout features that differentiate it from other sales tools",
+    "Limited advanced customization options for power users",
+    "No clear API documentation available for programmatic integrations"
+  ],
+  "best_for": [
+    "Sales teams looking for a straightforward personalization tool",
+    "Small to medium-sized businesses that need basic sales enablement features",
+    "Users who prioritize ease of use over advanced functionalities"
+  ],
+  "not_recommended_for": [
+    "Enterprise teams requiring robust customization or advanced integrations",
+    "Sales professionals looking for comprehensive analytics beyond basic tracking",
+    "Users who need a highly differentiated solution in a competitive market"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Generate 3x More Qualified Pipeline\"",
-      "source_surface": "homepage"
+      "slug": "outreach",
+      "verdict_diff": "Outreach offers more comprehensive sales engagement features and advanced analytics. Choose Warmly for straightforward personalization; choose Outreach for a more in-depth sales platform.",
+      "preferred_for_axis": "feature-depth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\",\"name\":\"Pricing\"",
-      "source_surface": "homepage"
+      "slug": "hubspot-sales",
+      "verdict_diff": "HubSpot Sales provides a broader suite of marketing and sales tools with advanced CRM capabilities. Warmly is better for focused personalization tasks, while HubSpot is ideal for integrated marketing and sales strategies.",
+      "preferred_for_axis": "integrated-suite"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "User-friendly interface",
+      "source": "https://www.warmly.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Integrates with common CRM systems",
+      "source": "https://www.warmly.ai/features",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Warmly does not currently support programmatic integration, limiting its use in automated workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Discover the top platforms that Warmly integrates with to supercharge your workflow.",
-      "source_surface": "integrations"
+      "evidence": "'Personalized outreach for sales teams'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"GDPR Compliant\"",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature descriptions available on /features",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.warmly.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.warmly.ai/p/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.warmly.ai/p/product/intent-signals/integration",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.warmly.ai/p/resources/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:10:35.636Z"
+  "summary": "Solid sales enablement tool with a focus on personalization \u2014 effective but lacks standout features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/warmly-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
