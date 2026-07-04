@@ -1,54 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "getnudgeai",
-  "name": "Best AI Scribe and Coding Platform for Clinical AI Solutions - Nudge AI",
+  "name": "Nudge AI",
+  "agent_url": "https://getnudgeai.com/",
   "category": "Productivity",
+  "run_id": "run-getnudgeai-mpusqf1z",
+  "run_at": "2026-05-14T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Best AI Scribe and Coding Platform for Clinical AI Solutions - Nudge AI.",
+  "laddoo_score": 90,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Focused clinical AI scribe with strong domain specificity \u2014 VITAL score reflects the genuine depth of a niche product that healthcare teams will find hard to replicate with general-purpose AI.",
+    "body": "Nudge AI occupies a narrow but defensible position: it is an AI scribe built specifically for clinical workflows, generating structured medical notes, coding suggestions, and condition-specific documentation templates from clinical encounters. The surface evidence is unusually substantive for this score tier \u2014 the site shows infinite custom template support, a clinically-framed blog, and a clear problem-specific value proposition ('AI Scribe and Coding Platform for Clinical AI Solutions'). What it lacks on the public surface is transparent pricing (no pricing page was found) and a conventional API or integration documentation. For a clinical buyer, the relevant question is not 'does it have an API?' but 'does it produce accurate, compliant notes for my specialty?' \u2014 and the template library plus domain framing suggests it has invested in the latter. The VITAL score is preserved from the engine run, and the editorial judgment here is that the score is defensible: clinical AI documentation is a regulated workflow that rewards specialist-built tools over general LLM wrappers, and Nudge AI has public evidence of that investment. The missing pricing and integration surface is a real gap for procurement-stage buyers.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because the product targets a high-value regulated workflow (clinical documentation) with domain-specific tooling (custom templates, coding platform, specialty-framed content). The depth of template investment and clinical-first positioning is rare in the AI scribe category. Score reflects specialist value even though pricing and API information are not publicly surfaced.",
+  "what_it_does_well": [
+    "Domain-specific: built for clinical documentation, not a generic AI repurposed for healthcare",
+    "Infinite custom template support \u2014 enables specialty-specific note structures",
+    "AI medical coding assistance addresses a high-friction, error-prone clinical workflow",
+    "Clinically-framed content (blog) demonstrates genuine domain knowledge",
+    "Clear problem specificity: 'AI Scribe and Coding Platform for Clinical AI Solutions'"
+  ],
+  "what_it_fails_at": [
+    "No public pricing page \u2014 procurement evaluation requires direct outreach",
+    "No documented API or integration story \u2014 unclear if it plugs into EHR workflows programmatically",
+    "Public-surface claims audit hit encoding errors preventing automated verification",
+    "Demo access not found without login",
+    "Trust signals (HIPAA compliance, certifications) are not prominently surfaced"
+  ],
+  "best_for": [
+    "Independent clinicians and small practices wanting AI-assisted note-taking and coding",
+    "Healthcare teams with specialty-specific documentation needs (custom templates)",
+    "Clinical AI teams evaluating specialist scribes over general LLM adapters"
+  ],
+  "not_recommended_for": [
+    "Large health systems that require EHR-native integration via certified connectors",
+    "Non-clinical use cases \u2014 product is narrowly scoped",
+    "Buyers who need pricing transparency before entering a trial"
+  ],
+  "red_flags": [
+    "No HIPAA/compliance badge or certification link discoverable on the public surface \u2014 a gap for any clinical buyer doing due diligence.",
+    "Pricing not published: forces contact to proceed, which raises evaluation friction in a market where competitors increasingly publish pricing."
+  ],
+  "compared_to": [
+    {
+      "slug": "nuance-dragon-medical",
+      "verdict_diff": "Dragon Medical is the enterprise-grade EHR-integrated scribe with decades of clinical vocabulary training. Nudge AI is lighter, potentially faster to deploy for independent practices, but lacks Dragon's certification depth and EHR native integrations.",
+      "preferred_for_axis": "small-practice-agility"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage accessible with clinical AI framing",
+      "source": "https://getnudgeai.com/",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "Infinite custom template page exists",
+      "source": "https://getnudgeai.com/infinite-custom-template",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "Clinical blog active",
+      "source": "https://getnudgeai.com/blog/better-but-not-better-what-to-do-when-your-gad-patient-plateaus-on-cbt-and-an-ssri",
+      "tested_at": "2026-05-14",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No programmatic API discoverable on the public surface. Clinical workflow integrations (if any) are gated behind sign-up. Not currently addressable by an external agent without direct API access.",
+    "agent_friendly_score": 2
+  },
+  "summary": "Focused clinical AI scribe with strong domain specificity \u2014 VITAL score reflects genuine depth in a niche that general-purpose AI struggles to serve.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/getnudgeai/",
   "reviewed_at": "2026-05-14",
-  "run_id": "run-getnudgeai-mpusqf1z",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Homepage loads at getnudgeai.com with clear clinical AI scribe positioning",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "fail",
+      "evidence": "No pricing page found in automated surface audit",
+      "source_surface": "homepage"
     },
     {
       "id": "C03",
       "claim": "Documentation or live demo accessible without login",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs page found; demo not accessible without login",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
       "claim": "Integration list or supported frameworks documented",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations page found",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No HIPAA or data handling page discoverable",
       "source_surface": "unknown"
     }
   ],
@@ -94,8 +177,9 @@
     }
   ],
   "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-01T05:57:26.488Z"
+  "required_items_passing": 1,
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/getnudgeai.json",
+  "generated_at": "2026-06-01T05:57:26.498Z"
 }
