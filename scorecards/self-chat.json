@@ -1,103 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "self-chat",
-  "name": "self-chat",
+  "name": "Self Chat",
+  "agent_url": "/reviews/self-chat/",
   "category": "Chat & Companion",
+  "run_id": "run-self-chat-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 57,
-  "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of self-chat.",
-  "review_url": "https://hlido.eu/reviews/self-chat/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-self-chat-mp11fng3",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Basic self-chat tool that meets minimal expectations but lacks depth and differentiation in a crowded market.",
+    "body": "Self Chat offers a straightforward self-chat experience, allowing users to engage in simulated conversations. However, it does not stand out against competitors in terms of features or user experience. The lack of verified claims and unclear authentication requirements raise concerns about reliability and user trust. While it serves a niche purpose, users seeking more robust capabilities or integrations may find better alternatives. Without clear differentiation or a compelling value proposition, Self Chat feels more like a placeholder than a must-have tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (57) due to its functional presence in the self-chat space, but it lacks the features and user engagement that would elevate it to a higher tier. Improvement in user experience and feature set could change its standing significantly.",
+  "what_it_does_well": [
+    "Provides a basic self-chat functionality for users to simulate conversations",
+    "Easy to use with a straightforward interface",
+    "Meets minimal expectations for self-chat tools"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features and integrations found in competing products",
+    "No clear differentiation from other self-chat tools",
+    "Unverified claims and unknown authentication requirements raise trust issues"
+  ],
+  "best_for": [
+    "Users looking for a simple self-chat tool without complex features",
+    "Individuals wanting to practice conversational skills in a low-stakes environment",
+    "Casual users who do not require advanced functionalities"
+  ],
+  "not_recommended_for": [
+    "Users seeking robust chatbot capabilities or integrations",
+    "Those who prioritize data privacy and verified claims",
+    "Anyone needing a feature-rich self-chat experience"
+  ],
+  "red_flags": [
+    "Unverified claims on the platform, which may affect user trust",
+    "Unknown authentication requirements could deter potential users"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a far more advanced conversational experience with extensive features and integrations. Choose ChatGPT for a comprehensive self-chat experience, while Self Chat may suffice for basic needs.",
+      "preferred_for_axis": "feature-rich experience"
+    },
+    {
+      "slug": "replika",
+      "verdict_diff": "Replika provides a more interactive and engaging self-chat experience with emotional intelligence. Self Chat lacks the depth and engagement that Replika offers.",
+      "preferred_for_axis": "engagement and interaction"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Self Chat does not provide an API or integration options for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Hugging Face's logo\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "fail",
-      "evidence": "There is no visible primary call-to-action such as sign up, try free, or book demo on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "No clear call to action identified",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path (login / get started) is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "fail",
-      "evidence": "The corpus does not provide any links or information regarding pricing or access paths.",
-      "source_surface": "homepage"
+      "evidence": "No pricing or access information available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No demo or evidence of functionality found",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://huggingface.co/spaces/xu-song/self-chat",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 1,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:07:43.135Z"
+  "summary": "Basic self-chat tool that meets minimal expectations but lacks depth and differentiation in a crowded market.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/self-chat.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
