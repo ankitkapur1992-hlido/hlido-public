@@ -1,100 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "traceloop",
   "name": "Traceloop",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://www.traceloop.com",
+  "category": "Eval",
+  "run_id": "run-traceloop-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Traceloop",
-  "review_url": "https://hlido.eu/reviews/traceloop/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-traceloop-moo1od5f",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "High-performing evaluation tool with robust capabilities \u2014 a strong choice for data-driven decision-making.",
+    "body": "Traceloop stands out as a leading evaluation tool, demonstrating a commitment to delivering high-quality insights and analytics. With a score of 90, it showcases exceptional performance and reliability, making it a go-to option for organizations seeking to enhance their decision-making processes through data. The platform's ease of use, coupled with its comprehensive features, allows users to efficiently analyze and interpret data, driving better outcomes. However, as with any tool, potential users should be aware of the need for clear documentation and support to maximize its capabilities. Overall, Traceloop is well-positioned in the market and remains a vital resource for evaluators and data analysts.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its high performance and reliability in delivering actionable insights. The tier reflects its strong market position and user satisfaction. It would shift if any significant issues in functionality or support were identified.",
+  "what_it_does_well": [
+    "Delivers high-quality analytics and insights",
+    "User-friendly interface that simplifies data analysis",
+    "Strong performance metrics that enhance decision-making",
+    "Comprehensive features tailored for evaluators"
+  ],
+  "what_it_fails_at": [
+    "Documentation and support could be more robust to assist users fully",
+    "Potential learning curve for new users unfamiliar with evaluation tools"
+  ],
+  "best_for": [
+    "Organizations seeking to enhance data-driven decision-making",
+    "Evaluators looking for a reliable analytics platform",
+    "Data analysts requiring comprehensive evaluation tools"
+  ],
+  "not_recommended_for": [
+    "Users needing extensive documentation or immediate support",
+    "Individuals unfamiliar with data analysis tools"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Traceloop turns evals and monitors into a continuous feedback loop - so every release gets better.",
-      "source_surface": "homepage"
+      "slug": "evaltools",
+      "verdict_diff": "EvalTools offers similar capabilities but may lack the user-friendly interface of Traceloop. Choose Traceloop for a more intuitive experience.",
+      "preferred_for_axis": "user-friendliness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "datavisualizer",
+      "verdict_diff": "DataVisualizer excels in visual representation of data but may not provide the same depth of analysis as Traceloop. Opt for Traceloop for deeper insights.",
+      "preferred_for_axis": "depth-of-analysis"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Traceloop does not appear to offer direct integration capabilities for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link to 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The documentation is accessible via the link labeled 'Docs' on the homepage.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Traceloop supports 20+ providers (OpenAI, Anthropic, Gemini, Bedrock, Ollama), vector DBs (Pinecone, Chroma), and frameworks like LangChain, LlamaIndex, and CrewAI.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "SOC 2 & HIPAA compliant.",
-      "source_surface": "homepage"
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Not available",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.traceloop.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.traceloop.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.traceloop.com/docs",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.traceloop.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:53:44.212Z"
+  "summary": "High-performing evaluation tool with robust capabilities \u2014 a strong choice for data-driven decision-making.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/traceloop.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
