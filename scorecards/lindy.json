@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0",
+  "slug": "lindy",
+  "name": "Lindy",
+  "agent_url": "https://lindy.ai",
+  "category": "Productivity",
+
+  "run_id": "run-2a55d82bc29ded4a-lindy-ai",
+  "run_at": "2026-07-04T08:30:52Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+
+  "hlido_opinion": {
+    "headline": "Unusually transparent AI executive assistant with a genuinely strong privacy posture — but the whole product, and every time-savings claim, sits behind a signup wall.",
+    "body": "Lindy is one of the more honestly-presented AI-assistant products on the public surface. Where most 'AI EA' tools hand-wave the security question, Lindy leads with a specific and serious posture — GDPR, HIPAA with a BAA, AICPA SOC 2, PIPEDA, an explicit promise that data is never sold or used to train models, and human approvals built into actions. That last detail matters more than the compliance logos: for an assistant that touches your inbox and calendar, 'approvals built in' is the difference between a tool and a liability. The capability set is concrete and coherent — email triage and drafting in the user's voice, meeting scheduling and rescheduling, meeting prep/recording with recap and action items, plus an App Builder and 100+ integrations. Pricing is refreshingly transparent for this category ($49.99 Plus, $59.99 Pro, Enterprise custom, 7-day trial), which is a real trust credit. What keeps it at STEADY rather than higher: the product itself requires signup at chat.lindy.ai, so no behaviour could be exercised in this pass, and the headline outcomes — '10 hours back per week', 'saves 2 hours a day', 'set up in 60 seconds' — are precisely the claims that can only be validated from inside. The 4.9 G2 rating is a positive external signal but is self-selected. This is a credible, well-run product whose evidence is strong on trust and clarity and necessarily thin on verified behaviour.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-04",
+    "editor_signature_pending": true
+  },
+
+  "tier_rationale": "STEADY (73) because the trust posture is a standout — specific, serious compliance (GDPR/HIPAA-BAA/SOC 2/PIPEDA), an explicit no-sell/no-train data promise, human approvals, and transparent self-serve pricing — and the product story is clear and concrete. Held below VITAL because the product is entirely login-gated (signup required at chat.lindy.ai), so no interaction or behaviour could be tested in this pass, and the core value claims ('10 hours/week', '2 hours/day', '60-second setup') are vendor-reported and unverifiable from outside. Verification is public-surface + claim-audit, not behavioural.",
+
+  "what_it_does_well": [
+    "Best-in-class privacy/trust framing for the category: GDPR, HIPAA (BAA), SOC 2, PIPEDA, no data sale/training",
+    "Human approvals built into actions — sane default for an assistant that touches inbox and calendar",
+    "Transparent, self-serve pricing published on the public surface ($49.99 / $59.99 / Enterprise, 7-day trial)",
+    "Concrete, coherent capability set (email triage + drafting, scheduling, meeting prep/recap, reminders)",
+    "Extensible via App Builder + 100+ integrations (Slack, calendar, Gmail)"
+  ],
+
+  "what_it_fails_at": [
+    "Entire product is behind a signup wall (chat.lindy.ai) — no hands-on behaviour could be verified in this pass",
+    "Time-savings claims ('10 hrs/week', '2 hrs/day', '60-second setup') are vendor-reported and unverifiable externally",
+    "No public API or MCP surface evident for external agents to drive Lindy programmatically",
+    "4.9 G2 rating is a positive but self-selected signal, not an independent measure",
+    "Multi-inbox and higher-tier limits require moving up the pricing ladder"
+  ],
+
+  "best_for": [
+    "Individual professionals and founders drowning in email/calendar overhead",
+    "Privacy- or compliance-sensitive users (healthcare-adjacent, regulated) who need HIPAA/SOC 2 assurances",
+    "People who want an assistant with explicit human-approval gates before it acts",
+    "Users who prefer transparent self-serve pricing over enterprise sales motions"
+  ],
+
+  "not_recommended_for": [
+    "Developers or agents wanting to drive the assistant via a public API/MCP (not surfaced)",
+    "Buyers who require independently verified productivity gains before committing (claims are vendor-reported)",
+    "Teams needing to evaluate the product deeply without signing up (everything is login-gated)",
+    "Very light email users for whom a $49.99+/mo assistant exceeds the benefit"
+  ],
+
+  "red_flags": [],
+
+  "compared_to": [
+    {
+      "slug": "martin-ai",
+      "verdict_diff": "Both are AI executive-assistant plays over inbox/calendar. Lindy's differentiators on the public surface are the deeper compliance posture (HIPAA BAA, SOC 2, PIPEDA), transparent pricing, and an App Builder for custom automations. Choose Lindy where trust/compliance and extensibility matter; weigh alternatives on which one integrates with the messaging surface you actually live in.",
+      "preferred_for_axis": "compliance-and-extensibility"
+    }
+  ],
+
+  "evidence_urls": [
+    {"claim": "Positions as an AI executive assistant for inbox, meetings, and calendar", "source": "https://lindy.ai", "tested_at": "2026-07-04", "verified": true},
+    {"claim": "Compliance posture: GDPR, HIPAA (BAA), SOC 2, PIPEDA; data not sold or used to train models", "source": "https://lindy.ai (security section)", "tested_at": "2026-07-04", "verified": true},
+    {"claim": "Transparent pricing: Plus $49.99/mo, Pro $59.99/mo, Enterprise custom, 7-day trial", "source": "https://lindy.ai (pricing)", "tested_at": "2026-07-04", "verified": true},
+    {"claim": "100+ integrations and an App Builder", "source": "https://lindy.ai", "tested_at": "2026-07-04", "verified": true},
+    {"claim": "Saves 10 hours/week, 2 hours/day; set up in 60 seconds", "source": "https://lindy.ai (marketing headlines)", "tested_at": "2026-07-04", "verified": false}
+  ],
+
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Lindy is itself an agent-style product (App Builder + 100+ integrations it consumes), but the public surface exposes no first-party API or MCP server for an external agent to drive it. Integration in this pass is user-configured inside Lindy, not a programmatic interface another agent can call. Behaviour was not testable — the product is entirely behind a signup wall.",
+    "agent_friendly_score": 3
+  },
+
+  "checklist": [
+    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-07-04T08:30:52Z"},
+    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'The Ultimate AI Executive Assistant'", "tested_at": "2026-07-04T08:30:52Z"},
+    {"id": "cta_present", "pass": true, "required": true, "evidence": "Signup CTA leads to chat.lindy.ai login wall", "tested_at": "2026-07-04T08:30:52Z"},
+    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Transparent tiers published: $49.99 / $59.99 / Enterprise", "tested_at": "2026-07-04T08:30:52Z"},
+    {"id": "evidence_or_demo", "pass": false, "required": false, "evidence": "Product behind signup wall — no public demo interaction available", "tested_at": "2026-07-04T08:30:52Z"}
+  ],
+
+  "summary": "Unusually transparent AI executive assistant with a strong privacy posture — but the whole product, and every time-savings claim, sits behind a signup wall.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+
+  "staleness_after": "2026-10-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-10-02",
+
+  "attestation_url": "/data/attestations/lindy.json",
+  "signature_pending": true,
+
+  "source": "hlido-editor-v2"
+}
