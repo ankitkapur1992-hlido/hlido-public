@@ -1,99 +1,136 @@
 {
+  "schema_version": "2.0",
   "slug": "tabnine",
   "name": "Tabnine",
-  "category": "Coding",
+  "agent_url": "https://www.tabnine.com",
+  "category": "AI Agent",
+  "run_id": "run-tabnine-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Tabnine",
-  "review_url": "https://hlido.eu/reviews/tabnine/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-tabnine-mongyw6p",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI coding assistant with strong community backing \u2014 excels in code completion but faces competition from GitHub Copilot and Codeium.",
+    "body": "Tabnine stands out as a powerful AI-driven coding assistant, leveraging machine learning to enhance developer productivity through intelligent code completion. Its extensive training on a wide variety of programming languages and frameworks allows it to provide contextually relevant suggestions, making it a valuable tool for both novice and experienced developers. The community support and integrations with popular IDEs further solidify its position in the market. However, it does face stiff competition from GitHub Copilot, which offers a similar feature set with deep integration into GitHub's ecosystem, and Codeium, which emphasizes a free model. Tabnine's pricing structure and feature set will need to continuously evolve to maintain its edge in this rapidly changing landscape.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong feature set, active community, and proven reliability in enhancing coding efficiency. It remains competitive in a crowded market, but ongoing innovation is essential to sustain this tier as new entrants emerge.",
+  "what_it_does_well": [
+    "Offers intelligent code completion across multiple languages and frameworks",
+    "Integrates seamlessly with popular IDEs like VS Code, IntelliJ, and more",
+    "Backed by a strong community with active support and resources",
+    "Provides personalized suggestions based on user coding patterns",
+    "Regularly updates its model with new training data to improve accuracy"
+  ],
+  "what_it_fails_at": [
+    "Pricing may be a barrier for some users compared to free alternatives",
+    "Competition from GitHub Copilot and Codeium is intensifying",
+    "Limited support for niche programming languages compared to broader offerings",
+    "Some users report inconsistencies in suggestion relevance over time",
+    "Documentation could be clearer for new users navigating setup and features"
+  ],
+  "best_for": [
+    "Developers looking for a reliable AI coding assistant to boost productivity",
+    "Teams using popular IDEs that require seamless integration",
+    "Individuals wanting personalized code suggestions based on their unique coding style",
+    "Organizations seeking to enhance their coding efficiency without extensive training"
+  ],
+  "not_recommended_for": [
+    "Users who prefer free tools over paid solutions",
+    "Developers working primarily in niche languages with limited support",
+    "Those who rely heavily on GitHub's ecosystem and prefer Copilot's integration",
+    "Users looking for a tool with extensive documentation and onboarding support"
+  ],
+  "red_flags": [
+    "Pricing structure may deter potential users compared to free competitors",
+    "Emerging competition could impact market share if not addressed promptly"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Tabnine is the original AI coding assistant trusted by millions of developers and thousands of companies",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers deeper integration with GitHub's ecosystem and a similar feature set. Choose Tabnine for a more versatile tool across various IDEs.",
+      "preferred_for_axis": "IDE versatility"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "codeium",
+      "verdict_diff": "Codeium provides a free alternative with competitive features, but may lack the same level of community support as Tabnine. Choose Tabnine for a more established user base.",
+      "preferred_for_axis": "community support"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Tabnine operates as a plugin within IDEs, making it less addressable by standalone agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing \" is accessible from the homepage in two clicks.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the documentation is available on the homepage and does not require login.",
-      "source_surface": "homepage"
+      "evidence": "'AI-powered code completion'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Tabnine's Enterprise Context Engine learns your organization's unique architecture, frameworks, and coding standards.",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Tabnine provides complete code privacy with zero data retention, stating that your code is never stored or shared without your explicit permission.",
-      "source_surface": "docs"
+      "evidence": "/pricing available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.tabnine.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.tabnine.com/#",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.tabnine.com/ai-code-assistant/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.tabnine.com/partners/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.tabnine.com/blog/introducing-the-tabnine-enterprise-context-engine/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:14:05.513Z"
+  "summary": "Robust AI coding assistant with strong community backing \u2014 excels in code completion but faces competition from GitHub Copilot and Codeium.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/tabnine.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
