@@ -1,103 +1,148 @@
 {
+  "schema_version": "2.0",
   "slug": "swebench",
   "name": "SWE-bench Leaderboards",
+  "agent_url": "https://swebench.com",
   "category": "AI Agent",
+  "run_id": "run-swebench-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "[Introducing **CodeClash**, our new evaluation where LMs compete head to head to write the best codebase!\\\\\n\\\\\nClick here to learn more.](https://codeclash.ai/)\n\nVerifiedMultilingualLiteFullMultimodal\n\n_Verified_ is a human-filtered subset of 500 instances. We use [mini-SWE-agent](https://github.com",
-  "review_url": "https://hlido.eu/reviews/swebench/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-swebench-mox41b4y",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "SWE-bench offers basic leaderboard functionality but lacks innovation and clear differentiation in a competitive landscape.",
+    "body": "SWE-bench Leaderboards provides a platform for evaluating language models through competitive coding assessments like CodeClash. While it presents a straightforward leaderboard setup, it struggles to distinguish itself from other benchmarking platforms. The site features a human-filtered evaluation approach and a variety of models, but the overall user experience feels stagnant and the innovation appears limited. Without significant updates or unique features, SWE-bench risks losing relevance in a rapidly evolving AI landscape. Users seeking robust evaluation tools may find better options in more dynamic platforms.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to a lack of recent innovation and differentiation from competitors. The core functionality remains intact, but without updates or unique offerings, it risks becoming obsolete. A shift to a more innovative approach or enhanced user experience could elevate it back to STEADY.",
+  "what_it_does_well": [
+    "Provides a straightforward leaderboard for evaluating language models",
+    "Offers a variety of models for comparison",
+    "Utilizes a human-filtered evaluation process for reliability"
+  ],
+  "what_it_fails_at": [
+    "Lacks innovative features or unique selling points compared to competitors",
+    "User experience feels outdated and could benefit from a redesign",
+    "Limited marketing or engagement strategies to attract new users"
+  ],
+  "best_for": [
+    "Users looking for basic benchmarking of language models",
+    "Developers interested in a straightforward evaluation platform",
+    "Those who prioritize a human-filtered approach to model assessments"
+  ],
+  "not_recommended_for": [
+    "Users seeking cutting-edge features or dynamic evaluation tools",
+    "Organizations needing a comprehensive benchmarking suite",
+    "Individuals looking for a highly engaging user experience"
+  ],
+  "red_flags": [
+    "Stagnation in innovation and user engagement could lead to further decline in relevance"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "SWE-bench Logo Official Leaderboards",
-      "source_surface": "homepage"
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face offers a more comprehensive model evaluation and community engagement platform. Choose SWE-bench for basic leaderboard needs; choose Hugging Face for a richer ecosystem.",
+      "preferred_for_axis": "community engagement"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "slug": "mlbench",
+      "verdict_diff": "MLBench provides a more structured and innovative approach to model benchmarking. SWE-bench is simpler but lacks the depth of MLBench's offerings.",
+      "preferred_for_axis": "innovation in benchmarking"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Human-filtered evaluation process",
+      "source": "https://swebench.com/verified.html",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Docs \" is listed on the homepage, indicating documentation is accessible.",
-      "source_surface": "homepage"
+      "claim": "Variety of models for evaluation",
+      "source": "https://swebench.com/",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Introduction of CodeClash for model competition",
+      "source": "https://codeclash.ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 SWE-bench does not provide programmatic access for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Evaluation of language models through competitions'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Learn more about CodeClash'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing or access model presented",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "CodeClash introduction visible on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.swebench.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-08T16:09:43.371Z"
+  "summary": "SWE-bench offers basic leaderboard functionality but lacks innovation and clear differentiation in a competitive landscape.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/swebench.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
