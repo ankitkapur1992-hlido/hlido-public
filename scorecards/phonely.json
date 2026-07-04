@@ -1,103 +1,121 @@
 {
+  "schema_version": "2.0",
   "slug": "phonely",
   "name": "Phonely",
+  "agent_url": "/reviews/phonely/",
   "category": "Voice",
+  "run_id": "run-phonely-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of phonely.",
-  "review_url": "https://hlido.eu/reviews/phonely/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-phonely-mp12bjly",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust voice solution with a solid reputation \u2014 excels in clarity and reliability, but lacks advanced features compared to top-tier competitors.",
+    "body": "Phonely has established itself as a dependable voice solution, particularly noted for its audio clarity and reliability. Users appreciate its straightforward interface and consistent performance, making it a go-to for those prioritizing quality over complexity. However, while Phonely performs well in core voice functionalities, it does not offer some of the advanced features found in higher-tier competitors, which may limit its appeal for users seeking more comprehensive voice solutions. Overall, it stands strong in its niche but could enhance its offering to better compete against the likes of Twilio and Voximplant, which provide broader capabilities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong reputation for reliability and clarity in voice communication. It remains competitive but not VITAL as it lacks some advanced features that could broaden its appeal in a rapidly evolving market.",
+  "what_it_does_well": [
+    "Delivers clear and reliable voice communication",
+    "User-friendly interface that simplifies operations",
+    "Strong reputation among current users for performance consistency"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features found in competitors like Twilio and Voximplant",
+    "Limited customization options for more complex use cases"
+  ],
+  "best_for": [
+    "Individuals and small businesses needing dependable voice solutions",
+    "Users prioritizing audio quality over feature richness",
+    "Those looking for a straightforward, easy-to-use voice platform"
+  ],
+  "not_recommended_for": [
+    "Large enterprises requiring advanced voice features and integrations",
+    "Users needing extensive customization and flexibility"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "twilio",
+      "verdict_diff": "Twilio offers a broader range of features and integrations, making it suitable for complex applications. Choose Phonely for straightforward, reliable voice needs.",
+      "preferred_for_axis": "feature-complexity"
+    },
+    {
+      "slug": "voximplant",
+      "verdict_diff": "Voximplant provides advanced capabilities for developers, while Phonely excels in user-friendliness and clarity. Phonely is better for users who need simplicity.",
+      "preferred_for_axis": "user-friendliness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Phonely appears to be a standalone solution without direct integration capabilities for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Phonely AI - Voice AI Phone Answering for Businesses\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Answer every call perfectly with AI\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Start Free\" is prominently displayed as a call-to-action on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "There is a link labeled 'Pricing' on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "In just 5 minutes, learn how Phonely's AI phone assistant sets the industry standard for businesses that want to have 100% of their calls answered by voice AI agents.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.phonely.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:32:33.671Z"
+  "summary": "Robust voice solution with a solid reputation \u2014 excels in clarity and reliability, but lacks advanced features compared to top-tier competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/phonely.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
