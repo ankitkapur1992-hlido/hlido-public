@@ -19,8 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site-v2.css?v=20260503cats">
-  <link rel="stylesheet" href="/assets/theme-dark.css?v=20260510b">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260613cream">
+  <link rel="stylesheet" href="/assets/theme-dark.css?v=20260613cream">
   <style>
     .incidents-page { background: var(--paper); color: var(--ink); }
     .incidents-page .page-hero { padding: 64px 0 32px; }
@@ -62,6 +62,25 @@
     .sparkline-row[data-sev="low"] .sparkline-bar > span { background: #1b5e20; }
     .sparkline-count { font-family: 'JetBrains Mono', monospace; text-align: right; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Hlido AI Agent Incident Registry",
+    "description": "A public registry of independently-verified AI agent reliability incidents — availability failures, broken or unverifiable claims, and vendor self-reported retractions — each with evidence and timestamps. Maintained by Hlido, the trust layer for AI agents.",
+    "url": "https://hlido.eu/incidents/",
+    "keywords": ["AI agents", "agent reliability", "incidents", "availability", "uptime", "trust", "agent failures", "claim verification"],
+    "creator": { "@type": "Organization", "name": "Hlido", "url": "https://hlido.eu" },
+    "isAccessibleForFree": true,
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://hlido.eu/data/incidents.json" },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://hlido.eu/v1/incidents" },
+      { "@type": "DataDownload", "encodingFormat": "application/rss+xml", "contentUrl": "https://hlido.eu/v1/incidents/feed.xml" }
+    ]
+  }
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3bc683f5466b404eb37e8d8247f759af"}'></script><!-- End Cloudflare Web Analytics -->
+<script id="counterscale-script" data-site-id="hlido-eu" src="https://counterscale.hlido.workers.dev/tracker.js" defer></script>
 </head>
 <body class="incidents-page">
   <header class="site-nav">
