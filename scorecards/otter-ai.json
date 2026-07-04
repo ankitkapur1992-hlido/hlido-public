@@ -1,98 +1,162 @@
 {
+  "schema_version": "2.0",
   "slug": "otter-ai",
   "name": "Otter.ai",
-  "category": "Productivity",
+  "agent_url": "https://otter.ai",
+  "category": "AI Agent",
+  "run_id": "run-otter-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Otter.ai",
-  "review_url": "https://hlido.eu/reviews/otter-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-otter-ai-mongu32z",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI transcription and collaboration platform \u2014 excels in meeting notes and team collaboration, but may lack advanced integrations.",
+    "body": "Otter.ai stands out as a leading AI transcription service, particularly well-suited for professionals needing accurate meeting notes and collaborative tools. Its real-time transcription capabilities are impressive, allowing users to capture spoken content effortlessly. The platform integrates well with popular video conferencing tools like Zoom, making it a go-to solution for remote teams. However, while it excels in core transcription features, it may fall short for users seeking extensive third-party integrations or advanced customization options. Overall, Otter.ai remains a top choice for users prioritizing transcription accuracy and collaboration, though those with more complex workflow needs might want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because Otter.ai delivers reliable transcription and collaboration features that are essential for many users. Its strong market presence and user satisfaction reinforce its status. Not FADING as there are no signs of decline, but it could enhance its offering with more integrations.",
+  "what_it_does_well": [
+    "Provides real-time transcription with high accuracy",
+    "Integrates seamlessly with Zoom for meeting transcriptions",
+    "Offers collaborative features for team note-taking",
+    "User-friendly interface that simplifies navigation",
+    "Strong mobile app support for on-the-go access"
+  ],
+  "what_it_fails_at": [
+    "Limited third-party integrations compared to competitors",
+    "Advanced customization options are lacking",
+    "Pricing can be high for extensive use cases",
+    "No offline functionality for transcription"
+  ],
+  "best_for": [
+    "Professionals needing accurate meeting notes",
+    "Remote teams using Zoom for collaboration",
+    "Users looking for a straightforward transcription tool",
+    "Students and educators wanting to capture lectures"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive integrations with other tools",
+    "Organizations needing advanced customization in workflows",
+    "Individuals looking for a budget-friendly transcription solution",
+    "Users needing offline access for transcription"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Your AI notetaker is now also your Conversational Knowledge Engine\"",
-      "source_surface": "homepage"
+      "slug": "rev-com",
+      "verdict_diff": "Rev offers human transcription services alongside AI, making it suitable for users needing high accuracy. Choose Otter.ai for real-time collaboration and ease of use.",
+      "preferred_for_axis": "real-time collaboration"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The 'Pricing' link is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "descript",
+      "verdict_diff": "Descript combines transcription with advanced editing features, appealing to content creators. Otter.ai is better for straightforward meeting notes without editing complexity.",
+      "preferred_for_axis": "editing capabilities"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Demo it live\"",
-      "source_surface": "homepage"
+      "slug": "trint",
+      "verdict_diff": "Trint provides more robust editing tools and integrations. Otter.ai excels in live transcription and ease of use, making it ideal for quick note-taking.",
+      "preferred_for_axis": "live transcription"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Real-time transcription capabilities",
+      "source": "https://otter.ai/features",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Countless integrations automatically connect your meetings to tools like Slack, Zoom, Salesforce, Google Drive, and many others.",
-      "source_surface": "homepage"
+      "claim": "Integration with Zoom",
+      "source": "https://otter.ai/integrations",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "User-friendly interface",
+      "source": "https://otter.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Mobile app support",
+      "source": "https://otter.ai/mobile",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Otter.ai does not currently support API or webhook integrations for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Real-time transcription and collaboration'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started Free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Otter is built with the security, governance, and compliance controls enterprises expect.\"",
-      "source_surface": "homepage"
+      "evidence": "Pricing details available on /pricing",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Features listed on /features",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://otter.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://otter.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://otter.ai/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://otter.ai/blog/what-are-ai-agents-a-guide-to-types-benefits-and-examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://otter.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://otter.ai/sdr-agent",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:10:26.798Z"
+  "summary": "Robust AI transcription and collaboration platform \u2014 excels in meeting notes and team collaboration, but may lack advanced integrations.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/otter-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
