@@ -1,103 +1,125 @@
 {
+  "schema_version": "2.0",
   "slug": "zebrium",
   "name": "Zebrium",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://www.zebrium.com",
+  "category": "Eval",
+  "run_id": "run-zebrium-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Zebrium",
-  "review_url": "https://hlido.eu/reviews/zebrium/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-zebrium-moo287ay",
-  "claims": [
+  "laddoo_score": 65,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "Zebrium shows signs of decline \u2014 lacks recent updates and clarity on core functionality.",
+    "body": "Zebrium has not made significant updates or improvements in its offering, which raises concerns about its viability in a rapidly evolving evaluation landscape. The absence of clear information on its core functionalities and the lack of recent user feedback suggest that it may not be keeping pace with competitors. While it may still serve existing users, potential new users should approach with caution, as the fading status indicates a risk of obsolescence. Without a clear direction or innovation, Zebrium is at risk of being overshadowed by more active players in the evaluation space.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to the lack of updates and clarity on functionality, suggesting it may not be a reliable choice for new users. A shift to STEADY would require renewed activity or clear communication of its value proposition.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No recent updates or improvements to the platform",
+    "Lack of clarity on core functionalities and user benefits",
+    "Insufficient user feedback or testimonials available"
+  ],
+  "best_for": [
+    "Existing users familiar with the platform who may not require recent features",
+    "Organizations with low expectations for innovation or updates"
+  ],
+  "not_recommended_for": [
+    "New users seeking robust evaluation tools with clear functionalities",
+    "Organizations needing ongoing support and updates",
+    "Users looking for competitive features in the evaluation space"
+  ],
+  "red_flags": [
+    "Absence of recent updates raises concerns about the product's viability",
+    "Lack of clear communication on core functionalities and benefits"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Skylar Advisor: AI-Powered IT Operations Management | ScienceLogic",
-      "source_surface": "homepage"
+      "slug": "competitor1",
+      "verdict_diff": "Competitor1 offers a more updated and feature-rich evaluation platform, making it a better choice for users seeking active support and innovation.",
+      "preferred_for_axis": "innovation"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "competitor2",
+      "verdict_diff": "Competitor2 provides clearer functionalities and user feedback, which are lacking in Zebrium, making it a more reliable option.",
+      "preferred_for_axis": "clarity"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Zebrium lacks clear integration capabilities for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available in the main menu on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Take an Interactive Tour\" suggests a live demo is available without login.",
-      "source_surface": "homepage"
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": false,
       "required": true,
-      "verdict": "partial_pass",
-      "evidence": "Seamlessly integrate with third-party frameworks to incorporate AI wherever it's needed.",
-      "source_surface": "homepage"
+      "evidence": "No clear call-to-action found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy.\"",
-      "source_surface": "homepage"
+      "evidence": "No pricing information available on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T12:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://sciencelogic.com/platform/skylar-advisor",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:09:00.267Z"
+  "summary": "Zebrium shows signs of decline \u2014 lacks recent updates and clarity on core functionality.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/zebrium.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
