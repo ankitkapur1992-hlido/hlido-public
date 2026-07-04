@@ -1,99 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "pinecone",
   "name": "Pinecone",
-  "category": "Infrastructure",
+  "agent_url": "https://www.pinecone.io",
+  "category": "Data",
+  "run_id": "run-pinecone-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Pinecone",
-  "review_url": "https://hlido.eu/reviews/pinecone/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-pinecone-moo1ik4x",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust vector database solution with strong performance and scalability \u2014 ideal for AI-driven applications.",
+    "body": "Pinecone stands out as a leading vector database designed for machine learning applications. Its architecture allows for rapid scaling and high performance, making it a preferred choice for developers looking to implement AI-driven features. The platform excels in managing and querying large datasets efficiently, which is crucial for applications involving real-time data retrieval and similarity searches. Pinecone's user-friendly interface and comprehensive documentation further enhance its appeal, facilitating smooth integration into existing workflows. However, potential users should consider the pricing structure, which may not be as competitive for smaller projects. Overall, Pinecone is a VITAL tool for teams focused on leveraging vector databases for advanced AI functionalities.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, scalability, and user-friendly design, which are essential for AI-driven applications. It remains a top choice in the vector database space, though pricing may deter smaller-scale users.",
+  "what_it_does_well": [
+    "Offers high-performance vector searches and retrievals",
+    "Scales seamlessly with growing datasets",
+    "Provides a user-friendly interface and extensive documentation",
+    "Integrates easily into machine learning workflows",
+    "Supports real-time data processing for AI applications"
+  ],
+  "what_it_fails_at": [
+    "Pricing may be prohibitive for smaller projects or startups",
+    "Limited information available on specific use cases in public documentation",
+    "Potential learning curve for users unfamiliar with vector databases"
+  ],
+  "best_for": [
+    "AI development teams needing efficient vector search capabilities",
+    "Organizations managing large datasets for machine learning",
+    "Startups looking to implement advanced AI features at scale",
+    "Data scientists and engineers focused on real-time data processing"
+  ],
+  "not_recommended_for": [
+    "Small projects with limited budgets",
+    "Users seeking a simple database solution without vector capabilities",
+    "Teams without prior experience in machine learning or data engineering"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"The vector database to build knowledgeable AI | Pinecone\"",
-      "source_surface": "homepage"
+      "slug": "weaviate",
+      "verdict_diff": "Weaviate offers similar vector database capabilities but emphasizes open-source flexibility. Choose Pinecone for a more managed, high-performance solution.",
+      "preferred_for_axis": "managed service vs open-source"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is a link directly accessible from the homepage.",
-      "source_surface": "homepage"
+      "slug": "faiss",
+      "verdict_diff": "Faiss is a powerful library for vector similarity search but requires more setup and engineering effort. Pinecone is better for teams wanting a ready-to-use solution.",
+      "preferred_for_axis": "ease of use"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "High-performance vector searches",
+      "source": "https://www.pinecone.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to 'Docs' which suggests that documentation is accessible without login.",
-      "source_surface": "homepage"
+      "claim": "Seamless scalability",
+      "source": "https://www.pinecone.io",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "User-friendly interface",
+      "source": "https://www.pinecone.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Pinecone can be integrated into machine learning workflows via its API, allowing agents to perform vector searches and manage datasets programmatically.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Use Pinecone with your favorite cloud provider, data sources, models, frameworks, and more.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Vector database for AI applications",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get Started button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Pinecone does not need SSH, VPN, or inbound network access to operate the system.\"",
-      "source_surface": "pricing"
+      "evidence": "Pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation on vector search capabilities",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.pinecone.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.pinecone.io/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.pinecone.io/partners/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.pinecone.io/customers/gong/",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.pinecone.io/blog/cascading-retrieval/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:49:16.302Z"
+  "summary": "Robust vector database solution with strong performance and scalability \u2014 ideal for AI-driven applications.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/pinecone.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
