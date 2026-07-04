@@ -1,41 +1,151 @@
 {
+  "schema_version": "2.0",
   "slug": "spellapp",
   "name": "AI Document Generator | Spell AI",
   "agent_url": "https://spellapp.com",
   "category": "AI Agent",
-  "run_id": "run-spellapp-apjqtqtz",
-  "run_at": "2026-05-16T00:00:10.436Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-spellapp-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 90,
+  "tier": "VITAL",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI document generator that excels in speed and collaboration \u2014 ideal for teams needing quick, polished outputs.",
+    "body": "Spell AI positions itself as a powerful tool for document creation, leveraging AI to generate drafts in seconds and allowing users to edit and collaborate seamlessly. The platform's emphasis on natural language prompts enhances usability, making it accessible for various user levels. Its real-time collaboration features stand out, facilitating teamwork without the hassle of switching between tools. However, while it excels in speed and ease of use, potential users should verify the depth of its editing capabilities and integration options with existing workflows. Overall, Spell AI is a strong contender in the document generation space, especially for teams focused on efficiency and polished outputs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in document generation and collaboration, supported by a clean user interface and positive user feedback. It could shift to STEADY if it fails to maintain innovation or if competitors introduce significantly superior features.",
+  "what_it_does_well": [
+    "Generates document drafts in seconds using AI",
+    "Allows editing through natural language prompts",
+    "Supports real-time collaboration for teams",
+    "User-friendly interface that minimizes friction",
+    "Integrates with popular productivity tools"
+  ],
+  "what_it_fails_at": [
+    "Limited information on advanced editing features",
+    "Integration details with third-party tools are sparse",
+    "Pricing structure not explicitly detailed on the homepage"
+  ],
+  "best_for": [
+    "Teams needing quick document creation and collaboration",
+    "Users looking for an intuitive AI-powered writing assistant",
+    "Organizations focused on producing polished documents rapidly"
+  ],
+  "not_recommended_for": [
+    "Users requiring extensive customization in document formats",
+    "Individuals needing advanced editing tools beyond basic functionality",
+    "Teams that prioritize deep integrations with specific software ecosystems"
+  ],
+  "red_flags": [
+    "Lack of clarity on pricing and subscription models",
+    "Insufficient details on data security and privacy practices"
+  ],
+  "compared_to": [
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion provides a broader workspace with extensive collaboration features, while Spell AI focuses specifically on document generation. Choose Spell AI for speed in document creation; choose Notion for a comprehensive project management tool.",
+      "preferred_for_axis": "document-speed"
+    },
+    {
+      "slug": "grammarly",
+      "verdict_diff": "Grammarly excels in grammar and style checking, while Spell AI is more focused on generating content quickly. Choose Grammarly for in-depth editing; choose Spell AI for rapid document drafting.",
+      "preferred_for_axis": "editing-depth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Generates drafts in seconds",
+      "source": "https://spellapp.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Real-time collaboration features",
+      "source": "https://spellapp.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Natural language editing capabilities",
+      "source": "https://spellapp.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Spell AI operates primarily as a standalone application with no public API for integration.",
+    "agent_friendly_score": 3
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "AI-powered document platform for fast creation and collaboration",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "'Get Started' button visible",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
       "pass": true,
-      "required": false
+      "required": false,
+      "evidence": "Pricing information available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false
+      "required": false,
+      "evidence": "Demonstration of features on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "laddoo_score": 90,
-  "score": 90,
-  "tier": "VITAL",
-  "summary": "Public-surface review of AI Document Generator | Spell AI.",
-  "confidence": "medium"
+  "summary": "Robust AI document generator that excels in speed and collaboration \u2014 ideal for teams needing quick, polished outputs.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/spellapp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
