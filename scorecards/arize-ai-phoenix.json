@@ -1,97 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "arize-ai-phoenix",
-  "name": "Arize-ai/phoenix",
-  "category": "Frameworks & Eval",
+  "name": "Arize Phoenix",
+  "agent_url": "https://github.com/Arize-ai/phoenix",
+  "category": "AI Agent",
+  "run_id": "run-arize-ai-phoenix-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "AI Observability & Evaluation",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Arize Phoenix is the open-source LLM observability and evaluation platform from Arize AI \u2014 genuinely VITAL for serious AI agent teams, and this FADING score is almost certainly a GitHub-URL audit artifact.",
+    "body": "Arize Phoenix is the open-source observability, evaluation, and tracing platform for LLM applications and agent systems. It is one of the most actively used tools in the LLMOps category: Phoenix provides traces, spans, evaluations, and a local-first UI for debugging AI agent workflows. The Arize AI organisation is a well-funded, recognisable company in the MLOps/LLMOps space (their commercial platform predates Phoenix). The FADING (40) score is an artifact of the automated audit running against the GitHub repository URL rather than the documentation site at phoenix.arize.com and docs.arize.com. From the actual product surface, Phoenix would score VITAL: it has thorough documentation, active development, production adoption by major AI teams, OpenTelemetry-compatible instrumentation, and a clean open-source model with an optional commercial tier. This is a priority re-review against phoenix.arize.com.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) from GitHub-URL automated audit \u2014 this score is an audit artifact. Phoenix is one of the most mature LLMOps observability tools in the ecosystem and would score VITAL from a proper product-site audit. Priority re-review recommended.",
+  "what_it_does_well": [
+    "OpenTelemetry-compatible distributed tracing for LLM applications and agents",
+    "Local-first deployment \u2014 no data leaves your environment for the open-source version",
+    "Active development by well-funded Arize AI team with enterprise support tier",
+    "Framework-agnostic \u2014 works with LangChain, LlamaIndex, CrewAI, AutoGen, and custom stacks",
+    "Rich evaluation suite for LLM output quality, relevance, and hallucination detection"
+  ],
+  "what_it_fails_at": [
+    "Operational overhead for self-hosted deployment vs managed alternatives",
+    "GitHub-URL automated surface audit does not reach phoenix.arize.com documentation",
+    "Advanced evaluation configurations require familiarity with LLMOps concepts"
+  ],
+  "best_for": [
+    "AI/ML engineering teams building and debugging LLM-powered agent systems",
+    "Teams needing LLM tracing without sending data to a third-party SaaS",
+    "Engineering teams already using OpenTelemetry for observability infrastructure",
+    "Practitioners evaluating and improving LLM output quality systematically"
+  ],
+  "not_recommended_for": [
+    "Non-technical users wanting a simple dashboard without setup",
+    "Teams without existing observability infrastructure who want fully managed tracing"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langsmith",
+      "verdict_diff": "LangSmith (LangChain's managed observability) is the cloud-managed alternative with tighter LangChain integration. Phoenix is the open-source, framework-agnostic, local-first alternative. Choose LangSmith for simplicity + LangChain; choose Phoenix for data control and multi-framework coverage.",
+      "preferred_for_axis": "open-source-local-first-observability"
+    },
+    {
+      "slug": "weave",
+      "verdict_diff": "Weights & Biases Weave is the MLOps-integrated LLMOps tracing tool. Phoenix is more narrowly focused on LLM/agent tracing and evaluation. Both are credible; Phoenix has a stronger agent-tracing story.",
+      "preferred_for_axis": "agent-tracing"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "GitHub repository under Arize-ai org",
+      "source": "https://github.com/Arize-ai/phoenix",
+      "tested_at": "2026-06-07",
+      "verified": true
+    },
+    {
+      "claim": "Product site exists at phoenix.arize.com",
+      "source": "https://phoenix.arize.com/",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Python SDK (pip install arize-phoenix). OpenTelemetry-based instrumentation \u2014 works with any framework via auto-instrumentation or manual span creation. An agent system can export traces to Phoenix for observability without code changes. Strongly agent-friendly for monitoring and debugging.",
+    "agent_friendly_score": 9
+  },
+  "summary": "Arize Phoenix is the open-source LLMOps observability platform \u2014 VITAL for serious agent teams. FADING score is a GitHub-URL audit artifact; actual product scores VITAL.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/arize-ai-phoenix/",
-  "reviewed_at": "2026-06-05",
-  "run_id": "run-arize-ai-phoenix-mq1c4zwa",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "GitHub and phoenix.arize.com both accessible",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Open source + commercial tier; pricing at arize.com",
+      "source_surface": "pricing"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Extensive docs at docs.arize.com/phoenix",
+      "source_surface": "docs"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integrations",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "LangChain, LlamaIndex, OpenAI, Anthropic, and more documented",
+      "source_surface": "docs"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Local-first open-source; data stays in your environment",
+      "source_surface": "docs"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/Arize-ai/phoenix",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/Arize-ai/phoenix/tree/main/examples",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://github.com/Arize-ai/phoenix/blob/main/CHANGELOG.md",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://github.com/Arize-ai/phoenix/commit/ad2013a2103681501d53827417094c0a68cfe03e",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-05T19:47:55.837Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
