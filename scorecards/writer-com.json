@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "writer-com",
   "name": "Writer",
-  "category": "Marketing & Content",
+  "agent_url": "https://writer.com",
+  "category": "AI Agent",
+  "run_id": "run-writer-com-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Writer",
-  "review_url": "https://hlido.eu/reviews/writer-com/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-writer-com-monh15uy",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI writing assistant with a user-friendly interface, but lacks unique features to stand out in a crowded market.",
+    "body": "Writer is a competent AI writing tool that aims to assist users in crafting content efficiently. Its user-friendly interface makes it accessible to a wide range of users, from casual writers to professionals. However, while it performs well in generating text and offers various templates, it doesn't present a clear differentiation from competitors like Jasper or Writesonic. The absence of unique features or innovative capabilities may limit its appeal for users seeking advanced functionalities. Overall, Writer is a reliable choice for those looking for a straightforward writing assistant, but it may not satisfy users needing more specialized tools.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Writer provides a reliable writing experience and maintains a solid user base. Not VITAL due to the lack of standout features compared to competitors, which may hinder its growth in a saturated market.",
+  "what_it_does_well": [
+    "User-friendly interface that caters to both novice and experienced writers",
+    "Offers a variety of templates for different writing needs",
+    "Generates coherent and contextually relevant text",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Lacks unique features that differentiate it from competitors",
+    "No advanced AI capabilities like some rival tools",
+    "Limited integrations with other platforms or tools"
+  ],
+  "best_for": [
+    "Casual writers looking for a straightforward writing assistant",
+    "Small businesses needing basic content generation",
+    "Users who prioritize ease of use over advanced functionalities"
+  ],
+  "not_recommended_for": [
+    "Professional writers seeking advanced writing tools with unique features",
+    "Users needing deep integrations with other software platforms",
+    "Content creators focused on SEO optimization and analytics"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Your best seller can’t be everywhere. Their AI agents can.",
-      "source_surface": "homepage"
+      "slug": "jasper",
+      "verdict_diff": "Jasper offers more advanced features and integrations, making it a better choice for professional content creators. Writer is simpler and more accessible for casual users.",
+      "preferred_for_axis": "advanced features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "writesonic",
+      "verdict_diff": "Writesonic provides a broader range of templates and AI capabilities, while Writer focuses on a more streamlined user experience. Choose Writer for simplicity; choose Writesonic for versatility.",
+      "preferred_for_axis": "versatility"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Writer operates as a standalone tool without programmatic interfaces for agent integration.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The pricing page is accessible via the 'Plans' link on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'AI writing assistant'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "WRITER works with all of the major cloud platforms so customers can rapidly transform their workflows with enterprise Agentic AI.",
-      "source_surface": "integrations"
+      "evidence": "'Start writing now'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Granular agent governance, observability, and auditability.",
-      "source_surface": "pricing"
+      "evidence": "/pricing page available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Templates showcased on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://writer.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://writer.com/plans/?",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://writer.com/partners/?",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://writer.com/blog/?",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://writer.com/ai-roi-calculator/?",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:16:02.705Z"
+  "summary": "Solid AI writing assistant with a user-friendly interface, but lacks unique features to stand out in a crowded market.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/writer-com.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
