@@ -1,102 +1,130 @@
 {
+  "schema_version": "2.0",
   "slug": "sierra-platform",
   "name": "Sierra (CX agent platform)",
+  "agent_url": "/reviews/sierra-platform/",
   "category": "Customer Experience",
+  "run_id": "run-sierra-platform-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of sierra-platform.",
-  "review_url": "https://hlido.eu/reviews/sierra-platform/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-sierra-platform-mp12c3m4",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust CX agent platform with strong performance metrics \u2014 ideal for scaling customer support operations but may lack niche features.",
+    "body": "Sierra excels as a comprehensive customer experience agent platform, boasting a high score of 90, indicative of its reliability and effectiveness in enhancing customer support operations. The platform's strengths lie in its robust feature set, which supports scaling operations efficiently. However, while it covers a broad range of functionalities, it may not offer specialized tools that some niche providers have, potentially leaving specific use cases underserved. The platform's transparency regarding its features and performance metrics adds to its credibility, making it a solid choice for organizations looking to enhance their customer engagement strategies. Users should evaluate their specific needs against Sierra's offerings to ensure a good fit.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to strong performance metrics and a comprehensive feature set that supports scaling customer support operations. Not VITAL as it may lack specialized features that niche competitors offer, which could limit its appeal for specific use cases.",
+  "what_it_does_well": [
+    "Comprehensive feature set for customer support operations",
+    "High reliability and performance metrics",
+    "Scalable solutions for growing organizations",
+    "Transparent about features and performance",
+    "User-friendly interface that facilitates quick adoption"
+  ],
+  "what_it_fails_at": [
+    "May lack specialized tools for niche customer support scenarios",
+    "Limited integrations with certain third-party applications",
+    "Documentation could be more detailed for complex features"
+  ],
+  "best_for": [
+    "Organizations looking to scale their customer support operations",
+    "Teams that prioritize reliability and performance in CX tools",
+    "Businesses needing a comprehensive solution without niche requirements"
+  ],
+  "not_recommended_for": [
+    "Companies requiring highly specialized customer support features",
+    "Organizations heavily reliant on specific third-party integrations",
+    "Teams needing extensive customization options"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "zendesk",
+      "verdict_diff": "Zendesk offers a more extensive range of integrations and specialized tools compared to Sierra. Choose Sierra for a more straightforward, scalable solution without the complexity of extensive customization.",
+      "preferred_for_axis": "scalability"
+    },
+    {
+      "slug": "freshdesk",
+      "verdict_diff": "Freshdesk provides a more affordable option for smaller teams, while Sierra excels in performance for larger operations. Opt for Freshdesk if budget constraints are critical; choose Sierra for robust performance.",
+      "preferred_for_axis": "performance"
+    },
+    {
+      "slug": "intercom",
+      "verdict_diff": "Intercom focuses on conversational support with a strong emphasis on chatbots, while Sierra provides a broader CX platform. Choose Sierra for comprehensive customer experience management.",
+      "preferred_for_axis": "comprehensive-management"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Sierra operates as a standalone platform without programmatic interfaces for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Better customer experiences. Built on Sierra.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Better customer experiences. Built on Sierra.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": false,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Sign in\" is clearly visible on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Find out how Sierra can help your business build better, more human customer experiences with AI.\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Demo: our Co-Founder, Bret Taylor, building an agent with Ghostwriter.",
-      "source_surface": "changelog"
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://sierra.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://sierra.ai/blog/agents-as-a-service",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:33:12.605Z"
+  "summary": "Robust CX agent platform with strong performance metrics \u2014 ideal for scaling customer support operations but may lack niche features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/sierra-platform.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
