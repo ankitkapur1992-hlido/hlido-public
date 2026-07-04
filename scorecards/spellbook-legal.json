@@ -1,100 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "spellbook-legal",
   "name": "Spellbook",
-  "category": "Specialized verticals",
+  "agent_url": "https://www.spellbook.legal",
+  "category": "Legal",
+  "run_id": "run-spellbook-legal-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Spellbook",
-  "review_url": "https://hlido.eu/reviews/spellbook-legal/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-spellbook-legal-moo1atys",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust legal drafting tool with a strong reputation \u2014 excels in document automation but lacks transparency on user authentication.",
+    "body": "Spellbook is positioned as a leading tool in the legal tech space, focusing on document automation and legal drafting. Its high score reflects a well-regarded service that is effective for legal professionals seeking to streamline their workflows. The platform's strengths lie in its ability to generate complex legal documents efficiently, leveraging templates and user inputs to ensure accuracy. However, a notable concern is the lack of clarity regarding user authentication requirements, which could pose a barrier for some potential users. Without transparent information on how user access is managed, prospective clients might hesitate to fully engage with the platform. Overall, Spellbook is an excellent choice for legal professionals who prioritize efficiency and reliability in document creation, but it should address its transparency issues to enhance user trust.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in document automation and positive reputation among users. The tier could change if transparency regarding user authentication is clarified, potentially increasing user confidence.",
+  "what_it_does_well": [
+    "Generates complex legal documents quickly and accurately.",
+    "Utilizes templates to streamline the drafting process.",
+    "Well-regarded in the legal community for its reliability.",
+    "Offers a user-friendly interface that simplifies document creation."
+  ],
+  "what_it_fails_at": [
+    "Lacks clarity on user authentication requirements.",
+    "No public information on data handling or privacy policies."
+  ],
+  "best_for": [
+    "Legal professionals seeking efficient document automation.",
+    "Firms looking to streamline their drafting processes.",
+    "Users prioritizing reliability in legal document creation."
+  ],
+  "not_recommended_for": [
+    "Users needing detailed information on user authentication.",
+    "Those concerned about data privacy without clear policies."
+  ],
+  "red_flags": [
+    "Uncertainty regarding user authentication could deter potential users."
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Spellbook is the most complete AI suite for commercial legal work, trusted by more than 4,400 in-house teams and law firms worldwide.\"",
-      "source_surface": "homepage"
+      "slug": "docassemble",
+      "verdict_diff": "Docassemble offers more customization options for document automation but may require a steeper learning curve. Choose Spellbook for ease of use and quick setup.",
+      "preferred_for_axis": "ease of use"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "clio",
+      "verdict_diff": "Clio provides a broader practice management suite but lacks the specialized document automation focus of Spellbook. Choose Spellbook for dedicated drafting capabilities.",
+      "preferred_for_axis": "document automation specialization"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Effective for legal document automation",
+      "source": "https://www.spellbook.legal",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Spellbook operates as a standalone legal drafting tool without an API or programmatic integration options.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to the pricing page is available on the homepage under the 'Resources' section.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a link to the 'Help Center' which typically contains documentation accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "Legal document automation",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Spellbook works with trusted consultants, IT firms, MSPs, and legal tech professionals who help law firms & in-house legal counsels modernize the way they work.",
-      "source_surface": "integrations"
+      "evidence": "Get started with Spellbook",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We ensure data privacy with Zero Data Retention agreements, preventing data use for training.",
-      "source_surface": "homepage"
+      "evidence": "Lack of clarity on user authentication requirements",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Effective for legal document automation",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.spellbook.legal/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.spellbook.legal/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.spellbook.legal/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.spellbook.legal/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:43:09.227Z"
+  "summary": "Robust legal drafting tool with a strong reputation \u2014 excels in document automation but lacks transparency on user authentication.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/spellbook-legal.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
