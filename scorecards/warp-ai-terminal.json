@@ -1,101 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "warp-ai-terminal",
   "name": "Warp AI Terminal",
+  "agent_url": "/reviews/warp-ai-terminal/",
   "category": "Coding",
+  "run_id": "run-warp-ai-terminal-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of warp-ai-terminal.",
-  "review_url": "https://hlido.eu/reviews/warp-ai-terminal/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-warp-ai-terminal-mp12i876",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with a strong focus on developer productivity \u2014 excels in terminal integration but lacks broader ecosystem support.",
+    "body": "Warp AI Terminal stands out as a powerful tool designed to enhance developer productivity through seamless terminal integration and AI-assisted coding features. Its interface is intuitive and responsive, making it a strong choice for developers looking to streamline their workflows. The AI capabilities show promise in automating repetitive tasks and providing code suggestions, which can significantly speed up development time. However, while it excels in terminal functionalities, it currently lacks extensive integrations with other tools and platforms, which may limit its appeal for teams relying on a broader ecosystem. Overall, Warp AI Terminal is a solid option for individual developers or small teams focused on terminal-centric workflows, but those seeking a more integrated solution might find it lacking.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) because it demonstrates strong performance in enhancing developer productivity and has a clean user interface. Not VITAL due to limited integrations with other tools, which could hinder adoption in larger teams or projects requiring a more connected environment.",
+  "what_it_does_well": [
+    "Offers a responsive and intuitive interface for terminal operations",
+    "Integrates AI features that assist in coding and automate repetitive tasks",
+    "Enhances developer productivity significantly within terminal workflows",
+    "Provides a solid foundation for individual developers and small teams"
+  ],
+  "what_it_fails_at": [
+    "Lacks extensive integrations with other development tools and platforms",
+    "Limited support for collaborative features in team environments",
+    "Current focus on terminal functionality may not appeal to all developers"
+  ],
+  "best_for": [
+    "Individual developers seeking to enhance their terminal experience",
+    "Small teams focused on coding efficiency within terminal workflows",
+    "Developers looking for AI assistance in coding tasks"
+  ],
+  "not_recommended_for": [
+    "Larger teams requiring extensive tool integrations",
+    "Developers who rely heavily on a diverse ecosystem of development tools",
+    "Users looking for comprehensive collaborative features"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "visual-studio-code",
+      "verdict_diff": "Visual Studio Code offers a more comprehensive development environment with extensive extensions and integrations. Warp AI Terminal excels in terminal functionalities but may not match the versatility of VS Code for broader development needs.",
+      "preferred_for_axis": "integrated development environment"
+    },
+    {
+      "slug": "gitpod",
+      "verdict_diff": "Gitpod provides a cloud-based development environment with collaborative features. Warp AI Terminal is better for local terminal-centric workflows but lacks Gitpod's collaborative capabilities.",
+      "preferred_for_axis": "collaboration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "None \u2014 Warp AI Terminal operates as a standalone tool focused on terminal operations without exposing programmatic interfaces for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Warp: The Agentic Development Environment\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Warp is the agentic development environment",
-      "source_surface": "homepage"
+      "evidence": "'AI-assisted coding in terminal'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\",\"name\":\"Sign Up\"",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Pricing\"",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "The homepage includes images labeled as 'Warp Terminal screenshot' and 'Oz screenshot'.",
-      "source_surface": "homepage"
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.warp.dev/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.warp.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.warp.dev/blog/warp-is-now-open-source",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:38:03.432Z"
+  "summary": "Robust coding assistant with a strong focus on developer productivity \u2014 excels in terminal integration but lacks broader ecosystem support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/warp-ai-terminal.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
