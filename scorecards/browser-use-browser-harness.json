@@ -1,54 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "browser-use-browser-harness",
   "name": "browser-use/browser-harness",
+  "agent_url": "https://github.com/browser-use/browser-harness",
   "category": "AI Agent",
+  "run_id": "run-browser-use-browser-harness-mpzj55w4",
+  "run_at": "2026-06-04T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Browser Harness | Self-healing harness that enables LLMs to complete any task.",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An alpha-stage self-healing browser harness from the browser-use project \u2014 interesting technical thesis for LLM-driven browser automation, but too early to evaluate as a production tool.",
+    "body": "browser-harness is a GitHub project under the browser-use organisation \u2014 the same team behind the browser-use Python library that gained significant attention in 2024-25 for enabling LLMs to control browsers. The harness is described as a 'self-healing harness that enables LLMs to complete any task', which suggests it sits above the core browser-use library as an abstraction layer that handles selector drift and site changes automatically. At the time of review, the GitHub repository is the only surface: there is no dedicated product page, no documentation site, no pricing (it appears to be open source), and no changelog. The self-healing concept is genuinely useful for production browser automation \u2014 anyone who has run Playwright scripts against real websites knows the maintenance burden of selectors breaking. But this project does not yet have the documentation depth, release stability, or usage evidence to earn a higher score. The browser-use core library is the mature sibling; this harness is an experiment adjacent to it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) because the project is at GitHub-only alpha stage: no product site, no documentation, no changelog, no API contract stability, and no evidence of production usage. The concept is sound (self-healing browser harness) but the surface does not yet support a higher evaluation.",
+  "what_it_does_well": [
+    "Self-healing selector approach addresses a genuine pain point in browser automation maintenance",
+    "Part of the browser-use ecosystem which has real community momentum",
+    "Open source \u2014 no cost barrier to evaluation"
+  ],
+  "what_it_fails_at": [
+    "GitHub-only surface \u2014 no product page, docs site, or release notes",
+    "No versioned releases or stability guarantees",
+    "No usage examples or integration guides in the repository",
+    "Changelog not found in automated audit",
+    "Cannot evaluate production readiness from public surface"
+  ],
+  "best_for": [
+    "Researchers and early adopters experimenting with LLM-driven browser automation stacks",
+    "browser-use users who want to extend the library with self-healing capabilities"
+  ],
+  "not_recommended_for": [
+    "Production browser automation workflows requiring stability guarantees",
+    "Teams without Playwright/Python browser automation experience",
+    "Anyone needing documentation, support, or stable API contracts"
+  ],
+  "red_flags": [
+    "No documentation, versioned releases, or stability signals at time of review \u2014 evaluate only for experimental or research use."
+  ],
+  "compared_to": [
+    {
+      "slug": "browser-use-browser-use",
+      "verdict_diff": "browser-use (the core library) is the mature sibling \u2014 documented, actively maintained, and production-used. browser-harness is an experimental alpha layer above it. Start with the core library.",
+      "preferred_for_axis": "production-readiness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "GitHub repository accessible",
+      "source": "https://github.com/browser-use/browser-harness",
+      "tested_at": "2026-06-04",
+      "verified": true
+    },
+    {
+      "claim": "Self-healing browser harness description",
+      "source": "GitHub repository README",
+      "tested_at": "2026-06-04",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Open source Python project \u2014 an agent system could install and use it as a library for browser automation tasks. No stable API contract yet; use as an experimental component only. The self-healing concept makes it relevant for LLM-driven agents that need browser interaction.",
+    "agent_friendly_score": 5
+  },
+  "summary": "Alpha-stage self-healing browser harness from the browser-use project \u2014 technically interesting for LLM-driven automation, but too early for production evaluation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/browser-use-browser-harness/",
   "reviewed_at": "2026-06-04",
-  "run_id": "run-browser-use-browser-harness-mpzj55w4",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "GitHub repo accessible with self-healing harness description",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source project \u2014 no pricing page (GitHub generic pricing page not relevant)",
       "source_surface": "unknown"
     },
     {
       "id": "C03",
       "claim": "Documentation or live demo accessible without login",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No dedicated docs site found; README only",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
       "claim": "Integration list or supported frameworks documented",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations page; GitHub partners page not relevant",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "Open source library \u2014 no data handling statement applicable",
       "source_surface": "unknown"
     }
   ],
@@ -94,7 +167,8 @@
   ],
   "required_items_total": 4,
   "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/browser-use-browser-harness.json",
   "generated_at": "2026-06-04T13:27:54.633Z"
 }
