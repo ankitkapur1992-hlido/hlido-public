@@ -1,103 +1,126 @@
 {
+  "schema_version": "2.0",
   "slug": "suno",
   "name": "Suno",
-  "category": "Voice",
+  "agent_url": "https://suno.com",
+  "category": "AI Agent",
+  "run_id": "run-suno-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 53,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Suno",
-  "review_url": "https://hlido.eu/reviews/suno/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-suno-mongyenu",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Make any song you can imagine",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "The homepage only provides options to sign in or sign up, indicating that access to documentation or a live demo may require login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://suno.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 1,
+  "laddoo_score": 53,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:13:28.702Z"
+  "hlido_opinion": {
+    "headline": "Suno shows potential but lacks clarity and engagement \u2014 not recommended for serious use.",
+    "body": "Suno, positioned as an AI agent, presents a product that appears to be in a state of stagnation. The lack of accessible information on its core functionalities and user engagement raises concerns about its viability in a competitive landscape. Without a clear value proposition or demonstrable features, it struggles to attract and retain users. The absence of verified claims further undermines confidence in its capabilities. As it stands, Suno is not a viable option for those seeking a reliable AI agent solution. Users may find better alternatives in the market that offer clearer benefits and proven performance.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (53) due to a lack of user engagement, unclear value proposition, and absence of verified claims. The tier could improve with a clearer product narrative and demonstrable features that resonate with users.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Lacks clear information on functionalities and use cases",
+    "No verified claims or user testimonials available",
+    "Struggles to engage potential users effectively",
+    "Uncertain value proposition compared to competitors",
+    "Limited public presence and visibility in the market"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking a reliable and tested AI agent solution",
+    "Individuals looking for clear use cases and functionalities",
+    "Businesses needing proven performance and engagement",
+    "Developers wanting robust integration options",
+    "Anyone requiring verified claims about performance"
+  ],
+  "red_flags": [
+    "Absence of verified claims raises concerns about reliability",
+    "Lack of user engagement indicates potential stagnation"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a more robust and proven AI agent experience with clear functionalities and user engagement. Suno lacks the same level of clarity and proven performance.",
+      "preferred_for_axis": "user engagement"
+    },
+    {
+      "slug": "google-bard",
+      "verdict_diff": "Google Bard provides a well-established AI agent with clear use cases and functionalities. Suno's unclear value proposition makes it less appealing.",
+      "preferred_for_axis": "clarity of features"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the lack of clear functionalities makes it difficult to integrate into agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No effective call to action observed",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or user testimonials available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Suno shows potential but lacks clarity and engagement \u2014 not recommended for serious use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/suno.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
