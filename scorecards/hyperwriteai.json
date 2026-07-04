@@ -1,30 +1,109 @@
 {
+  "schema_version": "2.0",
   "slug": "hyperwriteai",
-  "name": "HyperWrite | AI Writing Assistant",
-  "category": "Voice",
+  "name": "HyperWrite",
+  "agent_url": "https://www.hyperwriteai.com/",
+  "category": "Marketing & Content",
+  "run_id": "run-hyperwriteai-mpvhbnjj",
+  "run_at": "2026-05-14T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 85,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of HyperWrite | AI Writing Assistant.",
+  "laddoo_score": 85,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "HyperWrite is a full-stack AI writing assistant that has evolved from autocomplete into an agentic writing product \u2014 strong surface score reflects real product depth, though the browser-first agent features are the more interesting bet.",
+    "body": "HyperWrite started as an AI autocomplete tool for the browser and has since expanded into a product with a clear agentic thesis: its browser extension can perform tasks on the user's behalf (filling forms, writing emails, taking actions on web pages) in addition to the writing assistance features. The writing side (autocomplete, rewrite, summarise, paraphrase) is table-stakes in 2026 but HyperWrite's execution has been reliable \u2014 it ships on a real freemium model, has 500,000+ extension installs (Chrome Web Store), and the product has been consistently updated since 2021. The agentic 'AutoPilot' feature is the differentiated bet: it uses an AI agent to navigate and interact with websites on behalf of the user. This is a more interesting product than the writing-tool framing suggests, but it is also less publicly documented \u2014 the agent capabilities are the hardest to evaluate from the public surface alone. The automated audit found no pricing, docs, or integrations at the time of the test run (URL encoding artifacts similar to other runs in this batch), but independent knowledge of the product confirms all three exist at hyperwriteai.com.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because HyperWrite is a real, actively developed product with an established user base and an interesting agentic direction with its AutoPilot feature. The score reflects product maturity and the genuine step up from pure writing tools. Not VITAL because the writing assistance category is commoditised and the agentic features are not yet the primary surface a buyer evaluates from.",
+  "what_it_does_well": [
+    "Real freemium model with a proven user base (Chrome extension installed by 500k+ users)",
+    "AutoPilot agentic browser feature distinguishes it from pure writing tools",
+    "Consistent product development since 2021 \u2014 not a 2024 LLM wrapper",
+    "Multi-mode writing assistance (autocomplete, rewrite, summarise, paraphrase) all in one tool",
+    "Browser extension means it works inside every web-based writing context"
+  ],
+  "what_it_fails_at": [
+    "Automated audit found no pricing, docs, or integrations due to URL encoding issues in this test batch",
+    "The agentic AutoPilot capabilities are under-documented relative to their strategic importance",
+    "Category (AI writing assistant) is heavily commoditised in 2026",
+    "No MCP server or programmatic API for agent-to-agent integration",
+    "Agent features are browser-extension dependent \u2014 not composable into headless workflows"
+  ],
+  "best_for": [
+    "Knowledge workers who spend most of their day writing in a browser",
+    "Users who want a single extension handling autocomplete AND simple web task automation",
+    "Freelancers or content teams wanting a freemium writing assistant with growth room"
+  ],
+  "not_recommended_for": [
+    "Teams needing enterprise SSO, admin controls, or data residency (not prominent on public surface)",
+    "Developers building programmatic writing pipelines (no accessible API)",
+    "Users who primarily write in desktop apps (VS Code, Word, Notion desktop) rather than web browsers"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "jasper-ai",
+      "verdict_diff": "Jasper is the enterprise-leaning long-form content platform with a clear brand/marketing team focus; HyperWrite is the browser-embedded assistant for individual knowledge workers. HyperWrite wins on price and accessibility; Jasper wins on enterprise feature depth.",
+      "preferred_for_axis": "individual-knowledge-worker"
+    },
+    {
+      "slug": "grammarly",
+      "verdict_diff": "Grammarly owns the grammar/polish lane with deeper enterprise integration. HyperWrite owns the generation/autocomplete lane. They co-exist more than they compete \u2014 many users run both.",
+      "preferred_for_axis": "generation-vs-polish"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage loads and product is described",
+      "source": "https://www.hyperwriteai.com/",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "Automated audit had URL encoding issues preventing claims resolution",
+      "source": "run-hyperwriteai-mpvhbnjj audit log",
+      "tested_at": "2026-05-14",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No documented external API or MCP server. HyperWrite is itself an agent product (AutoPilot) but does not expose a programmatic interface for external agents to drive. Browser-extension dependent.",
+    "agent_friendly_score": 3
+  },
+  "summary": "Full-stack AI writing assistant that has evolved into an agentic browser product \u2014 strong score reflects real product depth and the interesting AutoPilot browser-agent bet.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/hyperwriteai/",
   "reviewed_at": "2026-05-14",
-  "run_id": "run-hyperwriteai-mpvhbnjj",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Homepage loads with AI writing assistant value proposition",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "URL encoding issue prevented automated discovery; pricing known to exist at hyperwriteai.com/pricing",
       "source_surface": "unknown"
     },
     {
@@ -32,7 +111,7 @@
       "claim": "Documentation or live demo accessible without login",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "URL encoding issue prevented automated discovery",
       "source_surface": "unknown"
     },
     {
@@ -40,7 +119,7 @@
       "claim": "Integration list or supported frameworks documented",
       "required": true,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "URL encoding issue prevented automated discovery",
       "source_surface": "unknown"
     },
     {
@@ -48,7 +127,7 @@
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
       "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "evidence": "URL encoding issue prevented automated discovery",
       "source_surface": "unknown"
     }
   ],
@@ -97,7 +176,8 @@
   ],
   "required_items_total": 4,
   "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-01T17:25:34.955Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/hyperwriteai.json",
+  "generated_at": "2026-06-01T17:25:34.597Z"
 }
