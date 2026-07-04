@@ -65,11 +65,15 @@ Independent, evidence-first safety scoring for MCP servers (early first cohort; 
 Each server is scored on MCP-specific security red-flags — tool-poisoning / hidden-instruction injection,
 dangerous capabilities (shell / file / network / secrets), and auth posture — into a tier:
 SAFE / CAUTION / RISKY / DANGEROUS (or not_scanned). Outcomes + per-flag evidence are public; never a bare number.
-An on-demand dev-facing scan (name a server, get a red-flag verdict) is the next phase — not yet live.
+ON-DEMAND SCAN (LIVE): call the `scan_mcp` MCP tool at https://hlido.eu/mcp with any server (HTTP URL, npm/PyPI
+package, or repo) — registered servers answer instantly with evidence; unseen HTTP endpoints get a live static
+scan in seconds; unseen stdio packages are queued for an isolated sandbox scan (reported honestly as
+not_scanned until then — never assumed safe).
 
 - MCP Trust register (human): https://hlido.eu/mcp/
 - Register data (machine-readable): https://hlido.eu/data/mcp-register.json — per server: security_tier, security_score, tool_poisoning_detected, dangerous_capabilities, no_auth, findings[]
 - Per-server evidence: https://hlido.eu/data/mcp-register/{slug}.json
+- On-demand scan (agent): `scan_mcp` tool on https://hlido.eu/mcp · CI: `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-mcp-scan@main` (scans a repo's MCP configs per PR)
 
 ## Developer / agent integrations
 
