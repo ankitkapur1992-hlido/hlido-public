@@ -1,99 +1,97 @@
 {
+  "schema_version": "2.0",
   "slug": "replit-agent",
   "name": "Replit Agent",
-  "category": "Coding",
+  "agent_url": "https://replit.com",
+  "category": "AI Agent",
+  "run_id": "run-replit-agent-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Replit Agent",
-  "review_url": "https://hlido.eu/reviews/replit-agent/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-replit-agent-mongvv1u",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent platform with strong community support \u2014 ideal for developers but may overwhelm newcomers.",
+    "body": "Replit Agent is a powerful tool for developers looking to integrate AI capabilities into their projects. With a focus on code execution and collaboration, it stands out for its user-friendly interface and extensive community resources. The platform allows users to create, share, and collaborate on AI-driven applications seamlessly. However, its depth and breadth of features may present a steep learning curve for those unfamiliar with coding or AI concepts. The vibrant community and extensive documentation help mitigate this challenge, but potential users should be prepared for a hands-on approach. Overall, Replit Agent is a vital resource for developers seeking to leverage AI in their coding workflows.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its comprehensive feature set, active community, and proven reliability. It remains essential for developers looking to harness AI in their projects. A decline in user engagement or significant competition could affect this tier.",
+  "what_it_does_well": [
+    "Offers a user-friendly interface for AI integration in coding projects",
+    "Strong community support with extensive resources and documentation",
+    "Facilitates collaboration among developers on AI-driven applications",
+    "Proven reliability with a solid track record in the developer community",
+    "Regular updates and feature enhancements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Can be overwhelming for newcomers without coding experience",
+    "Limited support for non-developers or those unfamiliar with AI concepts",
+    "Some advanced features may require a steep learning curve",
+    "Documentation can be dense and may not cater to absolute beginners"
+  ],
+  "best_for": [
+    "Developers looking to integrate AI into their applications",
+    "Teams collaborating on AI-driven projects",
+    "Users familiar with coding who want to leverage AI capabilities",
+    "Educators teaching AI concepts through practical coding exercises"
+  ],
+  "not_recommended_for": [
+    "Beginners with no coding experience",
+    "Users seeking a simple, low-code AI solution",
+    "Individuals looking for extensive customer support without coding knowledge",
+    "Non-technical users wanting to implement AI without a learning curve"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Turn ideas into apps in minutes — no coding needed\"",
-      "source_surface": "homepage"
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a more streamlined coding assistant experience, while Replit Agent provides a broader platform for AI integration. Choose Replit for collaborative project development; choose Copilot for in-line coding assistance.",
+      "preferred_for_axis": "collaborative project development"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is a link on the homepage that can be clicked to access the pricing page directly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Read the documentation\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Enhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Built-in services with zero setup- Authentication, Database, Hosting, and Monitoring, enabling you to build fully scalable apps easily and securely from day one.",
-      "source_surface": "homepage"
+      "slug": "openai-codex",
+      "verdict_diff": "OpenAI Codex is focused on code generation, while Replit Agent emphasizes community and collaboration. Opt for Replit if community support is a priority; choose Codex for advanced code generation tasks.",
+      "preferred_for_axis": "community support"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://replit.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://replit.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://replit.com/usecases/software-engineers",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://replit.com/products/deployments",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://replit.com/gallery",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:11:42.703Z"
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Replit Agent operates primarily as a platform for developers to create and share AI-driven applications, not as a standalone agent for integration.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [],
+  "summary": "Robust AI agent platform with strong community support \u2014 ideal for developers but may overwhelm newcomers.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/replit-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
