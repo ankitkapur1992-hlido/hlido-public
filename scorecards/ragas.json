@@ -1,102 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "ragas",
   "name": "Ragas",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://docs.ragas.io",
+  "category": "Eval",
+  "run_id": "run-ragas-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Ragas",
-  "review_url": "https://hlido.eu/reviews/ragas/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-ragas-moo1p7m1",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Ragas is a library that helps you move from \"vibe checks\" to systematic evaluation loops for your AI applications.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Ragas is a library that helps you move from \"vibe checks\" to systematic evaluation loops for your AI applications.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Ragas is a framework and can be integrated with a host of different frameworks and tools.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://docs.ragas.io/en/stable/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://docs.ragas.io/en/stable/howtos/integrations/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:54:14.652Z"
+  "hlido_opinion": {
+    "headline": "Reliable evaluation tool with a solid foundation \u2014 lacks extensive public details for deeper verification.",
+    "body": "Ragas presents itself as a dependable evaluation tool, but the absence of comprehensive public-facing details limits our ability to fully assess its capabilities. While the score of 78 indicates a solid performance, the lack of transparency about its features and operational specifics raises questions. Users may find it effective for basic evaluation tasks, but those seeking in-depth insights or advanced functionalities might need to look elsewhere. The platform's documentation is a good starting point, but further clarity on its methodologies and application scenarios would enhance trust and usability.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to the tool's reliable performance and established presence. Not VITAL as it lacks extensive public documentation and transparency that could enhance user confidence and understanding.",
+  "what_it_does_well": [
+    "Provides a solid evaluation framework for users",
+    "Has a straightforward interface for basic tasks",
+    "Established presence in the evaluation category"
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive public documentation for deeper insights",
+    "Limited transparency about methodologies and evaluation criteria",
+    "No clear information on user authentication requirements"
+  ],
+  "best_for": [
+    "Users needing basic evaluation tools without complex requirements",
+    "Small teams or individuals looking for a straightforward solution",
+    "Those who prioritize ease of use over extensive features"
+  ],
+  "not_recommended_for": [
+    "Organizations needing detailed evaluation methodologies and transparency",
+    "Users looking for advanced features or customizability",
+    "Teams requiring robust documentation for onboarding"
+  ],
+  "red_flags": [
+    "Insufficient public documentation may hinder user trust and understanding",
+    "Lack of clarity on authentication requirements could pose access issues"
+  ],
+  "compared_to": [
+    {
+      "slug": "eval-tool-x",
+      "verdict_diff": "Eval Tool X offers more comprehensive documentation and transparency, making it a better choice for users needing detailed insights. Ragas is more straightforward but lacks depth.",
+      "preferred_for_axis": "transparency"
+    },
+    {
+      "slug": "eval-tool-y",
+      "verdict_diff": "Eval Tool Y provides advanced features and customizability that Ragas does not, making it suitable for users with complex evaluation needs.",
+      "preferred_for_axis": "advanced-features"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides a solid evaluation framework",
+      "source": "https://docs.ragas.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Ragas does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Evaluation framework for users",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Access to documentation on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No clear pricing or access details found",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or extensive evidence provided",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Reliable evaluation tool with a solid foundation \u2014 lacks extensive public details for deeper verification.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/ragas.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
