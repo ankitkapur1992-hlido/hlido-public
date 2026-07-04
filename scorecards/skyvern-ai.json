@@ -1,99 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "skyvern-ai",
   "name": "Skyvern",
-  "category": "Infrastructure",
+  "agent_url": "https://www.skyvern.com",
+  "category": "Browser",
+  "run_id": "run-skyvern-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Skyvern",
-  "review_url": "https://hlido.eu/reviews/skyvern-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-skyvern-ai-moo1qq6q",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The AI agent platform for automating browser-based workflows. Stop writing brittle scrapers and start building intelligent agents.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.skyvern.com/contact",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.skyvern.com/contact",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.skyvern.com/contact",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.skyvern.com/contact",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.skyvern.com/blog/",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:55:38.579Z"
+  "hlido_opinion": {
+    "headline": "Skyvern struggles to maintain relevance in a competitive browser space \u2014 lacks clear differentiation and user engagement.",
+    "body": "Skyvern, a browser-focused tool, currently finds itself in a challenging position. With a score of 65, it is categorized as FADING, indicating a decline in perceived value or functionality. The lack of verifiable claims and unclear user engagement metrics suggest that Skyvern may not be meeting the evolving expectations of users. In a crowded market filled with robust alternatives like Brave, Firefox, and Chrome, Skyvern must articulate its unique value proposition to compete effectively. Without significant improvements or differentiation, it risks being overlooked by potential users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to unclear differentiation and lack of user engagement metrics. A shift to STEADY would require demonstrable improvements in user acquisition and retention, alongside a clearer value proposition.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "No clear differentiation from established browsers",
+    "Lack of verified user engagement metrics",
+    "Unclear value proposition in a competitive market"
+  ],
+  "best_for": [
+    "Users seeking a basic browsing experience without specific needs",
+    "Legacy users who may already be accustomed to the platform"
+  ],
+  "not_recommended_for": [
+    "Users looking for advanced features or privacy-focused browsing",
+    "Individuals needing a robust support community or resources"
+  ],
+  "red_flags": [
+    "No verifiable claims or user testimonials available",
+    "Unclear future roadmap or development plans"
+  ],
+  "compared_to": [
+    {
+      "slug": "brave",
+      "verdict_diff": "Brave offers a strong privacy focus and built-in ad-blocking features, making it a superior choice for users prioritizing security. Skyvern lacks these robust features.",
+      "preferred_for_axis": "privacy and security"
+    },
+    {
+      "slug": "firefox",
+      "verdict_diff": "Firefox provides extensive customization options and a strong community, which Skyvern currently does not match. Choose Firefox for a more engaging user experience.",
+      "preferred_for_axis": "customization and community support"
+    },
+    {
+      "slug": "chrome",
+      "verdict_diff": "Chrome's extensive ecosystem and integration with Google services make it a go-to choice for many users. Skyvern lacks the same level of integration and functionality.",
+      "preferred_for_axis": "ecosystem and functionality"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Skyvern does not currently provide an API or integration options for agents.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or user testimonials available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Skyvern struggles to maintain relevance in a competitive browser space \u2014 lacks clear differentiation and user engagement.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/skyvern-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
