@@ -1,99 +1,123 @@
 {
+  "schema_version": "2.0",
   "slug": "together-ai",
   "name": "Together AI",
-  "category": "Infrastructure",
+  "agent_url": "https://www.together.ai",
+  "category": "AI Agent",
+  "run_id": "run-together-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 65,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Together AI",
-  "review_url": "https://hlido.eu/reviews/together-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-together-ai-mongzomc",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Build what's next on the AI Native Cloud",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be accessed directly.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.together.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.together.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.together.ai/#",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.together.ai/demos",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.together.ai/blog/flashattention-4",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 2,
+  "laddoo_score": 65,
   "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:14:43.476Z"
+  "hlido_opinion": {
+    "headline": "Fading AI agent with unclear value proposition \u2014 lacks differentiation and transparency.",
+    "body": "Together AI presents as a general-purpose AI agent, but its value proposition is unclear from the public surface. The absence of detailed information regarding functionality, use cases, and user feedback raises concerns about its effectiveness and reliability. Without specific claims or features to evaluate, it appears to be struggling to maintain relevance in a competitive landscape. The lack of transparency around its offerings and the absence of verified claims further contribute to its fading status. Users seeking robust AI agent solutions may find better options in more established competitors.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) due to lack of clear differentiation, transparency, and verified claims. The product appears to be struggling to maintain relevance in a competitive market. A shift to STEADY would require a clearer articulation of its value and demonstrated user success stories.",
+  "what_it_does_well": [],
+  "what_it_fails_at": [
+    "Unclear value proposition with no specific features or benefits highlighted",
+    "Lack of transparency regarding functionality and use cases",
+    "No verified claims or user feedback available",
+    "Struggles to differentiate from competitors in the AI agent space"
+  ],
+  "best_for": [],
+  "not_recommended_for": [
+    "Users seeking reliable and transparent AI agent solutions",
+    "Those needing clear use cases or functionality descriptions",
+    "Individuals looking for established and trusted AI tools"
+  ],
+  "red_flags": [
+    "Absence of verified claims or user testimonials",
+    "Lack of detailed information on the product's functionality"
+  ],
+  "compared_to": [
+    {
+      "slug": "chatgpt",
+      "verdict_diff": "ChatGPT offers a well-defined and robust AI agent experience with extensive documentation and user feedback. Together AI lacks the clarity and user confidence that ChatGPT provides.",
+      "preferred_for_axis": "clarity and user trust"
+    },
+    {
+      "slug": "google-bard",
+      "verdict_diff": "Google Bard provides a comprehensive AI experience with clear use cases and integration options. Together AI does not currently offer comparable transparency or functionality.",
+      "preferred_for_axis": "functionality and integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Together AI does not provide clear integration paths or APIs for agent-driven workflows.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No specific value proposition identified",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear call to action found",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No evidence or demo available",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Fading AI agent with unclear value proposition \u2014 lacks differentiation and transparency.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/together-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
