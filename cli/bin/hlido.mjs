@@ -8,16 +8,19 @@ import {
   cmdCompare,
   cmdTier,
   cmdRecommend,
+  cmdAudit,
+  cmdScan,
 } from "../src/commands.mjs";
 import { renderHelp } from "../src/render.mjs";
 
-const VERSION = "0.2.0";
+const VERSION = "0.4.0";
 
 function parseArgs(argv) {
   const positional = [];
   const flags = { json: false, help: false, version: false, noColor: false };
   // Wave 4.0 — `hlido recommend` reads --category and --k.
-  const opts = { category: null, k: null };
+  // MCP Trust Phase 2 — `hlido scan` reads --fail-on (CI gate).
+  const opts = { category: null, k: null, failOn: null };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--json" || arg === "-j") flags.json = true;
@@ -34,6 +37,10 @@ function parseArgs(argv) {
     } else if (arg.startsWith("--k=")) {
       const n = parseInt(arg.slice("--k=".length), 10);
       if (Number.isFinite(n)) opts.k = n;
+    } else if (arg === "--fail-on" && i + 1 < argv.length) {
+      opts.failOn = argv[++i];
+    } else if (arg.startsWith("--fail-on=")) {
+      opts.failOn = arg.slice("--fail-on=".length);
     } else {
       positional.push(arg);
     }
@@ -74,6 +81,12 @@ async function main() {
         break;
       case "tier":
         result = await cmdTier({ tier: rest[0], json: flags.json });
+        break;
+      case "audit":
+        result = await cmdAudit({ json: flags.json });
+        break;
+      case "scan":
+        result = await cmdScan({ target: rest.join(" "), failOn: opts.failOn, json: flags.json });
         break;
       case "recommend":
         // Multi-word need: join all positional args after the subcommand.
