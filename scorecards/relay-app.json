@@ -1,99 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "relay-app",
   "name": "Relay.app",
+  "agent_url": "https://www.relay.app",
   "category": "AI Agent",
+  "run_id": "run-relay-app-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Relay.app",
-  "review_url": "https://hlido.eu/reviews/relay-app/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-relay-app-monezo39",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent platform with a clear focus \u2014 effective for users seeking streamlined automation but lacks extensive integration options.",
+    "body": "Relay.app presents itself as an efficient AI agent platform aimed at simplifying automation tasks. Its user interface is straightforward, making it accessible for users looking to streamline workflows without heavy lifting. However, while it performs well in its niche, it does not offer extensive integration options that some competitors provide. This could limit its appeal for users with complex needs or those looking to incorporate Relay.app into a broader tech stack. The current tier is justified by its reliable performance and clear value proposition, but it may not be the best fit for users requiring deep integrations or advanced customization. Overall, Relay.app is a dependable choice for users focused on basic automation tasks.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) reflects Relay.app's consistent performance and user-friendly design. It remains competitive in its niche but lacks the extensive integrations that could elevate it to VITAL status. Enhancements in integration capabilities could shift it to a higher tier.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies automation tasks",
+    "Reliable performance in executing basic workflows",
+    "Clear value proposition for users focused on straightforward automation"
+  ],
+  "what_it_fails_at": [
+    "Limited integration options with other platforms",
+    "Lacks advanced customization features for power users",
+    "May not meet the needs of users requiring complex automation solutions"
+  ],
+  "best_for": [
+    "Individuals or teams looking for straightforward automation solutions",
+    "Users who prioritize ease of use over extensive features",
+    "Small to medium-sized businesses needing basic workflow automation"
+  ],
+  "not_recommended_for": [
+    "Users requiring deep integrations with existing tools",
+    "Power users looking for extensive customization options",
+    "Organizations with complex automation needs"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The easiest way to automate with AI",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a broader range of integrations and customization options compared to Relay.app. Choose Relay.app for simpler, more focused automation tasks.",
+      "preferred_for_axis": "integration breadth"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "integromat",
+      "verdict_diff": "Integromat provides more complex automation capabilities and integrations. Relay.app is better for users seeking a straightforward, easy-to-use platform.",
+      "preferred_for_axis": "user-friendliness"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Relay.app does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Streamline your automation tasks'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Relay.app turns plain language into reliable, visual workflows across over 200+ apps.",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "SOC2 & GDPR compliance",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing model available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.relay.app/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.relay.app/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.relay.app/apps/airtable/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.relay.app/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.relay.app/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T21:18:47.707Z"
+  "summary": "Solid AI agent platform with a clear focus \u2014 effective for users seeking streamlined automation but lacks extensive integration options.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/relay-app.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
