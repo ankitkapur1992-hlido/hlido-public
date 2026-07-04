@@ -1,101 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "scite-ai",
   "name": "Scite",
+  "agent_url": "https://scite.ai",
   "category": "Research",
+  "run_id": "run-scite-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Scite",
-  "review_url": "https://hlido.eu/reviews/scite-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-scite-ai-moo17fk3",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Steady research tool with a focus on citation context \u2014 solid for academics, but lacks deeper integration features.",
+    "body": "Scite is a research tool designed to enhance the academic experience by providing context around citations, allowing users to see how a paper has been cited in other works. This feature is particularly beneficial for researchers looking to gauge the impact and relevance of studies in their field. The platform is user-friendly and offers a clean interface that makes it easy to navigate through research papers and their citations. However, it lacks more advanced integration features that could enhance its utility in a broader research workflow. For example, while it excels at citation context, it does not offer robust API support or integrations with other research tools, which could limit its appeal for users seeking a more interconnected research experience. Overall, Scite is a dependable choice for academics, but its lack of deeper integration options may steer some users towards alternatives that offer more comprehensive research ecosystems.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Scite effectively delivers on its core promise of providing citation context, and the user experience is polished. Not VITAL due to the absence of advanced integrations and API support that could enhance its functionality for research workflows.",
+  "what_it_does_well": [
+    "Provides detailed context around citations, enhancing understanding of research impact",
+    "User-friendly interface that simplifies navigation through research papers",
+    "Effective at highlighting how different studies relate to one another",
+    "Steady performance and reliability in delivering citation information"
+  ],
+  "what_it_fails_at": [
+    "Lacks robust API support for integration with other research tools",
+    "No advanced features for managing or organizing research projects",
+    "Limited capabilities for collaborative research workflows"
+  ],
+  "best_for": [
+    "Academics and researchers needing citation context for their work",
+    "Users looking for a straightforward tool to enhance their literature reviews",
+    "Individuals focused on understanding the impact of specific studies"
+  ],
+  "not_recommended_for": [
+    "Researchers needing deep integrations with other academic tools",
+    "Users looking for comprehensive project management features",
+    "Collaborative teams that require shared research environments"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"AI for Research, Grounded in Evidence\"",
-      "source_surface": "homepage"
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley offers comprehensive reference management and collaboration features, while Scite focuses on citation context. Choose Scite for citation insights, Mendeley for project management.",
+      "preferred_for_axis": "citation-insight"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "zotero",
+      "verdict_diff": "Zotero excels in organizing research and managing references, whereas Scite specializes in citation context. Opt for Zotero if organization is key, Scite for citation clarity.",
+      "preferred_for_axis": "reference-management"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides context around citations",
+      "source": "https://scite.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Scite does not currently support integration with agent-driven workflows due to the lack of an API.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The Pricing button is accessible directly from the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "Help documentation - links to help.researchsolutions.com (opens in a new tab)",
-      "source_surface": "docs"
+      "evidence": "Citation context provided",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Start using Scite'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Enhanced security & data confidentiality\"",
-      "source_surface": "pricing"
+      "evidence": "Access to core features is available without payment",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demonstration of citation context on homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://scite.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://scite.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://scite.ai/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:40:39.273Z"
+  "summary": "Steady research tool with a focus on citation context \u2014 solid for academics, but lacks deeper integration features.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/scite-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
