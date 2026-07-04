@@ -1,54 +1,129 @@
 {
+  "schema_version": "2.0",
   "slug": "headlinesai-pro",
-  "name": "Free AI Title Generator ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Get Catchy & SEO-Friendly Titles | NetusAI",
+  "name": "NetusAI Headlines Generator",
+  "agent_url": "https://netus.ai/writer/headlines-generator",
   "category": "Marketing & Content",
+  "run_id": "run-headlinesai-pro-mpv4af8a",
+  "run_at": "2026-05-14T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 50,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Free AI Title Generator ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Get Catchy & SEO-Friendly Titles | NetusAI.",
+  "laddoo_score": 50,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A bare single-tool headline generator nested inside NetusAI's broader writing suite \u2014 usable for free, but so thin it barely qualifies as a standalone product.",
+    "body": "The NetusAI headline generator is exactly what it looks like: a form that takes a topic or seed sentence and returns title variants optimised for SEO and click-through. It is free, it loads, and it does produce output. Those are the positives. Everything else points to a feature, not a product. There is no dedicated pricing page, no documentation, no API, and no evidence of a company-level trust posture separate from the parent NetusAI brand. The URL encoding issues that surfaced during automated testing (a BOM character in the endpoint URL) suggest infrastructure that has not been hardened. For a human content creator who needs a quick headline prompt, this is a two-minute convenience \u2014 but for any workflow that needs repeatability, programmatic access, or accountability, this surface does not exist. The category is crowded with deeper tooling (Copy.ai's title features, Jasper, even ChatGPT prompts) that offer the same output with substantially more surrounding infrastructure.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) because the tool produces output from a public surface but lacks every secondary signal of a durable product: no pricing page, no docs, no API, no trust posture, and the homepage URL had encoding defects during automated testing. A useful one-off but not a product an agent or serious buyer should rely on.",
+  "what_it_does_well": [
+    "Free, no signup required to generate headline variants",
+    "Simple enough to get a result in under 30 seconds",
+    "Covers both click-through and SEO framing in output variants"
+  ],
+  "what_it_fails_at": [
+    "No dedicated pricing page \u2014 unclear if any paid tier exists",
+    "No documentation or API \u2014 cannot be called programmatically",
+    "Homepage URL had a BOM character encoding defect in testing",
+    "No company trust signals (privacy policy, terms, data handling)",
+    "Provides no differentiation from a basic ChatGPT prompt"
+  ],
+  "best_for": [
+    "One-off headline brainstorming when you don't have a ChatGPT tab open",
+    "Content marketers who need a free tool with zero setup"
+  ],
+  "not_recommended_for": [
+    "Any automated or programmatic content workflow",
+    "Users who need audit trails or consistent output quality",
+    "SEO teams needing keyword-aware, structured title optimisation with tooling support",
+    "Agents evaluating trustworthy long-term tools"
+  ],
+  "red_flags": [
+    "BOM character encoding defect in the production URL detected during testing \u2014 suggests untested infrastructure edge cases.",
+    "No discoverable privacy policy or data handling statement for submitted content."
+  ],
+  "compared_to": [
+    {
+      "slug": "copy-ai",
+      "verdict_diff": "Copy.ai offers headline generation as part of a full content workflow platform with proper pricing, API access, and support. NetusAI headlines is a free fragment with no surrounding product.",
+      "preferred_for_axis": "infrastructure-depth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Tool accessible without login",
+      "source": "https://netus.ai/writer/headlines-generator",
+      "tested_at": "2026-05-14",
+      "verified": true
+    },
+    {
+      "claim": "No pricing page discoverable",
+      "source": "automated surface audit 2026-05-14",
+      "tested_at": "2026-05-14",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No programmatic access exists. The tool is a browser-only form; no API endpoint, webhook, or SDK is documented.",
+    "agent_friendly_score": 1
+  },
+  "summary": "A bare single-tool headline generator nested inside NetusAI's broader writing suite \u2014 usable for free, but so thin it barely qualifies as a standalone product.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/headlinesai-pro/",
   "reviewed_at": "2026-05-14",
-  "run_id": "run-headlinesai-pro-mpv4af8a",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Tool at https://netus.ai/writer/headlines-generator loads and presents a headline generation interface",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "fail",
+      "evidence": "No pricing page found in automated surface audit",
+      "source_surface": "homepage"
     },
     {
       "id": "C03",
       "claim": "Documentation or live demo accessible without login",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No docs page found",
       "source_surface": "unknown"
     },
     {
       "id": "C04",
       "claim": "Integration list or supported frameworks documented",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No integrations page found",
       "source_surface": "unknown"
     },
     {
       "id": "C05",
       "claim": "Authentication / data handling claims publicly stated",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
+      "verdict": "fail",
+      "evidence": "No privacy policy or data handling page discoverable",
       "source_surface": "unknown"
     }
   ],
@@ -96,8 +171,9 @@
     }
   ],
   "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
+  "required_items_passing": 1,
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "attestation_url": "/data/attestations/headlinesai-pro.json",
   "generated_at": "2026-06-01T11:20:45.393Z"
 }
