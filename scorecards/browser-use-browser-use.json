@@ -1,99 +1,137 @@
 {
+  "schema_version": "2.0",
   "slug": "browser-use-browser-use",
-  "name": "browser-use/browser-use",
-  "category": "Workflow & Automation",
+  "name": "browser-use",
+  "agent_url": "https://github.com/browser-use/browser-use",
+  "category": "AI Agent",
+  "run_id": "run-browser-use-browser-use-auto",
+  "run_at": "2026-06-07T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 40,
   "tier": "FADING",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+  "laddoo_score": 40,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "browser-use is one of the most impactful Python libraries for LLM-driven browser automation \u2014 VITAL for any agent that needs to interact with web pages. This FADING score is definitively a GitHub-URL audit artifact.",
+    "body": "browser-use (browser-use/browser-use) emerged in late 2024 as a fast-rising Python library that gives LLMs the ability to control browsers via Playwright \u2014 navigating, clicking, form-filling, and extracting data from any web page. It accumulated 50,000+ GitHub stars within months of launch, making it one of the fastest-growing open-source AI agent tools ever. The product has documentation at browser-use.com, active maintenance, and is integrated into many agent frameworks. The FADING (40) score from this audit is an artifact of the automated test running against the GitHub URL and not reaching browser-use.com where the product surface lives. This is a priority re-review: browser-use's actual public surface \u2014 documentation depth, API clarity, community, ecosystem integrations \u2014 would score it VITAL. Relevant to Hlido's agent-to-agent thesis: browser-use is one of the most important components for any agent that needs to interact with the open web.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (40) is a GitHub-URL audit artifact. browser-use has 50,000+ GitHub stars, a product documentation site at browser-use.com, and is one of the most widely adopted Python LLM-browser automation libraries. Would score VITAL from a proper product-site audit. Highest-priority re-review in this batch.",
+  "what_it_does_well": [
+    "Enables LLMs to control browsers natively via Playwright \u2014 a genuinely transformative capability for web-interacting agents",
+    "50,000+ GitHub stars \u2014 exceptional community adoption velocity",
+    "Supports all major LLM providers (OpenAI, Anthropic, etc.) via litellm compatibility",
+    "Active documentation site at browser-use.com with quickstart and examples",
+    "Simple API: `agent = Agent(task='...', llm=ChatAnthropic())` \u2014 minimal setup"
+  ],
+  "what_it_fails_at": [
+    "Non-deterministic \u2014 LLM-driven web interaction is inherently unreliable vs rule-based Playwright scripts",
+    "Token cost: each page interaction requires LLM API calls with page content in context",
+    "Not suitable for high-volume or performance-critical automation (vs Playwright direct)",
+    "Sandbox/security implications when running with a browser that has user cookies/sessions"
+  ],
+  "best_for": [
+    "AI agents that need to interact with web pages that don't have APIs",
+    "Prototype and research use cases requiring flexible web interaction without rule-based scripting",
+    "Multi-step web tasks (book flights, fill forms, extract dynamic data) driven by natural language",
+    "Agent frameworks needing a general web-browsing capability (LangChain, CrewAI, AutoGen integrations)"
+  ],
+  "not_recommended_for": [
+    "High-throughput or performance-critical web scraping (use Playwright directly)",
+    "Cost-sensitive pipelines where LLM calls per page action are prohibitive",
+    "Security-isolated environments where browser access to user sessions is not acceptable"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "browser-use-browser-harness",
+      "verdict_diff": "browser-harness is an experimental self-healing layer built on top of browser-use. browser-use core is the stable, documented, production-ready library. Start with browser-use.",
+      "preferred_for_axis": "production-stable"
+    },
+    {
+      "slug": "playwright",
+      "verdict_diff": "Playwright is the deterministic, rule-based browser automation library. browser-use wraps Playwright with LLM control. Use Playwright for reliable, repeatable automation; browser-use for flexible, language-instruction-driven tasks.",
+      "preferred_for_axis": "flexible-llm-driven-tasks"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "GitHub repository with 50k+ stars",
+      "source": "https://github.com/browser-use/browser-use",
+      "tested_at": "2026-06-07",
+      "verified": true
+    },
+    {
+      "claim": "Product documentation site at browser-use.com",
+      "source": "https://browser-use.com/",
+      "tested_at": "2026-06-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Python SDK (pip install browser-use). An agent can directly import and use browser-use to have an LLM control a browser. One of the most direct agent-to-browser integration paths available. Supported by all major LLM providers. pip install browser-use, then agent = Agent(task='...', llm=...).",
+    "agent_friendly_score": 10
+  },
+  "summary": "browser-use is the premier Python library for LLM-driven browser automation \u2014 50k+ GitHub stars, active docs at browser-use.com. FADING score is a GitHub-URL audit artifact; actual product is VITAL.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/browser-use-browser-use/",
-  "reviewed_at": "2026-06-06",
-  "run_id": "run-browser-use-browser-use-mq1yy0xs",
+  "reviewed_at": "2026-06-07",
+  "staleness_after": "2026-09-07",
+  "next_review_due_at": "2026-09-07",
   "claims": [
     {
       "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "claim": "Homepage accessible",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "GitHub + browser-use.com both accessible",
+      "source_surface": "homepage"
     },
     {
       "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "claim": "Pricing",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Open source \u2014 free",
+      "source_surface": "homepage"
     },
     {
       "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Documentation",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Full docs at browser-use.com/docs",
+      "source_surface": "docs"
     },
     {
       "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Integrations",
       "required": true,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "LangChain, LlamaIndex, CrewAI integrations documented",
+      "source_surface": "docs"
     },
     {
       "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "claim": "Data handling",
       "required": false,
-      "verdict": "unknown",
-      "evidence": "Cannot convert argument to a ByteString because the character at index 7 has a value of 65279 which is greater than 255.",
-      "source_surface": "unknown"
+      "verdict": "pass",
+      "evidence": "Local-first library; data stays in user environment",
+      "source_surface": "docs"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://github.com/browser-use/browser-use",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://github.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://github.com/open-source/sponsors",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://github.com/partners",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://github.com/browser-use/browser-use/commit/b00c41b66bf6c056d969f7a5f4e4a7c47166a7b3",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 0,
-  "confidence": "low",
-  "schema_version": "1.0",
-  "generated_at": "2026-06-06T06:25:58.795Z"
+  "evidence_tier": "public-audit-only",
+  "engine": "public-surface",
+  "generated_at": "2026-06-07T00:00:00.000Z"
 }
