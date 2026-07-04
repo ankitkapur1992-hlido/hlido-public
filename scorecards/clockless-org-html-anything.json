@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "slug": "clockless-org-html-anything",
+  "name": "html-anything",
+  "agent_url": "https://github.com/clockless-org/html-anything",
+  "category": "Coding",
+  "run_id": "run-clockless-org-html-anything-u02lc0fa",
+  "run_at": "2026-06-06T18:00:46.455Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
+  "tier": "FADING",
+  "laddoo_score": 65,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Purpose-built Claude Code and Codex skill that turns any file into a shareable single-file HTML — narrow scope, high execution quality, genuinely useful for the target audience.",
+    "body": "html-anything is an agent skill (skill.sh distribution) designed to run inside Claude Code and Codex. Its job is narrowly defined and executed well: take any input — WhatsApp exports, PDFs, CSV data, code files, Amazon Kindle exports, Spotify data, URLs — and produce a self-contained, offline-capable single-file HTML artifact with appropriate visual styling. The skill ships 60 source-aware parsing prompts and 17 style systems, which is a meaningful engineering investment for a focused tool. The skills.sh distribution model and the badge infrastructure show professional packaging for the agent-skill ecosystem. The limitation is scope: this is a transformation utility, not an agent. It produces artifacts; it does not act. For developers in the Claude Code/Codex ecosystem who regularly need to share structured data as web-readable outputs — without uploading to a third-party service or maintaining a server — html-anything fills a real gap. Outside that ecosystem, it has no distribution path.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-06-08",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) because the tool is well-executed within its narrow scope, the 60-source and 17-style-system depth is credible, and the skills.sh distribution shows ecosystem maturity. Not STEADY because the scope is intentionally narrow (transformation-only, no autonomous action), the distribution is locked to Claude Code/Codex users, and adoption signals (star count) were not available in the pipeline run.",
+  "what_it_does_well": [
+    "60 source-specific parsing prompts cover a wide range of input types (WhatsApp, PDF, CSV, Kindle, Spotify, code, URLs)",
+    "17 style systems for context-appropriate visual output — not one generic template",
+    "Produces self-contained offline-capable single-file HTML — no server, no upload, no dependency",
+    "Native skills.sh distribution with badge and versioning — professionally packaged for the agent-skill ecosystem",
+    "Works inside Claude Code and Codex with no extra tooling setup"
+  ],
+  "what_it_fails_at": [
+    "Distribution locked to Claude Code and Codex users — zero path for non-agentic developers",
+    "Transformation-only utility: produces HTML but takes no autonomous actions",
+    "Engine could not verify claims via live testing (connection errors on public surface run)",
+    "No hosted SaaS path — requires an LLM agent session to invoke",
+    "Community/adoption size unverifiable from public surface"
+  ],
+  "best_for": [
+    "Claude Code and Codex users who regularly need to share structured data as readable web pages",
+    "Developers who want to turn personal data exports (WhatsApp, Kindle highlights, Spotify history) into shareable HTML without uploading to third-party services",
+    "Agent workflows where the final deliverable needs to be a self-contained HTML artifact",
+    "Anyone who needs a consistent, styled output format across 60+ different input file types"
+  ],
+  "not_recommended_for": [
+    "Developers not using Claude Code or Codex (no alternative invocation path documented)",
+    "Use cases requiring ongoing data updates — html-anything produces static snapshots, not live pages",
+    "Teams who need server-side generation (the skill runs in the agent session, not in a hosted service)",
+    "Non-technical users who cannot invoke agent skills"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "pandoc",
+      "verdict_diff": "Pandoc is the universal document converter (markdown, docx, PDF, HTML, etc.) with a CLI you run anywhere. html-anything is an AI-skill that adds intelligent source parsing and styled output. Pandoc wins for structured document conversion; html-anything wins for messy personal-data exports needing LLM-interpreted parsing.",
+      "preferred_for_axis": "messy-input-parsing"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "60 source prompts and 17 style systems",
+      "source": "https://github.com/clockless-org/html-anything",
+      "tested_at": "2026-06-05",
+      "verified": true
+    },
+    {
+      "claim": "Available on skills.sh",
+      "source": "https://skills.sh/clockless-org/html-anything",
+      "tested_at": "2026-06-05",
+      "verified": true
+    },
+    {
+      "claim": "Live demo gallery",
+      "source": "https://clockless-org.github.io/html-anything/examples/",
+      "tested_at": "2026-06-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Designed as a native skill for Claude Code and Codex. Invoked as part of an agent session — the agent calls the skill prompt which handles parsing and HTML generation. No API or CLI surface for external programmatic use.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-06T18:00:46Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Turn any file into a beautiful, interactive, shareable HTML"
+    },
+    {
+      "id": "demo_accessible",
+      "pass": true,
+      "required": false,
+      "evidence": "Live demo gallery at clockless-org.github.io/html-anything/examples/"
+    }
+  ],
+  "summary": "Purpose-built Claude Code and Codex skill that turns any file into a shareable single-file HTML — narrow scope, high execution quality, genuinely useful for the target audience.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
+  "staleness_after": "2026-09-08",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2026-09-08",
+  "attestation_url": "/data/attestations/clockless-org-html-anything.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
+}
