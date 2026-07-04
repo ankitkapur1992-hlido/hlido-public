@@ -1,97 +1,135 @@
 {
+  "schema_version": "2.0",
   "slug": "weaviate",
   "name": "Weaviate",
-  "category": "Infrastructure",
+  "agent_url": "https://weaviate.io",
+  "category": "Data",
+  "run_id": "run-weaviate-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Weaviate",
-  "review_url": "https://hlido.eu/reviews/weaviate/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-weaviate-moo1iob4",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust open-source vector search engine \u2014 excels in scalability and flexibility, but requires expertise for optimal use.",
+    "body": "Weaviate stands out as a powerful open-source vector search engine, designed for handling large-scale data with ease. Its architecture supports various data types and integrates seamlessly with machine learning workflows, making it a strong choice for developers and data scientists alike. The flexibility of Weaviate allows for customization and scaling, which is crucial for enterprises handling diverse datasets. However, the complexity of its setup and configuration may pose challenges for less experienced users. While it excels in performance and adaptability, users need a solid understanding of vector databases to fully leverage its capabilities. Overall, Weaviate is a top-tier option for those seeking a robust data solution, but it may not be the best fit for teams without the necessary technical expertise.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance, open-source nature, and adaptability for various use cases. It remains a leading choice in the vector database space. A shift to a lower tier would require evidence of significant operational issues or a decline in community support.",
+  "what_it_does_well": [
+    "Offers high scalability for large datasets",
+    "Supports multiple data types and machine learning integrations",
+    "Open-source, allowing for community-driven improvements",
+    "Flexible architecture suitable for diverse applications"
+  ],
+  "what_it_fails_at": [
+    "Complex setup may deter less experienced users",
+    "Requires significant technical expertise for optimal configuration",
+    "Limited documentation on advanced features could hinder adoption"
+  ],
+  "best_for": [
+    "Data scientists and developers needing a powerful vector search solution",
+    "Enterprises managing large-scale and diverse datasets",
+    "Teams familiar with open-source tools and vector databases"
+  ],
+  "not_recommended_for": [
+    "Users seeking a plug-and-play solution without technical expertise",
+    "Small teams with limited resources for setup and maintenance",
+    "Organizations needing extensive support and documentation"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "FOR AI ENGINEERS TURNING IDEAS INTO PRODUCTS",
-      "source_surface": "homepage"
+      "slug": "pinecone",
+      "verdict_diff": "Pinecone offers a more user-friendly interface and managed service, making it easier for teams without deep technical skills. Weaviate excels in flexibility and customization, making it better for advanced users.",
+      "preferred_for_axis": "user-friendliness"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "milvus",
+      "verdict_diff": "Milvus is another open-source alternative but lacks some of Weaviate's advanced features and integrations. Weaviate is preferable for those requiring a more comprehensive solution.",
+      "preferred_for_axis": "feature-completeness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source vector search engine",
+      "source": "https://weaviate.io",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Weaviate can be integrated into agent-driven workflows via its API and SDK, allowing for advanced data management and retrieval tasks.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing'.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Weaviate Quickstart\"",
-      "source_surface": "docs"
+      "evidence": "'Open-source vector search engine'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Integration Ecosystem\"",
-      "source_surface": "integrations"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "Baseline security with RBAC.",
-      "source_surface": "pricing"
+      "evidence": "Transparent access to documentation and features on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Comprehensive feature list available on /features",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://weaviate.io/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://weaviate.io/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://weaviate.io/#",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://weaviate.io/product/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://weaviate.io/#",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://weaviate.io/blog/weaviate-agent-skills",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://console.weaviate.cloud/signin?next=%2F",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:49:28.025Z"
+  "summary": "Robust open-source vector search engine \u2014 excels in scalability and flexibility, but requires expertise for optimal use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/weaviate.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
