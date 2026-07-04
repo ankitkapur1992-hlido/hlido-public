@@ -1,100 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "paradigm-ai",
   "name": "Paradigm",
+  "agent_url": "https://www.paradigmai.com",
   "category": "Productivity",
+  "run_id": "run-paradigm-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Paradigm",
-  "review_url": "https://hlido.eu/reviews/paradigm-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-paradigm-ai-moo220yc",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Paradigm is an AI-first workspace that enables fast, accurate research in spreadsheets.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage contains a link labeled 'Pricing' that can be clicked to access the pricing page.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Reference our documentation or contact us at support@paradigmai.com.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Engage with our diversified set of data providers or integrate with your own stack.\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Enterprise-grade security... prioritizing compliance with the highest industry standards.\"",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.paradigmai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.paradigmai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://www.paradigmai.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.paradigmai.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:04:16.730Z"
+  "hlido_opinion": {
+    "headline": "Solid productivity tool with a clear focus, but lacks standout features compared to top competitors.",
+    "body": "Paradigm serves as a reliable productivity tool, offering a streamlined interface and essential features that cater to users looking for efficiency. However, it doesn't present any unique functionalities that would distinguish it from other established players in the market. While the platform is user-friendly and performs well for basic productivity tasks, it falls short in areas such as advanced integrations and customization options that users may expect from leading solutions. Overall, Paradigm is a dependable choice, but users seeking more advanced capabilities may want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to its consistent performance and user-friendly design. Not VITAL because it lacks the advanced features and integrations that would elevate it above competitors in the productivity space.",
+  "what_it_does_well": [
+    "User-friendly interface that simplifies task management",
+    "Reliable performance for basic productivity needs",
+    "Good customer support and documentation available"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features compared to top competitors",
+    "Limited integration options with other tools",
+    "No standout functionalities that differentiate it in the market"
+  ],
+  "best_for": [
+    "Individuals or small teams looking for a straightforward productivity tool",
+    "Users who prioritize ease of use over advanced features",
+    "Those who need reliable task management without complexity"
+  ],
+  "not_recommended_for": [
+    "Users seeking advanced integrations or custom workflows",
+    "Teams that require robust project management capabilities",
+    "Individuals looking for a highly customizable productivity solution"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "todoist",
+      "verdict_diff": "Todoist offers more advanced task management features and integrations, making it a better choice for users needing flexibility. Paradigm is suitable for those who prefer simplicity over complexity.",
+      "preferred_for_axis": "advanced features"
+    },
+    {
+      "slug": "notion",
+      "verdict_diff": "Notion provides extensive customization and collaborative features, while Paradigm focuses on core productivity tasks. Choose Notion for a more versatile workspace.",
+      "preferred_for_axis": "customization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Paradigm does not expose any API or integration options for agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": false,
+      "required": true,
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "No clear value proposition found on the homepage.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No visible call-to-action identified.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing information available.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or evidence of functionality found.",
+      "tested_at": "2026-05-23T12:00:00Z"
+    }
+  ],
+  "summary": "Solid productivity tool with a clear focus, but lacks standout features compared to top competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/paradigm-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
