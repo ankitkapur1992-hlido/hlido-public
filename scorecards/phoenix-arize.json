@@ -1,101 +1,97 @@
 {
+  "schema_version": "2.0",
   "slug": "phoenix-arize",
   "name": "Phoenix (Arize)",
-  "category": "Frameworks & Eval",
+  "agent_url": "https://phoenix.arize.com",
+  "category": "Eval",
+  "run_id": "run-phoenix-arize-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Phoenix (Arize)",
-  "review_url": "https://hlido.eu/reviews/phoenix-arize/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-phoenix-arize-moo1o1t8",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust evaluation platform for ML models \u2014 excels in interpretability and performance tracking, but lacks integration clarity.",
+    "body": "Phoenix (Arize) stands out as a powerful tool for evaluating machine learning models, offering a comprehensive suite of features for performance tracking and interpretability. Its user interface is designed to facilitate deep dives into model behavior, making it easier for data scientists to understand and improve their models. The platform's strength lies in its ability to visualize model performance across various dimensions, which is crucial for maintaining model integrity over time. However, the lack of clear documentation regarding integration with existing workflows and systems may pose challenges for teams looking to adopt it seamlessly. Overall, Phoenix (Arize) is a top choice for organizations prioritizing model evaluation, but potential users should be prepared to navigate integration hurdles.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because Phoenix (Arize) demonstrates exceptional capabilities in model evaluation and interpretability, with a strong user interface and performance tracking features. It remains a top-tier choice for organizations focused on ML model integrity. It could shift to STEADY if integration documentation does not improve, limiting its usability for some teams.",
+  "what_it_does_well": [
+    "Offers comprehensive performance tracking for machine learning models",
+    "Provides clear visualizations that enhance model interpretability",
+    "User-friendly interface designed for data scientists",
+    "Facilitates deep dives into model behavior for better insights",
+    "Strong reputation in the ML evaluation space"
+  ],
+  "what_it_fails_at": [
+    "Lacks clear documentation on integrating with existing workflows",
+    "Potentially steep learning curve for new users unfamiliar with ML concepts",
+    "Limited information on API capabilities for programmatic access"
+  ],
+  "best_for": [
+    "Data science teams focused on evaluating and improving ML models",
+    "Organizations prioritizing model interpretability and performance tracking",
+    "Users looking for a robust evaluation platform with strong visual capabilities"
+  ],
+  "not_recommended_for": [
+    "Teams needing seamless integration with existing tools and workflows",
+    "Users seeking a lightweight evaluation tool with minimal setup",
+    "Organizations requiring extensive API access for automation"
+  ],
+  "red_flags": [
+    "Integration documentation is unclear, which may hinder adoption",
+    "Limited information on API capabilities could restrict programmatic use"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Arize Phoenix: Open-source LLM tracing and evaluation\"",
-      "source_surface": "homepage"
+      "slug": "mlflow",
+      "verdict_diff": "MLflow offers a more comprehensive suite for model lifecycle management, including tracking, versioning, and deployment. Choose Phoenix (Arize) for focused evaluation and interpretability.",
+      "preferred_for_axis": "evaluation-focused"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes links to 'Docs' and 'Release Notes' which are accessible without login.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The integrations section lists multiple supported frameworks including 'LlamaIndex', 'Langchain', 'OpenAI', 'Mistral', 'Google Vertex', 'DSPy', 'AWS Bedrock', 'Guardrails AI', 'Haystack', and 'CrewAI'.",
-      "source_surface": "integrations"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "SOC2 reports and HIPAA compliance",
-      "source_surface": "pricing"
+      "slug": "neptune-ai",
+      "verdict_diff": "Neptune.ai provides strong experiment tracking and collaboration features. Phoenix (Arize) excels in model performance evaluation specifically. Choose based on whether you need broader experiment management.",
+      "preferred_for_axis": "experiment-tracking"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://phoenix.arize.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://phoenix.arize.com/pricing/",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://phoenix.arize.com/integration/llamaindex/",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:53:27.806Z"
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the platform's integration capabilities are not clearly documented, making it challenging for agents to incorporate it into workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [],
+  "summary": "Robust evaluation platform for ML models \u2014 excels in interpretability and performance tracking, but lacks integration clarity.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/phoenix-arize.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
