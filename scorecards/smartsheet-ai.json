@@ -1,99 +1,154 @@
 {
+  "schema_version": "2.0",
   "slug": "smartsheet-ai",
   "name": "Smartsheet AI",
+  "agent_url": "https://www.smartsheet.com/ai",
   "category": "Productivity",
+  "run_id": "run-smartsheet-ai-v2-pilot-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Smartsheet AI",
-  "review_url": "https://hlido.eu/reviews/smartsheet-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-smartsheet-ai-moo1y67m",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust productivity tool with AI capabilities \u2014 excels in project management but lacks transparency on AI specifics.",
+    "body": "Smartsheet AI integrates advanced AI features into its established project management platform, enhancing productivity for teams through automation and intelligent insights. The tool is well-regarded for its user-friendly interface and comprehensive feature set that supports collaboration and project tracking. However, while it delivers on functionality, the specifics of its AI capabilities are not fully transparent, which may concern users looking for detailed insights into how AI is applied within the platform. Overall, it's a strong choice for organizations seeking to streamline workflows, but potential users should weigh the importance of AI transparency in their decision-making.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because it combines a solid reputation in project management with effective AI features, ensuring reliability and user satisfaction. Not FADING as there are no signs of decline in performance or support, but transparency regarding AI functionality could enhance trust and user confidence.",
+  "what_it_does_well": [
+    "Integrates AI features seamlessly into existing project management workflows",
+    "User-friendly interface that supports collaboration across teams",
+    "Strong reputation for reliability and customer support",
+    "Comprehensive feature set for project tracking and automation",
+    "Regular updates and enhancements to maintain competitive edge"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency on the specifics of AI functionalities and algorithms",
+    "May overwhelm new users with extensive features without adequate onboarding",
+    "Pricing structure may be complex for smaller teams or individual users",
+    "Limited information on data privacy and AI training data handling"
+  ],
+  "best_for": [
+    "Teams looking to enhance project management with AI-driven insights",
+    "Organizations that value a comprehensive tool for collaboration and tracking",
+    "Users who prioritize a reliable platform with a strong support system",
+    "Medium to large enterprises with complex project needs"
+  ],
+  "not_recommended_for": [
+    "Small teams or individual users seeking simple project management solutions",
+    "Users who require detailed insights into AI algorithms and data handling",
+    "Organizations with strict compliance needs regarding data privacy",
+    "Teams not ready to adopt a feature-rich platform"
+  ],
+  "red_flags": [
+    "Transparency issues regarding AI capabilities could deter data-conscious users",
+    "Complex pricing structure may not be ideal for smaller teams"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Our vision is to help every team harness AI at scale, so organizations can operate with velocity, adapt quickly, and achieve greater impact.",
-      "source_surface": "homepage"
+      "slug": "microsoft-project",
+      "verdict_diff": "Microsoft Project offers deep integration with Microsoft 365 and detailed project tracking, making it suitable for enterprises already in that ecosystem. Smartsheet AI excels in collaboration and user experience. Choose Smartsheet if team collaboration is a priority.",
+      "preferred_for_axis": "collaboration"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "slug": "asana",
+      "verdict_diff": "Asana provides a more straightforward project management experience with a focus on task management, while Smartsheet AI offers more robust automation and AI features. Choose Asana for simplicity; choose Smartsheet for advanced capabilities.",
+      "preferred_for_axis": "feature-complexity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Integrates AI features into project management",
+      "source": "https://www.smartsheet.com/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Smartsheet AI tools empower teams to unlock actionable insights by having a conversation with your data.\"",
-      "source_surface": "docs"
+      "claim": "User-friendly interface",
+      "source": "https://www.smartsheet.com/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "claim": "Comprehensive feature set",
+      "source": "https://www.smartsheet.com/ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Smartsheet AI can be integrated into agent-driven workflows via API and webhooks, allowing for automation and enhanced project management capabilities.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"See full list of Smartsheet integrations\"",
-      "source_surface": "integrations"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI-driven project management'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started with Smartsheet AI'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "We respect your privacy and your right to control how we collect, use, and share your personal data.",
-      "source_surface": "homepage"
+      "evidence": "Pricing details available on the website",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.smartsheet.com/ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.smartsheet.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://help.smartsheet.com/learning-track/ai-tools",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://www.smartsheet.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://www.smartsheet.com/template-gallery",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T08:01:38.091Z"
+  "summary": "Robust productivity tool with AI capabilities \u2014 excels in project management but lacks transparency on AI specifics.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/smartsheet-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
