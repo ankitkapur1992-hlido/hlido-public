@@ -1,41 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "theunwindai",
   "name": "unwind ai",
   "agent_url": "https://theunwindai.com",
   "category": "AI Agent",
-  "run_id": "run-theunwindai-vxuj6n7m",
-  "run_at": "2026-05-16T06:00:17.124Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-theunwindai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Open-source AI agent ecosystem with potential, but lacks clear access and pricing info.",
+    "body": "Unwind AI presents itself as an open-source ecosystem aimed at AI builders, emphasizing high-leverage tools for real-time updates and collaborative projects. The core concept is appealing, especially for developers looking for flexible solutions. However, the site currently fails to provide essential information regarding access, pricing, and a clear call to action, which may deter potential users. The lack of a robust demo or evidence of functionality also raises questions about its immediate applicability. For those interested in open-source AI, it offers a promising direction, but the lack of transparency in certain areas is a notable drawback.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) due to the promising concept and potential for high leverage in AI development. However, it lacks essential details like pricing and access, which are critical for user adoption and trust. A clearer value proposition and demonstration of functionality could elevate it to VITAL.",
+  "what_it_does_well": [
+    "Positions itself as an open-source ecosystem for AI builders",
+    "Focuses on high-leverage tools and real-time updates",
+    "Engages with the community through blogs and tutorials"
+  ],
+  "what_it_fails_at": [
+    "No clear call to action on the homepage",
+    "Lacks transparent pricing or access information",
+    "No demo or evidence of functionality provided"
+  ],
+  "best_for": [
+    "Developers looking for open-source AI tools",
+    "AI enthusiasts interested in collaborative projects",
+    "Users seeking high-leverage solutions in AI development"
+  ],
+  "not_recommended_for": [
+    "Users needing immediate access to a functional AI agent",
+    "Those requiring clear pricing structures before engagement",
+    "Individuals looking for comprehensive demos or evidence of capabilities"
+  ],
+  "red_flags": [
+    "Absence of clear pricing and access information could deter potential users",
+    "Lack of demo or evidence of functionality raises concerns about usability"
+  ],
+  "compared_to": [
+    {
+      "slug": "openai",
+      "verdict_diff": "OpenAI provides a more established and accessible AI platform with clear pricing and extensive documentation. Unwind AI may appeal to those seeking open-source flexibility, but OpenAI is more user-friendly for immediate deployment.",
+      "preferred_for_axis": "accessibility"
+    },
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face offers a robust ecosystem for AI development with clear access and community support. Unwind AI's open-source focus may attract niche developers, but Hugging Face provides more comprehensive resources.",
+      "preferred_for_axis": "community support"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source ecosystem for AI builders",
+      "source": "https://theunwindai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Focus on high-leverage AI tools",
+      "source": "https://theunwindai.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 the site does not provide clear integration paths for agents.",
+    "agent_friendly_score": 3
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "'Open-source Ecosystem for High-Leverage AI Builders'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "evidence": "No clear call to action on the homepage",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "evidence": "No pricing or access details available",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false
+      "required": false,
+      "evidence": "No demo or evidence of functionality provided",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "laddoo_score": 70,
-  "score": 70,
-  "tier": "STEADY",
-  "summary": "Public-surface review of unwind ai.",
-  "confidence": "low"
+  "summary": "Open-source AI agent ecosystem with potential, but lacks clear access and pricing info.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/theunwindai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
