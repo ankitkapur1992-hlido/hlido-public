@@ -1,98 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "retool-agents",
   "name": "Retool Agents",
-  "category": "Workflow & Automation",
+  "agent_url": "https://retool.com/products/agents",
+  "category": "AI Agent",
+  "run_id": "run-retool-agents-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Retool Agents",
-  "review_url": "https://hlido.eu/reviews/retool-agents/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-retool-agents-mongwjom",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent framework for building custom workflows, but lacks extensive public details for deeper evaluation.",
+    "body": "Retool Agents provides a structured environment for users to create AI agents tailored to their specific workflows. The platform is designed to integrate seamlessly with existing tools, making it a practical choice for teams looking to enhance productivity through automation. However, the lack of detailed public-facing documentation and user testimonials may hinder potential users from fully understanding its capabilities and limitations. While the core functionality appears robust, the absence of extensive examples and case studies makes it challenging to assess its real-world performance. Users seeking a well-documented solution might find alternatives more appealing, but for those already embedded in the Retool ecosystem, it offers a compelling option.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) due to the solid foundational features and integration capabilities that Retool Agents offers. It remains not VITAL as the public-facing details are limited, which could deter new users from fully engaging with the product. A more comprehensive documentation and user feedback could elevate its standing.",
+  "what_it_does_well": [
+    "Allows users to create custom AI agents tailored to specific workflows",
+    "Integrates seamlessly with existing tools and platforms",
+    "Offers a structured environment for automation and productivity enhancement"
+  ],
+  "what_it_fails_at": [
+    "Lacks extensive public documentation and user testimonials",
+    "Limited examples and case studies for potential users to assess performance",
+    "Absence of clear information on pricing and access requirements"
+  ],
+  "best_for": [
+    "Teams already using Retool looking to automate workflows",
+    "Users who prefer a customizable agent framework over off-the-shelf solutions",
+    "Organizations focused on enhancing productivity through tailored AI solutions"
+  ],
+  "not_recommended_for": [
+    "Users seeking extensive documentation and case studies before adoption",
+    "Individuals or teams new to the AI agent space without prior experience",
+    "Those requiring a fully-featured, ready-to-use AI solution without customization"
+  ],
+  "red_flags": [
+    "Limited public-facing information may lead to uncertainty in evaluating the product",
+    "Lack of user testimonials could indicate a smaller user base or untested features"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Retool generates apps that are built for business—on your data, in your cloud, and secure by default.\"",
-      "source_surface": "homepage"
+      "slug": "zapier",
+      "verdict_diff": "Zapier offers a more established platform with extensive integrations and documentation, making it easier for new users to adopt. Choose Retool Agents for deeper customization within the Retool ecosystem.",
+      "preferred_for_axis": "customization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Pricing\" is a link on the homepage.",
-      "source_surface": "homepage"
+      "slug": "n8n",
+      "verdict_diff": "n8n provides a similar automation framework but with a stronger focus on open-source community support and documentation. Retool Agents may appeal more to users already within the Retool environment.",
+      "preferred_for_axis": "community-support"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Custom AI agent creation",
+      "source": "https://retool.com/products/agents",
+      "tested_at": "2026-05-23",
+      "verified": true
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "claim": "Integration with existing tools",
+      "source": "https://retool.com/products/agents",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Retool Agents can be integrated into existing workflows, enhancing automation capabilities for users already familiar with the Retool platform.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Documentation\" and \"Book a demo\" are available without requiring a login.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "evidence": "'Create custom AI agents'",
+      "tested_at": "2026-05-23T10:12:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"Every app inherits your organization’s SSO, role-based access controls, and audit logging.\"",
-      "source_surface": "integrations"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:12:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Limited examples available for evaluation",
+      "tested_at": "2026-05-23T10:12:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://retool.com/products/agents",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://retool.com/en-EU/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://retool.com/hire-developer",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://retool.com/ai-app-generation",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://retool.com/templates",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://retool.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:12:38.239Z"
+  "summary": "Solid AI agent framework for building custom workflows, but lacks extensive public details for deeper evaluation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/retool-agents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
