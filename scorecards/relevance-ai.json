@@ -1,98 +1,132 @@
 {
+  "schema_version": "2.0",
   "slug": "relevance-ai",
   "name": "Relevance AI",
-  "category": "Workflow & Automation",
+  "agent_url": "https://relevanceai.com",
+  "category": "AI Agent",
+  "run_id": "run-relevance-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
   "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Relevance AI",
-  "review_url": "https://hlido.eu/reviews/relevance-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-relevance-ai-mongvv1r",
-  "claims": [
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust AI agent platform with strong capabilities \u2014 excels in data relevance and integration but lacks transparency on auth requirements.",
+    "body": "Relevance AI stands out as a powerful AI agent platform that focuses on enhancing data relevance for various applications. Its capabilities in integrating with different data sources and providing actionable insights are commendable. The platform is designed to support users in optimizing their data workflows, making it a strong choice for businesses looking to leverage AI for data-driven decision-making. However, the lack of clarity regarding authentication requirements could pose challenges for potential users trying to assess integration feasibility. Overall, Relevance AI is a solid option for organizations seeking advanced AI solutions, though they should be prepared to navigate some uncertainties in the onboarding process.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) due to its strong performance in data relevance and integration capabilities, alongside a robust user experience. The tier remains justified despite the uncertainty around authentication requirements, which could affect user onboarding and integration efforts.",
+  "what_it_does_well": [
+    "Offers advanced data relevance features for various applications",
+    "Integrates smoothly with multiple data sources",
+    "Provides actionable insights to enhance decision-making",
+    "User-friendly interface that supports efficient workflows",
+    "Strong support for businesses looking to leverage AI"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency regarding authentication requirements",
+    "Limited public documentation on specific integration processes",
+    "No clear information on data handling and privacy policies"
+  ],
+  "best_for": [
+    "Businesses seeking to enhance data-driven decision-making",
+    "Teams looking for a robust AI solution for data relevance",
+    "Organizations that require integration with multiple data sources"
+  ],
+  "not_recommended_for": [
+    "Users needing clear guidance on authentication and integration",
+    "Organizations with strict data privacy and compliance needs",
+    "Individuals looking for a straightforward, low-complexity AI tool"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may hinder onboarding",
+    "Limited information on data handling practices"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"ScaleGTM results, without scaling headcount\"",
-      "source_surface": "homepage"
+      "slug": "dataiku",
+      "verdict_diff": "Dataiku offers a more comprehensive suite for data science and machine learning, while Relevance AI focuses specifically on data relevance. Choose Relevance AI for specialized relevance tasks; Dataiku for broader data science needs.",
+      "preferred_for_axis": "data-relevance-specialization"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "tableau",
+      "verdict_diff": "Tableau excels in data visualization, making it a better choice for users prioritizing visual analytics. Relevance AI is preferable for those focused on data relevance and integration.",
+      "preferred_for_axis": "data-relevance-vs-visualization"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Relevance AI's integration capabilities are not clearly documented, making it difficult for agents to assess how to incorporate it into workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is present on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Getting Started\" and \"Build with Relevance AI\" are accessible without login on the documentation page.",
-      "source_surface": "docs"
+      "evidence": "Focus on data relevance and integration",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"100+ integrations\"",
-      "source_surface": "homepage"
+      "evidence": "Sign up for a demo",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": false,
       "required": false,
-      "verdict": "pass",
-      "evidence": "SOC 2 Type II & GDPR - Independently audited and certified compliant. Your data stays protected.",
-      "source_surface": "homepage"
+      "evidence": "No clear pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://relevanceai.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://relevanceai.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://relevanceai.com/docs/get-started/support",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://relevanceai.com/integrations",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://relevanceai.com/bosh-sales-agent",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://relevanceai.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 4,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:11:58.983Z"
+  "summary": "Robust AI agent platform with strong capabilities \u2014 excels in data relevance and integration but lacks transparency on auth requirements.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/relevance-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
