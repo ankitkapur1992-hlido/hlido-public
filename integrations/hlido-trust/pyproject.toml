@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hlido-trust"
-version = "0.1.0"
-description = "Vet AI agents with Hlido's independent, evidence-backed trust scores — drop-in tools for CrewAI and LangChain. Zero runtime dependencies."
+version = "0.2.0"
+description = "Vet AI agents with Hlido's independent, evidence-backed trust scores — drop-in tools for CrewAI, LangChain, and NVIDIA NeMo Agent Toolkit. Zero core dependencies."
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
@@ -32,7 +32,14 @@ Issues = "https://github.com/ankitkapur1992-hlido/hlido-public/issues"
 [project.optional-dependencies]
 crewai = ["crewai>=0.51"]
 langchain = ["langchain-core>=0.2"]
+nemo = ["nvidia-nat-core>=1.8", "httpx>=0.27"]
 dev = ["build", "twine"]
+
+# NVIDIA NeMo Agent Toolkit discovers this plugin via the nat.plugins entry
+# point. The target module imports lazily and errors clearly if the `nemo`
+# extra (nvidia-nat-core) is absent, so this is inert for non-NeMo users.
+[project.entry-points."nat.plugins"]
+nat_hlido = "hlido_trust.nat_plugin"
 
 [tool.setuptools.packages.find]
 where = ["src"]
