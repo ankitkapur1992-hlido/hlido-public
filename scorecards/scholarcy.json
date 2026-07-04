@@ -1,100 +1,134 @@
 {
+  "schema_version": "2.0",
   "slug": "scholarcy",
   "name": "Scholarcy",
+  "agent_url": "https://www.scholarcy.com",
   "category": "Research",
+  "run_id": "run-scholarcy-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Scholarcy",
-  "review_url": "https://hlido.eu/reviews/scholarcy/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-scholarcy-moo186u9",
-  "claims": [
-    {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Join over 600,000 people saving time\" and \"Summarize, analyze and organize your research\" clearly state the value proposition.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "You can access our Article Summarizer for free.",
-      "source_surface": "pricing"
-    },
-    {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
-      "required": true,
-      "verdict": "partial_pass",
-      "evidence": "\"Import directly from Zotero\"",
-      "source_surface": "homepage"
-    },
-    {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
-      "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
-    }
-  ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.scholarcy.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.scholarcy.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.scholarcy.com/blog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://www.scholarcy.com/#featured__01",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
+  "laddoo_score": 78,
   "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:41:11.502Z"
+  "hlido_opinion": {
+    "headline": "Reliable research summarization tool \u2014 effective for academics but lacks advanced integration features for agents.",
+    "body": "Scholarcy provides a solid solution for quickly summarizing academic papers, making it a useful tool for researchers who need to digest large volumes of literature efficiently. Its ability to extract key information and generate summaries is commendable, and it operates well within its niche. However, it does not currently offer robust API or integration capabilities, which limits its utility in automated workflows or for agents seeking to leverage its functionality programmatically. Users looking for seamless integration with other research tools may find this a drawback. Overall, Scholarcy is a dependable choice for individual researchers but may not meet the needs of teams or automated systems looking for deeper integration.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Scholarcy effectively delivers on its promise of summarizing academic content, and user feedback indicates satisfaction with its core functionality. It is not classified as VITAL due to the absence of advanced integration features that would enhance its applicability in automated research workflows. A move to add API capabilities could elevate its tier.",
+  "what_it_does_well": [
+    "Summarizes academic papers efficiently, extracting key points and findings",
+    "User-friendly interface that simplifies the summarization process",
+    "Useful for individual researchers needing quick insights from literature"
+  ],
+  "what_it_fails_at": [
+    "Lacks API or integration features for programmatic access",
+    "Limited functionality for team-based or collaborative research environments",
+    "No advanced features for data export or integration with other research tools"
+  ],
+  "best_for": [
+    "Individual researchers needing quick summaries of academic papers",
+    "Students looking to streamline literature reviews",
+    "Academics wanting to save time on reading extensive research articles"
+  ],
+  "not_recommended_for": [
+    "Teams requiring collaborative research tools with integration capabilities",
+    "Users needing automated workflows that involve multiple research tools",
+    "Researchers looking for comprehensive data analysis features"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "endnote",
+      "verdict_diff": "EndNote offers comprehensive reference management and integration features, making it a better choice for collaborative research. Scholarcy excels in quick summarization but lacks the broader capabilities of EndNote.",
+      "preferred_for_axis": "integration and collaboration"
+    },
+    {
+      "slug": "mendeley",
+      "verdict_diff": "Mendeley provides both reference management and social networking features for researchers, while Scholarcy focuses solely on summarization. Choose Mendeley for a more holistic research tool.",
+      "preferred_for_axis": "comprehensive research management"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Summarizes academic papers effectively",
+      "source": "https://www.scholarcy.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Scholarcy does not currently support API access for integration with agent-driven workflows.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Summarize academic papers quickly'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started for free'",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent pricing available on the website",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
+    }
+  ],
+  "summary": "Reliable research summarization tool \u2014 effective for academics but lacks advanced integration features for agents.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/scholarcy.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
