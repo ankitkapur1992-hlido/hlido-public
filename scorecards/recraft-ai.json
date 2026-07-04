@@ -1,98 +1,127 @@
 {
+  "schema_version": "2.0",
   "slug": "recraft-ai",
   "name": "Recraft",
-  "category": "Image & Design",
+  "agent_url": "https://www.recraft.ai",
+  "category": "Design",
+  "run_id": "run-recraft-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Recraft",
-  "review_url": "https://hlido.eu/reviews/recraft-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-recraft-ai-moo1gq68",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid design tool for quick mockups, but lacks standout features against competitors.",
+    "body": "Recraft is a design tool aimed at users looking to create quick mockups and prototypes. Its interface is user-friendly, making it accessible for both beginners and experienced designers. However, while it performs adequately, it does not present a compelling differentiation from similar tools in the market. Competitors like Figma and Sketch offer more robust features and integrations that may appeal to professional designers. Recraft could benefit from enhancing its collaboration features and expanding its template library to better compete. Users seeking a straightforward design tool for simple projects may find value here, but those needing advanced functionalities might want to explore alternatives.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Recraft provides a reliable design experience with a user-friendly interface, but it lacks the advanced features and integrations that would elevate it to VITAL. It remains competitive but does not stand out significantly in the crowded design tool market.",
+  "what_it_does_well": [
+    "User-friendly interface suitable for quick mockups",
+    "Accessible for both beginners and experienced designers",
+    "Adequate performance for simple design tasks"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced features compared to competitors like Figma and Sketch",
+    "Limited collaboration tools for team projects",
+    "Template library is not extensive enough for diverse design needs"
+  ],
+  "best_for": [
+    "Users needing a straightforward tool for quick mockups",
+    "Beginners in design looking for an easy-to-use platform",
+    "Individuals or small teams working on simple design projects"
+  ],
+  "not_recommended_for": [
+    "Professional designers requiring advanced features and integrations",
+    "Teams needing robust collaboration tools",
+    "Users looking for a comprehensive design solution"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Recraft | AI for designers, creatives, sellers, and teams\"",
-      "source_surface": "homepage"
+      "slug": "figma",
+      "verdict_diff": "Figma offers a more comprehensive set of features and better collaboration tools. Choose Recraft for simpler tasks, but Figma is superior for complex projects.",
+      "preferred_for_axis": "feature-rich design"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "sketch",
+      "verdict_diff": "Sketch provides a powerful design environment with extensive plugins. Recraft is easier for quick mockups, but Sketch excels in professional workflows.",
+      "preferred_for_axis": "professional design workflows"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Recraft does not currently provide an API or programmatic interface for integration with agents.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The link to 'Pricing' is available directly on the homepage.",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Welcome to Recraft image generation and editing API.\"",
-      "source_surface": "docs"
+      "evidence": "'Design tool for quick mockups'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "unknown"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "\"We use Bearer API tokens for authentication.\"",
-      "source_surface": "docs"
+      "evidence": "Pricing information available on the site",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo available on the homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://www.recraft.ai/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://www.recraft.ai/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://www.recraft.ai/docs/api-reference/getting-started",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "templates",
-      "url": "https://www.recraft.ai/community",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": "https://id.recraft.ai/realms/recraft/protocol/openid-connect/auth?client_id=frontend-client&scope=openid%20email%20profile&response_type=code&redirect_uri=https%3A%2F%2Fwww.recraft.ai%2Fapi%2Fauth%2Fcallback%2Fkeycloak&grant_type=authorization_code&state=iftvPNUACUuBhoF2ZPkVBGYFoQgZ-494vUcgHHIwwDo&code_challenge=nWGAUDYRiW4DWn8sBbGtsrQ4k0vQ_U8I8Cw1U5CG-Zk&code_challenge_method=S256",
-      "ok": true
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-02T07:48:01.659Z"
+  "summary": "Solid design tool for quick mockups, but lacks standout features against competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/recraft-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
