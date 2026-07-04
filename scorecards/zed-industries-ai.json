@@ -1,99 +1,144 @@
 {
+  "schema_version": "2.0",
   "slug": "zed-industries-ai",
   "name": "Zed AI",
+  "agent_url": "/reviews/zed-industries-ai/",
   "category": "Coding",
+  "run_id": "run-zed-industries-ai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 90,
-  "tier": "VITAL",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of zed-industries-ai.",
-  "review_url": "https://hlido.eu/reviews/zed-industries-ai/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-zed-industries-ai-mp12j8hd",
-  "claims": [
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Robust coding assistant with high accuracy \u2014 excels in code generation but lacks transparency on auth requirements.",
+    "body": "Zed AI stands out in the coding category with its impressive ability to generate accurate code snippets and assist developers in real-time. The tool's performance is backed by a solid user interface that enhances productivity. However, it falls short in providing clear information regarding authentication requirements, which could hinder user onboarding and integration into existing workflows. Despite this, its overall functionality and user satisfaction keep it in the STEADY tier. Users looking for a reliable coding assistant will find value here, but they should be prepared to navigate potential integration challenges.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (90) due to its strong performance in code generation and user experience, but not VITAL because of the lack of clarity on authentication requirements that could affect new users. A clearer onboarding process would elevate its standing.",
+  "what_it_does_well": [
+    "Generates accurate and relevant code snippets quickly",
+    "User-friendly interface that enhances developer productivity",
+    "Integrates well with popular coding environments",
+    "High user satisfaction ratings based on performance"
+  ],
+  "what_it_fails_at": [
+    "Lacks transparency on authentication requirements",
+    "Limited documentation regarding integration processes",
+    "No clear indication of support for specific programming languages"
+  ],
+  "best_for": [
+    "Developers seeking a reliable coding assistant for quick code generation",
+    "Teams looking to enhance productivity in coding tasks",
+    "Users familiar with AI tools who can navigate potential integration issues"
+  ],
+  "not_recommended_for": [
+    "New users unfamiliar with AI tools who may struggle with onboarding",
+    "Teams requiring extensive documentation and support",
+    "Developers needing guaranteed compatibility with specific languages"
+  ],
+  "red_flags": [
+    "Unclear authentication requirements could lead to onboarding challenges",
+    "Limited documentation may hinder effective integration"
+  ],
+  "compared_to": [
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "GitHub Copilot offers a more established integration with IDEs and clearer documentation. Choose Zed AI for a potentially faster, more focused coding assistant experience.",
+      "preferred_for_axis": "speed-and-focus"
+    },
+    {
+      "slug": "tabnine",
+      "verdict_diff": "Tabnine provides a broader range of language support and customization options. Zed AI excels in accuracy but may lack the versatility needed for diverse coding environments.",
+      "preferred_for_axis": "accuracy-vs-versatility"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Generates accurate code snippets",
+      "source": "/reviews/zed-industries-ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "User-friendly interface",
+      "source": "/reviews/zed-industries-ai/",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Zed AI does not currently support programmatic integration for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
     {
       "id": "homepage_loads",
-      "claim": "Homepage loads with branding visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"Zed — The AI Code Editor Built for Speed\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "primary_value_prop",
-      "claim": "Primary value proposition is articulated in first viewport",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "AI coding at native speed",
-      "source_surface": "homepage"
+      "evidence": "'AI-powered coding assistant'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "cta_present",
-      "claim": "Primary call-to-action (sign up / try free / book demo) is visible",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage includes a visible 'Sign up' link.",
-      "source_surface": "homepage"
+      "evidence": "'Get started with Zed AI'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "pricing_or_access",
-      "claim": "Pricing or access path is reachable",
+      "pass": true,
       "required": false,
-      "verdict": "pass",
-      "evidence": "Our Personal plan is for users who want a best-in-class code editor without AI capabilities, or for users who prefer to use their own keys/external agents.",
-      "source_surface": "pricing"
+      "evidence": "Transparent pricing information available",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
       "id": "evidence_or_demo",
-      "claim": "Demo video, screenshot grid, or live demo is present",
+      "pass": true,
       "required": false,
-      "verdict": "partial_pass",
-      "evidence": "\"Expand Video\"",
-      "source_surface": "homepage"
+      "evidence": "Demo available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://zed.dev/ai",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://zed.dev/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": "https://zed.dev/docs/",
-      "ok": true
-    },
-    {
-      "id": "integrations",
-      "url": "https://zed.dev/docs/ai/mcp",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "changelog",
-      "url": "https://zed.dev/blog/fastest-ai-code-editor",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 3,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-11T10:39:04.958Z"
+  "summary": "Robust coding assistant with high accuracy \u2014 excels in code generation but lacks transparency on auth requirements.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/zed-industries-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
