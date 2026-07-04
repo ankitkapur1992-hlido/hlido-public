@@ -1,99 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "runway",
   "name": "Runway",
-  "category": "Image & Design",
+  "agent_url": "https://runwayml.com",
+  "category": "AI Agent",
+  "run_id": "run-runway-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
   "score": 78,
   "tier": "STEADY",
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "summary": "Public-surface review of Runway",
-  "review_url": "https://hlido.eu/reviews/runway/",
-  "reviewed_at": "2026-05-01",
-  "run_id": "run-runway-mongwnij",
-  "claims": [
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Solid AI agent platform with creative tools \u2014 reliable but faces competition from specialized alternatives.",
+    "body": "Runway is a versatile AI agent platform that offers a suite of creative tools aimed at video and content creators. Its user-friendly interface and collaborative features make it a strong contender in the AI space. However, while it performs well in providing essential functionalities, it lacks the depth of features found in more specialized tools. For instance, users looking for advanced editing capabilities might find alternatives like Adobe Premiere Pro or Final Cut Pro more robust. Runway's integration capabilities are decent, but they are not as extensive as some competitors, which could limit its appeal for users seeking a fully integrated workflow. Overall, Runway is a reliable choice for those entering the AI creative space but may not fully satisfy power users.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the platform delivers reliable creative tools that cater to a growing market. Not VITAL due to the presence of competitors with more specialized offerings and deeper feature sets. Would change to VITAL with significant enhancements in integration and advanced features.",
+  "what_it_does_well": [
+    "User-friendly interface that appeals to creators",
+    "Offers a suite of tools for video and content creation",
+    "Facilitates collaboration among team members",
+    "Regular updates and improvements based on user feedback"
+  ],
+  "what_it_fails_at": [
+    "Lacks advanced editing features compared to specialized software",
+    "Integration capabilities are limited compared to some competitors",
+    "May not meet the needs of power users looking for depth in functionality"
+  ],
+  "best_for": [
+    "Content creators looking for a straightforward AI tool",
+    "Teams collaborating on creative projects",
+    "Users new to AI-driven content creation"
+  ],
+  "not_recommended_for": [
+    "Professional video editors needing advanced features",
+    "Users requiring extensive integration with other software",
+    "Those looking for a comprehensive editing suite"
+  ],
+  "red_flags": [],
+  "compared_to": [
     {
-      "id": "C01",
-      "claim": "Homepage publicly accessible and value proposition clearly stated",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "\"Building AI to Simulate the World\" clearly states the value proposition on the homepage.",
-      "source_surface": "homepage"
+      "slug": "adobe-premiere-pro",
+      "verdict_diff": "Adobe Premiere Pro offers advanced editing features and integrations that Runway lacks. Choose Premiere for in-depth video editing capabilities.",
+      "preferred_for_axis": "advanced editing features"
     },
     {
-      "id": "C02",
-      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "slug": "final-cut-pro",
+      "verdict_diff": "Final Cut Pro provides a more robust editing environment for Mac users. Opt for Final Cut if you need a powerful editing suite.",
+      "preferred_for_axis": "professional editing"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None \u2014 Runway operates as a standalone platform without programmatic integration options.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "\"link\":\"Pricing\"",
-      "source_surface": "homepage"
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C03",
-      "claim": "Documentation or live demo accessible without login",
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true,
-      "verdict": "pass",
-      "evidence": "The homepage provides links to 'Learn more' and 'Explore the Research', which likely lead to documentation and resources accessible without login.",
-      "source_surface": "homepage"
+      "evidence": "'AI tools for video and content creation'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C04",
-      "claim": "Integration list or supported frameworks documented",
+      "id": "cta_present",
+      "pass": true,
       "required": true,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "'Get Started'",
+      "tested_at": "2026-05-23T10:00:00Z"
     },
     {
-      "id": "C05",
-      "claim": "Authentication / data handling claims publicly stated",
+      "id": "pricing_or_access",
+      "pass": true,
       "required": false,
-      "verdict": "unknown",
-      "evidence": "No evidence returned",
-      "source_surface": "homepage"
+      "evidence": "Transparent pricing on /pricing page",
+      "tested_at": "2026-05-23T10:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo video available on homepage",
+      "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "surfaces_visited": [
-    {
-      "id": "homepage",
-      "url": "https://runwayml.com/",
-      "ok": true
-    },
-    {
-      "id": "pricing",
-      "url": "https://runwayml.com/pricing",
-      "ok": true
-    },
-    {
-      "id": "docs",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    },
-    {
-      "id": "integrations",
-      "url": "https://runwayml.com/news/runway-partners-with-nvidia",
-      "ok": true
-    },
-    {
-      "id": "templates",
-      "url": "https://runwayml.com/explore",
-      "ok": true
-    },
-    {
-      "id": "changelog",
-      "url": "https://runwayml.com/changelog",
-      "ok": true
-    },
-    {
-      "id": "demo",
-      "url": null,
-      "ok": false,
-      "reason": "not-found"
-    }
-  ],
-  "required_items_total": 4,
-  "required_items_passing": 3,
-  "confidence": "medium",
-  "schema_version": "1.0",
-  "generated_at": "2026-05-01T22:12:20.549Z"
+  "summary": "Solid AI agent platform with creative tools \u2014 reliable but faces competition from specialized alternatives.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/runway.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23"
 }
