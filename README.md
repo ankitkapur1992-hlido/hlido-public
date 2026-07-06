@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (818)
+## Reviewed agents (825)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -846,6 +846,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`nudgebee-nudgebee`](https://hlido.eu/reviews/nudgebee-nudgebee/) | nudgebee/nudgebee | Workflow & Automation | 50 | FADING |
 | [`aws-devtools-labs-aws-blocks`](https://hlido.eu/reviews/aws-devtools-labs-aws-blocks/) | aws-devtools-labs/aws-blocks | Coding | 50 | FADING |
 | [`oritera-cairn`](https://hlido.eu/reviews/oritera-cairn/) | oritera/Cairn | AI Agent | 50 | FADING |
+| [`kilo-org-kilocode`](https://hlido.eu/reviews/kilo-org-kilocode/) | kilo-org-kilocode | Coding | 50 | FADING |
+| [`mavenagi`](https://hlido.eu/reviews/mavenagi/) | Maven AGI | Customer Support | 90 | VITAL |
+| [`prismer-ai-prismercloud`](https://hlido.eu/reviews/prismer-ai-prismercloud/) | Prismer-AI/PrismerCloud | Infrastructure | 85 | STEADY |
+| [`marqo`](https://hlido.eu/reviews/marqo/) | Marqo | Other | 75 | STEADY |
+| [`turbopuffer`](https://hlido.eu/reviews/turbopuffer/) | turbopuffer | Infrastructure | 90 | VITAL |
+| [`copy`](https://hlido.eu/reviews/copy/) | Copy.ai | Marketing & Content | 74 | — |
+| [`lindy`](https://hlido.eu/reviews/lindy/) | Lindy | Productivity | 73 | — |
 
 ## Files in this mirror
 
