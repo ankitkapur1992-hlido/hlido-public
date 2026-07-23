@@ -102,5 +102,48 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "graykode/abtop — Like htop, but for AI coding agents. Monitor Claude    Code & Codex CLI sessions, tokens, context window,    rate limits, and ports in real-time.. Repo-surface review: measured from the public repository (3351 stars, MIT, last push 2026-07-07); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A fast, actively-developed Rust 'htop for AI coding agents' — an excellent human-facing observability tool, not an agent-consumable component.",
+    "body": "This is a healthy young project by every repository signal: MIT-licensed, written in Rust, three CI workflows, tagged releases (v0.5.3) and a push within the last ~9 days. 3.4k stars for a niche tool this young is a strong signal that it scratches a current itch — watching Claude Code and Codex CLI sessions for tokens, context window, rate limits and ports in real time. The honest framing is about audience: this is an operator's TUI, and the repo exposes no agent-consumable surface, so it belongs in the developer's terminal, not in an agent's toolchain. Repo-surface read.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82, repo-surface ceiling). MIT licensing, Rust, multiple CI workflows, an active release cadence and strong early traction clear STEADY. VITAL is withheld because it is early (v0.5.x, API still moving) and, by design, exposes no programmatic surface to verify agent-side.",
+  "what_it_does_well": [
+    "MIT-licensed, Rust performance, and very active (push within ~9 days)",
+    "Multiple CI workflows (3) and a steady early release cadence (v0.5.3)",
+    "Solves a real, current pain — live visibility into Claude Code / Codex sessions",
+    "Strong traction (3.4k stars) for a young, niche tool"
+  ],
+  "what_it_fails_at": [
+    "No agent-consumable interface — it is a human TUI monitor",
+    "Young (v0.5.x) with an API still in motion",
+    "Utility is scoped to Claude Code / Codex CLI users"
+  ],
+  "best_for": [
+    "Developers running Claude Code or Codex who want live session/token/rate-limit visibility"
+  ],
+  "not_recommended_for": [
+    "Agent pipelines needing programmatic consumption",
+    "Non-CLI-agent workflows",
+    "Anyone wanting a settled 1.0 API"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A human-facing terminal monitor with no programmatic/agent surface. It complements a coding-agent workflow for the operator, but agents cannot drive it. No hands-on behavioral test performed.",
+    "agent_friendly_score": 3
+  },
+  "enriched_at": "2026-07-23",
+  "enriched_by": "R-publish"
 }
