@@ -1,11 +1,107 @@
 {
+  "schema_version": "2.0",
   "slug": "gptme-gptme",
   "name": "gptme/gptme",
   "agent_url": "https://github.com/gptme/gptme",
   "category": "Coding",
   "run_id": "run-gptme-gptme-u0tgstbd",
   "run_at": "2026-06-13T06:00:59.870Z",
-  "source": "hlido-drain-worker",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "One of the original terminal coding agents — mature, provider-agnostic, and genuinely scriptable, if you're comfortable living in the CLI.",
+    "body": "gptme has been around since spring 2023, which in agent-tool years makes it an elder, and the maturity shows: 111 releases, 4,000+ commits, and a design that treats the terminal as the whole product rather than a fallback. It writes code, runs shell and Python, browses via Playwright, and reads images — all locally, with your own keys, against Anthropic, OpenAI, Google, DeepSeek, OpenRouter or a local llama.cpp. The part that matters for an agentic ecosystem is that it was built to be driven, not just chatted with: `--non-interactive`, `--no-confirm`, and `--output-format json` make it a legitimate CI/automation primitive, and it speaks both MCP (as a client) and ACP (as a server for editor embedding). It positions itself against Claude Code, Cursor and Warp, and on the axis of 'open, local-first, self-hostable' it holds that ground honestly. Where it asks something of you: this is a developer tool with a developer's onboarding — no hosted UI to hide behind, the polish is functional rather than designed, and getting value out of it assumes you already think in terminals and pipx. That's a deliberate trade, not a defect.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because the tool is demonstrably mature and actively maintained (v0.32.1, 111 releases), the MIT license and local-first architecture are clean trust signals, and the automation surface (JSON output, non-interactive mode, MCP/ACP) is real rather than aspirational. Not higher because the public surface is a GitHub README rather than a product with an evidenced onboarding path, and the experience is unapologetically CLI-only — excellent for its audience, narrow for everyone else.",
+  "what_it_does_well": [
+    "Runs as a genuine CLI primitive — non-interactive mode and JSON output make it CI/automation-friendly",
+    "Provider-agnostic: Anthropic, OpenAI, Google, xAI, DeepSeek, OpenRouter, or local llama.cpp",
+    "Local-first and self-hostable — your keys, your machine, no mandatory cloud",
+    "Speaks MCP (client) and ACP (server) so it composes with other tools and editors",
+    "Long, consistent maintenance track record (since 2023, 100+ releases)"
+  ],
+  "what_it_fails_at": [
+    "CLI-only onboarding — no hosted UI, assumes terminal + pipx fluency",
+    "Public surface is a README; there is no product marketing making verifiable claims to audit",
+    "Polish is functional, not designed — rough edges are part of the deal",
+    "Web UI and desktop app are secondary/in-development rather than first-class"
+  ],
+  "best_for": [
+    "Developers who want an open, scriptable coding agent they can run in CI",
+    "Teams that need provider flexibility and local-first execution for privacy or cost",
+    "Anyone embedding an agent into an editor via ACP or a pipeline via MCP",
+    "Users who prefer an auditable open-source tool over a hosted black box"
+  ],
+  "not_recommended_for": [
+    "Non-technical users who need a polished GUI",
+    "Buyers who want vendor support and SLAs (this is community open source)",
+    "Anyone unwilling to manage their own API keys and environment"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is the tighter git-native pair-programmer focused on edit-commit loops; gptme is the broader terminal agent that also runs shell/Python and browses. Pick Aider for disciplined in-repo edits, gptme for general terminal knowledge-work.",
+      "preferred_for_axis": "breadth-of-terminal-tooling"
+    },
+    {
+      "slug": "goose",
+      "verdict_diff": "Goose and gptme occupy similar 'agent in your terminal' territory; gptme's edge is its longer maturity and explicit JSON/non-interactive automation surface, Goose's is its extension ecosystem.",
+      "preferred_for_axis": "automation-scriptability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Terminal agent that writes code, uses the shell, browses the web",
+      "source": "https://github.com/gptme/gptme",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed, 4.4k stars, 111 releases (v0.32.1)",
+      "source": "https://github.com/gptme/gptme",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Provider-agnostic incl. local llama.cpp; MCP + ACP support",
+      "source": "https://github.com/gptme/gptme",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Non-interactive mode and --output-format json for CI",
+      "source": "https://github.com/gptme/gptme",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Strong. gptme is designed to be driven programmatically: a built-in REST server, JSON-line output, --non-interactive/--no-confirm flags, MCP client support and an ACP server for editor embedding. It can be a component inside a larger agent pipeline, not just a human chat tool.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-21"
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -33,9 +129,12 @@
       "required": false
     }
   ],
-  "laddoo_score": 75,
-  "score": 75,
-  "tier": "STEADY",
-  "summary": "Public-surface review of gptme/gptme.",
-  "confidence": "low"
+  "summary": "One of the original terminal coding agents — mature, provider-agnostic, and genuinely scriptable, if you're comfortable living in the CLI.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 38,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/gptme-gptme.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
