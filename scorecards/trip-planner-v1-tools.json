@@ -1,99 +1,100 @@
 {
-  "schema_version": "2.0",
-  "slug": "trip-planner-v1-tools",
-  "name": "trip_planner_v1_tools",
-  "agent_url": "/reviews/trip-planner-v1-tools/",
-  "category": "Chat & Companion",
-  "run_id": "run-trip-planner-v1-tools-v2-editor-2026-05-23",
-  "run_at": "2026-05-23T12:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 57,
-  "tier": "STEADY",
-  "laddoo_score": 57,
-  "confidence": "medium",
-  "hlido_opinion": {
-    "headline": "Basic trip planning tool with limited features \u2014 functional but lacks depth compared to more robust alternatives.",
-    "body": "Trip Planner V1 Tools provides a straightforward interface for basic trip planning, but it falls short in offering advanced features that users might expect from modern travel applications. The tool operates adequately for simple itineraries but lacks integrations with external services, detailed recommendations, and personalization options. This can make it feel rudimentary, especially when compared to competitors like TripIt or Google Travel, which offer richer experiences and more comprehensive functionalities. Users looking for a basic solution may find it satisfactory, but those needing a more integrated and feature-rich platform should consider alternatives.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-05-23",
-    "editor_signature_pending": true
+ "schema_version": "2.0",
+ "slug": "trip-planner-v1-tools",
+ "name": "trip_planner_v1_tools",
+ "agent_url": "https://huggingface.co/spaces/feedforwardblog/trip_planner_v1_tools",
+ "category": "Chat & Companion",
+ "run_id": "run-trip-planner-v1-tools-v2-editor-2026-05-23",
+ "run_at": "2026-05-23T12:00:00Z",
+ "editor": "Hlido Editor",
+ "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+ "methodology_version": "2026.05",
+ "methodology_url": "/methodology/public-surface-tier-1/",
+ "score": 57,
+ "tier": "STEADY",
+ "laddoo_score": 57,
+ "confidence": "medium",
+ "hlido_opinion": {
+  "headline": "Basic trip planning tool with limited features \u2014 functional but lacks depth compared to more robust alternatives.",
+  "body": "Trip Planner V1 Tools provides a straightforward interface for basic trip planning, but it falls short in offering advanced features that users might expect from modern travel applications. The tool operates adequately for simple itineraries but lacks integrations with external services, detailed recommendations, and personalization options. This can make it feel rudimentary, especially when compared to competitors like TripIt or Google Travel, which offer richer experiences and more comprehensive functionalities. Users looking for a basic solution may find it satisfactory, but those needing a more integrated and feature-rich platform should consider alternatives.",
+  "voice": "Hlido Editor",
+  "as_of": "2026-05-23",
+  "editor_signature_pending": true
+ },
+ "tier_rationale": "STEADY (57) because while it provides basic functionality for trip planning, it lacks the depth and integration options that would elevate it to a higher tier. It remains relevant but does not stand out in a crowded market.",
+ "what_it_does_well": [
+  "Offers a simple interface for creating basic trip itineraries",
+  "Provides essential travel information without overwhelming the user",
+  "Functional for users needing straightforward trip planning"
+ ],
+ "what_it_fails_at": [
+  "Lacks integration with external travel services and apps",
+  "Limited features compared to more robust competitors",
+  "No personalization options or advanced recommendations"
+ ],
+ "best_for": [
+  "Casual travelers looking for a simple trip planning tool",
+  "Users who prefer a straightforward approach without complex features",
+  "Individuals planning short trips without extensive itineraries"
+ ],
+ "not_recommended_for": [
+  "Frequent travelers needing detailed itineraries and recommendations",
+  "Users looking for integration with other travel services",
+  "Anyone requiring advanced features like budget tracking or real-time updates"
+ ],
+ "red_flags": [],
+ "compared_to": [
+  {
+   "slug": "tripit",
+   "verdict_diff": "TripIt offers comprehensive itinerary management with integrations and advanced features. Choose TripIt for a richer experience and more robust planning capabilities.",
+   "preferred_for_axis": "feature-rich planning"
   },
-  "tier_rationale": "STEADY (57) because while it provides basic functionality for trip planning, it lacks the depth and integration options that would elevate it to a higher tier. It remains relevant but does not stand out in a crowded market.",
-  "what_it_does_well": [
-    "Offers a simple interface for creating basic trip itineraries",
-    "Provides essential travel information without overwhelming the user",
-    "Functional for users needing straightforward trip planning"
-  ],
-  "what_it_fails_at": [
-    "Lacks integration with external travel services and apps",
-    "Limited features compared to more robust competitors",
-    "No personalization options or advanced recommendations"
-  ],
-  "best_for": [
-    "Casual travelers looking for a simple trip planning tool",
-    "Users who prefer a straightforward approach without complex features",
-    "Individuals planning short trips without extensive itineraries"
-  ],
-  "not_recommended_for": [
-    "Frequent travelers needing detailed itineraries and recommendations",
-    "Users looking for integration with other travel services",
-    "Anyone requiring advanced features like budget tracking or real-time updates"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "tripit",
-      "verdict_diff": "TripIt offers comprehensive itinerary management with integrations and advanced features. Choose TripIt for a richer experience and more robust planning capabilities.",
-      "preferred_for_axis": "feature-rich planning"
-    },
-    {
-      "slug": "google-travel",
-      "verdict_diff": "Google Travel provides personalized recommendations and extensive integration with other Google services. Opt for Google Travel for a more connected and dynamic planning experience.",
-      "preferred_for_axis": "integration and personalization"
-    }
-  ],
-  "evidence_urls": [],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 the tool does not provide programmatic interfaces for agent integration.",
-    "agent_friendly_score": 1
-  },
-  "checklist": [
-    {
-      "id": "auth_requirement",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T12:00:00Z"
-    }
-  ],
-  "summary": "Basic trip planning tool with limited features \u2014 functional but lacks depth compared to more robust alternatives.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2026-08-21",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2026-08-21",
-  "attestation_url": "/data/attestations/trip-planner-v1-tools.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-05-23"
+  {
+   "slug": "google-travel",
+   "verdict_diff": "Google Travel provides personalized recommendations and extensive integration with other Google services. Opt for Google Travel for a more connected and dynamic planning experience.",
+   "preferred_for_axis": "integration and personalization"
+  }
+ ],
+ "evidence_urls": [],
+ "agent_relevance": {
+  "has_api": false,
+  "has_cli": false,
+  "has_mcp": false,
+  "has_webhook": false,
+  "has_sdk": false,
+  "behavioral_testable": false,
+  "agent_integration_path": "None \u2014 the tool does not provide programmatic interfaces for agent integration.",
+  "agent_friendly_score": 1
+ },
+ "checklist": [
+  {
+   "id": "auth_requirement",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T12:00:00Z"
+  }
+ ],
+ "summary": "Basic trip planning tool with limited features \u2014 functional but lacks depth compared to more robust alternatives.",
+ "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+ "staleness_after": "2026-08-21",
+ "review_age_days_at_publish": 0,
+ "next_review_due_at": "2026-08-21",
+ "attestation_url": "/data/attestations/trip-planner-v1-tools.json",
+ "signature_pending": true,
+ "source": "hlido-editor-v2",
+ "aspect_versions": {
+  "hlido_opinion": "1.0",
+  "tier_rationale": "1.0",
+  "what_it_does_well": "1.0",
+  "what_it_fails_at": "1.0",
+  "best_for": "1.0",
+  "not_recommended_for": "1.0",
+  "red_flags": "1.0",
+  "compared_to": "1.0",
+  "evidence_urls": "1.0",
+  "agent_relevance": "1.0",
+  "checklist": "1.0"
+ },
+ "aspect_versions_as_of": "2026-05-23",
+ "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
