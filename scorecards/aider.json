@@ -4,19 +4,16 @@
   "name": "Aider",
   "agent_url": "https://aider.chat",
   "category": "Coding",
-
   "run_id": "run-aider-handcraft-2026-05-23",
   "run_at": "2026-05-23T14:30:00Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
   "methodology_version": "2026.05",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 92,
   "tier": "VITAL",
   "laddoo_score": 92,
   "confidence": "high",
-
   "hlido_opinion": {
     "headline": "The dependable open-source AI pair-programmer for the terminal — Apache-2.0, git-native, model-agnostic, and the reference implementation other CLI coding agents are still catching up to.",
     "body": "Aider is Paul Gauthier's pair-programmer in a CLI, and after years of iterative refinement it has earned the status other coding agents are still working towards. The killer primitive is the diff-edit workflow: the model returns surgical edits, Aider validates and applies them, auto-retries when a model produces malformed diffs, and commits every change to git with a reasoned message. Bring any LLM you want — Anthropic, OpenAI, Gemini, local Ollama, dozens more via LiteLLM. No vendor lock, no telemetry by default, no IDE shell to learn. The repo-map heuristic for context selection is honest about its limits and lets you /add files manually when it matters. Where Aider shows its CLI roots: there's no GUI for less terminal-fluent collaborators, model setup requires API key juggling across providers, and the repo-map struggles on monorepos beyond ~50k files without manual file discipline. None of this is disqualifying — it's the cost of staying lean. Compared to Claude Code, Aider stays model-agnostic; compared to Cursor or Windsurf, Aider has zero IDE chrome and keeps your editor your editor. For agentic coding pipelines that need diff-validated, git-traceable changes from any model, Aider is the production-quality baseline.",
@@ -24,9 +21,7 @@
     "as_of": "2026-05-23",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "VITAL (92) because Aider has shipped continuously for years, the diff-edit primitive is the production-quality bar other CLI coding agents are still imitating, the project is healthy (active maintainers, large contributor base, Apache-2.0), and the agent-relevance is concrete — it's an actual CLI an agent or developer can invoke programmatically. Not 95+ because the onboarding still assumes terminal fluency and the documentation, while exhaustive, isn't designed for users new to CLI workflows.",
-
   "what_it_does_well": [
     "Surgical diff edits that the tool validates and auto-retries when the model produces malformed output",
     "Git-native commits with reasoned messages — every AI change is auditable",
@@ -34,7 +29,6 @@
     "Works fully offline with local models — no required telemetry, no required cloud round-trip",
     "Transparent repo-map for context selection with manual /add override when heuristics aren't enough"
   ],
-
   "what_it_fails_at": [
     "Terminal-only — no GUI surface for less terminal-fluent collaborators",
     "Repo-map heuristics struggle on monorepos beyond ~50k files without manual file curation",
@@ -42,7 +36,6 @@
     "No built-in evaluation harness for measuring edit quality on the user's own codebase",
     "API-key juggling across providers is more friction than a single-vendor CLI"
   ],
-
   "best_for": [
     "Solo developers and small teams comfortable in the terminal",
     "Open-source projects that want to stay off vendor lock-in",
@@ -50,16 +43,13 @@
     "Engineering teams who value diff-level audit trails of every AI-authored change",
     "Headless and scripted agentic coding pipelines"
   ],
-
   "not_recommended_for": [
     "Developers who need a graphical IDE-integrated experience",
     "First-time CLI users — onboarding assumes baseline terminal fluency",
     "Teams enforcing approval workflows that don't map onto git commits",
     "Users wanting one-click deploy from prompt to production (separate tooling needed)"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "claude-code",
@@ -77,14 +67,32 @@
       "preferred_for_axis": "cli-vs-editor-extension"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "Open source under Apache-2.0", "source": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Supports 100+ LLM providers via LiteLLM", "source": "https://aider.chat/docs/llms.html", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Git-native edit-and-commit workflow with auto-commit messages", "source": "https://aider.chat/docs/git.html", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Active project with regular releases", "source": "https://github.com/Aider-AI/aider/releases", "tested_at": "2026-05-23", "verified": true}
+    {
+      "claim": "Open source under Apache-2.0",
+      "source": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Supports 100+ LLM providers via LiteLLM",
+      "source": "https://aider.chat/docs/llms.html",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Git-native edit-and-commit workflow with auto-commit messages",
+      "source": "https://aider.chat/docs/git.html",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Active project with regular releases",
+      "source": "https://github.com/Aider-AI/aider/releases",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": true,
     "has_cli": true,
@@ -95,24 +103,56 @@
     "agent_integration_path": "Install via pip; invoke as a subprocess; pass natural-language --message and target files; capture git commits as the audit trail. Solid foundation for agentic coding pipelines that need diff-validated, model-agnostic, traceable changes.",
     "agent_friendly_score": 9
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'AI pair programming in your terminal'", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "Installation instructions on landing", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Apache-2.0, free to use; user pays own LLM costs", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Documentation + GitHub repo + recorded demos on aider.chat", "tested_at": "2026-05-23T14:30:00Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI pair programming in your terminal'",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Installation instructions on landing",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Apache-2.0, free to use; user pays own LLM costs",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documentation + GitHub repo + recorded demos on aider.chat",
+      "tested_at": "2026-05-23T14:30:00Z"
+    }
   ],
-
   "summary": "The dependable open-source AI pair-programmer for the terminal — Apache-2.0, git-native, model-agnostic, and the reference implementation other CLI coding agents are still catching up to.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
-
   "staleness_after": "2026-08-23",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-08-23",
-
   "attestation_url": "/data/attestations/aider.json",
   "signature_pending": true,
-
-  "source": "hlido-editor-v2-handcraft"
+  "source": "hlido-editor-v2-handcraft",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-11",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
