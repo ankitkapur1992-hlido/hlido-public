@@ -1,11 +1,107 @@
 {
+  "schema_version": "2.0",
   "slug": "hkuds-deepcode",
   "name": "HKUDS/DeepCode",
   "agent_url": "https://github.com/HKUDS/DeepCode",
   "category": "Coding",
   "run_id": "run-hkuds-deepcode-it84i55k",
   "run_at": "2026-06-14T00:01:09.731Z",
-  "source": "hlido-drain-worker",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 90,
+  "tier": "VITAL",
+  "laddoo_score": 90,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Research-lab multi-agent coding system with a real benchmark to back the claims — Paper2Code is the standout, and the PaperBench number is checkable.",
+    "body": "DeepCode comes out of the Data Intelligence Lab at the University of Hong Kong, and the academic pedigree is doing useful work here: unlike most 'AI turns ideas into production code' repos, this one cites a published paper (arXiv:2512.07921) and a benchmark result — 75.9% on OpenAI's PaperBench, above the quoted top-ML-PhD baseline of 72.4%. That is a claim you can actually go verify, which is rare in this category and is exactly the kind of trust signal Hlido rewards. The system spans three workflows — Paper2Code (papers/algorithms to implementations), Text2Web, and Text2Backend — coordinated by a multi-agent architecture with planning, document-analysis, code-generation and debugging roles, plus CodeRAG for retrieving patterns and MCP integration for filesystem/fetch/exec tools. At 16k+ stars it has real community traction. The honest caveats: benchmark leadership is a snapshot, not a durability guarantee; 'production-ready code' is a strong phrase for any autonomous generator and should be read as 'a strong first draft under test loops' rather than ship-it-unreviewed; and the setup (Python 3.9+, Node 18+, config JSON, API keys) is researcher-grade, not one-click.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (90) because it pairs a genuinely differentiated capability (paper-to-code) with a public, third-party-checkable benchmark and a named academic maintainer — the trust and evidence signals are unusually strong for an open-source agent. The MIT license, active releases (v1.3.0), and MCP tool integration round it out. The one thing keeping it honest rather than infallible is that autonomous 'production-ready' output still warrants human review.",
+  "what_it_does_well": [
+    "Paper2Code turns research papers/algorithms into runnable implementations — a genuinely differentiated capability",
+    "Backs claims with a published paper and a checkable PaperBench result (75.9%)",
+    "Multi-agent architecture with autonomous test-until-pass loops and conflict detection in team mode",
+    "MCP integration for filesystem, fetch, GitHub and code execution",
+    "Named academic maintainer (HKU Data Intelligence Lab) and strong community traction (16k+ stars)"
+  ],
+  "what_it_fails_at": [
+    "'Production-ready code' overstates what any autonomous generator should be trusted with unreviewed",
+    "Setup is researcher-grade (Python + Node + config JSON + keys), not one-click",
+    "Benchmark leadership is a point-in-time snapshot in a fast-moving field",
+    "Real-world reliability outside benchmark tasks is not yet independently established"
+  ],
+  "best_for": [
+    "Researchers reproducing paper implementations quickly",
+    "Teams prototyping web/backend scaffolds from natural-language specs",
+    "Engineers who want an agent whose claims come with a citable benchmark",
+    "Anyone integrating a coding agent via MCP into a larger toolchain"
+  ],
+  "not_recommended_for": [
+    "Non-technical users wanting a hosted, zero-setup product",
+    "Teams that will ship generated code without review",
+    "Buyers needing commercial support/SLAs rather than a lab-maintained OSS project"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "openhands",
+      "verdict_diff": "OpenHands is the general-purpose autonomous software engineer; DeepCode's differentiator is the paper-to-code workflow and its published benchmark. Choose DeepCode for research-implementation tasks, OpenHands for broad end-to-end dev automation.",
+      "preferred_for_axis": "paper-to-code"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a lightweight human-in-the-loop pair programmer; DeepCode is a heavier autonomous multi-agent system aimed at generating whole implementations. Aider for controlled edits, DeepCode for spec/paper-to-scaffold generation.",
+      "preferred_for_axis": "autonomy-vs-control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Paper2Code / Text2Web / Text2Backend multi-agent workflows",
+      "source": "https://github.com/HKUDS/DeepCode",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "75.9% on OpenAI PaperBench (vs 72.4% baseline)",
+      "source": "https://github.com/HKUDS/DeepCode",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Published paper arXiv:2512.07921; MIT license; 16.1k stars",
+      "source": "https://arxiv.org/abs/2512.07921",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "MCP integration for filesystem/fetch/GitHub/exec",
+      "source": "https://github.com/HKUDS/DeepCode",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Strong. Offers a CLI, a headless REST API with WebSocket streaming for CI/CD, and integrates external tools over MCP. Can be embedded as an autonomous code-generation stage in a larger agent workflow.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-21"
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -33,9 +129,12 @@
       "required": false
     }
   ],
-  "laddoo_score": 90,
-  "score": 90,
-  "tier": "VITAL",
-  "summary": "Public-surface review of HKUDS/DeepCode.",
-  "confidence": "medium"
+  "summary": "Research-lab multi-agent coding system with a real benchmark to back the claims — Paper2Code is the standout, and the PaperBench number is checkable.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 37,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/hkuds-deepcode.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
