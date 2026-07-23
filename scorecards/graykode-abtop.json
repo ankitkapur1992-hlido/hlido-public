@@ -1,41 +1,106 @@
 {
+  "schema_version": "2.1",
   "slug": "graykode-abtop",
   "name": "graykode/abtop",
   "agent_url": "https://github.com/graykode/abtop",
+  "repo_url": "https://github.com/graykode/abtop",
   "category": "Coding",
-  "run_id": "run-graykode-abtop-fbj4bxzq",
-  "run_at": "2026-06-13T18:01:03.707Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-graykode-abtop-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "homepage_loads",
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "GH API 200 for graykode/abtop"
     },
     {
-      "id": "primary_value_prop",
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "README length 9340"
     },
     {
-      "id": "cta_present",
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "MIT"
+    },
+    {
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
+    },
+    {
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 9d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v0.5.3"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "3351 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "3 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 9d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
       "pass": false,
-      "required": true
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": false,
-      "required": false
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false
+      "evidence": "none found"
     }
   ],
-  "laddoo_score": 75,
-  "score": 75,
+  "repo_metrics": {
+    "stars": 3351,
+    "forks": 301,
+    "open_issues": 20,
+    "archived": false,
+    "pushed_at": "2026-07-07T04:19:20Z",
+    "license": "MIT",
+    "language": "Rust"
+  },
+  "evidence_urls": [
+    "https://github.com/graykode/abtop",
+    "https://api.github.com/repos/graykode/abtop",
+    "https://github.com/graykode/abtop/releases"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
   "tier": "STEADY",
-  "summary": "Public-surface review of graykode/abtop.",
-  "confidence": "low"
+  "confidence": "medium",
+  "summary": "graykode/abtop — Like htop, but for AI coding agents. Monitor Claude    Code & Codex CLI sessions, tokens, context window,    rate limits, and ports in real-time.. Repo-surface review: measured from the public repository (3351 stars, MIT, last push 2026-07-07); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
