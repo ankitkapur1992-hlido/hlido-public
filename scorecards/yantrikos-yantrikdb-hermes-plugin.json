@@ -4,19 +4,16 @@
   "name": "YantrikDB Hermes Plugin",
   "agent_url": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
   "category": "Infrastructure",
-
   "run_id": "run-cf81246b398507cc-github-com",
   "run_at": "2026-06-16T08:31:38Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 57,
   "tier": "STEADY",
   "laddoo_score": 57,
   "confidence": "low",
-
   "hlido_opinion": {
     "headline": "Self-maintaining memory plugin for Hermes Agent — the 128 passing tests and type coverage are unusually rigorous for a 57-star niche plugin.",
     "body": "Most agent memory plugins are simple key-value stores with a retrieval layer bolted on. YantrikDB's Hermes plugin is more thoughtful: it tracks contradictions (when a new memory contradicts an old one, the old one gets flagged, not silently overwritten), canonicalizes duplicates (semantic deduplication, not just exact-match), and provides explainable recall (the agent knows why a memory was surfaced, not just that it was). The in-process default backend (`pip install` and go, no separate server) is a practical choice for Hermes users who don't want to run a separate infrastructure piece. The test suite — 128 passing tests, mypy-checked, Ruff-linted, CI badges green — is unusually rigorous for a 57-star plugin. That gap (high code quality, low visibility) suggests this was built by someone who cares about reliability more than marketing. The limitation is scope: this only works with Hermes Agent (the maintainers' explicit guidance is standalone plugins, not upstream merges), and the value depends entirely on whether you're already committed to the Hermes ecosystem. At 57 stars, this is a high-quality niche tool that hasn't found its audience yet.",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-16",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (57) because the engineering quality (128 tests, mypy, ruff, CI green) is unusually high for the star count, and the contradiction tracking + explainable recall are genuinely differentiated memory capabilities. Not higher because it's tightly coupled to Hermes Agent (small addressable market), and 57 stars signals very limited adoption.",
-
   "what_it_does_well": [
     "Contradiction tracking — new memories that conflict with old ones are flagged, not silently overwritten",
     "Semantic deduplication (canonicalization) prevents memory bloat from near-duplicate facts",
@@ -34,7 +29,6 @@
     "In-process backend by default — no separate server to run (`pip install`, done)",
     "128 passing tests + mypy + Ruff = engineering rigor rare at this star count"
   ],
-
   "what_it_fails_at": [
     "Hermes Agent only — no compatibility with other agent frameworks",
     "57 GitHub stars = very limited adoption; real-world reliability at scale unverified",
@@ -42,23 +36,19 @@
     "GitHub login wall prevented T2 testing of actual plugin functionality",
     "Distribution depends on Hermes community for discovery — small audience"
   ],
-
   "best_for": [
     "Hermes Agent users who need production-grade memory management beyond simple KV store",
     "Agent deployments where factual consistency over time matters (medical, legal, research contexts)",
     "Developers who need a memory plugin they can trust to pass a code review",
     "Projects where 'why did the agent remember this' is a required audit capability"
   ],
-
   "not_recommended_for": [
     "Non-Hermes agent frameworks (incompatible)",
     "Simple use cases where basic retrieval is sufficient — this is over-engineered for KV-style memory",
     "Teams that want a managed memory service with SLAs",
     "Production deployments without internal testing to complement the existing test suite"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "amap-ml-skillclaw",
@@ -66,14 +56,32 @@
       "preferred_for_axis": "individual-agent-memory"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "128 passing tests", "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin/actions", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "mypy-checked and Ruff-linted", "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "MIT License", "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "In-process default backend, no separate server required", "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin", "tested_at": "2026-06-16", "verified": true}
+    {
+      "claim": "128 passing tests",
+      "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin/actions",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "mypy-checked and Ruff-linted",
+      "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "MIT License",
+      "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "In-process default backend, no separate server required",
+      "source": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
+      "tested_at": "2026-06-16",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": false,
     "has_cli": false,
@@ -84,22 +92,55 @@
     "agent_integration_path": "Hermes Agent plugin. pip install yantrikdb-hermes-plugin, configure in Hermes home dir, register as memory provider. Python 3.11-3.14 supported. No external API — operates as an in-process memory backend for Hermes agents.",
     "agent_friendly_score": 4
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-16T08:31:32Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'YantrikDB memory provider for Hermes Agent — self-maintaining memory'", "tested_at": "2026-06-16T08:31:32Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "pip install instructions in README", "tested_at": "2026-06-16T08:31:32Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source (MIT)", "tested_at": "2026-06-16T08:31:32Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "128 passing tests + CI badges", "tested_at": "2026-06-16T08:31:32Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-16T08:31:32Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'YantrikDB memory provider for Hermes Agent — self-maintaining memory'",
+      "tested_at": "2026-06-16T08:31:32Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "pip install instructions in README",
+      "tested_at": "2026-06-16T08:31:32Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT)",
+      "tested_at": "2026-06-16T08:31:32Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "128 passing tests + CI badges",
+      "tested_at": "2026-06-16T08:31:32Z"
+    }
   ],
-
   "summary": "Self-maintaining memory plugin for Hermes Agent — the 128 passing tests and type coverage are unusually rigorous for a 57-star niche plugin.",
-
   "staleness_after": "2026-09-16",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-16",
-
   "attestation_url": "/data/attestations/yantrikos-yantrikdb-hermes-plugin.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-19",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
