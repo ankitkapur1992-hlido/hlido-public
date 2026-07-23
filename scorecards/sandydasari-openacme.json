@@ -4,19 +4,16 @@
   "name": "OpenAcme",
   "agent_url": "https://github.com/sandydasari/openacme",
   "category": "Frameworks & Eval",
-
   "run_id": "run-9cb1d6002f13bfc4-github-com",
   "run_at": "2026-06-16T08:31:30Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 61,
   "tier": "STEADY",
   "laddoo_score": 61,
   "confidence": "low",
-
   "hlido_opinion": {
     "headline": "TypeScript multi-agent workforce platform with MCP and multi-provider LLM — solid architecture, but 70 stars means this hasn't been stress-tested outside of the author's use case.",
     "body": "OpenAcme bills itself as 'an AI workforce' where you define named agents with roles, models, and tools, and the org chart self-delegates from goals to execution. The dependency-aware task scheduler (agents assign work to each other, scheduler wakes dependents when upstream clears) and the mix of web UI and CLI are the differentiating details — most agent frameworks give you either a programmer API or a workflow DSL, not both alongside a visual UI. Multi-provider LLM support (Anthropic, OpenAI, Ollama, OpenRouter) and MCP integration show that the author is building for the current ecosystem, not just a single-vendor solution. TypeScript, pnpm, Node ≥18 is a modern and deployable stack. The concern is scale: 70 GitHub stars is the kind of number that indicates the project was shared in a few communities but hasn't found its audience yet. The question for a framework is always 'does it hold up when 10 other engineers build on top of it' — and at 70 stars, that answer is unverified. The demo GIF in the README is a genuine positive (shows real operation, not just a feature list).",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-16",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (61) because the architecture is sound (org-chart delegation, dependency scheduler, multi-provider, MCP), the demo is real, and the distribution (npm @openacme/cli, web + CLI) shows product thinking. Not higher because 70 stars = very early adoption and production reliability is unverified. Borderline between STEADY and FADING — held STEADY because the architecture quality is above average for the star count.",
-
   "what_it_does_well": [
     "Org-chart delegation model — hierarchy-aware task assignment, not just round-robin agents",
     "Task dependency scheduler — agent B wakes when agent A completes, not just polling",
@@ -34,7 +29,6 @@
     "Web UI + CLI in the same product — accessible to both visual and CLI users",
     "MCP integration out of the box — tools can be MCP-served endpoints"
   ],
-
   "what_it_fails_at": [
     "70 GitHub stars = very early; production reliability at scale is unverified",
     "Hosted option requires building from source — no pre-built binary or hosted SaaS",
@@ -42,23 +36,19 @@
     "CI status in README exists but GitHub login wall blocked verification",
     "70 stars may indicate the delegation model is more complex to configure than the README implies"
   ],
-
   "best_for": [
     "TypeScript developers wanting a multi-agent orchestration framework with visual oversight",
     "Projects with clear hierarchical task structures where delegation is natural",
     "Teams wanting multi-provider LLM flexibility without rewriting agent definitions",
     "Developers who want to evaluate org-chart-style agent delegation before committing to a more established framework"
   ],
-
   "not_recommended_for": [
     "Teams needing production-proven stability — 70 stars isn't enough for enterprise adoption without internal testing",
     "Non-TypeScript teams",
     "Projects with flat task structures where org-chart delegation adds overhead without value",
     "Organizations that need commercial support or SLAs"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "mybono-ai-orchestrator",
@@ -66,14 +56,32 @@
       "preferred_for_axis": "general-workforce-platform"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "Multi-provider: Anthropic, OpenAI, Ollama, OpenRouter", "source": "https://github.com/sandydasari/openacme", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "npm @openacme/cli package", "source": "https://www.npmjs.com/package/@openacme/cli", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "Demo GIF showing delegation", "source": "https://github.com/sandydasari/openacme", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "MIT License, Node ≥18", "source": "https://github.com/sandydasari/openacme", "tested_at": "2026-06-16", "verified": true}
+    {
+      "claim": "Multi-provider: Anthropic, OpenAI, Ollama, OpenRouter",
+      "source": "https://github.com/sandydasari/openacme",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "npm @openacme/cli package",
+      "source": "https://www.npmjs.com/package/@openacme/cli",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "Demo GIF showing delegation",
+      "source": "https://github.com/sandydasari/openacme",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "MIT License, Node ≥18",
+      "source": "https://github.com/sandydasari/openacme",
+      "tested_at": "2026-06-16",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": true,
     "has_cli": true,
@@ -84,22 +92,55 @@
     "agent_integration_path": "TypeScript SDK + CLI. Define agents, tools, and roles programmatically. MCP-served tools plug in directly. Web UI provides visual oversight. Other agents can interact via the task API. Node ≥18 required.",
     "agent_friendly_score": 8
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-16T08:31:23Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'An AI workforce. You're in charge.'", "tested_at": "2026-06-16T08:31:23Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "GitHub link + npm install instructions", "tested_at": "2026-06-16T08:31:23Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source (MIT)", "tested_at": "2026-06-16T08:31:23Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Demo GIF in README showing real agent delegation", "tested_at": "2026-06-16T08:31:23Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-16T08:31:23Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'An AI workforce. You're in charge.'",
+      "tested_at": "2026-06-16T08:31:23Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "GitHub link + npm install instructions",
+      "tested_at": "2026-06-16T08:31:23Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT)",
+      "tested_at": "2026-06-16T08:31:23Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Demo GIF in README showing real agent delegation",
+      "tested_at": "2026-06-16T08:31:23Z"
+    }
   ],
-
   "summary": "TypeScript multi-agent workforce platform with MCP and multi-provider LLM — solid architecture, but 70 stars means this hasn't been stress-tested outside of the author's use case.",
-
   "staleness_after": "2026-09-16",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-16",
-
   "attestation_url": "/data/attestations/sandydasari-openacme.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-11",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
