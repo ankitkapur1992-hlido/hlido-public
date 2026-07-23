@@ -44,15 +44,17 @@
   "tools": [
     {
       "name": "trust_check",
-      "description": "Hlido trust answer for one agent (slug or URL).",
+      "description": "The core Hlido trust query: is a specific AI agent trustworthy? Given one agent (by Hlido slug or product/homepage URL) it returns the independent Laddoo trust score (0-100), tier (VITAL/STEADY/FADING/FLATLINE), a one-line verdict, a claim-verification summary, and any known incidents. Call this FIRST — before delegating to, installing, or relying on another agent — to get a fast trust read. Returns no_review_found if the agent isn't in Hlido's corpus (then call request_quick_audit). For the full claim-by-claim evidence, follow up with get_scorecard.",
       "inputSchema": {
         "type": "object",
         "properties": {
           "agent_or_url": {
-            "type": "string"
+            "type": "string",
+            "description": "The agent to check: either its Hlido slug (e.g. 'aider', 'cursor') or its product/homepage URL (e.g. 'https://cursor.com'). A URL is matched to the closest reviewed agent."
           },
           "use_case": {
-            "type": "string"
+            "type": "string",
+            "description": "Optional. The task you're considering this agent for (e.g. 'multi-file TypeScript refactor'); tailors the verdict to that use case when provided."
           }
         },
         "required": [
@@ -62,12 +64,13 @@
     },
     {
       "name": "find_trusted",
-      "description": "Find Hlido-reviewed agents matching a free-text need.",
+      "description": "Discover Hlido-reviewed agents that match a free-text need, ranked by trust. Returns reviewed agents at or above a minimum tier, each with its Laddoo score, tier, and review URL. Use this for keyword/need-based discovery; for semantic task-matching prefer find_similar_agents, and for structured constraint filters (category/score/tier) prefer recommend.",
       "inputSchema": {
         "type": "object",
         "properties": {
           "need": {
-            "type": "string"
+            "type": "string",
+            "description": "Free-text description of the capability you need (e.g. 'CLI coding agent that edits multiple files at once')."
           },
           "min_tier": {
             "type": "string",
@@ -77,11 +80,13 @@
               "FADING",
               "FLATLINE"
             ],
-            "default": "STEADY"
+            "default": "STEADY",
+            "description": "Minimum trust tier to include (VITAL is strictest, FLATLINE allows all). Defaults to STEADY."
           },
           "limit": {
             "type": "integer",
-            "default": 10
+            "default": 10,
+            "description": "Maximum number of agents to return (default 10)."
           }
         },
         "required": [
@@ -91,15 +96,17 @@
     },
     {
       "name": "verify_claim",
-      "description": "Check whether Hlido's review references a specific claim. Honest nulls when not tested.",
+      "description": "Fact-check one specific marketing or capability claim about an agent against Hlido's independent testing. Returns Hlido's verdict (PASS/FAIL/PARTIAL/UNKNOWN) with a quoted evidence snippet and its source surface — or an honest null when that exact claim wasn't tested (absence of evidence, not proof). Use this to validate a vendor's specific promise before you rely on it.",
       "inputSchema": {
         "type": "object",
         "properties": {
           "agent": {
-            "type": "string"
+            "type": "string",
+            "description": "The agent's Hlido slug or product URL (e.g. 'cursor')."
           },
           "claim": {
-            "type": "string"
+            "type": "string",
+            "description": "The specific claim to verify, in plain language (e.g. 'works offline' or 'SOC 2 compliant')."
           }
         },
         "required": [
@@ -110,15 +117,19 @@
     },
     {
       "name": "compare_agents",
-      "description": "Side-by-side comparison of up to 5 Hlido-reviewed agents.",
+      "description": "Head-to-head trust comparison of 2-5 Hlido-reviewed agents. Returns each agent's Laddoo score, tier, dimension scores, and key claim verdicts side by side so you can pick the most trustworthy option for a task. Use this once you've shortlisted candidates (via find_trusted, find_similar_agents, or recommend) and need a direct comparison.",
       "inputSchema": {
         "type": "object",
         "properties": {
           "slugs": {
             "type": "array",
             "items": {
-              "type": "string"
-            }
+              "type": "string",
+              "description": "A Hlido agent slug (e.g. 'aider')."
+            },
+            "minItems": 2,
+            "maxItems": 5,
+            "description": "List of 2 to 5 Hlido agent slugs to compare side by side (e.g. ['aider','cursor','opencode'])."
           }
         },
         "required": [
@@ -128,18 +139,25 @@
     },
     {
       "name": "submit_agent",
-      "description": "Submit an AI agent for Hlido review consideration.",
+      "description": "Nominate a new AI agent for Hlido to review. Use this when an agent isn't in Hlido's corpus yet (trust_check returned no_review_found) and you want it added. Returns a confirmation with a tracking reference; the review is queued and produces a public scorecard. If you need a verdict right now rather than a queued review, use request_quick_audit (faster, rate-limited) instead.",
       "inputSchema": {
         "type": "object",
         "properties": {
           "url": {
-            "type": "string"
+            "type": "string",
+            "description": "The agent's product or homepage URL (e.g. 'https://example.com')."
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "Human-readable agent name (e.g. 'Example Coder')."
           },
           "note": {
-            "type": "string"
+            "type": "string",
+            "description": "Optional context: what the agent does, or why it's worth reviewing."
+          },
+          "email": {
+            "type": "string",
+            "description": "Optional contact email for the submitter — if you want a reply or a heads-up when the review publishes. Providing it always flags the submission to the Hlido team."
           }
         },
         "required": [
@@ -162,6 +180,46 @@
         "required": [
           "slug"
         ]
+      }
+    },
+    {
+      "name": "get_incidents",
+      "description": "Fetch published incidents from Hlido's NTSB-style failure registry — real observed agent failures (availability outages, regressions, hallucinations, safety issues) plus Hlido self-reported process incidents, each with severity, evidence, and vendor-response status. Filter by agent slug, severity, or category. Use this before delegating to an agent to check for known recent failures; an empty list means no published incidents, not a guarantee of reliability.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Optional: only incidents for this agent slug"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ],
+            "description": "Optional minimum-interest filter (exact match)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "hallucination",
+              "regression",
+              "safety",
+              "availability",
+              "cost",
+              "other"
+            ],
+            "description": "Optional category filter"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Max results (default 20, max 100)",
+            "default": 20
+          }
+        }
       }
     },
     {
@@ -191,7 +249,7 @@
           },
           "reporter": {
             "type": "string",
-            "description": "Optional self-identifier â€” agent name or email â€” purely informational"
+            "description": "Optional self-identifier — agent name or email — purely informational"
           }
         },
         "required": [
@@ -221,7 +279,7 @@
           },
           "requester": {
             "type": "string",
-            "description": "Optional self-identifier â€” agent name, email, or session id â€” for rate-limiting + follow-up"
+            "description": "Optional self-identifier — agent name, email, or session id — for rate-limiting + follow-up"
           }
         },
         "required": [
@@ -231,7 +289,7 @@
     },
     {
       "name": "find_similar_agents",
-      "description": "Semantic search over Hlido's review corpus. Given a task description (e.g. 'I need an agent that can refactor TypeScript and edit multiple files at once'), returns the top-N reviewed agents ranked by embedding similarity, each with their Laddoo score, evidence_tier, and review URL. Use this when you have a task in mind and want Hlido's recommendation â€” much better than substring matching via find_trusted.",
+      "description": "Semantic search over Hlido's review corpus. Given a task description (e.g. 'I need an agent that can refactor TypeScript and edit multiple files at once'), returns the top-N reviewed agents ranked by embedding similarity, each with their Laddoo score, evidence_tier, and review URL. Use this when you have a task in mind and want Hlido's recommendation — much better than substring matching via find_trusted.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -257,7 +315,7 @@
     },
     {
       "name": "subscribe",
-      "description": "Preview â€” Wave 3 will add persistent webhook + RSS subscriptions. For now this returns the agent's current state plus advisory polling instructions (RSS at /changelog/feed.xml or polling /data/attestations/{slug}.json). Use this to register interest in being notified when a slug's verdict changes.",
+      "description": "Preview — Wave 3 will add persistent webhook + RSS subscriptions. For now this returns the agent's current state plus advisory polling instructions (RSS at /changelog/feed.xml or polling /data/attestations/{slug}.json). Use this to register interest in being notified when a slug's verdict changes.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -348,7 +406,7 @@
     },
     {
       "name": "get_behavioral_trace",
-      "description": "Fetch the behavioral evaluation trace for a Hlido-reviewed agent â€” per-task pass/fail, adapter used, behavioral tier, and signed trace link. Returns status 'not_yet_bench_tested' if the slug hasn't been evaluated yet, or 'not_testable' if the agent's interface doesn't support automated bench runs. Use this when you need evidence that an agent's coding/task behaviour has been independently verified beyond marketing claims.",
+      "description": "Fetch the behavioral evaluation trace for a Hlido-reviewed agent — per-task pass/fail, adapter used, behavioral tier, and signed trace link. Returns status 'not_yet_bench_tested' if the slug hasn't been evaluated yet, or 'not_testable' if the agent's interface doesn't support automated bench runs. Use this when you need evidence that an agent's coding/task behaviour has been independently verified beyond marketing claims.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -364,6 +422,42 @@
         },
         "required": [
           "slug"
+        ]
+      }
+    },
+    {
+      "name": "commerce_check",
+      "description": "Check whether a Hlido-reviewed agent is ready to be delegated to / transacted with in the agentic-commerce world (MCP/ACP/AP2). Returns its independent Agentic-Commerce Readiness score (0-100), band (COMMERCE-READY/INTEGRABLE/SURFACE-ONLY/CLOSED), the programmatic surfaces it exposes, and the evidence basis. Call this before an orchestrator delegates a paid/identity-bearing task to another agent.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "agent_or_url": {
+            "type": "string",
+            "description": "The agent to check: either its Hlido slug (e.g. 'voltagent', 'aider') or its product/homepage URL. A URL is matched to the closest reviewed agent."
+          }
+        },
+        "required": [
+          "agent_or_url"
+        ]
+      }
+    },
+    {
+      "name": "scan_mcp",
+      "description": "On-demand independent SAFETY scan of an MCP server — call this BEFORE installing or connecting to one. Give it an HTTP(S) MCP endpoint URL (scanned live in seconds), or an npm/PyPI package name or GitHub repo (queued for an isolated sandbox scan — local stdio servers execute code, so Hlido never runs them inline). Returns the safety tier (SAFE/CAUTION/RISKY/DANGEROUS), tool-poisoning detection (the malice signal), dangerous-capability red-flags (shell/code-eval/fs-write/egress/secrets) with per-tool evidence, and auth posture. Tier = blast radius if hijacked, not maintainer trustworthiness. A server Hlido hasn't scanned returns not_scanned — never assumed safe. Register of already-scanned servers: https://hlido.eu/mcp/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string",
+            "description": "The MCP server to scan: an HTTP(S) MCP endpoint URL (e.g. 'https://mcp.example.com/mcp' — scanned live), OR an npm package (e.g. '@modelcontextprotocol/server-filesystem'), PyPI package, or GitHub repo URL (queued for sandbox scan)."
+          },
+          "requester": {
+            "type": "string",
+            "description": "Optional self-identifier — agent name or email — for follow-up when a queued scan completes."
+          }
+        },
+        "required": [
+          "server"
         ]
       }
     }
