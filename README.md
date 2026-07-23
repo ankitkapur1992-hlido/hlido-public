@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (825)
+## Reviewed agents (833)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openowl`](https://hlido.eu/reviews/openowl/) | OpenOwl | Workflow & Automation | 50 | FADING |
 | [`naoma-ai-demo-agent`](https://hlido.eu/reviews/naoma-ai-demo-agent/) | Naoma AI Demo Agent | Customer Experience | 80 | — |
 | [`holo`](https://hlido.eu/reviews/holo/) | Holo | Marketing & Content | 50 | FADING |
-| [`parakeeet-ai`](https://hlido.eu/reviews/parakeeet-ai/) | Parakeeet AI | Sales | 80 | STEADY |
+| [`parakeeet-ai`](https://hlido.eu/reviews/parakeeet-ai/) | Parakeeet AI | Sales | 75 | STEADY |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
 | [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 80 | — |
 | [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 90 | — |
@@ -45,7 +45,6 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`genspark`](https://hlido.eu/reviews/genspark/) | genspark | Research | 40 | — |
 | [`askiva`](https://hlido.eu/reviews/askiva/) | askiva | Research | 40 | — |
 | [`influcio`](https://hlido.eu/reviews/influcio/) | influcio | AI Agent | 65 | — |
-| [`lindy-ai`](https://hlido.eu/reviews/lindy-ai/) | lindy-ai | AI Agent | 50 | — |
 | [`ovren`](https://hlido.eu/reviews/ovren/) | ovren | AI Agent | 40 | — |
 | [`panorama`](https://hlido.eu/reviews/panorama/) | panorama | AI Agent | 40 | — |
 | [`poke`](https://hlido.eu/reviews/poke/) | poke | AI Agent | 60 | — |
@@ -107,7 +106,6 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`codeium`](https://hlido.eu/reviews/codeium/) | Codeium | Coding | 65 | — |
 | [`continue-dev`](https://hlido.eu/reviews/continue-dev/) | Continue | Coding | 78 | — |
 | [`cohere`](https://hlido.eu/reviews/cohere/) | Cohere | Chat & Companion | 78 | — |
-| [`copy-ai`](https://hlido.eu/reviews/copy-ai/) | Copy.ai | Marketing & Content | 78 | — |
 | [`crewai`](https://hlido.eu/reviews/crewai/) | CrewAI | Frameworks & Eval | 90 | — |
 | [`datagrout`](https://hlido.eu/reviews/datagrout/) | DataGrout | AI Agent | 40 | — |
 | [`dust-tt`](https://hlido.eu/reviews/dust-tt/) | Dust | Workflow & Automation | 90 | — |
@@ -276,7 +274,6 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`dify-ai`](https://hlido.eu/reviews/dify-ai/) | Dify | Workflow & Automation | 78 | — |
 | [`poolside-ai`](https://hlido.eu/reviews/poolside-ai/) | Poolside | Coding | 65 | — |
 | [`contextual-ai`](https://hlido.eu/reviews/contextual-ai/) | Contextual AI | Research | 78 | — |
-| [`phoenix-arize`](https://hlido.eu/reviews/phoenix-arize/) | Phoenix (Arize) | Frameworks & Eval | 90 | — |
 | [`langfuse`](https://hlido.eu/reviews/langfuse/) | Langfuse | Frameworks & Eval | 90 | — |
 | [`traceloop`](https://hlido.eu/reviews/traceloop/) | Traceloop | Frameworks & Eval | 90 | — |
 | [`promptlayer`](https://hlido.eu/reviews/promptlayer/) | PromptLayer | Frameworks & Eval | 65 | — |
@@ -600,8 +597,6 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`proxy-convergence`](https://hlido.eu/reviews/proxy-convergence/) | Proxy (Convergence AI) | AI Agent | 40 | — |
 | [`replit-ai-agent`](https://hlido.eu/reviews/replit-ai-agent/) | Replit AI (Ghostwriter) | Coding | 90 | — |
 | [`genie-cosine`](https://hlido.eu/reviews/genie-cosine/) | Genie (Cosine AI) | Coding | 90 | — |
-| [`vapi-voice-agents`](https://hlido.eu/reviews/vapi-voice-agents/) | Vapi Voice Agents Platform | Voice | 90 | — |
-| [`retell-voice`](https://hlido.eu/reviews/retell-voice/) | Retell Voice | Voice | 90 | — |
 | [`phonely`](https://hlido.eu/reviews/phonely/) | Phonely | Voice | 90 | — |
 | [`sierra-platform`](https://hlido.eu/reviews/sierra-platform/) | Sierra (CX agent platform) | Customer Experience | 90 | — |
 | [`parloa`](https://hlido.eu/reviews/parloa/) | Parloa | Customer Experience | 90 | — |
@@ -611,7 +606,6 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`rox-ai`](https://hlido.eu/reviews/rox-ai/) | Rox | Productivity | 90 | — |
 | [`elicit-research`](https://hlido.eu/reviews/elicit-research/) | Elicit | Research | 90 | — |
 | [`granola-ai`](https://hlido.eu/reviews/granola-ai/) | Granola AI | Productivity | 90 | — |
-| [`exa-search-api`](https://hlido.eu/reviews/exa-search-api/) | Exa Search | Research | 90 | — |
 | [`autogen-microsoft`](https://hlido.eu/reviews/autogen-microsoft/) | Microsoft AutoGen | Frameworks & Eval | 90 | — |
 | [`arize-phoenix`](https://hlido.eu/reviews/arize-phoenix/) | Arize Phoenix | Frameworks & Eval | 90 | — |
 | [`agentops-ai`](https://hlido.eu/reviews/agentops-ai/) | AgentOps | Frameworks & Eval | 90 | — |
@@ -619,12 +613,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`mem-0-ai`](https://hlido.eu/reviews/mem-0-ai/) | Mem0 AI | Infrastructure | 90 | — |
 | [`langgraph-platform`](https://hlido.eu/reviews/langgraph-platform/) | LangGraph Platform | Frameworks & Eval | 90 | — |
 | [`weaviate-platform`](https://hlido.eu/reviews/weaviate-platform/) | Weaviate Cloud | Infrastructure | 90 | — |
-| [`clay-platform`](https://hlido.eu/reviews/clay-platform/) | Clay (data enrichment AI) | Productivity | 90 | — |
 | [`cline-2`](https://hlido.eu/reviews/cline-2/) | Cline (latest) | Coding | 90 | — |
 | [`warp-ai-terminal`](https://hlido.eu/reviews/warp-ai-terminal/) | Warp AI Terminal | Coding | 90 | — |
 | [`roocode`](https://hlido.eu/reviews/roocode/) | Roo Code | Coding | 73 | — |
 | [`ampcode`](https://hlido.eu/reviews/ampcode/) | AmpCode by Sourcegraph | Coding | 90 | — |
-| [`zed-industries-ai`](https://hlido.eu/reviews/zed-industries-ai/) | Zed AI | Coding | 90 | — |
 | [`lex-page`](https://hlido.eu/reviews/lex-page/) | Lex | Image & Design | 85 | STEADY |
 | [`openai`](https://hlido.eu/reviews/openai/) | API Platform | OpenAI | Coding | 90 | VITAL |
 | [`getnudgeai`](https://hlido.eu/reviews/getnudgeai/) | Best AI Scribe and Coding Platform for Clinical AI Solutions - Nudge AI | Productivity | 90 | VITAL |
@@ -654,12 +646,12 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`crisandrews-clawcode`](https://hlido.eu/reviews/crisandrews-clawcode/) | crisandrews/ClawCode | Coding | 40 | — |
 | [`dimknaf-braindb`](https://hlido.eu/reviews/dimknaf-braindb/) | dimknaf/braindb | AI Agent | 40 | — |
 | [`eggbrid2-mobileclaw`](https://hlido.eu/reviews/eggbrid2-mobileclaw/) | eggbrid2/mobileClaw | Workflow & Automation | 40 | — |
-| [`ag2ai-ag2`](https://hlido.eu/reviews/ag2ai-ag2/) | ag2ai/ag2 | AI Agent | 40 | — |
+| [`ag2ai-ag2`](https://hlido.eu/reviews/ag2ai-ag2/) | ag2ai/ag2 | AI Agent | 50 | FADING |
 | [`alibaba-page-agent`](https://hlido.eu/reviews/alibaba-page-agent/) | alibaba/page-agent | AI Agent | 40 | — |
 | [`alibaba-spring-ai-alibaba`](https://hlido.eu/reviews/alibaba-spring-ai-alibaba/) | alibaba/spring-ai-alibaba | Coding | 40 | — |
 | [`arize-ai-phoenix`](https://hlido.eu/reviews/arize-ai-phoenix/) | Arize-ai/phoenix | Frameworks & Eval | 40 | — |
 | [`asheshgoplani-agent-deck`](https://hlido.eu/reviews/asheshgoplani-agent-deck/) | asheshgoplani/agent-deck | Coding | 40 | — |
-| [`automaapp-automa`](https://hlido.eu/reviews/automaapp-automa/) | AutomaApp/automa | Workflow & Automation | 40 | — |
+| [`automaapp-automa`](https://hlido.eu/reviews/automaapp-automa/) | AutomaApp/automa | Workflow & Automation | 50 | FADING |
 | [`beever-ai-beever-atlas`](https://hlido.eu/reviews/beever-ai-beever-atlas/) | Beever-AI/beever-atlas | AI Agent | 40 | — |
 | [`browser-use-browser-use`](https://hlido.eu/reviews/browser-use-browser-use/) | browser-use/browser-use | Workflow & Automation | 40 | — |
 | [`copilotkit-copilotkit`](https://hlido.eu/reviews/copilotkit-copilotkit/) | CopilotKit/CopilotKit | AI Agent | 40 | — |
@@ -668,22 +660,22 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`clockless-org-html-anything`](https://hlido.eu/reviews/clockless-org-html-anything/) | html-anything | Coding | 65 | — |
 | [`coderluii-holyclaude`](https://hlido.eu/reviews/coderluii-holyclaude/) | HolyClaude | Coding | 67 | — |
 | [`aifordevelopers`](https://hlido.eu/reviews/aifordevelopers/) | AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026) | Coding | 50 | FADING |
-| [`aidc-ai-comfyui-copilot`](https://hlido.eu/reviews/aidc-ai-comfyui-copilot/) | AIDC-AI/ComfyUI-Copilot | Image & Design | 50 | FADING |
-| [`erickong-aura-agent`](https://hlido.eu/reviews/erickong-aura-agent/) | erickong/aura-agent | AI Agent | 50 | FADING |
+| [`aidc-ai-comfyui-copilot`](https://hlido.eu/reviews/aidc-ai-comfyui-copilot/) | AIDC-AI/ComfyUI-Copilot | Image & Design | 82 | STEADY |
+| [`erickong-aura-agent`](https://hlido.eu/reviews/erickong-aura-agent/) | erickong/aura-agent | AI Agent | 67 | FADING |
 | [`esengine-deepseek-reasonix`](https://hlido.eu/reviews/esengine-deepseek-reasonix/) | esengine/DeepSeek-Reasonix | AI Agent | 50 | FADING |
-| [`fazxes-claude-code`](https://hlido.eu/reviews/fazxes-claude-code/) | fazxes/Claude-code | Coding | 50 | FADING |
-| [`genieincodebottle-generative-ai`](https://hlido.eu/reviews/genieincodebottle-generative-ai/) | genieincodebottle/generative-ai | Coding | 80 | STEADY |
+| [`fazxes-claude-code`](https://hlido.eu/reviews/fazxes-claude-code/) | fazxes/Claude-code | Coding | 60 | FADING |
+| [`genieincodebottle-generative-ai`](https://hlido.eu/reviews/genieincodebottle-generative-ai/) | genieincodebottle/generative-ai | Research | 80 | STEADY |
 | [`gitlawb-openclaude`](https://hlido.eu/reviews/gitlawb-openclaude/) | Gitlawb/openclaude | Coding | 50 | FADING |
-| [`gizclaw-flowcraft`](https://hlido.eu/reviews/gizclaw-flowcraft/) | GizClaw/flowcraft | Voice | 70 | STEADY |
-| [`google-agents-cli`](https://hlido.eu/reviews/google-agents-cli/) | google/agents-cli | Infrastructure | 90 | VITAL |
-| [`gi-dellav-zerostack`](https://hlido.eu/reviews/gi-dellav-zerostack/) | gi-dellav/zerostack | AI Agent | 75 | STEADY |
+| [`gizclaw-flowcraft`](https://hlido.eu/reviews/gizclaw-flowcraft/) | GizClaw/flowcraft | Voice | 82 | STEADY |
+| [`google-agents-cli`](https://hlido.eu/reviews/google-agents-cli/) | google/agents-cli | Frameworks & Eval | 80 | STEADY |
+| [`gi-dellav-zerostack`](https://hlido.eu/reviews/gi-dellav-zerostack/) | gi-dellav/zerostack | Coding | 70 | STEADY |
 | [`google-cloud-ai-agent-platform`](https://hlido.eu/reviews/google-cloud-ai-agent-platform/) | Google-Cloud-AI/agent-platform | Coding | 80 | STEADY |
 | [`gptme-gptme`](https://hlido.eu/reviews/gptme-gptme/) | gptme/gptme | Coding | 75 | STEADY |
 | [`gistai`](https://hlido.eu/reviews/gistai/) | Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT. | Image & Design | 50 | FADING |
 | [`he-yufeng-corecoder`](https://hlido.eu/reviews/he-yufeng-corecoder/) | he-yufeng/CoreCoder | Coding | 70 | STEADY |
-| [`graykode-abtop`](https://hlido.eu/reviews/graykode-abtop/) | graykode/abtop | Coding | 75 | STEADY |
+| [`graykode-abtop`](https://hlido.eu/reviews/graykode-abtop/) | graykode/abtop | Coding | 82 | STEADY |
 | [`heymrun-heym`](https://hlido.eu/reviews/heymrun-heym/) | heymrun/heym | Workflow & Automation | 80 | STEADY |
-| [`hello-qm-catgo-lrg`](https://hlido.eu/reviews/hello-qm-catgo-lrg/) | Hello-QM/catgo-LRG | Workflow & Automation | 50 | FADING |
+| [`hello-qm-catgo-lrg`](https://hlido.eu/reviews/hello-qm-catgo-lrg/) | Hello-QM/catgo-LRG | MCP Server | 82 | STEADY |
 | [`hkuds-deepcode`](https://hlido.eu/reviews/hkuds-deepcode/) | HKUDS/DeepCode | Coding | 90 | VITAL |
 | [`hkuds-vibe-trading`](https://hlido.eu/reviews/hkuds-vibe-trading/) | HKUDS/Vibe-Trading | AI Agent | 50 | FADING |
 | [`hughyau-qiushi-skill`](https://hlido.eu/reviews/hughyau-qiushi-skill/) | HughYau/qiushi-skill | AI Agent | 70 | STEADY |
@@ -692,31 +684,31 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`itayinbarr-little-coder`](https://hlido.eu/reviews/itayinbarr-little-coder/) | itayinbarr/little-coder | Coding | 70 | STEADY |
 | [`jackwener-opencli`](https://hlido.eu/reviews/jackwener-opencli/) | jackwener/OpenCLI | AI Agent | 75 | STEADY |
 | [`jeinlee1991-chinese-llm-benchmark`](https://hlido.eu/reviews/jeinlee1991-chinese-llm-benchmark/) | jeinlee1991/chinese-llm-benchmark | Chat & Companion | 70 | STEADY |
-| [`jordanrendric-claude-video-vision`](https://hlido.eu/reviews/jordanrendric-claude-video-vision/) | jordanrendric/claude-video-vision | Image & Design | 80 | STEADY |
+| [`jordanrendric-claude-video-vision`](https://hlido.eu/reviews/jordanrendric-claude-video-vision/) | jordanrendric/claude-video-vision | MCP Server | 82 | STEADY |
 | [`langroid-langroid`](https://hlido.eu/reviews/langroid-langroid/) | langroid/langroid | AI Agent | 85 | STEADY |
 | [`leon-ai-leon`](https://hlido.eu/reviews/leon-ai-leon/) | leon-ai/leon | AI Agent | 75 | STEADY |
 | [`letta-ai-letta`](https://hlido.eu/reviews/letta-ai-letta/) | letta-ai/letta | AI Agent | 80 | STEADY |
-| [`lsdefine-genericagent`](https://hlido.eu/reviews/lsdefine-genericagent/) | lsdefine/GenericAgent | AI Agent | 75 | STEADY |
+| [`lsdefine-genericagent`](https://hlido.eu/reviews/lsdefine-genericagent/) | lsdefine/GenericAgent | AI Agent | 82 | STEADY |
 | [`mai-with-u-maibot`](https://hlido.eu/reviews/mai-with-u-maibot/) | Mai-with-u/MaiBot | Coding | 75 | STEADY |
-| [`manavarya09-design-extract`](https://hlido.eu/reviews/manavarya09-design-extract/) | Manavarya09/design-extract | Image & Design | 80 | STEADY |
-| [`lucasrosati-claude-code-memory-setup`](https://hlido.eu/reviews/lucasrosati-claude-code-memory-setup/) | lucasrosati/claude-code-memory-setup | Coding | 70 | STEADY |
-| [`mcp-brasil-mcp-brasil`](https://hlido.eu/reviews/mcp-brasil-mcp-brasil/) | Mcp-Brasil/mcp-brasil | AI Agent | 75 | STEADY |
+| [`manavarya09-design-extract`](https://hlido.eu/reviews/manavarya09-design-extract/) | Manavarya09/design-extract | Image & Design | 10 | FLATLINE |
+| [`lucasrosati-claude-code-memory-setup`](https://hlido.eu/reviews/lucasrosati-claude-code-memory-setup/) | lucasrosati/claude-code-memory-setup | Coding | 82 | STEADY |
+| [`mcp-brasil-mcp-brasil`](https://hlido.eu/reviews/mcp-brasil-mcp-brasil/) | Mcp-Brasil/mcp-brasil | MCP Server | 82 | STEADY |
 | [`microsoft-autogen`](https://hlido.eu/reviews/microsoft-autogen/) | microsoft/autogen | AI Agent | 80 | STEADY |
 | [`memtensor-skills-vote`](https://hlido.eu/reviews/memtensor-skills-vote/) | MemTensor/skills-vote | AI Agent | 50 | FADING |
 | [`miomioos-mioisland`](https://hlido.eu/reviews/miomioos-mioisland/) | MioMioOS/MioIsland | Coding | 70 | STEADY |
 | [`minishlab-semble`](https://hlido.eu/reviews/minishlab-semble/) | MinishLab/semble | Coding | 85 | STEADY |
 | [`myicor-mypka`](https://hlido.eu/reviews/myicor-mypka/) | myICOR/myPKA | AI Agent | 50 | FADING |
-| [`nduckmink-arkon`](https://hlido.eu/reviews/nduckmink-arkon/) | nduckmink/arkon | Workflow & Automation | 80 | STEADY |
-| [`neothecapt-redteamagent`](https://hlido.eu/reviews/neothecapt-redteamagent/) | NeoTheCapt/RedteamAgent | Coding | 50 | FADING |
+| [`nduckmink-arkon`](https://hlido.eu/reviews/nduckmink-arkon/) | nduckmink/arkon | MCP Server | 67 | FADING |
+| [`neothecapt-redteamagent`](https://hlido.eu/reviews/neothecapt-redteamagent/) | NeoTheCapt/RedteamAgent | Coding | 73 | STEADY |
 | [`nexu-io-html-anything`](https://hlido.eu/reviews/nexu-io-html-anything/) | nexu-io/html-anything | Coding | 50 | FADING |
 | [`portialabs`](https://hlido.eu/reviews/portialabs/) | Portia Labs (Rezonant) | Coding | 64 | — |
 | [`nesquena-hermes-webui`](https://hlido.eu/reviews/nesquena-hermes-webui/) | nesquena/hermes-webui | AI Agent | 80 | STEADY |
 | [`nexu-io-open-design`](https://hlido.eu/reviews/nexu-io-open-design/) | nexu-io/open-design | Image & Design | 90 | VITAL |
 | [`nocobase-nocobase`](https://hlido.eu/reviews/nocobase-nocobase/) | nocobase/nocobase | Coding | 75 | STEADY |
 | [`ogulcancelik-herdr`](https://hlido.eu/reviews/ogulcancelik-herdr/) | ogulcancelik/herdr | AI Agent | 75 | STEADY |
-| [`omyarewar-phantom`](https://hlido.eu/reviews/omyarewar-phantom/) | OmYarewar/PHANTOM | AI Agent | 50 | FADING |
-| [`op7418-guizang-ppt-skill`](https://hlido.eu/reviews/op7418-guizang-ppt-skill/) | op7418/guizang-ppt-skill | Image & Design | 50 | FADING |
-| [`opensensenova-sensenova-skills`](https://hlido.eu/reviews/opensensenova-sensenova-skills/) | OpenSenseNova/SenseNova-Skills | Workflow & Automation | 85 | STEADY |
+| [`omyarewar-phantom`](https://hlido.eu/reviews/omyarewar-phantom/) | OmYarewar/PHANTOM | MCP Server | 82 | STEADY |
+| [`op7418-guizang-ppt-skill`](https://hlido.eu/reviews/op7418-guizang-ppt-skill/) | op7418/guizang-ppt-skill | Image & Design | 82 | STEADY |
+| [`opensensenova-sensenova-skills`](https://hlido.eu/reviews/opensensenova-sensenova-skills/) | OpenSenseNova/SenseNova-Skills | Workflow & Automation | 73 | STEADY |
 | [`pacifio-cersei`](https://hlido.eu/reviews/pacifio-cersei/) | pacifio/cersei | AI Agent | 70 | STEADY |
 | [`pattern-ai-labs-agentcall`](https://hlido.eu/reviews/pattern-ai-labs-agentcall/) | pattern-ai-labs/agentcall | Voice | 50 | FADING |
 | [`patterai-patter`](https://hlido.eu/reviews/patterai-patter/) | PatterAI/Patter | Voice | 80 | STEADY |
@@ -732,22 +724,22 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`trycua-cua`](https://hlido.eu/reviews/trycua-cua/) | trycua/cua | Infrastructure | 85 | STEADY |
 | [`the-pocket-pocketflow`](https://hlido.eu/reviews/the-pocket-pocketflow/) | The-Pocket/PocketFlow | AI Agent | 85 | STEADY |
 | [`vectifyai-openkb`](https://hlido.eu/reviews/vectifyai-openkb/) | VectifyAI/OpenKB | AI Agent | 70 | STEADY |
-| [`wanshuiyin-auto-claude-code-research-in-sleep`](https://hlido.eu/reviews/wanshuiyin-auto-claude-code-research-in-sleep/) | wanshuiyin/Auto-claude-code-research-in-sleep | Coding | 80 | STEADY |
+| [`wanshuiyin-auto-claude-code-research-in-sleep`](https://hlido.eu/reviews/wanshuiyin-auto-claude-code-research-in-sleep/) | wanshuiyin/Auto-claude-code-research-in-sleep | MCP Server | 82 | STEADY |
 | [`usewhale-deepseek-code-whale`](https://hlido.eu/reviews/usewhale-deepseek-code-whale/) | usewhale/DeepSeek-Code-Whale | Coding | 85 | STEADY |
-| [`withkynam-vibecode-pro-max-kit`](https://hlido.eu/reviews/withkynam-vibecode-pro-max-kit/) | withkynam/vibecode-pro-max-kit | Coding | 50 | FADING |
+| [`withkynam-vibecode-pro-max-kit`](https://hlido.eu/reviews/withkynam-vibecode-pro-max-kit/) | withkynam/vibecode-pro-max-kit | Coding | 82 | STEADY |
 | [`xiangyue-zhang-auto-deep-researcher-24x7`](https://hlido.eu/reviews/xiangyue-zhang-auto-deep-researcher-24x7/) | Xiangyue-Zhang/auto-deep-researcher-24x7 | Research | 50 | FADING |
 | [`windy3f3f3f3f-claude-code-from-scratch`](https://hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/) | Windy3f3f3f3f/claude-code-from-scratch | Coding | 75 | STEADY |
 | [`yv17labs-ghostdesk`](https://hlido.eu/reviews/yv17labs-ghostdesk/) | YV17labs/GhostDesk | Workflow & Automation | 80 | STEADY |
 | [`zhayujie-cowagent`](https://hlido.eu/reviews/zhayujie-cowagent/) | zhayujie/CowAgent | Chat & Companion | 90 | VITAL |
 | [`yvgude-lean-ctx`](https://hlido.eu/reviews/yvgude-lean-ctx/) | yvgude/lean-ctx | Coding | 90 | VITAL |
 | [`tt-a1i-hive`](https://hlido.eu/reviews/tt-a1i-hive/) | tt-a1i/hive | Coding | 50 | FADING |
-| [`havingautism-codemini-cli`](https://hlido.eu/reviews/havingautism-codemini-cli/) | havingautism/Codemini-CLI | Coding | 50 | FADING |
+| [`havingautism-codemini-cli`](https://hlido.eu/reviews/havingautism-codemini-cli/) | havingautism/Codemini-CLI | Coding | 80 | STEADY |
 | [`zjunlp-sciatlas`](https://hlido.eu/reviews/zjunlp-sciatlas/) | zjunlp/SciAtlas | Research | 50 | FADING |
 | [`skalesapp-skales`](https://hlido.eu/reviews/skalesapp-skales/) | skalesapp/skales | Coding | 50 | FADING |
 | [`zhulinsen-daily-stock-analysis`](https://hlido.eu/reviews/zhulinsen-daily-stock-analysis/) | ZhuLinsen/daily_stock_analysis | Marketing & Content | 75 | STEADY |
 | [`google-adk-python`](https://hlido.eu/reviews/google-adk-python/) | google/adk-python | Coding | 50 | FADING |
 | [`pingcap-tidb`](https://hlido.eu/reviews/pingcap-tidb/) | pingcap/tidb | Infrastructure | 50 | FADING |
-| [`claudiodrews-memory-os`](https://hlido.eu/reviews/claudiodrews-memory-os/) | ClaudioDrews/memory-os | Coding | 50 | FADING |
+| [`claudiodrews-memory-os`](https://hlido.eu/reviews/claudiodrews-memory-os/) | ClaudioDrews/memory-os | Coding | 73 | STEADY |
 | [`elizaos-eliza`](https://hlido.eu/reviews/elizaos-eliza/) | elizaOS/eliza | AI Agent | 50 | FADING |
 | [`tencent-weknora`](https://hlido.eu/reviews/tencent-weknora/) | Tencent/WeKnora | AI Agent | 50 | FADING |
 | [`flyteorg-flyte`](https://hlido.eu/reviews/flyteorg-flyte/) | flyteorg/flyte | Workflow & Automation | 50 | FADING |
@@ -758,47 +750,45 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`promptfoo-promptfoo`](https://hlido.eu/reviews/promptfoo-promptfoo/) | promptfoo/promptfoo | AI Agent | 50 | FADING |
 | [`ruc-datalab-deepanalyze`](https://hlido.eu/reviews/ruc-datalab-deepanalyze/) | ruc-datalab/DeepAnalyze | AI Agent | 50 | FADING |
 | [`can1357-oh-my-pi`](https://hlido.eu/reviews/can1357-oh-my-pi/) | can1357/oh-my-pi | AI Agent | 50 | FADING |
-| [`truera-trulens`](https://hlido.eu/reviews/truera-trulens/) | truera/trulens | Frameworks & Eval | 50 | FADING |
-| [`narcooo-inkos`](https://hlido.eu/reviews/narcooo-inkos/) | Narcooo/inkos | AI Agent | 50 | FADING |
+| [`narcooo-inkos`](https://hlido.eu/reviews/narcooo-inkos/) | Narcooo/inkos | AI Agent | 80 | STEADY |
 | [`ufomiao-zcf`](https://hlido.eu/reviews/ufomiao-zcf/) | UfoMiao/zcf | Coding | 50 | FADING |
 | [`geekjourneyx-md2wechat-skill`](https://hlido.eu/reviews/geekjourneyx-md2wechat-skill/) | geekjourneyx/md2wechat-skill | Chat & Companion | 50 | FADING |
 | [`commandcodeai-command-code`](https://hlido.eu/reviews/commandcodeai-command-code/) | CommandCodeAI/command-code | Coding | 50 | FADING |
 | [`covibes-zeroshot`](https://hlido.eu/reviews/covibes-zeroshot/) | covibes/zeroshot | Coding | 50 | FADING |
 | [`can4hou6joeng4-boss-agent-cli`](https://hlido.eu/reviews/can4hou6joeng4-boss-agent-cli/) | can4hou6joeng4/boss-agent-cli | AI Agent | 50 | FADING |
-| [`skyvern-ai-skyvern`](https://hlido.eu/reviews/skyvern-ai-skyvern/) | Skyvern-AI/skyvern | Workflow & Automation | 50 | FADING |
 | [`cloakhq-cloakbrowser`](https://hlido.eu/reviews/cloakhq-cloakbrowser/) | CloakHQ/CloakBrowser | AI Agent | 50 | FADING |
 | [`getmaxun-maxun`](https://hlido.eu/reviews/getmaxun-maxun/) | getmaxun/maxun | Coding | 50 | FADING |
-| [`pinchtab-pinchtab`](https://hlido.eu/reviews/pinchtab-pinchtab/) | pinchtab/pinchtab | Workflow & Automation | 50 | FADING |
+| [`pinchtab-pinchtab`](https://hlido.eu/reviews/pinchtab-pinchtab/) | pinchtab/pinchtab | MCP Server | 82 | STEADY |
 | [`h4ckf0r0day-obscura`](https://hlido.eu/reviews/h4ckf0r0day-obscura/) | h4ckf0r0day/obscura | AI Agent | 50 | FADING |
 | [`clawd-bot`](https://hlido.eu/reviews/clawd-bot/) | clawd-bot | AI Agent | 50 | FADING |
 | [`ioni`](https://hlido.eu/reviews/ioni/) | ioni | AI Agent | 50 | FADING |
 | [`muno-work`](https://hlido.eu/reviews/muno-work/) | muno-work | AI Agent | 50 | FADING |
 | [`paseru-sinew`](https://hlido.eu/reviews/paseru-sinew/) | Paseru/sinew | Coding | 50 | FADING |
 | [`constellation-engine-constellation-engine`](https://hlido.eu/reviews/constellation-engine-constellation-engine/) | CONSTELLATION-ENGINE/constellation-engine | AI Agent | 50 | FADING |
-| [`denissergeevitch-agents-best-practices`](https://hlido.eu/reviews/denissergeevitch-agents-best-practices/) | DenisSergeevitch/agents-best-practices | Image & Design | 50 | FADING |
-| [`zhitongblog-solomd`](https://hlido.eu/reviews/zhitongblog-solomd/) | zhitongblog/solomd | Coding | 50 | FADING |
+| [`denissergeevitch-agents-best-practices`](https://hlido.eu/reviews/denissergeevitch-agents-best-practices/) | DenisSergeevitch/agents-best-practices | Image & Design | 82 | STEADY |
+| [`zhitongblog-solomd`](https://hlido.eu/reviews/zhitongblog-solomd/) | zhitongblog/solomd | MCP Server | 82 | STEADY |
 | [`ryjoxtechnologies-octopoda-os`](https://hlido.eu/reviews/ryjoxtechnologies-octopoda-os/) | RyjoxTechnologies/Octopoda-OS | AI Agent | 50 | FADING |
-| [`iamcorey-kooky`](https://hlido.eu/reviews/iamcorey-kooky/) | iAmCorey/kooky | Coding | 50 | FADING |
+| [`iamcorey-kooky`](https://hlido.eu/reviews/iamcorey-kooky/) | iAmCorey/kooky | Coding | 82 | STEADY |
 | [`agentforce314-clawcodex`](https://hlido.eu/reviews/agentforce314-clawcodex/) | agentforce314/clawcodex | Coding | 50 | FADING |
 | [`steel-dev-steel-browser`](https://hlido.eu/reviews/steel-dev-steel-browser/) | steel-dev/steel-browser | Coding | 50 | FADING |
 | [`autoscrape-labs-pydoll`](https://hlido.eu/reviews/autoscrape-labs-pydoll/) | autoscrape-labs/pydoll | Workflow & Automation | 50 | FADING |
-| [`jo-inc-camofox-browser`](https://hlido.eu/reviews/jo-inc-camofox-browser/) | jo-inc/camofox-browser | Infrastructure | 50 | FADING |
+| [`jo-inc-camofox-browser`](https://hlido.eu/reviews/jo-inc-camofox-browser/) | jo-inc/camofox-browser | Infrastructure | 82 | STEADY |
 | [`siyuan-note-siyuan`](https://hlido.eu/reviews/siyuan-note-siyuan/) | siyuan-note/siyuan | Productivity | 50 | FADING |
 | [`browser-use-workflow-use`](https://hlido.eu/reviews/browser-use-workflow-use/) | browser-use/workflow-use | Workflow & Automation | 50 | FADING |
 | [`fellouai-eko`](https://hlido.eu/reviews/fellouai-eko/) | FellouAI/eko | Workflow & Automation | 50 | FADING |
 | [`cellium-project-cellium-agent`](https://hlido.eu/reviews/cellium-project-cellium-agent/) | Cellium-Project/Cellium-Agent | AI Agent | 50 | FADING |
-| [`longyunfeigu-learn-hermes-agent`](https://hlido.eu/reviews/longyunfeigu-learn-hermes-agent/) | longyunfeigu/learn-hermes-agent | AI Agent | 50 | FADING |
+| [`longyunfeigu-learn-hermes-agent`](https://hlido.eu/reviews/longyunfeigu-learn-hermes-agent/) | longyunfeigu/learn-hermes-agent | MCP Server | 82 | STEADY |
 | [`ekkolearnai-hermes-studio`](https://hlido.eu/reviews/ekkolearnai-hermes-studio/) | Hermes Studio | Chat & Companion | 74 | — |
 | [`worldwonderer-oh-story-claudecode`](https://hlido.eu/reviews/worldwonderer-oh-story-claudecode/) | oh-story-claudecode | Marketing & Content | 63 | — |
 | [`playwright-community-playwright-go`](https://hlido.eu/reviews/playwright-community-playwright-go/) | playwright-community/playwright-go | Workflow & Automation | 50 | FADING |
-| [`oshayr-llm-wiki`](https://hlido.eu/reviews/oshayr-llm-wiki/) | Oshayr/LLM-Wiki | Coding | 50 | FADING |
+| [`oshayr-llm-wiki`](https://hlido.eu/reviews/oshayr-llm-wiki/) | Oshayr/LLM-Wiki | MCP Server | 82 | STEADY |
 | [`raphaelmansuy-edgecrab`](https://hlido.eu/reviews/raphaelmansuy-edgecrab/) | raphaelmansuy/edgecrab | Coding | 50 | FADING |
 | [`amap-ml-skillclaw`](https://hlido.eu/reviews/amap-ml-skillclaw/) | SkillClaw | Frameworks & Eval | 70 | — |
 | [`sandydasari-openacme`](https://hlido.eu/reviews/sandydasari-openacme/) | OpenAcme | Frameworks & Eval | 61 | — |
 | [`yantrikos-yantrikdb-hermes-plugin`](https://hlido.eu/reviews/yantrikos-yantrikdb-hermes-plugin/) | YantrikDB Hermes Plugin | Infrastructure | 57 | — |
 | [`windy3f3f3f3f-how-claude-code-works`](https://hlido.eu/reviews/windy3f3f3f3f-how-claude-code-works/) | Windy3f3f3f3f/how-claude-code-works | Coding | 50 | FADING |
-| [`skwallace36-pepper`](https://hlido.eu/reviews/skwallace36-pepper/) | skwallace36/Pepper | AI Agent | 50 | FADING |
-| [`walkinglabs-awesome-harness-engineering`](https://hlido.eu/reviews/walkinglabs-awesome-harness-engineering/) | walkinglabs/awesome-harness-engineering | Coding | 50 | FADING |
+| [`skwallace36-pepper`](https://hlido.eu/reviews/skwallace36-pepper/) | skwallace36/Pepper | MCP Server | 82 | STEADY |
+| [`walkinglabs-awesome-harness-engineering`](https://hlido.eu/reviews/walkinglabs-awesome-harness-engineering/) | walkinglabs/awesome-harness-engineering | MCP Server | 67 | FADING |
 | [`agentplace`](https://hlido.eu/reviews/agentplace/) | agentplace | AI Agent | 50 | FADING |
 | [`walkinglabs-hands-on-modern-rl`](https://hlido.eu/reviews/walkinglabs-hands-on-modern-rl/) | walkinglabs/hands-on-modern-rl | AI Agent | 50 | FADING |
 | [`cometchat`](https://hlido.eu/reviews/cometchat/) | cometchat | Chat & Companion | 50 | FADING |
@@ -816,23 +806,22 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`google-antigravity-antigravity-sdk-python`](https://hlido.eu/reviews/google-antigravity-antigravity-sdk-python/) | google-antigravity/antigravity-sdk-python | AI Agent | 50 | FADING |
 | [`voltagent`](https://hlido.eu/reviews/voltagent/) | VoltAgent | Frameworks & Eval | 76 | — |
 | [`zeroclaw-labs-zeroclaw`](https://hlido.eu/reviews/zeroclaw-labs-zeroclaw/) | ZeroClaw | Infrastructure | 79 | — |
-| [`itsinseong-value-for-fable`](https://hlido.eu/reviews/itsinseong-value-for-fable/) | itsinseong/value-for-fable | Coding | 50 | FADING |
-| [`scheidydude-codeindex`](https://hlido.eu/reviews/scheidydude-codeindex/) | scheidydude/codeindex | Coding | 50 | FADING |
+| [`itsinseong-value-for-fable`](https://hlido.eu/reviews/itsinseong-value-for-fable/) | itsinseong/value-for-fable | Coding | 67 | FADING |
+| [`scheidydude-codeindex`](https://hlido.eu/reviews/scheidydude-codeindex/) | scheidydude/codeindex | MCP Server | 82 | STEADY |
 | [`modelstudioai-cli`](https://hlido.eu/reviews/modelstudioai-cli/) | modelstudioai/cli | Workflow & Automation | 50 | FADING |
 | [`freepeak-leankg`](https://hlido.eu/reviews/freepeak-leankg/) | FreePeak/LeanKG | AI Agent | 50 | FADING |
-| [`volcengine-searchcli`](https://hlido.eu/reviews/volcengine-searchcli/) | volcengine/SearchCLI | Frameworks & Eval | 50 | FADING |
-| [`utopai-research-pai-pro`](https://hlido.eu/reviews/utopai-research-pai-pro/) | Utopai-Research/pai-pro | Research | 50 | FADING |
+| [`volcengine-searchcli`](https://hlido.eu/reviews/volcengine-searchcli/) | volcengine/SearchCLI | Frameworks & Eval | 82 | STEADY |
+| [`utopai-research-pai-pro`](https://hlido.eu/reviews/utopai-research-pai-pro/) | Utopai-Research/pai-pro | Research | 67 | FADING |
 | [`getcrew44-crew44`](https://hlido.eu/reviews/getcrew44-crew44/) | getcrew44/crew44 | AI Agent | 50 | FADING |
 | [`the-open-engine-zeroshot`](https://hlido.eu/reviews/the-open-engine-zeroshot/) | the-open-engine/zeroshot | Coding | 50 | FADING |
 | [`decolua-9remote`](https://hlido.eu/reviews/decolua-9remote/) | decolua/9remote | Coding | 50 | FADING |
-| [`ykdojo-claude-code-tips`](https://hlido.eu/reviews/ykdojo-claude-code-tips/) | ykdojo/claude-code-tips | Coding | 50 | FADING |
+| [`ykdojo-claude-code-tips`](https://hlido.eu/reviews/ykdojo-claude-code-tips/) | ykdojo/claude-code-tips | MCP Server | 67 | FADING |
 | [`montferret-ferret`](https://hlido.eu/reviews/montferret-ferret/) | MontFerret/ferret | Workflow & Automation | 50 | FADING |
-| [`juanjuandog-finsight-ai`](https://hlido.eu/reviews/juanjuandog-finsight-ai/) | juanjuandog/FinSight-AI | Coding | 50 | FADING |
+| [`juanjuandog-finsight-ai`](https://hlido.eu/reviews/juanjuandog-finsight-ai/) | juanjuandog/FinSight-AI | Coding | 82 | STEADY |
 | [`open-multi-agent-open-multi-agent`](https://hlido.eu/reviews/open-multi-agent-open-multi-agent/) | open-multi-agent/open-multi-agent | Workflow & Automation | 50 | FADING |
-| [`mvanhorn-cli-printing-press`](https://hlido.eu/reviews/mvanhorn-cli-printing-press/) | mvanhorn/cli-printing-press | Image & Design | 50 | FADING |
+| [`mvanhorn-cli-printing-press`](https://hlido.eu/reviews/mvanhorn-cli-printing-press/) | mvanhorn/cli-printing-press | MCP Server | 82 | STEADY |
 | [`juliusbrussee-cavemem`](https://hlido.eu/reviews/juliusbrussee-cavemem/) | JuliusBrussee/cavemem | AI Agent | 50 | FADING |
 | [`thedaviddias-front-end-checklist`](https://hlido.eu/reviews/thedaviddias-front-end-checklist/) | thedaviddias/Front-End-Checklist | Coding | 50 | FADING |
-| [`browserbase`](https://hlido.eu/reviews/browserbase/) | Browserbase | DevOps | 50 | FADING |
 | [`cartesia`](https://hlido.eu/reviews/cartesia/) | Cartesia | Voice | 50 | FADING |
 | [`imbue`](https://hlido.eu/reviews/imbue/) | Imbue | Productivity | 50 | FADING |
 | [`lakera`](https://hlido.eu/reviews/lakera/) | Lakera | Other | 50 | FADING |
@@ -841,11 +830,11 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`letta`](https://hlido.eu/reviews/letta/) | Letta | Frameworks & Eval | 50 | FADING |
 | [`lumalabs`](https://hlido.eu/reviews/lumalabs/) | Luma (Dream Machine) | Image & Design | 50 | FADING |
 | [`kaelio-ktx`](https://hlido.eu/reviews/kaelio-ktx/) | Kaelio/ktx | Coding | 50 | FADING |
-| [`shenmintao-marginalia`](https://hlido.eu/reviews/shenmintao-marginalia/) | shenmintao/marginalia | AI Agent | 50 | FADING |
-| [`lukresxd-claw-skeleton`](https://hlido.eu/reviews/lukresxd-claw-skeleton/) | LuKresXD/claw-skeleton | Coding | 50 | FADING |
+| [`shenmintao-marginalia`](https://hlido.eu/reviews/shenmintao-marginalia/) | shenmintao/marginalia | MCP Server | 82 | STEADY |
+| [`lukresxd-claw-skeleton`](https://hlido.eu/reviews/lukresxd-claw-skeleton/) | LuKresXD/claw-skeleton | Coding | 82 | STEADY |
 | [`nudgebee-nudgebee`](https://hlido.eu/reviews/nudgebee-nudgebee/) | nudgebee/nudgebee | Workflow & Automation | 50 | FADING |
-| [`aws-devtools-labs-aws-blocks`](https://hlido.eu/reviews/aws-devtools-labs-aws-blocks/) | aws-devtools-labs/aws-blocks | Coding | 50 | FADING |
-| [`oritera-cairn`](https://hlido.eu/reviews/oritera-cairn/) | oritera/Cairn | AI Agent | 50 | FADING |
+| [`aws-devtools-labs-aws-blocks`](https://hlido.eu/reviews/aws-devtools-labs-aws-blocks/) | aws-devtools-labs/aws-blocks | Coding | 82 | STEADY |
+| [`oritera-cairn`](https://hlido.eu/reviews/oritera-cairn/) | oritera/Cairn | AI Agent | 82 | STEADY |
 | [`kilo-org-kilocode`](https://hlido.eu/reviews/kilo-org-kilocode/) | kilo-org-kilocode | Coding | 50 | FADING |
 | [`mavenagi`](https://hlido.eu/reviews/mavenagi/) | Maven AGI | Customer Support | 90 | VITAL |
 | [`prismer-ai-prismercloud`](https://hlido.eu/reviews/prismer-ai-prismercloud/) | Prismer-AI/PrismerCloud | Infrastructure | 85 | STEADY |
@@ -853,6 +842,25 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`turbopuffer`](https://hlido.eu/reviews/turbopuffer/) | turbopuffer | Infrastructure | 90 | VITAL |
 | [`copy`](https://hlido.eu/reviews/copy/) | Copy.ai | Marketing & Content | 74 | — |
 | [`lindy`](https://hlido.eu/reviews/lindy/) | Lindy | Productivity | 73 | — |
+| [`supertrained-rhumb`](https://hlido.eu/reviews/supertrained-rhumb/) | supertrained/rhumb | AI Agent | 50 | FADING |
+| [`scotia1973-bot-api-hub`](https://hlido.eu/reviews/scotia1973-bot-api-hub/) | scotia1973-bot/api-hub | AI Agent | 50 | FADING |
+| [`sitbon-magg`](https://hlido.eu/reviews/sitbon-magg/) | sitbon/magg | AI Agent | 50 | FADING |
+| [`sf1nx-x402station-mcp`](https://hlido.eu/reviews/sf1nx-x402station-mcp/) | sF1nX/x402station-mcp | AI Agent | 50 | FADING |
+| [`smart-mcp-proxy-mcpproxy-go`](https://hlido.eu/reviews/smart-mcp-proxy-mcpproxy-go/) | smart-mcp-proxy/mcpproxy-go | Coding | 50 | FADING |
+| [`sonnyflylock-voxie-ai-directory-mcp`](https://hlido.eu/reviews/sonnyflylock-voxie-ai-directory-mcp/) | sonnyflylock/voxie-ai-directory-mcp | MCP Server | 60 | FADING |
+| [`surescaleai-openai-gpt-image-mcp`](https://hlido.eu/reviews/surescaleai-openai-gpt-image-mcp/) | SureScaleAI/openai-gpt-image-mcp | MCP Server | 53 | FADING |
+| [`veriteknik-pluggedin-mcp-proxy`](https://hlido.eu/reviews/veriteknik-pluggedin-mcp-proxy/) | VeriTeknik/pluggedin-mcp-proxy | MCP Server | 82 | STEADY |
+| [`tigranbs-mcgravity`](https://hlido.eu/reviews/tigranbs-mcgravity/) | tigranbs/mcgravity | AI Agent | 73 | STEADY |
+| [`viperjuice-mcp-gateway`](https://hlido.eu/reviews/viperjuice-mcp-gateway/) | ViperJuice/mcp-gateway | MCP Server | 82 | STEADY |
+| [`waystation-ai-mcp`](https://hlido.eu/reviews/waystation-ai-mcp/) | waystation-ai/mcp | AI Agent | 50 | FADING |
+| [`whiteknightonhorse-apibase`](https://hlido.eu/reviews/whiteknightonhorse-apibase/) | whiteknightonhorse/APIbase | Infrastructure | 50 | FADING |
+| [`x402-index-x402search-mcp`](https://hlido.eu/reviews/x402-index-x402search-mcp/) | x402-index/x402search-mcp | MCP Server | 67 | FADING |
+| [`ikoskela-wisepanel-mcp`](https://hlido.eu/reviews/ikoskela-wisepanel-mcp/) | ikoskela/wisepanel-mcp | MCP Server | 82 | STEADY |
+| [`swarmwage-swarmwage`](https://hlido.eu/reviews/swarmwage-swarmwage/) | Swarmwage/swarmwage | AI Agent | 50 | FADING |
+| [`activepieces-activepieces`](https://hlido.eu/reviews/activepieces-activepieces/) | Activepieces | Workflow & Automation | 76 | — |
+| [`askhapax`](https://hlido.eu/reviews/askhapax/) | askhapax | AI Agent | 50 | FADING |
+| [`2noise-chattts`](https://hlido.eu/reviews/2noise-chattts/) | 2noise/ChatTTS | Voice | 50 | FADING |
+| [`acedatacloud-fluxmcp`](https://hlido.eu/reviews/acedatacloud-fluxmcp/) | AceDataCloud/FluxMCP | MCP Server | 82 | — |
 
 ## Files in this mirror
 
