@@ -1,127 +1,128 @@
 {
-  "schema_version": "2.0",
-  "slug": "policyqa-commandrplus-rag-agent",
-  "name": "PolicyQA-CommandRPlus-RAG-Agent",
-  "agent_url": "/reviews/policyqa-commandrplus-rag-agent/",
-  "category": "AI Agent",
-  "run_id": "run-policyqa-commandrplus-rag-agent-v2-editor-2026-05-23",
-  "run_at": "2026-05-23T12:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 57,
-  "tier": "STEADY",
-  "laddoo_score": 57,
-  "confidence": "medium",
-  "hlido_opinion": {
-    "headline": "Competent RAG agent but lacks depth in verification and use cases.",
-    "body": "PolicyQA-CommandRPlus-RAG-Agent presents itself as a capable tool within the RAG (Retrieval-Augmented Generation) framework. However, its current offering lacks comprehensive verification of claims and detailed use cases, which limits its appeal to potential users. The absence of clear documentation and user testimonials raises concerns about its practical application in real-world scenarios. While it may serve as a basic solution for specific tasks, users seeking robust and well-supported RAG agents might find better options in alternatives like LangChain or Haystack.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-05-23",
-    "editor_signature_pending": true
+ "schema_version": "2.0",
+ "slug": "policyqa-commandrplus-rag-agent",
+ "name": "PolicyQA-CommandRPlus-RAG-Agent",
+ "agent_url": "https://huggingface.co/spaces/igorpavlov-mgr/PolicyQA-CommandRPlus-RAG-Agent",
+ "category": "AI Agent",
+ "run_id": "run-policyqa-commandrplus-rag-agent-v2-editor-2026-05-23",
+ "run_at": "2026-05-23T12:00:00Z",
+ "editor": "Hlido Editor",
+ "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+ "methodology_version": "2026.05",
+ "methodology_url": "/methodology/public-surface-tier-1/",
+ "score": 57,
+ "tier": "STEADY",
+ "laddoo_score": 57,
+ "confidence": "medium",
+ "hlido_opinion": {
+  "headline": "Competent RAG agent but lacks depth in verification and use cases.",
+  "body": "PolicyQA-CommandRPlus-RAG-Agent presents itself as a capable tool within the RAG (Retrieval-Augmented Generation) framework. However, its current offering lacks comprehensive verification of claims and detailed use cases, which limits its appeal to potential users. The absence of clear documentation and user testimonials raises concerns about its practical application in real-world scenarios. While it may serve as a basic solution for specific tasks, users seeking robust and well-supported RAG agents might find better options in alternatives like LangChain or Haystack.",
+  "voice": "Hlido Editor",
+  "as_of": "2026-05-23",
+  "editor_signature_pending": true
+ },
+ "tier_rationale": "STEADY (57) due to the agent's operational functionality, but not VITAL because of the lack of verified claims and insufficient clarity on its capabilities and use cases. Improvement in documentation and user feedback could elevate its status.",
+ "what_it_does_well": [
+  "Operates within the RAG framework for information retrieval and generation.",
+  "Basic functionality for generating responses based on retrieved data."
+ ],
+ "what_it_fails_at": [
+  "Lacks verified claims and user testimonials to support its effectiveness.",
+  "Insufficient documentation detailing its capabilities and use cases.",
+  "Limited differentiation from other RAG agents in the market."
+ ],
+ "best_for": [
+  "Users exploring basic RAG capabilities without high expectations for support.",
+  "Initial adopters looking for a simple solution to test RAG functionalities."
+ ],
+ "not_recommended_for": [
+  "Users needing robust verification and extensive documentation.",
+  "Organizations requiring a well-supported and feature-rich RAG agent."
+ ],
+ "red_flags": [
+  "Unverified claims and lack of user feedback could indicate reliability issues.",
+  "Absence of comprehensive documentation may hinder user onboarding and usage."
+ ],
+ "compared_to": [
+  {
+   "slug": "langchain",
+   "verdict_diff": "LangChain offers more robust features and extensive community support compared to PolicyQA-CommandRPlus-RAG-Agent. Choose LangChain for a more comprehensive RAG solution.",
+   "preferred_for_axis": "feature-richness"
   },
-  "tier_rationale": "STEADY (57) due to the agent's operational functionality, but not VITAL because of the lack of verified claims and insufficient clarity on its capabilities and use cases. Improvement in documentation and user feedback could elevate its status.",
-  "what_it_does_well": [
-    "Operates within the RAG framework for information retrieval and generation.",
-    "Basic functionality for generating responses based on retrieved data."
-  ],
-  "what_it_fails_at": [
-    "Lacks verified claims and user testimonials to support its effectiveness.",
-    "Insufficient documentation detailing its capabilities and use cases.",
-    "Limited differentiation from other RAG agents in the market."
-  ],
-  "best_for": [
-    "Users exploring basic RAG capabilities without high expectations for support.",
-    "Initial adopters looking for a simple solution to test RAG functionalities."
-  ],
-  "not_recommended_for": [
-    "Users needing robust verification and extensive documentation.",
-    "Organizations requiring a well-supported and feature-rich RAG agent."
-  ],
-  "red_flags": [
-    "Unverified claims and lack of user feedback could indicate reliability issues.",
-    "Absence of comprehensive documentation may hinder user onboarding and usage."
-  ],
-  "compared_to": [
-    {
-      "slug": "langchain",
-      "verdict_diff": "LangChain offers more robust features and extensive community support compared to PolicyQA-CommandRPlus-RAG-Agent. Choose LangChain for a more comprehensive RAG solution.",
-      "preferred_for_axis": "feature-richness"
-    },
-    {
-      "slug": "haystack",
-      "verdict_diff": "Haystack provides better documentation and a wider range of use cases, making it more suitable for users needing detailed guidance and support. PolicyQA-CommandRPlus-RAG-Agent is less established in this regard.",
-      "preferred_for_axis": "documentation and support"
-    }
-  ],
-  "evidence_urls": [],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 lacks clear integration paths for agent-driven workflows.",
-    "agent_friendly_score": 3
+  {
+   "slug": "haystack",
+   "verdict_diff": "Haystack provides better documentation and a wider range of use cases, making it more suitable for users needing detailed guidance and support. PolicyQA-CommandRPlus-RAG-Agent is less established in this regard.",
+   "preferred_for_axis": "documentation and support"
+  }
+ ],
+ "evidence_urls": [],
+ "agent_relevance": {
+  "has_api": false,
+  "has_cli": false,
+  "has_mcp": false,
+  "has_webhook": false,
+  "has_sdk": false,
+  "behavioral_testable": false,
+  "agent_integration_path": "None \u2014 lacks clear integration paths for agent-driven workflows.",
+  "agent_friendly_score": 3
+ },
+ "checklist": [
+  {
+   "id": "homepage_loads",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T12:00:00Z"
   },
-  "checklist": [
-    {
-      "id": "homepage_loads",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": false,
-      "required": true,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": false,
-      "required": true,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": false,
-      "required": false,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": false,
-      "required": false,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T12:00:00Z"
-    }
-  ],
-  "summary": "Competent RAG agent but lacks depth in verification and use cases.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2026-08-21",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2026-08-21",
-  "attestation_url": "/data/attestations/policyqa-commandrplus-rag-agent.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
+  {
+   "id": "primary_value_prop",
+   "pass": false,
+   "required": true,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T12:00:00Z"
   },
-  "aspect_versions_as_of": "2026-05-23"
+  {
+   "id": "cta_present",
+   "pass": false,
+   "required": true,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T12:00:00Z"
+  },
+  {
+   "id": "pricing_or_access",
+   "pass": false,
+   "required": false,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T12:00:00Z"
+  },
+  {
+   "id": "evidence_or_demo",
+   "pass": false,
+   "required": false,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T12:00:00Z"
+  }
+ ],
+ "summary": "Competent RAG agent but lacks depth in verification and use cases.",
+ "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+ "staleness_after": "2026-08-21",
+ "review_age_days_at_publish": 0,
+ "next_review_due_at": "2026-08-21",
+ "attestation_url": "/data/attestations/policyqa-commandrplus-rag-agent.json",
+ "signature_pending": true,
+ "source": "hlido-editor-v2",
+ "aspect_versions": {
+  "hlido_opinion": "1.0",
+  "tier_rationale": "1.0",
+  "what_it_does_well": "1.0",
+  "what_it_fails_at": "1.0",
+  "best_for": "1.0",
+  "not_recommended_for": "1.0",
+  "red_flags": "1.0",
+  "compared_to": "1.0",
+  "evidence_urls": "1.0",
+  "agent_relevance": "1.0",
+  "checklist": "1.0"
+ },
+ "aspect_versions_as_of": "2026-05-23",
+ "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
