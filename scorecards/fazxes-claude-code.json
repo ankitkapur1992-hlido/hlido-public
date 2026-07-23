@@ -1,41 +1,105 @@
 {
+  "schema_version": "2.1",
   "slug": "fazxes-claude-code",
   "name": "fazxes/Claude-code",
   "agent_url": "https://github.com/fazxes/Claude-code",
+  "repo_url": "https://github.com/fazxes/Claude-code",
   "category": "Coding",
-  "run_id": "run-fazxes-claude-code-w90p5blg",
-  "run_at": "2026-06-12T18:01:14.815Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-fazxes-claude-code-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for fazxes/Claude-code"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 5083"
     },
     {
-      "id": "C03",
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
       "pass": false,
-      "required": true
+      "evidence": "none"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 104d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
       "pass": false,
-      "required": false
+      "evidence": "no releases"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "225 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": false,
+      "evidence": "no .github/workflows"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": false,
+      "evidence": "last push 104d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": false,
+      "evidence": "none found"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
+  "repo_metrics": {
+    "stars": 225,
+    "forks": 215,
+    "open_issues": 0,
+    "archived": false,
+    "pushed_at": "2026-04-03T21:00:23Z",
+    "license": null,
+    "language": "TypeScript"
+  },
+  "evidence_urls": [
+    "https://github.com/fazxes/Claude-code",
+    "https://api.github.com/repos/fazxes/Claude-code"
+  ],
+  "laddoo_score": 60,
+  "score": 60,
   "tier": "FADING",
-  "summary": "Public-surface review of fazxes/Claude-code.",
-  "confidence": "low"
+  "confidence": "medium",
+  "summary": "fazxes/Claude-code — Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster through natural language commands. Rebuilt from leaked source.. Repo-surface review: measured from the public repository (225 stars, no license, last push 2026-04-03); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
