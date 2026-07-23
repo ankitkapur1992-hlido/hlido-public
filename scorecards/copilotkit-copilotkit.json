@@ -1,136 +1,42 @@
 {
-  "schema_version": "2.0",
   "slug": "copilotkit-copilotkit",
-  "name": "CopilotKit",
-  "agent_url": "https://github.com/CopilotKit/CopilotKit",
+  "name": "CopilotKit/CopilotKit",
+  "agent_url": "https://docs.copilotkit.ai",
+  "repo_url": null,
   "category": "AI Agent",
-  "run_id": "run-copilotkit-copilotkit-auto",
-  "run_at": "2026-06-07T00:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 40,
-  "tier": "FADING",
-  "laddoo_score": 40,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "CopilotKit is the leading open-source framework for embedding AI copilots into React applications \u2014 one of the most important tools for the in-app AI agent category. This FADING score is definitively an audit artifact.",
-    "body": "CopilotKit is a React framework for adding AI copilot features directly into web applications. It provides hooks and components (useCopilotAction, CopilotPopup, CopilotSidebar, etc.) that let developers embed LLM-powered chat, suggestions, and agent actions into any React app with minimal setup. The framework has grown to 15,000+ GitHub stars and is backed by a funded company (CopilotKit Inc). The product site at copilotkit.ai has thorough documentation, SDK reference, and a growing set of templates. CopilotKit also introduced CoAgents \u2014 a framework for building multi-agent UIs with React that integrates with LangGraph and other agent orchestrators, giving frontend developers a way to expose agent state and actions in UI components. This is a VITAL product for the Hlido audience: it represents the infrastructure layer for building copilot-style AI products. The FADING (40) score is an artifact of testing the GitHub URL rather than copilotkit.ai. This was explicitly mentioned in the CLAUDE.md as a known v1 scorecard from before the v2 editorial gate. Priority re-review.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-06-07",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "FADING (40) is a GitHub-URL audit artifact explicitly noted in the system notes (copilotkit-copilotkit was published v1 on 2026-06-07 before the v2 gate landed). CopilotKit would score VITAL from a product-site audit: it is the primary open-source framework for in-app AI copilot UIs with React, backed by a funded team, 15k+ GitHub stars, and the leading CoAgents multi-agent UI framework. Highest-priority re-review in this cohort alongside browser-use.",
-  "what_it_does_well": [
-    "React hooks and components for AI copilots \u2014 simplest path to in-app LLM features",
-    "15,000+ GitHub stars with rapid growth trajectory",
-    "CoAgents framework enables multi-agent React UIs with LangGraph integration",
-    "Product-quality documentation at copilotkit.ai with SDK reference and quickstarts",
-    "Backed by a funded company \u2014 long-term maintenance credibility"
-  ],
-  "what_it_fails_at": [
-    "React-only (and frontend-first) \u2014 not applicable to non-React or backend-only stacks",
-    "Enterprise SSO, access control, and multi-tenant features gated behind commercial plan",
-    "CoAgents integration requires LangGraph or compatible orchestrator \u2014 additional dependency"
-  ],
-  "best_for": [
-    "React developers adding AI copilot features to web applications",
-    "Frontend teams building in-app AI assistants, suggestion widgets, or chat interfaces",
-    "Full-stack developers who need a UI layer for LangGraph or similar agent orchestrators",
-    "Companies building SaaS products that want to add 'Copilot' functionality to their product"
-  ],
-  "not_recommended_for": [
-    "Non-React frontend frameworks (Vue, Angular, Svelte) without wrappers",
-    "Backend-only or API-first teams who don't need a UI component library",
-    "Teams wanting a chat product without embedding into an existing React application"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "vercel-ai-sdk",
-      "verdict_diff": "Vercel AI SDK is the broader React/Next.js AI toolkit (streaming, LLM hooks, tool calling). CopilotKit is more opinionated about the 'copilot in an app' pattern with CoAgents for multi-agent UIs. They complement each other: Vercel AI SDK for streaming primitives, CopilotKit for the copilot UX pattern.",
-      "preferred_for_axis": "copilot-ux-pattern"
-    },
-    {
-      "slug": "langchain",
-      "verdict_diff": "LangChain is the backend orchestration layer; CopilotKit is the frontend presentation layer. Many teams use both: LangGraph for agent logic, CopilotKit CoAgents for the UI surface that exposes agent state and actions to users.",
-      "preferred_for_axis": "frontend-agent-ui"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "GitHub repository with 15k+ stars",
-      "source": "https://github.com/CopilotKit/CopilotKit",
-      "tested_at": "2026-06-07",
-      "verified": true
-    },
-    {
-      "claim": "Product documentation site at copilotkit.ai",
-      "source": "https://copilotkit.ai/",
-      "tested_at": "2026-06-07",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": true,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": true,
-    "behavioral_testable": true,
-    "agent_integration_path": "React SDK (npm install @copilotkit/react-core). CoAgents connects CopilotKit React UI to LangGraph or other agent orchestrators \u2014 agents expose their state and actions to React components. The SDK IS the integration path for frontend agent interfaces.",
-    "agent_friendly_score": 8
-  },
-  "summary": "CopilotKit is the leading open-source React framework for embedding AI copilots in web apps \u2014 FADING score is an audit artifact; actual product is VITAL for in-app AI UI development.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
-  "review_url": "https://hlido.eu/reviews/copilotkit-copilotkit/",
-  "reviewed_at": "2026-06-07",
-  "staleness_after": "2026-09-07",
-  "next_review_due_at": "2026-09-07",
-  "claims": [
+  "run_id": "run-copilotkit-copilotkit-a6qqmdzf",
+  "run_at": "2026-07-17T00:00:36.406Z",
+  "source": "hlido-drain-worker",
+  "checklist": [
     {
       "id": "C01",
-      "claim": "Homepage accessible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "GitHub and copilotkit.ai both accessible",
-      "source_surface": "homepage"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C02",
-      "claim": "Pricing",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Open source + commercial; pricing at copilotkit.ai",
-      "source_surface": "pricing"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C03",
-      "claim": "Documentation",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Full SDK docs at docs.copilotkit.ai",
-      "source_surface": "docs"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C04",
-      "claim": "Integrations",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "LangGraph, OpenAI, Anthropic, Vercel AI SDK integrations documented",
-      "source_surface": "docs"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C05",
-      "claim": "Data handling",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Open source; commercial data handling at copilotkit.ai/privacy",
-      "source_surface": "docs"
+      "pass": false,
+      "required": false
     }
   ],
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "generated_at": "2026-06-07T00:00:00.000Z"
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of CopilotKit/CopilotKit.",
+  "confidence": "low"
 }
