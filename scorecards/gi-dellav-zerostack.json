@@ -1,11 +1,108 @@
 {
+  "schema_version": "2.0",
   "slug": "gi-dellav-zerostack",
   "name": "gi-dellav/zerostack",
-  "agent_url": "https://github.com/gi-dellav/zerostack",
-  "category": "AI Agent",
-  "run_id": "run-gi-dellav-zerostack-5hncp3fn",
-  "run_at": "2026-06-13T06:00:21.732Z",
-  "source": "hlido-drain-worker",
+  "agent_url": "https://gi-dellav.github.io/zerostack/",
+  "repo_url": "https://github.com/gi-dellav/zerostack",
+  "category": "Coding",
+  "run_id": "run-gi-dellav-zerostack-38mvf2jn",
+  "run_at": "2026-07-18T00:00:26.325Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A lean Rust coding agent built for low memory and speed, with a genuinely clever parallel-worktree design — promising and fast, but earlier-stage than the incumbents.",
+    "body": "Zerostack is a coding agent written in Rust with an explicit optimisation target most tools ignore: memory footprint and performance. It wraps OpenRouter (default), OpenAI, Anthropic, Gemini and Ollama, streams tokens, and reads/writes/edits/searches your codebase with user-controlled permissions on what it may touch. Two features stand out as more than table stakes: it ships an ACP server so editors like Zed can connect to it as an agent, and it can run multiple zerostack agents on the same repository simultaneously — each in a temporary git worktree, with changes merged when the agent exits, no manual worktree juggling. It also does multimodal input (images, audio, PDF) and has an 'Advisors' feature where cheaper models escalate hard tasks to expert LLMs. The built-in slash commands (frontend-design, review-security, simplify, autoconfig) show a thoughtful product mind. The honest framing: this is GPL-3.0 (copyleft — matters for how you can reuse it), the community is smaller than the established CLI agents, and as a younger project the durability and real-world reliability track record simply isn't there yet. It's a credible, well-designed entrant rather than a proven default.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the design choices are genuinely strong — Rust for footprint, ACP support, and the parallel-worktree concurrency model are real engineering, and permissioned file access is a good safety default. Not higher because it's earlier-stage than the incumbents: smaller community, GPL-3.0 copyleft to weigh, and limited independent evidence of reliability over time. A tool to watch and try, not yet a safe default.",
+  "what_it_does_well": [
+    "Rust implementation optimised for low memory footprint and speed",
+    "Runs multiple agents on one repo in parallel via automatic temporary git worktrees",
+    "ACP server support — connects to editors like Zed as an agent",
+    "Permissioned file access: user controls what the agent may read/write",
+    "Multimodal input (image/audio/PDF) and an Advisors escalation path to stronger models"
+  ],
+  "what_it_fails_at": [
+    "GPL-3.0 copyleft — a real reuse consideration for commercial/proprietary contexts",
+    "Smaller community and shorter track record than established CLI coding agents",
+    "Independent reliability evidence over time is limited (younger project)",
+    "No hosted UI — CLI/editor-oriented, assumes developer fluency"
+  ],
+  "best_for": [
+    "Developers who want a fast, low-footprint coding agent they can run many of at once",
+    "Zed / ACP users wanting a native agent connection",
+    "Users who value explicit permission control over file access",
+    "Rust-friendly teams comfortable adopting a younger, well-designed tool"
+  ],
+  "not_recommended_for": [
+    "Teams that need GPL-3.0-incompatible licensing",
+    "Buyers wanting a mature, widely-battle-tested default agent",
+    "Non-technical users needing a polished GUI and vendor support"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is the mature, widely-adopted git-native pair programmer; zerostack is the leaner, faster Rust newcomer with a novel parallel-worktree model. Choose Aider for a proven default, zerostack for footprint/performance and concurrent agents.",
+      "preferred_for_axis": "footprint-and-concurrency"
+    },
+    {
+      "slug": "gptme-gptme",
+      "verdict_diff": "gptme is the older, broader Python terminal agent; zerostack is narrower and Rust-native with ACP and multi-worktree concurrency. gptme for breadth and maturity, zerostack for speed and parallelism.",
+      "preferred_for_axis": "maturity-vs-performance"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Lightweight Rust coding agent optimised for memory/performance",
+      "source": "https://github.com/gi-dellav/zerostack",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Wraps OpenRouter/OpenAI/Anthropic/Gemini/Ollama; ACP server support",
+      "source": "https://github.com/gi-dellav/zerostack",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Parallel agents via temporary git worktrees; permissioned file access",
+      "source": "https://github.com/gi-dellav/zerostack/blob/main/docs/GET_STARTED.md",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "GPL-3.0 licensed",
+      "source": "https://github.com/gi-dellav/zerostack/blob/main/Cargo.toml",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Good. Ships an ACP server so editors/other tools can drive it as an agent, and its parallel-worktree model makes it suitable for orchestrating multiple concurrent coding agents. CLI-first; no REST API or MCP surface documented yet.",
+    "agent_friendly_score": 6
+  },
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-21"
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -29,13 +126,16 @@
     },
     {
       "id": "evidence_or_demo",
-      "pass": true,
+      "pass": false,
       "required": false
     }
   ],
-  "laddoo_score": 75,
-  "score": 75,
-  "tier": "STEADY",
-  "summary": "Public-surface review of gi-dellav/zerostack.",
-  "confidence": "low"
+  "summary": "A lean Rust coding agent built for low memory and speed, with a genuinely clever parallel-worktree design — promising and fast, but earlier-stage than the incumbents.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 3,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/gi-dellav-zerostack.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
