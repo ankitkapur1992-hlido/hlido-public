@@ -102,5 +102,49 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "AIDC-AI/ComfyUI-Copilot — An AI-powered custom node for ComfyUI designed to enhance workflow automation and provide intelligent assistance. Repo-surface review: measured from the public repository (5375 stars, MIT, last push 2026-04-07); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A mature, MIT-licensed AI copilot for ComfyUI with real traction and a v2 release — but a ~100-day quiet stretch is the signal to watch.",
+    "body": "By repository signals this is a credible, adoptable addition to a ComfyUI image pipeline: 5.4k stars, an MIT license, a reached v2.0 release, TypeScript with CI present, and a documented install. It targets a real and popular host (ComfyUI), which grounds its usefulness. The one caution the repo surface raises is momentum — the last push was roughly 100 days ago, just outside the 90-day active-development window, so confirm it still tracks the current ComfyUI before depending on it. Repo-surface read; the quality of the in-canvas assistance itself is not something we tested hands-on.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82, repo-surface ceiling). MIT licensing, a v2.0 release, CI, documented install and strong traction against a popular host clear STEADY. VITAL is withheld because repo signals cannot verify functional quality, and the ~100-day gap since the last push flags cooling momentum.",
+  "what_it_does_well": [
+    "MIT-licensed with strong traction (5.4k stars)",
+    "Reached a v2.0 release — a maturity signal",
+    "CI present and install documented",
+    "Targets a real, widely-used host (ComfyUI), grounding its utility"
+  ],
+  "what_it_fails_at": [
+    "~100 days since last push — momentum cooling, just outside the active-development window",
+    "Agent-consumability is via a ComfyUI node, not a general agent interface",
+    "Functional quality unverified from the repo surface"
+  ],
+  "best_for": [
+    "ComfyUI users wanting in-canvas AI assistance",
+    "Image/design workflows already standardized on ComfyUI"
+  ],
+  "not_recommended_for": [
+    "Teams needing a guarantee of active maintenance",
+    "Non-ComfyUI stacks",
+    "Agent pipelines needing a standalone programmatic API"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Runs as a ComfyUI custom node; consumable inside a ComfyUI-hosted workflow rather than as a standalone agent API. No hands-on behavioral test performed.",
+    "agent_friendly_score": 4
+  },
+  "enriched_at": "2026-07-23",
+  "enriched_by": "R-publish"
 }
