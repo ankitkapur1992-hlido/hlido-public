@@ -3,11 +3,671 @@
 This file is the answer-engine corpus for Hlido, the trust layer for AI agents. Every reviewed agent appears with public verdict, score, tier, and summary. Scoring methodology weights are intentionally private; only published outcomes are here.
 
 > Base URL: https://hlido.eu
-> MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 13 tools, no auth)
+> MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 16 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 825 reviews
+> Corpus size: 833 reviews
 
 ## Reviewed agents
+
+### AceDataCloud/FluxMCP
+- Slug: `acedatacloud-fluxmcp`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
+- Reviewed: 2026-07-20
+- URL: https://hlido.eu/reviews/acedatacloud-fluxmcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"acedatacloud-fluxmcp"}}}`
+
+**Summary:** AceDataCloud/FluxMCP — MCP server for Flux AI image generation and editing via Ace Data Cloud.. Repo-surface review: measured from the public repository (2 stars, MIT, last push 2026-07-12); not hands-on tested.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### 2noise/ChatTTS
+- Slug: `2noise-chattts`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Voice
+- Reviewed: 2026-07-19
+- URL: https://hlido.eu/reviews/2noise-chattts/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"2noise-chattts"}}}`
+
+**Summary:** Public-surface review of 2noise/ChatTTS.
+
+---
+
+### Parakeeet AI
+- Slug: `parakeeet-ai`
+- Laddoo Score: 75/100
+- Tier: STEADY
+- Category: Sales
+- Reviewed: 2026-07-18
+- URL: https://hlido.eu/reviews/parakeeet-ai/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"parakeeet-ai"}}}`
+
+**Summary:** Public-surface review of Parakeeet AI.
+
+**Evidence:** Best current intake-led next evaluation candidate, but still short of real feature proof.
+
+---
+
+### google/agents-cli
+- Slug: `google-agents-cli`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Frameworks & Eval
+- Reviewed: 2026-07-18
+- URL: https://hlido.eu/reviews/google-agents-cli/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-agents-cli"}}}`
+
+**Summary:** Public-surface review of google/agents-cli.
+
+---
+
+### askhapax
+- Slug: `askhapax`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-18
+- URL: https://hlido.eu/reviews/askhapax/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"askhapax"}}}`
+
+**Summary:** Public-surface review of askhapax.
+
+---
+
+### AutomaApp/automa
+- Slug: `automaapp-automa`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-07-17
+- URL: https://hlido.eu/reviews/automaapp-automa/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"automaapp-automa"}}}`
+
+**Summary:** Public-surface review of AutomaApp/automa.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026)
+- Slug: `aifordevelopers`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-17
+- URL: https://hlido.eu/reviews/aifordevelopers/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"aifordevelopers"}}}`
+
+**Summary:** Public-surface review of AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026).
+
+---
+
+### Gitlawb/openclaude
+- Slug: `gitlawb-openclaude`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-17
+- URL: https://hlido.eu/reviews/gitlawb-openclaude/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gitlawb-openclaude"}}}`
+
+**Summary:** Public-surface review of Gitlawb/openclaude.
+
+---
+
+### gi-dellav/zerostack
+- Slug: `gi-dellav-zerostack`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-07-17
+- URL: https://hlido.eu/reviews/gi-dellav-zerostack/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gi-dellav-zerostack"}}}`
+
+**Summary:** Public-surface review of gi-dellav/zerostack.
+
+---
+
+### ag2ai/ag2
+- Slug: `ag2ai-ag2`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-16
+- URL: https://hlido.eu/reviews/ag2ai-ag2/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ag2ai-ag2"}}}`
+
+**Summary:** Public-surface review of ag2ai/ag2.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### zjunlp/SciAtlas
+- Slug: `zjunlp-sciatlas`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Research
+- Reviewed: 2026-07-16
+- URL: https://hlido.eu/reviews/zjunlp-sciatlas/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zjunlp-sciatlas"}}}`
+
+**Summary:** Public-surface review of zjunlp/SciAtlas.
+
+---
+
+### UfoMiao/zcf
+- Slug: `ufomiao-zcf`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-16
+- URL: https://hlido.eu/reviews/ufomiao-zcf/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ufomiao-zcf"}}}`
+
+**Summary:** Public-surface review of UfoMiao/zcf.
+
+---
+
+### whiteknightonhorse/APIbase
+- Slug: `whiteknightonhorse-apibase`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-07-16
+- URL: https://hlido.eu/reviews/whiteknightonhorse-apibase/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"whiteknightonhorse-apibase"}}}`
+
+**Summary:** Public-surface review of whiteknightonhorse/APIbase.
+
+---
+
+### Activepieces
+- Slug: `activepieces-activepieces`
+- Laddoo Score: 76/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-07-16
+- URL: https://hlido.eu/reviews/activepieces-activepieces/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"activepieces-activepieces"}}}`
+
+**Summary:** Open-source n8n alternative that turns 280+ workflow pieces into MCP servers — the strongest agentic-era positioning in the no-code automation category.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### tt-a1i/hive
+- Slug: `tt-a1i-hive`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/tt-a1i-hive/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tt-a1i-hive"}}}`
+
+**Summary:** Public-surface review of tt-a1i/hive.
+
+---
+
+### Tencent/WeKnora
+- Slug: `tencent-weknora`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/tencent-weknora/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tencent-weknora"}}}`
+
+**Summary:** Public-surface review of Tencent/WeKnora.
+
+---
+
+### strands-agents/harness-sdk
+- Slug: `strands-agents-harness-sdk`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/strands-agents-harness-sdk/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"strands-agents-harness-sdk"}}}`
+
+**Summary:** Public-surface review of strands-agents/harness-sdk.
+
+---
+
+### promptfoo/promptfoo
+- Slug: `promptfoo-promptfoo`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/promptfoo-promptfoo/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"promptfoo-promptfoo"}}}`
+
+**Summary:** Public-surface review of promptfoo/promptfoo.
+
+---
+
+### the-open-engine/zeroshot
+- Slug: `the-open-engine-zeroshot`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/the-open-engine-zeroshot/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"the-open-engine-zeroshot"}}}`
+
+**Summary:** Public-surface review of the-open-engine/zeroshot.
+
+---
+
+### supertrained/rhumb
+- Slug: `supertrained-rhumb`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/supertrained-rhumb/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"supertrained-rhumb"}}}`
+
+**Summary:** Public-surface review of supertrained/rhumb.
+
+---
+
+### sF1nX/x402station-mcp
+- Slug: `sf1nx-x402station-mcp`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/sf1nx-x402station-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sf1nx-x402station-mcp"}}}`
+
+**Summary:** Public-surface review of sF1nX/x402station-mcp.
+
+---
+
+### smart-mcp-proxy/mcpproxy-go
+- Slug: `smart-mcp-proxy-mcpproxy-go`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/smart-mcp-proxy-mcpproxy-go/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"smart-mcp-proxy-mcpproxy-go"}}}`
+
+**Summary:** Public-surface review of smart-mcp-proxy/mcpproxy-go.
+
+---
+
+### Swarmwage/swarmwage
+- Slug: `swarmwage-swarmwage`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-15
+- URL: https://hlido.eu/reviews/swarmwage-swarmwage/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"swarmwage-swarmwage"}}}`
+
+**Summary:** Public-surface review of Swarmwage/swarmwage.
+
+---
+
+### HKUDS/Vibe-Trading
+- Slug: `hkuds-vibe-trading`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/hkuds-vibe-trading/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hkuds-vibe-trading"}}}`
+
+**Summary:** Public-surface review of HKUDS/Vibe-Trading.
+
+---
+
+### MemTensor/skills-vote
+- Slug: `memtensor-skills-vote`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/memtensor-skills-vote/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"memtensor-skills-vote"}}}`
+
+**Summary:** Public-surface review of MemTensor/skills-vote.
+
+---
+
+### myICOR/myPKA
+- Slug: `myicor-mypka`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/myicor-mypka/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"myicor-mypka"}}}`
+
+**Summary:** Public-surface review of myICOR/myPKA.
+
+---
+
+### google/adk-python
+- Slug: `google-adk-python`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/google-adk-python/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-adk-python"}}}`
+
+**Summary:** Public-surface review of google/adk-python.
+
+---
+
+### h4ckf0r0day/obscura
+- Slug: `h4ckf0r0day-obscura`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/h4ckf0r0day-obscura/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"h4ckf0r0day-obscura"}}}`
+
+**Summary:** Public-surface review of h4ckf0r0day/obscura.
+
+---
+
+### omnigent-ai/omnigent
+- Slug: `omnigent-ai-omnigent`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/omnigent-ai-omnigent/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"omnigent-ai-omnigent"}}}`
+
+**Summary:** Public-surface review of omnigent-ai/omnigent.
+
+---
+
+### google-antigravity/antigravity-sdk-python
+- Slug: `google-antigravity-antigravity-sdk-python`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/google-antigravity-antigravity-sdk-python/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-antigravity-antigravity-sdk-python"}}}`
+
+**Summary:** Public-surface review of google-antigravity/antigravity-sdk-python.
+
+---
+
+### modelstudioai/cli
+- Slug: `modelstudioai-cli`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/modelstudioai-cli/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"modelstudioai-cli"}}}`
+
+**Summary:** Public-surface review of modelstudioai/cli.
+
+---
+
+### JuliusBrussee/cavemem
+- Slug: `juliusbrussee-cavemem`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-14
+- URL: https://hlido.eu/reviews/juliusbrussee-cavemem/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"juliusbrussee-cavemem"}}}`
+
+**Summary:** Public-surface review of JuliusBrussee/cavemem.
+
+---
+
+### flyteorg/flyte
+- Slug: `flyteorg-flyte`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/flyteorg-flyte/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"flyteorg-flyte"}}}`
+
+**Summary:** Public-surface review of flyteorg/flyte.
+
+---
+
+### can1357/oh-my-pi
+- Slug: `can1357-oh-my-pi`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/can1357-oh-my-pi/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"can1357-oh-my-pi"}}}`
+
+**Summary:** Public-surface review of can1357/oh-my-pi.
+
+---
+
+### geekjourneyx/md2wechat-skill
+- Slug: `geekjourneyx-md2wechat-skill`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Chat & Companion
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/geekjourneyx-md2wechat-skill/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"geekjourneyx-md2wechat-skill"}}}`
+
+**Summary:** Public-surface review of geekjourneyx/md2wechat-skill.
+
+---
+
+### agentforce314/clawcodex
+- Slug: `agentforce314-clawcodex`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/agentforce314-clawcodex/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"agentforce314-clawcodex"}}}`
+
+**Summary:** Public-surface review of agentforce314/clawcodex.
+
+---
+
+### DietrichGebert/ponytail
+- Slug: `dietrichgebert-ponytail`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/dietrichgebert-ponytail/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"dietrichgebert-ponytail"}}}`
+
+**Summary:** Public-surface review of DietrichGebert/ponytail.
+
+---
+
+### FreePeak/LeanKG
+- Slug: `freepeak-leankg`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/freepeak-leankg/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"freepeak-leankg"}}}`
+
+**Summary:** Public-surface review of FreePeak/LeanKG.
+
+---
+
+### getcrew44/crew44
+- Slug: `getcrew44-crew44`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/getcrew44-crew44/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"getcrew44-crew44"}}}`
+
+**Summary:** Public-surface review of getcrew44/crew44.
+
+---
+
+### decolua/9remote
+- Slug: `decolua-9remote`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-07-13
+- URL: https://hlido.eu/reviews/decolua-9remote/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"decolua-9remote"}}}`
+
+**Summary:** Public-surface review of decolua/9remote.
+
+---
+
+### ikoskela/wisepanel-mcp
+- Slug: `ikoskela-wisepanel-mcp`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
+- Reviewed: 2026-07-11
+- URL: https://hlido.eu/reviews/ikoskela-wisepanel-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ikoskela-wisepanel-mcp"}}}`
+
+**Summary:** ikoskela/wisepanel-mcp — MCP server for Wisepanel multi-agent deliberation platform. Repo-surface review: measured from the public repository (2 stars, MIT, last push 2026-05-30); not hands-on tested.
+
+---
+
+### SureScaleAI/openai-gpt-image-mcp
+- Slug: `surescaleai-openai-gpt-image-mcp`
+- Laddoo Score: 53/100
+- Tier: FADING
+- Category: MCP Server
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/surescaleai-openai-gpt-image-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"surescaleai-openai-gpt-image-mcp"}}}`
+
+**Summary:** SureScaleAI/openai-gpt-image-mcp — A Model Context Protocol (MCP) tool server for OpenAI's GPT-4o/gpt-image-1 image generation and editing APIs.. Repo-surface review: measured from the public repository (104 stars, MIT, last push 2025-05-31); not hands-on tested.
+
+---
+
+### VeriTeknik/pluggedin-mcp-proxy
+- Slug: `veriteknik-pluggedin-mcp-proxy`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/veriteknik-pluggedin-mcp-proxy/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"veriteknik-pluggedin-mcp-proxy"}}}`
+
+**Summary:** VeriTeknik/pluggedin-mcp-proxy — Plugged.in MCP Server manages all your other MCPs in one MCP.. Repo-surface review: measured from the public repository (132 stars, Apache-2.0, last push 2026-05-10); not hands-on tested.
+
+---
+
+### tigranbs/mcgravity
+- Slug: `tigranbs-mcgravity`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: AI Agent
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/tigranbs-mcgravity/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tigranbs-mcgravity"}}}`
+
+**Summary:** tigranbs/mcgravity — Fast TUI that orchestrates AI coding tools (Claude Code, Codex, Gemini) in a plan→execute→review loop. Breaks work into atomic tasks for easier verification and course-correction.. Repo-surface review: measured from the public repository (101 stars, no license, last push 2026-02-15); not hands-on tested.
+
+---
+
+### ViperJuice/mcp-gateway
+- Slug: `viperjuice-mcp-gateway`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/viperjuice-mcp-gateway/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"viperjuice-mcp-gateway"}}}`
+
+**Summary:** ViperJuice/mcp-gateway — MCP Gateway - A meta-server for minimal Claude Code tool bloat with progressive disclosure. Repo-surface review: measured from the public repository (15 stars, MIT, last push 2026-07-15); not hands-on tested.
+
+---
+
+### waystation-ai/mcp
+- Slug: `waystation-ai-mcp`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/waystation-ai-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"waystation-ai-mcp"}}}`
+
+**Summary:** Public-surface review of waystation-ai/mcp.
+
+---
+
+### x402-index/x402search-mcp
+- Slug: `x402-index-x402search-mcp`
+- Laddoo Score: 67/100
+- Tier: FADING
+- Category: MCP Server
+- Reviewed: 2026-07-10
+- URL: https://hlido.eu/reviews/x402-index-x402search-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"x402-index-x402search-mcp"}}}`
+
+**Summary:** x402-index/x402search-mcp — Search 13,000+ x402-enabled APIs from your AI agent. Powered by x402search.xyz. Repo-surface review: measured from the public repository (2 stars, no license, last push 2026-03-29); not hands-on tested.
+
+---
+
+### scotia1973-bot/api-hub
+- Slug: `scotia1973-bot-api-hub`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-09
+- URL: https://hlido.eu/reviews/scotia1973-bot-api-hub/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"scotia1973-bot-api-hub"}}}`
+
+**Summary:** Public-surface review of scotia1973-bot/api-hub.
+
+---
+
+### sitbon/magg
+- Slug: `sitbon-magg`
+- Laddoo Score: 50/100
+- Tier: FADING
+- Category: AI Agent
+- Reviewed: 2026-07-09
+- URL: https://hlido.eu/reviews/sitbon-magg/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sitbon-magg"}}}`
+
+**Summary:** Public-surface review of sitbon/magg.
+
+---
+
+### sonnyflylock/voxie-ai-directory-mcp
+- Slug: `sonnyflylock-voxie-ai-directory-mcp`
+- Laddoo Score: 60/100
+- Tier: FADING
+- Category: MCP Server
+- Reviewed: 2026-07-09
+- URL: https://hlido.eu/reviews/sonnyflylock-voxie-ai-directory-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sonnyflylock-voxie-ai-directory-mcp"}}}`
+
+**Summary:** sonnyflylock/voxie-ai-directory-mcp — MCP server for the Voxie AI Phone Number Directory. Query AI services you can chat with via webchat.. Repo-surface review: measured from the public repository (3 stars, no license, last push 2026-01-19); not hands-on tested.
+
+---
 
 ### kilo-org-kilocode
 - Slug: `kilo-org-kilocode`
@@ -158,27 +818,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### shenmintao/marginalia
 - Slug: `shenmintao-marginalia`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-28
 - URL: https://hlido.eu/reviews/shenmintao-marginalia/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"shenmintao-marginalia"}}}`
 
-**Summary:** Public-surface review of shenmintao/marginalia.
+**Summary:** shenmintao/marginalia — A library-science-inspired personal knowledge management system with LLM agents. Repo-surface review: measured from the public repository (211 stars, AGPL-3.0, last push 2026-07-08); not hands-on tested.
 
 ---
 
 ### LuKresXD/claw-skeleton
 - Slug: `lukresxd-claw-skeleton`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-28
 - URL: https://hlido.eu/reviews/lukresxd-claw-skeleton/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"lukresxd-claw-skeleton"}}}`
 
-**Summary:** Public-surface review of LuKresXD/claw-skeleton.
+**Summary:** LuKresXD/claw-skeleton — 🪼 A personal AI assistant that lives in Telegram — every topic is its own isolated Claude Code agent with layered persistent memory and proactive cron heartbeats. Open skeleton of a real, running system.. Repo-surface review: measured from the public repository (63 stars, MIT, last push 2026-06-30); not hands-on tested.
 
 ---
 
@@ -197,27 +857,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### aws-devtools-labs/aws-blocks
 - Slug: `aws-devtools-labs-aws-blocks`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-28
 - URL: https://hlido.eu/reviews/aws-devtools-labs-aws-blocks/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"aws-devtools-labs-aws-blocks"}}}`
 
-**Summary:** Public-surface review of aws-devtools-labs/aws-blocks.
+**Summary:** aws-devtools-labs/aws-blocks — Composable building blocks for full-stack AWS apps — define infrastructure and runtime code together with end-to-end type safety using TypeScript, local mocking, and native client codegen for Kotlin, Swift, and Dart.. Repo-surface review: measured from the public repository (358 stars, Apache-2.0, last push 2026-07-16); not hands-on tested.
 
 ---
 
 ### oritera/Cairn
 - Slug: `oritera-cairn`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: AI Agent
 - Reviewed: 2026-06-28
 - URL: https://hlido.eu/reviews/oritera-cairn/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"oritera-cairn"}}}`
 
-**Summary:** Public-surface review of oritera/Cairn.
+**Summary:** oritera/Cairn — A AI general-purpose state-space search engine, validated first on autonomous penetration testing.. Repo-surface review: measured from the public repository (1996 stars, AGPL-3.0, last push 2026-07-15); not hands-on tested.
 
 ---
 
@@ -236,14 +896,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### juanjuandog/FinSight-AI
 - Slug: `juanjuandog-finsight-ai`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-27
 - URL: https://hlido.eu/reviews/juanjuandog-finsight-ai/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"juanjuandog-finsight-ai"}}}`
 
-**Summary:** Public-surface review of juanjuandog/FinSight-AI.
+**Summary:** juanjuandog/FinSight-AI — AI equity research agent with resilient workflows, Redis Lua single-flight, pgvector RAG, versioned reports, evidence tracing, and RAG evaluation.. Repo-surface review: measured from the public repository (1123 stars, MIT, last push 2026-05-26); not hands-on tested.
 
 ---
 
@@ -262,27 +922,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### mvanhorn/cli-printing-press
 - Slug: `mvanhorn-cli-printing-press`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Image & Design
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-27
 - URL: https://hlido.eu/reviews/mvanhorn-cli-printing-press/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"mvanhorn-cli-printing-press"}}}`
 
-**Summary:** Public-surface review of mvanhorn/cli-printing-press.
-
----
-
-### JuliusBrussee/cavemem
-- Slug: `juliusbrussee-cavemem`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-27
-- URL: https://hlido.eu/reviews/juliusbrussee-cavemem/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"juliusbrussee-cavemem"}}}`
-
-**Summary:** Public-surface review of JuliusBrussee/cavemem.
+**Summary:** mvanhorn/cli-printing-press — Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compound insight commands.. Repo-surface review: measured from the public repository (3995 stars, MIT, last push 2026-07-16); not hands-on tested.
 
 ---
 
@@ -296,19 +943,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"thedaviddias-front-end-checklist"}}}`
 
 **Summary:** Public-surface review of thedaviddias/Front-End-Checklist.
-
----
-
-### Browserbase
-- Slug: `browserbase`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: DevOps
-- Reviewed: 2026-06-27
-- URL: https://hlido.eu/reviews/browserbase/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"browserbase"}}}`
-
-**Summary:** Public-surface review of Browserbase.
 
 ---
 
@@ -364,107 +998,42 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### modelstudioai/cli
-- Slug: `modelstudioai-cli`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Workflow & Automation
-- Reviewed: 2026-06-26
-- URL: https://hlido.eu/reviews/modelstudioai-cli/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"modelstudioai-cli"}}}`
-
-**Summary:** Public-surface review of modelstudioai/cli.
-
----
-
-### FreePeak/LeanKG
-- Slug: `freepeak-leankg`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-26
-- URL: https://hlido.eu/reviews/freepeak-leankg/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"freepeak-leankg"}}}`
-
-**Summary:** Public-surface review of FreePeak/LeanKG.
-
----
-
 ### volcengine/SearchCLI
 - Slug: `volcengine-searchcli`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Frameworks & Eval
 - Reviewed: 2026-06-26
 - URL: https://hlido.eu/reviews/volcengine-searchcli/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"volcengine-searchcli"}}}`
 
-**Summary:** Public-surface review of volcengine/SearchCLI.
+**Summary:** volcengine/SearchCLI — Open CLI for integrating AI search, recommendation, and conversational retrieval into agent systems and business systems. Repo-surface review: measured from the public repository (1128 stars, Apache-2.0, last push 2026-07-16); not hands-on tested.
 
 ---
 
 ### Utopai-Research/pai-pro
 - Slug: `utopai-research-pai-pro`
-- Laddoo Score: 50/100
+- Laddoo Score: 67/100
 - Tier: FADING
 - Category: Research
 - Reviewed: 2026-06-26
 - URL: https://hlido.eu/reviews/utopai-research-pai-pro/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"utopai-research-pai-pro"}}}`
 
-**Summary:** Public-surface review of Utopai-Research/pai-pro.
-
----
-
-### getcrew44/crew44
-- Slug: `getcrew44-crew44`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-26
-- URL: https://hlido.eu/reviews/getcrew44-crew44/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"getcrew44-crew44"}}}`
-
-**Summary:** Public-surface review of getcrew44/crew44.
-
----
-
-### the-open-engine/zeroshot
-- Slug: `the-open-engine-zeroshot`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-26
-- URL: https://hlido.eu/reviews/the-open-engine-zeroshot/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"the-open-engine-zeroshot"}}}`
-
-**Summary:** Public-surface review of the-open-engine/zeroshot.
-
----
-
-### decolua/9remote
-- Slug: `decolua-9remote`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-26
-- URL: https://hlido.eu/reviews/decolua-9remote/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"decolua-9remote"}}}`
-
-**Summary:** Public-surface review of decolua/9remote.
+**Summary:** Utopai-Research/pai-pro — Local AI filmmaking studio — skills, canvas, timeline — driven from your coding agent.. Repo-surface review: measured from the public repository (319 stars, NOASSERTION, last push 2026-07-14); not hands-on tested.
 
 ---
 
 ### ykdojo/claude-code-tips
 - Slug: `ykdojo-claude-code-tips`
-- Laddoo Score: 50/100
+- Laddoo Score: 67/100
 - Tier: FADING
-- Category: Coding
+- Category: MCP Server
 - Reviewed: 2026-06-26
 - URL: https://hlido.eu/reviews/ykdojo-claude-code-tips/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ykdojo-claude-code-tips"}}}`
 
-**Summary:** Public-surface review of ykdojo/claude-code-tips.
+**Summary:** ykdojo/claude-code-tips — 40+ tips for getting the most out of Claude Code, from basics to advanced - includes a custom status line script and Claude Code running itself in a container. Also includes the dx plugin: skills for everyday dev workflows.. Repo-surface review: measured from the public repository (9301 stars, NOASSERTION, last push 2026-07-15); not hands-on tested.
 
 ---
 
@@ -504,19 +1073,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"atlassian"}}}`
 
 **Summary:** Public-surface review of Atlassian Rovo.
-
----
-
-### DietrichGebert/ponytail
-- Slug: `dietrichgebert-ponytail`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-25
-- URL: https://hlido.eu/reviews/dietrichgebert-ponytail/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"dietrichgebert-ponytail"}}}`
-
-**Summary:** Public-surface review of DietrichGebert/ponytail.
 
 ---
 
@@ -578,32 +1134,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### omnigent-ai/omnigent
-- Slug: `omnigent-ai-omnigent`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-25
-- URL: https://hlido.eu/reviews/omnigent-ai-omnigent/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"omnigent-ai-omnigent"}}}`
-
-**Summary:** Public-surface review of omnigent-ai/omnigent.
-
----
-
-### google-antigravity/antigravity-sdk-python
-- Slug: `google-antigravity-antigravity-sdk-python`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-25
-- URL: https://hlido.eu/reviews/google-antigravity-antigravity-sdk-python/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-antigravity-antigravity-sdk-python"}}}`
-
-**Summary:** Public-surface review of google-antigravity/antigravity-sdk-python.
-
----
-
 ### VoltAgent
 - Slug: `voltagent`
 - Laddoo Score: 76/100
@@ -636,27 +1166,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### itsinseong/value-for-fable
 - Slug: `itsinseong-value-for-fable`
-- Laddoo Score: 50/100
+- Laddoo Score: 67/100
 - Tier: FADING
 - Category: Coding
 - Reviewed: 2026-06-25
 - URL: https://hlido.eu/reviews/itsinseong-value-for-fable/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"itsinseong-value-for-fable"}}}`
 
-**Summary:** Public-surface review of itsinseong/value-for-fable.
+**Summary:** itsinseong/value-for-fable — Opus에 근접한 품질을 Sonnet 단가에 — 가성비 AI 운영 모델을 직접 구축한 Claude Code 프로젝트. Repo-surface review: measured from the public repository (235 stars, AGPL-3.0, last push 2026-06-21); not hands-on tested.
 
 ---
 
 ### scheidydude/codeindex
 - Slug: `scheidydude-codeindex`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-25
 - URL: https://hlido.eu/reviews/scheidydude-codeindex/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"scheidydude-codeindex"}}}`
 
-**Summary:** Public-surface review of scheidydude/codeindex.
+**Summary:** scheidydude/codeindex — Repo dependency analyzer with **blast-radius impact scoring** for AI-assisted development.. Repo-surface review: measured from the public repository (268 stars, NOASSERTION, last push 2026-06-19); not hands-on tested.
 
 ---
 
@@ -675,14 +1205,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### Oshayr/LLM-Wiki
 - Slug: `oshayr-llm-wiki`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-24
 - URL: https://hlido.eu/reviews/oshayr-llm-wiki/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"oshayr-llm-wiki"}}}`
 
-**Summary:** Public-surface review of Oshayr/LLM-Wiki.
+**Summary:** Oshayr/LLM-Wiki — Autonomous knowledge base plugin for Claude Code - captures reserch, ideas, and decisions into an interlinked wiki with reserch-on-miss, semantic search, and a Wikipedia-style web UI. Knowledge compounds as you work.. Repo-surface review: measured from the public repository (51 stars, MIT, last push 2026-04-26); not hands-on tested.
 
 ---
 
@@ -759,27 +1289,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### skwallace36/Pepper
 - Slug: `skwallace36-pepper`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-24
 - URL: https://hlido.eu/reviews/skwallace36-pepper/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"skwallace36-pepper"}}}`
 
-**Summary:** Public-surface review of skwallace36/Pepper.
+**Summary:** skwallace36/Pepper — iOS dynamic library MCP for agents. Repo-surface review: measured from the public repository (102 stars, MIT, last push 2026-04-29); not hands-on tested.
 
 ---
 
 ### walkinglabs/awesome-harness-engineering
 - Slug: `walkinglabs-awesome-harness-engineering`
-- Laddoo Score: 50/100
+- Laddoo Score: 67/100
 - Tier: FADING
-- Category: Coding
+- Category: MCP Server
 - Reviewed: 2026-06-24
 - URL: https://hlido.eu/reviews/walkinglabs-awesome-harness-engineering/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"walkinglabs-awesome-harness-engineering"}}}`
 
-**Summary:** Public-surface review of walkinglabs/awesome-harness-engineering.
+**Summary:** walkinglabs/awesome-harness-engineering — 🛠️ Awesome tools & guides for harness engineering.. Repo-surface review: measured from the public repository (3629 stars, NOASSERTION, last push 2026-05-22); not hands-on tested.
 
 ---
 
@@ -850,14 +1380,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### zhitongblog/solomd
 - Slug: `zhitongblog-solomd`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-23
 - URL: https://hlido.eu/reviews/zhitongblog-solomd/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zhitongblog-solomd"}}}`
 
-**Summary:** Public-surface review of zhitongblog/solomd.
+**Summary:** zhitongblog/solomd — A markdown editor — and the bridge to your LLM. Local-first, MIT, ~15 MB. Bundled MCP server lets Claude Code / Codex / Cursor drive your vault directly. 14 AI providers BYOK.. Repo-surface review: measured from the public repository (442 stars, MIT, last push 2026-07-12); not hands-on tested.
 
 ---
 
@@ -876,27 +1406,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### iAmCorey/kooky
 - Slug: `iamcorey-kooky`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-23
 - URL: https://hlido.eu/reviews/iamcorey-kooky/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"iamcorey-kooky"}}}`
 
-**Summary:** Public-surface review of iAmCorey/kooky.
-
----
-
-### agentforce314/clawcodex
-- Slug: `agentforce314-clawcodex`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-23
-- URL: https://hlido.eu/reviews/agentforce314-clawcodex/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"agentforce314-clawcodex"}}}`
-
-**Summary:** Public-surface review of agentforce314/clawcodex.
+**Summary:** iAmCorey/kooky — A minimal modern terminal for AI coding experience — Sidebar workspaces; horizontal / vertical split panes; one-click agent launch; per-agent activity readout; live workspace state with one-click Node and branch switching.. Repo-surface review: measured from the public repository (544 stars, MIT, last push 2026-07-10); not hands-on tested.
 
 ---
 
@@ -928,14 +1445,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### jo-inc/camofox-browser
 - Slug: `jo-inc-camofox-browser`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Infrastructure
 - Reviewed: 2026-06-23
 - URL: https://hlido.eu/reviews/jo-inc-camofox-browser/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"jo-inc-camofox-browser"}}}`
 
-**Summary:** Public-surface review of jo-inc/camofox-browser.
+**Summary:** jo-inc/camofox-browser — Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.. Repo-surface review: measured from the public repository (7733 stars, MIT, last push 2026-06-16); not hands-on tested.
 
 ---
 
@@ -993,14 +1510,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### longyunfeigu/learn-hermes-agent
 - Slug: `longyunfeigu-learn-hermes-agent`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-23
 - URL: https://hlido.eu/reviews/longyunfeigu-learn-hermes-agent/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"longyunfeigu-learn-hermes-agent"}}}`
 
-**Summary:** Public-surface review of longyunfeigu/learn-hermes-agent.
+**Summary:** longyunfeigu/learn-hermes-agent — A 27-chapter hands-on tutorial for building an autonomous AI agent from zero in Python. Agent loop, tool system, memory, skills, MCP,     multi-platform gateway, and self-evolution — inspired by Hermes Agent.. Repo-surface review: measured from the public repository (182 stars, MIT, last push 2026-05-14); not hands-on tested.
 
 ---
 
@@ -1031,19 +1548,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 **Summary:** Sophisticated Chinese web-novel writing workflow for Claude Code — 2,500 stars signal real demand from Chinese-language creators, even if the niche is narrow.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### h4ckf0r0day/obscura
-- Slug: `h4ckf0r0day-obscura`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-22
-- URL: https://hlido.eu/reviews/h4ckf0r0day-obscura/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"h4ckf0r0day-obscura"}}}`
-
-**Summary:** Public-surface review of h4ckf0r0day/obscura.
 
 ---
 
@@ -1114,53 +1618,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### DenisSergeevitch/agents-best-practices
 - Slug: `denissergeevitch-agents-best-practices`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Image & Design
 - Reviewed: 2026-06-22
 - URL: https://hlido.eu/reviews/denissergeevitch-agents-best-practices/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"denissergeevitch-agents-best-practices"}}}`
 
-**Summary:** Public-surface review of DenisSergeevitch/agents-best-practices.
+**Summary:** DenisSergeevitch/agents-best-practices — Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.. Repo-surface review: measured from the public repository (2124 stars, MIT, last push 2026-06-29); not hands-on tested.
 
 ---
 
 ### Narcooo/inkos
 - Slug: `narcooo-inkos`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 80/100
+- Tier: STEADY
 - Category: AI Agent
 - Reviewed: 2026-06-21
 - URL: https://hlido.eu/reviews/narcooo-inkos/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"narcooo-inkos"}}}`
 
-**Summary:** Public-surface review of Narcooo/inkos.
-
----
-
-### UfoMiao/zcf
-- Slug: `ufomiao-zcf`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-21
-- URL: https://hlido.eu/reviews/ufomiao-zcf/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ufomiao-zcf"}}}`
-
-**Summary:** Public-surface review of UfoMiao/zcf.
-
----
-
-### geekjourneyx/md2wechat-skill
-- Slug: `geekjourneyx-md2wechat-skill`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Chat & Companion
-- Reviewed: 2026-06-21
-- URL: https://hlido.eu/reviews/geekjourneyx-md2wechat-skill/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"geekjourneyx-md2wechat-skill"}}}`
-
-**Summary:** Public-surface review of geekjourneyx/md2wechat-skill.
+**Summary:** Narcooo/inkos — Story Creation AI Agent for novel, scripts, translation, interactive games, and IP content. Repo-surface review: measured from the public repository (8023 stars, AGPL-3.0, last push 2026-07-16); not hands-on tested.
 
 ---
 
@@ -1203,19 +1681,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### Skyvern-AI/skyvern
-- Slug: `skyvern-ai-skyvern`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Workflow & Automation
-- Reviewed: 2026-06-21
-- URL: https://hlido.eu/reviews/skyvern-ai-skyvern/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"skyvern-ai-skyvern"}}}`
-
-**Summary:** Public-surface review of Skyvern-AI/skyvern.
-
----
-
 ### CloakHQ/CloakBrowser
 - Slug: `cloakhq-cloakbrowser`
 - Laddoo Score: 50/100
@@ -1244,27 +1709,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### pinchtab/pinchtab
 - Slug: `pinchtab-pinchtab`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Workflow & Automation
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-21
 - URL: https://hlido.eu/reviews/pinchtab-pinchtab/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"pinchtab-pinchtab"}}}`
 
-**Summary:** Public-surface review of pinchtab/pinchtab.
+**Summary:** pinchtab/pinchtab — High-performance browser automation bridge and multi-instance orchestrator with advanced stealth injection and real-time dashboard.. Repo-surface review: measured from the public repository (9426 stars, MIT, last push 2026-07-15); not hands-on tested.
 
 ---
 
 ### ClaudioDrews/memory-os
 - Slug: `claudiodrews-memory-os`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 73/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-20
 - URL: https://hlido.eu/reviews/claudiodrews-memory-os/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"claudiodrews-memory-os"}}}`
 
-**Summary:** Public-surface review of ClaudioDrews/memory-os.
+**Summary:** ClaudioDrews/memory-os — A 7-layer memory operating system for Hermes Agent — persistent memory with Qdrant, structured facts, fabric recall, auto-curated wiki, and surgical context injection. Runs locally, any LLM provider.. Repo-surface review: measured from the public repository (1272 stars, MIT, last push 2026-06-10); not hands-on tested.
 
 ---
 
@@ -1278,45 +1743,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"elizaos-eliza"}}}`
 
 **Summary:** Public-surface review of elizaOS/eliza.
-
----
-
-### Tencent/WeKnora
-- Slug: `tencent-weknora`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/tencent-weknora/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tencent-weknora"}}}`
-
-**Summary:** Public-surface review of Tencent/WeKnora.
-
----
-
-### flyteorg/flyte
-- Slug: `flyteorg-flyte`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Workflow & Automation
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/flyteorg-flyte/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"flyteorg-flyte"}}}`
-
-**Summary:** Public-surface review of flyteorg/flyte.
-
----
-
-### strands-agents/harness-sdk
-- Slug: `strands-agents-harness-sdk`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/strands-agents-harness-sdk/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"strands-agents-harness-sdk"}}}`
-
-**Summary:** Public-surface review of strands-agents/harness-sdk.
 
 ---
 
@@ -1359,19 +1785,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### promptfoo/promptfoo
-- Slug: `promptfoo-promptfoo`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/promptfoo-promptfoo/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"promptfoo-promptfoo"}}}`
-
-**Summary:** Public-surface review of promptfoo/promptfoo.
-
----
-
 ### ruc-datalab/DeepAnalyze
 - Slug: `ruc-datalab-deepanalyze`
 - Laddoo Score: 50/100
@@ -1382,32 +1795,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ruc-datalab-deepanalyze"}}}`
 
 **Summary:** Public-surface review of ruc-datalab/DeepAnalyze.
-
----
-
-### can1357/oh-my-pi
-- Slug: `can1357-oh-my-pi`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/can1357-oh-my-pi/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"can1357-oh-my-pi"}}}`
-
-**Summary:** Public-surface review of can1357/oh-my-pi.
-
----
-
-### truera/trulens
-- Slug: `truera-trulens`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Frameworks & Eval
-- Reviewed: 2026-06-20
-- URL: https://hlido.eu/reviews/truera-trulens/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"truera-trulens"}}}`
-
-**Summary:** Public-surface review of truera/trulens.
 
 ---
 
@@ -1463,42 +1850,16 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### tt-a1i/hive
-- Slug: `tt-a1i-hive`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-19
-- URL: https://hlido.eu/reviews/tt-a1i-hive/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tt-a1i-hive"}}}`
-
-**Summary:** Public-surface review of tt-a1i/hive.
-
----
-
 ### havingautism/Codemini-CLI
 - Slug: `havingautism-codemini-cli`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 80/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-19
 - URL: https://hlido.eu/reviews/havingautism-codemini-cli/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"havingautism-codemini-cli"}}}`
 
-**Summary:** Public-surface review of havingautism/Codemini-CLI.
-
----
-
-### zjunlp/SciAtlas
-- Slug: `zjunlp-sciatlas`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Research
-- Reviewed: 2026-06-19
-- URL: https://hlido.eu/reviews/zjunlp-sciatlas/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zjunlp-sciatlas"}}}`
-
-**Summary:** Public-surface review of zjunlp/SciAtlas.
+**Summary:** havingautism/Codemini-CLI — Terminal-first AI workspace with coding agents, workflows and built-in web UI.. Repo-surface review: measured from the public repository (223 stars, MIT, last push 2026-07-14); not hands-on tested.
 
 ---
 
@@ -1525,19 +1886,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zhulinsen-daily-stock-analysis"}}}`
 
 **Summary:** Public-surface review of ZhuLinsen/daily_stock_analysis.
-
----
-
-### google/adk-python
-- Slug: `google-adk-python`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-19
-- URL: https://hlido.eu/reviews/google-adk-python/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-adk-python"}}}`
-
-**Summary:** Public-surface review of google/adk-python.
 
 ---
 
@@ -1608,14 +1956,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### wanshuiyin/Auto-claude-code-research-in-sleep
 - Slug: `wanshuiyin-auto-claude-code-research-in-sleep`
-- Laddoo Score: 80/100
+- Laddoo Score: 82/100
 - Tier: STEADY
-- Category: Coding
+- Category: MCP Server
 - Reviewed: 2026-06-18
 - URL: https://hlido.eu/reviews/wanshuiyin-auto-claude-code-research-in-sleep/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"wanshuiyin-auto-claude-code-research-in-sleep"}}}`
 
-**Summary:** Public-surface review of wanshuiyin/Auto-claude-code-research-in-sleep.
+**Summary:** wanshuiyin/Auto-claude-code-research-in-sleep — ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.. Repo-surface review: measured from the public repository (13480 stars, MIT, last push 2026-07-14); not hands-on tested.
 
 ---
 
@@ -1634,14 +1982,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### withkynam/vibecode-pro-max-kit
 - Slug: `withkynam-vibecode-pro-max-kit`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-18
 - URL: https://hlido.eu/reviews/withkynam-vibecode-pro-max-kit/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"withkynam-vibecode-pro-max-kit"}}}`
 
-**Summary:** Public-surface review of withkynam/vibecode-pro-max-kit.
+**Summary:** withkynam/vibecode-pro-max-kit — Your AI forgets. This remembers. Spec-driven coding harness for vibecoders, product owners, CEOs and real builders — self-improving context memory, 15 agents, 33 skills working with /goal, agent-team, & workflow on autopilot loops with 0 need for human gate. Kills context rot, ships features, not spaghetti. Claude Code & Codex. Any stack. Repo-surface review: measured from the public repository (1042 stars, MIT, last push 2026-06-21); not hands-on tested.
 
 ---
 
@@ -1655,21 +2003,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"xiangyue-zhang-auto-deep-researcher-24x7"}}}`
 
 **Summary:** Public-surface review of Xiangyue-Zhang/auto-deep-researcher-24x7.
-
----
-
-### Parakeeet AI
-- Slug: `parakeeet-ai`
-- Laddoo Score: 80/100
-- Tier: STEADY
-- Category: Sales
-- Reviewed: 2026-06-17
-- URL: https://hlido.eu/reviews/parakeeet-ai/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"parakeeet-ai"}}}`
-
-**Summary:** Public-surface review of Parakeeet AI.
-
-**Evidence:** Best current intake-led next evaluation candidate, but still short of real feature proof.
 
 ---
 
@@ -1708,7 +2041,7 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - URL: https://hlido.eu/reviews/pguso-ai-agents-from-scratch/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"pguso-ai-agents-from-scratch"}}}`
 
-**Summary:** Public-surface review of pguso/ai-agents-from-scratch.
+**Summary:** pguso/ai-agents-from-scratch — Demystify AI agents by building them yourself. Local LLMs, no black boxes, real understanding of function calling, memory, and ReAct patterns.. Repo-surface review: measured from the public repository (4406 stars, MIT, last push 2026-05-31); not hands-on tested.
 
 ---
 
@@ -1807,27 +2140,27 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### nduckmink/arkon
 - Slug: `nduckmink-arkon`
-- Laddoo Score: 80/100
-- Tier: STEADY
-- Category: Workflow & Automation
+- Laddoo Score: 67/100
+- Tier: FADING
+- Category: MCP Server
 - Reviewed: 2026-06-16
 - URL: https://hlido.eu/reviews/nduckmink-arkon/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"nduckmink-arkon"}}}`
 
-**Summary:** Public-surface review of nduckmink/arkon.
+**Summary:** nduckmink/arkon — Arkon: Enterprise AI Knowledge Hub & MCP Server. Self-hosted knowledge base for teams to manage RAG contexts, access policies, and AI skills. Connect Claude and other LLMs via Model Context Protocol (MCP) for automated, secure organizational knowledge integration.. Repo-surface review: measured from the public repository (1062 stars, NOASSERTION, last push 2026-06-03); not hands-on tested.
 
 ---
 
 ### NeoTheCapt/RedteamAgent
 - Slug: `neothecapt-redteamagent`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 73/100
+- Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-16
 - URL: https://hlido.eu/reviews/neothecapt-redteamagent/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"neothecapt-redteamagent"}}}`
 
-**Summary:** Public-surface review of NeoTheCapt/RedteamAgent.
+**Summary:** NeoTheCapt/RedteamAgent — An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit → report workflow, with containerized tools and resumable state.. Repo-surface review: measured from the public repository (92 stars, no license, last push 2026-05-14); not hands-on tested.
 
 ---
 
@@ -1913,40 +2246,40 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### OmYarewar/PHANTOM
 - Slug: `omyarewar-phantom`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-16
 - URL: https://hlido.eu/reviews/omyarewar-phantom/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"omyarewar-phantom"}}}`
 
-**Summary:** Public-surface review of OmYarewar/PHANTOM.
+**Summary:** OmYarewar/PHANTOM — 👻 AI-Powered Pentesting Command Center — Autonomous security testing with real-time streaming, self-improving AI, unlimited tool iterations, and beautiful dark UI. Repo-surface review: measured from the public repository (59 stars, MIT, last push 2026-07-16); not hands-on tested.
 
 ---
 
 ### op7418/guizang-ppt-skill
 - Slug: `op7418-guizang-ppt-skill`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Image & Design
 - Reviewed: 2026-06-16
 - URL: https://hlido.eu/reviews/op7418-guizang-ppt-skill/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"op7418-guizang-ppt-skill"}}}`
 
-**Summary:** Public-surface review of op7418/guizang-ppt-skill.
+**Summary:** op7418/guizang-ppt-skill — AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.. Repo-surface review: measured from the public repository (21568 stars, AGPL-3.0, last push 2026-06-02); not hands-on tested.
 
 ---
 
 ### OpenSenseNova/SenseNova-Skills
 - Slug: `opensensenova-sensenova-skills`
-- Laddoo Score: 85/100
+- Laddoo Score: 73/100
 - Tier: STEADY
 - Category: Workflow & Automation
 - Reviewed: 2026-06-16
 - URL: https://hlido.eu/reviews/opensensenova-sensenova-skills/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"opensensenova-sensenova-skills"}}}`
 
-**Summary:** Public-surface review of OpenSenseNova/SenseNova-Skills.
+**Summary:** OpenSenseNova/SenseNova-Skills — Modular SenseNova skills for building AI-powered office assistants and productivity workflows. Repo-surface review: measured from the public repository (4716 stars, MIT, last push 2026-07-16); not hands-on tested.
 
 ---
 
@@ -1991,14 +2324,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### lsdefine/GenericAgent
 - Slug: `lsdefine-genericagent`
-- Laddoo Score: 75/100
+- Laddoo Score: 82/100
 - Tier: STEADY
 - Category: AI Agent
 - Reviewed: 2026-06-15
 - URL: https://hlido.eu/reviews/lsdefine-genericagent/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"lsdefine-genericagent"}}}`
 
-**Summary:** Public-surface review of lsdefine/GenericAgent.
+**Summary:** lsdefine/GenericAgent — Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption. Repo-surface review: measured from the public repository (13458 stars, MIT, last push 2026-07-15); not hands-on tested.
 
 ---
 
@@ -2017,40 +2350,40 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### Manavarya09/design-extract
 - Slug: `manavarya09-design-extract`
-- Laddoo Score: 80/100
-- Tier: STEADY
+- Laddoo Score: 10/100
+- Tier: FLATLINE
 - Category: Image & Design
 - Reviewed: 2026-06-15
 - URL: https://hlido.eu/reviews/manavarya09-design-extract/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"manavarya09-design-extract"}}}`
 
-**Summary:** Public-surface review of Manavarya09/design-extract.
+**Summary:** Manavarya09/design-extract — the source repository has been deleted or made private; the product is no longer publicly obtainable (verified 2026-07-16). Prior review described a repository that no longer exists.
 
 ---
 
 ### lucasrosati/claude-code-memory-setup
 - Slug: `lucasrosati-claude-code-memory-setup`
-- Laddoo Score: 70/100
+- Laddoo Score: 82/100
 - Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-15
 - URL: https://hlido.eu/reviews/lucasrosati-claude-code-memory-setup/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"lucasrosati-claude-code-memory-setup"}}}`
 
-**Summary:** Public-surface review of lucasrosati/claude-code-memory-setup.
+**Summary:** lucasrosati/claude-code-memory-setup — Up to 71.5x fewer tokens per session on Claude Code with Obsidian + Graphify. Persistent memory, codebase knowledge graphs, and chat import pipeline. 🇧🇷 PT-BR included.. Repo-surface review: measured from the public repository (852 stars, MIT, last push 2026-06-01); not hands-on tested.
 
 ---
 
 ### Mcp-Brasil/mcp-brasil
 - Slug: `mcp-brasil-mcp-brasil`
-- Laddoo Score: 75/100
+- Laddoo Score: 82/100
 - Tier: STEADY
-- Category: AI Agent
+- Category: MCP Server
 - Reviewed: 2026-06-15
 - URL: https://hlido.eu/reviews/mcp-brasil-mcp-brasil/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"mcp-brasil-mcp-brasil"}}}`
 
-**Summary:** Public-surface review of Mcp-Brasil/mcp-brasil.
+**Summary:** Mcp-Brasil/mcp-brasil — MCP Server para 70 APIs públicas brasileiras. Repo-surface review: measured from the public repository (1678 stars, MIT, last push 2026-04-26); not hands-on tested.
 
 ---
 
@@ -2064,19 +2397,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"microsoft-autogen"}}}`
 
 **Summary:** Public-surface review of microsoft/autogen.
-
----
-
-### MemTensor/skills-vote
-- Slug: `memtensor-skills-vote`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-15
-- URL: https://hlido.eu/reviews/memtensor-skills-vote/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"memtensor-skills-vote"}}}`
-
-**Summary:** Public-surface review of MemTensor/skills-vote.
 
 ---
 
@@ -2106,19 +2426,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### myICOR/myPKA
-- Slug: `myicor-mypka`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-15
-- URL: https://hlido.eu/reviews/myicor-mypka/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"myicor-mypka"}}}`
-
-**Summary:** Public-surface review of myICOR/myPKA.
-
----
-
 ### HKUDS/DeepCode
 - Slug: `hkuds-deepcode`
 - Laddoo Score: 90/100
@@ -2129,19 +2436,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hkuds-deepcode"}}}`
 
 **Summary:** Public-surface review of HKUDS/DeepCode.
-
----
-
-### HKUDS/Vibe-Trading
-- Slug: `hkuds-vibe-trading`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-14
-- URL: https://hlido.eu/reviews/hkuds-vibe-trading/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hkuds-vibe-trading"}}}`
-
-**Summary:** Public-surface review of HKUDS/Vibe-Trading.
 
 ---
 
@@ -2225,14 +2519,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### jordanrendric/claude-video-vision
 - Slug: `jordanrendric-claude-video-vision`
-- Laddoo Score: 80/100
+- Laddoo Score: 82/100
 - Tier: STEADY
-- Category: Image & Design
+- Category: MCP Server
 - Reviewed: 2026-06-14
 - URL: https://hlido.eu/reviews/jordanrendric-claude-video-vision/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"jordanrendric-claude-video-vision"}}}`
 
-**Summary:** Public-surface review of jordanrendric/claude-video-vision.
+**Summary:** jordanrendric/claude-video-vision — Give Claude the ability to watch and understand videos — Claude Code plugin with frame extraction and multimodal audio analysis. Repo-surface review: measured from the public repository (997 stars, MIT, last push 2026-07-01); not hands-on tested.
 
 ---
 
@@ -2249,55 +2543,16 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### Gitlawb/openclaude
-- Slug: `gitlawb-openclaude`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-13
-- URL: https://hlido.eu/reviews/gitlawb-openclaude/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gitlawb-openclaude"}}}`
-
-**Summary:** Public-surface review of Gitlawb/openclaude.
-
----
-
 ### GizClaw/flowcraft
 - Slug: `gizclaw-flowcraft`
-- Laddoo Score: 70/100
+- Laddoo Score: 82/100
 - Tier: STEADY
 - Category: Voice
 - Reviewed: 2026-06-13
 - URL: https://hlido.eu/reviews/gizclaw-flowcraft/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gizclaw-flowcraft"}}}`
 
-**Summary:** Public-surface review of GizClaw/flowcraft.
-
----
-
-### google/agents-cli
-- Slug: `google-agents-cli`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Infrastructure
-- Reviewed: 2026-06-13
-- URL: https://hlido.eu/reviews/google-agents-cli/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"google-agents-cli"}}}`
-
-**Summary:** Public-surface review of google/agents-cli.
-
----
-
-### gi-dellav/zerostack
-- Slug: `gi-dellav-zerostack`
-- Laddoo Score: 75/100
-- Tier: STEADY
-- Category: AI Agent
-- Reviewed: 2026-06-13
-- URL: https://hlido.eu/reviews/gi-dellav-zerostack/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gi-dellav-zerostack"}}}`
-
-**Summary:** Public-surface review of gi-dellav/zerostack.
+**Summary:** GizClaw/flowcraft — Production-grade Go SDK for building AI agents with long-term memory, knowledge retrieval, and voice — runnable as a library, a daemon, or a real-time pipeline.. Repo-surface review: measured from the public repository (486 stars, MIT, last push 2026-07-16); not hands-on tested.
 
 ---
 
@@ -2355,14 +2610,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### graykode/abtop
 - Slug: `graykode-abtop`
-- Laddoo Score: 75/100
+- Laddoo Score: 82/100
 - Tier: STEADY
 - Category: Coding
 - Reviewed: 2026-06-13
 - URL: https://hlido.eu/reviews/graykode-abtop/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"graykode-abtop"}}}`
 
-**Summary:** Public-surface review of graykode/abtop.
+**Summary:** graykode/abtop — Like htop, but for AI coding agents. Monitor Claude    Code & Codex CLI sessions, tokens, context window,    rate limits, and ports in real-time.. Repo-surface review: measured from the public repository (3351 stars, MIT, last push 2026-07-07); not hands-on tested.
 
 ---
 
@@ -2381,40 +2636,40 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### Hello-QM/catgo-LRG
 - Slug: `hello-qm-catgo-lrg`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Workflow & Automation
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: MCP Server
 - Reviewed: 2026-06-13
 - URL: https://hlido.eu/reviews/hello-qm-catgo-lrg/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hello-qm-catgo-lrg"}}}`
 
-**Summary:** Public-surface review of Hello-QM/catgo-LRG.
+**Summary:** Hello-QM/catgo-LRG — AI-driven workbench for computational materials science — interactive 3D structure viewer, natural-language CatBot assistant, visual DAG workflow engine, HPC job submission. Tauri desktop app with SvelteKit frontend and FastAPI Python backend. Drives VASP, ORCA, CP2K, QE, GPAW, DFTB+, SIESTA, LAMMPS.. Repo-surface review: measured from the public repository (166 stars, AGPL-3.0, last push 2026-07-15); not hands-on tested.
 
 ---
 
 ### AIDC-AI/ComfyUI-Copilot
 - Slug: `aidc-ai-comfyui-copilot`
-- Laddoo Score: 50/100
-- Tier: FADING
+- Laddoo Score: 82/100
+- Tier: STEADY
 - Category: Image & Design
 - Reviewed: 2026-06-12
 - URL: https://hlido.eu/reviews/aidc-ai-comfyui-copilot/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"aidc-ai-comfyui-copilot"}}}`
 
-**Summary:** Public-surface review of AIDC-AI/ComfyUI-Copilot.
+**Summary:** AIDC-AI/ComfyUI-Copilot — An AI-powered custom node for ComfyUI designed to enhance workflow automation and provide intelligent assistance. Repo-surface review: measured from the public repository (5375 stars, MIT, last push 2026-04-07); not hands-on tested.
 
 ---
 
 ### erickong/aura-agent
 - Slug: `erickong-aura-agent`
-- Laddoo Score: 50/100
+- Laddoo Score: 67/100
 - Tier: FADING
 - Category: AI Agent
 - Reviewed: 2026-06-12
 - URL: https://hlido.eu/reviews/erickong-aura-agent/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"erickong-aura-agent"}}}`
 
-**Summary:** Public-surface review of erickong/aura-agent.
+**Summary:** erickong/aura-agent — Goal-Driven agent for long-running tasks, docker-isolated workers, intelligent task decomposition, and autonomous execution. Repo-surface review: measured from the public repository (45 stars, no license, last push 2026-05-25); not hands-on tested.
 
 ---
 
@@ -2433,14 +2688,14 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ### fazxes/Claude-code
 - Slug: `fazxes-claude-code`
-- Laddoo Score: 50/100
+- Laddoo Score: 60/100
 - Tier: FADING
 - Category: Coding
 - Reviewed: 2026-06-12
 - URL: https://hlido.eu/reviews/fazxes-claude-code/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"fazxes-claude-code"}}}`
 
-**Summary:** Public-surface review of fazxes/Claude-code.
+**Summary:** fazxes/Claude-code — Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster through natural language commands. Rebuilt from leaked source.. Repo-surface review: measured from the public repository (225 stars, no license, last push 2026-04-03); not hands-on tested.
 
 ---
 
@@ -2448,7 +2703,7 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - Slug: `genieincodebottle-generative-ai`
 - Laddoo Score: 80/100
 - Tier: STEADY
-- Category: Coding
+- Category: Research
 - Reviewed: 2026-06-12
 - URL: https://hlido.eu/reviews/genieincodebottle-generative-ai/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"genieincodebottle-generative-ai"}}}`
@@ -2514,19 +2769,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 **Summary:** Docker-packaged AI coding workstation bundling Claude Code, 7 AI CLIs, and 50+ tools — impressive all-in-one scope, but the Docker install barrier and licence complexity limit who can actually use it.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026)
-- Slug: `aifordevelopers`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: Coding
-- Reviewed: 2026-06-11
-- URL: https://hlido.eu/reviews/aifordevelopers/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"aifordevelopers"}}}`
-
-**Summary:** Public-surface review of AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026).
 
 ---
 
@@ -2605,21 +2847,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 
 ---
 
-### ag2ai/ag2
-- Slug: `ag2ai-ag2`
-- Laddoo Score: 40/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-06-05
-- URL: https://hlido.eu/reviews/ag2ai-ag2/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ag2ai-ag2"}}}`
-
-**Summary:** AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### alibaba/page-agent
 - Slug: `alibaba-page-agent`
 - Laddoo Score: 40/100
@@ -2675,21 +2902,6 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"asheshgoplani-agent-deck"}}}`
 
 **Summary:** Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### AutomaApp/automa
-- Slug: `automaapp-automa`
-- Laddoo Score: 40/100
-- Tier: FADING
-- Category: Workflow & Automation
-- Reviewed: 2026-06-05
-- URL: https://hlido.eu/reviews/automaapp-automa/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"automaapp-automa"}}}`
-
-**Summary:** A browser extension for automating your browser by connecting blocks
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
@@ -3476,21 +3688,6 @@ $0.000110
 - Reviewed: 2026-05-01
 - URL: https://hlido.eu/reviews/influcio/
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"influcio"}}}`
-
-**Summary:** [object Object]
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### lindy-ai
-- Slug: `lindy-ai`
-- Laddoo Score: 50/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/lindy-ai/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"lindy-ai"}}}`
 
 **Summary:** [object Object]
 
@@ -4408,21 +4605,6 @@ $0.000110
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"cohere"}}}`
 
 **Summary:** Public-surface review of Cohere
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### Copy.ai
-- Slug: `copy-ai`
-- Laddoo Score: 78/100
-- Tier: STEADY
-- Category: Marketing & Content
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/copy-ai/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"copy-ai"}}}`
-
-**Summary:** Public-surface review of Copy.ai
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
@@ -6943,21 +7125,6 @@ $0.000110
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"contextual-ai"}}}`
 
 **Summary:** Public-surface review of Contextual AI
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### Phoenix (Arize)
-- Slug: `phoenix-arize`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Frameworks & Eval
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/phoenix-arize/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"phoenix-arize"}}}`
-
-**Summary:** Public-surface review of Phoenix (Arize)
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
@@ -11605,36 +11772,6 @@ Try refreshing or navigating to a different page
 
 ---
 
-### Vapi Voice Agents Platform
-- Slug: `vapi-voice-agents`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Voice
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/vapi-voice-agents/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"vapi-voice-agents"}}}`
-
-**Summary:** Public-surface review of vapi-voice-agents.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### Retell Voice
-- Slug: `retell-voice`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Voice
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/retell-voice/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"retell-voice"}}}`
-
-**Summary:** Public-surface review of retell-voice.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### Phonely
 - Slug: `phonely`
 - Laddoo Score: 90/100
@@ -11770,21 +11907,6 @@ Try refreshing or navigating to a different page
 
 ---
 
-### Exa Search
-- Slug: `exa-search-api`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Research
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/exa-search-api/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"exa-search-api"}}}`
-
-**Summary:** Public-surface review of exa-search-api.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### Microsoft AutoGen
 - Slug: `autogen-microsoft`
 - Laddoo Score: 90/100
@@ -11890,21 +12012,6 @@ Try refreshing or navigating to a different page
 
 ---
 
-### Clay (data enrichment AI)
-- Slug: `clay-platform`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Productivity
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/clay-platform/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"clay-platform"}}}`
-
-**Summary:** Public-surface review of clay-platform.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### Cline (latest)
 - Slug: `cline-2`
 - Laddoo Score: 90/100
@@ -11960,21 +12067,6 @@ Try refreshing or navigating to a different page
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ampcode"}}}`
 
 **Summary:** Public-surface review of ampcode.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### Zed AI
-- Slug: `zed-industries-ai`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Coding
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/zed-industries-ai/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zed-industries-ai"}}}`
-
-**Summary:** Public-surface review of zed-industries-ai.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
