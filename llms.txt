@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-07-05 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-07-22 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,8 +10,8 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 825 published reviews (machine-readable, claim-tested)
-- 13-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
+- 833 published reviews (machine-readable, claim-tested)
+- 16-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
 - HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
 - Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
 - Live incidents registry: independently-verified agent availability failures + self-reported retractions (https://hlido.eu/v1/incidents)
@@ -54,6 +54,7 @@ An agent can stop here: comprehending Hlido costs this file, acting costs one ca
 - Ask about any agent (free, grounded AI Q&A over our reviews): https://hlido.eu/ask/
 - Trending agents (top-rated / freshest / rising, data-backed): https://hlido.eu/trending/ (JSON: https://hlido.eu/data/trending.json)
 - EU AI Act Article-50 Readiness Register (independent transparency-readiness signal, 800+ agents; deadline 2026-08-02): https://hlido.eu/eu-ai-act/register/ (JSON: https://hlido.eu/data/article50-register.json)
+- EU AI Act Evidence File builder (deployers: pick your agents → dated, citable evidence document, free): https://hlido.eu/eu-ai-act/evidence-file/
 - Vendor Stack Monitor (free, shareable trust-health page for your AI-agent vendor stack): https://hlido.eu/stack/
 - Why trust Hlido / independence pledge + who runs it (named editor, no pay-to-rank, private un-gameable weights): https://hlido.eu/about/
 - Report: https://hlido.eu/blog/agentic-commerce-readiness-index-2026-06/
@@ -74,6 +75,7 @@ not_scanned until then — never assumed safe).
 - Register data (machine-readable): https://hlido.eu/data/mcp-register.json — per server: security_tier, security_score, tool_poisoning_detected, dangerous_capabilities, no_auth, findings[]
 - Per-server evidence: https://hlido.eu/data/mcp-register/{slug}.json
 - On-demand scan (agent): `scan_mcp` tool on https://hlido.eu/mcp · CI: `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-mcp-scan@main` (scans a repo's MCP configs per PR)
+- Enterprise allowlist feed: https://hlido.eu/data/mcp-allowlist.json — independently-evidenced allowlist candidates for org MCP policies (published conservative criteria; absence ≠ unsafe)
 
 ## Developer / agent integrations
 
@@ -86,6 +88,7 @@ not_scanned until then — never assumed safe).
 ## Embeddable surfaces
 
 - README/image trust badge (SVG, works where iframes don't — GitHub, npm): https://hlido.eu/badge/{slug}.svg — Markdown `[![Hlido trust score](https://hlido.eu/badge/{slug}.svg)](https://hlido.eu/check/?agent={slug})`
+- "Verified Honest" badge variant (green mark — only for agents whose entire claim audit passed): https://hlido.eu/badge/{slug}.svg?variant=honest
 - Badge as data (shields.io endpoint schema): https://hlido.eu/badge/{slug}.json
 - Live score badge per slug (rich iframe card): https://hlido.eu/embed/{slug}/
 - Sparkline embed (score history per slug): https://hlido.eu/embed/sparkline/{slug}/
@@ -95,10 +98,14 @@ not_scanned until then — never assumed safe).
 
 - Side-by-side comparison: https://hlido.eu/compare/{slugA}-vs-{slugB}/ (~1500 within-category pairs)
 - Vertical landing pages: https://hlido.eu/best/{category-or-use-case}/ (37 curated)
+- Verified Honest club (agents whose entire public claim audit passed — zero failed claims): https://hlido.eu/verified/ (JSON: https://hlido.eu/data/verified-honest.json)
 
 ## Data rankings & analysis (blog)
 
 Evidence-backed rankings and reliability analyses derived from the live corpus (newest first):
+- 840 AI agents, tested and re-tested. Zero paid rankings. How an independent review desk works. (2026-07-19): https://hlido.eu/blog/how-an-independent-review-desk-works/
+- The agent economy can't talk to itself (2026-07-13): https://hlido.eu/blog/agent-economy-cant-talk-to-itself/
+- 27 days out: Article 50 is the part of the EU AI Act that did not move to 2027 (2026-07-06): https://hlido.eu/blog/article-50-the-deadline-that-did-not-move/
 - We Hands-On Tested 134 AI Coding Agents — Here's How Reliable They Actually Are (2026-06-21): https://hlido.eu/blog/coding-agent-reliability-index-2026-06/
 - The State of AI Agents, 2026 — what 664 hands-on reviews reveal (2026-06-14): https://hlido.eu/blog/state-of-ai-agents-2026/
 - Index: https://hlido.eu/blog/
