@@ -1,131 +1,42 @@
 {
-  "schema_version": "2.0",
   "slug": "automaapp-automa",
-  "name": "Automa",
-  "agent_url": "https://github.com/AutomaApp/automa",
+  "name": "AutomaApp/automa",
+  "agent_url": "https://www.goautoma.com/extension",
+  "repo_url": null,
   "category": "Workflow & Automation",
-  "run_id": "run-automaapp-automa-auto",
-  "run_at": "2026-06-07T00:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 40,
-  "tier": "FADING",
-  "laddoo_score": 40,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "Automa is a well-established browser automation extension for Chrome with 10k+ GitHub stars and a product site \u2014 the FADING score is a GitHub-URL audit artifact; the actual product would score STEADY.",
-    "body": "Automa is a browser automation Chrome extension (and Firefox) that lets non-developers automate web tasks using a visual block-based workflow builder. It predates the AI agent wave and represents the no-code automation tradition (similar to iMacros or browser-side Zapier). The product has a real site at automa.site, thorough documentation, a marketplace of shared workflows, and meaningful GitHub traction (10,000+ stars on the AutomaApp/automa repository). The AI features in Automa are an overlay on top of the visual workflow engine rather than the core product \u2014 click-recording, element selection, and conditional flows are the core. The FADING (40) score from this audit is an artifact of the automated test running against the GitHub URL without reaching automa.site. This should be re-reviewed against the product site for a STEADY or higher score.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-06-07",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "FADING (40) is a GitHub-URL audit artifact. Automa has 10k+ GitHub stars, an active product site at automa.site, and a real user base. A product-site-first audit would likely score STEADY. Re-review recommended.",
-  "what_it_does_well": [
-    "Visual block-based workflow builder \u2014 no coding required for automation",
-    "10,000+ GitHub stars and an active community marketplace of shared workflows",
-    "Chrome + Firefox extension model \u2014 works inside the user's existing browser",
-    "Active development and product site at automa.site with docs and marketplace",
-    "Free open-source version with optional premium tier"
-  ],
-  "what_it_fails_at": [
-    "Browser extension dependency \u2014 cannot run headlessly or in server-side automation pipelines",
-    "AI capabilities are add-on, not core \u2014 primarily a visual workflow tool",
-    "Cannot be driven programmatically by external agents (extension-only interaction model)",
-    "Limited to browser-based automation \u2014 no file system, API, or desktop app automation"
-  ],
-  "best_for": [
-    "Non-technical users wanting no-code browser workflow automation",
-    "Teams scraping data or automating repetitive browser tasks without Playwright overhead",
-    "Individual users who want to automate web tasks without writing scripts"
-  ],
-  "not_recommended_for": [
-    "Server-side or headless automation (requires actual browser with extension)",
-    "Agent pipelines that need programmatic automation invocation",
-    "Teams needing complex multi-system workflows beyond browser-only automation"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "browserflow",
-      "verdict_diff": "Both are visual browser automation tools. Automa is open-source with a community marketplace; Browserflow is cloud-managed. Automa wins for free/privacy-conscious users; Browserflow wins for teams wanting managed execution.",
-      "preferred_for_axis": "open-source-no-code-browser"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "GitHub repository with 10k+ stars",
-      "source": "https://github.com/AutomaApp/automa",
-      "tested_at": "2026-06-07",
-      "verified": true
-    },
-    {
-      "claim": "Product site at automa.site",
-      "source": "https://www.automa.site/",
-      "tested_at": "2026-06-07",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": true,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "Browser extension with webhook support. Not directly invokable by an external agent without browser extension context. Webhooks allow limited external triggers. Not programmatically composable for agent-driven workflows.",
-    "agent_friendly_score": 2
-  },
-  "summary": "Automa is a well-established no-code browser automation extension with 10k+ stars and a real product site \u2014 FADING score is audit artifact; actual product would score STEADY.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
-  "review_url": "https://hlido.eu/reviews/automaapp-automa/",
-  "reviewed_at": "2026-06-07",
-  "staleness_after": "2026-09-07",
-  "next_review_due_at": "2026-09-07",
-  "claims": [
+  "run_id": "run-automaapp-automa-sgbp7lup",
+  "run_at": "2026-07-17T00:00:34.385Z",
+  "source": "hlido-drain-worker",
+  "checklist": [
     {
       "id": "C01",
-      "claim": "Homepage accessible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "GitHub and automa.site both accessible",
-      "source_surface": "homepage"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C02",
-      "claim": "Pricing",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Open source + premium; pricing at automa.site",
-      "source_surface": "pricing"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C03",
-      "claim": "Documentation",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Docs at docs.automa.site",
-      "source_surface": "docs"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C04",
-      "claim": "Integrations",
-      "required": true,
-      "verdict": "fail",
-      "evidence": "Extension-only; limited integrations",
-      "source_surface": "unknown"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C05",
-      "claim": "Data handling",
-      "required": false,
-      "verdict": "fail",
-      "evidence": "Local extension; data handling docs not surfaced",
-      "source_surface": "unknown"
+      "pass": false,
+      "required": false
     }
   ],
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "generated_at": "2026-06-07T00:00:00.000Z"
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of AutomaApp/automa.",
+  "confidence": "low"
 }
