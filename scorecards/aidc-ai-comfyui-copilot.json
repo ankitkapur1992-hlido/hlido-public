@@ -1,41 +1,106 @@
 {
+  "schema_version": "2.1",
   "slug": "aidc-ai-comfyui-copilot",
   "name": "AIDC-AI/ComfyUI-Copilot",
   "agent_url": "https://github.com/AIDC-AI/ComfyUI-Copilot",
+  "repo_url": "https://github.com/AIDC-AI/ComfyUI-Copilot",
   "category": "Image & Design",
-  "run_id": "run-aidc-ai-comfyui-copilot-tom9a075",
-  "run_at": "2026-06-12T06:00:26.254Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-aidc-ai-comfyui-copilot-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:13:26Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for AIDC-AI/ComfyUI-Copilot"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 11145"
     },
     {
-      "id": "C03",
-      "pass": false,
-      "required": true
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "MIT"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 100d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v2.0"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "5375 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "1 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
       "pass": false,
-      "required": false
+      "evidence": "last push 100d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "CLI install line in README"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of AIDC-AI/ComfyUI-Copilot.",
-  "confidence": "low"
+  "repo_metrics": {
+    "stars": 5375,
+    "forks": 350,
+    "open_issues": 49,
+    "archived": false,
+    "pushed_at": "2026-04-07T04:23:08Z",
+    "license": "MIT",
+    "language": "TypeScript"
+  },
+  "evidence_urls": [
+    "https://github.com/AIDC-AI/ComfyUI-Copilot",
+    "https://api.github.com/repos/AIDC-AI/ComfyUI-Copilot",
+    "https://github.com/AIDC-AI/ComfyUI-Copilot/releases"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "AIDC-AI/ComfyUI-Copilot — An AI-powered custom node for ComfyUI designed to enhance workflow automation and provide intelligent assistance. Repo-surface review: measured from the public repository (5375 stars, MIT, last push 2026-04-07); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
