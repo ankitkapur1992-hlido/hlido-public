@@ -1,11 +1,109 @@
 {
+  "schema_version": "2.0",
   "slug": "heymrun-heym",
   "name": "heymrun/heym",
   "agent_url": "https://github.com/heymrun/heym",
   "category": "Workflow & Automation",
   "run_id": "run-heymrun-heym-kk6t0yuc",
   "run_at": "2026-06-13T18:01:33.949Z",
-  "source": "hlido-drain-worker",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A serious self-hosted, no-code AI workflow platform — strong observability and agent features, with a source-available (not OSI) license worth reading before you commit.",
+    "body": "Heym is a self-hosted, source-available platform for building AI workflows on a drag-and-drop canvas — think of it as an AI-native automation studio you run yourself. What raises it above the crowded no-code-AI pile is the depth on the parts that usually get skipped: full LLM observability with traces and USD token-cost tracking, human-in-the-loop pauses for approval, an evals system for testing workflows, and MCP support as both client and server. The agent story is real too — multi-agent setups with sub-agents and sub-workflows, a portable skills system, RAG against Qdrant or pgvector, and Playwright browser automation with AI auto-healing of broken selectors. For integration it exposes REST execution endpoints, SSE streaming, webhook triggers and a Portal chat UI. At 761 stars, 967 commits and 75 releases it's clearly past the weekend-project stage. The one thing to read carefully before adopting: the license is MIT with the Commons Clause, which means source-available, not OSI open-source — you can self-host and inspect it, but commercial resale is restricted and a commercial license exists. That's a legitimate model, but it's a different bargain than plain MIT, and buyers should know which one they're signing up for.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because it delivers a genuinely capable self-hosted workflow platform with the observability, HITL and eval features that separate production tooling from demos, plus a real integration surface (REST/SSE/webhooks/MCP). Held below VITAL by the Commons Clause license (source-available, not OSI open — a real adoption consideration) and the fact that the public surface is a README rather than an evidenced product with independent reliability data.",
+  "what_it_does_well": [
+    "No-code drag-and-drop canvas with AI-generated workflows from prompts or voice",
+    "Production-grade observability: full traces + USD token-cost tracking + execution history",
+    "Human-in-the-loop approval gates and a workflow evals system",
+    "Multi-agent orchestration, portable skills, and RAG over Qdrant/pgvector",
+    "Broad integration surface: REST/SSE endpoints, webhook triggers, MCP client + server"
+  ],
+  "what_it_fails_at": [
+    "MIT + Commons Clause is source-available, NOT OSI open-source — commercial use is restricted",
+    "Self-hosting requires real infra (Postgres 16, Docker, vector store) — not zero-ops",
+    "No standalone CLI/SDK or formal API docs mentioned beyond the execution endpoints",
+    "Public claims rest on a README; no independent reliability evidence yet"
+  ],
+  "best_for": [
+    "Teams that need self-hosted AI automation for data-privacy or control reasons",
+    "Builders wanting observability and cost tracking baked into their workflow engine",
+    "Multi-agent workflow projects that benefit from HITL gates and evals",
+    "Orgs comfortable running Postgres/Docker infrastructure"
+  ],
+  "not_recommended_for": [
+    "Buyers who require OSI-approved open-source licensing",
+    "Non-technical users wanting a fully hosted, zero-infrastructure SaaS",
+    "Teams needing a documented SDK/CLI rather than REST + webhooks"
+  ],
+  "red_flags": [
+    "License is MIT with Commons Clause (source-available, commercial-use restricted) — verify it fits your use before adopting"
+  ],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is the mature general workflow-automation incumbent with a huge integration catalog; Heym is younger but AI-native first, with deeper LLM observability and agent/RAG primitives built in rather than bolted on. Pick n8n for breadth of integrations, Heym for AI-native depth.",
+      "preferred_for_axis": "ai-native-workflow-depth"
+    },
+    {
+      "slug": "langflow",
+      "verdict_diff": "Langflow is a visual LLM-app builder; Heym adds heavier ops features (token-cost tracking, HITL, evals, MCP server) and a self-hosted-platform posture. Langflow for quick visual prototyping, Heym for running governed AI workflows in production.",
+      "preferred_for_axis": "production-observability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Self-hosted no-code AI workflow canvas with multi-agent orchestration",
+      "source": "https://github.com/heymrun/heym",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "LLM observability with traces + USD token cost; HITL; evals",
+      "source": "https://github.com/heymrun/heym",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "MCP client+server, REST/SSE endpoints, webhook triggers",
+      "source": "https://github.com/heymrun/heym",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "MIT + Commons Clause (source-available); 761 stars, 75 releases",
+      "source": "https://github.com/heymrun/heym",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Strong. Exposes REST execution endpoints, SSE streaming, webhook triggers and an MCP server, so external agents can invoke Heym workflows and Heym can consume external MCP tools. Designed as an orchestration layer other agents can call.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-21"
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -33,9 +131,12 @@
       "required": false
     }
   ],
-  "laddoo_score": 80,
-  "score": 80,
-  "tier": "STEADY",
-  "summary": "Public-surface review of heymrun/heym.",
-  "confidence": "low"
+  "summary": "A serious self-hosted, no-code AI workflow platform — strong observability and agent features, with a source-available (not OSI) license worth reading before you commit.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 37,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/heymrun-heym.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
