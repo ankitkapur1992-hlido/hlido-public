@@ -4,19 +4,16 @@
   "name": "Stakpak",
   "agent_url": "https://stakpak.dev",
   "category": "Infrastructure",
-
   "run_id": "run-62e05786ae503778-stakpak-dev",
   "run_at": "2026-06-17T12:33:43Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 71,
   "tier": "STEADY",
   "laddoo_score": 71,
   "confidence": "medium",
-
   "hlido_opinion": {
     "headline": "Always-on autonomous DevOps agent that lives on your machines — compelling premise, real traction, but the 'ship on autopilot' claim needs more verification surface.",
     "body": "Stakpak makes a specific and credible bet: that the correct architecture for autonomous DevOps is a persistent agent that runs on your own infrastructure 24/7 rather than a cloud service you call on demand. 'All the upside of a PaaS, none of the lock-in' is a sharp positioning. The curl-install one-liner and the Ratatui TUI show product craft — this isn't a README-only project. The 1,585 GitHub stars and active CI give signal that real developers are adopting it. The agent model (ping humans only when blocked, otherwise proceed) aligns with how experienced engineers already think about delegation. What's genuinely uncertain: the scope of what 'keeps your apps running' covers in production (deployment only? monitoring + auto-remediation? incident response?), the extent of platform compatibility (which cloud providers, which CI/CD systems), and what the failure modes look like when the agent gets stuck in a loop. This is the kind of tool where the integration story matters enormously — and the integration story lives mostly behind a signup and a working deployment.",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-17",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (71) because the architecture is differentiated (persistent local agent vs cloud service), the install experience is polished, and the star count is consistent with genuine adoption. Not VITAL because the deployment scope and failure handling are opaque from the public surface, and 1.5K stars is promising but not the signal of a category-defining tool yet.",
-
   "what_it_does_well": [
     "Persistent agent model — runs 24/7 on your infrastructure, not a cloud function you invoke",
     "Ratatui TUI shows real product craft for a CLI-first tool",
@@ -34,7 +29,6 @@
     "Open source (Apache 2.0) with active CI and community (Discord)",
     "Human-in-the-loop only when blocked — correct default for autonomous DevOps"
   ],
-
   "what_it_fails_at": [
     "Scope of 'keeps your apps running' opaque — deployment-only? monitoring? incident response?",
     "Cloud/CI platform compatibility not enumerated on public surface",
@@ -42,23 +36,19 @@
     "No public demo of actual autonomous operation — GitHub GIF shows UI, not end-to-end run",
     "Pricing and enterprise support story absent"
   ],
-
   "best_for": [
     "Engineering teams that want an autonomous DevOps agent without surrendering infra control to a managed service",
     "Self-hosted deployments where data sovereignty matters",
     "Small engineering teams that need continuous deployment monitoring without a dedicated DevOps hire",
     "Organizations already using Rust tooling that can extend the agent's capabilities"
   ],
-
   "not_recommended_for": [
     "Teams that need vendor SLAs and enterprise support",
     "Organizations with existing GitOps tooling that already handles autonomous deployment",
     "Teams that need the agent on cloud infrastructure they don't control (Stakpak runs on your machines)",
     "Non-technical operators — CLI-first with TUI requires engineering comfort"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "flytio",
@@ -66,14 +56,32 @@
       "preferred_for_axis": "autonomous-devops"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "Open source on GitHub with 1500+ stars", "source": "https://github.com/stakpak/agent", "tested_at": "2026-06-17", "verified": true},
-    {"claim": "curl install one-liner", "source": "https://stakpak.dev/install.sh", "tested_at": "2026-06-17", "verified": true},
-    {"claim": "Apache 2.0 license", "source": "https://github.com/stakpak/agent", "tested_at": "2026-06-17", "verified": true},
-    {"claim": "Ratatui TUI in screenshots", "source": "https://github.com/stakpak/agent", "tested_at": "2026-06-17", "verified": true}
+    {
+      "claim": "Open source on GitHub with 1500+ stars",
+      "source": "https://github.com/stakpak/agent",
+      "tested_at": "2026-06-17",
+      "verified": true
+    },
+    {
+      "claim": "curl install one-liner",
+      "source": "https://stakpak.dev/install.sh",
+      "tested_at": "2026-06-17",
+      "verified": true
+    },
+    {
+      "claim": "Apache 2.0 license",
+      "source": "https://github.com/stakpak/agent",
+      "tested_at": "2026-06-17",
+      "verified": true
+    },
+    {
+      "claim": "Ratatui TUI in screenshots",
+      "source": "https://github.com/stakpak/agent",
+      "tested_at": "2026-06-17",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": false,
     "has_cli": true,
@@ -84,22 +92,55 @@
     "agent_integration_path": "CLI-first. Install via curl, configure, and the agent runs persistently on your machines. Not designed to be called by other agents — it IS the agent. Limited external API surface documented.",
     "agent_friendly_score": 4
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-17T12:33:25Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Ship your code, on autopilot'", "tested_at": "2026-06-17T12:33:25Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "Install command + GitHub link", "tested_at": "2026-06-17T12:33:25Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source", "tested_at": "2026-06-17T12:33:25Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "GIF demo in GitHub README", "tested_at": "2026-06-17T12:33:25Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-17T12:33:25Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Ship your code, on autopilot'",
+      "tested_at": "2026-06-17T12:33:25Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Install command + GitHub link",
+      "tested_at": "2026-06-17T12:33:25Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source",
+      "tested_at": "2026-06-17T12:33:25Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "GIF demo in GitHub README",
+      "tested_at": "2026-06-17T12:33:25Z"
+    }
   ],
-
   "summary": "Always-on autonomous DevOps agent that lives on your machines — compelling premise, real traction, but the 'ship on autopilot' claim needs more verification surface.",
-
   "staleness_after": "2026-09-17",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-17",
-
   "attestation_url": "/data/attestations/stakpak-agent.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-19",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
