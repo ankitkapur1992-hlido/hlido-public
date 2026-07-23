@@ -15,13 +15,13 @@
   "laddoo_score": 82,
   "confidence": "high",
   "hlido_opinion": {
-    "headline": "Anthropic first-party computer-use API \u2014 the production-grade reference implementation for browser-driving agents.",
-    "body": "Anthropic Computer Use is the API capability that lets Claude take screenshots, move the cursor, click, and type \u2014 operating any desktop GUI the way a human would. As of mid-2026 it remains the most credible production-grade reference implementation in this category: documented in the Anthropic API, available in the Sonnet 4 tier, and openly extended via the open-sourced reference scaffolding on GitHub. Where it wins versus rivals is operational maturity (sandbox patterns, safety mitigations, rate-limit handling) rather than raw capability differentiation. Where it weakens is the same place every general-purpose computer-use system weakens: real-world UI variance still causes drift, the cost-per-task is meaningful (a multi-screen workflow can burn $0.50+), and the safety posture (no autonomous web purchases, no email-send without explicit human turn) limits how agentic the agent can actually be without orchestration code around it. For the agentic-economy reader: this is the system most other browser-driving agents are silently benchmarking against.",
+    "headline": "Anthropic first-party computer-use API — the production-grade reference implementation for browser-driving agents.",
+    "body": "Anthropic Computer Use is the API capability that lets Claude take screenshots, move the cursor, click, and type — operating any desktop GUI the way a human would. As of mid-2026 it remains the most credible production-grade reference implementation in this category: documented in the Anthropic API, available in the Sonnet 4 tier, and openly extended via the open-sourced reference scaffolding on GitHub. Where it wins versus rivals is operational maturity (sandbox patterns, safety mitigations, rate-limit handling) rather than raw capability differentiation. Where it weakens is the same place every general-purpose computer-use system weakens: real-world UI variance still causes drift, the cost-per-task is meaningful (a multi-screen workflow can burn $0.50+), and the safety posture (no autonomous web purchases, no email-send without explicit human turn) limits how agentic the agent can actually be without orchestration code around it. For the agentic-economy reader: this is the system most other browser-driving agents are silently benchmarking against.",
     "voice": "Hlido Editor",
     "as_of": "2026-05-23",
     "editor_signature_pending": true
   },
-  "tier_rationale": "VITAL (82) because this is the canonical reference implementation for browser-driving AI agents in production \u2014 well-documented, openly extensible, and operationally mature. Not 90+ because the cost-per-task and safety-posture constraints meaningfully limit the autonomous workflows it can complete without orchestration code wrapping it.",
+  "tier_rationale": "VITAL (82) because this is the canonical reference implementation for browser-driving AI agents in production — well-documented, openly extensible, and operationally mature. Not 90+ because the cost-per-task and safety-posture constraints meaningfully limit the autonomous workflows it can complete without orchestration code wrapping it.",
   "what_it_does_well": [
     "Production-grade screenshot + click + type primitives that work across most consumer desktop apps",
     "Open-sourced reference scaffolding lowers the bar to integration",
@@ -40,13 +40,13 @@
   "not_recommended_for": [
     "High-volume consumer agentic workflows where cost-per-session matters",
     "Use cases needing autonomous purchase/transaction completion without human turn",
-    "Workflows where screen UI changes constantly \u2014 drift recovery still requires caller code"
+    "Workflows where screen UI changes constantly — drift recovery still requires caller code"
   ],
   "red_flags": [],
   "compared_to": [
     {
       "slug": "openai",
-      "verdict_diff": "OpenAI Operator is the closest peer \u2014 broadly comparable capabilities but Anthropic safety posture is more explicit and the reference scaffolding is open-sourced. Choose Computer Use when sandbox transparency matters; Operator when ChatGPT-ecosystem integration matters.",
+      "verdict_diff": "OpenAI Operator is the closest peer — broadly comparable capabilities but Anthropic safety posture is more explicit and the reference scaffolding is open-sourced. Choose Computer Use when sandbox transparency matters; Operator when ChatGPT-ecosystem integration matters.",
       "preferred_for_axis": "safety-transparency"
     },
     {
@@ -76,7 +76,7 @@
     "has_webhook": false,
     "has_sdk": true,
     "behavioral_testable": true,
-    "agent_integration_path": "Direct API call via Anthropic SDK \u2014 pass the computer_use tool spec to Claude Sonnet 4. The agent IS the model; the SDK is the integration.",
+    "agent_integration_path": "Direct API call via Anthropic SDK — pass the computer_use tool spec to Claude Sonnet 4. The agent IS the model; the SDK is the integration.",
     "agent_friendly_score": 9
   },
   "checklist": [
@@ -125,7 +125,7 @@
     "checklist": "1.0"
   },
   "aspect_versions_as_of": "2026-05-23",
-  "summary": "Anthropic first-party computer-use API \u2014 the production-grade reference implementation for browser-driving agents.",
+  "summary": "Anthropic first-party computer-use API — the production-grade reference implementation for browser-driving agents.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "_handcrafted": {
     "by": "ceo_claude/ses-e8a59259",
@@ -137,5 +137,13 @@
   "next_review_due_at": "2026-08-23",
   "attestation_url": "/data/attestations/anthropic-computer-use.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2-handcraft"
+  "source": "hlido-editor-v2-handcraft",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-11",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
