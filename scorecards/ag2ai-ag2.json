@@ -1,136 +1,42 @@
 {
-  "schema_version": "2.0",
   "slug": "ag2ai-ag2",
-  "name": "AG2 (AutoGen 2) by ag2ai",
-  "agent_url": "https://github.com/ag2ai/ag2",
+  "name": "ag2ai/ag2",
+  "agent_url": "https://ag2.ai",
+  "repo_url": null,
   "category": "AI Agent",
-  "run_id": "run-ag2ai-ag2-auto",
-  "run_at": "2026-06-07T00:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 40,
-  "tier": "FADING",
-  "laddoo_score": 40,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "AG2 is the community continuation of AutoGen (Microsoft Research's multi-agent framework) \u2014 a legitimate open-source framework with real ecosystem momentum, though the FADING score reflects a low-confidence automated surface audit rather than actual product quality.",
-    "body": "AG2 (previously AutoGen, renamed after a community fork from the Microsoft Research project) is one of the most significant open-source multi-agent frameworks in the Python ecosystem. It defines a protocol for multi-agent conversation and task delegation \u2014 agents can be LLMs, tools, or human proxies, and they communicate via a structured message protocol. The framework has significant GitHub traction (tens of thousands of stars on the original AutoGen repository), an active community, documentation at ag2.ai, and is used in production by researchers and practitioners building complex agent pipelines. The FADING (40) score from this review appears to be an artifact of the automated surface audit testing the GitHub repository URL rather than the product site \u2014 ag2.ai has proper documentation, API references, and examples. This slug should be re-reviewed against ag2.ai for a meaningful score. Note: Hlido preserves the engine score per methodology; the editorial layer surfaces this tension explicitly.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-06-07",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "FADING (40) is the engine-assigned score from a GitHub-URL audit. Editorial assessment: this score does NOT reflect AG2's actual quality, which would score VITAL or STEADY based on ag2.ai's documented API, tutorial depth, community size, and production adoption. Re-review against ag2.ai is a priority for the next R1 scout cycle.",
-  "what_it_does_well": [
-    "One of the most mature open-source multi-agent frameworks (successor to AutoGen)",
-    "Structured agent conversation protocol usable across LLM providers",
-    "Active community with documentation site at ag2.ai",
-    "Production-proven in research and enterprise agent pipelines",
-    "Python SDK with typed API, extensive examples, and tutorials"
-  ],
-  "what_it_fails_at": [
-    "Framework complexity \u2014 steep learning curve vs simpler agent tools",
-    "Primarily Python-first; JS/TS and other language SDKs are community-maintained",
-    "Configuration verbosity for multi-agent pipelines vs LangChain/LlamaIndex's abstractions"
-  ],
-  "best_for": [
-    "Python developers building complex multi-agent task pipelines",
-    "Research teams prototyping agent architectures",
-    "Engineers who need a structured conversation protocol between LLM agents",
-    "Teams building agent systems that require human-in-the-loop workflows"
-  ],
-  "not_recommended_for": [
-    "Beginners wanting a simple chat interface or one-shot agent tool",
-    "Non-Python tech stacks without significant adaptation effort",
-    "Users wanting a SaaS with GUI \u2014 this is a framework, not a product"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "crewai",
-      "verdict_diff": "CrewAI is the more opinionated, beginner-friendly multi-agent framework with role-playing metaphors. AG2 is lower-level and more flexible \u2014 better for research; CrewAI better for getting a working agent pipeline faster.",
-      "preferred_for_axis": "research-flexibility"
-    },
-    {
-      "slug": "langchain",
-      "verdict_diff": "LangChain is broader (RAG, chains, tools, agents) but thinner on multi-agent conversation patterns. AG2 is narrow-but-deep on multi-agent coordination. Often used together: LangChain for tooling, AG2 for conversation protocol.",
-      "preferred_for_axis": "multi-agent-conversation"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "GitHub repository accessible",
-      "source": "https://github.com/ag2ai/ag2",
-      "tested_at": "2026-06-07",
-      "verified": true
-    },
-    {
-      "claim": "Documentation site exists at ag2.ai",
-      "source": "https://ag2.ai/docs/",
-      "tested_at": "2026-06-07",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": true,
-    "has_cli": true,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": true,
-    "behavioral_testable": true,
-    "agent_integration_path": "Python SDK with full API. An external agent can import AG2 and use it to spawn and coordinate sub-agents. pip install ag2. Extensive documentation at ag2.ai. The framework IS the agent integration surface.",
-    "agent_friendly_score": 9
-  },
-  "summary": "AG2 is the community continuation of AutoGen \u2014 a production-grade multi-agent framework. Score of 40 reflects a GitHub-URL audit artifact; actual product quality would score VITAL.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
-  "review_url": "https://hlido.eu/reviews/ag2ai-ag2/",
-  "reviewed_at": "2026-06-07",
-  "staleness_after": "2026-09-07",
-  "next_review_due_at": "2026-09-07",
-  "claims": [
+  "run_id": "run-ag2ai-ag2-5zxhw3x6",
+  "run_at": "2026-07-16T18:00:30.908Z",
+  "source": "hlido-drain-worker",
+  "checklist": [
     {
       "id": "C01",
-      "claim": "Homepage accessible",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "GitHub repository accessible; ag2.ai also live",
-      "source_surface": "homepage"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C02",
-      "claim": "Pricing",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Open source \u2014 free",
-      "source_surface": "homepage"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C03",
-      "claim": "Documentation",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Extensive docs at ag2.ai/docs",
-      "source_surface": "docs"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C04",
-      "claim": "Integrations",
-      "required": true,
-      "verdict": "pass",
-      "evidence": "Multiple LLM provider integrations documented",
-      "source_surface": "docs"
+      "pass": false,
+      "required": true
     },
     {
       "id": "C05",
-      "claim": "Data handling",
-      "required": false,
-      "verdict": "pass",
-      "evidence": "Open source \u2014 user controls data",
-      "source_surface": "docs"
+      "pass": false,
+      "required": false
     }
   ],
-  "evidence_tier": "public-audit-only",
-  "engine": "public-surface",
-  "generated_at": "2026-06-07T00:00:00.000Z"
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of ag2ai/ag2.",
+  "confidence": "low"
 }
