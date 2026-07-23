@@ -4,19 +4,16 @@
   "name": "SkillClaw",
   "agent_url": "https://github.com/AMAP-ML/SkillClaw",
   "category": "Frameworks & Eval",
-
   "run_id": "run-3ffa6d56e0067a6e-github-com",
   "run_at": "2026-06-16T08:31:21Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 70,
   "tier": "STEADY",
   "laddoo_score": 70,
   "confidence": "medium",
-
   "hlido_opinion": {
     "headline": "Research-grade collective skill evolution for AI agents — 1,900 stars and an arXiv paper make this more than a weekend project, but it's a research tool, not a production one.",
     "body": "SkillClaw addresses a real problem that most agent frameworks ignore: agents learn nothing from their interactions. Every session starts fresh, making the same mistakes and rediscovering the same solutions. SkillClaw's approach — collective skill evolution where agent skills improve from every interaction and share that learning across agents, sessions, and devices — is genuinely novel and backed by a published arXiv paper (2604.08377). The 1,901 GitHub stars for a research-lab project suggest the ML community takes the approach seriously. Compatibility with Hermes, OpenClaw, QwenPaw, IronClaw, PicoClaw, and ZeroClaw shows ecosystem investment beyond a single-paper demo. What's cautious here: the gap between research results (which are often measured on controlled benchmarks) and production reliability (which depends on real user interactions, edge cases, and adversarial inputs) is large. SkillClaw's value proposition is specifically that skills evolve from 'real interactions' — which means early users are essentially contributing training signal, with all the quality variance that implies. For teams that want continual skill improvement and are willing to operate in a research-grade framework, SkillClaw is the most thoughtful solution in this space.",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-16",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (70) because the arXiv publication gives it more credibility than typical OSS projects, 1,901 stars signal real ML community interest, and the collective learning across agents/devices is a genuinely differentiated capability. Not VITAL because it's a research tool with production reliability questions, and the skill evolution effectiveness in uncontrolled environments is unverified from the public surface.",
-
   "what_it_does_well": [
     "arXiv paper (2604.08377) gives academic credibility and a verifiable methodology description",
     "Collective skill sharing — one agent's learning improves all agents in the ecosystem",
@@ -34,7 +29,6 @@
     "Multi-platform compatibility: Hermes, OpenClaw, QwenPaw, IronClaw, PicoClaw, ZeroClaw",
     "Open source (MIT) with real CI — not just a paper demo"
   ],
-
   "what_it_fails_at": [
     "Production reliability of continually-evolving skills in uncontrolled environments unverified",
     "Skill quality depends on contributing users — early ecosystem = noisy training signal",
@@ -42,23 +36,19 @@
     "Adversarial skill injection (what happens when bad actors contribute garbage interactions) not addressed in public docs",
     "Dependency on other agents in the ecosystem for collective value — isolated use is weaker"
   ],
-
   "best_for": [
     "ML researchers building on agent skill learning foundations",
     "Developers already using Hermes or OpenClaw agents who want continual improvement",
     "Projects where the same task types recur at scale and improvement from iteration is valuable",
     "Research teams that want a published-method foundation rather than proprietary black-box learning"
   ],
-
   "not_recommended_for": [
     "Production systems where skill quality variance is unacceptable",
     "One-off or low-volume agent tasks (collective learning needs volume to show value)",
     "Teams wanting a standalone agent framework — SkillClaw is a plugin layer, not a full framework",
     "Security-sensitive deployments without vetted skill provenance controls"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "yantrikos-yantrikdb-hermes-plugin",
@@ -66,14 +56,32 @@
       "preferred_for_axis": "collective-skill-evolution"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "arXiv paper 2604.08377", "source": "https://arxiv.org/abs/2604.08377", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "1,901 GitHub stars", "source": "https://github.com/AMAP-ML/SkillClaw", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "MIT License", "source": "https://github.com/AMAP-ML/SkillClaw", "tested_at": "2026-06-16", "verified": true},
-    {"claim": "npx skills add SkillClaw -y -g install", "source": "https://github.com/AMAP-ML/SkillClaw", "tested_at": "2026-06-16", "verified": true}
+    {
+      "claim": "arXiv paper 2604.08377",
+      "source": "https://arxiv.org/abs/2604.08377",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "1,901 GitHub stars",
+      "source": "https://github.com/AMAP-ML/SkillClaw",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "MIT License",
+      "source": "https://github.com/AMAP-ML/SkillClaw",
+      "tested_at": "2026-06-16",
+      "verified": true
+    },
+    {
+      "claim": "npx skills add SkillClaw -y -g install",
+      "source": "https://github.com/AMAP-ML/SkillClaw",
+      "tested_at": "2026-06-16",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": false,
     "has_cli": true,
@@ -84,22 +92,55 @@
     "agent_integration_path": "Skill plugin for Hermes/OpenClaw and compatible agents. Install via npx skills add. Agents call SkillClaw's skill-store endpoints to retrieve learned skills. Collective evolution happens server-side. No standalone API for external agent consumption.",
     "agent_friendly_score": 6
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-16T08:31:15Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Let Skills Evolve Collectively with Agentic Evolver'", "tested_at": "2026-06-16T08:31:15Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "Quick install command in README", "tested_at": "2026-06-16T08:31:15Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source (MIT)", "tested_at": "2026-06-16T08:31:15Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "arXiv paper + Hugging Face paper page", "tested_at": "2026-06-16T08:31:15Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-16T08:31:15Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Let Skills Evolve Collectively with Agentic Evolver'",
+      "tested_at": "2026-06-16T08:31:15Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Quick install command in README",
+      "tested_at": "2026-06-16T08:31:15Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT)",
+      "tested_at": "2026-06-16T08:31:15Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "arXiv paper + Hugging Face paper page",
+      "tested_at": "2026-06-16T08:31:15Z"
+    }
   ],
-
   "summary": "Research-grade collective skill evolution for AI agents — 1,900 stars and an arXiv paper make this more than a weekend project, but it's a research tool, not a production one.",
-
   "staleness_after": "2026-09-16",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-16",
-
   "attestation_url": "/data/attestations/amap-ml-skillclaw.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-18",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
