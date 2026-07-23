@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site-v2.css?v=20260613cream">
-  <link rel="stylesheet" href="/assets/theme-dark.css?v=20260613cream">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=20260713unify">
+  <link rel="stylesheet" href="/assets/site-v3.css?v=20260713unify">
   <style>
     .incident-detail { background: var(--paper); color: var(--ink); }
     .incident-detail .wrap { max-width: 820px; }
@@ -140,7 +140,7 @@
           document.getElementById('meta').innerHTML =
             '<span class="badge sev-' + escapeHtml(i.severity) + '">' + escapeHtml(i.severity) + '</span>' +
             '<span class="badge">' + escapeHtml(i.category) + '</span>' +
-            '<span class="agent-link"><a href="/reviews/' + escapeHtml(i.slug) + '/">' + escapeHtml(i.slug) + '</a></span>' +
+            '<span class="agent-link">' + escapeHtml(i.slug) + '</span>' +
             '<span>Observed ' + escapeHtml(fmtDate(i.observed_at)) + '</span>' +
             (i.published_at ? '<span>Published ' + escapeHtml(fmtDate(i.published_at)) + '</span>' : '') +
             (i.submitter_handle ? '<span>by ' + escapeHtml(i.submitter_handle) : '') + '</span>';
