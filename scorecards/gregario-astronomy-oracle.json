@@ -1,0 +1,106 @@
+{
+  "schema_version": "2.1",
+  "slug": "gregario-astronomy-oracle",
+  "name": "gregario/astronomy-oracle",
+  "agent_url": "https://github.com/gregario/astronomy-oracle",
+  "repo_url": "https://github.com/gregario/astronomy-oracle",
+  "category": "MCP Server",
+  "run_id": "run-gregario-astronomy-oracle-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "checklist": [
+    {
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for gregario/astronomy-oracle"
+    },
+    {
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 4487"
+    },
+    {
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "MIT"
+    },
+    {
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
+    },
+    {
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 75d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v0.1.0"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": false,
+      "evidence": "3 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "2 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 75d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "MCP server markers in README"
+    }
+  ],
+  "repo_metrics": {
+    "stars": 3,
+    "forks": 1,
+    "open_issues": 0,
+    "archived": false,
+    "pushed_at": "2026-05-02T20:53:42Z",
+    "license": "MIT",
+    "language": "TypeScript"
+  },
+  "evidence_urls": [
+    "https://github.com/gregario/astronomy-oracle",
+    "https://api.github.com/repos/gregario/astronomy-oracle",
+    "https://github.com/gregario/astronomy-oracle/releases"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "gregario/astronomy-oracle — Celestial object catalog and observing session planner MCP server. Repo-surface review: measured from the public repository (3 stars, MIT, last push 2026-05-02); not hands-on tested.",
+  "staleness_after": "2026-10-14"
+}
