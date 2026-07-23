@@ -102,5 +102,54 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "jo-inc/camofox-browser — Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.. Repo-surface review: measured from the public repository (7733 stars, MIT, last push 2026-06-16); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A well-engineered MIT stealth browser that drops into Puppeteer/Playwright for agent scraping — strong hygiene and traction, but its whole purpose (bypassing bot detection) is a compliance and ToS minefield.",
+    "body": "On pure repository signals this is one of the healthier projects in its category: MIT-licensed, 7.7k stars, six CI workflows, a frequent release cadence (v1.11.2) and a large 34k-char README. Drop-in API compatibility with Puppeteer/Playwright makes adoption cheap for agents already on those stacks. The honest caveat isn't technical — it's what the tool is for. Its stated purpose is to defeat Cloudflare, bot detection and anti-scraping, so any agent that uses it inherits the target site's Terms of Service and, in some jurisdictions, computer-access law. That makes it a capability to deploy deliberately against cooperating or owned targets, not a default dependency. The 178 open issues are worth watching against the release cadence. Repo-surface read; stealth effectiveness is an arms race we can't verify from the repo.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82, the repo-surface ceiling). MIT licensing, strong CI hygiene, frequent releases, drop-in compatibility and heavy traction all clear STEADY. VITAL is withheld because effectiveness against evolving detectors cannot be verified from repo signals, and the compliance profile is inherently caller-dependent.",
+  "what_it_does_well": [
+    "MIT-licensed and drop-in compatible with Puppeteer/Playwright — low adoption cost",
+    "Unusually strong engineering hygiene for the category (6 CI workflows)",
+    "Frequent tagged releases (v1.11.2) and active maintenance (push within ~30 days)",
+    "Large, detailed README (~34.9k chars); solid traction (7.7k stars)"
+  ],
+  "what_it_fails_at": [
+    "178 open issues — a sizable backlog to weigh against the release cadence",
+    "Stealth effectiveness is unverifiable from the repo surface (an arms race vs. detectors)",
+    "No guarantee against future breakage as anti-bot systems evolve"
+  ],
+  "best_for": [
+    "Agents needing resilient headless browsing against cooperating or owned targets",
+    "Teams already on Puppeteer/Playwright wanting a drop-in replacement"
+  ],
+  "not_recommended_for": [
+    "Use against sites whose Terms of Service forbid automated access",
+    "Compliance-sensitive organizations",
+    "Anyone needing a stable, non-arms-race dependency"
+  ],
+  "red_flags": [
+    {
+      "severity": "medium",
+      "note": "The core function is bypassing bot detection and anti-scraping, which can breach a target site's Terms of Service and, in some jurisdictions, computer-access law. Legality must be evaluated per target before deployment."
+    }
+  ],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Drop-in Puppeteer/Playwright-compatible library an agent can call directly for headless browsing; installed via the documented CLI/package line. No hands-on behavioral test performed.",
+    "agent_friendly_score": 7
+  },
+  "enriched_at": "2026-07-23",
+  "enriched_by": "R-publish"
 }
