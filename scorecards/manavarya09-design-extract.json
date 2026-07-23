@@ -1,41 +1,32 @@
 {
+  "schema_version": "2.1",
   "slug": "manavarya09-design-extract",
   "name": "Manavarya09/design-extract",
   "agent_url": "https://github.com/Manavarya09/design-extract",
+  "repo_url": "https://github.com/Manavarya09/design-extract",
   "category": "Image & Design",
-  "run_id": "run-manavarya09-design-extract-or1rliak",
-  "run_at": "2026-06-15T06:01:17.693Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-manavarya09-design-extract-repotrack-2026-07-17",
+  "run_at": "2026-07-17T15:35:30Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track. The repository this product was distributed from returns 404 (GitHub API, verified 2026-07-16) — the product is no longer publicly available. FLATLINE is the measured verdict for a product that cannot be obtained; the prior 80/STEADY review described a repository that has since been deleted. Re-scored automatically if the repository returns.",
   "checklist": [
     {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true
-    },
-    {
-      "id": "cta_present",
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
       "pass": false,
-      "required": true
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": true,
-      "required": false
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false
+      "evidence": "GH API 404 for Manavarya09/design-extract (2026-07-16)"
     }
   ],
-  "laddoo_score": 80,
-  "score": 80,
-  "tier": "STEADY",
-  "summary": "Public-surface review of Manavarya09/design-extract.",
-  "confidence": "low"
+  "evidence_urls": [
+    "https://api.github.com/repos/Manavarya09/design-extract"
+  ],
+  "laddoo_score": 10,
+  "score": 10,
+  "tier": "FLATLINE",
+  "confidence": "high",
+  "summary": "Manavarya09/design-extract — the source repository has been deleted or made private; the product is no longer publicly obtainable (verified 2026-07-16). Prior review described a repository that no longer exists.",
+  "staleness_after": "2026-10-15"
 }
