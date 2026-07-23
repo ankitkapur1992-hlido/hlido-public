@@ -1,11 +1,85 @@
 {
+  "schema_version": "2.0",
   "slug": "genieincodebottle-generative-ai",
   "name": "genieincodebottle/generative-ai",
   "agent_url": "https://github.com/genieincodebottle/generative-ai",
-  "category": "Coding",
+  "category": "Research",
   "run_id": "run-genieincodebottle-generative-ai-1cwdjkbh",
   "run_at": "2026-06-12T18:01:33.434Z",
-  "source": "hlido-drain-worker",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A well-organised GenAI learning repository — a strong study resource, but not an agent or a product you can deploy.",
+    "body": "It's worth being precise about what this is, because the category matters more than the score: genieincodebottle/generative-ai is an educational knowledge base — roadmaps, LLM fundamentals, prompt-engineering guides, interview prep, and a set of hands-on Jupyter/Python projects (RAG systems, chatbots, text-to-SQL, agentic-AI examples). Its own description calls it 'comprehensive resources on Generative AI, including a detailed roadmap, projects, use cases, interview preparation, and coding preparation.' On those terms it's good: 2.6k stars and 568 commits signal real community trust and ongoing upkeep, the MIT license makes it freely reusable, and the breadth from fundamentals through cloud deployment is genuinely useful for someone learning the field. But it exposes no API, no CLI, no SDK, and no MCP server — it documents MCP as a concept rather than shipping one. So while it earns its STEADY score as a learning artifact, an agent cannot 'use' it in any runtime sense. Read the score as 'a dependable, well-maintained study resource,' not 'a tool to integrate.'",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) as an educational resource: it's well-maintained, broad, permissively licensed, and community-trusted (2.6k stars). The rating reflects quality-as-a-knowledge-base. It is explicitly NOT an evaluation of a runnable agent — there is no deployable product surface here, which is why agent-relevance is low despite the solid score.",
+  "what_it_does_well": [
+    "Broad, well-structured GenAI curriculum from fundamentals to deployment",
+    "Hands-on projects (RAG, chatbots, text-to-SQL, agentic examples) as runnable notebooks",
+    "Actively maintained (568 commits) with real community trust (2.6k stars)",
+    "MIT licensed — freely reusable for learning and teaching"
+  ],
+  "what_it_fails_at": [
+    "Not a product/agent — no API, CLI, SDK, or MCP server to deploy or integrate",
+    "Documents MCP as a concept rather than providing one",
+    "Value depends entirely on the reader doing the work; nothing runs autonomously",
+    "As a curated collection, freshness varies section to section"
+  ],
+  "best_for": [
+    "Developers and professionals learning generative AI end-to-end",
+    "Anyone preparing for GenAI / agentic-AI interviews",
+    "Educators looking for a structured, permissively-licensed syllabus"
+  ],
+  "not_recommended_for": [
+    "Anyone looking for a deployable agent or runtime tool",
+    "Agent-driven workflows needing a programmatic interface",
+    "Teams wanting supported, productised software"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Educational GenAI resource: roadmap, projects, interview prep",
+      "source": "https://github.com/genieincodebottle/generative-ai",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed, 2.6k stars, 568 commits",
+      "source": "https://github.com/genieincodebottle/generative-ai",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "No API/CLI/SDK/MCP runtime surface (documents MCP as a concept)",
+      "source": "https://github.com/genieincodebottle/generative-ai",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — this is a learning repository, not a runnable agent. An agent cannot drive or call it; its value is human study material and reference code.",
+    "agent_friendly_score": 1
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Educational repository, not a generative agent producing distributable AI output."
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -33,9 +107,12 @@
       "required": false
     }
   ],
-  "laddoo_score": 80,
-  "score": 80,
-  "tier": "STEADY",
-  "summary": "Public-surface review of genieincodebottle/generative-ai.",
-  "confidence": "low"
+  "summary": "A well-organised GenAI learning repository — a strong study resource, but not an agent or a product you can deploy.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 38,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/genieincodebottle-generative-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
