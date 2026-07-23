@@ -1,11 +1,108 @@
 {
+  "schema_version": "2.0",
   "slug": "google-agents-cli",
   "name": "google/agents-cli",
-  "agent_url": "https://github.com/google/agents-cli",
-  "category": "Infrastructure",
-  "run_id": "run-google-agents-cli-kqugbrpa",
-  "run_at": "2026-06-13T00:00:56.011Z",
-  "source": "hlido-drain-worker",
+  "agent_url": "https://google.github.io/agents-cli/",
+  "repo_url": "https://github.com/google/agents-cli",
+  "category": "Frameworks & Eval",
+  "run_id": "run-google-agents-cli-2y41z6pe",
+  "run_at": "2026-07-18T00:00:35.023Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.07",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Official Google tooling that makes any coding assistant better at scaffolding, evaluating and deploying ADK agents on Google Cloud — a force multiplier, not an agent itself.",
+    "body": "This is a first-party Google project (under the `google` GitHub org, documented on the Google Developers Blog), and it's important to be clear about what it is: agents-cli is a CLI plus a skills package for building, evaluating and deploying AI agents on Google Cloud — the agents themselves are built with Google's Agent Development Kit (ADK), and agents-cli handles everything around them: scaffolding, evaluation, deployment, and observability. It's explicitly a tool for coding agents, designed to make Claude Code, Codex, Antigravity or any other assistant fluent in the ADK-on-Google-Cloud lifecycle — while also working standalone from your terminal (`agents-cli scaffold/eval/deploy`). The strategic read is that Google is doing what platform owners do: reducing friction from create to production so its Agent Platform becomes the path of least resistance. The credit here is real — first-party maintenance, a coherent create-to-production story, and local development possible with just an AI Studio API key. The honest limits: value is tightly coupled to Google Cloud and ADK, so it's a lock-in-adjacent choice; there's no pricing on the tool surface because the cost lives in the cloud resources it deploys; and as a young first-party tool the independent evidence of real-world reliability is still thin.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because it's genuinely useful first-party infrastructure with a clear, coherent purpose (the ADK-agent create-to-production lifecycle) and the trust that comes with official Google maintenance. Not VITAL because it is deliberately ecosystem-bound (ADK + Google Cloud), which is a real portability trade-off, and because it's early enough that independent reliability evidence beyond Google's own docs is limited.",
+  "what_it_does_well": [
+    "Official Google tool — first-party maintenance and documentation via the Agent Platform",
+    "Coherent create-to-production lifecycle: scaffold, evaluate, deploy, observe",
+    "Works both as a skill layer for coding assistants AND standalone from the terminal",
+    "Local development possible with just an AI Studio API key (no immediate Cloud spend to try)",
+    "Composes with multiple assistants (Claude Code, Codex, Antigravity, etc.)"
+  ],
+  "what_it_fails_at": [
+    "Tightly coupled to Google's ADK and Google Cloud — portability/lock-in trade-off",
+    "No standalone value for teams not building on ADK",
+    "Cost is opaque at the tool level because it lives in the Cloud resources deployed",
+    "Young project — independent reliability evidence beyond Google's own docs is thin"
+  ],
+  "best_for": [
+    "Teams building agents with Google's ADK who want a paved deploy path",
+    "Developers using a coding assistant who want it fluent in ADK-on-Google-Cloud",
+    "Anyone standardising agent scaffolding, eval and observability on Google Cloud"
+  ],
+  "not_recommended_for": [
+    "Teams committed to a non-Google stack or avoiding cloud lock-in",
+    "Projects not using the Agent Development Kit",
+    "Buyers wanting a portable, vendor-neutral agent framework"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "microsoft-autogen",
+      "verdict_diff": "AutoGen is a vendor-neutral multi-agent framework you assemble yourself; agents-cli is Google's opinionated lifecycle tooling around its own ADK. Choose agents-cli for a paved Google-Cloud deploy path, AutoGen for framework portability.",
+      "preferred_for_axis": "google-cloud-paved-path"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is a build-anywhere agent-orchestration framework; agents-cli is not a framework at all but the scaffold/eval/deploy tooling around ADK. They sit at different layers — pair agents-cli with ADK if you're on Google Cloud, use CrewAI if you want stack independence.",
+      "preferred_for_axis": "tooling-vs-framework"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Official Google project: CLI + skills for ADK agents on Google Cloud",
+      "source": "https://github.com/google/agents-cli",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Scaffold, evaluate, deploy, observe lifecycle; works standalone or with coding assistants",
+      "source": "https://google.github.io/agents-cli/",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Covered by Google Developers Blog (Agent Platform)",
+      "source": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "tested_at": "2026-07-21",
+      "verified": true
+    },
+    {
+      "claim": "Local dev with AI Studio API key; requires Python 3.11+, uv, Node.js",
+      "source": "https://google.github.io/agents-cli/guide/getting-started/",
+      "tested_at": "2026-07-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "High for the ADK-on-Google-Cloud niche. It is itself agent-infrastructure: a CLI + skills that coding agents consume to scaffold/eval/deploy other agents. Value is conditional on building with Google's ADK.",
+    "agent_friendly_score": 7
+  },
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-23",
+    "source": "engine-browser-marking-retrofit"
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -24,18 +121,21 @@
     },
     {
       "id": "pricing_or_access",
-      "pass": true,
+      "pass": false,
       "required": false
     },
     {
       "id": "evidence_or_demo",
-      "pass": true,
+      "pass": false,
       "required": false
     }
   ],
-  "laddoo_score": 90,
-  "score": 90,
-  "tier": "VITAL",
-  "summary": "Public-surface review of google/agents-cli.",
-  "confidence": "medium"
+  "summary": "Official Google tooling that makes any coding assistant better at scaffolding, evaluating and deploying ADK agents on Google Cloud — a force multiplier, not an agent itself.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-10-19",
+  "review_age_days_at_publish": 3,
+  "next_review_due_at": "2026-10-19",
+  "attestation_url": "/data/attestations/google-agents-cli.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2"
 }
