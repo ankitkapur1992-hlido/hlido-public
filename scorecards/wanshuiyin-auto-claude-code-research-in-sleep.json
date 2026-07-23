@@ -1,41 +1,106 @@
 {
+  "schema_version": "2.1",
   "slug": "wanshuiyin-auto-claude-code-research-in-sleep",
   "name": "wanshuiyin/Auto-claude-code-research-in-sleep",
   "agent_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
-  "category": "Coding",
-  "run_id": "run-wanshuiyin-auto-claude-code-research-in-sleep-8n27huot",
-  "run_at": "2026-06-18T12:01:04.170Z",
-  "source": "hlido-drain-worker",
+  "repo_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+  "category": "MCP Server",
+  "run_id": "run-wanshuiyin-auto-claude-code-research-in-sleep-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "homepage_loads",
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "GH API 200 for wanshuiyin/Auto-claude-code-research-in-sleep"
     },
     {
-      "id": "primary_value_prop",
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "README length 192363"
     },
     {
-      "id": "cta_present",
-      "pass": false,
-      "required": true
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "MIT"
     },
     {
-      "id": "pricing_or_access",
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
       "pass": true,
-      "required": false
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "evidence_or_demo",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
       "pass": true,
-      "required": false
+      "evidence": "last push 2d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v0.4.22"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "13480 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "4 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 2d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "MCP server markers in README"
     }
   ],
-  "laddoo_score": 80,
-  "score": 80,
+  "repo_metrics": {
+    "stars": 13480,
+    "forks": 1216,
+    "open_issues": 58,
+    "archived": false,
+    "pushed_at": "2026-07-14T17:24:18Z",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "evidence_urls": [
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "https://api.github.com/repos/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/releases"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
   "tier": "STEADY",
-  "summary": "Public-surface review of wanshuiyin/Auto-claude-code-research-in-sleep.",
-  "confidence": "low"
+  "confidence": "medium",
+  "summary": "wanshuiyin/Auto-claude-code-research-in-sleep — ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.. Repo-surface review: measured from the public repository (13480 stars, MIT, last push 2026-07-14); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
