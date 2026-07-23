@@ -4,19 +4,16 @@
   "name": "VoltAgent",
   "agent_url": "https://voltagent.dev",
   "category": "Frameworks & Eval",
-
   "run_id": "run-0a2825c045062b71-voltagent-dev",
   "run_at": "2026-06-18T08:32:59Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 76,
   "tier": "STEADY",
   "laddoo_score": 76,
   "confidence": "medium",
-
   "hlido_opinion": {
     "headline": "Serious TypeScript agent framework with enterprise-grade observability — the VoltOps console is what separates it from the npm-package-plus-readme crowd.",
     "body": "VoltAgent does a useful thing with clarity: it gives TypeScript developers a typed, composable way to build multi-agent systems, and then ships VoltOps — a production observability console that's either cloud-hosted or self-hosted — to close the loop between development and deployment. That combination is rarer than the framework alone. The feature set is complete for 2026 agent development: memory, RAG, guardrails, tool calling, MCP, voice, workflow chains with pause/resume, and over 40 integrations. Enterprise traction at Samsung, Tata, Infosys, Oracle, and Amazon gives the product surface-level proof that the framework survives real production workloads. The open-source TypeScript core lowers the adoption risk for developers who want to inspect what they're running. Where it's unverified: the marketing claims about enterprise adoption are enumerated but not linked to case studies, and the VoltOps console pricing tier separation (cloud vs self-hosted) is not detailed on the public site. For developers building production agent systems in TypeScript, this is one of the most feature-complete starting points available.",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-18",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (76) because the framework is substantive and well-architected, the observability console addresses a real production gap, and enterprise adoption signals are present. Not VITAL because the public surface can't verify the enterprise case studies, VoltOps pricing transparency is incomplete, and the framework is competing in a crowded market (LangChain, CrewAI, AutoGen all have comparable feature lists for their respective language ecosystems).",
-
   "what_it_does_well": [
     "Type-safe TypeScript API with Zod schemas throughout — catches agent configuration errors at build time",
     "VoltOps console provides genuine observability for multi-agent systems, not just log dumps",
@@ -34,7 +29,6 @@
     "Supervisor agent orchestration pattern is first-class, not bolted on",
     "40+ integration providers means most common services are one import away"
   ],
-
   "what_it_fails_at": [
     "Enterprise adoption claims lack linked case studies — unverifiable from public surface",
     "VoltOps console pricing and feature split between cloud/self-hosted not published",
@@ -42,23 +36,19 @@
     "No public benchmark results showing agent performance vs alternatives",
     "Voice feature described but docs depth on provider compatibility not visible"
   ],
-
   "best_for": [
     "TypeScript/Node.js teams building production multi-agent systems",
     "Teams that need observability and evals alongside the framework, not as an afterthought",
     "Organizations with existing TypeScript stacks wanting framework + monitoring in one",
     "Projects needing workflow chains with pause/resume for long-running tasks"
   ],
-
   "not_recommended_for": [
     "Python-first teams (use LangGraph or AutoGen instead)",
     "Single-shot tasks that don't need the overhead of a framework",
     "Teams that need verified enterprise references before adoption",
     "Projects with strict open-source-only licensing requirements (VoltOps cloud has unclear licensing)"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "langchain-langchain",
@@ -71,13 +61,26 @@
       "preferred_for_axis": "production-observability"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "VoltAgent is open source on GitHub", "source": "https://github.com/voltagent/voltagent", "tested_at": "2026-06-18", "verified": true},
-    {"claim": "40+ app integrations", "source": "https://voltagent.dev", "tested_at": "2026-06-18", "verified": true},
-    {"claim": "npm create voltagent-app@latest works", "source": "https://voltagent.dev", "tested_at": "2026-06-18", "verified": false}
+    {
+      "claim": "VoltAgent is open source on GitHub",
+      "source": "https://github.com/voltagent/voltagent",
+      "tested_at": "2026-06-18",
+      "verified": true
+    },
+    {
+      "claim": "40+ app integrations",
+      "source": "https://voltagent.dev",
+      "tested_at": "2026-06-18",
+      "verified": true
+    },
+    {
+      "claim": "npm create voltagent-app@latest works",
+      "source": "https://voltagent.dev",
+      "tested_at": "2026-06-18",
+      "verified": false
+    }
   ],
-
   "agent_relevance": {
     "has_api": true,
     "has_cli": true,
@@ -88,22 +91,55 @@
     "agent_integration_path": "Full agent SDK — npm install @voltagent/core, define tools with Zod schemas, compose supervisor/worker agent graphs. MCP client support built in. VoltOps observability accessible via API or dashboard. High programmatic surface area.",
     "agent_friendly_score": 9
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-18T08:32:33Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'The end-to-end AI Agent Engineering Platform'", "tested_at": "2026-06-18T08:32:33Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "'npm create voltagent-app@latest'", "tested_at": "2026-06-18T08:32:33Z"},
-    {"id": "pricing_or_access", "pass": false, "required": false, "evidence": "VoltOps pricing not published on public surface", "tested_at": "2026-06-18T08:32:33Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "GitHub repo with examples, enterprise logos on homepage", "tested_at": "2026-06-18T08:32:33Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-18T08:32:33Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The end-to-end AI Agent Engineering Platform'",
+      "tested_at": "2026-06-18T08:32:33Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'npm create voltagent-app@latest'",
+      "tested_at": "2026-06-18T08:32:33Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "VoltOps pricing not published on public surface",
+      "tested_at": "2026-06-18T08:32:33Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "GitHub repo with examples, enterprise logos on homepage",
+      "tested_at": "2026-06-18T08:32:33Z"
+    }
   ],
-
   "summary": "Serious TypeScript agent framework with enterprise-grade observability — the VoltOps console is what separates it from the npm-package-plus-readme crowd.",
-
   "staleness_after": "2026-09-18",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-18",
-
   "attestation_url": "/data/attestations/voltagent.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-17",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
