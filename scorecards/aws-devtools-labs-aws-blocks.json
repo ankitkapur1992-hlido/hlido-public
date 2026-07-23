@@ -1,41 +1,105 @@
 {
+  "schema_version": "2.1",
   "slug": "aws-devtools-labs-aws-blocks",
   "name": "aws-devtools-labs/aws-blocks",
   "agent_url": "https://github.com/aws-devtools-labs/aws-blocks",
+  "repo_url": "https://github.com/aws-devtools-labs/aws-blocks",
   "category": "Coding",
-  "run_id": "run-aws-devtools-labs-aws-blocks-87zlcaq2",
-  "run_at": "2026-06-28T12:01:13.875Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-aws-devtools-labs-aws-blocks-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for aws-devtools-labs/aws-blocks"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 4856"
     },
     {
-      "id": "C03",
-      "pass": false,
-      "required": true
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "Apache-2.0"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 0d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
       "pass": false,
-      "required": false
+      "evidence": "no releases"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "358 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "31 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 0d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": false,
+      "evidence": "none found"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of aws-devtools-labs/aws-blocks.",
-  "confidence": "low"
+  "repo_metrics": {
+    "stars": 358,
+    "forks": 39,
+    "open_issues": 77,
+    "archived": false,
+    "pushed_at": "2026-07-16T13:04:30Z",
+    "license": "Apache-2.0",
+    "language": "TypeScript"
+  },
+  "evidence_urls": [
+    "https://github.com/aws-devtools-labs/aws-blocks",
+    "https://api.github.com/repos/aws-devtools-labs/aws-blocks"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "aws-devtools-labs/aws-blocks — Composable building blocks for full-stack AWS apps — define infrastructure and runtime code together with end-to-end type safety using TypeScript, local mocking, and native client codegen for Kotlin, Swift, and Dart.. Repo-surface review: measured from the public repository (358 stars, Apache-2.0, last push 2026-07-16); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
