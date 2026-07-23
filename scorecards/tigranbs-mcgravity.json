@@ -1,0 +1,106 @@
+{
+  "schema_version": "2.1",
+  "slug": "tigranbs-mcgravity",
+  "name": "tigranbs/mcgravity",
+  "agent_url": "https://github.com/tigranbs/mcgravity",
+  "repo_url": "https://github.com/tigranbs/mcgravity",
+  "category": "AI Agent",
+  "run_id": "run-tigranbs-mcgravity-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "checklist": [
+    {
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for tigranbs/mcgravity"
+    },
+    {
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 10286"
+    },
+    {
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": false,
+      "evidence": "none"
+    },
+    {
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
+    },
+    {
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 152d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v0.1.8"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "101 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "2 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": false,
+      "evidence": "last push 152d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": false,
+      "evidence": "none found"
+    }
+  ],
+  "repo_metrics": {
+    "stars": 101,
+    "forks": 13,
+    "open_issues": 1,
+    "archived": false,
+    "pushed_at": "2026-02-15T00:17:45Z",
+    "license": null,
+    "language": "Rust"
+  },
+  "evidence_urls": [
+    "https://github.com/tigranbs/mcgravity",
+    "https://api.github.com/repos/tigranbs/mcgravity",
+    "https://github.com/tigranbs/mcgravity/releases"
+  ],
+  "laddoo_score": 73,
+  "score": 73,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "tigranbs/mcgravity — Fast TUI that orchestrates AI coding tools (Claude Code, Codex, Gemini) in a plan→execute→review loop. Breaks work into atomic tasks for easier verification and course-correction.. Repo-surface review: measured from the public repository (101 stars, no license, last push 2026-02-15); not hands-on tested.",
+  "staleness_after": "2026-10-14"
+}
