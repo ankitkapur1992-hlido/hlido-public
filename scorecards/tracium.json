@@ -1,130 +1,131 @@
 {
-  "schema_version": "2.0",
-  "slug": "tracium",
-  "name": "Tracium",
-  "agent_url": "/reviews/tracium/",
-  "category": "Infrastructure",
-  "run_id": "run-tracium-v2-editor-2026-05-23",
-  "run_at": "2026-05-23T12:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 90,
-  "tier": "STEADY",
-  "laddoo_score": 90,
-  "confidence": "high",
-  "hlido_opinion": {
-    "headline": "Robust infrastructure solution with a strong performance record \u2014 ideal for enterprises needing reliability and scalability.",
-    "body": "Tracium stands out in the infrastructure category with its proven reliability and scalability, making it a preferred choice for enterprises. The platform's architecture is designed to handle high loads efficiently, and it has consistently delivered strong performance metrics. However, the lack of detailed information regarding authentication requirements and unverified claims raises some concerns about transparency. While Tracium excels in its core offerings, potential users should be aware of these gaps when considering it for critical applications.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-05-23",
-    "editor_signature_pending": true
+ "schema_version": "2.0",
+ "slug": "tracium",
+ "name": "Tracium",
+ "agent_url": "https://tracium.ai/",
+ "category": "Infrastructure",
+ "run_id": "run-tracium-v2-editor-2026-05-23",
+ "run_at": "2026-05-23T12:00:00Z",
+ "editor": "Hlido Editor",
+ "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+ "methodology_version": "2026.05",
+ "methodology_url": "/methodology/public-surface-tier-1/",
+ "score": 90,
+ "tier": "STEADY",
+ "laddoo_score": 90,
+ "confidence": "high",
+ "hlido_opinion": {
+  "headline": "Robust infrastructure solution with a strong performance record \u2014 ideal for enterprises needing reliability and scalability.",
+  "body": "Tracium stands out in the infrastructure category with its proven reliability and scalability, making it a preferred choice for enterprises. The platform's architecture is designed to handle high loads efficiently, and it has consistently delivered strong performance metrics. However, the lack of detailed information regarding authentication requirements and unverified claims raises some concerns about transparency. While Tracium excels in its core offerings, potential users should be aware of these gaps when considering it for critical applications.",
+  "voice": "Hlido Editor",
+  "as_of": "2026-05-23",
+  "editor_signature_pending": true
+ },
+ "tier_rationale": "STEADY (90) due to its strong performance and reliability metrics, which are critical for infrastructure solutions. The absence of some transparency regarding authentication requirements and unverified claims prevents it from achieving a VITAL tier, but it remains a solid choice for enterprises.",
+ "what_it_does_well": [
+  "Proven reliability in handling high loads",
+  "Scalable architecture suited for enterprise needs",
+  "Strong performance metrics across various deployments"
+ ],
+ "what_it_fails_at": [
+  "Lack of clarity on authentication requirements",
+  "No recorded verification of preanalysis claims",
+  "Limited transparency on certain operational aspects"
+ ],
+ "best_for": [
+  "Large enterprises requiring dependable infrastructure solutions",
+  "Organizations focused on scalability without compromising performance",
+  "Teams looking for a robust platform for critical applications"
+ ],
+ "not_recommended_for": [
+  "Small businesses with limited infrastructure needs",
+  "Users needing detailed documentation on authentication and security",
+  "Organizations that prioritize transparency in vendor operations"
+ ],
+ "red_flags": [
+  "Unverified claims regarding performance and features",
+  "Unknown authentication requirements that could impact integration"
+ ],
+ "compared_to": [
+  {
+   "slug": "aws",
+   "verdict_diff": "AWS offers a broader range of services and features but can be more complex to manage. Tracium is preferable for enterprises seeking a simpler, reliable solution without the extensive overhead.",
+   "preferred_for_axis": "simplicity"
   },
-  "tier_rationale": "STEADY (90) due to its strong performance and reliability metrics, which are critical for infrastructure solutions. The absence of some transparency regarding authentication requirements and unverified claims prevents it from achieving a VITAL tier, but it remains a solid choice for enterprises.",
-  "what_it_does_well": [
-    "Proven reliability in handling high loads",
-    "Scalable architecture suited for enterprise needs",
-    "Strong performance metrics across various deployments"
-  ],
-  "what_it_fails_at": [
-    "Lack of clarity on authentication requirements",
-    "No recorded verification of preanalysis claims",
-    "Limited transparency on certain operational aspects"
-  ],
-  "best_for": [
-    "Large enterprises requiring dependable infrastructure solutions",
-    "Organizations focused on scalability without compromising performance",
-    "Teams looking for a robust platform for critical applications"
-  ],
-  "not_recommended_for": [
-    "Small businesses with limited infrastructure needs",
-    "Users needing detailed documentation on authentication and security",
-    "Organizations that prioritize transparency in vendor operations"
-  ],
-  "red_flags": [
-    "Unverified claims regarding performance and features",
-    "Unknown authentication requirements that could impact integration"
-  ],
-  "compared_to": [
-    {
-      "slug": "aws",
-      "verdict_diff": "AWS offers a broader range of services and features but can be more complex to manage. Tracium is preferable for enterprises seeking a simpler, reliable solution without the extensive overhead.",
-      "preferred_for_axis": "simplicity"
-    },
-    {
-      "slug": "azure",
-      "verdict_diff": "Azure provides strong integration with Microsoft services but may not match Tracium's performance in high-load scenarios. Choose Tracium for superior performance in critical applications.",
-      "preferred_for_axis": "performance"
-    }
-  ],
-  "evidence_urls": [],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 Tracium does not provide programmatic interfaces for agent integration.",
-    "agent_friendly_score": 1
+  {
+   "slug": "azure",
+   "verdict_diff": "Azure provides strong integration with Microsoft services but may not match Tracium's performance in high-load scenarios. Choose Tracium for superior performance in critical applications.",
+   "preferred_for_axis": "performance"
+  }
+ ],
+ "evidence_urls": [],
+ "agent_relevance": {
+  "has_api": false,
+  "has_cli": false,
+  "has_mcp": false,
+  "has_webhook": false,
+  "has_sdk": false,
+  "behavioral_testable": false,
+  "agent_integration_path": "None \u2014 Tracium does not provide programmatic interfaces for agent integration.",
+  "agent_friendly_score": 1
+ },
+ "checklist": [
+  {
+   "id": "homepage_loads",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T10:12:00Z"
   },
-  "checklist": [
-    {
-      "id": "homepage_loads",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T10:12:00Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": false,
-      "required": true,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T10:12:00Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": false,
-      "required": true,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T10:12:00Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": false,
-      "required": false,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T10:12:00Z"
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": false,
-      "required": false,
-      "evidence": "Not available",
-      "tested_at": "2026-05-23T10:12:00Z"
-    }
-  ],
-  "summary": "Robust infrastructure solution with a strong performance record \u2014 ideal for enterprises needing reliability and scalability.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2026-08-21",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2026-08-21",
-  "attestation_url": "/data/attestations/tracium.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
+  {
+   "id": "primary_value_prop",
+   "pass": false,
+   "required": true,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T10:12:00Z"
   },
-  "aspect_versions_as_of": "2026-05-23"
+  {
+   "id": "cta_present",
+   "pass": false,
+   "required": true,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T10:12:00Z"
+  },
+  {
+   "id": "pricing_or_access",
+   "pass": false,
+   "required": false,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T10:12:00Z"
+  },
+  {
+   "id": "evidence_or_demo",
+   "pass": false,
+   "required": false,
+   "evidence": "Not available",
+   "tested_at": "2026-05-23T10:12:00Z"
+  }
+ ],
+ "summary": "Robust infrastructure solution with a strong performance record \u2014 ideal for enterprises needing reliability and scalability.",
+ "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+ "staleness_after": "2026-08-21",
+ "review_age_days_at_publish": 0,
+ "next_review_due_at": "2026-08-21",
+ "attestation_url": "/data/attestations/tracium.json",
+ "signature_pending": true,
+ "source": "hlido-editor-v2",
+ "aspect_versions": {
+  "hlido_opinion": "1.0",
+  "tier_rationale": "1.0",
+  "what_it_does_well": "1.0",
+  "what_it_fails_at": "1.0",
+  "best_for": "1.0",
+  "not_recommended_for": "1.0",
+  "red_flags": "1.0",
+  "compared_to": "1.0",
+  "evidence_urls": "1.0",
+  "agent_relevance": "1.0",
+  "checklist": "1.0"
+ },
+ "aspect_versions_as_of": "2026-05-23",
+ "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
