@@ -1,41 +1,106 @@
 {
+  "schema_version": "2.1",
   "slug": "scheidydude-codeindex",
   "name": "scheidydude/codeindex",
   "agent_url": "https://github.com/scheidydude/codeindex",
-  "category": "Coding",
-  "run_id": "run-scheidydude-codeindex-dpskv52a",
-  "run_at": "2026-06-25T18:00:57.677Z",
-  "source": "hlido-drain-worker",
+  "repo_url": "https://github.com/scheidydude/codeindex",
+  "category": "MCP Server",
+  "run_id": "run-scheidydude-codeindex-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for scheidydude/codeindex"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 23865"
     },
     {
-      "id": "C03",
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
       "pass": false,
-      "required": true
+      "evidence": "NOASSERTION"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 27d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "latest v0.3.0"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "268 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "1 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 27d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "MCP server markers in README"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of scheidydude/codeindex.",
-  "confidence": "low"
+  "repo_metrics": {
+    "stars": 268,
+    "forks": 35,
+    "open_issues": 3,
+    "archived": false,
+    "pushed_at": "2026-06-19T02:02:06Z",
+    "license": "NOASSERTION",
+    "language": "Python"
+  },
+  "evidence_urls": [
+    "https://github.com/scheidydude/codeindex",
+    "https://api.github.com/repos/scheidydude/codeindex",
+    "https://github.com/scheidydude/codeindex/releases"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "scheidydude/codeindex — Repo dependency analyzer with **blast-radius impact scoring** for AI-assisted development.. Repo-surface review: measured from the public repository (268 stars, NOASSERTION, last push 2026-06-19); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
