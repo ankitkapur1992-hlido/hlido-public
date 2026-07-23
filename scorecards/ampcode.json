@@ -1,121 +1,122 @@
 {
-  "schema_version": "2.0",
-  "slug": "ampcode",
-  "name": "AmpCode by Sourcegraph",
-  "agent_url": "/reviews/ampcode/",
-  "category": "Coding",
-  "run_id": "run-ampcode-v2-editor-2026-05-23",
-  "run_at": "2026-05-23T12:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 90,
-  "tier": "STEADY",
-  "laddoo_score": 90,
-  "confidence": "high",
-  "hlido_opinion": {
-    "headline": "Robust coding assistant with strong integration capabilities \u2014 ideal for teams leveraging Sourcegraph.",
-    "body": "AmpCode by Sourcegraph excels as a coding assistant, particularly for teams already using Sourcegraph's ecosystem. Its strengths lie in seamless integration with existing workflows, enhancing productivity for developers. The tool's features are geared towards improving code quality and collaboration, making it a valuable asset for software development teams. However, potential users should be aware of its reliance on Sourcegraph, which may limit its appeal to those outside that ecosystem. Overall, AmpCode is a solid choice for teams looking to streamline their coding processes, but it may not be the best fit for individual developers or those using different code management systems.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-05-23",
-    "editor_signature_pending": true
+ "schema_version": "2.0",
+ "slug": "ampcode",
+ "name": "AmpCode by Sourcegraph",
+ "agent_url": "https://ampcode.com",
+ "category": "Coding",
+ "run_id": "run-ampcode-v2-editor-2026-05-23",
+ "run_at": "2026-05-23T12:00:00Z",
+ "editor": "Hlido Editor",
+ "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+ "methodology_version": "2026.05",
+ "methodology_url": "/methodology/public-surface-tier-1/",
+ "score": 90,
+ "tier": "STEADY",
+ "laddoo_score": 90,
+ "confidence": "high",
+ "hlido_opinion": {
+  "headline": "Robust coding assistant with strong integration capabilities \u2014 ideal for teams leveraging Sourcegraph.",
+  "body": "AmpCode by Sourcegraph excels as a coding assistant, particularly for teams already using Sourcegraph's ecosystem. Its strengths lie in seamless integration with existing workflows, enhancing productivity for developers. The tool's features are geared towards improving code quality and collaboration, making it a valuable asset for software development teams. However, potential users should be aware of its reliance on Sourcegraph, which may limit its appeal to those outside that ecosystem. Overall, AmpCode is a solid choice for teams looking to streamline their coding processes, but it may not be the best fit for individual developers or those using different code management systems.",
+  "voice": "Hlido Editor",
+  "as_of": "2026-05-23",
+  "editor_signature_pending": true
+ },
+ "tier_rationale": "STEADY (90) due to its strong performance in enhancing coding workflows and solid integration with Sourcegraph. It remains a reliable choice for teams, but not classified as VITAL since it may not cater to a broader audience outside Sourcegraph's ecosystem.",
+ "what_it_does_well": [
+  "Seamlessly integrates with Sourcegraph for enhanced coding workflows",
+  "Improves code quality and collaboration among development teams",
+  "Offers robust features tailored for team-based coding environments"
+ ],
+ "what_it_fails_at": [
+  "Limited appeal for individual developers not using Sourcegraph",
+  "Potentially less effective in environments with diverse code management systems"
+ ],
+ "best_for": [
+  "Development teams already utilizing Sourcegraph",
+  "Organizations seeking to improve collaboration and code quality",
+  "Teams focused on streamlining their coding processes"
+ ],
+ "not_recommended_for": [
+  "Individual developers not integrated into the Sourcegraph ecosystem",
+  "Teams using different code management systems looking for standalone solutions"
+ ],
+ "red_flags": [],
+ "compared_to": [
+  {
+   "slug": "github-copilot",
+   "verdict_diff": "GitHub Copilot offers a broader appeal with AI-driven suggestions for individual developers, while AmpCode excels in team environments integrated with Sourcegraph. Choose AmpCode for team-based solutions; choose Copilot for individual use.",
+   "preferred_for_axis": "team-use"
   },
-  "tier_rationale": "STEADY (90) due to its strong performance in enhancing coding workflows and solid integration with Sourcegraph. It remains a reliable choice for teams, but not classified as VITAL since it may not cater to a broader audience outside Sourcegraph's ecosystem.",
-  "what_it_does_well": [
-    "Seamlessly integrates with Sourcegraph for enhanced coding workflows",
-    "Improves code quality and collaboration among development teams",
-    "Offers robust features tailored for team-based coding environments"
-  ],
-  "what_it_fails_at": [
-    "Limited appeal for individual developers not using Sourcegraph",
-    "Potentially less effective in environments with diverse code management systems"
-  ],
-  "best_for": [
-    "Development teams already utilizing Sourcegraph",
-    "Organizations seeking to improve collaboration and code quality",
-    "Teams focused on streamlining their coding processes"
-  ],
-  "not_recommended_for": [
-    "Individual developers not integrated into the Sourcegraph ecosystem",
-    "Teams using different code management systems looking for standalone solutions"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "github-copilot",
-      "verdict_diff": "GitHub Copilot offers a broader appeal with AI-driven suggestions for individual developers, while AmpCode excels in team environments integrated with Sourcegraph. Choose AmpCode for team-based solutions; choose Copilot for individual use.",
-      "preferred_for_axis": "team-use"
-    },
-    {
-      "slug": "tabnine",
-      "verdict_diff": "Tabnine provides AI-driven code completions across various IDEs, making it more versatile for different setups. AmpCode is better for teams within Sourcegraph's ecosystem. Choose Tabnine for diverse environments.",
-      "preferred_for_axis": "versatility"
-    }
-  ],
-  "evidence_urls": [],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 AmpCode operates within the Sourcegraph ecosystem, limiting direct integration paths for agents.",
-    "agent_friendly_score": 3
+  {
+   "slug": "tabnine",
+   "verdict_diff": "Tabnine provides AI-driven code completions across various IDEs, making it more versatile for different setups. AmpCode is better for teams within Sourcegraph's ecosystem. Choose Tabnine for diverse environments.",
+   "preferred_for_axis": "versatility"
+  }
+ ],
+ "evidence_urls": [],
+ "agent_relevance": {
+  "has_api": false,
+  "has_cli": false,
+  "has_mcp": false,
+  "has_webhook": false,
+  "has_sdk": false,
+  "behavioral_testable": false,
+  "agent_integration_path": "None \u2014 AmpCode operates within the Sourcegraph ecosystem, limiting direct integration paths for agents.",
+  "agent_friendly_score": 3
+ },
+ "checklist": [
+  {
+   "id": "homepage_loads",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T12:00:00Z"
   },
-  "checklist": [
-    {
-      "id": "homepage_loads",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": false,
-      "required": true,
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": false,
-      "required": false,
-      "tested_at": "2026-05-23T12:00:00Z"
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": false,
-      "required": false,
-      "tested_at": "2026-05-23T12:00:00Z"
-    }
-  ],
-  "summary": "Robust coding assistant with strong integration capabilities \u2014 ideal for teams leveraging Sourcegraph.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2026-08-21",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2026-08-21",
-  "attestation_url": "/data/attestations/ampcode.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
+  {
+   "id": "primary_value_prop",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T12:00:00Z"
   },
-  "aspect_versions_as_of": "2026-05-23"
+  {
+   "id": "cta_present",
+   "pass": false,
+   "required": true,
+   "tested_at": "2026-05-23T12:00:00Z"
+  },
+  {
+   "id": "pricing_or_access",
+   "pass": false,
+   "required": false,
+   "tested_at": "2026-05-23T12:00:00Z"
+  },
+  {
+   "id": "evidence_or_demo",
+   "pass": false,
+   "required": false,
+   "tested_at": "2026-05-23T12:00:00Z"
+  }
+ ],
+ "summary": "Robust coding assistant with strong integration capabilities \u2014 ideal for teams leveraging Sourcegraph.",
+ "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+ "staleness_after": "2026-08-21",
+ "review_age_days_at_publish": 0,
+ "next_review_due_at": "2026-08-21",
+ "attestation_url": "/data/attestations/ampcode.json",
+ "signature_pending": true,
+ "source": "hlido-editor-v2",
+ "aspect_versions": {
+  "hlido_opinion": "1.0",
+  "tier_rationale": "1.0",
+  "what_it_does_well": "1.0",
+  "what_it_fails_at": "1.0",
+  "best_for": "1.0",
+  "not_recommended_for": "1.0",
+  "red_flags": "1.0",
+  "compared_to": "1.0",
+  "evidence_urls": "1.0",
+  "agent_relevance": "1.0",
+  "checklist": "1.0"
+ },
+ "aspect_versions_as_of": "2026-05-23",
+ "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
