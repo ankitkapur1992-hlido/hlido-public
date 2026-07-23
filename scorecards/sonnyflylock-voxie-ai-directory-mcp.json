@@ -1,41 +1,105 @@
 {
+  "schema_version": "2.1",
   "slug": "sonnyflylock-voxie-ai-directory-mcp",
   "name": "sonnyflylock/voxie-ai-directory-mcp",
   "agent_url": "https://github.com/sonnyflylock/voxie-ai-directory-mcp",
-  "category": "AI Agent",
-  "run_id": "run-sonnyflylock-voxie-ai-directory-mcp-qgynvb0i",
-  "run_at": "2026-07-09T12:01:33.097Z",
-  "source": "hlido-drain-worker",
+  "repo_url": "https://github.com/sonnyflylock/voxie-ai-directory-mcp",
+  "category": "MCP Server",
+  "run_id": "run-sonnyflylock-voxie-ai-directory-mcp-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for sonnyflylock/voxie-ai-directory-mcp"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 2203"
     },
     {
-      "id": "C03",
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
       "pass": false,
-      "required": true
+      "evidence": "none"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 178d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
       "pass": false,
-      "required": false
+      "evidence": "no releases"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": false,
+      "evidence": "3 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": false,
+      "evidence": "no .github/workflows"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": false,
+      "evidence": "last push 178d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "MCP server markers in README"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
+  "repo_metrics": {
+    "stars": 3,
+    "forks": 3,
+    "open_issues": 0,
+    "archived": false,
+    "pushed_at": "2026-01-19T17:52:21Z",
+    "license": null,
+    "language": "JavaScript"
+  },
+  "evidence_urls": [
+    "https://github.com/sonnyflylock/voxie-ai-directory-mcp",
+    "https://api.github.com/repos/sonnyflylock/voxie-ai-directory-mcp"
+  ],
+  "laddoo_score": 60,
+  "score": 60,
   "tier": "FADING",
-  "summary": "Public-surface review of sonnyflylock/voxie-ai-directory-mcp.",
-  "confidence": "low"
+  "confidence": "medium",
+  "summary": "sonnyflylock/voxie-ai-directory-mcp — MCP server for the Voxie AI Phone Number Directory. Query AI services you can chat with via webchat.. Repo-surface review: measured from the public repository (3 stars, no license, last push 2026-01-19); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
