@@ -102,5 +102,51 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "op7418/guizang-ppt-skill — AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.. Repo-surface review: measured from the public repository (21568 stars, AGPL-3.0, last push 2026-06-02); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A breakout-traction agent Skill for generating polished HTML slide decks — huge community pull, but an AGPL-3.0 license and thin engineering scaffolding to weigh before you embed it.",
+    "body": "With 21.5k stars this is one of the most-starred agent Skills in the deck-generation niche, and the demand signal is real: it ships as an agent Skill with a documented CLI install, so it slots into an orchestrating agent's toolchain rather than being a hosted product. Two things temper the enthusiasm from the repository surface. First, licensing: AGPL-3.0 is strong copyleft, so embedding it inside a closed commercial product carries obligations its MIT-licensed peers don't — the single biggest integration decision here. Second, engineering maturity: there are no CI workflows in the repo, which is a scaffolding gap relative to the project's popularity. It is actively maintained (pushed within ~6 weeks) with tagged releases (v1.1.0). This is a repo-surface read — we can vouch for the repository's health and shape, not for the quality of the decks it produces, which depends on the caller's model.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) is the repo-surface ceiling. Exceptional traction, a permissive-enough-to-adopt-if-AGPL-compatible license, active maintenance, tagged releases and a documented agent-consumable CLI clear STEADY comfortably. VITAL is withheld because repo signals cannot verify the actual slide-deck output quality, and CI/test scaffolding is absent.",
+  "what_it_does_well": [
+    "Exceptional community traction (21.5k stars) — a strong demand signal for agent-driven deck generation",
+    "Distributed as an agent Skill with a documented CLI install line — genuinely agent-consumable",
+    "Tagged releases (v1.1.0) and active maintenance (push within ~6 weeks)",
+    "Substantial README (~11.6k chars) documenting the product"
+  ],
+  "what_it_fails_at": [
+    "AGPL-3.0 copyleft complicates embedding in closed/commercial products",
+    "No CI workflows in the repository — a maintenance-maturity gap for its popularity",
+    "Output quality is unverifiable from the repo surface",
+    "Prompt/HTML-driven, so reproducibility depends on the caller's model"
+  ],
+  "best_for": [
+    "Agent builders wanting a ready-made slide-deck generation Skill",
+    "Open-source projects whose licensing is compatible with AGPL-3.0",
+    "Teams comfortable evaluating output quality themselves"
+  ],
+  "not_recommended_for": [
+    "Closed-source commercial products wary of AGPL copyleft",
+    "Teams needing verified output guarantees or SLAs",
+    "Anyone requiring CI-backed release assurances"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Install as an agent Skill via the documented CLI line; invoked by an orchestrating agent to produce HTML slide decks. No hands-on behavioral test performed.",
+    "agent_friendly_score": 6
+  },
+  "enriched_at": "2026-07-23",
+  "enriched_by": "R-publish"
 }
