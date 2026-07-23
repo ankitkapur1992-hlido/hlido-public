@@ -4,19 +4,16 @@
   "name": "ai-orchestrator",
   "agent_url": "https://github.com/Mybono/ai-orchestrator",
   "category": "Frameworks & Eval",
-
   "run_id": "run-e696e47d43edf6ae-github-com",
   "run_at": "2026-06-17T12:32:48Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
   "methodology_version": "2026.06",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 58,
   "tier": "STEADY",
   "laddoo_score": 58,
   "confidence": "low",
-
   "hlido_opinion": {
     "headline": "Clever Claude Code + Ollama hybrid that uses local LLMs for the expensive coding work — promising cost optimization pattern, still early (97 stars).",
     "body": "The core insight in ai-orchestrator is sound: route the expensive thinking steps to Claude and the mechanical code generation to local Ollama models, coordinated by a TypeScript dependency-graph orchestrator. It's an attempt to reduce API costs by splitting the pipeline — Claude for triage, planning, and review (the hard reasoning), Ollama for the bulk code generation (where repetition is tolerable). The 6-step pipeline (triage → plan → orchestrate → code → pre-review → build → review → fix loop) is methodical and shows domain knowledge. CI passing and the documented architecture add credibility beyond a typical 97-star experiment. What the project is not: a polished product. There's no GUI, no installer, no hosted option. It requires both Claude Code and Ollama configured locally. The described pipeline reads as an internal dev tool that was open-sourced — useful for developers who want to clone and adapt the pattern, less useful for teams wanting to deploy it as-is. 97 stars suggests early adoption but not community validation.",
@@ -24,9 +21,7 @@
     "as_of": "2026-06-17",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (58) because the cost-optimization architecture is a real insight worth borrowing, the CI passes, and the pipeline design is methodical. Not higher because 97 stars = early experiment, no installer/packaging, and requires two separately configured systems (Claude Code + Ollama) to work. Borderline FADING but held STEADY because the concept is more useful than the project's footprint implies.",
-
   "what_it_does_well": [
     "Claude + Ollama routing is a genuine cost optimization — uses the right model for each task step",
     "6-step pipeline with dependency graph execution is more sophisticated than typical coding assistants",
@@ -34,7 +29,6 @@
     "CI badge passing adds credibility for an experimental project",
     "Zero external dependencies beyond Claude Code + Ollama — self-contained for what it does"
   ],
-
   "what_it_fails_at": [
     "Requires both Claude Code AND Ollama configured — double setup barrier",
     "97 GitHub stars = early experiment, not validated approach",
@@ -42,23 +36,19 @@
     "No published benchmark showing cost savings vs pure Claude approach",
     "Fix loop limited to 3 rounds with no graceful recovery — may leave broken code"
   ],
-
   "best_for": [
     "Developers already running both Claude Code and Ollama who want to reduce API costs",
     "Teams with high code-generation volume wanting to experiment with hybrid routing",
     "Engineers who want to study and adapt the dependency-graph pipeline pattern",
     "Projects where bulk code generation can tolerate lower model quality (Ollama) and review quality is paramount"
   ],
-
   "not_recommended_for": [
     "Teams without existing Ollama deployment (setup cost exceeds benefit for occasional use)",
     "Projects requiring high code correctness from the Ollama generation stage",
     "Production deployments without additional reliability engineering beyond the current fix loop",
     "Non-TypeScript/Claude Code projects"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "sandydasari-openacme",
@@ -66,13 +56,26 @@
       "preferred_for_axis": "claude-code-cost-optimization"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "TypeScript + Bash orchestration pipeline with 6 steps", "source": "https://github.com/Mybono/ai-orchestrator", "tested_at": "2026-06-17", "verified": true},
-    {"claim": "CI passing", "source": "https://github.com/Mybono/ai-orchestrator/actions/workflows/ci.yml", "tested_at": "2026-06-17", "verified": true},
-    {"claim": "MIT License", "source": "https://github.com/Mybono/ai-orchestrator", "tested_at": "2026-06-17", "verified": true}
+    {
+      "claim": "TypeScript + Bash orchestration pipeline with 6 steps",
+      "source": "https://github.com/Mybono/ai-orchestrator",
+      "tested_at": "2026-06-17",
+      "verified": true
+    },
+    {
+      "claim": "CI passing",
+      "source": "https://github.com/Mybono/ai-orchestrator/actions/workflows/ci.yml",
+      "tested_at": "2026-06-17",
+      "verified": true
+    },
+    {
+      "claim": "MIT License",
+      "source": "https://github.com/Mybono/ai-orchestrator",
+      "tested_at": "2026-06-17",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": false,
     "has_cli": true,
@@ -83,22 +86,55 @@
     "agent_integration_path": "Claude Code skill-based invocation. Uses /implement trigger in Claude Code to start the pipeline. MCP integration mentioned. Not designed to be called externally — it operates as a Claude Code skill that orchestrates Ollama subagents.",
     "agent_friendly_score": 6
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-06-17T12:32:29Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Portable multi-agent AI developer setup for Claude Code + Ollama'", "tested_at": "2026-06-17T12:32:29Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "GitHub repo with README install instructions", "tested_at": "2026-06-17T12:32:29Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free and open source (MIT)", "tested_at": "2026-06-17T12:32:29Z"},
-    {"id": "evidence_or_demo", "pass": false, "required": false, "evidence": "No demo — must configure and run locally", "tested_at": "2026-06-17T12:32:29Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-06-17T12:32:29Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Portable multi-agent AI developer setup for Claude Code + Ollama'",
+      "tested_at": "2026-06-17T12:32:29Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "GitHub repo with README install instructions",
+      "tested_at": "2026-06-17T12:32:29Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT)",
+      "tested_at": "2026-06-17T12:32:29Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo — must configure and run locally",
+      "tested_at": "2026-06-17T12:32:29Z"
+    }
   ],
-
   "summary": "Clever Claude Code + Ollama hybrid that uses local LLMs for the expensive coding work — promising cost optimization pattern, still early (97 stars).",
-
   "staleness_after": "2026-09-17",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-09-17",
-
   "attestation_url": "/data/attestations/mybono-ai-orchestrator.json",
   "signature_pending": true,
-  "source": "hlido-editor-v2"
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-21",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
