@@ -1,41 +1,105 @@
 {
+  "schema_version": "2.1",
   "slug": "lukresxd-claw-skeleton",
   "name": "LuKresXD/claw-skeleton",
   "agent_url": "https://github.com/LuKresXD/claw-skeleton",
+  "repo_url": "https://github.com/LuKresXD/claw-skeleton",
   "category": "Coding",
-  "run_id": "run-lukresxd-claw-skeleton-7gu5kqhr",
-  "run_at": "2026-06-28T06:01:56.522Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-lukresxd-claw-skeleton-repotrack-2026-07-16",
+  "run_at": "2026-07-16T13:14:00Z",
+  "source": "hlido-repo-track",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "GH API 200 for LuKresXD/claw-skeleton"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README length 6194"
     },
     {
-      "id": "C03",
-      "pass": false,
-      "required": true
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": true,
+      "evidence": "MIT"
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "install/usage section found in README"
     },
     {
-      "id": "C05",
+      "id": "active_12mo",
+      "task": "Maintained: pushed within 12 months and not archived",
+      "required": true,
+      "pass": true,
+      "evidence": "last push 17d ago"
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
       "pass": false,
-      "required": false
+      "evidence": "no releases"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (≥50 stars)",
+      "required": false,
+      "pass": true,
+      "evidence": "63 stars"
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": true,
+      "evidence": "1 workflow file(s)"
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": true,
+      "evidence": "last push 17d ago"
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": false,
+      "evidence": "none found"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of LuKresXD/claw-skeleton.",
-  "confidence": "low"
+  "repo_metrics": {
+    "stars": 63,
+    "forks": 14,
+    "open_issues": 0,
+    "archived": false,
+    "pushed_at": "2026-06-30T01:14:09Z",
+    "license": "MIT",
+    "language": "TypeScript"
+  },
+  "evidence_urls": [
+    "https://github.com/LuKresXD/claw-skeleton",
+    "https://api.github.com/repos/LuKresXD/claw-skeleton"
+  ],
+  "laddoo_score": 82,
+  "score": 82,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "LuKresXD/claw-skeleton — 🪼 A personal AI assistant that lives in Telegram — every topic is its own isolated Claude Code agent with layered persistent memory and proactive cron heartbeats. Open skeleton of a real, running system.. Repo-surface review: measured from the public repository (63 stars, MIT, last push 2026-06-30); not hands-on tested.",
+  "staleness_after": "2026-10-14"
 }
