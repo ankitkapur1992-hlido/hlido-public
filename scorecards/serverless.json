@@ -1,100 +1,101 @@
 {
-  "schema_version": "2.0",
-  "slug": "serverless",
-  "name": "Serverless",
-  "agent_url": "/reviews/serverless/",
-  "category": "Frameworks & Eval",
-  "run_id": "run-serverless-v2-editor-2026-05-23",
-  "run_at": "2026-05-23T12:00:00Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 90,
-  "tier": "STEADY",
-  "laddoo_score": 90,
-  "confidence": "high",
-  "hlido_opinion": {
-    "headline": "Robust serverless framework with strong community support \u2014 ideal for scalable applications but may lack some advanced features.",
-    "body": "Serverless is a well-established framework that simplifies the deployment of serverless applications, making it easier for developers to manage and scale their workloads. With a strong community backing, it benefits from a wealth of plugins and integrations, which enhance its functionality. The framework excels in enabling rapid development and deployment cycles, allowing teams to focus on writing code rather than managing infrastructure. However, it may not offer all the advanced features that some specialized frameworks provide, which could be a limitation for certain use cases. Overall, it remains a solid choice for developers looking to leverage serverless architecture effectively.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-05-23",
-    "editor_signature_pending": true
+ "schema_version": "2.0",
+ "slug": "serverless",
+ "name": "Serverless",
+ "agent_url": "https://github.com/serverless/serverless#readme",
+ "category": "Frameworks & Eval",
+ "run_id": "run-serverless-v2-editor-2026-05-23",
+ "run_at": "2026-05-23T12:00:00Z",
+ "editor": "Hlido Editor",
+ "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+ "methodology_version": "2026.05",
+ "methodology_url": "/methodology/public-surface-tier-1/",
+ "score": 90,
+ "tier": "STEADY",
+ "laddoo_score": 90,
+ "confidence": "high",
+ "hlido_opinion": {
+  "headline": "Robust serverless framework with strong community support \u2014 ideal for scalable applications but may lack some advanced features.",
+  "body": "Serverless is a well-established framework that simplifies the deployment of serverless applications, making it easier for developers to manage and scale their workloads. With a strong community backing, it benefits from a wealth of plugins and integrations, which enhance its functionality. The framework excels in enabling rapid development and deployment cycles, allowing teams to focus on writing code rather than managing infrastructure. However, it may not offer all the advanced features that some specialized frameworks provide, which could be a limitation for certain use cases. Overall, it remains a solid choice for developers looking to leverage serverless architecture effectively.",
+  "voice": "Hlido Editor",
+  "as_of": "2026-05-23",
+  "editor_signature_pending": true
+ },
+ "tier_rationale": "STEADY (90) due to its strong community support, robust functionality, and proven track record in deploying serverless applications. It remains relevant and effective, but could improve by incorporating more advanced features to compete with niche alternatives.",
+ "what_it_does_well": [
+  "Simplifies deployment and management of serverless applications",
+  "Strong community support with a wide range of plugins and integrations",
+  "Facilitates rapid development cycles, allowing for quick iterations",
+  "Proven track record in various production environments"
+ ],
+ "what_it_fails_at": [
+  "May lack some advanced features compared to specialized frameworks",
+  "Learning curve can be steep for newcomers unfamiliar with serverless concepts",
+  "Documentation can occasionally be overwhelming due to the breadth of options"
+ ],
+ "best_for": [
+  "Developers looking for a straightforward way to deploy serverless applications",
+  "Teams that prioritize rapid development and deployment cycles",
+  "Projects that can benefit from a strong community of support and resources"
+ ],
+ "not_recommended_for": [
+  "Users needing highly specialized features not covered by the framework",
+  "Newcomers who may struggle with the initial learning curve",
+  "Teams looking for a fully integrated solution without additional plugins"
+ ],
+ "red_flags": [],
+ "compared_to": [
+  {
+   "slug": "aws-lambda",
+   "verdict_diff": "AWS Lambda offers deeper integration with AWS services and advanced features, making it better for complex applications. Choose Serverless for a more straightforward deployment experience.",
+   "preferred_for_axis": "ease-of-use"
   },
-  "tier_rationale": "STEADY (90) due to its strong community support, robust functionality, and proven track record in deploying serverless applications. It remains relevant and effective, but could improve by incorporating more advanced features to compete with niche alternatives.",
-  "what_it_does_well": [
-    "Simplifies deployment and management of serverless applications",
-    "Strong community support with a wide range of plugins and integrations",
-    "Facilitates rapid development cycles, allowing for quick iterations",
-    "Proven track record in various production environments"
-  ],
-  "what_it_fails_at": [
-    "May lack some advanced features compared to specialized frameworks",
-    "Learning curve can be steep for newcomers unfamiliar with serverless concepts",
-    "Documentation can occasionally be overwhelming due to the breadth of options"
-  ],
-  "best_for": [
-    "Developers looking for a straightforward way to deploy serverless applications",
-    "Teams that prioritize rapid development and deployment cycles",
-    "Projects that can benefit from a strong community of support and resources"
-  ],
-  "not_recommended_for": [
-    "Users needing highly specialized features not covered by the framework",
-    "Newcomers who may struggle with the initial learning curve",
-    "Teams looking for a fully integrated solution without additional plugins"
-  ],
-  "red_flags": [],
-  "compared_to": [
-    {
-      "slug": "aws-lambda",
-      "verdict_diff": "AWS Lambda offers deeper integration with AWS services and advanced features, making it better for complex applications. Choose Serverless for a more straightforward deployment experience.",
-      "preferred_for_axis": "ease-of-use"
-    },
-    {
-      "slug": "firebase",
-      "verdict_diff": "Firebase provides a more comprehensive suite of tools for mobile and web applications. Serverless is preferable for those focused solely on serverless architecture without additional features.",
-      "preferred_for_axis": "serverless-focus"
-    }
-  ],
-  "evidence_urls": [],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": true,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "None \u2014 Serverless operates as a framework for deploying applications and does not provide direct integration points for agents.",
-    "agent_friendly_score": 3
-  },
-  "checklist": [
-    {
-      "id": "auth_requirement",
-      "pass": null,
-      "required": true,
-      "tested_at": null
-    }
-  ],
-  "summary": "Robust serverless framework with strong community support \u2014 ideal for scalable applications but may lack some advanced features.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2026-08-21",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2026-08-21",
-  "attestation_url": "/data/attestations/serverless.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-05-23"
+  {
+   "slug": "firebase",
+   "verdict_diff": "Firebase provides a more comprehensive suite of tools for mobile and web applications. Serverless is preferable for those focused solely on serverless architecture without additional features.",
+   "preferred_for_axis": "serverless-focus"
+  }
+ ],
+ "evidence_urls": [],
+ "agent_relevance": {
+  "has_api": false,
+  "has_cli": true,
+  "has_mcp": false,
+  "has_webhook": false,
+  "has_sdk": false,
+  "behavioral_testable": false,
+  "agent_integration_path": "None \u2014 Serverless operates as a framework for deploying applications and does not provide direct integration points for agents.",
+  "agent_friendly_score": 3
+ },
+ "checklist": [
+  {
+   "id": "auth_requirement",
+   "pass": null,
+   "required": true,
+   "tested_at": null
+  }
+ ],
+ "summary": "Robust serverless framework with strong community support \u2014 ideal for scalable applications but may lack some advanced features.",
+ "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+ "staleness_after": "2026-08-21",
+ "review_age_days_at_publish": 0,
+ "next_review_due_at": "2026-08-21",
+ "attestation_url": "/data/attestations/serverless.json",
+ "signature_pending": true,
+ "source": "hlido-editor-v2",
+ "aspect_versions": {
+  "hlido_opinion": "1.0",
+  "tier_rationale": "1.0",
+  "what_it_does_well": "1.0",
+  "what_it_fails_at": "1.0",
+  "best_for": "1.0",
+  "not_recommended_for": "1.0",
+  "red_flags": "1.0",
+  "compared_to": "1.0",
+  "evidence_urls": "1.0",
+  "agent_relevance": "1.0",
+  "checklist": "1.0"
+ },
+ "aspect_versions_as_of": "2026-05-23",
+ "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
