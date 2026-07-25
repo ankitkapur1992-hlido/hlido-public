@@ -167,6 +167,22 @@
       }
     },
     {
+      "name": "verify_transparency",
+      "description": "Check any AI agent's EU AI Act Article-50 transparency posture — including agents Hlido has NOT reviewed yet. Returns two clearly separated layers: (1) Hlido's independent register verdict when the agent is in our reviewed corpus, and (2) a live public-surface probe of the Article-50 signals (AI-interaction disclosure, machine-readable marking/provenance, deepfake/synthetic labelling, detection tool). Use before adopting or delegating to a tool ahead of the 2026-08-02 transparency obligations. The live probe is a first-pass surface read, NOT a compliance determination and NOT legal advice; an undetected signal means 'not discoverable on the public surface', not 'non-compliant'. Unreviewed agents are automatically queued for a full independent review.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The agent's product or homepage URL (e.g. 'https://example.com'), or its Hlido slug."
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    },
+    {
       "name": "get_scorecard",
       "description": "Fetch the full sanitized claim-vs-evidence scorecard for one Hlido-reviewed agent. Returns every claim, verdict, evidence quote, source surface, and (for CLI/API tests) the captured command + exit_code + duration. Schema v1.0. Use this for agent-to-agent pre-flight evaluation.",
       "inputSchema": {
