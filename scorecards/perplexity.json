@@ -4,19 +4,16 @@
   "name": "Perplexity",
   "agent_url": "https://www.perplexity.ai",
   "category": "Research",
-
   "run_id": "run-perplexity-handcraft-2026-05-23",
   "run_at": "2026-05-23T14:30:00Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
   "methodology_version": "2026.05",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 78,
   "tier": "STEADY",
   "laddoo_score": 78,
   "confidence": "high",
-
   "hlido_opinion": {
     "headline": "The answer engine that ships sources by default — solid for fact-shaped questions, increasingly serious for agent retrieval, but the moat keeps narrowing as every other lab catches up.",
     "body": "Perplexity is the AI-search-with-citations product that defined the category. Type a question, get a synthesized answer with inline numbered citations to live web sources. The free tier works without login for basic queries; Pro (around $20/month) unlocks better reasoning models, file upload, and Comet — their AI browser. The differentiator was always the sourced-answer UX; the differentiation today is execution discipline (consistent citations, decent latency, real-time freshness) more than a fundamentally different approach, because ChatGPT Search, Claude with web search, and You.com all ship versions of the same loop now. What keeps Perplexity ahead of pure chat products on the agentic axis is the API: the sonar models (with the online retrieval tier) are real, documented, and usable in production agent pipelines that need web-grounded answers. Where it weakens: the competitive distance versus ChatGPT Search or Claude with web is narrower than the marketing implies; on technical or specialist queries, the peer products often produce equally cited, deeper answers. Pages (longform output) feels grafted on rather than central. Comet is interesting but unproven — treat as beta. For a research workflow where citations are non-negotiable and the question is fact-shaped, Perplexity remains the cleanest default; for everything else, the choice is increasingly a tossup.",
@@ -24,9 +21,7 @@
     "as_of": "2026-05-23",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "STEADY (78) because the core search-with-citations product is dependable, the API is genuinely available for agentic use, the company has stayed focused on its core thesis, and the trust signals (every claim cited, source links visible) are stronger than competitors. Not VITAL because the competitive moat is closer than the brand suggests — peer products have caught up on the core capability.",
-
   "what_it_does_well": [
     "Every answer ships with inline citations to live web sources",
     "Sonar API is real and agent-driveable for retrieval-augmented workflows",
@@ -34,7 +29,6 @@
     "Free tier is usable without login for basic queries",
     "Domain-pinned focus modes (academic, finance) narrow the source set when needed"
   ],
-
   "what_it_fails_at": [
     "Differentiation versus ChatGPT Search and Claude-with-web is narrower than the brand suggests",
     "Pages (longform mode) feels orthogonal to the search-first core",
@@ -42,23 +36,19 @@
     "Specialist technical queries often see equally good or better answers from peers",
     "Citation quality varies — occasional broken or stale source links"
   ],
-
   "best_for": [
     "Research workflows where citations are mandatory",
     "Agent pipelines needing web-grounded answers via API",
     "Users who want web search wrapped in an LLM without committing to the ChatGPT or Claude ecosystem",
     "Quick fact-shaped queries where source provenance matters more than depth"
   ],
-
   "not_recommended_for": [
     "Users already paying for ChatGPT Plus or Claude Pro — the web-search capability is roughly equivalent",
     "Deep technical research where domain LLMs (Gemini deep research, etc.) outperform",
     "Offline-first workflows — Perplexity has no offline mode",
     "Conversational tasks unrelated to web retrieval (general writing, coding)"
   ],
-
   "red_flags": [],
-
   "compared_to": [
     {
       "slug": "chatgpt",
@@ -76,14 +66,32 @@
       "preferred_for_axis": "polish-vs-customization"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "Free tier usable without login", "source": "https://www.perplexity.ai", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Sonar API documented for programmatic use", "source": "https://docs.perplexity.ai", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Pro tier pricing $20/month", "source": "https://www.perplexity.ai/pro", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Comet browser launched", "source": "https://www.perplexity.ai/comet", "tested_at": "2026-05-23", "verified": true}
+    {
+      "claim": "Free tier usable without login",
+      "source": "https://www.perplexity.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Sonar API documented for programmatic use",
+      "source": "https://docs.perplexity.ai",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Pro tier pricing $20/month",
+      "source": "https://www.perplexity.ai/pro",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Comet browser launched",
+      "source": "https://www.perplexity.ai/comet",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": true,
     "has_cli": false,
@@ -94,24 +102,56 @@
     "agent_integration_path": "Sonar and Sonar-online models via REST API; agents issue queries and receive structured answers with citation URLs. Suitable for retrieval-augmented agent workflows where citations are required. Community-maintained MCP wrappers exist but no first-party MCP as of 2026-05.",
     "agent_friendly_score": 7
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Where knowledge begins' / answer with sources", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "Query input on landing, no login required", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "/pro tier public; free tier on landing", "tested_at": "2026-05-23T14:30:00Z"},
-    {"id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Live query interface on landing", "tested_at": "2026-05-23T14:30:00Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Where knowledge begins' / answer with sources",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Query input on landing, no login required",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "/pro tier public; free tier on landing",
+      "tested_at": "2026-05-23T14:30:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live query interface on landing",
+      "tested_at": "2026-05-23T14:30:00Z"
+    }
   ],
-
   "summary": "The answer engine that ships sources by default — solid for fact-shaped questions, increasingly serious for agent retrieval, but the moat keeps narrowing as every other lab catches up.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
-
   "staleness_after": "2026-08-23",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-08-23",
-
   "attestation_url": "/data/attestations/perplexity.json",
   "signature_pending": true,
-
-  "source": "hlido-editor-v2-handcraft"
+  "source": "hlido-editor-v2-handcraft",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-24",
+    "source": "engine-browser-marking-retrofit/browser-rendered"
+  }
 }
