@@ -4,19 +4,16 @@
   "name": "Write with Laika",
   "agent_url": "https://writewithlaika.com",
   "category": "AI Agent",
-
   "run_id": "run-writewithlaika-handcraft-2026-05-23",
   "run_at": "2026-05-23T15:30:00Z",
   "editor": "Hlido Editor",
   "editorial_method": "public-surface-tier-1+editorial-narrative-v2+handcraft",
   "methodology_version": "2026.05",
   "methodology_url": "/methodology/public-surface-tier-1/",
-
   "score": 38,
   "tier": "FLATLINE",
   "laddoo_score": 38,
   "confidence": "high",
-
   "hlido_opinion": {
     "headline": "An AI text generator positioned around 'humanization' (anti-detection) — the use case itself is in an arms race that produces no durable value, and the public surface doesn't show enough beyond the gimmick to justify a higher rating.",
     "body": "Write with Laika markets itself as a free AI text generator with 'AI Humanization' — language meant to evade AI-content detectors used by educators and content platforms. That framing puts the product in a specific corner of the AI writing space: not the productivity-augmentation corner (Lex, Sudowrite, Notion AI), not the agentic-writing corner (Claude, Cursor for writing), but the detection-evasion corner alongside Undetectable.ai, StealthGPT, and a churn of similar tools. The economics of that corner are difficult. AI-content detectors are themselves unreliable (false-positive rates published by educators consistently land 5-20% on human writing), the detection-vs-humanization arms race produces no durable advantage for either side, and platforms that rely on detectors are slowly abandoning them. So the value proposition rests on a use case whose foundation is eroding under both sides of the trade. Beyond the humanization angle, the public surface offers little to distinguish — same prompt-to-paragraph loop that every free LLM wrapper offers, no API, no agentic surface, no editor integrations of consequence. For a buyer who needs serious writing assistance, Sudowrite or Lex (long-form) or Claude/ChatGPT (general) all materially outclass this. The 'free' tier and 'humanization' angle suggest the play is volume from students and content marketers rather than depth from professional writers — a legitimate market segment, but one with razor margins and constant feature churn.",
@@ -24,15 +21,12 @@
     "as_of": "2026-05-23",
     "editor_signature_pending": true
   },
-
   "tier_rationale": "FLATLINE (38) because the positioning is in an arms-race corner of the AI-writing space (anti-detection) with no durable moat for the tool or its competitors, and the rest of the public surface offers nothing that would distinguish it from the dozens of free LLM wrappers in the same niche. Not lower because the product is at least up, free, and serving a clear (if narrow) user segment.",
-
   "what_it_does_well": [
     "Free tier removes friction for students and casual content writers",
     "Single-purpose framing is clear — visitors know what to expect within 5 seconds of the landing page",
     "Functioning end-to-end loop (prompt -> output) works on first try"
   ],
-
   "what_it_fails_at": [
     "Core use case (anti-detection) is in an arms race that produces no durable value",
     "No API, no CLI, no MCP — agents cannot drive generation programmatically",
@@ -40,24 +34,20 @@
     "Output quality (in our test pass) is at GPT-3.5/Llama-2-class level, not frontier-model level",
     "No editor integrations, no document import, no team features"
   ],
-
   "best_for": [
     "Students and casual content writers who need a free generator and don't care about durability",
     "Buyers specifically wanting the 'humanization' framing and willing to accept the arms-race risk"
   ],
-
   "not_recommended_for": [
     "Professional writers — Sudowrite, Lex, or Claude/ChatGPT all materially outclass this",
     "Agents or pipelines needing programmatic generation (no API)",
     "Educators trying to evaluate student work honestly — the tool actively works against academic integrity tools",
     "Buyers wanting longer-form structured writing assistance (no document, outline, or chapter primitives)"
   ],
-
   "red_flags": [
     "Core positioning is anti-detection. Even setting aside academic-integrity concerns, the underlying arms race compresses the tool's durability — it competes on whatever current detectors miss, which changes monthly.",
     "Marketing claim '100% Free' is qualified once you hit usage limits — verify the exact tier before relying on it for a workflow."
   ],
-
   "compared_to": [
     {
       "slug": "undetectable-ai",
@@ -75,13 +65,26 @@
       "preferred_for_axis": "general-quality"
     }
   ],
-
   "evidence_urls": [
-    {"claim": "Markets 'AI Humanization' (anti-detection) as primary differentiator", "source": "https://writewithlaika.com", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "Free tier exists on landing", "source": "https://writewithlaika.com", "tested_at": "2026-05-23", "verified": true},
-    {"claim": "No public API documentation found", "source": "https://writewithlaika.com", "tested_at": "2026-05-23", "verified": true}
+    {
+      "claim": "Markets 'AI Humanization' (anti-detection) as primary differentiator",
+      "source": "https://writewithlaika.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "Free tier exists on landing",
+      "source": "https://writewithlaika.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    },
+    {
+      "claim": "No public API documentation found",
+      "source": "https://writewithlaika.com",
+      "tested_at": "2026-05-23",
+      "verified": true
+    }
   ],
-
   "agent_relevance": {
     "has_api": false,
     "has_cli": false,
@@ -92,24 +95,56 @@
     "agent_integration_path": "None — the product is a human-facing web app with no documented programmatic interface. Agents wanting AI-text generation should use foundation-model APIs (OpenAI, Anthropic, etc.) directly.",
     "agent_friendly_score": 0
   },
-
   "checklist": [
-    {"id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-05-23T15:30:00Z"},
-    {"id": "primary_value_prop", "pass": true, "required": true, "evidence": "'AI Writer - Free AI Text Generator with AI Humanization'", "tested_at": "2026-05-23T15:30:00Z"},
-    {"id": "cta_present", "pass": true, "required": true, "evidence": "'Try free' on landing", "tested_at": "2026-05-23T15:30:00Z"},
-    {"id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free + paid tiers shown on landing", "tested_at": "2026-05-23T15:30:00Z"},
-    {"id": "evidence_or_demo", "pass": false, "required": false, "evidence": "Generator embedded on landing but no demo of differentiation", "tested_at": "2026-05-23T15:30:00Z"}
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-05-23T15:30:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI Writer - Free AI Text Generator with AI Humanization'",
+      "tested_at": "2026-05-23T15:30:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Try free' on landing",
+      "tested_at": "2026-05-23T15:30:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free + paid tiers shown on landing",
+      "tested_at": "2026-05-23T15:30:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Generator embedded on landing but no demo of differentiation",
+      "tested_at": "2026-05-23T15:30:00Z"
+    }
   ],
-
   "summary": "An AI text generator positioned around 'humanization' (anti-detection) — the use case itself is in an arms race that produces no durable value, and the public surface doesn't show enough beyond the gimmick to justify a higher rating.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
-
   "staleness_after": "2026-08-23",
   "review_age_days_at_publish": 0,
   "next_review_due_at": "2026-08-23",
-
   "attestation_url": "/data/attestations/writewithlaika.json",
   "signature_pending": true,
-
-  "source": "hlido-editor-v2-handcraft"
+  "source": "hlido-editor-v2-handcraft",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-25",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
