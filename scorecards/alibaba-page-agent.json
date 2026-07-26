@@ -15,20 +15,20 @@
   "laddoo_score": 40,
   "confidence": "low",
   "hlido_opinion": {
-    "headline": "Page Agent from Alibaba's GitHub is a web-page interaction agent research project \u2014 credible provenance from a major tech organisation, but surface signals point to a research release rather than a production product.",
-    "body": "Page Agent comes from Alibaba's GitHub organisation \u2014 the same entity responsible for significant open-source contributions in ML (Qwen models, ModelScope, etc.). The 'page-agent' name suggests an agent designed to interact with web pages programmatically, potentially in the class of tools like browser-use or Playwright-augmented LLM agents. Alibaba's involvement is a strong provenance signal \u2014 it won't be vaporware and the code quality is likely high \u2014 but research releases from large tech organisations often lack the product polish, documentation depth, and integration ergonomics that practitioners expect. The FADING (40) automated score reflects a GitHub-URL audit; the editorial view is that this warrants re-review against the actual repository README and any linked documentation site. Worth flagging for agent toolchain evaluators.",
+    "headline": "Page Agent from Alibaba's GitHub is a web-page interaction agent research project — credible provenance from a major tech organisation, but surface signals point to a research release rather than a production product.",
+    "body": "Page Agent comes from Alibaba's GitHub organisation — the same entity responsible for significant open-source contributions in ML (Qwen models, ModelScope, etc.). The 'page-agent' name suggests an agent designed to interact with web pages programmatically, potentially in the class of tools like browser-use or Playwright-augmented LLM agents. Alibaba's involvement is a strong provenance signal — it won't be vaporware and the code quality is likely high — but research releases from large tech organisations often lack the product polish, documentation depth, and integration ergonomics that practitioners expect. The FADING (40) automated score reflects a GitHub-URL audit; the editorial view is that this warrants re-review against the actual repository README and any linked documentation site. Worth flagging for agent toolchain evaluators.",
     "voice": "Hlido Editor",
     "as_of": "2026-06-07",
     "editor_signature_pending": true
   },
   "tier_rationale": "FADING (40) from a GitHub-URL automated audit. Editorial note: Alibaba provenance elevates this above a random GitHub project, but without a product site, documentation depth review, or usage evidence, the score stands as engine-assigned. Re-review against full README and any docs site.",
   "what_it_does_well": [
-    "Backed by Alibaba \u2014 credible technical provenance and likely high code quality",
+    "Backed by Alibaba — credible technical provenance and likely high code quality",
     "Web-page agent interaction is a genuine and growing use case",
     "Open source and publicly accessible"
   ],
   "what_it_fails_at": [
-    "Research release posture \u2014 likely prioritises academic contribution over production ergonomics",
+    "Research release posture — likely prioritises academic contribution over production ergonomics",
     "No dedicated product page beyond GitHub",
     "Documentation quality TBD without full README review"
   ],
@@ -44,7 +44,7 @@
   "compared_to": [
     {
       "slug": "browser-use-browser-use",
-      "verdict_diff": "browser-use is the community-first browser agent library with a product site and documentation. Page Agent is the Alibaba research equivalent \u2014 higher code quality provenance, lower product polish.",
+      "verdict_diff": "browser-use is the community-first browser agent library with a product site and documentation. Page Agent is the Alibaba research equivalent — higher code quality provenance, lower product polish.",
       "preferred_for_axis": "community-documentation"
     }
   ],
@@ -66,7 +66,7 @@
     "agent_integration_path": "Python library for web-page agent tasks. Integration path requires source review. No MCP or documented REST API.",
     "agent_friendly_score": 5
   },
-  "summary": "Alibaba's web-page interaction agent research project \u2014 credible provenance, research-release posture, GitHub-only evaluation surface.",
+  "summary": "Alibaba's web-page interaction agent research project — credible provenance, research-release posture, GitHub-only evaluation surface.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/alibaba-page-agent/",
   "reviewed_at": "2026-06-07",
@@ -110,11 +110,19 @@
       "claim": "Data handling",
       "required": false,
       "verdict": "fail",
-      "evidence": "Research project \u2014 not applicable",
+      "evidence": "Research project — not applicable",
       "source_surface": "unknown"
     }
   ],
   "evidence_tier": "public-audit-only",
   "engine": "public-surface",
-  "generated_at": "2026-06-07T00:00:00.000Z"
+  "generated_at": "2026-06-07T00:00:00.000Z",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-26",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
