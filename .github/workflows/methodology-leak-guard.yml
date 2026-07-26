@@ -7,25 +7,42 @@ name: methodology-leak-guard
 # See feedback_methodology_private.md and feedback_huggingface_disclosure.md.
 
 on:
+  # THE GATE. A PR is the only place this guard can actually PREVENT a leak, so
+  # it stays per-event here and is the coverage that matters.
   pull_request:
     branches: ["**"]
-  push:
-    branches: [main]
-    # Path filter added 2026-06-07: this guard ONLY scans public surfaces
-    # (scripts/check-methodology-leak.sh scans site/** + agents.json + llms.txt
-    # + agent-manifest.json; it does NOT scan brain/**). Running it on the 100+
-    # daily routine/bot commits to brain/** was ~3,000 GHA min/mo of pure waste
-    # with zero security value. It now fires only when a public surface that
-    # could actually leak methodology changes — full protection, ~95% fewer runs.
-    paths:
-      - "site/**"
-      - "!site/internal/**"   # local-only command center; guard excludes it from scanning anyway
-      - "agents.json"
-      - "llms.txt"
-      - "agent-manifest.json"
+
+  # THE SWEEP (replaced the `push: main` trigger 2026-07-26). Scans the full live
+  # tree once a day.
+  #
+  # Why the push trigger had to go — the 2026-06-07 fix, one layer down. That fix
+  # narrowed this guard from every brain/** commit (~3,000 min/mo) to `site/**`,
+  # which was correct but incomplete: the publish machinery rewrites
+  # site/data/scorecards/** and site/data/attestations/** all day (939 + 628
+  # file-touches on 2026-07-26 alone, across ~100+ commits/day to main), so
+  # `site/**` IS the hot path. Measured result: ~30 runs/day, each finishing in
+  # 2-11s (median 3s) — and GitHub bills every job rounded UP to a full minute.
+  # That is ~900 min/mo of the 2,000-min free tier spent on ~90 seconds of real
+  # work, and it is what exhausted the tier in July 2026.
+  #
+  # Protection is NOT reduced. A `push: main` run fires AFTER the push has landed
+  # and after Pages has begun deploying, and this workflow is not a required
+  # status check — so on main it was already detect-after-the-fact, never a block.
+  # A daily full-tree sweep detects exactly the same class of leak on exactly the
+  # same surfaces, 1 run/day instead of 30. The PR gate above is what blocks.
+  schedule:
+    - cron: "0 3 * * *"     # daily 03:00 UTC — quiet hour, before the founder's day
+  workflow_dispatch:        # on-demand sweep (use after any manual site/** edit)
 
 permissions:
   contents: read
+
+# A publish burst commits many times in a row; without this each commit spawned
+# its own separately-billed run. Harmless to cancel a superseded sweep — the next
+# one scans the newer tree anyway.
+concurrency:
+  group: methodology-leak-guard-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   methodology-leak-guard:
