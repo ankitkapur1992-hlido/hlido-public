@@ -15,13 +15,13 @@
   "laddoo_score": 50,
   "confidence": "low",
   "hlido_opinion": {
-    "headline": "Established meeting-intelligence SaaS with a legitimate market position, but the automated surface audit hit redirect artifacts that obscured real signals \u2014 score likely undersells the product.",
-    "body": "MeetGeek is a 2020-vintage meeting assistant that auto-joins video calls, transcribes them, generates summaries and action items, and pushes structured output to downstream tools (CRM, Slack, Notion, and 2,000+ Zapier targets). It has a real pricing page, documented integrations, an API, and an established customer base. The FADING (50) score from the automated audit is an artifact of how the test runner resolved the homepage \u2014 it landed on a partner tracking URL that had the MeetGeek domain but not the canonical pricing/docs paths, so all checklist items came back unknown. Based on the public surface that is actually navigable from meetgeek.ai, this product would score materially higher on trust signals and surface completeness. The editorial note here is important for the registry: this is one of several early-2026 automated runs where BOM encoding and redirect chains produced confidence:low / all-claims:unknown verdicts on products with real public surfaces. The score has been preserved as-is per Hlido methodology (engine output is the score), but the editorial narrative surfaces the underlying tension.",
+    "headline": "Established meeting-intelligence SaaS with a legitimate market position, but the automated surface audit hit redirect artifacts that obscured real signals — score likely undersells the product.",
+    "body": "MeetGeek is a 2020-vintage meeting assistant that auto-joins video calls, transcribes them, generates summaries and action items, and pushes structured output to downstream tools (CRM, Slack, Notion, and 2,000+ Zapier targets). It has a real pricing page, documented integrations, an API, and an established customer base. The FADING (50) score from the automated audit is an artifact of how the test runner resolved the homepage — it landed on a partner tracking URL that had the MeetGeek domain but not the canonical pricing/docs paths, so all checklist items came back unknown. Based on the public surface that is actually navigable from meetgeek.ai, this product would score materially higher on trust signals and surface completeness. The editorial note here is important for the registry: this is one of several early-2026 automated runs where BOM encoding and redirect chains produced confidence:low / all-claims:unknown verdicts on products with real public surfaces. The score has been preserved as-is per Hlido methodology (engine output is the score), but the editorial narrative surfaces the underlying tension.",
     "voice": "Hlido Editor",
     "as_of": "2026-06-07",
     "editor_signature_pending": true
   },
-  "tier_rationale": "FADING (50) is the engine-assigned score, preserved per Hlido policy. The automated test runner could not resolve claims through the partner-tracking redirect URL, yielding confidence:low and all claims unknown. The editorial layer notes this likely understates the actual product quality \u2014 MeetGeek has transparent pricing, documented API, and active integrations. This slug is a candidate for re-review in the next patch-monitor cycle.",
+  "tier_rationale": "FADING (50) is the engine-assigned score, preserved per Hlido policy. The automated test runner could not resolve claims through the partner-tracking redirect URL, yielding confidence:low and all claims unknown. The editorial layer notes this likely understates the actual product quality — MeetGeek has transparent pricing, documented API, and active integrations. This slug is a candidate for re-review in the next patch-monitor cycle.",
   "what_it_does_well": [
     "Auto-joins Zoom, Google Meet, and Microsoft Teams without user intervention",
     "Produces structured meeting summaries + action items immediately post-call",
@@ -30,9 +30,9 @@
     "API available for programmatic access to meeting data"
   ],
   "what_it_fails_at": [
-    "Automated test ran into redirect/tracking URL artifacts \u2014 surface completeness check was unreliable",
+    "Automated test ran into redirect/tracking URL artifacts — surface completeness check was unreliable",
     "No real-time features during the meeting (post-processing only)",
-    "AI output quality depends on audio quality \u2014 noisy calls produce degraded transcripts",
+    "AI output quality depends on audio quality — noisy calls produce degraded transcripts",
     "Data residency options are not prominently published on the public surface",
     "Mobile app experience is thinner than the web dashboard"
   ],
@@ -47,7 +47,7 @@
     "One-on-one video calls where the value of automation is lower than privacy cost"
   ],
   "red_flags": [
-    "Automated audit landed on a partner-tracking URL variant, not the canonical domain \u2014 all claims returned unknown. Score of 50 is engine-output; re-review recommended before using this score in agent routing decisions."
+    "Automated audit landed on a partner-tracking URL variant, not the canonical domain — all claims returned unknown. Score of 50 is engine-output; re-review recommended before using this score in agent routing decisions."
   ],
   "compared_to": [
     {
@@ -85,7 +85,7 @@
     "agent_integration_path": "REST API + Zapier/webhook integration. An agent can pull meeting summaries and action items via the API after calls complete. No MCP server; programmatic access requires API key obtained post-signup.",
     "agent_friendly_score": 6
   },
-  "summary": "Established meeting-intelligence SaaS with a legitimate market position \u2014 automated score likely undersells the product due to redirect artifacts in the test run.",
+  "summary": "Established meeting-intelligence SaaS with a legitimate market position — automated score likely undersells the product due to redirect artifacts in the test run.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline.",
   "review_url": "https://hlido.eu/reviews/get-meetgeek/",
   "reviewed_at": "2026-05-14",
@@ -181,5 +181,13 @@
   "evidence_tier": "public-audit-only",
   "engine": "public-surface",
   "attestation_url": "/data/attestations/get-meetgeek.json",
-  "generated_at": "2026-06-01T00:03:16.740Z"
+  "generated_at": "2026-06-01T00:03:16.740Z",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-27",
+    "source": "engine-browser-marking-retrofit"
+  }
 }
