@@ -1,0 +1,147 @@
+{
+  "schema_version": "2.0",
+  "slug": "run-llama-liteparse",
+  "name": "LiteParse",
+  "agent_url": "https://developers.llamaindex.ai/liteparse/",
+  "run_id": "run-run-llama-liteparse-v2-2026-07-29",
+  "run_at": "2026-07-29T11:20:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich (hand-run, ses chat 2026-07-29)",
+  "staleness_after": "2026-10-29",
+  "next_review_due_at": "2026-10-29",
+  "signature_pending": true,
+  "category": "Infrastructure",
+  "score": 85,
+  "laddoo_score": 85,
+  "tier": "STEADY",
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A deliberately un-clever document parser — Rust, local, no API key, no LLM in the loop — and that restraint is exactly what makes it dependable infrastructure for agents.",
+    "body": "LiteParse is the rarest thing in the 2026 document-parsing market: a tool that does not want to be an AI product. It is written in Rust, runs entirely on the machine, and states plainly that it uses no LLMs and no API keys. In a category where nearly every competitor routes your documents through someone else's inference endpoint and bills per page, choosing determinism is a real position, not a limitation. The feature list is the honest kind — spatial layout preserved, bounding boxes for every text line, Markdown rendering with tables and headings, Tesseract OCR built in with a pluggable server, Office formats via automatic conversion. Nothing there is a claim about intelligence; all of it is a claim about mechanics, which is the sort of claim that either works or visibly doesn't. For agent builders the surface is unusually complete: CLI, library bindings for TypeScript, Python and Rust, a browser/WASM path, and an MCP server with its own install page. That combination means an agent can drive it in-process, out-of-process, or over MCP without the vendor mediating anything. The caveat is that everything we can see is documentation. The page carries no adoption numbers, no benchmark comparison against LlamaParse (the vendor's own cloud product) or the wider OCR field, and no statement of licence or version cadence on the surface we captured — so parity claims like OCR accuracy remain unverified from the public surface. Backing from LlamaIndex reduces the continuity risk that usually shadows a young parsing library, but it also raises an unanswered question the docs do not address: where LiteParse ends and the paid LlamaParse begins.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the capability surface is broad and concretely specified (spatial parsing, bounding boxes, OCR, Office formats, four language targets plus WASM), the local/no-API-key architecture removes the vendor-dependency and per-page-cost risk that dominates this category, and an MCP server plus CLI make it directly drivable by agents. Not VITAL because the captured surface is documentation only: no adoption signal, no independent or self-published accuracy benchmark, no licence or release cadence stated on the page, and no articulation of how it relates to the vendor’s own paid LlamaParse — so durability and quality claims remain unverified rather than disproven.",
+  "what_it_does_well": [
+    "Parses locally with no cloud dependency, no LLM and no API key — documents never leave the machine",
+    "Preserves spatial layout and returns bounding boxes per text line, not just flattened text",
+    "Renders structured Markdown (headings, tables, lists, images, links) aimed at RAG pipelines",
+    "Ships four consumption paths — CLI, TypeScript/Python/Rust libraries, and browser WASM",
+    "Provides an MCP server with a dedicated install page, so agents can call it without custom glue",
+    "Handles scanned input via built-in Tesseract OCR, with a pluggable external OCR server"
+  ],
+  "what_it_fails_at": [
+    "No accuracy benchmark published on the captured surface — OCR and layout quality are unverified",
+    "No adoption, download or production-use signal anywhere on the page",
+    "Licence and release cadence are not stated on the documentation surface we captured",
+    "Relationship to the vendor’s paid LlamaParse is undefined — unclear which workloads are expected to graduate",
+    "No pricing or support statement, so commercial supportability cannot be assessed"
+  ],
+  "best_for": [
+    "Agent pipelines that must parse documents without sending them to a third party",
+    "Real-time or latency-sensitive extraction where a network round-trip per page is unacceptable",
+    "Coding agents and local workflows needing bounding boxes for citation or visual grounding",
+    "Teams under data-residency constraints that rule out cloud OCR entirely",
+    "Polyglot stacks — the same engine is reachable from Node, Python, Rust and the browser"
+  ],
+  "not_recommended_for": [
+    "Teams that need a contractual accuracy SLA — none is published",
+    "Workloads depending on LLM-based semantic understanding of documents (this is deliberately mechanical parsing)",
+    "Buyers who need a documented support path or commercial licence before adoption",
+    "Anyone selecting on published benchmark parity against incumbent OCR vendors"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "autoscrape-labs-pydoll",
+      "verdict_diff": "Both are local, open-source extraction tools with no vendor in the request path, but they address different inputs: pydoll extracts from live web pages via browser automation, LiteParse from static documents (PDF, Office, images). They are complements in a pipeline more often than alternatives.",
+      "preferred_for_axis": "static-document-parsing"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Three first-class paths, all documented on the captured surface: an MCP server with a dedicated \"Install MCP Server\" page for tool-calling agents; a CLI for shell-driven agents; and TypeScript/Python/Rust libraries (plus browser WASM) for in-process embedding. No API key or account is required, so an agent can adopt it without credential provisioning — unusually low friction for this category.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "claim": "Runs entirely locally with no cloud dependencies, no LLMs and no API keys",
+      "verified": true,
+      "evidence": "Stated verbatim on the captured documentation page",
+      "required": true
+    },
+    {
+      "claim": "Written in Rust",
+      "verified": true,
+      "evidence": "Stated on the captured page",
+      "required": false
+    },
+    {
+      "claim": "Extracts bounding boxes for every text line",
+      "verified": true,
+      "evidence": "Listed in \"What can LiteParse do?\" on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Supports DOCX, XLSX, PPTX, PNG, JPG via automatic conversion",
+      "verified": true,
+      "evidence": "Listed on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Usable from Node.js/TypeScript, Python, Rust and the browser (WASM)",
+      "verified": true,
+      "evidence": "Listed on the captured page; dedicated Browser Usage (WASM) and Library Usage sections in nav",
+      "required": true
+    },
+    {
+      "claim": "Provides an MCP server",
+      "verified": true,
+      "evidence": "\"Install MCP Server\" entry in the captured documentation navigation",
+      "required": false
+    },
+    {
+      "claim": "Parsing accuracy is competitive with cloud OCR services",
+      "verified": false,
+      "evidence": "No benchmark, comparison or accuracy figure appears on the captured surface",
+      "required": false
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Local, no-LLM, no-API-key architecture",
+      "source": "https://developers.llamaindex.ai/liteparse/",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Multi-format and multi-language-binding support",
+      "source": "https://developers.llamaindex.ai/liteparse/",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "MCP server available",
+      "source": "https://developers.llamaindex.ai/liteparse/ (Install MCP Server)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "LiteParse parses existing documents and does not generate synthetic content, so Article-50 marking obligations do not attach to its output.",
+    "checked_at": "2026-07-29"
+  },
+  "summary": "Local-first, Rust-based document parser with spatial layout, bounding boxes and OCR — no LLM, no API key, and reachable by agents via MCP, CLI or four language bindings. Capability surface is broad and concrete; accuracy and adoption remain unevidenced on the public surface."
+}
