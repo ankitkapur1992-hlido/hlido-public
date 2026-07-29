@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "slug": "ahujasid-blender-mcp",
+  "name": "Blender MCP",
+  "agent_url": "https://blendermcp.org/",
+  "run_id": "run-ahujasid-blender-mcp-v2-2026-07-29",
+  "run_at": "2026-07-29T11:20:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich (hand-run, ses chat 2026-07-29)",
+  "staleness_after": "2026-10-29",
+  "next_review_due_at": "2026-10-29",
+  "signature_pending": true,
+  "category": "Image & Design",
+  "score": 82,
+  "laddoo_score": 82,
+  "tier": "STEADY",
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "The most client-agnostic 3D MCP server we have reviewed — and the only one whose headline feature is arbitrary code execution inside your modelling application.",
+    "body": "Blender MCP connects a language model to Blender over the Model Context Protocol, and its strongest quality is breadth of client support: Claude Desktop, Claude Code, Cursor, VSCode via Cline/Roo, ChatGPT, Gemini CLI, and Ollama for a fully local setup each get their own documented path. That matters more than it sounds. Most MCP servers in the creative-tool space document one host, usually Claude Desktop, and leave everyone else to reverse-engineer the config. Here the quick start is a four-line JSON block that works, with prerequisites stated plainly (uv, Blender 3.0+). The project is also unusually honest about what it is not: the site states in its own header that this is a third-party open-source project, not made or supported by the Blender Foundation. Vendors rarely volunteer that disclaimer, and it is the kind of signal that earns trust cheaply. The capability set is genuine rather than aspirational — Poly Haven for HDRIs and textures, Hyper3D Rodin and Hunyuan3D for generated meshes, materials and lighting control — and the gallery shows concrete prompts against concrete outputs rather than abstract promises. What a buyer must weigh is the security posture. 'Run arbitrary Python code in Blender via AI' is listed as a feature, and on the captured surface it comes with no sandboxing note, no permission model and no warning about prompt-injected scripts. For a hobbyist that is power; for anyone running this against untrusted input or in a studio pipeline it is an unbounded execution path that deserves an explicit threat model the site does not yet provide. One minor governance note: the site is built by the founder of a commercial 3D-agent company rather than the library's author, which is disclosed but worth knowing when reading its comparison pages.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) because the integration surface is exceptionally well documented across six distinct AI clients, the quick start is concrete and reproducible, third-party status relative to the Blender Foundation is disclosed unprompted, and the capability claims are backed by a gallery of specific prompt-to-output examples. Not VITAL because the headline Python-execution capability ships without any sandboxing, permission model or threat guidance on the captured surface; and because no version, release cadence, maintenance signal or test evidence appears on the site, leaving durability unassessed.",
+  "what_it_does_well": [
+    "Documents setup for six AI clients — Claude, Cursor, VSCode, ChatGPT, Gemini, Ollama — not just one",
+    "Quick start is a concrete, copy-pasteable MCP config with prerequisites stated (uv, Blender 3.0+)",
+    "Discloses third-party status relative to the Blender Foundation without being asked",
+    "Supports a fully local path via Ollama, so no API key or cloud vendor is required",
+    "Integrates real asset sources (Poly Haven) and generative 3D backends (Hyper3D Rodin, Hunyuan3D)",
+    "Gallery shows specific prompts alongside their outputs rather than abstract capability claims"
+  ],
+  "what_it_fails_at": [
+    "Arbitrary Python execution is offered as a feature with no sandboxing, permission model or threat guidance on the captured surface",
+    "No version number, release cadence or maintenance signal shown on the site",
+    "No test, CI or reliability evidence presented",
+    "Website is authored by the founder of a commercial 3D-agent company rather than the library author — disclosed, but a mild independence caveat on its own comparison pages",
+    "No statement on how generated 3D output is marked or attributed, despite integrating generative backends"
+  ],
+  "best_for": [
+    "Blender users who want natural-language modelling from whichever AI client they already use",
+    "Individuals and small studios prototyping scenes, materials and lighting conversationally",
+    "Fully local pipelines — the Ollama path avoids sending scene data to any cloud vendor",
+    "Developers who want scriptable Blender control mediated by an LLM rather than hand-written Python"
+  ],
+  "not_recommended_for": [
+    "Studio or enterprise pipelines that require a documented sandboxing and permission model before granting code execution",
+    "Any workflow where the model may act on untrusted input — arbitrary Python execution is an unbounded path",
+    "Teams needing a supported, versioned dependency with a published maintenance commitment",
+    "Users expecting official Blender Foundation support (explicitly out of scope)"
+  ],
+  "red_flags": [
+    "Arbitrary Python code execution inside Blender is a headline feature with no sandboxing, permission prompt or prompt-injection guidance documented on the captured surface — an AI-driven execution path that warrants an explicit threat model before use against untrusted input."
+  ],
+  "compared_to": [
+    {
+      "slug": "asmith26-jupytercad-mcp",
+      "verdict_diff": "Both drive a desktop 3D/CAD application through MCP. Blender MCP is far broader (six documented clients, asset and generative-mesh integrations, active gallery) but exposes arbitrary code execution; jupytercad-mcp is narrower and quieter, with a fixed, enumerable tool surface and no code-execution path. Choose Blender MCP for capability, jupytercad-mcp for a bounded blast radius.",
+      "preferred_for_axis": "breadth-of-capability"
+    },
+    {
+      "slug": "meshy-ai",
+      "verdict_diff": "Meshy generates 3D assets as a hosted product; Blender MCP controls the modelling application you already run and can call generative backends as one capability among many. Meshy wins for asset generation as a service; Blender MCP wins when the scene, not the asset, is the deliverable.",
+      "preferred_for_axis": "application-control-vs-asset-generation"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server, installed via uvx and registered in the host client’s MCP config. Setup is documented for Claude Desktop/Code, Cursor, VSCode (Cline/Roo), ChatGPT, Gemini CLI and Ollama. Because it also exposes arbitrary Python execution inside Blender, an agent integrating it inherits full scripting authority over the running application — capability and risk arrive together.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "claim": "Connects AI to Blender via the Model Context Protocol",
+      "verified": true,
+      "evidence": "Stated on the captured homepage; MCP config block shown",
+      "required": true
+    },
+    {
+      "claim": "Works with Claude, ChatGPT, Gemini, Cursor, VSCode and local models via Ollama",
+      "verified": true,
+      "evidence": "Dedicated setup-guide cards for each client on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Downloads HDRIs, textures and models from Poly Haven via AI",
+      "verified": true,
+      "evidence": "Listed under \"What Blender MCP Can Do\" on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Generates 3D models via Hyper3D Rodin and Hunyuan3D",
+      "verified": true,
+      "evidence": "Listed on the captured page",
+      "required": false
+    },
+    {
+      "claim": "Runs arbitrary Python code in Blender via AI",
+      "verified": true,
+      "evidence": "Listed as a feature on the captured page",
+      "required": false
+    },
+    {
+      "claim": "Free, open-source and community-driven",
+      "verified": true,
+      "evidence": "Stated on the captured page with GitHub links",
+      "required": true
+    },
+    {
+      "claim": "Third-party project, not made or supported by the Blender Foundation",
+      "verified": true,
+      "evidence": "Disclosed in the site header and footer",
+      "required": false
+    },
+    {
+      "claim": "Code execution is sandboxed or permission-gated",
+      "verified": false,
+      "evidence": "No sandboxing, permission model or security guidance appears anywhere on the captured surface",
+      "required": false
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP quick-start configuration",
+      "source": "https://blendermcp.org/",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Six documented AI-client setup paths",
+      "source": "https://blendermcp.org/ (Setup Guides)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Third-party / not Blender Foundation disclaimer",
+      "source": "https://blendermcp.org/",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Arbitrary Python execution offered as a feature",
+      "source": "https://blendermcp.org/",
+      "tested_at": "2026-07-29",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": "https://blendermcp.org/",
+    "note": "Integrates generative 3D backends (Hyper3D Rodin, Hunyuan3D), so synthetic output is in scope, but the captured surface carries no marking, provenance, watermarking or content-credentials statement. Recorded as absent-on-surface, not as a negative finding.",
+    "checked_at": "2026-07-29"
+  },
+  "summary": "MCP server connecting six different AI clients to Blender for natural-language 3D modelling, with Poly Haven assets and generative-mesh backends. Documentation and transparency are strong; arbitrary Python execution ships without a documented security model."
+}
