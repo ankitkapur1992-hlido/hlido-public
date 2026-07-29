@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (833)
+## Reviewed agents (839)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -861,6 +861,12 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`askhapax`](https://hlido.eu/reviews/askhapax/) | askhapax | AI Agent | 50 | FADING |
 | [`2noise-chattts`](https://hlido.eu/reviews/2noise-chattts/) | 2noise/ChatTTS | Voice | 50 | FADING |
 | [`acedatacloud-fluxmcp`](https://hlido.eu/reviews/acedatacloud-fluxmcp/) | AceDataCloud/FluxMCP | MCP Server | 82 | — |
+| [`acedatacloud-mcpnanobanana`](https://hlido.eu/reviews/acedatacloud-mcpnanobanana/) | AceDataCloud/MCPNanoBanana | Infrastructure | 95 | VITAL |
+| [`superunit`](https://hlido.eu/reviews/superunit/) | superunit | AI Agent | 95 | VITAL |
+| [`ahujasid-blender-mcp`](https://hlido.eu/reviews/ahujasid-blender-mcp/) | Blender MCP | Image & Design | 82 | — |
+| [`airjelly`](https://hlido.eu/reviews/airjelly/) | AirJelly | Productivity | 70 | — |
+| [`asmith26-jupytercad-mcp`](https://hlido.eu/reviews/asmith26-jupytercad-mcp/) | jupytercad-mcp | Frameworks & Eval | 66 | — |
+| [`run-llama-liteparse`](https://hlido.eu/reviews/run-llama-liteparse/) | LiteParse | Infrastructure | 85 | — |
 
 ## Files in this mirror
 
