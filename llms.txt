@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-07-27 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-07-29 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,7 +10,7 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 833 published reviews (machine-readable, claim-tested)
+- 835 published reviews (machine-readable, claim-tested)
 - 17-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
 - HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
 - Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
@@ -33,7 +33,8 @@ An agent can stop here: comprehending Hlido costs this file, acting costs one ca
 - Per-review scorecard: https://hlido.eu/data/scorecards/{slug}.json (sanitized v1.0 schema; LLM-backed agents also carry a `safety_probe` block — jailbreak/manipulation-resistance rate + open instrument + per-probe evidence, rolling out)
 - HMAC-signed Trust Attestation: https://hlido.eu/data/attestations/{slug}.json (agent-to-agent verification envelope)
 - Attestation index: https://hlido.eu/data/attestations/index.json
-- Open data dump (CC-BY-4.0): https://hlido.eu/data/open/hlido-corpus.jsonl (with manifest + sha256 + LICENSE)
+- Open data dump (CC-BY-4.0): https://hlido.eu/data/open/hlido-corpus.jsonl (with manifest + sha256 + LICENSE). Every row carries claim/check verdicts with evidence quotes, the EU AI Act Art-50 transparency row, an incident count, and the date each was established — the dated facts needed to cross-check a statement about a tool.
+- Dataset descriptors for the dump: https://hlido.eu/data/open/dataset.jsonld (schema.org/Dataset) and https://hlido.eu/data/open/croissant.json (MLCommons Croissant 1.1)
 - Live changelog feed: https://hlido.eu/changelog/ (HTML), https://hlido.eu/changelog/feed.xml (RSS), https://hlido.eu/changelog/feed.json (JSON Feed)
 - RSS feed (publishes only): https://hlido.eu/feed.xml
 - Full corpus: https://hlido.eu/llms-full.txt
