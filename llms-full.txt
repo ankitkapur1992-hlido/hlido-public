@@ -5,9 +5,95 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 17 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 833 reviews
+> Corpus size: 835 reviews
 
 ## Reviewed agents
+
+### superunit
+- Slug: `superunit`
+- Laddoo Score: 95/100
+- Tier: VITAL
+- Category: AI Agent
+- Reviewed: 2026-07-29
+- URL: https://hlido.eu/reviews/superunit/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"superunit"}}}`
+
+**Summary:** Public-surface review of superunit: 4/4 required and 1/1 optional checks verified against the live product surface.
+
+---
+
+### Blender MCP
+- Slug: `ahujasid-blender-mcp`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: Image & Design
+- Reviewed: 2026-07-29
+- URL: https://hlido.eu/reviews/ahujasid-blender-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ahujasid-blender-mcp"}}}`
+
+**Summary:** MCP server connecting six different AI clients to Blender for natural-language 3D modelling, with Poly Haven assets and generative-mesh backends. Documentation and transparency are strong; arbitrary Python execution ships without a documented security model.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### AirJelly
+- Slug: `airjelly`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Productivity
+- Reviewed: 2026-07-29
+- URL: https://hlido.eu/reviews/airjelly/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"airjelly"}}}`
+
+**Summary:** Local-first proactive desktop agent for macOS that watches applications, builds a work timeline and acts unprompted. Privacy architecture is clearly stated but unverifiable from the public surface, capture scope is total, and no business model is disclosed.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### jupytercad-mcp
+- Slug: `asmith26-jupytercad-mcp`
+- Laddoo Score: 66/100
+- Tier: FADING
+- Category: Frameworks & Eval
+- Reviewed: 2026-07-29
+- URL: https://hlido.eu/reviews/asmith26-jupytercad-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"asmith26-jupytercad-mcp"}}}`
+
+**Summary:** Well-documented, honestly-scoped MCP server exposing eighteen enumerated JupyterCAD operations with no code-execution path. Engineering is sound; low adoption and a ~9.5-month release gap make continuity the main risk.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### LiteParse
+- Slug: `run-llama-liteparse`
+- Laddoo Score: 85/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-07-29
+- URL: https://hlido.eu/reviews/run-llama-liteparse/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"run-llama-liteparse"}}}`
+
+**Summary:** Local-first, Rust-based document parser with spatial layout, bounding boxes and OCR — no LLM, no API key, and reachable by agents via MCP, CLI or four language bindings. Capability surface is broad and concrete; accuracy and adoption remain unevidenced on the public surface.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### AceDataCloud/MCPNanoBanana
+- Slug: `acedatacloud-mcpnanobanana`
+- Laddoo Score: 95/100
+- Tier: VITAL
+- Category: Infrastructure
+- Reviewed: 2026-07-28
+- URL: https://hlido.eu/reviews/acedatacloud-mcpnanobanana/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"acedatacloud-mcpnanobanana"}}}`
+
+**Summary:** Public-surface review of AceDataCloud/MCPNanoBanana: 4/4 required and 1/1 optional checks verified against the live product surface.
+
+---
 
 ### AceDataCloud/FluxMCP
 - Slug: `acedatacloud-fluxmcp`
@@ -9582,21 +9668,6 @@ Try refreshing or navigating to a different page
 
 ---
 
-### @studio-foundation/runner
-- Slug: `studio-foundation-runner`
-- Laddoo Score: 90/100
-- Tier: VITAL
-- Category: Coding
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/studio-foundation-runner/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"studio-foundation-runner"}}}`
-
-**Summary:** Public-surface review of studio-foundation-runner.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### @ipads-skvm/skvm
 - Slug: `ipads-skvm-skvm`
 - Laddoo Score: 90/100
@@ -10432,21 +10503,6 @@ Try refreshing or navigating to a different page
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gradio-agentchatbot"}}}`
 
 **Summary:** Public-surface review of gradio-agentchatbot.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### site-agent
-- Slug: `site-agent`
-- Laddoo Score: 57/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/site-agent/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"site-agent"}}}`
-
-**Summary:** Public-surface review of site-agent.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
@@ -11607,21 +11663,6 @@ Try refreshing or navigating to a different page
 
 ---
 
-### TDSPROJECT2
-- Slug: `tdsproject2`
-- Laddoo Score: 57/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/tdsproject2/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tdsproject2"}}}`
-
-**Summary:** Public-surface review of tdsproject2.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
 ### hs-unit4-agent
 - Slug: `hs-unit4-agent`
 - Laddoo Score: 57/100
@@ -11632,21 +11673,6 @@ Try refreshing or navigating to a different page
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hs-unit4-agent"}}}`
 
 **Summary:** Public-surface review of hs-unit4-agent.
-
-**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
-
----
-
-### Voice_Agent
-- Slug: `voice-agent`
-- Laddoo Score: 57/100
-- Tier: FADING
-- Category: AI Agent
-- Reviewed: 2026-05-01
-- URL: https://hlido.eu/reviews/voice-agent/
-- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"voice-agent"}}}`
-
-**Summary:** Public-surface review of voice-agent.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
