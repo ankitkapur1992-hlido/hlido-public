@@ -1,0 +1,149 @@
+{
+  "schema_version": "2.0",
+  "slug": "asmith26-jupytercad-mcp",
+  "name": "jupytercad-mcp",
+  "agent_url": "https://pypi.org/project/jupytercad-mcp",
+  "run_id": "run-asmith26-jupytercad-mcp-v2-2026-07-29",
+  "run_at": "2026-07-29T11:20:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich (hand-run, ses chat 2026-07-29)",
+  "staleness_after": "2026-10-29",
+  "next_review_due_at": "2026-10-29",
+  "signature_pending": true,
+  "category": "Frameworks & Eval",
+  "score": 66,
+  "laddoo_score": 66,
+  "tier": "FADING",
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A precise, honestly-scoped MCP server for JupyterCAD — every tool enumerated, nothing oversold — carried by one maintainer with twenty stars and no release since October 2025.",
+    "body": "This is a small piece of work that does the unglamorous things right. The package documents all eighteen of its tools by name and effect — add_box, add_cone, cut, fuse, chamfer, fillet, set_visible, set_color and the rest — so a developer knows the exact surface before installing anything. That is rarer than it should be among MCP servers, where 'controls X with natural language' frequently stands in for an actual tool list. Both stdio and streamable-http transports are documented with the precise command for each, the licence is a clean Apache-2.0, and a runnable end-to-end example against the OpenAI Agents SDK is provided along with optional MLflow tracing and an interactive REPL mode. Nothing here is overclaimed: the description is 'an MCP server for JupyterCAD that allows you to control it using natural language', and that is exactly what the tool list delivers. The bounded tool surface is also a genuine security property — this server can add a torus or apply a fillet, and it cannot execute arbitrary code, which is a materially different risk profile from its larger cousins in the same space. What we cannot support is a claim of durability. Twenty stars, four forks, a single maintainer, one open issue, and a most-recent release dated 7 October 2025 — roughly nine and a half months before this review — is a project that works but is not visibly moving. No tests, CI or reliability evidence appears on the captured surface, and the dependency on JupyterCAD narrows the addressable use to a specific CAD workflow inside JupyterLab. For a hobby or research pipeline where the author is reachable, that profile is fine. For anything load-bearing, adopt it the way you would adopt any single-maintainer dependency: read the source, and expect to maintain it yourself.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) is a continuity signal, not a quality judgement on the code. The engineering that is visible is good: all eighteen tools are individually documented, both transports are specified with exact commands, the licence is clean Apache-2.0, and a runnable example is shipped. What pulls it below STEADY is durability evidence — 20 stars and 4 forks, a single maintainer, and no release since 7 October 2025 (~9.5 months at review), with no tests, CI or reliability signal on the captured surface. A tool with a bounded, well-specified surface that has stopped moving is exactly what this tier is meant to describe.",
+  "what_it_does_well": [
+    "Documents all eighteen tools individually by name and effect — no hand-waving about capability",
+    "Specifies both stdio and streamable-http transports with the exact command for each",
+    "Clean Apache-2.0 licence, declared and verified on the PyPI project page",
+    "Ships a runnable end-to-end example against the OpenAI Agents SDK, plus optional MLflow tracing",
+    "Bounded tool surface with no code-execution path — a materially smaller blast radius than comparable 3D/CAD MCP servers",
+    "Honest scoping: the description matches exactly what the tool list delivers, with no overclaim"
+  ],
+  "what_it_fails_at": [
+    "No release since 7 October 2025 — roughly 9.5 months stale at time of review",
+    "Very low adoption: 20 stars, 4 forks, single maintainer",
+    "No tests, CI status or reliability evidence on the captured surface",
+    "Narrow applicability — requires JupyterCAD inside JupyterLab",
+    "No documented versioning or maintenance commitment",
+    "Example client is coupled to the OpenAI Agents SDK, with no vendor-neutral quick start shown"
+  ],
+  "best_for": [
+    "Researchers and hobbyists driving JupyterCAD conversationally from an LLM agent",
+    "Teams that need a bounded, auditable CAD tool surface with no arbitrary code execution",
+    "Educational settings demonstrating MCP against a real desktop application",
+    "Developers comfortable reading and maintaining a small single-maintainer Apache-2.0 dependency"
+  ],
+  "not_recommended_for": [
+    "Production pipelines requiring an active maintenance and release cadence",
+    "Teams without JupyterCAD/JupyterLab already in their workflow",
+    "Anyone needing tests, CI evidence or a support path before adoption",
+    "Users wanting broad 3D capability — the tool surface is deliberately primitive-and-boolean only"
+  ],
+  "red_flags": [
+    "No release in ~9.5 months against a single-maintainer, 20-star project — continuity risk should be assumed rather than discounted for any load-bearing use."
+  ],
+  "compared_to": [
+    {
+      "slug": "ahujasid-blender-mcp",
+      "verdict_diff": "Both drive a desktop 3D/CAD application over MCP. Blender MCP is much broader — six documented AI clients, asset libraries, generative-mesh backends — but exposes arbitrary Python execution. jupytercad-mcp is narrower and quieter, with a fixed, fully-enumerated tool surface and no code-execution path. Choose Blender MCP for capability; choose this for a bounded, auditable blast radius.",
+      "preferred_for_axis": "bounded-auditable-tool-surface"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server launched via uvx, with stdio as the default transport and streamable-http documented as an alternative. Eighteen tools are individually enumerated, so an agent can reason about the exact action space before calling — and because there is no code-execution tool, the blast radius is fully bounded by that list. A working OpenAI Agents SDK client is included as a reference integration.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "claim": "MCP server for JupyterCAD controllable via natural language",
+      "verified": true,
+      "evidence": "PyPI project description on the captured page; eighteen tools enumerated",
+      "required": true
+    },
+    {
+      "claim": "Supports stdio and streamable-http transports",
+      "verified": true,
+      "evidence": "Both documented with exact commands on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Apache-2.0 licensed",
+      "verified": true,
+      "evidence": "License Expression: Apache-2.0 on the captured PyPI page",
+      "required": true
+    },
+    {
+      "claim": "Requires Python >= 3.10",
+      "verified": true,
+      "evidence": "Stated in the captured PyPI metadata",
+      "required": false
+    },
+    {
+      "claim": "Ships a runnable example using the OpenAI Agents SDK",
+      "verified": true,
+      "evidence": "examples/openai_agents_client.py documented with setup steps on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Actively maintained",
+      "verified": false,
+      "evidence": "Latest release 0.1.1 dated 7 October 2025 — ~9.5 months before review; 20 stars, 4 forks, 1 open issue",
+      "required": false
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Eighteen enumerated tools",
+      "source": "https://pypi.org/project/jupytercad-mcp",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Apache-2.0 licence and Python >=3.10 requirement",
+      "source": "https://pypi.org/project/jupytercad-mcp",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Release 0.1.1 dated 2025-10-07; 20 stars / 4 forks",
+      "source": "https://pypi.org/project/jupytercad-mcp",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Dual transport support",
+      "source": "https://pypi.org/project/jupytercad-mcp (Usage)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Controls CAD geometry in JupyterCAD and does not generate synthetic media, so Article-50 marking obligations do not attach to its output.",
+    "checked_at": "2026-07-29"
+  },
+  "summary": "Well-documented, honestly-scoped MCP server exposing eighteen enumerated JupyterCAD operations with no code-execution path. Engineering is sound; low adoption and a ~9.5-month release gap make continuity the main risk."
+}
