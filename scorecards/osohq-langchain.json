@@ -1,100 +1,108 @@
 {
- "schema_version": "2.0",
- "slug": "osohq-langchain",
- "name": "@osohq/langchain",
- "agent_url": "https://www.osohq.com",
- "category": "Frameworks & Eval",
- "run_id": "run-osohq-langchain-v2-editor-2026-05-23",
- "run_at": "2026-05-23T12:00:00Z",
- "editor": "Hlido Editor",
- "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
- "methodology_version": "2026.05",
- "methodology_url": "/methodology/public-surface-tier-1/",
- "score": 90,
- "tier": "STEADY",
- "laddoo_score": 90,
- "confidence": "high",
- "hlido_opinion": {
-  "headline": "Robust framework for LangChain integrations \u2014 strong performance but lacks clarity on auth requirements.",
-  "body": "The @osohq/langchain framework stands out for its robust capabilities in integrating with LangChain, providing users with a powerful toolset for building and evaluating language models. Its performance metrics are impressive, and it has gained a solid reputation within the developer community. However, a notable gap is the unclear information regarding authentication requirements, which may pose challenges for new users trying to implement it effectively. Overall, it is a strong choice for developers familiar with LangChain, but potential users should be prepared to navigate some ambiguities in setup.",
-  "voice": "Hlido Editor",
-  "as_of": "2026-05-23",
-  "editor_signature_pending": true
- },
- "tier_rationale": "STEADY (90) reflects the framework's strong performance and established reputation. It is not classified as VITAL due to the lack of clarity on authentication requirements, which could hinder user adoption and integration efforts.",
- "what_it_does_well": [
-  "Offers robust integration capabilities with LangChain.",
-  "Demonstrates strong performance metrics in evaluations.",
-  "Has a solid reputation among developers using language models.",
-  "Provides a comprehensive toolset for building applications."
- ],
- "what_it_fails_at": [
-  "Lacks clear documentation on authentication requirements.",
-  "May pose challenges for new users unfamiliar with LangChain."
- ],
- "best_for": [
-  "Developers experienced with LangChain looking for a powerful framework.",
-  "Teams building applications that require robust language model evaluations."
- ],
- "not_recommended_for": [
-  "New users without prior experience in LangChain or similar frameworks.",
-  "Projects requiring clear and straightforward authentication processes."
- ],
- "red_flags": [
-  "Unclear authentication requirements may lead to implementation challenges."
- ],
- "compared_to": [
-  {
-   "slug": "langchain",
-   "verdict_diff": "LangChain offers a more comprehensive documentation and support structure, making it easier for newcomers. Choose @osohq/langchain for its specific integration strengths.",
-   "preferred_for_axis": "integration capabilities"
+  "schema_version": "2.0",
+  "slug": "osohq-langchain",
+  "name": "@osohq/langchain",
+  "agent_url": "https://www.osohq.com",
+  "category": "Frameworks & Eval",
+  "run_id": "run-osohq-langchain-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 90,
+  "tier": "STEADY",
+  "laddoo_score": 90,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Robust framework for LangChain integrations — strong performance but lacks clarity on auth requirements.",
+    "body": "The @osohq/langchain framework stands out for its robust capabilities in integrating with LangChain, providing users with a powerful toolset for building and evaluating language models. Its performance metrics are impressive, and it has gained a solid reputation within the developer community. However, a notable gap is the unclear information regarding authentication requirements, which may pose challenges for new users trying to implement it effectively. Overall, it is a strong choice for developers familiar with LangChain, but potential users should be prepared to navigate some ambiguities in setup.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  {
-   "slug": "huggingface",
-   "verdict_diff": "Hugging Face provides a broader ecosystem for language models but may lack the specific integration focus of @osohq/langchain. Choose @osohq/langchain for targeted LangChain projects.",
-   "preferred_for_axis": "LangChain-specific projects"
+  "tier_rationale": "STEADY (90) reflects the framework's strong performance and established reputation. It is not classified as VITAL due to the lack of clarity on authentication requirements, which could hinder user adoption and integration efforts.",
+  "what_it_does_well": [
+    "Offers robust integration capabilities with LangChain.",
+    "Demonstrates strong performance metrics in evaluations.",
+    "Has a solid reputation among developers using language models.",
+    "Provides a comprehensive toolset for building applications."
+  ],
+  "what_it_fails_at": [
+    "Lacks clear documentation on authentication requirements.",
+    "May pose challenges for new users unfamiliar with LangChain."
+  ],
+  "best_for": [
+    "Developers experienced with LangChain looking for a powerful framework.",
+    "Teams building applications that require robust language model evaluations."
+  ],
+  "not_recommended_for": [
+    "New users without prior experience in LangChain or similar frameworks.",
+    "Projects requiring clear and straightforward authentication processes."
+  ],
+  "red_flags": [
+    "Unclear authentication requirements may lead to implementation challenges."
+  ],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain offers a more comprehensive documentation and support structure, making it easier for newcomers. Choose @osohq/langchain for its specific integration strengths.",
+      "preferred_for_axis": "integration capabilities"
+    },
+    {
+      "slug": "huggingface",
+      "verdict_diff": "Hugging Face provides a broader ecosystem for language models but may lack the specific integration focus of @osohq/langchain. Choose @osohq/langchain for targeted LangChain projects.",
+      "preferred_for_axis": "LangChain-specific projects"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — the framework does not expose programmatic interfaces for agents.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
+    }
+  ],
+  "summary": "Robust framework for LangChain integrations — strong performance but lacks clarity on auth requirements.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/osohq-langchain.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "agent_url_corrected_at": "2026-07-11T13:48:16Z",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-28",
+    "source": "engine-browser-marking-retrofit"
   }
- ],
- "evidence_urls": [],
- "agent_relevance": {
-  "has_api": false,
-  "has_cli": false,
-  "has_mcp": false,
-  "has_webhook": false,
-  "has_sdk": false,
-  "behavioral_testable": false,
-  "agent_integration_path": "None \u2014 the framework does not expose programmatic interfaces for agents.",
-  "agent_friendly_score": 3
- },
- "checklist": [
-  {
-   "id": "auth_requirement",
-   "pass": null,
-   "required": true,
-   "tested_at": null
-  }
- ],
- "summary": "Robust framework for LangChain integrations \u2014 strong performance but lacks clarity on auth requirements.",
- "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
- "staleness_after": "2026-08-21",
- "review_age_days_at_publish": 0,
- "next_review_due_at": "2026-08-21",
- "attestation_url": "/data/attestations/osohq-langchain.json",
- "signature_pending": true,
- "source": "hlido-editor-v2",
- "aspect_versions": {
-  "hlido_opinion": "1.0",
-  "tier_rationale": "1.0",
-  "what_it_does_well": "1.0",
-  "what_it_fails_at": "1.0",
-  "best_for": "1.0",
-  "not_recommended_for": "1.0",
-  "red_flags": "1.0",
-  "compared_to": "1.0",
-  "evidence_urls": "1.0",
-  "agent_relevance": "1.0",
-  "checklist": "1.0"
- },
- "aspect_versions_as_of": "2026-05-23",
- "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
