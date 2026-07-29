@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "airjelly",
+  "name": "AirJelly",
+  "agent_url": "https://airjelly.ai",
+  "run_id": "run-airjelly-v2-2026-07-29",
+  "run_at": "2026-07-29T11:20:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich (hand-run, ses chat 2026-07-29)",
+  "staleness_after": "2026-10-29",
+  "next_review_due_at": "2026-10-29",
+  "signature_pending": true,
+  "category": "Productivity",
+  "score": 70,
+  "laddoo_score": 70,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A local-first proactive agent with an unusually clear privacy story and an unusually broad capture surface — the two are the same design decision seen from opposite sides.",
+    "body": "AirJelly proposes that the useful agent is the one that acts before you ask: it watches your applications, builds a timeline of your work, and surfaces tasks, briefs and reminders unprompted. The public surface is well built and specific. The three-step model (Watches, Remembers, Acts) is stated without hedging, the FAQ answers the questions a sceptical buyer would actually ask, and the use cases are concrete enough to falsify — a task captured from a Slack thread with the conversation attached, a briefing prepared from a calendar entry. The privacy position is the strongest asset: the vendor states that processing is entirely local, that nothing is uploaded, and that no training occurs on user data, and repeats it in the FAQ rather than burying it. That is a real commitment and the right architecture for a tool with this scope. It is also the point requiring the most scrutiny, because the same page states that AirJelly reads across every app and that if it is on your screen, AirJelly can see it. Continuous screen-scope capture is the broadest data-collection posture a desktop tool can adopt; local processing mitigates the transmission risk but not the collection risk, and nothing on the public surface lets a buyer independently verify the no-upload claim. The commercial picture is the other open question: the product is free on macOS with Windows and Linux merely 'coming soon', and no pricing, plan or business model appears anywhere. A tool granted total desktop visibility with no disclosed revenue model is a question a careful buyer should ask early rather than late. The marketing also opens with 'The World's First Context-Aware Proactive Agent' — an unverifiable superlative in a category with several prior entrants, and the one place where the copy outruns the evidence.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-07-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the product surface is polished and specific, the privacy architecture is clearly stated and repeated rather than buried, the company is properly identifiable (LowEntropyAI, Inc. with a registered address, phone and email), and the FAQ engages the real objections. Held at the lower end of the band because the no-upload claim is unverifiable from the public surface while the capture scope is total; because no pricing or business model is disclosed for a free tool with full desktop visibility; because it is macOS-only with other platforms unscheduled; and because the headline \"World’s First\" claim is an unverifiable superlative.",
+  "what_it_does_well": [
+    "States a clear, repeated local-only processing position — no cloud sync, no training on user data",
+    "Explains the mechanism in three concrete, falsifiable steps rather than abstract AI language",
+    "Use cases are specific enough to test — task capture from chat with the source conversation attached",
+    "FAQ addresses the sceptical questions directly, including the cloud-upload question, in plain language",
+    "Company is properly identifiable: LowEntropyAI, Inc. with registered address, phone and email",
+    "Free to download on macOS with no account or payment wall shown before use"
+  ],
+  "what_it_fails_at": [
+    "The local-only / no-upload claim cannot be independently verified from the public surface — no audit, no third-party attestation, no source availability",
+    "Capture scope is total (\"if it’s on your screen, AirJelly can see it\") with no documented redaction, exclusion list or per-app opt-out",
+    "No pricing, plan or business model disclosed anywhere — sustainability of a free, full-visibility tool is unaddressed",
+    "macOS only; Windows and Linux are \"coming soon\" with no date",
+    "\"The World’s First Context-Aware Proactive Agent\" is an unverifiable superlative",
+    "No API, CLI or MCP surface — the agent cannot be driven or inspected programmatically"
+  ],
+  "best_for": [
+    "macOS knowledge workers whose context outruns their notes across many applications",
+    "Privacy-conscious individuals who want continuous capture without cloud processing",
+    "Founders, PMs and researchers juggling many parallel threads across chat, docs and calendar",
+    "Anyone wanting proactive follow-ups rather than a chat assistant they must remember to consult"
+  ],
+  "not_recommended_for": [
+    "Regulated environments requiring auditable proof of data handling — none is published",
+    "Teams handling third-party confidential data on screen without a documented exclusion mechanism",
+    "Windows or Linux users (unsupported, no timeline)",
+    "Agent-driven workflows needing programmatic access — no API, CLI or MCP surface exists",
+    "Buyers who need a disclosed pricing model before adopting a tool with full desktop visibility"
+  ],
+  "red_flags": [
+    "Continuous total-screen capture (\"if it’s on your screen, AirJelly can see it\") with no documented redaction, per-app exclusion or opt-out mechanism on the public surface.",
+    "A strong, central privacy claim (100% local, 0 data uploaded) that a buyer cannot independently verify — no third-party audit, attestation or source availability is offered.",
+    "No disclosed business model for a free product with full desktop visibility."
+  ],
+  "compared_to": [
+    {
+      "slug": "rewind-ai",
+      "verdict_diff": "Both continuously capture desktop activity and make it searchable, and both lead with local processing. Rewind is the recall-and-search archive; AirJelly positions on acting unprompted — creating tasks and preparing briefs rather than waiting to be queried. Same collection posture, different payoff.",
+      "preferred_for_axis": "proactive-action-over-recall"
+    },
+    {
+      "slug": "granola",
+      "verdict_diff": "Granola scopes itself tightly to meetings and produces notes from them, which bounds both its usefulness and its data exposure. AirJelly takes the whole screen as input for broader coverage at a much wider collection surface. Choose Granola if meetings are the problem; AirJelly if the context loss is everywhere.",
+      "preferred_for_axis": "bounded-capture-scope"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None exposed on the public surface. AirJelly is a closed macOS desktop application with no documented API, CLI, MCP server or webhook, so an external agent can neither drive it nor read its timeline. It is itself an agent acting on the user’s desktop, not a component other agents can compose with.",
+    "agent_friendly_score": 1
+  },
+  "claims": [
+    {
+      "claim": "Runs entirely on the local machine with no cloud sync",
+      "verified": false,
+      "evidence": "Clearly and repeatedly stated on the homepage and FAQ, but not independently verifiable from the public surface — no audit, attestation or source availability",
+      "required": true
+    },
+    {
+      "claim": "Does not train on user data",
+      "verified": false,
+      "evidence": "Stated in the FAQ; unverifiable from the public surface",
+      "required": true
+    },
+    {
+      "claim": "Available as a free download on macOS",
+      "verified": true,
+      "evidence": "Stated on the captured page; download CTA present with no payment wall shown",
+      "required": true
+    },
+    {
+      "claim": "Windows and Linux support available",
+      "verified": false,
+      "evidence": "Captured page states \"COMING SOON\" — not currently available",
+      "required": false
+    },
+    {
+      "claim": "Reads across every app including Slack, Zoom, Google Docs, Calendar and email",
+      "verified": true,
+      "evidence": "Stated in the FAQ on the captured page",
+      "required": true
+    },
+    {
+      "claim": "Automatically extracts tasks with context and due dates from conversations",
+      "verified": true,
+      "evidence": "Stated on the captured page with worked examples",
+      "required": true
+    },
+    {
+      "claim": "The world’s first context-aware proactive agent",
+      "verified": false,
+      "evidence": "Unverifiable superlative; the category has prior entrants",
+      "required": false
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Local-only processing position",
+      "source": "https://airjelly.ai (Privacy section + FAQ)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Total screen capture scope",
+      "source": "https://airjelly.ai (FAQ: \"Which apps does AirJelly work with?\")",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Free on macOS, other platforms unreleased",
+      "source": "https://airjelly.ai (FAQ + download section)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    },
+    {
+      "claim": "Corporate identity — LowEntropyAI, Inc., Dover DE",
+      "source": "https://airjelly.ai (footer)",
+      "tested_at": "2026-07-29",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": "https://airjelly.ai",
+    "note": "Produces generated summaries, briefs and reports for the user, but the captured surface carries no marking, provenance or content-credentials statement. Output is private to the user rather than published, so Article-50 exposure is limited. Recorded as absent-on-surface.",
+    "checked_at": "2026-07-29"
+  },
+  "summary": "Local-first proactive desktop agent for macOS that watches applications, builds a work timeline and acts unprompted. Privacy architecture is clearly stated but unverifiable from the public surface, capture scope is total, and no business model is disclosed."
+}
