@@ -1,100 +1,108 @@
 {
- "schema_version": "2.0",
- "slug": "langchain-google-genai",
- "name": "@langchain/google-genai",
- "agent_url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/providers/langchain-google-genai/",
- "category": "Frameworks & Eval",
- "run_id": "run-langchain-google-genai-v2-editor-2026-05-23",
- "run_at": "2026-05-23T12:00:00Z",
- "editor": "Hlido Editor",
- "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
- "methodology_version": "2026.05",
- "methodology_url": "/methodology/public-surface-tier-1/",
- "score": 57,
- "tier": "STEADY",
- "laddoo_score": 57,
- "confidence": "medium",
- "hlido_opinion": {
-  "headline": "A solid but unremarkable framework for Google GenAI integration \u2014 lacks standout features compared to competitors.",
-  "body": "The @langchain/google-genai framework provides a basic structure for integrating Google GenAI capabilities into applications. While it serves its purpose adequately, it does not offer significant differentiation from similar frameworks in the market. The documentation is sparse, and there are concerns about the lack of community engagement and support, which may hinder adoption for more complex projects. Users looking for robust features or extensive support might find better options in alternatives like Hugging Face's Transformers or OpenAI's API integrations. Overall, it is a viable choice for specific use cases but does not stand out in a crowded field.",
-  "voice": "Hlido Editor",
-  "as_of": "2026-05-23",
-  "editor_signature_pending": true
- },
- "tier_rationale": "STEADY (57) due to its functional adequacy for basic integrations, but it lacks the community support and advanced features that would elevate it to VITAL status. A more engaged user base or improved documentation could change this tier.",
- "what_it_does_well": [
-  "Provides a basic framework for integrating Google GenAI capabilities.",
-  "Functional for straightforward applications without complex requirements."
- ],
- "what_it_fails_at": [
-  "Lacks comprehensive documentation for advanced use cases.",
-  "Minimal community engagement and support, limiting user resources.",
-  "No standout features compared to other frameworks in the same space."
- ],
- "best_for": [
-  "Developers seeking a simple integration with Google GenAI for basic tasks.",
-  "Projects where advanced features are not a priority."
- ],
- "not_recommended_for": [
-  "Users needing extensive documentation or community support.",
-  "Complex applications requiring advanced features or customization."
- ],
- "red_flags": [
-  "Sparse documentation may lead to challenges in implementation.",
-  "Limited community engagement could hinder troubleshooting and support."
- ],
- "compared_to": [
-  {
-   "slug": "huggingface-transformers",
-   "verdict_diff": "Hugging Face offers a more robust framework with extensive documentation and community support. Choose Hugging Face for advanced features and a larger ecosystem.",
-   "preferred_for_axis": "feature-rich support"
+  "schema_version": "2.0",
+  "slug": "langchain-google-genai",
+  "name": "@langchain/google-genai",
+  "agent_url": "https://github.com/langchain-ai/langchainjs/tree/main/libs/providers/langchain-google-genai/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-langchain-google-genai-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 57,
+  "tier": "STEADY",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A solid but unremarkable framework for Google GenAI integration — lacks standout features compared to competitors.",
+    "body": "The @langchain/google-genai framework provides a basic structure for integrating Google GenAI capabilities into applications. While it serves its purpose adequately, it does not offer significant differentiation from similar frameworks in the market. The documentation is sparse, and there are concerns about the lack of community engagement and support, which may hinder adoption for more complex projects. Users looking for robust features or extensive support might find better options in alternatives like Hugging Face's Transformers or OpenAI's API integrations. Overall, it is a viable choice for specific use cases but does not stand out in a crowded field.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  {
-   "slug": "openai-api",
-   "verdict_diff": "OpenAI's API provides a well-documented and powerful alternative for developers needing advanced AI capabilities. Opt for OpenAI if seeking deeper integration and features.",
-   "preferred_for_axis": "advanced integration capabilities"
+  "tier_rationale": "STEADY (57) due to its functional adequacy for basic integrations, but it lacks the community support and advanced features that would elevate it to VITAL status. A more engaged user base or improved documentation could change this tier.",
+  "what_it_does_well": [
+    "Provides a basic framework for integrating Google GenAI capabilities.",
+    "Functional for straightforward applications without complex requirements."
+  ],
+  "what_it_fails_at": [
+    "Lacks comprehensive documentation for advanced use cases.",
+    "Minimal community engagement and support, limiting user resources.",
+    "No standout features compared to other frameworks in the same space."
+  ],
+  "best_for": [
+    "Developers seeking a simple integration with Google GenAI for basic tasks.",
+    "Projects where advanced features are not a priority."
+  ],
+  "not_recommended_for": [
+    "Users needing extensive documentation or community support.",
+    "Complex applications requiring advanced features or customization."
+  ],
+  "red_flags": [
+    "Sparse documentation may lead to challenges in implementation.",
+    "Limited community engagement could hinder troubleshooting and support."
+  ],
+  "compared_to": [
+    {
+      "slug": "huggingface-transformers",
+      "verdict_diff": "Hugging Face offers a more robust framework with extensive documentation and community support. Choose Hugging Face for advanced features and a larger ecosystem.",
+      "preferred_for_axis": "feature-rich support"
+    },
+    {
+      "slug": "openai-api",
+      "verdict_diff": "OpenAI's API provides a well-documented and powerful alternative for developers needing advanced AI capabilities. Opt for OpenAI if seeking deeper integration and features.",
+      "preferred_for_axis": "advanced integration capabilities"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — the framework does not expose programmatic interfaces for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
+    }
+  ],
+  "summary": "A solid but unremarkable framework for Google GenAI integration — lacks standout features compared to competitors.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/langchain-google-genai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "agent_url_corrected_at": "2026-07-11T13:48:16Z",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-30",
+    "source": "engine-browser-marking-retrofit"
   }
- ],
- "evidence_urls": [],
- "agent_relevance": {
-  "has_api": false,
-  "has_cli": false,
-  "has_mcp": false,
-  "has_webhook": false,
-  "has_sdk": false,
-  "behavioral_testable": false,
-  "agent_integration_path": "None \u2014 the framework does not expose programmatic interfaces for agent-driven workflows.",
-  "agent_friendly_score": 3
- },
- "checklist": [
-  {
-   "id": "auth_requirement",
-   "pass": null,
-   "required": true,
-   "tested_at": null
-  }
- ],
- "summary": "A solid but unremarkable framework for Google GenAI integration \u2014 lacks standout features compared to competitors.",
- "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
- "staleness_after": "2026-08-21",
- "review_age_days_at_publish": 0,
- "next_review_due_at": "2026-08-21",
- "attestation_url": "/data/attestations/langchain-google-genai.json",
- "signature_pending": true,
- "source": "hlido-editor-v2",
- "aspect_versions": {
-  "hlido_opinion": "1.0",
-  "tier_rationale": "1.0",
-  "what_it_does_well": "1.0",
-  "what_it_fails_at": "1.0",
-  "best_for": "1.0",
-  "not_recommended_for": "1.0",
-  "red_flags": "1.0",
-  "compared_to": "1.0",
-  "evidence_urls": "1.0",
-  "agent_relevance": "1.0",
-  "checklist": "1.0"
- },
- "aspect_versions_as_of": "2026-05-23",
- "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
