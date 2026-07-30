@@ -1,103 +1,111 @@
 {
- "schema_version": "2.0",
- "slug": "stripe-agent-toolkit",
- "name": "@stripe/agent-toolkit",
- "agent_url": "https://github.com/stripe/ai",
- "category": "Frameworks & Eval",
- "run_id": "run-stripe-agent-toolkit-v2-editor-2026-05-23",
- "run_at": "2026-05-23T12:00:00Z",
- "editor": "Hlido Editor",
- "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
- "methodology_version": "2026.05",
- "methodology_url": "/methodology/public-surface-tier-1/",
- "score": 73,
- "tier": "STEADY",
- "laddoo_score": 73,
- "confidence": "medium",
- "hlido_opinion": {
-  "headline": "Reliable toolkit for Stripe integrations, but lacks comprehensive documentation and community support.",
-  "body": "The @stripe/agent-toolkit serves as a functional framework for building integrations with Stripe's API, making it suitable for developers looking to streamline payment-related tasks. While it performs well in core functionalities, users may find the documentation lacking in depth, which can hinder onboarding and troubleshooting. Additionally, community support appears limited compared to more established frameworks, which could pose challenges for new users. Overall, it is a solid choice for those familiar with Stripe but may not be the best fit for teams seeking extensive guidance or community resources.",
-  "voice": "Hlido Editor",
-  "as_of": "2026-05-23",
-  "editor_signature_pending": true
- },
- "tier_rationale": "STEADY (73) because it provides reliable functionality for Stripe integrations, but the lack of comprehensive documentation and community support limits its appeal for broader adoption. It could move to VITAL with improved resources and user engagement.",
- "what_it_does_well": [
-  "Facilitates integration with Stripe's API for payment processing",
-  "Offers a straightforward setup for developers familiar with Stripe",
-  "Maintains a focus on core functionalities relevant to payment tasks"
- ],
- "what_it_fails_at": [
-  "Documentation is insufficient for new users, making onboarding difficult",
-  "Limited community support compared to other frameworks",
-  "Lacks advanced features that some competing frameworks offer"
- ],
- "best_for": [
-  "Developers already experienced with Stripe looking for a reliable integration tool",
-  "Teams focused on basic payment processing functionalities",
-  "Projects requiring quick setup without extensive customization"
- ],
- "not_recommended_for": [
-  "New developers needing comprehensive documentation and support",
-  "Teams looking for a highly customizable or feature-rich framework",
-  "Projects that require extensive community engagement for troubleshooting"
- ],
- "red_flags": [
-  "Insufficient documentation may lead to implementation challenges",
-  "Limited community support could hinder problem resolution"
- ],
- "compared_to": [
-  {
-   "slug": "stripe-js",
-   "verdict_diff": "Stripe.js offers a more robust set of features and better documentation, making it preferable for users needing comprehensive support. Choose @stripe/agent-toolkit for simpler integrations.",
-   "preferred_for_axis": "documentation-and-features"
+  "schema_version": "2.0",
+  "slug": "stripe-agent-toolkit",
+  "name": "@stripe/agent-toolkit",
+  "agent_url": "https://github.com/stripe/ai",
+  "category": "Frameworks & Eval",
+  "run_id": "run-stripe-agent-toolkit-v2-editor-2026-05-23",
+  "run_at": "2026-05-23T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Reliable toolkit for Stripe integrations, but lacks comprehensive documentation and community support.",
+    "body": "The @stripe/agent-toolkit serves as a functional framework for building integrations with Stripe's API, making it suitable for developers looking to streamline payment-related tasks. While it performs well in core functionalities, users may find the documentation lacking in depth, which can hinder onboarding and troubleshooting. Additionally, community support appears limited compared to more established frameworks, which could pose challenges for new users. Overall, it is a solid choice for those familiar with Stripe but may not be the best fit for teams seeking extensive guidance or community resources.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-05-23",
+    "editor_signature_pending": true
   },
-  {
-   "slug": "react-stripe-js",
-   "verdict_diff": "React Stripe.js provides a more tailored experience for React developers, with better community support. @stripe/agent-toolkit is better for general use cases.",
-   "preferred_for_axis": "react-integration"
+  "tier_rationale": "STEADY (73) because it provides reliable functionality for Stripe integrations, but the lack of comprehensive documentation and community support limits its appeal for broader adoption. It could move to VITAL with improved resources and user engagement.",
+  "what_it_does_well": [
+    "Facilitates integration with Stripe's API for payment processing",
+    "Offers a straightforward setup for developers familiar with Stripe",
+    "Maintains a focus on core functionalities relevant to payment tasks"
+  ],
+  "what_it_fails_at": [
+    "Documentation is insufficient for new users, making onboarding difficult",
+    "Limited community support compared to other frameworks",
+    "Lacks advanced features that some competing frameworks offer"
+  ],
+  "best_for": [
+    "Developers already experienced with Stripe looking for a reliable integration tool",
+    "Teams focused on basic payment processing functionalities",
+    "Projects requiring quick setup without extensive customization"
+  ],
+  "not_recommended_for": [
+    "New developers needing comprehensive documentation and support",
+    "Teams looking for a highly customizable or feature-rich framework",
+    "Projects that require extensive community engagement for troubleshooting"
+  ],
+  "red_flags": [
+    "Insufficient documentation may lead to implementation challenges",
+    "Limited community support could hinder problem resolution"
+  ],
+  "compared_to": [
+    {
+      "slug": "stripe-js",
+      "verdict_diff": "Stripe.js offers a more robust set of features and better documentation, making it preferable for users needing comprehensive support. Choose @stripe/agent-toolkit for simpler integrations.",
+      "preferred_for_axis": "documentation-and-features"
+    },
+    {
+      "slug": "react-stripe-js",
+      "verdict_diff": "React Stripe.js provides a more tailored experience for React developers, with better community support. @stripe/agent-toolkit is better for general use cases.",
+      "preferred_for_axis": "react-integration"
+    }
+  ],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None — the toolkit is designed for direct integration with Stripe's API, not for agent-driven workflows.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "auth_requirement",
+      "pass": null,
+      "required": true,
+      "tested_at": null
+    }
+  ],
+  "summary": "Reliable toolkit for Stripe integrations, but lacks comprehensive documentation and community support.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-08-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-08-21",
+  "attestation_url": "/data/attestations/stripe-agent-toolkit.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-05-23",
+  "agent_url_corrected_at": "2026-07-11T13:48:16Z",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-07-30",
+    "source": "engine-browser-marking-retrofit"
   }
- ],
- "evidence_urls": [],
- "agent_relevance": {
-  "has_api": false,
-  "has_cli": false,
-  "has_mcp": false,
-  "has_webhook": false,
-  "has_sdk": false,
-  "behavioral_testable": false,
-  "agent_integration_path": "None \u2014 the toolkit is designed for direct integration with Stripe's API, not for agent-driven workflows.",
-  "agent_friendly_score": 3
- },
- "checklist": [
-  {
-   "id": "auth_requirement",
-   "pass": null,
-   "required": true,
-   "tested_at": null
-  }
- ],
- "summary": "Reliable toolkit for Stripe integrations, but lacks comprehensive documentation and community support.",
- "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
- "staleness_after": "2026-08-21",
- "review_age_days_at_publish": 0,
- "next_review_due_at": "2026-08-21",
- "attestation_url": "/data/attestations/stripe-agent-toolkit.json",
- "signature_pending": true,
- "source": "hlido-editor-v2",
- "aspect_versions": {
-  "hlido_opinion": "1.0",
-  "tier_rationale": "1.0",
-  "what_it_does_well": "1.0",
-  "what_it_fails_at": "1.0",
-  "best_for": "1.0",
-  "not_recommended_for": "1.0",
-  "red_flags": "1.0",
-  "compared_to": "1.0",
-  "evidence_urls": "1.0",
-  "agent_relevance": "1.0",
-  "checklist": "1.0"
- },
- "aspect_versions_as_of": "2026-05-23",
- "agent_url_corrected_at": "2026-07-11T13:48:16Z"
 }
