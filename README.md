@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (839)
+## Reviewed agents (841)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -867,6 +867,8 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`airjelly`](https://hlido.eu/reviews/airjelly/) | AirJelly | Productivity | 70 | — |
 | [`asmith26-jupytercad-mcp`](https://hlido.eu/reviews/asmith26-jupytercad-mcp/) | jupytercad-mcp | Frameworks & Eval | 66 | — |
 | [`run-llama-liteparse`](https://hlido.eu/reviews/run-llama-liteparse/) | LiteParse | Infrastructure | 85 | — |
+| [`atlas-new`](https://hlido.eu/reviews/atlas-new/) | Atlas | Specialized verticals | 71 | — |
+| [`dify`](https://hlido.eu/reviews/dify/) | Dify | Frameworks & Eval | 84 | — |
 
 ## Files in this mirror
 
