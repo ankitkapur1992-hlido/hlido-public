@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0",
+  "slug": "dify",
+  "name": "Dify",
+  "agent_url": "https://dify.ai",
+  "category": "Frameworks & Eval",
+  "run_id": "run-dify-v2-2026-08-01",
+  "run_at": "2026-08-01T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
+  "tier": "STEADY",
+  "laddoo_score": 84,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "One of the few open-source LLM-app platforms with a real enterprise story behind it — a build-and-ship runtime you can self-host, not a hosted-only black box.",
+    "body": "Dify (by LangGenius) sits in the crowded 'build agentic workflows and RAG apps' category, and its differentiator on the public surface is credibility rather than novelty. Three honest deployment paths are laid out plainly — a managed cloud, a VPC/self-hosted Enterprise edition with SSO/SAML, RBAC, audit logs and SOC 2 Type II + ISO 27001, and a source-available Community Edition that carries the 150K-plus GitHub stars the homepage leans on hard. That combination — genuine open-source traction plus a procurement-ready enterprise tier plus a visual workflow studio that keeps the execution path visible — is what most agent-platform homepages gesture at but cannot back with an audit trail. The 'publish as web app or API' framing matters for the agent-to-agent case: apps built in Dify are callable programmatically, so an upstream agent can drive a Dify pipeline as a step rather than only a human clicking through a canvas. Where the surface is thinner: cloud pricing is not shown on the homepage (Pricing is a nav click away, Enterprise is contact-sales), the page is testimonial-heavy in a way that reads as marketing rather than documentation, and this review is a public-surface read — the runtime behaviour, the real ceiling of the no-code editor, and the depth of the plugin marketplace were not exercised. For a team that wants an open, self-hostable platform to stand up production LLM apps without rebuilding the stack from prototype to prod, Dify is a serious, well-positioned option; the open-source escape hatch is the safety net that makes it lower-risk than hosted-only rivals.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (84) because the public surface is coherent and unusually well-evidenced for the category: real open-source traction (150K+ stars), three distinct and honestly-labelled deployment paths, published enterprise compliance (SOC 2 Type II, ISO 27001), and an API-publish path that makes built apps agent-callable. Not VITAL because this is a public-surface read only — the runtime, editor ceiling, and marketplace depth were not behaviourally tested — and because the homepage leans heavily on testimonials while keeping cloud pricing off the primary surface, so the value-signal is asserted more than it is shown. Confidence is medium: the claims are specific and self-consistent, but interaction-level verification of the product was not performed in this pass.",
+  "what_it_does_well": [
+    "Genuine open-source traction (150K+ GitHub stars) with a source-available Community Edition and single-command Docker deploy",
+    "Three honestly-differentiated deployment paths — managed Cloud, self-hosted/VPC Enterprise, and open-source Community — instead of a hosted-only funnel",
+    "Enterprise tier carries real procurement signals: SSO/SAML, RBAC, audit logs, SOC 2 Type II + ISO 27001, Helm chart for K8s",
+    "Visual workflow studio keeps the execution path visible (retrieval, decisions, tool use, human-in-the-loop) so flows can be tested, debugged and handed off",
+    "Apps publish as web app OR API, so an upstream agent can trigger a Dify pipeline programmatically rather than only through a human-driven canvas"
+  ],
+  "what_it_fails_at": [
+    "Cloud pricing is not surfaced on the homepage and Enterprise is contact-sales-only — the value signal is asserted, not shown up front",
+    "Homepage is testimonial-heavy (repeated quote blocks) in a way that reads as marketing rather than documentation or a live demo",
+    "No public-surface evidence of a CLI or an official MCP server captured in this pass — the programmatic path shown is app APIs",
+    "Breadth (workflows + RAG + agents + plugins + knowledge pipelines) implies a real learning curve that a homepage cannot convey",
+    "Runtime behaviour, editor ceiling, and plugin-marketplace depth were not behaviourally tested — this is a public-surface review"
+  ],
+  "best_for": [
+    "Teams that need to self-host or run in a VPC for security/procurement reasons and want an open-source-backed platform, not a hosted black box",
+    "Engineering teams standing up production LLM apps (RAG + agentic workflows) that want a visible, debuggable execution path",
+    "Organisations that require published compliance (SOC 2 / ISO 27001) before adopting an AI app platform",
+    "Builders who want apps callable as APIs so other agents/services can drive them as a step"
+  ],
+  "not_recommended_for": [
+    "Buyers who need transparent, self-serve pricing before committing — cloud numbers are off the homepage and Enterprise is contact-sales",
+    "Teams wanting a zero-learning-curve, single-purpose tool rather than a broad build-anything platform",
+    "Use cases needing a specific niche integration or a mature marketplace verified in advance (depth not confirmed on the public surface)",
+    "Anyone who needs a documented CLI or first-party MCP server as the primary integration path (not evidenced in this pass)"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "Both are self-hostable and open-source-friendly. n8n is a general workflow-automation engine with LLM nodes added; Dify is LLM-app-first (RAG + agents + knowledge pipelines) with a stronger published enterprise/compliance story. Pick n8n when the work is broad SaaS automation with occasional AI; pick Dify when the LLM app IS the product and you need a self-hostable runtime for it.",
+      "preferred_for_axis": "llm-app-native-runtime"
+    },
+    {
+      "slug": "gumloop",
+      "verdict_diff": "Gumloop is a hosted, no-ops canvas aimed at non-engineering operators with no self-host story. Dify offers the same visual-builder ergonomics but adds self-host/VPC deployment, published compliance, and open-source. Pick Gumloop for zero-ops operator use; pick Dify when self-hosting, compliance, or open-source matter.",
+      "preferred_for_axis": "self-host-and-compliance"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Positioned as 'The Platform for Production-Ready Agentic Workflows' — build agentic workflows and RAG pipelines on one workspace, deploy on cloud, VPC or self-hosted",
+      "source": "https://dify.ai/",
+      "tested_at": "2026-07-30",
+      "verified": true
+    },
+    {
+      "claim": "Three deployment paths on the homepage: Dify Cloud (managed), Dify Enterprise (self-host/VPC), Community Edition (source-available)",
+      "source": "https://dify.ai/",
+      "tested_at": "2026-07-30",
+      "verified": true
+    },
+    {
+      "claim": "Enterprise tier lists SSO/SAML, RBAC, audit logs, SOC 2 Type II + ISO 27001, and a Helm chart for K8s",
+      "source": "https://dify.ai/",
+      "tested_at": "2026-07-30",
+      "verified": true
+    },
+    {
+      "claim": "Community Edition is source-available with single-command Docker deploy and 150K+ GitHub stars",
+      "source": "https://dify.ai/",
+      "tested_at": "2026-07-30",
+      "verified": true
+    },
+    {
+      "claim": "Apps can be published as a web app or API",
+      "source": "https://dify.ai/",
+      "tested_at": "2026-07-30",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Dify apps publish as web apps or APIs, so an upstream agent or service can call a Dify-built workflow/RAG pipeline as a step in its own flow. The platform is also self-hostable, which lets an agent-owning team run the runtime inside their own infrastructure. No public-surface evidence of a first-party CLI or MCP server was captured in this pass, so the confirmed programmatic path is the published app API rather than a code-native SDK/CLI.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-07-30T08:30:06Z" },
+    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'The Platform for Production-Ready Agentic Workflows'", "tested_at": "2026-07-30T08:30:06Z" },
+    { "id": "cta_present", "pass": true, "required": true, "evidence": "'Get Started' and 'Contact Sales' CTAs on homepage", "tested_at": "2026-07-30T08:30:06Z" },
+    { "id": "pricing_or_access", "pass": true, "required": false, "evidence": "Cloud/Enterprise/Community tiers described; explicit pricing behind Pricing nav / contact-sales", "tested_at": "2026-07-30T08:30:06Z" },
+    { "id": "evidence_or_demo", "pass": true, "required": false, "evidence": "150K+ GitHub stars, named enterprise testimonials (Volvo Cars), published compliance certifications", "tested_at": "2026-07-30T08:30:06Z" }
+  ],
+  "summary": "One of the few open-source LLM-app platforms with a real enterprise story behind it — a build-and-ship runtime you can self-host, not a hosted-only black box.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
+  "staleness_after": "2026-11-01",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-01",
+  "attestation_url": "/data/attestations/dify.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-rpublish",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-01",
+    "source": "rpublish-editorial-enrich",
+    "note": "Dify is an LLM-app build/deploy platform, not a synthetic-content generator; Article-50 output-marking obligations do not apply to the platform itself."
+  }
+}
