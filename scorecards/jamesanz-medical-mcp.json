@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "jamesanz-medical-mcp",
+  "name": "medical-mcp",
+  "agent_url": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+  "category": "Specialized verticals",
+  "run_id": "run-749dd3a73fac5e89-glama-ai",
+  "run_at": "2026-08-09T04:31:33.448Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A broad, key-free MCP server over FDA, WHO, PubMed and RxNorm that installs in one click — but its privacy promise and its Google Scholar leg do not sit comfortably together.",
+    "body": "medical-mcp bundles a wide set of medical lookups behind one locally-run MCP server: FDA drug records, WHO Global Health Observatory statistics, PubMed literature, RxNorm nomenclature, clinical and paediatric guidelines, and a cache-stats tool. It needs no API keys and installs into Cursor with a single deep link, which is a genuinely low-friction path into a domain where most data access normally starts with a registration form. The tool list is specific rather than gestural — search-drugs, get-drug-details, search-drug-nomenclature, get-health-statistics, search-medical-literature, search-pediatric-guidelines and roughly a dozen more — and the data-source table names each upstream provider with a stated update frequency, which is the right shape for a retrieval tool. The tension is in the headline claim. The surface leads with '🔒 Your Data Never Leaves — Runs 100% locally; no tracking, no logs, no cloud' and 'Localhost-only — Server runs locally, no external access', while the same page lists Google Scholar and multi-database search among the sources. Those are network calls to third parties; the queries plainly do leave the machine even if nothing is stored. 'Localhost-only' is describing where the process binds, not where the traffic goes, and a reader in a clinical setting is the one most likely to read it the other way. Scraping Google Scholar is also the least durable leg here — it has no public API and blocks automated access — so that tool is the first thing likely to break. There is no version, changelog, test evidence or third-party validation on the captured page, and the surface Hlido reached is a Glama directory listing rather than the project's own site.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68) for a real and usefully broad tool surface over authoritative sources with a genuinely frictionless install, marked down for a privacy claim the same page contradicts ('100% locally, no cloud' alongside Google Scholar and multi-database search, which are outbound third-party calls), a Google Scholar leg with no public API and a history of blocking scrapers, and no version, changelog, accuracy evidence or independent validation anywhere on the captured surface.",
+  "what_it_does_well": [
+    "Wide, specifically-named tool surface — drugs, health statistics, literature, clinical and paediatric guidelines — rather than one vague search tool",
+    "No API keys required; works out of the box",
+    "One-click install into Cursor via deep link, plus documented Claude Desktop JSON config",
+    "Data-source table names each upstream provider and its update frequency",
+    "Runs as a local process, so records are not routed through a vendor's server for storage"
+  ],
+  "what_it_fails_at": [
+    "Claims '100% locally, no cloud' and 'no external access' while listing Google Scholar and multi-database search — those queries do leave the machine",
+    "The Google Scholar leg has no public API and actively blocks automated access; it is the most fragile tool on the list",
+    "No version, changelog or release evidence on the captured surface",
+    "No accuracy evaluation, test evidence or third-party validation for medical answers",
+    "Hlido reached a Glama directory listing rather than a project-owned site, so the vendor controls less of what was verified"
+  ],
+  "best_for": [
+    "Developers prototyping medical-data workflows in Cursor or Claude Desktop who want zero setup",
+    "Non-clinical research and educational use where FDA, WHO and PubMed lookups are convenience, not evidence of record"
+  ],
+  "not_recommended_for": [
+    "Any clinical or patient-facing use — there is no accuracy evidence and the tool makes no such claim",
+    "Environments with strict data-egress rules, where the 'no cloud' framing would be read as a guarantee it does not make",
+    "Teams that need a versioned, supported dependency"
+  ],
+  "red_flags": [
+    "Privacy framing overstates the guarantee: '100% locally / no cloud / no external access' is presented as absolute on a page that also lists Google Scholar and multi-database search among the sources — outbound third-party queries. Nothing is stored, but queries do leave the machine, and a clinical reader is exactly who would misread it."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server exposing FDA, WHO, PubMed, RxNorm, Google Scholar, AAP and paediatric journal tools",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "No API keys required; one-click Cursor install deep link plus documented Claude Desktop config",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Data-source table names each provider with a stated update frequency",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Claims '100% locally, no tracking, no logs, no cloud' and 'Localhost-only — no external access'",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Those privacy claims hold for outbound queries — the same page lists Google Scholar and multi-database search as sources",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Version, changelog, accuracy evaluation or third-party validation",
+      "source": "https://glama.ai/mcp/servers/@JamesANZ/medical-mcp (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "stdio MCP server installed via npm or from source; one-click deep link for Cursor and a documented mcpServers JSON block for Claude Desktop. Roughly eighteen named tools are exposed directly to the agent. Built for agent consumption and nothing else.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Bring trusted medical data directly into your AI workflow'",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install in Cursor' deep link plus `npm install -g medical-mcp`",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source, no API keys, no pricing surface",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Tool list, install paths, usage examples and data-source table on the listing",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "claims_consistent",
+      "pass": false,
+      "required": true,
+      "evidence": "'100% locally / no cloud / no external access' contradicted by Google Scholar and multi-database search tools on the same page",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No benchmark, accuracy evidence or named adopter",
+      "tested_at": "2026-08-09T04:31:33.448Z"
+    }
+  ],
+  "summary": "A broad, key-free MCP server over FDA, WHO, PubMed and RxNorm that installs in one click — but its privacy promise and its Google Scholar leg do not sit comfortably together.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/jamesanz-medical-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Retrieval tool over public medical databases rather than a generator of synthetic media."
+  },
+  "evidence_images": {
+    "run_id": "run-749dd3a73fac5e89-glama-ai",
+    "base": "https://images.hlido.eu/reviews/jamesanz-medical-mcp/run-749dd3a73fac5e89-glama-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/jamesanz-medical-mcp/run-749dd3a73fac5e89-glama-ai/home.png"
+    ]
+  }
+}
