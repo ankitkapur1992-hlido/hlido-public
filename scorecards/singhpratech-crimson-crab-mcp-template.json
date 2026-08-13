@@ -1,0 +1,191 @@
+{
+  "schema_version": "2.0",
+  "slug": "singhpratech-crimson-crab-mcp-template",
+  "name": "crimson-crab",
+  "agent_url": "https://singhpratech.github.io/crimson-crab/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-cd0dae69dc2f1ff0-singhpratech-github-io",
+  "run_at": "2026-08-09T08:32:15.228Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A Rust Claude SDK built on one compile-time guarantee — no unwrap, expect, panic! or todo! anywhere in the library — with unknown API surface deserialising into catch-alls instead of breaking builds.",
+    "body": "crimson-crab makes an unusually specific and checkable promise for an SDK: panicking macros are denied at compile time across the whole library, so a malformed or surprising API response reaches the caller as an `Error` rather than taking down a service. That is a lint-enforceable property rather than a claim about care, which is what makes it worth something. The second design decision is forward compatibility — unknown block types, stream events and stop reasons deserialise into `Unknown` catch-alls, so a new model or content type from Anthropic does not break a build on the day it ships. Anyone who has had a strongly-typed client break on an additive API change will recognise the value. Coverage is the complete Claude surface rather than a subset: streaming via a hand-rolled SSE parser with no eventsource dependency, tool use with raw JSON schemas, adaptive/budgeted/disabled thinking modes, prompt caching with 5m/1h TTL and cache hits readable off `Usage`, message batches with a JSONL-decoding result stream, token counting, and typed errors carrying `request_id` with jittered backoff honouring retry-after. The public API exposes `futures_core::Stream` rather than tokio types, which keeps it runtime-light and checks on wasm32. The caution is maturity and standing: v0.3.0 is early, MSRV 1.75, and this is a community SDK rather than an Anthropic-published one — the surface carries no adoption numbers, no named users and no third-party review. The slug also describes it as an 'MCP template', which the captured surface does not support: this is a Claude API client.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) for a genuinely checkable core guarantee (panicking macros denied at compile time, so surprises surface as errors), forward-compatible catch-all deserialisation that survives additive API changes, and complete rather than partial Claude API coverage including streaming, batches, caching and token counting. Held well below VITAL by v0.3.0 maturity, no adoption or third-party validation on the surface, and unofficial status — a community SDK carries different risk from a vendor-published one.",
+  "what_it_does_well": [
+    "unwrap, expect, panic! and todo! denied at compile time across the library — a lint-enforced guarantee, not a promise",
+    "Unknown block types, stream events and stop reasons deserialise into catch-alls, so additive API changes do not break builds",
+    "Complete Claude surface: streaming, tool use, thinking modes, prompt caching, batches, token counting",
+    "Hand-rolled SSE parser yields fine-grained events and accumulates a final message, with no eventsource dependency",
+    "Typed errors carry request_id; backoff with jitter honours retry-after automatically",
+    "Public API exposes futures_core::Stream rather than tokio types — runtime-light and checks on wasm32",
+    "Prompt caching exposes 5m/1h TTL and reads cache hits back off Usage",
+    "Permissive dual licence (MIT OR Apache-2.0) with a stated MSRV of 1.75"
+  ],
+  "what_it_fails_at": [
+    "v0.3.0 — early, with no changelog or stability commitment on the surface",
+    "Community SDK, not Anthropic-published; no third-party review or named users",
+    "No adoption numbers, download figures or production references",
+    "The registry slug calls it an 'MCP template', which the captured surface does not support — it is a Claude API client",
+    "Not tested hands-on by Hlido; the no-panic guarantee is a build-time property that deserves verification"
+  ],
+  "best_for": [
+    "Rust services calling Claude where a panic in a dependency is an availability incident",
+    "Teams that need the full Claude surface (batches, caching, thinking, streaming) rather than a chat-completions subset",
+    "WASM or non-tokio runtimes that a tokio-typed client would not fit"
+  ],
+  "not_recommended_for": [
+    "Anyone requiring an officially supported vendor SDK",
+    "Projects that cannot take a pre-1.0 dependency on a critical path",
+    "Anyone expecting an MCP server or template — this is a Claude API client"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "unwrap, expect, panic! and todo! denied at compile time across the library",
+      "source": "https://singhpratech.github.io/crimson-crab/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Unknown block types, stream events and stop reasons deserialise into Unknown catch-alls",
+      "source": "https://singhpratech.github.io/crimson-crab/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Covers streaming, tool use, adaptive thinking, prompt caching, batches and token counting",
+      "source": "https://singhpratech.github.io/crimson-crab/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Public API exposes futures_core::Stream, not tokio types; checks on wasm32-unknown-unknown",
+      "source": "https://singhpratech.github.io/crimson-crab/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "v0.3.0, MIT OR Apache-2.0, MSRV 1.75, published on crates.io",
+      "source": "https://singhpratech.github.io/crimson-crab/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Officially supported by Anthropic",
+      "source": "https://singhpratech.github.io/crimson-crab/ (no such claim; community SDK)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Adoption numbers, named users or third-party review",
+      "source": "https://singhpratech.github.io/crimson-crab/ (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A Rust SDK for building agents rather than an agent itself: tool definitions take raw JSON schemas, the agentic loop is driven by the caller, and any server-tool passes through ToolUnion::Raw. Relevant to agent builders on Rust; nothing here is agent-callable at runtime.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The Rust SDK for Claude that can't panic on you.'",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "`cargo add crimson-crab` with copy button; crates.io and docs.rs links",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source, MIT OR Apache-2.0",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "docs.rs plus end-to-end examples for basic, streaming, tool runner and typed output",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "version_disclosed",
+      "pass": true,
+      "required": false,
+      "evidence": "v0.3.0, MSRV 1.75 stated on the page",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No adoption figures or independent review",
+      "tested_at": "2026-08-09T08:32:15.228Z"
+    }
+  ],
+  "summary": "A Rust Claude SDK built on one compile-time guarantee — no unwrap, expect, panic! or todo! anywhere in the library — with unknown API surface deserialising into catch-alls instead of breaking builds.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/singhpratech-crimson-crab-mcp-template.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "SDK library; generation happens in the caller's application, so marking obligations sit with the deployer rather than this component."
+  },
+  "evidence_images": {
+    "run_id": "run-cd0dae69dc2f1ff0-singhpratech-github-io",
+    "base": "https://images.hlido.eu/reviews/singhpratech-crimson-crab-mcp-template/run-cd0dae69dc2f1ff0-singhpratech-github-io",
+    "files": [
+      "home.png",
+      "page_main.png",
+      "page_top.png",
+      "page_features.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/singhpratech-crimson-crab-mcp-template/run-cd0dae69dc2f1ff0-singhpratech-github-io/home.png",
+      "https://images.hlido.eu/reviews/singhpratech-crimson-crab-mcp-template/run-cd0dae69dc2f1ff0-singhpratech-github-io/page_main.png",
+      "https://images.hlido.eu/reviews/singhpratech-crimson-crab-mcp-template/run-cd0dae69dc2f1ff0-singhpratech-github-io/page_top.png",
+      "https://images.hlido.eu/reviews/singhpratech-crimson-crab-mcp-template/run-cd0dae69dc2f1ff0-singhpratech-github-io/page_features.png"
+    ]
+  }
+}
