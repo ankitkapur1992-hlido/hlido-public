@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "uxloom-dev-uxloom",
+  "name": "UXLoom",
+  "agent_url": "https://uxloom.dev",
+  "category": "Frameworks & Eval",
+  "run_id": "run-uxloom-dev-uxloom-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A design-time critic for AI-generated UI that checks state coverage deterministically — unusually honest about being a linter, not a generator.",
+    "body": "UXLoom occupies a genuinely under-served slot: everyone is shipping UI generators, almost nobody is shipping the thing that audits their output. It takes a journey definition (an open format the project calls JourneyGraph) plus the screens a generator produced, models the flow as a state machine, and reports what is missing — unreachable screens, dead-end transitions, absent loading/empty/error/offline states, WCAG contrast failures, sub-44px touch targets, and label overflow under localization growth. The public surface is precise about what that means: five named checks, a worked coverage matrix showing 21/30 required states on a sample checkout flow, and an explicit framing of the findings as deterministic — same input, same report, diffable in CI. That framing is the strongest signal here. A tool that says 'zero opinions, all evidence' and then shows you the matrix is making a claim you can falsify, which is rarer in this category than it should be. The distribution posture is equally clean for agent use: MIT, on npm, listed in the official MCP registry, no sign-up and no mailing list gate on the docs. What we cannot assess from the public surface is the part that decides whether it works — how well the journey definition survives contact with a real generator's output, and whether the required-state model is right for flows more complex than checkout. The site shows the sample, not the corpus. At v0.14 the honest read is a well-specified early tool with a real thesis, not a proven one.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) because the value proposition is specific and independently checkable, the checks described are deterministic rather than model-judgement, and the access path is completely open — MIT, npm, MCP registry, docs with no login. It is not VITAL because the evidence on the public surface is a single illustrative flow rather than results across real projects, the version (v0.14) is pre-1.0 with the API surface still moving, and nothing public establishes how the journey definition holds up on flows the authors did not design the example around.",
+  "what_it_does_well": [
+    "Names a real, specific gap — generators emit the happy path, nothing audits the missing states",
+    "Checks are deterministic and diffable, so findings are reviewable in CI rather than advisory",
+    "Publishes a worked coverage matrix (21/30 states) instead of only asserting the capability",
+    "Fully open access path: MIT, npm, official MCP registry, docs without sign-up",
+    "Explicitly positions as a critic layer over any generator rather than replacing one"
+  ],
+  "what_it_fails_at": [
+    "Evidence is one illustrative checkout flow — no results across real or third-party projects",
+    "v0.14 pre-1.0: the JourneyGraph format and CLI surface are not stability-committed",
+    "Requires the user to author a journey definition; the cost of that step is not shown",
+    "No pricing or commercial-support story published (fine for OSS, unclear for adoption)",
+    "The required-state model is asserted, not justified — why these states, for which flows, is undocumented on the surface"
+  ],
+  "best_for": [
+    "Teams shipping UI from v0, Lovable, Figma Make or Claude who need a gate before implementation",
+    "Design-system owners wanting state coverage enforced mechanically rather than by review",
+    "CI pipelines that can consume a deterministic report and fail a build on it",
+    "Agent workflows that generate UI and need a machine-checkable critic in the loop"
+  ],
+  "not_recommended_for": [
+    "Teams wanting UI generated rather than audited — this deliberately does not generate",
+    "Projects with no journey definition and no appetite to author one",
+    "Anyone needing production-stability guarantees today (pre-1.0, v0.14)",
+    "Accessibility programmes needing full WCAG audit coverage — this checks contrast and target size, not the standard"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Checks journey completeness, state coverage, WCAG contrast, touch targets and text expansion",
+      "source": "https://uxloom.dev",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Published on npm and the official MCP registry",
+      "source": "https://uxloom.dev",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed, no sign-up and no mailing list required",
+      "source": "https://uxloom.dev",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Sample coverage matrix reports 21/30 required states (70%)",
+      "source": "https://uxloom.dev",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Version v0.14 (pre-1.0)",
+      "source": "https://uxloom.dev",
+      "tested_at": "2026-08-10",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "CLI (npx uxloom check ./design) plus an MCP server listed in the official registry, so an agent can run the check and consume a structured report directly. The deterministic output is the property that makes it usable in an agent loop — a generating agent can call it, read the missing-state list, and iterate without a human arbitrating.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your generator gave you 6 screens. UXLoom proves you're missing 9 states.'",
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Star the repo' / 'uxloom on npm'",
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open source, MIT, no sign-up",
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": true,
+      "evidence": "Worked coverage matrix + sample CLI output on homepage",
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": true,
+      "required": false,
+      "evidence": "Docs linked in top nav, no login",
+      "tested_at": "2026-08-10T20:31:15.905Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/uxloom-dev-uxloom.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No statement about marking or provenance of AI-generated output; the product audits UI rather than generating content."
+  },
+  "evidence_images": {
+    "run_id": "run-00d0c25444aa946d-uxloom-dev",
+    "base": "https://images.hlido.eu/reviews/uxloom-dev-uxloom/run-00d0c25444aa946d-uxloom-dev",
+    "files": [
+      "home.png",
+      "page__main.png",
+      "page__.png",
+      "page_docs_html.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/uxloom-dev-uxloom/run-00d0c25444aa946d-uxloom-dev/home.png",
+      "https://images.hlido.eu/reviews/uxloom-dev-uxloom/run-00d0c25444aa946d-uxloom-dev/page__main.png",
+      "https://images.hlido.eu/reviews/uxloom-dev-uxloom/run-00d0c25444aa946d-uxloom-dev/page__.png",
+      "https://images.hlido.eu/reviews/uxloom-dev-uxloom/run-00d0c25444aa946d-uxloom-dev/page_docs_html.png"
+    ]
+  },
+  "repo_url": "https://github.com/uxloom-dev/uxloom"
+}
