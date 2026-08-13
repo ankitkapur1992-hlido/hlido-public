@@ -1,0 +1,195 @@
+{
+  "schema_version": "2.0",
+  "slug": "bobaba99-motionlint",
+  "name": "MotionLint",
+  "agent_url": "https://www.resila.ai/motionlint",
+  "category": "Frameworks & Eval",
+  "run_id": "run-9662f720843d8c21-www-resila-ai",
+  "run_at": "2026-08-09T00:31:27.422Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Reviews the animation your coding agent cannot see, and splits the job honestly — a deterministic linter for what is measurable, a vision model only for what is not.",
+    "body": "MotionLint's framing is the sharpest thing about it: coding agents read JSX and CSS and are structurally blind to what a user actually watches happen, so it captures the running app instead of the source. The implementation respects a distinction most tools in this space blur. `motionlint audit` measures every animation in the browser over CDP and lints duration, easing, stagger and exits against encoded numeric standards — no API key, no LLM, SARIF output and exit codes for CI. `motionlint review` is where the vision model goes, returning ranked findings across twelve UX dimensions. Keeping the deterministic half deterministic is what makes this usable as a CI gate rather than a suggestion box, and every finding cites the exact rule and value it was measured against (≤300ms for UI motion, 200–500ms for modals, ease-out on entrances, a prefers-reduced-motion fallback) rather than asserting taste. Accessibility is treated as a lintable rule, not a footnote. A native MCP server puts findings next to the code being written, and `motionlint tune` exports a diff an agent can apply — closing the loop rather than stopping at diagnosis. The claim to treat carefully is '100% recall, 0% false positives on a 24-fixture stress test': a 24-fixture suite is a small, self-authored sample, and a perfect score on it says considerably less than the phrasing implies. There is no third-party validation, no version and no adoption evidence on the captured surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) for a well-drawn problem (agents cannot see what renders), a design that keeps the measurable half deterministic and key-free so it can gate CI, findings that cite the exact encoded rule and value, accessibility as a first-class lint, and an MCP path plus an exportable diff that closes the loop back into the agent. Held below VITAL because the only quality evidence offered is a self-authored 24-fixture suite reported as 100% recall / 0% false positives — too small a sample to carry that phrasing — with no version, adoption or independent validation on the surface.",
+  "what_it_does_well": [
+    "Captures the running app rather than the source, which is the actual blind spot for coding agents",
+    "Splits deterministic measurement (audit, no LLM, no API key) from judgement (review, vision model) instead of blending them",
+    "SARIF output and exit codes make the deterministic half a usable CI gate",
+    "Every finding cites the exact rule and measured value — ≤300ms UI budget, 200–500ms modals, ease-out entrances",
+    "Treats prefers-reduced-motion as a lintable accessibility rule, not an afterthought",
+    "Native MCP server for Claude Code, Cursor and other MCP-aware clients",
+    "`motionlint tune` exports a diff the agent can apply — diagnosis through to fix",
+    "MIT-licensed and published on npm"
+  ],
+  "what_it_fails_at": [
+    "'100% recall, 0% false positives' rests on a self-authored 24-fixture suite — too small to support that phrasing",
+    "No independent or third-party validation on the captured surface",
+    "No version, changelog or adoption evidence published",
+    "The `review` path depends on a vision LLM, so its findings are neither free nor reproducible the way `audit` is",
+    "Not tested hands-on by Hlido"
+  ],
+  "best_for": [
+    "Teams whose UI is largely written by coding agents and who need motion quality checked by something that can see it",
+    "CI pipelines wanting a deterministic, key-free animation gate with SARIF output",
+    "Developers who want motion accessibility (prefers-reduced-motion) enforced rather than remembered"
+  ],
+  "not_recommended_for": [
+    "Teams needing validated, independently-benchmarked review quality before adoption",
+    "Design systems with deliberately unconventional motion that would fight the encoded budgets",
+    "Anyone expecting the LLM `review` path to be as reproducible as the deterministic `audit` path"
+  ],
+  "red_flags": [
+    "'Validated at 100% recall, 0% false positives' is stated without qualification, but the sample is a self-authored 24-fixture stress test. A perfect score on 24 self-chosen fixtures is weak evidence presented in strong language."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Audits the running web app over CDP rather than reading source",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "`motionlint audit` is deterministic — no API key, no LLM — with SARIF output and CI exit codes",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "`motionlint review` uses a vision LLM for ranked findings across 12 UX dimensions",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Findings cite encoded standards — ≤300ms UI motion, 200–500ms modals, ease-out on entrances, prefers-reduced-motion fallback",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Native MCP server for Claude Code, Cursor and other MCP-aware clients",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "MIT-licensed and live on npm via `npm install -g motionlint`",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "'100% recall, 0% false positives' generalises beyond the 24-fixture self-authored suite",
+      "source": "https://www.resila.ai/motionlint",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Independent validation, version or adoption evidence",
+      "source": "https://www.resila.ai/motionlint (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Built for the coding-agent loop: a native MCP server surfaces findings inside Claude Code or Cursor, the CLI runs in CI with SARIF and exit codes, and `tune` exports a diff the agent applies. The stated purpose is to give an agent eyes it does not have.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Every animation needs a reason' — reviews design and motion of the running app",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "`npm install -g motionlint` with copy button and GitHub link",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source, MIT, live on npm",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Features, Standards and worked audit output on the page",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "quantified_claim_supported",
+      "pass": false,
+      "required": false,
+      "evidence": "100% recall / 0% false positives rests on a 24-fixture self-authored suite",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "None published",
+      "tested_at": "2026-08-09T00:31:27.422Z"
+    }
+  ],
+  "summary": "Reviews the animation your coding agent cannot see, and splits the job honestly — a deterministic linter for what is measurable, a vision model only for what is not.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/bobaba99-motionlint.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Review and linting tool; produces findings, not synthetic media."
+  },
+  "evidence_images": {
+    "run_id": "run-9662f720843d8c21-www-resila-ai",
+    "base": "https://images.hlido.eu/reviews/bobaba99-motionlint/run-9662f720843d8c21-www-resila-ai",
+    "files": [
+      "home.png",
+      "page_standards.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/bobaba99-motionlint/run-9662f720843d8c21-www-resila-ai/home.png",
+      "https://images.hlido.eu/reviews/bobaba99-motionlint/run-9662f720843d8c21-www-resila-ai/page_standards.png"
+    ]
+  }
+}
