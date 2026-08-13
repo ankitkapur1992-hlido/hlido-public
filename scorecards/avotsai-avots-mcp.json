@@ -1,0 +1,158 @@
+{
+  "schema_version": "2.0",
+  "slug": "avotsai-avots-mcp",
+  "name": "Avots MCP",
+  "agent_url": "https://avots.ai/mcp",
+  "category": "Infrastructure",
+  "run_id": "run-avotsai-avots-mcp-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A shipped multi-model gateway reachable over MCP — concrete, specific, and documented for six clients, with the usual gateway caveats about depending on a middleman.",
+    "body": "Avots exposes 40+ AI models through a single MCP endpoint, so a Claude, Cursor, Cline or openclaw session can call GPT-5, DeepSeek, Sonar, Veo, Kling, ElevenLabs and others without leaving the client. What makes this reviewable rather than aspirational is specificity: sixteen named tools are listed with what each does and which are free (check_balance, list_models, check_job, calendar and avatar listing), the transport is stated precisely (streamable HTTP, MCP spec 2025-06-18, bearer auth), OAuth is supported for Claude web so there is no token copy-paste, and there is a per-client setup guide for six different clients. The generative range is unusually broad for one endpoint — chat, image, video, audio, face swap, talking avatars, lipsync, vlogs, montage. The trade-offs are inherent to the pattern: every call is routed through a third party, so the vendor sees prompts and outputs and becomes a single point of failure; the surface shows no pricing detail, uptime record, rate limits, or data-handling policy in what we captured; and there is no adoption evidence or third-party validation. A two-step confirmation on video generation is a sensible guard against expensive accidental calls and worth noting.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because this is shipped and specific rather than promised: sixteen named tools with free/paid status, a precisely stated transport (streamable HTTP, MCP spec 2025-06-18, bearer auth), OAuth for Claude web, and setup guides for six clients. Held below VITAL because the gateway pattern concentrates prompts, outputs and availability in one third party, and the captured surface shows no pricing detail, uptime record, rate limits or data-handling policy — the disclosures that would make that concentration acceptable.",
+  "what_it_does_well": [
+    "Sixteen tools listed by name with function and free/paid status — no ambiguity about what you get",
+    "One MCP endpoint reaches 40+ models across chat, image, video, audio and avatar generation",
+    "Precise transport disclosure: streamable HTTP, MCP spec 2025-06-18, Authorization bearer",
+    "OAuth support for Claude.ai web — connect without copy-pasting a token",
+    "Per-client setup guides for Claude web, Claude Desktop, Claude Code, Cursor, Cline and openclaw",
+    "Two-step confirmation on video generation — a sensible guard against costly accidental calls"
+  ],
+  "what_it_fails_at": [
+    "Every request routes through a third party that sees prompts and outputs; no data-handling or retention policy on the captured surface",
+    "Single point of failure — if the gateway is down, all 40+ models are unreachable from the client",
+    "No pricing detail, rate limits, or uptime/reliability record published on the MCP page",
+    "No adoption numbers, named users, or third-party validation",
+    "Model availability depends on upstream providers; nothing states what happens when one is withdrawn"
+  ],
+  "best_for": [
+    "Developers who want many models available inside one MCP client without managing separate provider keys",
+    "Multimodal work (image, video, audio, avatar) reachable from a chat or IDE session",
+    "Quick experimentation across models where per-provider onboarding is the friction"
+  ],
+  "not_recommended_for": [
+    "Work with confidential prompts where routing through an intermediary is unacceptable",
+    "Production systems needing an SLA, published rate limits, or direct provider relationships",
+    "Buyers who require a stated data-retention and processing policy before sending anything"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Single MCP endpoint at https://mcp.avots.ai/ exposing 40+ models",
+      "source": "https://avots.ai/mcp",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "16 named tools with per-tool descriptions and free/paid marking",
+      "source": "https://avots.ai/mcp",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Streamable HTTP transport, MCP spec 2025-06-18, bearer authorization",
+      "source": "https://avots.ai/mcp",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "OAuth connection flow for Claude.ai web (no token copy-paste)",
+      "source": "https://avots.ai/mcp",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Pricing detail, rate limits, uptime record, data-handling policy",
+      "source": "https://avots.ai/mcp (not on the captured page)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP-first: a hosted streamable-HTTP endpoint with bearer auth and OAuth, documented for six MCP clients. The product exists to be called by an agent inside another client.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T00:31:55.669Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Use avots inside your favourite AI client'",
+      "tested_at": "2026-08-05T00:31:55.669Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get my MCP key'",
+      "tested_at": "2026-08-05T00:31:55.669Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "A pricing page exists in navigation; no figures on the captured MCP page",
+      "tested_at": "2026-08-05T00:31:55.669Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Concrete per-client setup guides and a full tool list; no third-party proof",
+      "tested_at": "2026-08-05T00:31:55.669Z"
+    }
+  ],
+  "summary": "A shipped multi-model gateway reachable over MCP — concrete, specific, and documented for six clients, with the usual gateway caveats about depending on a middleman.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/avotsai-avots-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-e39c90cd0b4c4745-avots-ai",
+    "base": "https://images.hlido.eu/reviews/avotsai-avots-mcp/run-e39c90cd0b4c4745-avots-ai",
+    "files": [
+      "home.png",
+      "page_faq.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/avotsai-avots-mcp/run-e39c90cd0b4c4745-avots-ai/home.png",
+      "https://images.hlido.eu/reviews/avotsai-avots-mcp/run-e39c90cd0b4c4745-avots-ai/page_faq.png"
+    ]
+  }
+}
