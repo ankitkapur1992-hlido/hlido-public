@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0",
+  "slug": "google-gemini-gemini-cli",
+  "name": "Gemini CLI",
+  "agent_url": "https://geminicli.com",
+  "category": "Coding",
+  "run_id": "run-c46b6ca9fdc7df0e-geminicli-com",
+  "run_at": "2026-08-06T08:07:51.344Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Google's terminal coding agent, backed by the strongest distribution in the category — and carrying a prominent replacement notice for free-tier users.",
+    "body": "Gemini CLI brings Google's models into the terminal for the now-standard agentic coding loop: query and edit large codebases, generate applications from images or PDFs, and automate multi-step workflows. It installs as a global npm package, is developed in the open under the google-gemini organisation, and inherits the two advantages no independent competitor can match — first-party model access and Google's distribution. For a developer already inside the Google ecosystem, that combination is hard to argue with. The finding that dominates this review is at the top of the vendor's own page: a site-wide banner stating that for unpaid-tier and Google One users, Gemini CLI will be replaced by Antigravity CLI. Whatever the migration details turn out to be, a vendor announcing a replacement product for its free tier is material to anyone weighing adoption, and it belongs in the first paragraph of any honest assessment rather than a footnote. We are reporting the notice as displayed; we did not verify the transition timeline, and readers evaluating this should check the linked blog post for current terms. The second caveat is about this review's own confidence rather than the product. The captured surface was thin — a marketing homepage, a cookie notice and a navigation bar — so the substance sits behind documentation and the repository, neither of which this public-surface run exercised. The score reflects a strong, well-distributed, openly developed tool assessed on a shallow surface with an unresolved continuity question, and should be read with that confidence level in mind.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-06",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) because it is a first-party Google tool with open development, standard npm distribution and the strongest model access and distribution in its category. Held below VITAL by a vendor-published notice that free-tier users will be moved to a replacement product — an unresolved continuity signal — and by a thin captured surface that left the substantive capability claims unexercised. Confidence is low-medium for that reason.",
+  "what_it_does_well": [
+    "First-party access to Google's current models, with no third-party routing layer",
+    "Developed in the open under the google-gemini GitHub organisation",
+    "Standard, frictionless distribution: `npm install -g @google/gemini-cli`",
+    "Covers the expected agentic coding surface — large-codebase editing, multimodal input, workflow automation",
+    "Backed by published docs, a reference, a changelog and an extensions surface"
+  ],
+  "what_it_fails_at": [
+    "A site-wide banner states Gemini CLI will be replaced by Antigravity CLI for unpaid and Google One users",
+    "The homepage carries almost no substantive detail — capability claims live elsewhere and went unexercised",
+    "No pricing, quota or rate-limit information is presented on the landing surface",
+    "No benchmarks, evaluations or comparative evidence offered for the coding claims",
+    "Tight coupling to Google accounts and models limits portability"
+  ],
+  "best_for": [
+    "Developers already committed to Google Cloud or the Gemini model family",
+    "Terminal-first engineers who want a first-party agentic coding tool rather than a third-party wrapper",
+    "Teams comfortable tracking a fast-moving vendor roadmap, including product replacements",
+    "Multimodal workflows that start from images or PDFs rather than text alone"
+  ],
+  "not_recommended_for": [
+    "Free-tier users seeking long-term stability, given the published replacement notice",
+    "Teams needing model portability across vendors — this is single-vendor by design",
+    "Buyers requiring published benchmarks before adopting a coding agent",
+    "Anyone avoiding Google account dependencies on principle or policy"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is model-agnostic and community-governed, so it survives any single vendor's roadmap changes. Gemini CLI offers deeper first-party integration with Google's models but inherits Google's product decisions — including the replacement notice on its own homepage. Choose Aider for portability and continuity; Gemini CLI for first-party depth.",
+      "preferred_for_axis": "vendor-independence"
+    },
+    {
+      "slug": "github-copilot",
+      "verdict_diff": "Copilot is primarily editor-embedded with a mature enterprise story and established procurement paths. Gemini CLI is terminal-first and earlier in its lifecycle. Choose Copilot for organisational rollout; Gemini CLI for terminal-centric work in a Google stack.",
+      "preferred_for_axis": "enterprise-maturity"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is a full AI-native editor and replaces the development environment. Gemini CLI augments the terminal you already use. Different levels of commitment to the same goal.",
+      "preferred_for_axis": "terminal-vs-editor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Installs via `npm install -g @google/gemini-cli`",
+      "source": "https://geminicli.com",
+      "tested_at": "2026-08-06",
+      "verified": true
+    },
+    {
+      "claim": "Claims large-codebase query/edit, app generation from images or PDFs, workflow automation",
+      "source": "https://geminicli.com hero section",
+      "tested_at": "2026-08-06",
+      "verified": true
+    },
+    {
+      "claim": "Banner states Gemini CLI will be replaced by Antigravity CLI for unpaid and Google One users",
+      "source": "https://geminicli.com site-wide notice",
+      "tested_at": "2026-08-06",
+      "verified": true
+    },
+    {
+      "claim": "Open development under the google-gemini GitHub organisation",
+      "source": "https://github.com/google-gemini/gemini-cli",
+      "tested_at": "2026-08-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Terminal CLI installed globally via npm and driven by command invocation; an extensions surface is advertised. It is an agent a developer runs, not a service other agents call — there is no documented programmatic endpoint for agent-to-agent use on the captured surface.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:32:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:32:00Z",
+      "evidence": "'Build, debug & deploy with AI'"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:32:00Z",
+      "evidence": "'npm install -g @google/gemini-cli' / 'More install options'"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-08-05T16:32:00Z",
+      "evidence": "A Plans link exists but no pricing, quota or rate-limit detail on the landing surface"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-08-05T16:32:00Z",
+      "evidence": "No demo, benchmark or worked example on the captured page"
+    }
+  ],
+  "summary": "Google's terminal coding agent, backed by the strongest distribution in the category — and carrying a prominent replacement notice for free-tier users.",
+  "staleness_after": "2026-11-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-04",
+  "attestation_url": "/data/attestations/google-gemini-gemini-cli.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-06",
+    "source": "r4-claude-enrich",
+    "note": "Generative coding tool; no marking or synthetic-content disclosure statement on the captured surface. Capture was thin — treat as unevidenced rather than as a confirmed absence across the vendor's wider estate."
+  }
+}
