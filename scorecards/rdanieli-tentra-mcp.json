@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "rdanieli-tentra-mcp",
+  "name": "Tentra",
+  "agent_url": "https://trytentra.com",
+  "category": "Infrastructure",
+  "run_id": "run-rdanieli-tentra-mcp-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Architecture-diagram platform whose real claim is drift detection against your codebase — a strong idea presented with almost no third-party evidence.",
+    "body": "Tentra's pitch is well constructed and, unusually, correctly identifies its own differentiator. Natural-language-to-diagram is commodity; the headline feature is sync_architecture, which indexes the current codebase and reports what changed against a saved diagram — connections in the diagram that no longer exist in code, services in code that never made it to the diagram, signatures that moved. The site is explicit that this requires indexing your code and states that most diagram tools cannot do it because they do not. That is a real distinction and the right thing to lead with. Export to 14 stacks from one semantic model is the second pillar, and the framing — modelling connections rather than templates — is the correct engineering claim to make if it is true. The problem is that essentially everything here is self-asserted. The diffs, the commit counts, the '3 weeks, 47 commits' inventory are illustrative mock-ups on a marketing page, not published results. There is no case study, no third-party deployment, no accuracy figure for the drift detection, and no statement of what fraction of real architectural change it catches or misses — which is the only number that matters for a tool whose value is telling you what you missed. At v0.9.2 with an npm-installed MCP server and MCP registries listed as live, the agent-facing surface is genuinely good. The verdict is about evidence, not ambition.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68) despite a well-differentiated concept, because the public surface supplies no verifiable evidence for its headline claim. Drift detection is only valuable at a known accuracy, and no accuracy, benchmark, case study or third-party deployment is published — every artefact shown is an illustrative mock-up. Pricing, docs and a gallery exist and the MCP path is real, which keeps it well clear of FLATLINE; it does not reach STEADY because the central capability is asserted rather than demonstrated, and v0.9.2 is pre-1.0.",
+  "what_it_does_well": [
+    "Identifies and leads with a genuine differentiator (drift detection) rather than the commodity feature",
+    "Clear articulation of why diagrams rot and why AI coding agents make it worse",
+    "One semantic model exporting to 14 stacks is a coherent architectural claim, not a template gallery",
+    "Agent-ready distribution: npm-installable MCP server, MCP registries listed as live",
+    "Pricing, docs, blog and gallery are all publicly reachable from the homepage"
+  ],
+  "what_it_fails_at": [
+    "Every diagram, diff and commit count shown is an illustrative mock-up, not published results",
+    "No accuracy figure for drift detection — the one number the headline feature depends on",
+    "No case study, customer reference or third-party deployment evidence on the public surface",
+    "v0.9.2 pre-1.0 with 'now shipping' framing that outruns what is demonstrated",
+    "Claim that 'no other diagram tool does this' is stated without comparison or citation"
+  ],
+  "best_for": [
+    "Teams whose architecture documentation has already drifted and who feel the cost",
+    "Engineering orgs onboarding people into systems documented only in Slack threads",
+    "Agent-assisted codebases where structure gets reinvented every session",
+    "Anyone wanting diagram-as-data that downstream tools can read rather than a whiteboard photo"
+  ],
+  "not_recommended_for": [
+    "Buyers who need published accuracy or reference deployments before adopting a correctness tool",
+    "Teams unwilling to let a platform index their source code",
+    "Simple systems where a hand-maintained diagram is not actually drifting",
+    "Anyone needing 1.0 stability guarantees today"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "sync_architecture compares a saved diagram against current code and reports diffs",
+      "source": "https://trytentra.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Exports to 14 target stacks from one semantic model",
+      "source": "https://trytentra.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "MCP server installable via npm install -g tentra-mcp; MCP registries listed as live",
+      "source": "https://trytentra.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Version v0.9.2",
+      "source": "https://trytentra.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "167 cloud components available for drag-drop",
+      "source": "https://trytentra.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Globally installable MCP server (tentra-mcp) with registries listed live, so a coding agent can call sync_architecture and read structured drift output. The stated intent — give agents a persistent structural model so they stop re-reading files each session — is a sound agent-facing design; its usefulness depends on drift-detection accuracy, which is unpublished.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Describe the system. Get the diagram. Keep them in sync.'",
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open the workspace' / npm install -g tentra-mcp",
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "./pricing linked in primary nav",
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": true,
+      "evidence": "Interactive mock-ups only — no published results, benchmark or case study",
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": true,
+      "required": false,
+      "evidence": "./docs linked in primary nav",
+      "tested_at": "2026-08-10T12:32:27.869Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/rdanieli-tentra-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No marking, watermarking or provenance statement for AI-generated diagram/scaffold output found on the captured surface."
+  },
+  "evidence_images": {
+    "run_id": "run-6190c5338cba9cc7-trytentra-com",
+    "base": "https://images.hlido.eu/reviews/rdanieli-tentra-mcp/run-6190c5338cba9cc7-trytentra-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_docs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/rdanieli-tentra-mcp/run-6190c5338cba9cc7-trytentra-com/home.png",
+      "https://images.hlido.eu/reviews/rdanieli-tentra-mcp/run-6190c5338cba9cc7-trytentra-com/page_.png",
+      "https://images.hlido.eu/reviews/rdanieli-tentra-mcp/run-6190c5338cba9cc7-trytentra-com/page_.png",
+      "https://images.hlido.eu/reviews/rdanieli-tentra-mcp/run-6190c5338cba9cc7-trytentra-com/page_docs.png"
+    ]
+  },
+  "repo_url": "https://github.com/rdanieli/tentra-mcp"
+}
