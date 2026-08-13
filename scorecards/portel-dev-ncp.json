@@ -1,0 +1,167 @@
+{
+  "schema_version": "2.0",
+  "slug": "portel-dev-ncp",
+  "name": "NCP (Natural Context Provider)",
+  "agent_url": "https://portel-dev.github.io/ncp/",
+  "category": "Infrastructure",
+  "run_id": "run-portel-dev-ncp-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An MCP router that fixes tool-schema overload by exposing one small discovery interface instead of every tool — a real problem, addressed plainly.",
+    "body": "NCP sits in front of your connected MCP servers and gives the AI client a single small interface for discovery and execution, so Claude Desktop or Cursor no longer loads every tool schema from every server into context. That is a genuine and worsening problem — as MCP estates grow, the tool catalogue itself becomes the dominant context cost — and NCP's answer is the right shape: search across servers, skills and resources through one narrow surface, then execute. Beyond discovery it adds code-mode orchestration (multi-step TypeScript workflows that call MCP namespaces and return structured results), scheduling for repeatable workflows, health checks, and execution records. The documentation is well-organised, with a search-intent table mapping questions to pages and explicit client guides for Claude Desktop, Cursor, VS Code, Windsurf, Cline and Continue, plus a documented security-architecture page covering runtime permissions and boundaries — appropriate for something that brokers every tool call. Two reservations. The docs contain visible SEO scaffolding (\"Important product keywords covered by this documentation include MCP router, MCP tool discovery, Model Context Protocol…\"), which is keyword-stuffing in a developer doc and slightly undercuts the tone. And there are no adoption figures, named users, or benchmarks quantifying the context saving — the central claim. Reviewed from the public surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) for a real, growing problem (MCP tool-schema context overload), a correctly-shaped solution (narrow discovery interface instead of full catalogue injection), broad documented client support, and a dedicated security-architecture page for a component that brokers every tool call. Held below VITAL because the central context-saving claim is unquantified, there is no adoption evidence, and the docs carry visible keyword-stuffing that reads as reach for search rank rather than for readers.",
+  "what_it_does_well": [
+    "Targets a real and worsening problem — every MCP tool schema loaded into client context",
+    "Exposes one small discovery interface rather than the full catalogue",
+    "Code mode: multi-step TypeScript workflows calling multiple MCP namespaces, returning structured results",
+    "Scheduling plus health checks and execution records in one place",
+    "Documented client setup for six clients (Claude Desktop, Cursor, VS Code, Windsurf, Cline, Continue)",
+    "A dedicated security-architecture page on runtime permissions and boundaries — appropriate for a call broker"
+  ],
+  "what_it_fails_at": [
+    "The context-saving claim — the whole point — is published with no benchmark or figure",
+    "No adoption numbers, named users, or third-party validation",
+    "Visible SEO keyword-stuffing inside developer documentation",
+    "Introduces a broker in the path of every tool call: a new dependency and a new failure point",
+    "Not exercised by us; routing correctness and overhead are untested"
+  ],
+  "best_for": [
+    "Users running many MCP servers who are hitting context limits from tool schemas alone",
+    "Teams wanting scheduled, repeatable MCP workflows with execution records",
+    "Developers who want multi-MCP orchestration in TypeScript rather than prompt chaining"
+  ],
+  "not_recommended_for": [
+    "Setups with a handful of MCP servers, where the broker adds cost and no benefit",
+    "Buyers who need a measured context or latency saving before adopting",
+    "Anyone unwilling to place a third-party broker in front of every tool call"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "1mcp-app-agent",
+      "note": "Directly comparable: both aggregate MCP servers and narrow the agent-facing surface. 1MCP leads with progressive CLI discovery; NCP adds scheduling and TypeScript code-mode orchestration."
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "One MCP interface for discovery across servers, skills, resources and Photons",
+      "source": "https://portel-dev.github.io/ncp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Code mode: multi-step TypeScript workflows calling MCP namespaces",
+      "source": "https://portel-dev.github.io/ncp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Scheduling, health checks and execution records",
+      "source": "https://portel-dev.github.io/ncp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Documented setup for six MCP clients and a security-architecture page",
+      "source": "https://portel-dev.github.io/ncp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Any benchmark for the context reduction it exists to deliver",
+      "source": "https://portel-dev.github.io/ncp/ (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "An MCP server and CLI whose only consumer is an AI client — it exists to change what an agent sees. Discovery, execution and scheduling are all agent-facing.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-07T08:31:14.386Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Natural Context Provider for MCP tool discovery'",
+      "tested_at": "2026-08-07T08:31:14.386Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / 'Claude Desktop Setup'",
+      "tested_at": "2026-08-07T08:31:14.386Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source, npm-distributed",
+      "tested_at": "2026-08-07T08:31:14.386Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Documentation only — no benchmark for the context saving claimed",
+      "tested_at": "2026-08-07T08:31:14.386Z"
+    }
+  ],
+  "summary": "An MCP router that fixes tool-schema overload by exposing one small discovery interface instead of every tool — a real problem, addressed plainly.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/portel-dev-ncp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-208b20bd6dfeab2e-portel-dev-github-io",
+    "base": "https://images.hlido.eu/reviews/portel-dev-ncp/run-208b20bd6dfeab2e-portel-dev-github-io",
+    "files": [
+      "home.png",
+      "page_VPContent.png",
+      "pagereadme.png",
+      "pagedocs_clients_claude-desktop.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/portel-dev-ncp/run-208b20bd6dfeab2e-portel-dev-github-io/home.png",
+      "https://images.hlido.eu/reviews/portel-dev-ncp/run-208b20bd6dfeab2e-portel-dev-github-io/page_VPContent.png",
+      "https://images.hlido.eu/reviews/portel-dev-ncp/run-208b20bd6dfeab2e-portel-dev-github-io/pagereadme.png",
+      "https://images.hlido.eu/reviews/portel-dev-ncp/run-208b20bd6dfeab2e-portel-dev-github-io/pagedocs_clients_claude-desktop.png"
+    ]
+  }
+}
