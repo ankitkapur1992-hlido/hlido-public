@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "opentabs-dev-opentabs",
+  "name": "OpenTabs",
+  "agent_url": "https://opentabs.dev",
+  "category": "Infrastructure",
+  "run_id": "run-opentabs-dev-opentabs-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "~2,000 MCP tools built by reverse-engineering web apps' internal APIs and driving them through your logged-in session — technically impressive, and the terms-of-service exposure belongs to you, not them.",
+    "body": "OpenTabs is a Chrome extension plus MCP server that exposes web applications as MCP tools by calling the same internal APIs their own frontends use, routed through your authenticated browser session. The pitch is precise about why this beats the alternatives — \"no screenshots, no DOM, no guessing\" — and it is correct: calling a real backend endpoint is far more reliable than pixel or DOM automation, and the scale claimed is substantial (100+ plugins, ~2,000 tools, across Slack, Discord, GitHub, Jira, Notion, Figma, AWS, Stripe, Robinhood, Netflix, Airbnb, Spotify, DoorDash, Linear and 90+ more). The self-improving angle is genuinely clever: point the AI at a website and it analyses the page, discovers the APIs, scaffolds the plugin and registers it. What a buyer must weigh is not build quality but exposure. These are **undocumented internal** APIs, not published ones: they can change without notice, and using them through an authenticated session may breach the terms of service of the sites involved — the risk of which sits with the user's account, not with OpenTabs. Several named targets (Stripe, AWS, Robinhood) are financial or infrastructure surfaces where an unintended automated call is expensive. Granting an extension the ability to act as you across every logged-in tab is a very broad trust grant, and the surface we captured does not set out a permission model, a per-plugin scope, or a confirmation step for destructive actions. None of this is hidden — the mechanism is described plainly — but the page frames it as pure capability, and the trade-off deserves equal billing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) — genuinely impressive engineering and the most useful automation approach available (real internal APIs beat DOM or screenshot driving), with a clever self-improving plugin generator. Held down by risk the surface does not price in: undocumented APIs that can break without notice, probable terms-of-service exposure borne by the user's own account, financial and infrastructure targets among the plugins, and no visible permission model or destructive-action confirmation for an extension acting as you across every logged-in tab.",
+  "what_it_does_well": [
+    "Calls real internal APIs rather than driving the DOM or screenshots — far more reliable automation",
+    "Very large claimed surface: 100+ plugins, ~2,000 tools across mainstream services",
+    "Uses the existing authenticated session, so no separate credential handling or API keys",
+    "Self-improving: point the AI at a site and it discovers the APIs and scaffolds the plugin",
+    "Works with any MCP client supporting Streamable HTTP (Claude Code, Cursor, Windsurf, OpenCode)",
+    "Explicit about the mechanism — it does not pretend to be an official integration"
+  ],
+  "what_it_fails_at": [
+    "Depends on undocumented internal APIs that can change or break with no notice or deprecation path",
+    "Likely terms-of-service exposure for the sites automated — and the risk sits with the user's account, not the vendor",
+    "No permission model, per-plugin scoping, or destructive-action confirmation visible on the captured surface",
+    "An extension able to act as you across every logged-in tab is an extremely broad trust grant",
+    "Financial and infrastructure targets (Stripe, AWS, Robinhood) raise the cost of an unintended call",
+    "Plugin quality across 100+ community plugins will be highly uneven; most were AI-generated in minutes",
+    "No adoption figures or third-party security review"
+  ],
+  "best_for": [
+    "Developers automating their own accounts on services with no public API, accepting the ToS risk knowingly",
+    "Read-only or low-stakes workflows (search, retrieval, status checks) inside a browser session",
+    "Prototyping agent workflows against apps that would otherwise need brittle DOM automation"
+  ],
+  "not_recommended_for": [
+    "Corporate environments where automating SaaS via internal APIs breaches vendor agreements",
+    "Any workflow touching financial or production-infrastructure accounts",
+    "Users who cannot audit what a given plugin does before it acts as them",
+    "Anyone needing stable, supported integrations"
+  ],
+  "red_flags": [
+    {
+      "severity": "medium",
+      "note": "Automating undocumented internal APIs through an authenticated session may breach the terms of service of the sites involved, and the consequence — account suspension — falls on the user, not on OpenTabs. The mechanism is described openly; the exposure is not."
+    },
+    {
+      "severity": "low",
+      "note": "No permission model, per-plugin scope, or destructive-action confirmation appears on the captured surface, for software that can act as the user across every logged-in tab including Stripe, AWS and Robinhood."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Chrome extension plus MCP server calling web apps' internal APIs via the user's session",
+      "source": "https://opentabs.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "100+ plugins, ~2,000 tools across Slack, GitHub, Jira, Notion, Figma, AWS, Stripe and 90+ more",
+      "source": "https://opentabs.dev (self-reported)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    },
+    {
+      "claim": "Explicitly 'no screenshots, no DOM, no guessing' — real backend calls",
+      "source": "https://opentabs.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "AI-generated plugins: point it at a site and it discovers APIs and scaffolds the plugin",
+      "source": "https://opentabs.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "A permission model, per-plugin scoping, or destructive-action confirmation",
+      "source": "https://opentabs.dev (not present on the captured surface)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Built entirely for agents: an MCP server over Streamable HTTP exposing ~2,000 tools, with a CLI to start it. The agent issues normal MCP tool calls and the extension executes them in a real browser tab.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-07T08:05:28.649Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Every web app is an API'",
+      "tested_at": "2026-08-07T08:05:28.649Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / npm install -g @opentabs-dev/cli",
+      "tested_at": "2026-08-07T08:05:28.649Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing on the captured surface",
+      "tested_at": "2026-08-07T08:05:28.649Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Mechanism explained step by step and plugin catalogue shown; no third-party review",
+      "tested_at": "2026-08-07T08:05:28.649Z"
+    }
+  ],
+  "summary": "~2,000 MCP tools built by reverse-engineering web apps' internal APIs and driving them through your logged-in session — technically impressive, and the terms-of-service exposure belongs to you, not them.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/opentabs-dev-opentabs.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-a61bc9480b979b61-opentabs-dev",
+    "base": "https://images.hlido.eu/reviews/opentabs-dev-opentabs/run-a61bc9480b979b61-opentabs-dev",
+    "files": [
+      "home.png",
+      "page__main-content.png",
+      "page_.png",
+      "page_docs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/opentabs-dev-opentabs/run-a61bc9480b979b61-opentabs-dev/home.png",
+      "https://images.hlido.eu/reviews/opentabs-dev-opentabs/run-a61bc9480b979b61-opentabs-dev/page__main-content.png",
+      "https://images.hlido.eu/reviews/opentabs-dev-opentabs/run-a61bc9480b979b61-opentabs-dev/page_.png",
+      "https://images.hlido.eu/reviews/opentabs-dev-opentabs/run-a61bc9480b979b61-opentabs-dev/page_docs.png"
+    ]
+  }
+}
