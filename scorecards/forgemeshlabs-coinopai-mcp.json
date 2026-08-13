@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "forgemeshlabs-coinopai-mcp",
+  "name": "Kronos (CoinOpAI)",
+  "agent_url": "https://x402.coinopai.com",
+  "category": "Specialized verticals",
+  "run_id": "run-forgemeshlabs-coinopai-mcp-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A pay-per-call market-context API for agents that repeatedly refuses to be a trading signal — the disclaimers are the most credible thing on the page.",
+    "body": "Kronos sells structured crypto-market context to agents over x402 on Base mainnet: a conformally-calibrated 80% price range, a risk/cooldown state, a decision journal that returns a decision_id, and an audit endpoint that later checks the outcome against real prices. The product's own framing does the heavy lifting on credibility. It says outright that Kronos is not a buy/sell oracle, repeats twice that directional values are supporting context rather than trade instructions, and organises the whole loop around verification — preflight, decision, audit — under the line \"trust the process less, verify the record more\". In a category built on implied certainty, an API whose central feature is a calibrated interval and an auditable record is a meaningfully better design. The agent-readiness is also concrete: per-endpoint pricing down to half a cent, a published OpenAPI document, and an llms.txt. The reservations are real. Calibration is asserted (\"~0.80 empirical coverage\") with no published backtest, sample size, or period; there is no named team, track record, or third-party validation; the operator bundles an unrelated image-generation endpoint and 819 automation prompts, which muddies the focus; and the underlying domain is one where confident-sounding numbers cause real financial loss even when hedged well. Reviewed from the public surface only — we did not pay for a call.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) for disciplined scoping and genuine agent-readiness: a calibrated range rather than a direction call, an explicit non-oracle disclaimer repeated where it matters, a verifiable preflight→decision→audit loop, per-endpoint pricing to the half-cent, plus OpenAPI and llms.txt. Held below VITAL because the calibration claim is published without any backtest, sample size or period, there is no named team or track record, and the surface mixes in unrelated image-generation and prompt-catalogue endpoints.",
+  "what_it_does_well": [
+    "Leads with a calibrated 80% interval and risk state rather than a directional buy/sell call",
+    "States plainly that it is not a buy/sell oracle, and repeats that directional values are not trade instructions",
+    "Auditable loop by design — preflight, decision journal with a decision_id, then outcome verification against later prices",
+    "Per-endpoint pricing published to the half-cent, so an agent can budget before calling",
+    "Machine-readable surface: OpenAPI document and llms.txt both published and linked",
+    "x402 pay-per-call on Base mainnet — no account, no subscription, agent-native payment"
+  ],
+  "what_it_fails_at": [
+    "The ~0.80 empirical coverage claim is published with no backtest, sample size, time period, or methodology",
+    "No named team, operating history, or third-party validation anywhere on the surface",
+    "Focus is diluted by unrelated bundled endpoints (AI image generation, 819 automation prompts, 115 platforms)",
+    "Crypto market forecasting is a domain where even well-hedged outputs can drive real financial loss",
+    "Data freshness is surfaced as a field but no uptime, latency or availability record is published",
+    "Not tested — we did not purchase a call, so the response quality behind the pricing table is unverified"
+  ],
+  "best_for": [
+    "Agent developers who want structured, auditable market context rather than a signal to act on",
+    "Systems that need a decision journal and later outcome verification for compliance or post-mortem",
+    "x402-native agents that must pay per call without an account relationship"
+  ],
+  "not_recommended_for": [
+    "Anyone seeking trading signals or investment advice — the vendor says this is not that, and neither do we",
+    "Buyers who need published calibration evidence before relying on an interval",
+    "Use cases requiring an availability guarantee or an identifiable, accountable operator"
+  ],
+  "red_flags": [
+    {
+      "severity": "low",
+      "note": "The calibration figure (~0.80 empirical coverage) is the product's central claim and is published with no supporting backtest, sample size or period. It is presented honestly as an empirical property rather than a guarantee, but a buyer cannot check it."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Conformally-calibrated 80% price range as the primary output",
+      "source": "https://x402.coinopai.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Explicit statement that Kronos is not a buy/sell oracle and directional values are not trade instructions",
+      "source": "https://x402.coinopai.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Verifiable loop: /api/kronos/preflight → /decision (decision_id) → /audit against later prices",
+      "source": "https://x402.coinopai.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Per-endpoint pricing from $0.005 to $0.25, paid via x402 on Base mainnet",
+      "source": "https://x402.coinopai.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "OpenAPI document and llms.txt published for machine consumption",
+      "source": "https://x402.coinopai.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "~0.80 empirical coverage of the calibrated range",
+      "source": "https://x402.coinopai.com (asserted; no backtest, sample size or period published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-native end to end: x402 pay-per-call means no account or key exchange, OpenAPI plus llms.txt make the surface machine-discoverable, and the decision/audit endpoints exist so an agent can journal and later verify its own reasoning.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T08:31:54.739Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Calibrated forecast ranges, risk context, and auditable decision records.'",
+      "tested_at": "2026-08-04T08:31:54.739Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "OpenAPI and llms.txt links plus copy-ready curl examples",
+      "tested_at": "2026-08-04T08:31:54.739Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Full per-endpoint price table, $0.005–$0.25 per call",
+      "tested_at": "2026-08-04T08:31:54.739Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Sample responses and a documented verification loop; no backtest or third-party validation",
+      "tested_at": "2026-08-04T08:31:54.739Z"
+    }
+  ],
+  "summary": "A pay-per-call market-context API for agents that repeatedly refuses to be a trading signal — the disclaimers are the most credible thing on the page.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/forgemeshlabs-coinopai-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-1a0dd38cc879b484-x402-coinopai-com",
+    "base": "https://images.hlido.eu/reviews/forgemeshlabs-coinopai-mcp/run-1a0dd38cc879b484-x402-coinopai-com",
+    "files": [
+      "home.png",
+      "page_openapi_json.png",
+      "page_llms_txt.png",
+      "page_api_categories.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/forgemeshlabs-coinopai-mcp/run-1a0dd38cc879b484-x402-coinopai-com/home.png",
+      "https://images.hlido.eu/reviews/forgemeshlabs-coinopai-mcp/run-1a0dd38cc879b484-x402-coinopai-com/page_openapi_json.png",
+      "https://images.hlido.eu/reviews/forgemeshlabs-coinopai-mcp/run-1a0dd38cc879b484-x402-coinopai-com/page_llms_txt.png",
+      "https://images.hlido.eu/reviews/forgemeshlabs-coinopai-mcp/run-1a0dd38cc879b484-x402-coinopai-com/page_api_categories.png"
+    ]
+  }
+}
