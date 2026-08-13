@@ -1,0 +1,164 @@
+{
+  "schema_version": "2.0",
+  "slug": "healthchainai-healthchain",
+  "name": "HealthChain",
+  "agent_url": "https://healthchainai.github.io/HealthChain/",
+  "category": "Specialized verticals",
+  "run_id": "run-healthchainai-healthchain-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 66,
+  "tier": "FADING",
+  "laddoo_score": 66,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Open-source FHIR tooling that serves typed, validated healthcare tools to agents over MCP — credible scope, but the captured surface is a docs landing page, not proof.",
+    "body": "HealthChain is aiming at a real and hard problem: agents operating on clinical data need tools that are typed and validated against FHIR, not free-form API calls, and the failure mode of getting that wrong is not a bad user experience but a bad clinical one. The framing — 'the open agentic stack for healthcare', with gateways, FHIR validation, agent tools and a sandbox as the named core concepts — is coherent and correctly ordered: validation first, connectivity second, deployment third. Serving those tools over both MCP and LangChain is the right distribution choice for 2026, and multi-EHR aggregation across Epic and Cerner is the use case that would actually justify the project's existence. The public signals are modest but real: version 0.16.0, 221 stars, 41 forks, an active Discord, a newsletter, and docs organised into getting-started, tutorials, cookbook and API reference. What we could read is a well-structured documentation home page and nothing more — no validation coverage claim, no conformance statement, no named deployment, no statement about PHI handling or what the sandbox does and does not isolate. For a healthcare-adjacent tool those absences are the review. The scope is worth taking seriously; the evidence on this surface does not yet let anyone take a position on whether the validation is correct, which is the entire product.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) because the project is open, actively documented and pointed at a genuinely valuable problem, but the captured public surface establishes no evidence about the thing that matters — the correctness and coverage of its FHIR validation. For clinical tooling, unverified validation is the central risk, and nothing public addresses conformance, PHI handling or a real deployment. Version 0.16.0 with 221 stars is early-stage traction, not adoption. It clears FLATLINE comfortably on openness and documentation structure; it cannot reach STEADY without published conformance or a named user.",
+  "what_it_does_well": [
+    "Correctly orders the problem: typed FHIR validation before agent connectivity",
+    "Serves tools over both MCP and LangChain rather than betting on one",
+    "Multi-EHR aggregation (Epic, Cerner) is the use case that justifies the project",
+    "Documentation is structured into getting-started, tutorials, cookbook and API reference",
+    "Open source with visible community surfaces (GitHub, Discord, newsletter)"
+  ],
+  "what_it_fails_at": [
+    "No FHIR conformance or validation-coverage claim anywhere on the captured surface",
+    "No statement about PHI handling, data residency, or what the sandbox isolates",
+    "No named deployment, pilot or case study — traction is 221 stars, not usage",
+    "Version 0.16.0: pre-1.0 for software whose failure mode is clinical",
+    "Landing page is a docs index; the substantive claims live behind links we did not capture"
+  ],
+  "best_for": [
+    "Engineering teams prototyping agentic workflows against FHIR data",
+    "Health-tech builders who need EHR connectivity without writing integrations per vendor",
+    "Research groups wanting an open, inspectable stack rather than a closed vendor SDK",
+    "Developers evaluating whether MCP is a viable transport for clinical tooling"
+  ],
+  "not_recommended_for": [
+    "Production clinical deployments requiring published conformance evidence",
+    "Organisations needing a documented PHI/compliance posture before evaluation",
+    "Teams wanting vendor support and SLAs rather than a Discord",
+    "Anyone treating validated FHIR access as a solved dependency rather than a thing to verify"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Serves typed, validated FHIR tools to agents over MCP or LangChain",
+      "source": "https://healthchainai.github.io/HealthChain/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Supports multi-EHR aggregation across Epic and Cerner",
+      "source": "https://healthchainai.github.io/HealthChain/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Version 0.16.0, 221 stars, 41 forks",
+      "source": "https://healthchainai.github.io/HealthChain/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Core concepts are Gateways, FHIR validation, Agent Tools and Sandbox",
+      "source": "https://healthchainai.github.io/HealthChain/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Exposes FHIR tools to agents over MCP or LangChain, with a Python package and an API reference. The design intent — that an agent consumes validated, typed tools rather than raw EHR endpoints — is the correct shape for this domain. Whether the validation layer is trustworthy is not establishable from the public surface.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The open agentic stack for healthcare'",
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open source; install documented",
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": true,
+      "evidence": "No conformance evidence, benchmark or named deployment on the captured surface",
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": true,
+      "required": false,
+      "evidence": "Docs, tutorials, cookbook and API reference in nav, no login",
+      "tested_at": "2026-08-10T04:31:30.917Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/healthchainai-healthchain.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No marking or provenance statement for AI-generated clinical output on the captured surface."
+  },
+  "evidence_images": {
+    "run_id": "run-29e63c3221373f49-healthchainai-github-io",
+    "base": "https://images.hlido.eu/reviews/healthchainai-healthchain/run-29e63c3221373f49-healthchainai-github-io",
+    "files": [
+      "home.png",
+      "pageinstallation_.png",
+      "pagetutorials_.png",
+      "pagecookbook_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/healthchainai-healthchain/run-29e63c3221373f49-healthchainai-github-io/home.png",
+      "https://images.hlido.eu/reviews/healthchainai-healthchain/run-29e63c3221373f49-healthchainai-github-io/pageinstallation_.png",
+      "https://images.hlido.eu/reviews/healthchainai-healthchain/run-29e63c3221373f49-healthchainai-github-io/pagetutorials_.png",
+      "https://images.hlido.eu/reviews/healthchainai-healthchain/run-29e63c3221373f49-healthchainai-github-io/pagecookbook_.png"
+    ]
+  },
+  "repo_url": "https://github.com/healthchainai/HealthChain"
+}
