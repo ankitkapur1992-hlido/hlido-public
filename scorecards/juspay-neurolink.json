@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "slug": "juspay-neurolink",
+  "name": "NeuroLink",
+  "agent_url": "https://neurolink.ink",
+  "category": "Infrastructure",
+  "run_id": "run-juspay-neurolink-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 60,
+  "tier": "FADING",
+  "laddoo_score": 60,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A broad multi-provider AI streaming layer from an established payments company — undercut by a homepage whose own headline metrics all read zero.",
+    "body": "NeuroLink positions itself as the signal layer for AI applications, connecting streams of tokens, data, tools and context through pluggable connectors, and the breadth is real on paper: 16+ token providers (Anthropic, OpenAI, Gemini, Bedrock, Mistral, Vertex, Azure, Ollama, LiteLLM, HuggingFace, SageMaker, OpenRouter, DeepSeek, NVIDIA NIM, LM Studio, llama.cpp), tool integrations spanning 58+ MCP servers, memory primitives (conversation, semantic recall, working memory, Redis, vector index, compaction), 50+ knowledge formats, voice in and out across nine engines, and reasoning constructs including workflows, multi-agent, HITL, checkpointing and evals. It is published on npm as `@juspay/neurolink`, and Juspay is a substantial established payments company — meaningful institutional backing that most projects in this cohort lack. But the homepage undermines its own case: the four headline statistics render as **\"0+ STREAM SOURCES, 0+ ACTIVE NEURONS, 0+ SYNAPSE TOOLS, 0+ KNOWLEDGE FORMATS\"**. Either these are unwired placeholders shipped to production, or a live counter that is genuinely reporting zero usage. Both readings are bad, and neither is something a serious infrastructure page should show a prospective adopter. Combined with heavy metaphor (neurons, synapses, receptors, organs) standing in for concrete architectural explanation, and no named production deployments, case studies or benchmarks, the surface asks for a lot of trust while showing little. The corporate backing is the main reason this is not lower. Reviewed from the public surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (60) despite genuine breadth and real institutional backing (Juspay, published on npm), because the public surface actively works against it: all four headline metrics render as '0+', which is either placeholder markup shipped to production or a live counter reporting no usage. Heavy biological metaphor substitutes for architectural explanation, and there are no named deployments, case studies or benchmarks anywhere.",
+  "what_it_does_well": [
+    "Genuine provider breadth — 16+ model providers including local runtimes (Ollama, LM Studio, llama.cpp)",
+    "Spans tokens, tools, memory, knowledge, voice and reasoning in one layer rather than one slice",
+    "Backed by Juspay, an established payments company — real institutional weight for this cohort",
+    "Published and installable on npm as @juspay/neurolink",
+    "Explicit support for HITL, checkpointing and evals — production concerns, not just demo features",
+    "58+ MCP servers and 50+ knowledge formats claimed"
+  ],
+  "what_it_fails_at": [
+    "All four homepage headline metrics render as '0+' — placeholder markup in production, or genuinely zero usage",
+    "Dense biological metaphor (neurons, synapses, receptors, organs) replaces concrete architectural explanation",
+    "No named production deployments, case studies, or customer references",
+    "No benchmarks for latency, throughput or overhead in a layer whose value is streaming performance",
+    "Breadth across six domains invites shallow depth in each; nothing on the surface disambiguates",
+    "Not exercised by us — connector quality and stream reliability are untested"
+  ],
+  "best_for": [
+    "Teams wanting one abstraction across many model providers including local runtimes",
+    "Applications needing token, tool, memory and voice streams in a single layer",
+    "Existing Juspay customers who can rely on the commercial relationship"
+  ],
+  "not_recommended_for": [
+    "Buyers who need evidence of production use before adopting a core streaming dependency",
+    "Latency-sensitive systems, with no published performance figures",
+    "Teams needing depth in one domain rather than breadth across six"
+  ],
+  "red_flags": [
+    {
+      "severity": "low",
+      "note": "Every headline statistic on the homepage displays as '0+' (stream sources, active neurons, synapse tools, knowledge formats). Whether these are unwired placeholders or a live counter reporting zero, an infrastructure product's own landing page showing zeros is a signal a prospective adopter should weigh."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Signal layer connecting token, data, tool and context streams via pluggable connectors",
+      "source": "https://neurolink.ink",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "16+ model providers including Anthropic, OpenAI, Gemini, Bedrock and local runtimes",
+      "source": "https://neurolink.ink",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Published on npm as @juspay/neurolink",
+      "source": "https://neurolink.ink",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Homepage headline metrics all display as '0+'",
+      "source": "https://neurolink.ink",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Named production deployments, case studies or benchmarks",
+      "source": "https://neurolink.ink (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "An SDK and CLI plus MCP tool integration across 58+ servers; the layer is designed to be embedded in an agent application rather than used directly by a person.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:31:48.864Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The Nervous System for AI Streams.'",
+      "tested_at": "2026-08-05T16:31:48.864Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / npm install @juspay/neurolink",
+      "tested_at": "2026-08-05T16:31:48.864Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing on the captured surface",
+      "tested_at": "2026-08-05T16:31:48.864Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Headline metrics render as 0+; no case studies or benchmarks",
+      "tested_at": "2026-08-05T16:31:48.864Z"
+    }
+  ],
+  "summary": "A broad multi-provider AI streaming layer from an established payments company — undercut by a homepage whose own headline metrics all read zero.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/juspay-neurolink.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-2f7c5e196c919d99-neurolink-ink",
+    "base": "https://images.hlido.eu/reviews/juspay-neurolink/run-2f7c5e196c919d99-neurolink-ink",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/juspay-neurolink/run-2f7c5e196c919d99-neurolink-ink/home.png"
+    ]
+  }
+}
