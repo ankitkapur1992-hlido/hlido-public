@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "slug": "1mcp-app-agent",
+  "name": "1MCP Agent",
+  "agent_url": "https://docs.1mcp.app",
+  "category": "Infrastructure",
+  "run_id": "run-1mcp-app-agent-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A well-argued fix for MCP context sprawl — progressive tool discovery so agents stop carrying the whole tool catalogue in context. Still beta, and honest about it.",
+    "body": "1MCP Agent aggregates MCP servers behind a single runtime (`1mcp serve`) and then does the more interesting thing: instead of injecting every tool schema into an agent's context, it offers a CLI mode where the agent starts with `instructions`, narrows with `inspect`, and only runs the tool it actually needs. The problem statement is stated crisply and is real — configuration sprawl across clients, and context sprawl inside long-running agent loops — and progressive discovery is a genuine architectural answer rather than a repackaging. The documentation is the strong point: a five-minute setup path with copy-pasteable commands, explicit guidance on which path to choose (CLI mode, proxy, or direct streamable HTTP) and why, and per-client setup for Codex, Claude and Cursor. Presets, filters, template-backed servers, and async/lazy loading round it out. The main caution is maturity: the captured version is v0.35.0-beta.3, a pre-1.0 beta, and the surface offers no adoption numbers, named users, or third-party validation. Nothing here is overclaimed — the docs are careful about what each path is for — but a runtime that sits between every agent and every tool is exactly the component where beta status matters.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a real, well-diagnosed problem (MCP config and context sprawl), a genuine architectural answer (progressive discovery: instructions → inspect → run), and documentation good enough to get a working setup in five minutes with explicit path guidance. Held well below VITAL because the captured release is v0.35.0-beta.3 — pre-1.0 — with no adoption evidence or third-party validation, and this is precisely the kind of always-in-the-path component where beta maturity carries weight.",
+  "what_it_does_well": [
+    "Diagnoses two distinct real problems — client configuration sprawl and agent context sprawl — and addresses both",
+    "Progressive discovery (instructions → inspect → run) genuinely reduces what an agent must hold in context",
+    "Documentation gives an explicit five-minute path with runnable commands and per-client setup (Codex, Claude, Cursor)",
+    "Clear guidance on choosing between CLI mode, proxy, and direct streamable HTTP, with the trade-off stated for each",
+    "Presets and filters let server sets be reused across projects and clients without duplicating config",
+    "Async and lazy loading — starts faster and exposes less until something actually needs it"
+  ],
+  "what_it_fails_at": [
+    "Captured release is v0.35.0-beta.3 — pre-1.0 beta, in a component that sits in the path of every tool call",
+    "No adoption numbers, named users, or third-party validation on the public surface",
+    "No stated reliability, performance, or overhead figures for the aggregation layer",
+    "Adds an operational dependency: if the runtime is down, every aggregated server is unreachable",
+    "Not tested hands-on — the context-reduction claim is the one that most needs measuring"
+  ],
+  "best_for": [
+    "Developers running several MCP servers across multiple AI clients who are tired of duplicating configuration",
+    "Long-running agent loops where injected tool schemas are consuming meaningful context",
+    "Teams wanting one place to manage server sets, presets and filters"
+  ],
+  "not_recommended_for": [
+    "Production deployments that require a stable 1.0 with a support commitment",
+    "Setups with a single MCP server, where the aggregation layer adds cost and no benefit",
+    "Anyone who cannot accept a new single point of failure between agents and tools"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Unified MCP runtime via `1mcp serve` aggregating static and template-backed servers",
+      "source": "https://docs.1mcp.app",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Progressive CLI discovery: instructions → inspect → run",
+      "source": "https://docs.1mcp.app",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Published as @1mcp/agent on npm with a five-minute setup path",
+      "source": "https://docs.1mcp.app",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Captured version v0.35.0-beta.3 — pre-1.0",
+      "source": "https://docs.1mcp.app",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Adoption, reliability or overhead figures",
+      "source": "https://docs.1mcp.app (none published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Built entirely for agent consumption: `1mcp serve` is the runtime, CLI mode is the agent-facing workflow, and proxy plus direct streamable HTTP cover MCP-native clients. Agents are the only intended user.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T08:32:37.519Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'One runtime for MCP, one thinner workflow for agents'",
+      "tested_at": "2026-08-04T08:32:37.519Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'5-Minute Setup' with npm install -g @1mcp/agent",
+      "tested_at": "2026-08-04T08:32:37.519Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open npm package; no pricing surface (appears free/open)",
+      "tested_at": "2026-08-04T08:32:37.519Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Documentation and command examples only — no benchmarks or adoption evidence",
+      "tested_at": "2026-08-04T08:32:37.519Z"
+    }
+  ],
+  "summary": "A well-argued fix for MCP context sprawl — progressive tool discovery so agents stop carrying the whole tool catalogue in context. Still beta, and honest about it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/1mcp-app-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-c0812a1fdddd54b1-docs-1mcp-app",
+    "base": "https://images.hlido.eu/reviews/1mcp-app-agent/run-c0812a1fdddd54b1-docs-1mcp-app",
+    "files": [
+      "home.png",
+      "page__VPContent.png",
+      "page_.png",
+      "page_guide_getting-started.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/1mcp-app-agent/run-c0812a1fdddd54b1-docs-1mcp-app/home.png",
+      "https://images.hlido.eu/reviews/1mcp-app-agent/run-c0812a1fdddd54b1-docs-1mcp-app/page__VPContent.png",
+      "https://images.hlido.eu/reviews/1mcp-app-agent/run-c0812a1fdddd54b1-docs-1mcp-app/page_.png",
+      "https://images.hlido.eu/reviews/1mcp-app-agent/run-c0812a1fdddd54b1-docs-1mcp-app/page_guide_getting-started.png"
+    ]
+  }
+}
