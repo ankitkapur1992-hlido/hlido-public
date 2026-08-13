@@ -1,0 +1,186 @@
+{
+  "schema_version": "2.0",
+  "slug": "kentucky-ai-opentakeoff",
+  "name": "OpenTakeoff",
+  "agent_url": "https://opentakeoff.netlify.app",
+  "category": "Specialized verticals",
+  "run_id": "run-5ab1555bb2361361-opentakeoff-netlify-app",
+  "run_at": "2026-08-09T04:32:07.537Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Browser-local construction takeoff that records how every measurement was made — by a person, by one click, or by an agent — which is the right provenance model for a document that ends up in a bid.",
+    "body": "OpenTakeoff is an Apache-2.0 quantity-takeoff tool that runs entirely in the browser: drag in a PDF, an image or a whole zip plan set, set or auto-detect the scale, and trace areas, cut-outs and markups against named conditions. Two decisions stand out on the captured surface. First, 'nothing leaves your browser' — for contractors, plan sets are commercially sensitive and often under NDA, so a local-only tool removes a real adoption blocker rather than a theoretical one. Second, and more interesting for an agent register: the app states that every measurement keeps its scale and how it was made — a person, one click, or an agent — over one shared engine. That is provenance at the measurement level, and it is exactly what a takeoff needs, because a quantity that feeds a bid has to be auditable regardless of who or what produced it. Most tools bolting on AI assistance treat human and machine output as interchangeable; recording the difference is the more honest design. The surface is the running application rather than a marketing page, so what Hlido could verify is the UI itself: conditions, waste percentages, fill styles, scale setting, voice command, zone and snap aids, and a sample medical-centre floor-finish plan for first use. What is not visible anywhere is the agent interface it advertises — no MCP endpoint, API documentation or integration guide was reachable — along with no accuracy evidence, no version and no adoption. The agent claim is therefore stated but unverified.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for solving a real trade problem with a genuine constraint respected (plan sets never leave the browser), Apache-2.0 licensing, and an unusually sound provenance model that records whether each measurement came from a person, a click or an agent. Held below VITAL because the agent-facing path it advertises is not documented anywhere reachable — 'point an AI agent at the same engine' is a claim with no visible interface behind it — and because there is no accuracy evidence, version or adoption on the surface.",
+  "what_it_does_well": [
+    "Runs entirely in the browser — plan sets never leave the machine, which is a genuine constraint in construction bidding",
+    "Records how each measurement was made (person, one click, or agent) alongside its scale — measurement-level provenance",
+    "One engine shared by humans and agents rather than a separate AI mode",
+    "Apache-2.0 open source",
+    "Practical takeoff features: conditions with waste percentages, area and cut-out tools, fill styles, markup, zone and snap aids, scale auto-detect",
+    "Multi-sheet plan sets with user-controlled ordering; accepts PDF, image or a zip set",
+    "Sample medical-centre floor-finish plan lets a new user complete a takeoff without supplying their own drawings"
+  ],
+  "what_it_fails_at": [
+    "The advertised agent path has no documented interface — no MCP endpoint, API reference or integration guide was reachable",
+    "No accuracy or validation evidence for measurements",
+    "No version, changelog or adoption evidence",
+    "Browser-local by design means no collaboration, server-side storage or team workflow",
+    "Not tested hands-on by Hlido against a known-quantity plan"
+  ],
+  "best_for": [
+    "Estimators and small contractors who need takeoff without sending client plan sets to a vendor",
+    "Anyone wanting an open-source alternative to per-seat commercial takeoff software",
+    "Teams that need to know whether a quantity was measured by a person or produced automatically"
+  ],
+  "not_recommended_for": [
+    "Agent-driven workflows today — the integration path is advertised but not documented",
+    "Multi-user collaboration or centralised project storage",
+    "Work requiring validated measurement accuracy or a vendor support commitment"
+  ],
+  "red_flags": [
+    "'Point an AI agent at the same engine' is presented as a core capability, but no MCP endpoint, API documentation or integration guide is reachable from the captured surface."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Browser-local takeoff — 'Nothing leaves your browser'; accepts PDF, image or zip plan sets",
+      "source": "https://opentakeoff.netlify.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Every measurement keeps its scale and how it was made — a person, one click, or an agent",
+      "source": "https://opentakeoff.netlify.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Apache-2.0 open source, by Kentucky AI",
+      "source": "https://opentakeoff.netlify.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Conditions with waste percentages, area and cut-out tools, markup, zone and snap aids, scale set or auto-detect",
+      "source": "https://opentakeoff.netlify.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Sample medical-centre floor-finish plan provided for first use",
+      "source": "https://opentakeoff.netlify.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "A documented agent interface (MCP endpoint, API reference or integration guide)",
+      "source": "https://opentakeoff.netlify.app (not reachable)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Measurement accuracy evidence, version or adoption",
+      "source": "https://opentakeoff.netlify.app (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The application advertises that an AI agent can be pointed at the same measurement engine as a human, and it records agent-produced measurements distinctly — but no MCP endpoint, API reference or integration guide is reachable from the public surface, so the path cannot be confirmed or used today.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'free, AI-native takeoff for construction' — measure a plan by hand or point an agent at the same engine",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open your plans' drop zone plus 'Load sample plan'",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Apache-2.0 open source, free, no account",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": false,
+      "required": true,
+      "evidence": "In-app hints only; no reachable documentation site",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "agent_interface_documented",
+      "pass": false,
+      "required": false,
+      "evidence": "Agent capability advertised but no MCP/API interface reachable",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No accuracy evidence, version or adoption",
+      "tested_at": "2026-08-09T04:32:07.537Z"
+    }
+  ],
+  "summary": "Browser-local construction takeoff that records how every measurement was made — by a person, by one click, or by an agent — which is the right provenance model for a document that ends up in a bid.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/kentucky-ai-opentakeoff.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Measurement tool rather than a media generator. It does record whether a measurement was produced by a person or an agent, which is provenance of a different and narrower kind than Art-50(4) marking."
+  },
+  "evidence_images": {
+    "run_id": "run-5ab1555bb2361361-opentakeoff-netlify-app",
+    "base": "https://images.hlido.eu/reviews/kentucky-ai-opentakeoff/run-5ab1555bb2361361-opentakeoff-netlify-app",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/kentucky-ai-opentakeoff/run-5ab1555bb2361361-opentakeoff-netlify-app/home.png"
+    ]
+  }
+}
