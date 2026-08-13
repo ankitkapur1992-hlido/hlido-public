@@ -1,0 +1,167 @@
+{
+  "schema_version": "2.0",
+  "slug": "mcpqueen-mcpqueen",
+  "name": "MCP Queen",
+  "agent_url": "https://mcpqueen.com",
+  "category": "Frameworks & Eval",
+  "run_id": "run-mcpqueen-mcpqueen-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An MCP discovery and evidence layer with real corpus scale and — rarest of all in this category — an explicit statement of what its grades do NOT mean.",
+    "body": "MCP Queen indexes the MCP server ecosystem and attaches dated operational evidence to what it finds: 18,849 servers indexed, 9,326 graded live, plus separate Trust Receipts, field reports, and a published State of the MCP Ecosystem report whose lead finding (1 in 6 remote servers is dead) is the kind of unflattering number that suggests the measurement is real rather than promotional. The scoping discipline is what stands out. The site states plainly that \"an operational grade is not a security certification\", separates discovery from evidence from receipts rather than collapsing them into one number, and frames itself as \"an experiment by Health AI\" instead of overclaiming institutional authority. That is the correct posture for a rating layer, and we say so as a party with an obvious interest in the same discipline. What is missing is the layer beneath the claim: the grading methodology is not visible on the surface we captured, so a reader cannot yet tell what a grade measures or how it could be gamed; there is no independent validation of the index; and the self-description as an experiment leaves continuity genuinely uncertain for anyone who would depend on it. STEADY on scope, honesty and corpus size — with the caveat that a grading system is only as good as the method it will not show you.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) for corpus scale (18,849 indexed / 9,326 graded), a published ecosystem report with a falsifiable headline finding, and unusually disciplined scoping — it states outright that an operational grade is not a security certification and keeps discovery, evidence and receipts as separate layers. Held below VITAL because the grading methodology is not exposed on the public surface, there is no third-party validation of the index, and the project describes itself as an experiment, which makes continuity uncertain.",
+  "what_it_does_well": [
+    "Real corpus scale — 18,849 servers indexed, 9,326 graded live",
+    "States explicitly that an operational grade is not a security certification, rather than letting readers over-read it",
+    "Keeps discovery, dated operational evidence and Trust Receipts as separate layers instead of one composite number",
+    "Publishes an ecosystem report with an unflattering, falsifiable headline (1 in 6 remote servers is dead)",
+    "Use-case comparison entry points (databases, web search, health research, finance, dev tools) suit real buyer questions",
+    "An explicit 'For Agents' surface — the index is meant to be machine-consumed"
+  ],
+  "what_it_fails_at": [
+    "Grading methodology is not visible on the public surface — a reader cannot tell what a grade measures or how it might be gamed",
+    "No third-party validation of the index or the grades",
+    "Self-described as 'an experiment by Health AI', which leaves continuity uncertain for anyone depending on it",
+    "Evidence freshness and re-grading cadence are not stated on the surface we captured",
+    "The playful court/queen framing sits awkwardly against the seriousness of grading other people's infrastructure"
+  ],
+  "best_for": [
+    "Teams choosing among MCP servers who want operational evidence rather than a README's self-description",
+    "Agent builders who need a machine-readable index of what MCP servers exist and which are alive",
+    "Anyone auditing MCP ecosystem health at population scale"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a security certification — the site correctly says this is not one",
+    "Procurement processes that require a published, auditable grading methodology",
+    "Anyone needing a contractual guarantee of continuity from a self-declared experiment"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "glama-ai-glama",
+      "note": "Both attach quality signals to MCP servers at population scale; MCP Queen leads with dated operational evidence and liveness, Glama with hosting plus a tool-definition quality score."
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "18,849 MCP servers indexed, 9,326 graded live",
+      "source": "https://mcpqueen.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "An operational grade is explicitly not a security certification",
+      "source": "https://mcpqueen.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "State of the MCP Ecosystem (July 2026): 1 in 6 remote servers is dead",
+      "source": "https://mcpqueen.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Separate Trust Receipts and dated field reports alongside the registry",
+      "source": "https://mcpqueen.com",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Grading methodology and re-grading cadence",
+      "source": "https://mcpqueen.com (not published on the captured surface)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Ships an API and a dedicated 'For Agents' surface, and the whole product is an index built to be queried programmatically. An agent choosing which MCP server to connect to is the explicit primary consumer.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T08:33:46.198Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Find MCP Servers. Inspect the Evidence.'",
+      "tested_at": "2026-08-04T08:33:46.198Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Search an MCP'",
+      "tested_at": "2026-08-04T08:33:46.198Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or access terms on the captured surface",
+      "tested_at": "2026-08-04T08:33:46.198Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live counts, an example trust report, field reports, and a published ecosystem report",
+      "tested_at": "2026-08-04T08:33:46.198Z"
+    }
+  ],
+  "summary": "An MCP discovery and evidence layer with real corpus scale and — rarest of all in this category — an explicit statement of what its grades do NOT mean.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/mcpqueen-mcpqueen.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-2a9d41c14257734e-mcpqueen-com",
+    "base": "https://images.hlido.eu/reviews/mcpqueen-mcpqueen/run-2a9d41c14257734e-mcpqueen-com",
+    "files": [
+      "home.png",
+      "page_registry.png",
+      "page_mcp-security-evidence.png",
+      "page_field-reports.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/mcpqueen-mcpqueen/run-2a9d41c14257734e-mcpqueen-com/home.png",
+      "https://images.hlido.eu/reviews/mcpqueen-mcpqueen/run-2a9d41c14257734e-mcpqueen-com/page_registry.png",
+      "https://images.hlido.eu/reviews/mcpqueen-mcpqueen/run-2a9d41c14257734e-mcpqueen-com/page_mcp-security-evidence.png",
+      "https://images.hlido.eu/reviews/mcpqueen-mcpqueen/run-2a9d41c14257734e-mcpqueen-com/page_field-reports.png"
+    ]
+  }
+}
