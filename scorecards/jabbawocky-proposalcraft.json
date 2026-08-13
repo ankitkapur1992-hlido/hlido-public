@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "jabbawocky-proposalcraft",
+  "name": "ProposalCraft",
+  "agent_url": "https://jabbawocky.github.io/proposalcraft/",
+  "category": "Productivity",
+  "run_id": "run-jabbawocky-proposalcraft-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An MCP server that drafts client proposals in your own voice, learned from ones that already won — tightly scoped, local-only, and honest that it is a launch-day project.",
+    "body": "ProposalCraft is an MCP server for freelancers and agencies: paste a client brief into Claude and it drafts a send-ready proposal — structured, scoped and priced — in the voice learned from proposals that previously won you work. The scoping is its strength. It does one job, states its constraints plainly on the surface (29 tools, freemium with a free-forever tier, no API key required, works with Claude Desktop and any MCP client, TypeScript, MIT licence, local storage so your data stays yours), and demonstrates the value with a concrete worked example rather than an abstract claim: a real-shaped client email about a Shopify redesign in, a proposal with discovery/design/build phases, deliverables, an investment table and next steps out. Local-only storage is the right default for commercially sensitive material like past proposals and pricing, and MIT plus no-API-key removes the usual adoption friction. Against that: the page carries a \"launching on Product Hunt today\" banner, so this is day-one software with no track record; there are no customers, usage figures or third-party validation; and the core claim — that it learns and reproduces *your* voice — is precisely the thing that cannot be assessed without feeding it real winning proposals, which we did not do. Output quality on a first-party demo example is weak evidence for a personalisation claim.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68) — well-scoped, sensibly defaulted (local storage, MIT, no API key) and demonstrated with a concrete worked example rather than an abstraction. Held at FADING because it is launch-day software with no track record, no users and no third-party validation, and its central claim — reproducing your winning voice — is unverifiable from a vendor-authored demo.",
+  "what_it_does_well": [
+    "Tightly scoped to one job — brief in, send-ready proposal out — with no feature sprawl",
+    "Local storage by default: past proposals and pricing never leave the machine",
+    "No API key required, MIT licensed, free-forever tier — minimal adoption friction",
+    "Concrete worked example (real-shaped brief → structured proposal with phases, deliverables, investment table)",
+    "29 MCP tools; works with Claude Desktop and any MCP client",
+    "States its constraints openly on the landing page rather than burying them"
+  ],
+  "what_it_fails_at": [
+    "Launch-day project (Product Hunt banner live) — no track record whatsoever",
+    "No customers, usage figures, or third-party validation",
+    "The core personalisation claim is unverifiable from a vendor-authored demo",
+    "Proposal quality depends entirely on the corpus of past proposals a user supplies — unaddressed on the surface",
+    "Freemium boundary is not specified: what the free-forever tier excludes is unclear",
+    "Not tested by us with real winning proposals, which is the only meaningful test"
+  ],
+  "best_for": [
+    "Freelancers and small agencies who write similar proposals repeatedly",
+    "Claude Desktop users who want drafting inside their existing workflow",
+    "Anyone unwilling to upload commercially sensitive pricing to a cloud service"
+  ],
+  "not_recommended_for": [
+    "Teams needing collaborative review, approvals or version control on proposals",
+    "Buyers who require a track record before trusting client-facing output",
+    "Users without a body of past proposals for it to learn from"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server drafting proposals from a client brief, in the user's learned voice",
+      "source": "https://jabbawocky.github.io/proposalcraft/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "29 tools, TypeScript, MIT licence, no API key required",
+      "source": "https://jabbawocky.github.io/proposalcraft/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Local storage — user data stays on the machine",
+      "source": "https://jabbawocky.github.io/proposalcraft/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Freemium with a free-forever tier",
+      "source": "https://jabbawocky.github.io/proposalcraft/ (boundary unspecified)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    },
+    {
+      "claim": "Launching on Product Hunt on the day of review — no track record",
+      "source": "https://jabbawocky.github.io/proposalcraft/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP-native: 29 tools invoked from Claude Desktop or any MCP client, with no separate UI. The agent does the drafting inside the user's existing assistant.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T12:31:26.620Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Win more clients. Write fewer proposals.'",
+      "tested_at": "2026-08-05T12:31:26.620Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install free' / 'Get started free'",
+      "tested_at": "2026-08-05T12:31:26.620Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Freemium, free-forever tier; boundary not specified",
+      "tested_at": "2026-08-05T12:31:26.620Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Detailed worked example; vendor-authored, no third-party proof",
+      "tested_at": "2026-08-05T12:31:26.620Z"
+    }
+  ],
+  "summary": "An MCP server that drafts client proposals in your own voice, learned from ones that already won — tightly scoped, local-only, and honest that it is a launch-day project.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/jabbawocky-proposalcraft.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-7e6f326984f7b17c-jabbawocky-github-io",
+    "base": "https://images.hlido.eu/reviews/jabbawocky-proposalcraft/run-7e6f326984f7b17c-jabbawocky-github-io",
+    "files": [
+      "home.png",
+      "pageguide_html.png",
+      "page_install.png",
+      "page_install.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/jabbawocky-proposalcraft/run-7e6f326984f7b17c-jabbawocky-github-io/home.png",
+      "https://images.hlido.eu/reviews/jabbawocky-proposalcraft/run-7e6f326984f7b17c-jabbawocky-github-io/pageguide_html.png",
+      "https://images.hlido.eu/reviews/jabbawocky-proposalcraft/run-7e6f326984f7b17c-jabbawocky-github-io/page_install.png",
+      "https://images.hlido.eu/reviews/jabbawocky-proposalcraft/run-7e6f326984f7b17c-jabbawocky-github-io/page_install.png"
+    ]
+  }
+}
