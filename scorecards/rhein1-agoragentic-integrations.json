@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "rhein1-agoragentic-integrations",
+  "name": "Agoragentic Integrations",
+  "agent_url": "https://agoragentic.com/integrations/",
+  "category": "Infrastructure",
+  "run_id": "run-rhein1-agoragentic-integrations-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A 97-surface integration catalogue for a governed agent router, notable mostly for refusing to let its own status labels be misread as live availability.",
+    "body": "Agoragentic positions itself as a governed routing, commerce and receipt layer: keep your model loop and local tools in whatever framework you already use, send external work through `execute()`, and carry invocation, policy, cost and settlement evidence back as a receipt. This catalogue is the integration surface — 97 manifest-backed entries, 34 first-class site guides, 63 repo adapters and references, with a stated catalog source date of 2026-07-23 and newly indexed entries for Claude Code, Gemini CLI, Cursor and Cline. The distribution shape is sensible (npm, PyPI, an MCP relay, and a local harness for no-spend policy and readiness runs), and the three-step buyer flow — match, execute, prove — is coherent. The standout is a disclaimer most catalogues would omit: \"Statuses describe the public integration artifact, not live paid-route availability\", and experimental entries stay guides or references unless their repository evidence says otherwise. That is precise, self-limiting language, and it is the main reason to take the counts seriously. Against that: the counts are self-reported and we verified none of them; a catalogue of adapters is not evidence that routing, commerce or settlement work in production; there are no named customers or transaction volumes; and the governance and policy claims — the actual product — sit behind this surface where we could not see them. Dating the catalogue is good practice and also a liability, since a stale date is now visible to everyone.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68) — the surface is careful and well-organised, and the explicit warning that statuses describe artifacts rather than live paid-route availability is unusually honest. But this is a catalogue of integration artifacts, not evidence of a working routing, commerce and settlement layer: all counts are self-reported and unverified, there are no named customers or volumes, and the governed-router product itself sits behind the page we captured.",
+  "what_it_does_well": [
+    "Explicitly warns that statuses describe the public integration artifact, not live paid-route availability",
+    "Experimental entries stay guides or references unless repository evidence supports more",
+    "Catalogue carries a visible source date (2026-07-23) so readers can judge freshness",
+    "Coherent three-step buyer flow — match (preview), execute (route), prove (receipt)",
+    "Sensible distribution: npm and PyPI SDKs, an MCP relay, and a local harness for no-spend policy and readiness runs",
+    "Does not require moving your model loop, memory runtime or local tools into a hosted control plane"
+  ],
+  "what_it_fails_at": [
+    "All headline counts (97 surfaces, 34 guides, 63 adapters) are self-reported and unverified by Hlido",
+    "An integration catalogue is not evidence that routing, commerce or settlement work in production",
+    "No named customers, transaction volumes, or third-party validation",
+    "The governed router — the actual product — is not visible on this surface, so it could not be assessed",
+    "A dated catalogue becomes visibly stale if it is not maintained; nothing states the refresh cadence",
+    "No pricing on the captured surface despite commerce being central to the pitch"
+  ],
+  "best_for": [
+    "Teams already running an agent framework who want external work routed through one governed rail",
+    "Buyers who need invocation, policy, cost and settlement evidence carried back as receipts",
+    "Developers checking whether their specific runtime already has an adapter"
+  ],
+  "not_recommended_for": [
+    "Anyone treating the catalogue's status labels as proof a paid route is live — the vendor says it is not",
+    "Procurement needing verified transaction volumes or reference customers",
+    "Teams wanting a complete agent platform rather than a routing and settlement layer"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "97 manifest-backed surfaces, 34 first-class site guides, 63 repo adapters and references",
+      "source": "https://agoragentic.com/integrations/ (self-reported)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    },
+    {
+      "claim": "Statuses describe the public integration artifact, not live paid-route availability",
+      "source": "https://agoragentic.com/integrations/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Catalog source date of 2026-07-23 published on the page",
+      "source": "https://agoragentic.com/integrations/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Distribution via npm (agoragentic), PyPI (agoragentic), MCP relay, and a local harness",
+      "source": "https://agoragentic.com/integrations/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Named customers, transaction volumes, or pricing",
+      "source": "https://agoragentic.com/integrations/ (none published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Node and Python SDKs plus an MCP relay (`npx agoragentic-mcp`) and a POST /api/execute rail; the whole design assumes an agent framework calls it rather than a human using a dashboard.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T20:32:30.900Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Agent integrations for one governed Router'",
+      "tested_at": "2026-08-04T20:32:30.900Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Browse catalog' / 'SDK quickstart'",
+      "tested_at": "2026-08-04T20:32:30.900Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing on the captured surface despite commerce being central",
+      "tested_at": "2026-08-04T20:32:30.900Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Self-reported counts with a dated catalogue; no independent validation",
+      "tested_at": "2026-08-04T20:32:30.900Z"
+    }
+  ],
+  "summary": "A 97-surface integration catalogue for a governed agent router, notable mostly for refusing to let its own status labels be misread as live availability.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/rhein1-agoragentic-integrations.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-4c4379b6389e9cef-agoragentic-com",
+    "base": "https://images.hlido.eu/reviews/rhein1-agoragentic-integrations/run-4c4379b6389e9cef-agoragentic-com",
+    "files": [
+      "home.png",
+      "page_main-content.png",
+      "page_catalog.png",
+      "pageagno_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/rhein1-agoragentic-integrations/run-4c4379b6389e9cef-agoragentic-com/home.png",
+      "https://images.hlido.eu/reviews/rhein1-agoragentic-integrations/run-4c4379b6389e9cef-agoragentic-com/page_main-content.png",
+      "https://images.hlido.eu/reviews/rhein1-agoragentic-integrations/run-4c4379b6389e9cef-agoragentic-com/page_catalog.png",
+      "https://images.hlido.eu/reviews/rhein1-agoragentic-integrations/run-4c4379b6389e9cef-agoragentic-com/pageagno_.png"
+    ]
+  }
+}
