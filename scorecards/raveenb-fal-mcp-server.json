@@ -1,0 +1,193 @@
+{
+  "schema_version": "2.0",
+  "slug": "raveenb-fal-mcp-server",
+  "name": "Fal MCP Server",
+  "agent_url": "https://luminarylane.github.io/fal-mcp-server/",
+  "category": "Image & Design",
+  "run_id": "run-4d048d7ae3e54ab8-luminarylane-github-io",
+  "run_at": "2026-08-09T08:07:44.583Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 62,
+  "tier": "FADING",
+  "laddoo_score": 62,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A competent MCP wrapper putting fal.ai's image, video and audio models in front of Claude — but it generates synthetic media and says nothing at all about labelling it.",
+    "body": "Fal MCP Server is a thin, well-packaged bridge: it exposes fal.ai's generation models — FLUX Schnell/Dev/Pro, SDXL, SD3 for images; Stable Video Diffusion, AnimateDiff and Kling for video; MusicGen, Bark and Whisper for audio — as MCP tools an agent can call. The packaging is the strong part. There is a pip install, an official Docker image on GitHub Container Registry running as non-root, both STDIO and HTTP/SSE transports, async operation with queue management and progress tracking, and a stated CI/CD pipeline with type-safe Python. A supported-models table sets out capabilities per category rather than gesturing at 'state of the art'. Where it thins out is everything a user needs in order to judge it. There is no version, no changelog, no test results despite 'comprehensive tests' being claimed as a feature, no adoption evidence and no independent review; 'Production Ready' is asserted as a bullet rather than demonstrated. The more consequential gap for an EU audience is provenance. This is squarely a synthetic-media generator, and the captured surface carries no statement about C2PA or IPTC metadata, watermarking, content credentials, or any detection path for output produced through it. fal.ai's own model behaviour may differ, but a tool that hands generated images, video and audio to an autonomous agent is exactly where marking should be addressed, and it is not mentioned once.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (62) — the integration itself is competent and well-packaged (pip, non-root Docker, STDIO and HTTP/SSE, async queueing, a clear model table), but almost nothing on the surface lets a user verify quality: no version, no changelog, no test evidence behind the 'comprehensive tests' claim, and 'Production Ready' asserted rather than shown. Held further down because it generates synthetic images, video and audio for an autonomous agent while saying nothing about marking, provenance metadata or detection — a material omission for this category rather than a missing nicety.",
+  "what_it_does_well": [
+    "Clear supported-models table with capabilities per category rather than vague 'state of the art' claims",
+    "Covers image, video and audio generation in one MCP surface",
+    "Multiple deployment paths — pip install, official GHCR Docker image, STDIO and HTTP/SSE transports",
+    "Docker image documented as running non-root",
+    "Async operation with queue management, progress tracking and error handling",
+    "Straightforward Claude Desktop configuration with a worked usage example"
+  ],
+  "what_it_fails_at": [
+    "No statement on marking, watermarking, C2PA/IPTC provenance metadata or detection for the synthetic media it produces",
+    "'Comprehensive tests' claimed as a feature with no test results, coverage figure or CI badge on the surface",
+    "'Production Ready' asserted as a bullet rather than evidenced",
+    "No version, changelog or release history published",
+    "No adoption evidence, named users or independent review",
+    "Requires a FAL_KEY, so usage cost and rate limits are inherited from fal.ai and not described here"
+  ],
+  "best_for": [
+    "Developers who already use fal.ai and want its models callable from Claude Desktop or another MCP client",
+    "Prototyping generative media inside an agent loop",
+    "Anyone wanting a containerised MCP generation endpoint with HTTP/SSE"
+  ],
+  "not_recommended_for": [
+    "EU deployers who need AI-generated output marked or provenance-tagged — the surface does not address it",
+    "Production use where version pinning, test evidence and a changelog are prerequisites",
+    "Anyone who cannot supply a fal.ai API key or absorb its per-call cost"
+  ],
+  "red_flags": [
+    "Generates synthetic images, video and audio for autonomous agents with no statement anywhere on the surface about watermarking, C2PA/IPTC content credentials, or any detection path for the output.",
+    "'Production Ready' and 'Comprehensive tests' are presented as features with no version, changelog, coverage figure or test result behind either."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server exposing fal.ai image, video and audio generation models to Claude",
+      "source": "https://luminarylane.github.io/fal-mcp-server/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Supported models include FLUX Schnell/Dev/Pro, SDXL, SD3, Stable Video Diffusion, AnimateDiff, Kling, MusicGen, Bark, Whisper",
+      "source": "https://luminarylane.github.io/fal-mcp-server/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "pip install plus official Docker image on GitHub Container Registry, documented non-root",
+      "source": "https://luminarylane.github.io/fal-mcp-server/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "STDIO and HTTP/SSE transports, async API with queue management and progress tracking",
+      "source": "https://luminarylane.github.io/fal-mcp-server/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Requires a FAL_KEY environment variable",
+      "source": "https://luminarylane.github.io/fal-mcp-server/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Any statement on watermarking, C2PA/IPTC provenance or detection of generated output",
+      "source": "https://luminarylane.github.io/fal-mcp-server/ (absent)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Test results, coverage, version or changelog behind the 'comprehensive tests' and 'production ready' claims",
+      "source": "https://luminarylane.github.io/fal-mcp-server/ (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server over STDIO for desktop clients or HTTP/SSE for remote use, configured in Claude Desktop with a FAL_KEY. Generation tools such as generate_image are called directly by the agent; async queueing and progress tracking are built for long-running calls inside an agent loop.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Generate images, videos, and audio using state-of-the-art AI models through the Model Context Protocol'",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "`pip install fal-mcp-server` and a docker pull command",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Requires FAL_KEY; no cost or rate-limit information on the surface",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Install, API, Examples and Docker sections plus a supported-models table",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "synthetic_media_marking_addressed",
+      "pass": false,
+      "required": false,
+      "evidence": "No watermarking, C2PA/IPTC or detection statement anywhere on the page",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    },
+    {
+      "id": "claims_supported",
+      "pass": false,
+      "required": true,
+      "evidence": "'Production Ready' and 'Comprehensive tests' with no version, changelog or test evidence",
+      "tested_at": "2026-08-09T08:07:44.583Z"
+    }
+  ],
+  "summary": "A competent MCP wrapper putting fal.ai's image, video and audio models in front of Claude — but it generates synthetic media and says nothing at all about labelling it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/raveenb-fal-mcp-server.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Generative media tool with no marking, provenance or detection statement on the public surface — an absence recorded as evidenced, not inferred."
+  },
+  "evidence_images": {
+    "run_id": "run-4d048d7ae3e54ab8-luminarylane-github-io",
+    "base": "https://images.hlido.eu/reviews/raveenb-fal-mcp-server/run-4d048d7ae3e54ab8-luminarylane-github-io",
+    "files": [
+      "home.png",
+      "pageinstallation.png",
+      "pageapi.png",
+      "pageexamples.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/raveenb-fal-mcp-server/run-4d048d7ae3e54ab8-luminarylane-github-io/home.png",
+      "https://images.hlido.eu/reviews/raveenb-fal-mcp-server/run-4d048d7ae3e54ab8-luminarylane-github-io/pageinstallation.png",
+      "https://images.hlido.eu/reviews/raveenb-fal-mcp-server/run-4d048d7ae3e54ab8-luminarylane-github-io/pageapi.png",
+      "https://images.hlido.eu/reviews/raveenb-fal-mcp-server/run-4d048d7ae3e54ab8-luminarylane-github-io/pageexamples.png"
+    ]
+  }
+}
