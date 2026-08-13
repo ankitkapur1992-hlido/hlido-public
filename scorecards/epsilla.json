@@ -1,0 +1,148 @@
+{
+  "schema_version": "2.0",
+  "slug": "epsilla",
+  "name": "Epsilla",
+  "agent_url": "https://www.epsilla.com/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-epsilla-v2-2026-08-03",
+  "run_at": "2026-08-03T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A no-code, RAG-first Agent-as-a-Service platform with credible named references — but a marketing-forward public surface that leaves pricing and much of the enterprise claim set unverifiable from the outside.",
+    "body": "Epsilla positions itself as an enterprise Agent-as-a-Service platform: a no-code builder for vertical AI agents, retrieval-augmented generation delivered as a managed service, multi-tenancy, and a choice of SaaS, on-prem, or private-cloud deployment. The company's roots are in vector search, and that shows in the RAG-centric framing, which is a coherent and real strength — this is a genuine build-and-deploy layer, not a thin wrapper. The trust signals on the public surface are better than average for this category: named institutional references (Stanford School of Medicine, TigerGraph, and several startup founders) are the kind of specific, checkable testimonials that most competitors don't offer. Where the surface is weaker is verifiability. The homepage is testimonial-dense and benefit-led, spanning eight-plus verticals (manufacturing, healthcare, legal, finance, construction, publishing...) with capability claims that a public-surface review cannot confirm; pricing is gated behind 'Start for free' with no transparent tier table on the captured surface; and a newer 'HarnessRouter' product is being promoted alongside the core platform, which slightly blurs the focus. Hlido did not create an account or build an agent, so this is a public-surface Tier-1 read: the platform's existence, positioning, and named references are visible and credible, but its actual build quality, retrieval accuracy, and enterprise-grade claims were not independently tested here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) on the strength of a coherent RAG-first platform positioning and unusually specific, named institutional references (Stanford Medicine, TigerGraph) that read as genuine trust signals. Held at the STEADY floor rather than higher because the public surface is marketing-forward: pricing is not transparently published on the captured surface, the multi-vertical capability claims are broad and unverifiable from outside, and Hlido did not test the platform hands-on — confidence is low-medium.",
+  "what_it_does_well": [
+    "Clear RAG-first Agent-as-a-Service positioning grounded in the company's vector-search roots",
+    "No-code agent/chatbot builder aimed at non-technical teams",
+    "Flexible deployment — managed SaaS, on-prem, or private cloud — for security/compliance-sensitive buyers",
+    "Specific, named institutional references (Stanford School of Medicine, TigerGraph) rather than anonymous praise",
+    "Exposes an API for piping retrieval/agents into a customer's own UI"
+  ],
+  "what_it_fails_at": [
+    "No transparent pricing on the captured public surface — cost requires 'Start for free' / a sales conversation",
+    "Broad multi-vertical capability claims (8+ industries) are not verifiable from the public surface",
+    "Marketing is testimonial-dense; independent, checkable evidence of outcomes is thin",
+    "Focus is slightly split by a separate promoted product (HarnessRouter)",
+    "Agent-integration surface is API/web-first — no visible CLI or MCP server for direct agent control"
+  ],
+  "best_for": [
+    "Non-technical enterprise teams that want to stand up a domain-specific RAG chatbot without engineering",
+    "Buyers who need on-prem or private-cloud deployment for compliance reasons",
+    "Organisations with an existing knowledge base looking for managed retrieval rather than self-hosted vector infra"
+  ],
+  "not_recommended_for": [
+    "Buyers who require transparent, self-serve pricing before committing",
+    "Agent developers wanting CLI/MCP-native, programmatically-drivable tooling",
+    "Teams needing independently benchmarked retrieval accuracy before adoption"
+  ],
+  "red_flags": [
+    "Pricing is not published on the captured public surface — evaluate total cost before committing",
+    "Capability claims span many verticals with limited public, independently verifiable evidence"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "No-code AI agent builder and RAG-as-a-Service platform",
+      "source": "https://www.epsilla.com/",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Offers managed SaaS, on-premise, and private-cloud deployment",
+      "source": "https://www.epsilla.com/",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Named references include Stanford School of Medicine and TigerGraph",
+      "source": "https://www.epsilla.com/ (testimonials)",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Serves 8+ verticals (manufacturing, healthcare, legal, finance, etc.) with domain-specific agents",
+      "source": "https://www.epsilla.com/",
+      "tested_at": "2026-08-03",
+      "verified": false
+    },
+    {
+      "claim": "Transparent pricing available on the public surface",
+      "source": "https://www.epsilla.com/",
+      "tested_at": "2026-08-03",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "API-first and web-console-driven — an agent can query Epsilla-hosted retrieval/agents over its REST API, but there is no visible CLI or MCP server for direct programmatic control, and the primary build experience is a no-code web UI.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-03T00:31:22Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Build Vertical AI Agents Without Engineering Overhead'",
+      "tested_at": "2026-08-03T00:31:22Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start Building' / 'Book a Demo'",
+      "tested_at": "2026-08-03T00:31:22Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No transparent pricing on captured surface; 'Start for free' gate + 'Pricing' link only",
+      "tested_at": "2026-08-03T00:31:22Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Named customer testimonials + vertical solution descriptions; no live demo tested",
+      "tested_at": "2026-08-03T00:31:22Z"
+    }
+  ],
+  "summary": "A no-code, RAG-first Agent-as-a-Service platform with credible named references — but a marketing-forward public surface that leaves pricing and much of the enterprise claim set unverifiable from the outside.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-03",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-03",
+  "attestation_url": "/data/attestations/epsilla.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-03",
+    "source": "r-publish-editorial-enrich"
+  }
+}
