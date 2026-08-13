@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "pantani-tdmcp",
+  "name": "tdmcp",
+  "agent_url": "https://pantani.github.io/tdmcp/",
+  "category": "Specialized verticals",
+  "run_id": "run-pantani-tdmcp-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A TouchDesigner MCP server with a create→verify→preview loop and 629 real operators embedded — ambitious surface area for a solo project, and honest about which parts are experimental.",
+    "body": "tdmcp lets you describe a visual — \"a feedback tunnel from noise with blur and displace, then bloom, output to a window\" — and have Claude, Cursor or Codex build a real, playable TouchDesigner network, wired and auto-arranged. The credibility rests on grounding rather than generation: an embedded reference of 629 operators, 68 Python classes, workflow patterns and GLSL techniques means the model uses operators that exist instead of inventing plausible-sounding ones, which is the standard failure mode when an LLM drives a specialist tool. A bridge inside TouchDesigner then creates, connects, inspects and previews nodes in a create→verify→preview loop and auto-arranges the network into a readable layout, so the AI checks its own work rather than asserting success. The live-performance orientation is concrete — control panels, presets, cues, tempo sync, MIDI/OSC/DMX I/O, a phone remote — and a local LLM copilot handles simple tasks without a paid API. 507 tools across three layers is a very large surface for what appears to be a solo project, and breadth at that ratio usually means uneven depth; the Creative RAG feature is labelled experimental, which is the right call and the kind of labelling we credit. Requires TouchDesigner, so the audience is narrow. No adoption figures or third-party validation. Reviewed from the public surface, not run against a real install.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for grounding the model in 629 real operators rather than letting it invent them, a create→verify→preview loop so the AI checks its own output, and genuinely performance-oriented features (MIDI/OSC/DMX, cues, tempo sync). Held below VITAL because 507 tools is a very large surface for an apparently solo project and implies uneven depth, there is no adoption evidence, and it requires TouchDesigner — narrow by construction.",
+  "what_it_does_well": [
+    "Embedded reference of 629 operators, 68 Python classes, workflow patterns and GLSL techniques — no invented operators",
+    "create → verify → preview loop with auto-arranged, readable network layout",
+    "Built for live performance: control panels, presets, cues, tempo sync, MIDI/OSC/DMX I/O, phone remote",
+    "Local LLM copilot handles simple tasks without a paid API",
+    "Server stays usable when TouchDesigner is closed",
+    "Labels the Creative RAG feature experimental rather than shipping it as finished",
+    "Documentation offered in Portuguese as well as English"
+  ],
+  "what_it_fails_at": [
+    "507 tools across three layers is very wide for an apparently solo project — depth will be uneven",
+    "Requires TouchDesigner; audience is narrow by construction",
+    "No adoption figures, named users, or third-party validation",
+    "Not exercised against a real install — network correctness and visual quality are unassessed",
+    "Creative output quality is subjective and cannot be scored from a public surface"
+  ],
+  "best_for": [
+    "TouchDesigner artists who want to prototype networks conversationally",
+    "Live visual performers needing playable, control-mapped systems generated quickly",
+    "Developers exploring how to ground an LLM in a specialist tool's real object model"
+  ],
+  "not_recommended_for": [
+    "Anyone not using TouchDesigner",
+    "Production show files where an unverified generated network would be risky",
+    "Buyers needing evidence of adoption or support"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "pantani-ableton-mind",
+      "note": "Same author's Ableton Live equivalent — the same grounding-plus-verify approach applied to audio rather than visuals."
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "507 tools across three layers for TouchDesigner network construction",
+      "source": "https://pantani.github.io/tdmcp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Embedded reference of 629 operators and 68 Python classes",
+      "source": "https://pantani.github.io/tdmcp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "create → verify → preview loop with automatic network layout",
+      "source": "https://pantani.github.io/tdmcp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Live-performance I/O: MIDI, OSC, DMX, cues, tempo sync, phone remote",
+      "source": "https://pantani.github.io/tdmcp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Creative RAG explicitly labelled experimental and opt-in",
+      "source": "https://pantani.github.io/tdmcp/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Adoption figures or third-party validation",
+      "source": "https://pantani.github.io/tdmcp/ (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server driving a desktop application through a resident bridge — the agent is the builder. A local chat copilot covers simple tasks without an API key.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-07T08:06:20.065Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Stop wiring nodes by hand.'",
+      "tested_at": "2026-08-07T08:06:20.065Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'I'm an artist — start here' / 'Developer reference'",
+      "tested_at": "2026-08-07T08:06:20.065Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source; local copilot avoids paid API for simple tasks",
+      "tested_at": "2026-08-07T08:06:20.065Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Tools reference and guides; no third-party validation",
+      "tested_at": "2026-08-07T08:06:20.065Z"
+    }
+  ],
+  "summary": "A TouchDesigner MCP server with a create→verify→preview loop and 629 real operators embedded — ambitious surface area for a solo project, and honest about which parts are experimental.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/pantani-tdmcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-21e747018a75275d-pantani-github-io",
+    "base": "https://images.hlido.eu/reviews/pantani-tdmcp/run-21e747018a75275d-pantani-github-io",
+    "files": [
+      "home.png",
+      "page_VPContent.png",
+      "pageguide_.png",
+      "pagereference_architecture.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/pantani-tdmcp/run-21e747018a75275d-pantani-github-io/home.png",
+      "https://images.hlido.eu/reviews/pantani-tdmcp/run-21e747018a75275d-pantani-github-io/page_VPContent.png",
+      "https://images.hlido.eu/reviews/pantani-tdmcp/run-21e747018a75275d-pantani-github-io/pageguide_.png",
+      "https://images.hlido.eu/reviews/pantani-tdmcp/run-21e747018a75275d-pantani-github-io/pagereference_architecture.png"
+    ]
+  }
+}
