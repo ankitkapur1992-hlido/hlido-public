@@ -1,0 +1,165 @@
+{
+  "schema_version": "2.0",
+  "slug": "mymedi-ai-mymedi-ai-mcp-server",
+  "name": "MyMedi-AI Bot Marketplace",
+  "agent_url": "https://mymedi-ai.com/bot-marketplace/",
+  "category": "Specialized verticals",
+  "run_id": "run-mymedi-ai-mymedi-ai-mcp-server-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 65,
+  "tier": "FADING",
+  "laddoo_score": 65,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A machine-first healthcare-billing API that documents itself to agents in JSON and prices per call — agent-native by construction, thin on accuracy evidence.",
+    "body": "This is one of the few surfaces we test where the homepage is not for humans. Requesting the product URL returns a JSON manifest describing the service to an agent directly: 32 tools, 90K+ medical codes, per-call pricing at 1 credit = $0.001, a three-step quick start, the exact registration endpoint, the header name for the API key, 50 free credits on signup, and a free rate-limited demo. Several tools — prior-authorisation checks against the CMS Required Prior Authorization List, denial-code (CARC) explanation, basic code lookup — are marked free and keyless. For an agent-to-agent consumer that is close to an ideal shape: an agent can discover, register, sample and pay without a human ever rendering a page, and the free tier means capability can be verified before any commitment. What the manifest does not carry is any evidence of correctness. Healthcare billing intelligence is a domain where a wrong answer has a financial and administrative cost, and there is no statement of code-set version or vintage, no update cadence, no accuracy claim, and no error or dispute path. The pa_required_check tool cites a specific regulation (42 CFR 414.234) and scopes itself to Original Medicare FFS, which is the right kind of precision and makes the silence elsewhere more conspicuous. The distribution design is excellent; the trust layer under it is not yet published.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (65) because the agent-facing design is genuinely strong — self-describing JSON manifest, keyless free tools, documented registration and metered pricing, npm-published MCP server and SDK — but nothing published establishes that the billing data is correct or current, which is the property the product is actually selling. No code-set vintage, no update cadence, no accuracy claim and no dispute path. Strong distribution with unevidenced accuracy is a FADING profile, not a STEADY one; the free keyless tier and the regulatory precision on at least one tool keep it clear of FLATLINE.",
+  "what_it_does_well": [
+    "Serves a machine-readable JSON manifest at the product URL — genuinely agent-first, not agent-retrofitted",
+    "Free, keyless tools (prior-auth check, denial-code explanation, basic lookup) allow verification before commitment",
+    "Pricing is explicit and granular (1 credit = $0.001) with 50 free credits on registration",
+    "Registration, balance, usage and pricing endpoints are all documented with methods and auth",
+    "Published to npm as both an MCP server and an SDK"
+  ],
+  "what_it_fails_at": [
+    "No code-set version or vintage stated — the data's currency is unverifiable",
+    "No accuracy claim, validation evidence or error/dispute path for billing determinations",
+    "No update cadence published for a dataset whose value depends entirely on being current",
+    "No human-readable surface, so non-agent evaluation and due diligence are difficult",
+    "Payment is pre-buy credits via Stripe with no stated refund or reconciliation policy"
+  ],
+  "best_for": [
+    "Agent developers needing programmatic medical-code and denial-code lookup",
+    "Revenue-cycle automation prototypes that can tolerate verifying outputs downstream",
+    "Teams wanting metered pay-per-call rather than a seat licence",
+    "Anyone evaluating agent-native API design as a pattern"
+  ],
+  "not_recommended_for": [
+    "Production billing decisions without independent verification of each determination",
+    "Buyers requiring documented data provenance, vintage and update cadence",
+    "Non-Medicare-FFS scope on the tools that explicitly scope themselves to it",
+    "Organisations needing a human-reviewable surface for procurement or audit"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "32 tools and 90K+ medical codes, priced pay-per-call",
+      "source": "https://mymedi-ai.com/bot-marketplace/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "1 credit = $0.001; 50 free credits on registration",
+      "source": "https://mymedi-ai.com/bot-marketplace/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "pa_required_check, denial_code_info and code_lookup_basic are free and require no API key",
+      "source": "https://mymedi-ai.com/bot-marketplace/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "MCP server published as @mymedi-ai/mcp-server; SDK as @mymedi-ai/sdk",
+      "source": "https://mymedi-ai.com/bot-marketplace/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Prior-authorisation tool cites 42 CFR 414.234 and scopes to Original Medicare FFS",
+      "source": "https://mymedi-ai.com/bot-marketplace/",
+      "tested_at": "2026-08-10",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "The product URL itself returns a JSON manifest an agent can parse: register via POST, receive an API key and free credits, call tools with an X-API-Key header, top up through Stripe. An npm MCP server and SDK are both published. This is among the most complete agent onboarding paths we have captured — the constraint is not integration but the absence of published accuracy evidence.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "Returns a JSON manifest rather than HTML — deliberate agent-first design",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Healthcare billing intelligence API for AI agents. 32 tools, 90K+ medical codes, pay-per-call.'",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "quickStart: register → get key + 50 free credits → call tools",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "1 credit = $0.001; pricing endpoint documented",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": true,
+      "evidence": "Free rate-limited demo at /agent/v1/demo?code=G47.33 plus keyless free tools",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": true,
+      "required": false,
+      "evidence": "Endpoints and tools enumerated in the manifest itself",
+      "tested_at": "2026-08-10T08:07:19.339Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/mymedi-ai-mymedi-ai-mcp-server.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No marking or provenance statement in the manifest; the service returns looked-up code data rather than generated content."
+  },
+  "evidence_images": {
+    "run_id": "run-1a0bd31a0cce2e19-mymedi-ai-com",
+    "base": "https://images.hlido.eu/reviews/mymedi-ai-mymedi-ai-mcp-server/run-1a0bd31a0cce2e19-mymedi-ai-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/mymedi-ai-mymedi-ai-mcp-server/run-1a0bd31a0cce2e19-mymedi-ai-com/home.png"
+    ]
+  },
+  "repo_url": "https://github.com/MyMedi-AI/mymedi-ai-mcp-server"
+}
