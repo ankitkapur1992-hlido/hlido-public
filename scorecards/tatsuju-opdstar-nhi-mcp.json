@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0",
+  "slug": "tatsuju-opdstar-nhi-mcp",
+  "name": "OPDSTAR",
+  "agent_url": "https://opdstar.com",
+  "category": "Specialized verticals",
+  "run_id": "run-tatsuju-opdstar-nhi-mcp-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 58,
+  "tier": "FADING",
+  "laddoo_score": 58,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Taiwanese clinical-scribe tool for NHI claim-rejection risk and English SOAP translation — states its limits and its privacy posture up front, but only a single landing screen was captured.",
+    "body": "OPDSTAR targets a specific and real workload: Taiwanese outpatient physicians writing notes that must survive National Health Insurance review, where a poorly-worded record triggers a claim rejection. It offers rejection-risk warning, three-second English translation, textbook-grade SOAP phrasing across twenty specialties, and states that no patient personal data is retained. Two things on this surface are better than the category norm. It publishes a scope disclaimer directly beneath the value proposition — the system assists with translation, formatting, medical dictionary and textbook reference, is not a diagnostic tool, and final clinical and prescribing decisions rest with the physician. That is the correct disclosure for AI-adjacent clinical software and most vendors bury it. And 'zero patient personal data retained' is a specific, testable claim rather than a vague privacy gesture. Against that, our capture is one screen and one screenshot: a headline, four capability chips, a call to action and the disclaimer. No pricing, no documentation, no accuracy evidence for the rejection-risk warning, and nothing describing the MCP server that is the reviewed artefact. The claim that the tool predicts NHI rejection risk is the one that would need evidence, and none is offered. This is a thin capture of a plausible product, and the score reflects what we could actually read.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (58) because the captured surface is a single landing screen. Scope disclosure and the zero-retention claim are genuine positives and better than most vendors in clinical-adjacent AI. But the core claim — real-time NHI claim-rejection risk warning — carries no supporting evidence, no pricing or documentation was reachable in the capture, and the MCP server under review is not described at all. The score reflects a thin evidence base rather than a judgement that the product is weak; a fuller capture could move it in either direction.",
+  "what_it_does_well": [
+    "Targets a specific, real workload: NHI claim-rejection risk in Taiwanese outpatient documentation",
+    "Publishes a scope disclaimer prominently — explicitly not a diagnostic tool, physician retains decision authority",
+    "States a specific, testable privacy posture: zero patient personal data retained",
+    "Names its coverage concretely (20 specialties) rather than claiming general capability",
+    "Value proposition is legible and unhedged in its own market's language"
+  ],
+  "what_it_fails_at": [
+    "No evidence for the rejection-risk warning — the central claim is unsupported",
+    "No pricing, documentation or trial terms reachable in the capture",
+    "The MCP server under review is not described anywhere on the captured surface",
+    "Single-screen capture: no depth on how translation or SOAP phrasing is produced or validated",
+    "No stated update path as NHI rules change — a rules-tracking product with no visible cadence"
+  ],
+  "best_for": [
+    "Taiwanese outpatient physicians with high visit volumes and NHI documentation burden",
+    "Clinics where claim rejections driven by note wording are a recurring cost",
+    "Practitioners needing English SOAP phrasing across multiple specialties"
+  ],
+  "not_recommended_for": [
+    "Any diagnostic or prescribing use — the vendor itself excludes this",
+    "Healthcare systems outside Taiwan's NHI regime",
+    "Buyers requiring published accuracy evidence before clinical-workflow adoption",
+    "Agent developers, until the MCP interface is documented"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Provides NHI claim-rejection risk warning and English SOAP translation across 20 specialties",
+      "source": "https://opdstar.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "States zero retention of patient personal data",
+      "source": "https://opdstar.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Publishes a disclaimer that it is not a diagnostic tool and the physician decides",
+      "source": "https://opdstar.com",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Claims three-second translation",
+      "source": "https://opdstar.com",
+      "tested_at": "2026-08-10",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The reviewed artefact is an MCP server, but the public surface describes only the human-facing clinical scribe — no tool list, arguments, authentication or scope for the MCP interface. An agent developer cannot determine what integrating would provide without reading the repository directly.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "NHI claim-rejection warning + 3-second translation + 20 specialties",
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'開始使用' (Get started)",
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No pricing or access terms reachable in the capture",
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": true,
+      "evidence": "No demo, benchmark or accuracy evidence for the rejection-risk claim",
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": false,
+      "required": false,
+      "evidence": "No documentation reachable in the capture",
+      "tested_at": "2026-08-10T12:34:02.519Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/tatsuju-opdstar-nhi-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No marking or provenance statement for AI-generated clinical text on the captured surface."
+  },
+  "evidence_images": {
+    "run_id": "run-e899ea75330bf952-opdstar-com",
+    "base": "https://images.hlido.eu/reviews/tatsuju-opdstar-nhi-mcp/run-e899ea75330bf952-opdstar-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/tatsuju-opdstar-nhi-mcp/run-e899ea75330bf952-opdstar-com/home.png"
+    ]
+  },
+  "repo_url": "https://github.com/tatsuju/opdstar-nhi-mcp"
+}
