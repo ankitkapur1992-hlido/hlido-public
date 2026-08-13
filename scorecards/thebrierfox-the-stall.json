@@ -1,0 +1,183 @@
+{
+  "schema_version": "2.0",
+  "slug": "thebrierfox-the-stall",
+  "name": "The Stall",
+  "agent_url": "https://the-stall.intuitek.ai",
+  "category": "Infrastructure",
+  "run_id": "run-721d557d22b183f2-the-stall-intuitek-ai",
+  "run_at": "2026-08-09T12:31:29.293Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 58,
+  "tier": "FADING",
+  "laddoo_score": 58,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An x402 marketplace of agent-callable data services paid in USDC with no accounts — with live usage counters on the page, and almost nothing else Hlido could read.",
+    "body": "The Stall is a marketplace of AI-callable data services billed per call in USDC on Base, with no accounts and no signup. The design is coherent for agent-to-agent commerce: an agent discovers a capability, pays per call, and never registers — which is the intended shape of the x402 payment scheme, and the surface presents the right artefacts for machine consumption (an x402 manifest, an agent card, a browsable catalogue and a stats JSON endpoint). The counters are the most useful thing captured: 303 capabilities, 11,405 API calls served since 5 June 2026, and 286 capabilities actually called. That last number is the honest one, and worth reading carefully — roughly 94% of the listed capabilities have been called at least once, which is a far better ratio than most marketplaces achieve, though it says nothing about how the volume is distributed or whether the callers are third parties. **This review is thin by necessity, and the score reflects that.** The page Hlido captured is a compact landing surface of roughly 250 characters of text; no pricing detail, no capability documentation, no operator information, no terms, and no reliability or uptime data were reachable. Nothing here suggests anything is being concealed — a marketplace whose consumers are agents may reasonably put its substance in the manifest rather than in prose — but Hlido rates what it can verify, and what was verifiable was a claim set plus three counters. A capture of the catalogue, the x402 manifest and the stats endpoint would very likely move this score.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (58) is a confidence-limited verdict, not a judgement that the service is poor. The architecture is coherent for agent-to-agent commerce and the surface exposes the right machine-readable artefacts, with live counters (303 capabilities, 11,405 calls, 286 capabilities called) that indicate real traffic. But the captured surface was roughly 250 characters: no pricing, no capability documentation, no operator identity, no terms and no reliability data. Hlido scores what it could verify, and too little was verifiable to support a higher band. Re-review against the catalogue and manifest is warranted.",
+  "what_it_does_well": [
+    "Coherent design for agent-to-agent commerce — pay-per-call in USDC on Base with no accounts",
+    "Exposes machine-readable artefacts an agent needs: x402 manifest, agent card, browsable catalogue, stats JSON",
+    "Publishes live usage counters rather than only capability counts",
+    "286 of 303 capabilities have actually been called — real usage breadth, not a shelf of dead listings",
+    "States a service-start date (5 June 2026), so the volume figure has a window attached"
+  ],
+  "what_it_fails_at": [
+    "The captured surface is roughly 250 characters — no pricing, capability documentation, terms or operator information was reachable",
+    "No reliability, uptime or dispute-resolution information for a service being paid per call",
+    "No breakdown of whether the 11,405 calls come from third parties or from the operator",
+    "Payment in USDC on Base narrows the audience to agents already holding crypto on that chain",
+    "Not tested hands-on by Hlido; no capability was called"
+  ],
+  "best_for": [
+    "Agents already operating with USDC on Base that need per-call data services without signup",
+    "Developers exploring x402 as a payment rail for agent-callable capabilities"
+  ],
+  "not_recommended_for": [
+    "Anyone needing documented pricing, terms or a reliability commitment before spending",
+    "Teams that cannot or will not transact in crypto",
+    "Buyers who need to know who operates a service before paying it"
+  ],
+  "red_flags": [
+    "No operator information, terms of service or pricing detail was reachable on the captured surface for a service that takes payment per call."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "AI-callable data services paid in USDC on Base, with no accounts",
+      "source": "https://the-stall.intuitek.ai",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "303 capabilities listed; 11,405 API calls served since 5 June 2026; 286 capabilities called",
+      "source": "https://the-stall.intuitek.ai",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Publishes an x402 manifest, an agent card, a catalogue and a stats JSON endpoint",
+      "source": "https://the-stall.intuitek.ai",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Stated as live on Base mainnet with x402 and MCP",
+      "source": "https://the-stall.intuitek.ai",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Pricing, capability documentation, terms or operator information",
+      "source": "https://the-stall.intuitek.ai (not reachable on the captured surface)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Whether the reported call volume comes from third-party agents",
+      "source": "https://the-stall.intuitek.ai (not disclosed)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Built for agent consumption: an x402 manifest and agent card advertise capabilities, MCP is listed as a supported surface, and payment is per call in USDC on Base with no account. Hlido did not exercise a capability, so the integration is described rather than confirmed.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI-callable data services. Pay USDC on Base. No accounts.'",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Browse catalog', 'x402 manifest', 'Agent card', 'Stats JSON'",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pay-per-call stated; no rates reachable on the captured surface",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": false,
+      "required": true,
+      "evidence": "No capability documentation reachable from the captured page",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "operator_identified",
+      "pass": false,
+      "required": false,
+      "evidence": "'Built by IntuiTek¹' only; no legal entity, contact or terms",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    },
+    {
+      "id": "usage_evidence",
+      "pass": true,
+      "required": false,
+      "evidence": "303 capabilities, 11,405 calls since 2026-06-05, 286 capabilities called",
+      "tested_at": "2026-08-09T12:31:29.293Z"
+    }
+  ],
+  "summary": "An x402 marketplace of agent-callable data services paid in USDC with no accounts — with live usage counters on the page, and almost nothing else Hlido could read.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/thebrierfox-the-stall.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Data-service marketplace; the captured surface does not describe generative output, and too little was reachable to assess marking either way."
+  },
+  "evidence_images": {
+    "run_id": "run-721d557d22b183f2-the-stall-intuitek-ai",
+    "base": "https://images.hlido.eu/reviews/thebrierfox-the-stall/run-721d557d22b183f2-the-stall-intuitek-ai",
+    "files": [
+      "home.png",
+      "page_catalog.png",
+      "page__well-known_x402.png",
+      "page__well-known_agent_json.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/thebrierfox-the-stall/run-721d557d22b183f2-the-stall-intuitek-ai/home.png",
+      "https://images.hlido.eu/reviews/thebrierfox-the-stall/run-721d557d22b183f2-the-stall-intuitek-ai/page_catalog.png",
+      "https://images.hlido.eu/reviews/thebrierfox-the-stall/run-721d557d22b183f2-the-stall-intuitek-ai/page__well-known_x402.png",
+      "https://images.hlido.eu/reviews/thebrierfox-the-stall/run-721d557d22b183f2-the-stall-intuitek-ai/page__well-known_agent_json.png"
+    ]
+  }
+}
