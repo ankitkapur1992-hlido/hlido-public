@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "julien040-anyquery",
+  "name": "Anyquery",
+  "agent_url": "https://anyquery.dev",
+  "category": "Infrastructure",
+  "run_id": "run-julien040-anyquery-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "One SQL dialect over 40+ services and every file on disk, exposed to LLMs over MCP — unusually well-executed, with a maintainer-capacity signal published right at the top of the page.",
+    "body": "Anyquery turns GitHub, Notion, Spotify, Gmail, Airtable, Google Sheets, CSVs, Parquet and forty more sources into SQLite tables you can JOIN freely, then hands the same engine to an LLM over MCP so Claude can answer questions about them. The design choices are the kind that come from having actually used the thing: it speaks the MySQL wire protocol so Metabase, Tableau and Looker connect with no adapter; it supports write-back (INSERT/UPDATE/DELETE against Notion, Airtable and Sheets); it runs local-first so API tokens never leave the machine; and it ships a query hub so non-SQL users can reuse community queries. It is a single binary, AGPL-3.0, with ~1.7k GitHub stars — real independent adoption signal, which almost nothing else in this wave has. The caution is not technical. The site's very first element is a banner reading \"Available for an internship — I'm seeking a 6-month software engineering internship starting in January 2027\", with a personal contact address. That is a solo maintainer being straightforward about their situation, and we take it at face value rather than reading anything into it — but for anyone weighing a dependency, single-maintainer continuity is the material question here, and the project itself has put the information in front of you. AGPL-3.0 is also a real constraint for commercial embedding. Reviewed from the public surface; we did not install it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) on execution and evidence: ~1.7k stars is genuine third-party adoption, the MySQL-wire-protocol choice makes it work with existing BI tooling instead of demanding new tooling, write-back and local-first are substantive, and the MCP path is first-class rather than bolted on. Held below VITAL because it is a single-maintainer project (stated on the page, alongside a January 2027 internship search), AGPL-3.0 limits commercial embedding, and we reviewed the public surface without installing it.",
+  "what_it_does_well": [
+    "One SQLite-based dialect across 40+ services plus local files — JOIN across sources that normally need separate tooling",
+    "Speaks the MySQL wire protocol, so Metabase, Tableau, Drizzle and Looker connect with no custom adapter",
+    "Local-first: runs on your machine, API tokens never leave it, no cloud pipeline or ETL",
+    "Write-back support (INSERT/UPDATE/DELETE) against Notion, Airtable and Google Sheets",
+    "~1.7k GitHub stars — real independent adoption, rare in this cohort",
+    "Query hub of reusable community queries lowers the barrier for non-SQL users",
+    "Supports PRQL and Kusto/PQL in addition to SQL"
+  ],
+  "what_it_fails_at": [
+    "Single-maintainer project — continuity is the material risk, and the site's internship banner makes that concrete",
+    "AGPL-3.0 blocks or complicates commercial embedding for many buyers",
+    "40+ integrations by one maintainer implies variable depth and upkeep per connector",
+    "No uptime, support or breakage policy for connectors when an upstream API changes",
+    "Not installed or exercised by us — query correctness and connector reliability are untested"
+  ],
+  "best_for": [
+    "Developers who want to query many SaaS sources without learning each vendor's API",
+    "Local-first users who will not send tokens or data to a cloud intermediary",
+    "Analysts wanting existing BI tools pointed at non-database sources",
+    "LLM workflows that need structured querying rather than scraping"
+  ],
+  "not_recommended_for": [
+    "Commercial products that cannot take an AGPL-3.0 dependency",
+    "Teams needing vendor support or a connector-breakage SLA",
+    "Organisations with a bus-factor policy on single-maintainer dependencies"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "One SQL engine over 40+ services and local files, built on SQLite",
+      "source": "https://anyquery.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Exposes the MySQL wire protocol so BI tools connect directly",
+      "source": "https://anyquery.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Local-first — runs on your machine, tokens never leave it",
+      "source": "https://anyquery.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Write-back (INSERT/UPDATE/DELETE) to Notion, Airtable, Google Sheets",
+      "source": "https://anyquery.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "~1.7k GitHub stars; free and open source under AGPL-3.0",
+      "source": "https://anyquery.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Maintainer publicly seeking a 6-month internship from January 2027",
+      "source": "https://anyquery.dev (site banner)",
+      "tested_at": "2026-08-07",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP is a headline capability, not an afterthought — the site frames handing the engine to an LLM as a primary use. A CLI binary plus the MySQL wire protocol give an agent two more programmatic routes.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:31:30.678Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'One SQL engine for everything you already use.'",
+      "tested_at": "2026-08-05T16:31:30.678Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get anyquery' / brew install anyquery",
+      "tested_at": "2026-08-05T16:31:30.678Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (AGPL-3.0)",
+      "tested_at": "2026-08-05T16:31:30.678Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Worked examples and live query output; ~1.7k stars as third-party signal",
+      "tested_at": "2026-08-05T16:31:30.678Z"
+    }
+  ],
+  "summary": "One SQL dialect over 40+ services and every file on disk, exposed to LLMs over MCP — unusually well-executed, with a maintainer-capacity signal published right at the top of the page.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/julien040-anyquery.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-b4704eea4a5e5b54-anyquery-dev",
+    "base": "https://images.hlido.eu/reviews/julien040-anyquery/run-b4704eea4a5e5b54-anyquery-dev",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_llm.png",
+      "page_integrations.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/julien040-anyquery/run-b4704eea4a5e5b54-anyquery-dev/home.png",
+      "https://images.hlido.eu/reviews/julien040-anyquery/run-b4704eea4a5e5b54-anyquery-dev/page_.png",
+      "https://images.hlido.eu/reviews/julien040-anyquery/run-b4704eea4a5e5b54-anyquery-dev/page_llm.png",
+      "https://images.hlido.eu/reviews/julien040-anyquery/run-b4704eea4a5e5b54-anyquery-dev/page_integrations.png"
+    ]
+  }
+}
