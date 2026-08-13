@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "agentbodegastore-agentbodega",
+  "name": "AgentBodega",
+  "agent_url": "https://agentbodega.store",
+  "category": "Infrastructure",
+  "run_id": "run-agentbodegastore-agentbodega-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 66,
+  "tier": "FADING",
+  "laddoo_score": 66,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "71 pay-per-call APIs behind an agent-first storefront whose onboarding is a prompt, not a signup — inventive, coherent, and entirely unproven.",
+    "body": "AgentBodega is a shop for agents: 71 paid endpoints across departments like search, status and infrastructure, cloud status, real estate, public data, social media, security and trust, x402 tooling and prediction markets, paid over Base x402 and Pay.sh on Solana, with receipts on paid calls. The design commitment is the interesting part — onboarding is \"copy the prompt, let the agent do the setup\", and the shelf rules are written as instructions to the agent rather than the human: read the live catalog, show the cap, ask before spending, start with a small smoke call. Asking before spending and starting with a cheap smoke call are exactly the guards a pay-per-call surface should impose on an autonomous buyer, and building them into the storefront's own runbook rather than leaving them to each client is a real design decision. The store metaphor (departments, aisles, shelves, offerings) is applied consistently and makes a large catalogue navigable. What is absent is any evidence it works at the other end: no usage figures, no named consumers, no uptime or latency data, no third-party validation, and 71 endpoints spanning weather, real estate, X/Twitter data and prediction markets means most are thin wrappers over upstream sources whose terms and reliability are invisible here. Some departments are marked P1 rather than active. Reviewed from the public surface; we made no paid call.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) — genuinely agent-first in a way most 'API marketplace' surfaces are not, with spending guards written into the storefront's own runbook and a consistently applied catalogue structure. Held at FADING because there is no evidence of the thing working: no usage, consumers, uptime or latency data, no third-party validation, and 71 endpoints across wildly different domains implies thin wrappers over upstream sources whose terms and reliability are not disclosed.",
+  "what_it_does_well": [
+    "Agent-first onboarding — the entry point is a prompt to paste, not a signup form",
+    "Spending guards built into the storefront's runbook: show the cap, ask before spending, start with a small smoke call",
+    "Receipts on paid calls, so an agent's spend is auditable after the fact",
+    "Consistent, navigable catalogue structure (departments → aisles → shelves → offerings) across 71 endpoints",
+    "Two payment rails — Base x402 and Pay.sh on Solana — rather than betting on one",
+    "A $0.005 status check gives a genuinely cheap first call to test the path"
+  ],
+  "what_it_fails_at": [
+    "No usage figures, named consumers, uptime, or latency data anywhere on the surface",
+    "71 endpoints across search, real estate, weather, social and prediction markets implies thin wrappers over upstream sources",
+    "Upstream data providers, their terms, and their reliability are not disclosed",
+    "Some departments are marked P1 rather than active — the catalogue is partly aspirational",
+    "No third-party validation of endpoint quality or availability",
+    "Not tested — we made no paid call, so response quality behind the price list is unverified"
+  ],
+  "best_for": [
+    "Agents that need small, cheap, one-off capabilities without provider onboarding",
+    "x402 or L402-native systems paying per call with no account relationship",
+    "Experiments where a $0.005 smoke call is the cheapest way to test a path"
+  ],
+  "not_recommended_for": [
+    "Production workloads needing availability guarantees or disclosed upstream providers",
+    "Buyers who need to know whose data they are paying for and under what licence",
+    "Anyone requiring evidence of usage or reliability before routing spend through a new intermediary"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "71 paid endpoints organised into departments, aisles, shelves and offerings",
+      "source": "https://agentbodega.store",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Agent-first onboarding via a copyable prompt at /get-started/prompt.txt",
+      "source": "https://agentbodega.store",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Spending guards in the storefront runbook: show the cap, ask before spending, start with a small smoke call",
+      "source": "https://agentbodega.store",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Payment over Base x402 and Pay.sh on Solana, with receipts on paid calls",
+      "source": "https://agentbodega.store",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Usage, uptime, latency, or named consumers",
+      "source": "https://agentbodega.store (none published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Designed so the agent does the integration: a published prompt file drives setup, a live machine-readable catalogue is the discovery surface, and x402/L402 payment removes the human account step entirely. Humans are not the intended user.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T12:31:24.035Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Pay-per-call APIs for agents. Copy the prompt. Let the agent do the setup.'",
+      "tested_at": "2026-08-04T12:31:24.035Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'COPY AGENT PROMPT' / 'BROWSE DIRECTORY'",
+      "tested_at": "2026-08-04T12:31:24.035Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Per-endpoint pricing shown from $0.005",
+      "tested_at": "2026-08-04T12:31:24.035Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Live resource counts only — no usage, uptime, or third-party evidence",
+      "tested_at": "2026-08-04T12:31:24.035Z"
+    }
+  ],
+  "summary": "71 pay-per-call APIs behind an agent-first storefront whose onboarding is a prompt, not a signup — inventive, coherent, and entirely unproven.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/agentbodegastore-agentbodega.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-c0e9a11282091c9e-agentbodega-store",
+    "base": "https://images.hlido.eu/reviews/agentbodegastore-agentbodega/run-c0e9a11282091c9e-agentbodega-store",
+    "files": [
+      "home.png",
+      "page__departments.png",
+      "page_directory.png",
+      "page__well-known_x402.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/agentbodegastore-agentbodega/run-c0e9a11282091c9e-agentbodega-store/home.png",
+      "https://images.hlido.eu/reviews/agentbodegastore-agentbodega/run-c0e9a11282091c9e-agentbodega-store/page__departments.png",
+      "https://images.hlido.eu/reviews/agentbodegastore-agentbodega/run-c0e9a11282091c9e-agentbodega-store/page_directory.png",
+      "https://images.hlido.eu/reviews/agentbodegastore-agentbodega/run-c0e9a11282091c9e-agentbodega-store/page__well-known_x402.png"
+    ]
+  }
+}
