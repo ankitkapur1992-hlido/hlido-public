@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "slug": "jovancoding-network-ai",
+  "name": "Network-AI",
+  "agent_url": "https://network-ai.org/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-jovancoding-network-ai-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A governance layer for multi-agent systems that names the real failure mode — agents don't crash, they silently overwrite each other — and discloses its own high-severity CVEs on the front page.",
+    "body": "Network-AI sits between agents and shared state, adding locking, permission gating, budgets, audit trails and workflow governance so parallel agent systems behave like production software. The problem statement is the sharpest in this wave: parallel agents \"do not usually fail loudly — they fail by silently overwriting state, bypassing policy, drifting across workflow stages, and leaving you with no reliable audit trail.\" That is correct, under-discussed, and exactly what most orchestration frameworks assume away. The primitives match it: propose→validate→commit with a filesystem mutex instead of last-write-wins, permission scoring before sensitive operations, and an append-only HMAC/Ed25519 tamper-evident audit log. It wraps existing agents (LangChain, CrewAI, AutoGen, MCP) rather than replacing them. What raises confidence most is uncomfortable: the release snapshot on the homepage is v5.15.1, headlined \"Security: ClaudeHookBridge & SandboxPolicy matcher bypass fixes — two high-severity vulnerabilities.\" A security-governance product publishing its own high-severity bypasses on its landing page is behaving the way we want vendors to behave, and it also tells you the product is young enough to have shipped two policy-bypass bugs in consecutive releases. 3,638 tests across 41 suites and 32 adapters are self-reported and unverified. MIT licensed. Reviewed from the public surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) for a correctly-identified and under-served problem, primitives that actually address it (mutex-backed propose/validate/commit, permission gating, tamper-evident audit log), MIT licensing, and conspicuous security honesty — it publishes its own high-severity fixes rather than burying them. Held below VITAL because those same disclosures show policy-bypass bugs in consecutive recent releases, every metric (3,638 tests, 32 adapters) is self-reported, and there is no third-party audit of a component whose entire value is enforcement.",
+  "what_it_does_well": [
+    "Names the real multi-agent failure mode — silent state overwrites and policy bypass, not loud crashes",
+    "propose → validate → commit with a filesystem mutex instead of last-write-wins races",
+    "Permission-first execution: scores justification quality, trust level and resource risk before sensitive operations",
+    "Append-only HMAC / Ed25519 audit log — tamper-evident by design",
+    "Wraps existing frameworks (LangChain, CrewAI, AutoGen, MCP) rather than demanding a rewrite",
+    "Publishes its own high-severity security fixes on the landing page instead of hiding them",
+    "MIT licensed with zero adapter runtime dependencies"
+  ],
+  "what_it_fails_at": [
+    "Its own disclosures show two high-severity policy-bypass vulnerabilities across consecutive releases — young enforcement code",
+    "3,638 tests / 41 suites / 32 adapters are all self-reported and unverified by us",
+    "No third-party security audit, for a product whose entire value proposition is enforcement",
+    "No named production users or adoption figures",
+    "Adds a mandatory layer between agents and state — a new dependency in the critical path",
+    "Not exercised by us; the locking and gating guarantees are untested"
+  ],
+  "best_for": [
+    "Teams running genuinely parallel agents against shared state who have hit silent overwrites",
+    "Regulated contexts needing a tamper-evident record of what an agent was permitted to do",
+    "Multi-framework estates wanting one governance layer rather than per-framework controls"
+  ],
+  "not_recommended_for": [
+    "Single-agent or strictly sequential workflows, where the coordination cost buys nothing",
+    "Deployments requiring an audited enforcement layer today",
+    "Teams unable to absorb frequent security-driven upgrades"
+  ],
+  "red_flags": [
+    {
+      "severity": "low",
+      "note": "v5.15.1 fixes two high-severity policy-bypass vulnerabilities in features shipped in the two preceding releases. Flagged for visibility, not as a mark against them — the vendor disclosed it prominently and shipped the fix, which is the behaviour we want. It does mean the enforcement layer is young."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Multi-agent control plane adding locking, permission gating, budgets and audit trails",
+      "source": "https://network-ai.org/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "propose → validate → commit with a filesystem mutex",
+      "source": "https://network-ai.org/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Append-only HMAC / Ed25519 tamper-evident audit log",
+      "source": "https://network-ai.org/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "v5.15.1 fixes two high-severity ClaudeHookBridge / SandboxPolicy bypasses",
+      "source": "https://network-ai.org/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "32 adapters, 3,638 tests, 41 suites, MIT licensed",
+      "source": "https://network-ai.org/ (self-reported)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    },
+    {
+      "claim": "Third-party security audit or named production users",
+      "source": "https://network-ai.org/ (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built to sit in the agent execution path: adapters for LangChain, CrewAI, AutoGen and MCP, with control primitives (Blackboard, AuthGuardian, JourneyFSM, budgets) that agents call rather than humans.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T16:31:04.771Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Orchestrate agents without trusting them blindly.'",
+      "tested_at": "2026-08-05T16:31:04.771Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Read quick start' / 'Security posture'",
+      "tested_at": "2026-08-05T16:31:04.771Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT licensed, open source, npm-distributed",
+      "tested_at": "2026-08-05T16:31:04.771Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Release notes with security disclosures, demos and journal; metrics self-reported",
+      "tested_at": "2026-08-05T16:31:04.771Z"
+    }
+  ],
+  "summary": "A governance layer for multi-agent systems that names the real failure mode — agents don't crash, they silently overwrite each other — and discloses its own high-severity CVEs on the front page.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/jovancoding-network-ai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-be5ebff148cf15a4-network-ai-org",
+    "base": "https://images.hlido.eu/reviews/jovancoding-network-ai/run-be5ebff148cf15a4-network-ai-org",
+    "files": [
+      "home.png",
+      "page_architecture.png",
+      "page_proof.png",
+      "page_demos.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/jovancoding-network-ai/run-be5ebff148cf15a4-network-ai-org/home.png",
+      "https://images.hlido.eu/reviews/jovancoding-network-ai/run-be5ebff148cf15a4-network-ai-org/page_architecture.png",
+      "https://images.hlido.eu/reviews/jovancoding-network-ai/run-be5ebff148cf15a4-network-ai-org/page_proof.png",
+      "https://images.hlido.eu/reviews/jovancoding-network-ai/run-be5ebff148cf15a4-network-ai-org/page_demos.png"
+    ]
+  }
+}
