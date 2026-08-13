@@ -1,0 +1,153 @@
+{
+  "schema_version": "2.0",
+  "slug": "block-goose",
+  "name": "goose",
+  "agent_url": "https://goose-docs.ai/",
+  "category": "Coding",
+  "run_id": "run-block-goose-v2-2026-08-03",
+  "run_at": "2026-08-03T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
+  "tier": "STEADY",
+  "laddoo_score": 84,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "One of the most agent-native open-source agents on the market — Rust-built, MCP-deep, provider-agnostic, and now vendor-neutral under the Linux Foundation.",
+    "body": "goose (originally from Block, donated to the Linux Foundation's Agentic AI Foundation in 2026) is the rare local agent that reads as infrastructure rather than a product wrapper. It ships three surfaces — a native desktop app, a full CLI, and an API — built in Rust for portability, and it treats the Model Context Protocol as a first-class integration layer rather than a bolt-on, with 70+ documented extensions. For an agentic ecosystem picking durable components, three things stand out: it is genuinely provider-agnostic (15+ LLM providers, and it can ride your existing Claude/ChatGPT/Gemini subscription via ACP), it is Apache-2.0 open source with no pricing lock-in, and its governance now sits with a vendor-neutral foundation instead of a single company's roadmap. The security posture it advertises — prompt-injection detection, tool-permission controls, sandbox mode, an adversary reviewer — is more than most agents bother to name, though we assessed it from the public surface only and did not exercise those controls hands-on. That is the honest boundary on this review: the maturity signals (45k+ stars, 500+ contributors, an active extension ecosystem) are strong and externally corroborated, but Hlido reviewed the public surface, not a full hands-on run, so execution-grit and day-to-day reliability are inferred from the ecosystem rather than measured here. On what is visible, goose is a serious, well-architected, agent-first tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (84) because the public surface shows an unusually agent-native architecture (CLI + API + deep MCP + ACP), transparent open-source access (Apache-2.0, no pricing lock-in), a named security model, and strong third-party maturity signals (45k+ stars, 500+ contributors, Linux Foundation governance). Held below VITAL because this is a public-surface Tier-1 review — Hlido did not run goose hands-on, so its execution reliability, the effectiveness of its advertised security controls, and real-world task success are inferred from ecosystem signals rather than independently measured.",
+  "what_it_does_well": [
+    "Agent-native by design — first-class CLI and API, not just a chat UI",
+    "Deep, standards-based extensibility via the Model Context Protocol (70+ extensions)",
+    "Provider-agnostic: 15+ LLM providers, and can reuse existing Claude/ChatGPT/Gemini subscriptions via ACP",
+    "Open source (Apache-2.0), built in Rust, with no pricing or vendor lock-in",
+    "Vendor-neutral governance under the Linux Foundation's Agentic AI Foundation",
+    "Names a concrete security model (prompt-injection detection, tool permissions, sandbox mode, adversary reviewer)"
+  ],
+  "what_it_fails_at": [
+    "Security controls are advertised but were not exercised in this public-surface review",
+    "General-purpose framing means capability depth varies by task type and is not uniform",
+    "Local-first, provider-your-own-key model puts setup and cost management on the user",
+    "Real-world reliability and task-success rate are not independently measured on this surface",
+    "No first-party managed/hosted tier — everything runs on the user's machine and keys"
+  ],
+  "best_for": [
+    "Developers who want a local, open-source agent they can drive from the terminal or embed via API",
+    "Teams standardising on MCP who need deep, documented extension support",
+    "Users who want to reuse an existing LLM subscription instead of paying per-token separately",
+    "Organisations wary of single-vendor lock-in who value Linux Foundation governance"
+  ],
+  "not_recommended_for": [
+    "Non-technical users wanting a zero-setup, fully hosted assistant",
+    "Buyers who need a vendor SLA and managed hosting rather than self-run software",
+    "Workflows that require a turnkey UI over programmable, local-first tooling"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "aider is a focused terminal coding assistant; goose is a broader local agent platform (desktop + CLI + API) with a deep MCP extension model. Choose aider for tight git-native code editing; choose goose when you want a general-purpose, extensible local agent that also codes.",
+      "preferred_for_axis": "breadth-and-extensibility"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Native desktop app, full CLI, and API, built in Rust",
+      "source": "https://goose-docs.ai/",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Connects to 70+ extensions via the Model Context Protocol",
+      "source": "https://goose-docs.ai/",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Works with 15+ LLM providers and supports existing subscriptions via ACP",
+      "source": "https://goose-docs.ai/",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Open source (Apache-2.0), part of the Linux Foundation's Agentic AI Foundation",
+      "source": "https://github.com/block/goose",
+      "tested_at": "2026-08-03",
+      "verified": true
+    },
+    {
+      "claim": "Advertises prompt-injection detection, tool permissions, sandbox mode, adversary reviewer",
+      "source": "https://goose-docs.ai/",
+      "tested_at": "2026-08-03",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Strongly agent-native — drivable from a CLI, embeddable via API, and MCP-first with 70+ extensions plus ACP interop (works as an ACP server and can use ACP agents like Claude Code and Codex as providers). One of the more directly agent-integrable tools in the corpus.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-03T00:31:01Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your native open source AI agent. Desktop app, CLI, and API'",
+      "tested_at": "2026-08-03T00:31:01Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install goose' / 'Quickstart'",
+      "tested_at": "2026-08-03T00:31:01Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source, Apache-2.0, free download; user brings own LLM keys/subscription",
+      "tested_at": "2026-08-03T00:31:01Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature grid + 'See goose in action' + extensions directory linked",
+      "tested_at": "2026-08-03T00:31:01Z"
+    }
+  ],
+  "summary": "One of the most agent-native open-source agents on the market — Rust-built, MCP-deep, provider-agnostic, and now vendor-neutral under the Linux Foundation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-03",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-03",
+  "attestation_url": "/data/attestations/block-goose.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-03",
+    "source": "r-publish-editorial-enrich"
+  }
+}
