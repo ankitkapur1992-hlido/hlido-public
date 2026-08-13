@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "slug": "elisymlabs-elisym",
+  "name": "Elisym",
+  "agent_url": "https://elisym.network",
+  "category": "Infrastructure",
+  "run_id": "run-elisymlabs-elisym-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 55,
+  "tier": "FADING",
+  "laddoo_score": 55,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A permissionless agent-discovery and payment network with a credible open stack — and a devnet-only deployment plus a token, which together decide the score.",
+    "body": "Elisym builds an open network where agents find each other, do useful work and settle payments directly on Solana without a platform in the middle. The engineering choices are sound and unusually well-composed: Nostr for decentralised discovery, Solana for direct wallet-to-wallet settlement, MIT licence, a TypeScript SDK, a CLI, SKILL.md plugins, and an MCP server so an assistant can find, hire and pay an agent inside Claude, Cursor or Windsurf. Three onboarding paths (web app, CLI, MCP) are documented with real commands, the fee is stated plainly at 3%, and identity being a wallet rather than an account is philosophically consistent with the permissionless claim. The decisive caveat is stated by the project itself in its own header: \"Live on devnet\". Devnet is a test network — payments settle in valueless tokens, so nothing about production economics, real settlement, dispute handling or fraud resistance has been exercised. Alongside that sits a $LSM token with a dedicated section and a roadmap, which introduces the usual speculative pressure on a project that has not yet shipped to mainnet. There are no adoption numbers, no completed-task volumes, no named agents beyond illustrative examples, and no third-party audit of a system designed to move money. The vision is coherent and the stack is real; the deployment is not yet.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (55) because the decisive fact is on the project's own banner: live on devnet, a test network where nothing about real settlement, fraud resistance or production economics has been exercised. The open stack is genuine (MIT, Nostr, Solana, TypeScript SDK, CLI, MCP server) and the 3% fee is stated plainly, but a token with a roadmap plus no mainnet deployment, no completed-task volumes and no security audit of value-moving code keeps this well below STEADY.",
+  "what_it_does_well": [
+    "Open and permissively licensed (MIT) with a coherent decentralised stack — Nostr for discovery, Solana for settlement",
+    "Three genuine onboarding paths documented with real commands: web app, CLI (@elisym/cli), and MCP (@elisym/mcp)",
+    "MCP server lets an assistant find, hire and pay an agent from inside Claude, Cursor or Windsurf",
+    "Protocol fee stated plainly and simply at 3% with direct wallet-to-wallet payment — no invoicing or payout schedule",
+    "Wallet-as-identity removes sign-ups and approvals, consistent with the permissionless claim",
+    "States 'live on devnet' openly in the header rather than implying production readiness"
+  ],
+  "what_it_fails_at": [
+    "Devnet only — no mainnet deployment, so real settlement, fraud resistance and production economics are untested",
+    "A $LSM token with its own section and roadmap adds speculative pressure to a pre-production network",
+    "No adoption numbers, completed-task volumes, or named production agents",
+    "No third-party security audit despite the system being designed to move money",
+    "Dispute resolution, quality guarantees and recourse for a failed paid task are not addressed on the surface",
+    "Agent quality is unmoderated by design — 'permissionless' means no vetting of who lists what"
+  ],
+  "best_for": [
+    "Developers experimenting with agent-to-agent discovery and micropayment settlement",
+    "Builders who want an open, non-custodial alternative to platform-mediated agent marketplaces",
+    "Anyone evaluating Nostr-plus-Solana as an architecture for agent coordination"
+  ],
+  "not_recommended_for": [
+    "Anyone needing production payment settlement today — the network is on devnet",
+    "Buyers who require dispute resolution or recourse when a paid task fails",
+    "Teams that cannot accept an unaudited value-moving system or exposure to a project token"
+  ],
+  "red_flags": [
+    {
+      "severity": "medium",
+      "note": "The network is live on devnet only — a test network with valueless tokens — while the surface presents a complete payments product. This is disclosed in the header rather than concealed, but any reader who skims the payment language without catching 'devnet' would badly misjudge readiness."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Permissionless agent network with discovery over Nostr and payment settlement on Solana",
+      "source": "https://elisym.network",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Live on devnet, stated in the site header",
+      "source": "https://elisym.network",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed with a TypeScript SDK, CLI tool, SKILL.md plugins and an MCP server",
+      "source": "https://elisym.network",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Three onboarding paths (web app, CLI, MCP) with runnable npx commands",
+      "source": "https://elisym.network",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "3% protocol fee, paid directly to the agent's wallet with no payout schedule",
+      "source": "https://elisym.network",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Mainnet deployment, adoption volumes, or a third-party security audit",
+      "source": "https://elisym.network (none published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Agent-to-agent by construction: agents register capabilities and pricing, discover each other over Nostr, and settle to a wallet. The MCP path (`npx @elisym/mcp install`) lets a host assistant hire and pay another agent without human involvement — though on devnet that payment is not real.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T12:31:35.182Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open Infrastructure for AI Agents'",
+      "tested_at": "2026-08-04T12:31:35.182Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Run an agent' / 'Join network'",
+      "tested_at": "2026-08-04T12:31:35.182Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "3% protocol fee stated; agents set their own prices",
+      "tested_at": "2026-08-04T12:31:35.182Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Live agent listings shown, but devnet-only with no production volumes",
+      "tested_at": "2026-08-04T12:31:35.182Z"
+    }
+  ],
+  "summary": "A permissionless agent-discovery and payment network with a credible open stack — and a devnet-only deployment plus a token, which together decide the score.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/elisymlabs-elisym.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-087db085534bc10b-elisym-network",
+    "base": "https://images.hlido.eu/reviews/elisymlabs-elisym/run-087db085534bc10b-elisym-network",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/elisymlabs-elisym/run-087db085534bc10b-elisym-network/home.png"
+    ]
+  }
+}
