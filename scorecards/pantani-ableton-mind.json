@@ -1,0 +1,167 @@
+{
+  "schema_version": "2.0",
+  "slug": "pantani-ableton-mind",
+  "name": "ableton-mind",
+  "agent_url": "https://pantani.github.io/ableton-mind/",
+  "category": "Specialized verticals",
+  "run_id": "run-pantani-ableton-mind-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An MCP server for Ableton Live that solves the hard part properly — it re-reads Live's state and diffs against intent instead of assuming the edit worked.",
+    "body": "ableton-mind lets you describe music in natural language and have an assistant build it inside Ableton Live: \"128 BPM tech house with a punchy kick, rolling bassline, swung hi-hats\" becomes an actual arrangement, read back with a report of what changed. Two design decisions lift this above the usual creative-tool MCP wrapper. First, the verify loop: after every batch of mutations the server re-reads Live's state and diffs it against intent, and tools return `{ ok, verified, diff }` rather than a bare success — that is exactly the discipline most agent-to-application bridges skip, and it is the difference between an assistant that edits your project and one that claims to. Second, the embedded knowledge base: 55+ Live 12 native devices with full parameter schemas (name, range, default, unit), so the model never guesses a parameter name like \"Osc 1 Position\". Reactive listeners turn Live Object Model property changes into MCP notifications, so the assistant can see the user play or change tempo. Status is stated precisely and modestly — 36 tools today against a stated target of ~180 across 21 LOM domains, 14 recipes, verify loop covering 23/23 mutation tools — and it distinguishes shipped distribution channels from ones pending an admin flow. Requires Ableton Live, so the addressable audience is narrow by design. No adoption figures. Reviewed from the public surface, not run against a real Live install.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because the engineering addresses the failure mode that matters for an agent driving a desktop application: a verify loop that re-reads state and returns a diff, plus device parameter schemas so the model works from real names instead of guesses. Precise, non-inflated status reporting (36 of a targeted ~180 tools) adds credibility. Held below VITAL by the absence of adoption evidence, a hard dependency on Ableton Live, and the fact that we could not exercise it against a real install.",
+  "what_it_does_well": [
+    "Verify loop: re-reads Live state after every batch and returns { ok, verified, diff }, not just success",
+    "Embedded knowledge base of 55+ Live 12 devices with full parameter schemas — no guessed parameter names",
+    "Reactive listeners turn Live Object Model changes into MCP notifications, so the assistant sees user actions",
+    "Honest, specific status: 36 tools today against a stated ~180 target, rather than implying completeness",
+    "14 declarative recipes across drums, bass, chords, racks, arrangement, mixing and performance",
+    "Distinguishes shipped distribution channels from ones still pending an admin publish flow"
+  ],
+  "what_it_fails_at": [
+    "Hard dependency on Ableton Live — narrow addressable audience by construction",
+    "36 of a targeted ~180 tools: most of the Live Object Model surface is not covered yet",
+    "No adoption figures, user counts, or third-party validation",
+    "Not exercised against a real Live install, so musical output quality is unassessed",
+    "Creative-quality outcomes are inherently subjective and cannot be scored from a public surface"
+  ],
+  "best_for": [
+    "Ableton Live users who want to prototype arrangements conversationally",
+    "Producers comfortable with an assistant making verified, diffable changes to a project",
+    "Developers building on the Live Object Model who want a documented MCP surface"
+  ],
+  "not_recommended_for": [
+    "Anyone not using Ableton Live",
+    "Producers needing full LOM coverage today",
+    "Work where an unintended edit to a project file would be costly and un-reviewed"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "pantani-tdmcp",
+      "note": "Same author's TouchDesigner equivalent — same create/verify/preview philosophy applied to a different creative tool."
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "36 MCP tools today, targeting ~180 across 21 Live Object Model domains",
+      "source": "https://pantani.github.io/ableton-mind/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Verify loop: tools return { ok, verified, diff } after re-reading state",
+      "source": "https://pantani.github.io/ableton-mind/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "55+ Live 12 device parameter schemas embedded (name, range, default, unit)",
+      "source": "https://pantani.github.io/ableton-mind/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Reactive listeners surface LOM changes as MCP notifications",
+      "source": "https://pantani.github.io/ableton-mind/",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Adoption figures or third-party validation",
+      "source": "https://pantani.github.io/ableton-mind/ (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "An MCP server first: 36 tools, 5 prompts and 3 MCP resources, plus notifications back to the client. The agent is the operator; the human describes the intent.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-07T08:05:58.592Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The definitive MCP for Ableton Live'",
+      "tested_at": "2026-08-07T08:05:58.592Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'I'm an artist' / 'Developer reference'",
+      "tested_at": "2026-08-07T08:05:58.592Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source; source, npm, .mcpb, Docker and MCP Registry paths",
+      "tested_at": "2026-08-07T08:05:58.592Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Prompt cookbook and precise status reporting; no third-party validation",
+      "tested_at": "2026-08-07T08:05:58.592Z"
+    }
+  ],
+  "summary": "An MCP server for Ableton Live that solves the hard part properly — it re-reads Live's state and diffs against intent instead of assuming the edit worked.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/pantani-ableton-mind.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-9767a44bb54349be-pantani-github-io",
+    "base": "https://images.hlido.eu/reviews/pantani-ableton-mind/run-9767a44bb54349be-pantani-github-io",
+    "files": [
+      "home.png",
+      "page_VPContent.png",
+      "pageguide_what-is-ableton-mind.png",
+      "pageguide_prompt-cookbook.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/pantani-ableton-mind/run-9767a44bb54349be-pantani-github-io/home.png",
+      "https://images.hlido.eu/reviews/pantani-ableton-mind/run-9767a44bb54349be-pantani-github-io/page_VPContent.png",
+      "https://images.hlido.eu/reviews/pantani-ableton-mind/run-9767a44bb54349be-pantani-github-io/pageguide_what-is-ableton-mind.png",
+      "https://images.hlido.eu/reviews/pantani-ableton-mind/run-9767a44bb54349be-pantani-github-io/pageguide_prompt-cookbook.png"
+    ]
+  }
+}
