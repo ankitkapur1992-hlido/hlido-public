@@ -1,0 +1,197 @@
+{
+  "schema_version": "2.0",
+  "slug": "tsouth89-toolport",
+  "name": "Toolport",
+  "agent_url": "https://toolport.app",
+  "category": "Infrastructure",
+  "run_id": "run-fcd8208d3b2f3434-toolport-app",
+  "run_at": "2026-08-09T12:31:54.398Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
+  "tier": "STEADY",
+  "laddoo_score": 84,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A local MCP gateway that does the two things this layer should do — collapse per-client config and stop tool definitions eating the context window — and it publishes a reproducible benchmark for the second claim.",
+    "body": "Toolport sits between every MCP client on a machine and every MCP server, so a server is configured and authenticated once and then toggled on in Claude, Cursor, VS Code, Windsurf, Codex or Antigravity without restarts. The headline technical claim is context reduction: instead of each server dumping its full tool list into the prompt, Toolport exposes a handful of meta-tools the agent searches on demand. The surface quantifies it — 23,698 tool-definition tokens on one request without, 886 with, and a stated 74–91% reduction across servers 'graded at the same task success' — and, unusually for this category, links a reproducible benchmark rather than asking to be believed. Grading for task success is the right control; a token saving that degrades answers is not a saving. The security posture is the other reason to take this seriously: API keys live in the OS keychain and are injected at runtime rather than sitting in config files, and every tool is fingerprinted so a definition changing after approval (a rug pull) or hidden instructions inside a description (tool poisoning) get flagged locally and by default. Those are the two live attack patterns against MCP, and defending them at the gateway is the correct place. It is MIT-licensed, cross-platform, needs no account or cloud, and reports per-server latency, error rates and an audit trail. The caution is maturity rather than design: 138 GitHub stars, no version or changelog on the captured page, no named production deployments, and — for a component that every tool call now passes through — no stated availability or overhead figures.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (84) for correctly identifying both problems at this layer (config duplication and context cost), answering them with on-demand meta-tools rather than aggregation alone, defending the two real MCP attack patterns (rug pulls and tool poisoning) locally and by default, keeping secrets in the OS keychain, and — the part that earns the most credit — publishing a reproducible benchmark graded at equal task success instead of a bare token number. Held below VITAL by early adoption (138 stars), no version or changelog on the surface, and no availability or overhead figures for a component that is now in the path of every tool call.",
+  "what_it_does_well": [
+    "One gateway, one config: authenticate a server once and toggle it in every agent with no restarts",
+    "On-demand meta-tools keep tool definitions out of context — a stated 74–91% token reduction, with a linked reproducible benchmark",
+    "Benchmark is graded at equal task success, not on token count alone",
+    "Tool fingerprinting flags rug pulls and tool poisoning locally, on by default — the two live MCP attack patterns",
+    "API keys held in the OS keychain and injected at runtime, never written to a config file",
+    "Per-tool governance: one switch hides every destructive tool from every agent",
+    "MIT-licensed, cross-platform, no account and no cloud dependency",
+    "Live observability — per-server latency, error rates and an audit trail"
+  ],
+  "what_it_fails_at": [
+    "Early adoption — 138 GitHub stars and no named production deployments on the surface",
+    "No version or changelog published on the captured page",
+    "No availability, overhead or latency figures for the gateway itself, which now sits in every tool call",
+    "Introduces a single point of failure between every agent and every server",
+    "Not tested hands-on by Hlido — the context-reduction and integrity-check claims are the ones that most need measuring"
+  ],
+  "best_for": [
+    "Developers running several MCP servers across more than one AI client",
+    "Long agent loops where tool-definition tokens are consuming meaningful context budget",
+    "Anyone who wants rug-pull and tool-poisoning detection without sending anything to a vendor"
+  ],
+  "not_recommended_for": [
+    "Setups with a single MCP server, where the gateway adds a dependency and little benefit",
+    "Teams that require a stated availability commitment for an always-in-path component",
+    "Anyone who cannot accept a new local single point of failure"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Free, open-source (MIT) local MCP gateway for Windows, macOS and Linux with no account or cloud",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Works with Claude, Cursor, VS Code, Windsurf, Codex and Antigravity",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Tool-definition tokens 23,698 without vs 886 with; 74–91% reduction across servers graded at equal task success",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "A reproducible benchmark is published for the token-reduction claim",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Fingerprints every tool and flags rug pulls and tool poisoning, locally and on by default",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "API keys stored in the OS keychain and injected at runtime",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "138 GitHub stars at capture",
+      "source": "https://toolport.app",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Version, changelog, or named production deployment",
+      "source": "https://toolport.app (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "The product IS the agent integration layer: a local MCP gateway every MCP-aware client connects to on one port, exposing searchable meta-tools instead of full tool lists. Agents are the only consumer.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'All your MCP servers. One port.'",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download' plus 'Star on GitHub'",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT); Teams tier referenced separately",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Features, Agents, Teams, Security and supported-agent pages",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "quantified_claim_supported",
+      "pass": true,
+      "required": false,
+      "evidence": "74–91% token reduction with a linked reproducible benchmark, graded at equal task success",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No named production deployments or independent review on the surface",
+      "tested_at": "2026-08-09T12:31:54.398Z"
+    }
+  ],
+  "summary": "A local MCP gateway that does the two things this layer should do — collapse per-client config and stop tool definitions eating the context window — and it publishes a reproducible benchmark for the second claim.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/tsouth89-toolport.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Infrastructure gateway; does not generate synthetic media, so Art-50(4) marking is out of scope."
+  },
+  "evidence_images": {
+    "run_id": "run-fcd8208d3b2f3434-toolport-app",
+    "base": "https://images.hlido.eu/reviews/tsouth89-toolport/run-fcd8208d3b2f3434-toolport-app",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page__features.png",
+      "page_clients_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/tsouth89-toolport/run-fcd8208d3b2f3434-toolport-app/home.png",
+      "https://images.hlido.eu/reviews/tsouth89-toolport/run-fcd8208d3b2f3434-toolport-app/page_.png",
+      "https://images.hlido.eu/reviews/tsouth89-toolport/run-fcd8208d3b2f3434-toolport-app/page__features.png",
+      "https://images.hlido.eu/reviews/tsouth89-toolport/run-fcd8208d3b2f3434-toolport-app/page_clients_.png"
+    ]
+  }
+}
