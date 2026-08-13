@@ -1,0 +1,184 @@
+{
+  "schema_version": "2.0",
+  "slug": "quokkapix-quokkapix-mcp",
+  "name": "QuokkaPix MCP Runner",
+  "agent_url": "https://quokkapix.com/mcp-runner.html",
+  "category": "Image & Design",
+  "run_id": "run-4991e8e757847b97-quokkapix-com",
+  "run_at": "2026-08-09T08:06:54.560Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Lets a cloud AI client drive local image processing without the images ever leaving the machine — and is unusually precise about exactly what the remote control plane does and does not carry.",
+    "body": "QuokkaPix MCP Runner solves a specific, real problem: you want Claude on the web to process images that are on your computer, and you do not want to upload them. The adapter runs locally over stdio, opens QuokkaPix in a local browser, feeds files through the browser file input, applies a recipe or a settings payload, and writes `quokkapix-result.json`. An OAuth-protected remote bridge lets cloud MCP clients participate while execution stays local. What raises this above the usual privacy assertion is the specificity: the page states that the control plane relays settings, relative file names, status and result metadata, that it has no image upload endpoint, and that it does not relay source or output image bytes — a claim precise enough to be falsifiable, which is the opposite of the 'no cloud' hand-waving common in this category. Scopes are separated too (`mcp:tools` for read tools, `bridge:execute` additionally required for processing), and `--reset` revokes a previous device before pairing a replacement. Setup coverage is practical: Claude Desktop, Cursor, a Windows `cmd /c` fallback for clients that cannot resolve npx, and generic guidance for any local stdio client including LM Studio and Ollama wrappers. The weaknesses are structural rather than dishonest. The architecture is a browser-automation adapter, so it inherits that fragility — a UI change in QuokkaPix can break the runner in ways an API would not. And there is no version, changelog, adoption evidence or third-party audit of the privacy boundary on the captured surface, which matters precisely because the privacy boundary is the product.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a genuinely useful architecture (cloud client, local execution, images never uploaded) described with falsifiable specificity about what the control plane carries, sensible scope separation and device revocation, and thorough per-client setup including a Windows fallback. Held below VITAL because it drives a browser UI rather than an API — inheriting that brittleness — and because the privacy boundary that is the whole value proposition has no third-party audit, version or adoption evidence behind it.",
+  "what_it_does_well": [
+    "Cloud MCP clients can drive processing while every image operation runs on the local machine",
+    "States precisely what the control plane relays — settings, relative file names, status, result metadata — and that it carries no image bytes and has no upload endpoint",
+    "Scope separation: mcp:tools for read tools, bridge:execute additionally required for processing and staged unlocks",
+    "`--reset` revokes the previous device before pairing a replacement",
+    "Per-client setup for Claude Desktop and Cursor, plus a Windows `cmd /c` fallback when npx cannot be resolved",
+    "Works with any local stdio MCP client, including LM Studio and Ollama wrappers",
+    "Explicitly states what it is not — 'This is not a hosted image-processing API'"
+  ],
+  "what_it_fails_at": [
+    "Drives a browser UI through file inputs rather than an API — a front-end change can break the runner",
+    "The privacy boundary is the product, yet has no third-party audit or attestation",
+    "No version, changelog or adoption evidence on the captured surface",
+    "Requires a local browser session, so it does not fit headless or server environments",
+    "Not tested hands-on by Hlido — the 'no image bytes relayed' claim is the one that most needs independent verification"
+  ],
+  "best_for": [
+    "People who want a cloud AI client to process local images without uploading them",
+    "Batch image work driven from Claude Desktop or Cursor on a workstation",
+    "Anyone whose constraint is data residency rather than throughput"
+  ],
+  "not_recommended_for": [
+    "Headless servers or CI — it needs a local browser session",
+    "High-volume or latency-sensitive pipelines, where a hosted image API is the right tool",
+    "Anyone who needs the privacy boundary independently audited before trusting it"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Local stdio MCP adapter processes images in a local browser; an OAuth-protected remote bridge lets cloud clients drive it",
+      "source": "https://quokkapix.com/mcp-runner.html",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Control plane relays settings, relative file names, status and result metadata; no image upload endpoint; does not relay source or output image bytes",
+      "source": "https://quokkapix.com/mcp-runner.html",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "mcp:tools scope permits read tools; processing and staged unlocks additionally require bridge:execute",
+      "source": "https://quokkapix.com/mcp-runner.html",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Documented Claude Desktop and Cursor config plus a Windows `cmd /c` npx fallback",
+      "source": "https://quokkapix.com/mcp-runner.html",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Exposes tools including list_recipes, process_images and process_with_settings",
+      "source": "https://quokkapix.com/mcp-runner.html",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Third-party audit of the stated privacy boundary",
+      "source": "https://quokkapix.com/mcp-runner.html (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Version, changelog or adoption evidence",
+      "source": "https://quokkapix.com/mcp-runner.html (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-facing by design: `npx quokkapix-mcp` runs as a local stdio MCP server, or `bridge` mode exposes an OAuth-protected remote endpoint at https://quokkapix.com/mcp for cloud clients. Tools such as list_recipes, process_images and process_with_settings are called directly by the agent, which must pass real local file paths.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Use QuokkaPix through local stdio or an OAuth-protected remote MCP bridge while image processing remains on your computer'",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "`npx quokkapix-mcp bridge` command plus GitHub, npm and Glama links",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "npm package; no pricing surface on this page",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Per-client setup for Claude Desktop, Cursor, Windows fallback and generic local clients",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "claims_specific",
+      "pass": true,
+      "required": false,
+      "evidence": "Names exactly what the control plane relays and states it carries no image bytes",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No audit of the privacy boundary, no adoption evidence",
+      "tested_at": "2026-08-09T08:06:54.560Z"
+    }
+  ],
+  "summary": "Lets a cloud AI client drive local image processing without the images ever leaving the machine — and is unusually precise about exactly what the remote control plane does and does not carry.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/quokkapix-quokkapix-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Image processing rather than generative synthesis on the captured surface; no marking or provenance statement published."
+  },
+  "evidence_images": {
+    "run_id": "run-4991e8e757847b97-quokkapix-com",
+    "base": "https://images.hlido.eu/reviews/quokkapix-quokkapix-mcp/run-4991e8e757847b97-quokkapix-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/quokkapix-quokkapix-mcp/run-4991e8e757847b97-quokkapix-com/home.png"
+    ]
+  }
+}
