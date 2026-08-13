@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "data-everything-mcp-server-templates",
+  "name": "MCP Server Templates",
+  "agent_url": "https://data-everything.github.io/mcp-server-templates/",
+  "category": "Infrastructure",
+  "run_id": "run-data-everything-mcp-server-templates-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 48,
+  "tier": "FADING",
+  "laddoo_score": 48,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Explicitly superseded by its own successor — the docs open by telling you to migrate. Reviewed as what it now is: a legacy package with a clear exit path.",
+    "body": "MCP Server Templates offers Docker-powered, zero-configuration deployment of Model Context Protocol servers with a CLI and a template library. The dominant fact about it is announced by the project before anything else: the documentation opens with \"This project has evolved into MCP Platform\", labels itself Legacy Documentation, and gives the migration in two lines — `pip uninstall mcp-templates && pip install mcp-platform`, then replace `mcpt` with `mcpp` in your commands. We score it as what it is today rather than what it was, and a superseded package is a poor choice for new work no matter how sound the original design. That said, the deprecation is handled about as well as deprecations get: the successor is named, linked and documented; the migration is two commands rather than a rewrite; the legacy docs remain published instead of being deleted out from under existing users; and the naming change is explained rather than just imposed. Some content is visibly stale — a features section still headed \"Mid-August 2025 Release\" — and the modest repository signals (21 stars, 5 forks on the captured page) suggest this never reached wide adoption before moving on. Anyone landing here should follow the project's own advice and go to MCP Platform; the reason to record this entry at all is so that agents and people who find the legacy package know it is legacy.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (48) because the project itself declares it superseded on the first line of its own documentation and directs readers to MCP Platform. The deprecation is handled well — successor named and linked, two-command migration, legacy docs left in place — which keeps it from scoring lower, but a package whose maintainer says to install something else cannot be recommended for new work. Confidence is medium rather than low here: the central finding is stated unambiguously by the vendor.",
+  "what_it_does_well": [
+    "Deprecation is announced clearly and immediately rather than left for users to discover",
+    "Successor (MCP Platform) is named, linked, and separately documented",
+    "Migration is genuinely two commands, not a rewrite: uninstall/install, then mcpt → mcpp",
+    "Legacy documentation is left published rather than deleted, so existing users are not stranded",
+    "The rename is explained (better reflects the platform's capabilities) rather than imposed silently",
+    "Original design is sound — Docker-powered zero-configuration deployment with a real CLI and template library"
+  ],
+  "what_it_fails_at": [
+    "Superseded by MCP Platform — the vendor's own first instruction is to migrate away",
+    "Content is visibly stale, including a features section still headed 'Mid-August 2025 Release'",
+    "Modest repository signals (21 stars, 5 forks on the captured page) suggest limited adoption before the move",
+    "No security or maintenance commitment stated for the legacy package now that the successor exists",
+    "Anything learned here has to be re-learned against MCP Platform's documentation"
+  ],
+  "best_for": [
+    "Existing mcp-templates users who need the legacy reference while migrating",
+    "Anyone tracing why a `mcpt` command in an old runbook no longer matches current documentation"
+  ],
+  "not_recommended_for": [
+    "New projects — use MCP Platform, as the vendor instructs",
+    "Production deployments needing an actively maintained package with a security commitment",
+    "Anyone evaluating MCP deployment tooling for the first time"
+  ],
+  "red_flags": [
+    {
+      "severity": "medium",
+      "note": "The package is superseded. Its own documentation opens by telling readers to migrate to MCP Platform. Flagged so that anyone (or any agent) arriving at the legacy docs from a search result does not adopt it by mistake."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Project declares it has evolved into MCP Platform, on the first line of its documentation",
+      "source": "https://data-everything.github.io/mcp-server-templates/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Documentation is explicitly labelled Legacy Documentation",
+      "source": "https://data-everything.github.io/mcp-server-templates/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Two-command migration: pip uninstall mcp-templates && pip install mcp-platform, then mcpt → mcpp",
+      "source": "https://data-everything.github.io/mcp-server-templates/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Docker-powered zero-configuration MCP server deployment with a CLI and template library",
+      "source": "https://data-everything.github.io/mcp-server-templates/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Stale content retained, including a 'Mid-August 2025 Release' features heading",
+      "source": "https://data-everything.github.io/mcp-server-templates/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A CLI and templates for deploying MCP servers — infrastructure an agent ends up running behind, not a surface an agent calls. New integrations should target MCP Platform instead.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T04:31:43.834Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Production-ready MCP server templates for instant, zero-configuration deployment'",
+      "tested_at": "2026-08-05T04:31:43.834Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Installation and quick-start commands present",
+      "tested_at": "2026-08-05T04:31:43.834Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source self-hosted, with a commercial managed option (MCP Platform)",
+      "tested_at": "2026-08-05T04:31:43.834Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Documentation only; repository signals modest and content partly stale",
+      "tested_at": "2026-08-05T04:31:43.834Z"
+    }
+  ],
+  "summary": "Explicitly superseded by its own successor — the docs open by telling you to migrate. Reviewed as what it now is: a legacy package with a clear exit path.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/data-everything-mcp-server-templates.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-a9c1e8647b3d225e-data-everything-github-io",
+    "base": "https://images.hlido.eu/reviews/data-everything-mcp-server-templates/run-a9c1e8647b3d225e-data-everything-github-io",
+    "files": [
+      "home.png",
+      "page_this-project-has-evolved-into-mcp-platform.png",
+      "page_q_.png",
+      "pagegetting-started_installation_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/data-everything-mcp-server-templates/run-a9c1e8647b3d225e-data-everything-github-io/home.png",
+      "https://images.hlido.eu/reviews/data-everything-mcp-server-templates/run-a9c1e8647b3d225e-data-everything-github-io/page_this-project-has-evolved-into-mcp-platform.png",
+      "https://images.hlido.eu/reviews/data-everything-mcp-server-templates/run-a9c1e8647b3d225e-data-everything-github-io/page_q_.png",
+      "https://images.hlido.eu/reviews/data-everything-mcp-server-templates/run-a9c1e8647b3d225e-data-everything-github-io/pagegetting-started_installation_.png"
+    ]
+  }
+}
