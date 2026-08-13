@@ -1,0 +1,184 @@
+{
+  "schema_version": "2.0",
+  "slug": "cafferychen777-chatspatial",
+  "name": "ChatSpatial",
+  "agent_url": "https://docs.cafferyang.com/",
+  "category": "Specialized verticals",
+  "run_id": "run-27ffd8264e9bf460-docs-cafferyang-com",
+  "run_at": "2026-08-09T00:32:03.437Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Twenty schema-validated MCP tools over 66 spatial-transcriptomics methods, and it is careful to explain that the tools are the interface and the methods are parameters — a distinction most wrappers blur.",
+    "body": "ChatSpatial puts spatial transcriptomics analysis behind natural language for any MCP-compatible client, covering 10x Visium, Xenium, Slide-seq and MERFISH. The architectural choice worth noting is stated plainly on the landing page: 20 schema-validated MCP tools orchestrate 66 methods across 15 analytical categories, with the tools as the user-facing interface and the methods selected through tool parameters. That is the right shape — exposing 66 tools would flood an agent's context and make selection unreliable, and saying so explicitly suggests the tool surface was designed rather than generated. Schema validation on the tool boundary matters more than usual here, because the failure mode in scientific analysis is a plausible wrong answer rather than an error. Documentation is organised by intent rather than by module — separate paths for new users, existing users, users whose run failed, and contributors — with a methods reference giving exact parameters and defaults, a configuration guide, and a Docker/GHCR image so the notoriously painful Python dependency resolution can be skipped. What the captured surface does not carry is any validation of analytical correctness: no benchmark, no comparison against reference implementations of the 66 wrapped methods, no named users or citations, and no version. For a tool whose output is scientific rather than cosmetic, that absence is the main thing holding the score down.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) for a deliberately designed agent surface — 20 schema-validated tools orchestrating 66 methods by parameter rather than 66 exposed tools — intent-organised documentation with a full methods reference, and a Docker/GHCR path that avoids Python dependency resolution. Held down by the complete absence of correctness evidence: no benchmark, no comparison against reference implementations, no citations or named users, and no version on the captured surface, in a domain where a plausible wrong answer is the real risk.",
+  "what_it_does_well": [
+    "20 schema-validated MCP tools rather than 66 exposed ones — designed for agent tool-selection reliability",
+    "States explicitly that tools are the interface and methods are selected by parameter",
+    "Covers 66 methods across 15 analytical categories and the major platforms (10x Visium, Xenium, Slide-seq, MERFISH)",
+    "Documentation organised by user intent — new, running, failing, contributing",
+    "Methods reference gives exact parameters and defaults rather than prose",
+    "Docker / GHCR image avoids local Python dependency resolution",
+    "Dedicated troubleshooting and FAQ sections"
+  ],
+  "what_it_fails_at": [
+    "No benchmark or validation of analytical correctness against reference implementations",
+    "No citations, named users or institutional adoption on the captured surface",
+    "No version or changelog published",
+    "Natural-language selection among 66 methods is exactly where a wrong-but-plausible choice does scientific damage, and nothing on the surface addresses that risk",
+    "Not tested hands-on by Hlido"
+  ],
+  "best_for": [
+    "Spatial-transcriptomics researchers who want to drive standard analyses from an MCP client without writing code",
+    "Labs already using 10x Visium, Xenium, Slide-seq or MERFISH data",
+    "Anyone who wants the Docker path rather than resolving a scientific Python stack"
+  ],
+  "not_recommended_for": [
+    "Published research where each analytical step must be independently reproducible and cited",
+    "Users who cannot verify that the method the agent selected was the right one",
+    "Anyone needing validation evidence before adopting an analysis tool"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server for spatial transcriptomics analysis via natural language",
+      "source": "https://docs.cafferyang.com/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "20 schema-validated MCP tools orchestrating 66 methods across 15 analytical categories",
+      "source": "https://docs.cafferyang.com/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Tools are the user-facing interface; methods are selected through tool parameters",
+      "source": "https://docs.cafferyang.com/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Supports 10x Visium, Xenium, Slide-seq and MERFISH",
+      "source": "https://docs.cafferyang.com/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Docker / GHCR image documented to avoid local dependency resolution",
+      "source": "https://docs.cafferyang.com/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Validation of analytical correctness, citations or named users",
+      "source": "https://docs.cafferyang.com/ (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server consumed by any MCP-compatible client, with a documented configuration guide and a Docker/GHCR image. The 20-tool surface is explicitly sized for agent tool selection rather than exposing every underlying method.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'MCP server for spatial transcriptomics analysis via natural language'",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Installation → Configuration → Quick Start path",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source with GHCR image; no pricing surface",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Getting started, concepts, examples, methods reference, configuration, troubleshooting, FAQ",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "agent_interface_documented",
+      "pass": true,
+      "required": false,
+      "evidence": "20 schema-validated MCP tools with a configuration guide",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No benchmark, citation or named adopter",
+      "tested_at": "2026-08-09T00:32:03.437Z"
+    }
+  ],
+  "summary": "Twenty schema-validated MCP tools over 66 spatial-transcriptomics methods, and it is careful to explain that the tools are the interface and the methods are parameters — a distinction most wrappers blur.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/cafferychen777-chatspatial.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Scientific analysis tool over user-supplied data; not a generator of synthetic media."
+  },
+  "evidence_images": {
+    "run_id": "run-27ffd8264e9bf460-docs-cafferyang-com",
+    "base": "https://images.hlido.eu/reviews/cafferychen777-chatspatial/run-27ffd8264e9bf460-docs-cafferyang-com",
+    "files": [
+      "home.png",
+      "page_furo-main-content.png",
+      "page_.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/cafferychen777-chatspatial/run-27ffd8264e9bf460-docs-cafferyang-com/home.png",
+      "https://images.hlido.eu/reviews/cafferychen777-chatspatial/run-27ffd8264e9bf460-docs-cafferyang-com/page_furo-main-content.png",
+      "https://images.hlido.eu/reviews/cafferychen777-chatspatial/run-27ffd8264e9bf460-docs-cafferyang-com/page_.png",
+      "https://images.hlido.eu/reviews/cafferychen777-chatspatial/run-27ffd8264e9bf460-docs-cafferyang-com/page_.png"
+    ]
+  }
+}
