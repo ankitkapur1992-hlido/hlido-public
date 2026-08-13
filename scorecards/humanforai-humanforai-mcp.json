@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "humanforai-humanforai-mcp",
+  "name": "Human For AI",
+  "agent_url": "https://humanforai.dev",
+  "category": "Specialized verticals",
+  "run_id": "run-humanforai-humanforai-mcp-v2-2026-08-07",
+  "run_at": "2026-08-07T11:15:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 66,
+  "tier": "FADING",
+  "laddoo_score": 66,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "One person, published as an API for agents to hire — an genuinely original inversion, executed with unusually complete machine-readable plumbing and no pretence about scale.",
+    "body": "Human For AI inverts the usual arrangement: instead of an agent doing work for a human, it publishes a single real human in machine-readable form so agents can discover them and request real-world help — verification, testing, research, human judgment, physical-world execution. The execution of the machine-readable layer is better than most funded companies manage: `/.well-known/agent.json` (interfaces, task types, response expectations, pricing, trust policy), `/.well-known/human.json` (role, languages, background, expertise, availability, **boundaries**), `/.well-known/capabilities.json` (inputs required, output formats, example tasks, **limitations**), `/.well-known/services.json`, a root `/agent.json` for agents that look there first, and a full OpenAPI 3.0 spec. Publishing boundaries and limitations as first-class machine-readable fields is a genuinely thoughtful touch — it lets an agent rule the service out without a wasted round trip. The honesty is total and, unusually, is the product's strongest asset: \"1 verified human\", \"first response < 12 hours\", \"free for now\". Nothing is inflated. What it cannot escape is the arithmetic: capacity is one person, so this cannot scale, has no redundancy, and offers no availability guarantee; \"free for now\" means the commercial model is undecided; and there is no track record of completed tasks, no reviews, and no dispute or quality process. We score it as what it is — a well-built, single-operator experiment in an interesting direction — not as infrastructure.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-07",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) — an original idea with exceptionally complete machine-readable plumbing (five well-known endpoints plus OpenAPI, with boundaries and limitations published as first-class fields) and total honesty about scale. It sits at FADING for reasons no amount of polish can fix from a public surface: capacity is literally one person, there is no redundancy or availability guarantee, pricing is undecided, and there is no record of completed work. Confidence is medium — the claims are unusually checkable because the operator makes no large ones.",
+  "what_it_does_well": [
+    "Genuinely original inversion — a human published as an agent-callable service",
+    "Five machine-readable endpoints plus a full OpenAPI 3.0 spec, all discoverable from /.well-known/",
+    "Publishes boundaries and limitations as first-class machine-readable fields so agents can self-exclude cheaply",
+    "States capacity plainly — '1 verified human', '< 12 hours first response' — with no inflation",
+    "Concrete task types (real-world verification, testing, research, judgment, physical execution)",
+    "Both REST and MCP interfaces advertised in the manifest"
+  ],
+  "what_it_fails_at": [
+    "Capacity is one person: no scale, no redundancy, no availability guarantee",
+    "'Free for now' — the commercial model is undecided, so continuity is unclear",
+    "No completed-task record, reviews, or third-party validation",
+    "No dispute, quality, or recourse process for a task done badly",
+    "A single operator's availability is a single point of failure for anything depending on it",
+    "Trust in the individual cannot be assessed from a public surface"
+  ],
+  "best_for": [
+    "Agent developers prototyping human-in-the-loop steps who need a real callable endpoint",
+    "One-off real-world verification tasks where a person must physically check something",
+    "Research into agent-to-human task delegation patterns"
+  ],
+  "not_recommended_for": [
+    "Any production workflow needing throughput, redundancy or an SLA",
+    "Time-critical tasks — first response is stated as up to 12 hours",
+    "Work requiring vetted, contractual, or insured human service delivery"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "A single human published as a machine-discoverable endpoint for AI agents",
+      "source": "https://humanforai.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "/.well-known/agent.json, human.json, capabilities.json, services.json plus /agent.json and /openapi.json",
+      "source": "https://humanforai.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Boundaries and limitations published as first-class machine-readable fields",
+      "source": "https://humanforai.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Stated capacity: 1 verified human, first response < 12 hours, free for now",
+      "source": "https://humanforai.dev",
+      "tested_at": "2026-08-07",
+      "verified": true
+    },
+    {
+      "claim": "Completed-task record, reviews, or dispute process",
+      "source": "https://humanforai.dev (none published)",
+      "tested_at": "2026-08-07",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-first in the strictest sense: the manifest advertises rest and mcp interfaces, tasks are submitted by POST, and the whole surface is duplicated as JSON. A human is the backend.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-06T16:32:51.833Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'A human endpoint for AI agents.'",
+      "tested_at": "2026-08-06T16:32:51.833Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Submit a task' / 'Read the API docs'",
+      "tested_at": "2026-08-06T16:32:51.833Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "'free for now' — model undecided",
+      "tested_at": "2026-08-06T16:32:51.833Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Worked agent session shown; no completed-task record",
+      "tested_at": "2026-08-06T16:32:51.833Z"
+    }
+  ],
+  "summary": "One person, published as an API for agents to hire — an genuinely original inversion, executed with unusually complete machine-readable plumbing and no pretence about scale.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-07",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-07",
+  "attestation_url": "/data/attestations/humanforai-humanforai-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-07",
+    "source": "backlog-clear-2026-08-07"
+  },
+  "evidence_images": {
+    "run_id": "run-7fff714429aa0a43-humanforai-dev",
+    "base": "https://images.hlido.eu/reviews/humanforai-humanforai-mcp/run-7fff714429aa0a43-humanforai-dev",
+    "files": [
+      "home.png",
+      "page__main.png",
+      "page_.png",
+      "page_services.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/humanforai-humanforai-mcp/run-7fff714429aa0a43-humanforai-dev/home.png",
+      "https://images.hlido.eu/reviews/humanforai-humanforai-mcp/run-7fff714429aa0a43-humanforai-dev/page__main.png",
+      "https://images.hlido.eu/reviews/humanforai-humanforai-mcp/run-7fff714429aa0a43-humanforai-dev/page_.png",
+      "https://images.hlido.eu/reviews/humanforai-humanforai-mcp/run-7fff714429aa0a43-humanforai-dev/page_services.png"
+    ]
+  }
+}
