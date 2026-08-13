@@ -1,0 +1,190 @@
+{
+  "schema_version": "2.0",
+  "slug": "genomoncology-biomcp",
+  "name": "BioMCP",
+  "agent_url": "https://biomcp.org/",
+  "category": "Specialized verticals",
+  "run_id": "run-57a45674a8595dc9-biomcp-org",
+  "run_at": "2026-08-09T00:33:24.553Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 82,
+  "tier": "STEADY",
+  "laddoo_score": 82,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "One binary and one command grammar over the biomedical databases researchers already trust — unusually well-specified for agent use, and it names its upstream providers instead of hiding them.",
+    "body": "BioMCP replaces the usual routine of jumping between PubMed, ClinVar, MyGene, cBioPortal and a dozen auth schemes with a single command surface that works identically for a human at a terminal and an agent over MCP. The design decision that stands out on the captured surface is provenance: rather than presenting itself as an oracle, the documentation tabulates exactly which upstream provider answers each entity — gene resolves through MyGene.info, UniProt, Reactome, QuickGO, STRING, GTEx, Human Protein Atlas, DGIdb, ClinGen; variant through MyVariant.info, ClinVar, CIViC, OncoKB, cBioPortal, GWAS Catalog. For a domain where a fabricated citation is a safety problem rather than an annoyance, publishing the source map is the right instinct. The command grammar (search / get / suggest / discover / enrich / batch, plus cross-entity pivots) is small enough to memorise and is explicitly designed so agents cannot synthesise unsupported calls — the docs separate 'gettable' from 'search-only' entities for exactly that reason. Distribution is thorough: a curl installer, a PyPI CLI, an MCP config generator for Codex, Claude Code, Claude Desktop, Cursor, Cline and VS Code, a Streamable HTTP mode with /health and /readyz probes, and installable agent skills. What the public surface does not offer is any independent validation — no accuracy evaluation, no benchmark, no named institutional users — and some legs (Semantic Scholar, AlphaGenome) need API keys the docs mention only in passing. This is a well-built retrieval layer over trusted sources; it is not, and does not claim to be, a clinical decision tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) for an unusually disciplined agent surface — a small documented command grammar, explicit gettable-vs-search-only typing so agents cannot invent calls, per-client MCP configuration, remote HTTP with health probes, and a published map of which upstream database answers which entity. Held below VITAL because the public surface carries no accuracy evaluation, benchmark, or named institutional adopter, and in biomedical retrieval that evidence is the thing that would justify the top band.",
+  "what_it_does_well": [
+    "Publishes the upstream provider for every entity type rather than presenting itself as an undifferentiated oracle",
+    "Separates gettable from search-only entities explicitly so agents do not synthesise unsupported get commands",
+    "One small command grammar (search / get / suggest / discover / enrich / batch) covers discovery, detail and cross-entity pivots",
+    "Ships an MCP config generator for Codex, Claude Code, Claude Desktop, Cursor, Cline and VS Code",
+    "Remote Streamable HTTP mode with /health and /readyz probes and a runnable example client",
+    "Local study analytics over downloaded cBioPortal-style datasets when the public APIs are not enough",
+    "Multiple install paths — curl installer, PyPI CLI, from source — plus installable agent skills"
+  ],
+  "what_it_fails_at": [
+    "No accuracy evaluation, benchmark, or independent validation published on the surface",
+    "No named institutional or clinical adopters despite the clinical framing of the audience",
+    "Several legs (Semantic Scholar, AlphaGenome) depend on API keys the documentation treats as an aside",
+    "Aggregating this many third-party APIs makes upstream availability an unstated operational risk",
+    "Not tested hands-on by Hlido — retrieval correctness is exactly the claim that most needs measuring"
+  ],
+  "best_for": [
+    "Researchers and bioinformaticians who currently move between several biomedical databases by hand",
+    "Agents that need biomedical retrieval with a traceable source for every answer",
+    "Teams standardising on MCP who want one configured server rather than several bespoke API clients"
+  ],
+  "not_recommended_for": [
+    "Clinical decision-making — this is a retrieval layer over public sources, not a validated clinical tool",
+    "Anyone who needs a published accuracy or coverage guarantee before adopting",
+    "Environments that cannot depend on many third-party APIs being reachable"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Single CLI binary plus MCP server over PubMed, ClinVar, MyVariant, cBioPortal and other biomedical sources",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Documented command grammar: search, get, suggest, discover, enrich, batch, plus cross-entity pivots",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Gettable and search-only entities documented separately so agents do not synthesise unsupported commands",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "MCP config generator for Codex, Claude Code, Claude Desktop, Cursor, Cline and VS Code",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Remote Streamable HTTP server with /health and /readyz probe routes",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Captured release v0.8.25",
+      "source": "https://biomcp.org/",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Published accuracy evaluation, benchmark, or named institutional adopter",
+      "source": "https://biomcp.org/ (none published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-native by design. stdio MCP via `biomcp mcp-config --client <name>` for Codex, Claude Code, Claude Desktop, Cursor, Cline and VS Code, or Streamable HTTP via `biomcp serve-http` for shared deployments. The command grammar and the gettable/search-only typing are written specifically so an agent constructs only calls that exist.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'One binary. One grammar. Evidence from the biomedical sources you already trust.'",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Install paths: curl installer, `uv tool install biomcp-cli`, from source",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source (MIT-style repo); no pricing surface — free/open",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Getting started, concepts, user guide, sources, how-to, reference and troubleshooting sections",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "agent_interface_documented",
+      "pass": true,
+      "required": false,
+      "evidence": "MCP client guide plus `biomcp mcp-config` generator and Streamable HTTP mode",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No benchmark, accuracy evaluation or named adopter on the public surface",
+      "tested_at": "2026-08-09T00:33:24.553Z"
+    }
+  ],
+  "summary": "One binary and one command grammar over the biomedical databases researchers already trust — unusually well-specified for agent use, and it names its upstream providers instead of hiding them.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/genomoncology-biomcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Retrieval tool over third-party databases — it surfaces existing literature and records rather than generating synthetic media, so Art-50(4) marking is largely out of scope."
+  },
+  "evidence_images": {
+    "run_id": "run-57a45674a8595dc9-biomcp-org",
+    "base": "https://images.hlido.eu/reviews/genomoncology-biomcp/run-57a45674a8595dc9-biomcp-org",
+    "files": [
+      "home.png",
+      "page_biomcp.png",
+      "pagegetting-started_installation_.png",
+      "pageconcepts_what-is-biomcp_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/genomoncology-biomcp/run-57a45674a8595dc9-biomcp-org/home.png",
+      "https://images.hlido.eu/reviews/genomoncology-biomcp/run-57a45674a8595dc9-biomcp-org/page_biomcp.png",
+      "https://images.hlido.eu/reviews/genomoncology-biomcp/run-57a45674a8595dc9-biomcp-org/pagegetting-started_installation_.png",
+      "https://images.hlido.eu/reviews/genomoncology-biomcp/run-57a45674a8595dc9-biomcp-org/pageconcepts_what-is-biomcp_.png"
+    ]
+  }
+}
