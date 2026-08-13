@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "depwire-depwire",
+  "name": "Depwire",
+  "agent_url": "https://depwire.dev/",
+  "category": "Coding",
+  "run_id": "run-depwire-depwire-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "The most substantiated tool in this batch — a deterministic dependency graph served to AI coders over MCP, with real benchmarks and an unusually honest anti-RAG pitch.",
+    "body": "Depwire is a context layer that sits between an AI coding assistant and a codebase: tree-sitter parses every file, graphology builds a symbol-level dependency graph, and 23 MCP tools let Claude, Cursor, Aider or any MCP client query exact facts instead of guessing from embeddings. The positioning is refreshingly precise — \"this is not RAG\", \"Depwire is the GPS, your AI is the driver\" — and it declines to claim it replaces the assistant. The public surface is materially better evidenced than most agent tooling we see: a benchmark table across eleven real projects in eleven languages (Hono, Excalidraw, FastAPI, ASP.NET Docs at 5,655 files, nlohmann/json, Spring PetClinic) with file/symbol counts and parse times, a shipped v1.8.2, a VSCode extension, a GitHub Action, a hosted cloud option, and stewardship of an open CC0 spec (DAT) drafted against a NIST concept paper. Feature depth is genuinely broad — what-if simulation, pre-action verification, security scanning with graph-aware severity, structural diff between commits, dead-code detection, multi-agent file claiming. The caveats are the ordinary ones for a young tool: every performance number (40% fewer tool calls, 56% fewer file reads, 100% deterministic accuracy) is vendor-supplied and untested by us; the licence is BSL 1.1 rather than open source until it converts to Apache-2.0 in February 2029; Pro features sit behind $9.99/month; and it appears to be a single-vendor project (ATEF ATAYA LLC). We did not run it. STEADY reflects an unusually well-evidenced public surface, not a measured performance claim.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) — the strongest public surface in this wave: a shipped v1.8.2 with a real distribution footprint (npm, VSCode Marketplace, GitHub Action, cloud app), 23 documented MCP tools, and a benchmark table across eleven named real-world repositories in eleven languages, which is more falsifiable evidence than nearly any agent tool publishes. Held below VITAL because every efficiency and accuracy figure is vendor-supplied and unverified by us, the licence is BSL 1.1 (not open source until 2029), and we reviewed the public surface only.",
+  "what_it_does_well": [
+    "Deterministic tree-sitter/AST approach with an explicit, well-argued case against embedding-based retrieval",
+    "23 MCP tools — genuinely agent-first, not a human product with an API bolted on",
+    "Benchmarks published against eleven named real projects with file counts, symbol counts and parse times",
+    "Broad, coherent feature set: impact analysis, what-if simulation, pre-action verification, security scan, structural diff, dead-code detection",
+    "Multiple real distribution channels shipped (npm, VSCode extension, GitHub Action, hosted cloud app)",
+    "Runs locally by default — code never leaves the machine, and the security scanner needs no API key",
+    "Stewards an open CC0 spec (DAT) for signing AI agent actions, drafted against a NIST concept paper"
+  ],
+  "what_it_fails_at": [
+    "Every headline metric (40% fewer tool calls, 56% fewer file reads, 100% accuracy) is vendor-supplied and unverified by Hlido",
+    "BSL 1.1 licence — not open source until it converts to Apache-2.0 in Feb 2029, which blocks some commercial adoption",
+    "Apparently a single-vendor, single-author project (ATEF ATAYA LLC) — bus-factor and continuity risk",
+    "No named customers, adoption numbers, or third-party validation on the public surface",
+    "Pro features and the cloud dashboard are paid ($9.99/month) with limited detail on what the free tier omits",
+    "Not tested hands-on — graph accuracy on a large mixed-language monorepo is exactly the claim that needs measuring"
+  ],
+  "best_for": [
+    "Developers using Claude Code, Cursor, Cline or Aider on a codebase large enough that context retrieval is the bottleneck",
+    "Teams doing risky refactors who want blast-radius analysis before an AI edits anything",
+    "Mixed-language monorepos where cross-language dependency edges are invisible to text search",
+    "Anyone who wants local-only code analysis with no cloud parsing"
+  ],
+  "not_recommended_for": [
+    "Organisations whose licence policy excludes BSL-1.1 dependencies",
+    "Buyers who need audited performance figures rather than vendor benchmarks",
+    "Small single-file projects where the dependency graph adds no signal",
+    "Teams needing vendor-scale support guarantees or an SLA"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "context7",
+      "note": "Depwire's own site frames the two as complementary — internal codebase structure (Depwire) plus external library docs (Context7) — rather than competing."
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "23 MCP tools exposed to AI assistants, with a documented tool-by-tool table",
+      "source": "https://depwire.dev/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Deterministic tree-sitter AST parsing across 17 languages, not embedding-based retrieval",
+      "source": "https://depwire.dev/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Benchmarks across eleven named real projects (Hono 352 files/6,245 symbols; ASP.NET Docs 5,655 files/42,827 symbols)",
+      "source": "https://depwire.dev/",
+      "tested_at": "2026-08-05",
+      "verified": false
+    },
+    {
+      "claim": "40% fewer tool calls / 56% fewer file reads / 100% deterministic accuracy",
+      "source": "https://depwire.dev/ (vendor claim, not independently measured)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    },
+    {
+      "claim": "Shipped v1.8.2 under BSL 1.1, converting to Apache-2.0 on 2029-02-25",
+      "source": "https://depwire.dev/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Steward of the CC0 Depwire Action Token (DAT) spec for signing AI agent actions",
+      "source": "https://depwire.dev/",
+      "tested_at": "2026-08-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP-native by design: `npx -y depwire-cli mcp` exposes 23 tools to any MCP client, with a hosted endpoint via app.depwire.dev and a programmatic SDK at depwire-cli/sdk. This is a component other agents drive, not a destination product — the strongest agent-integration story in this wave.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-05T04:32:03.307Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your AI doesn't know your architecture. Depwire does.'",
+      "tested_at": "2026-08-05T04:32:03.307Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install in 10 seconds' / npm install -g depwire-cli",
+      "tested_at": "2026-08-05T04:32:03.307Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free CLI; Pro features $9.99/month; cloud app available",
+      "tested_at": "2026-08-05T04:32:03.307Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Benchmark table across 11 named real projects; no third-party validation",
+      "tested_at": "2026-08-05T04:32:03.307Z"
+    }
+  ],
+  "summary": "The most substantiated tool in this batch — a deterministic dependency graph served to AI coders over MCP, with real benchmarks and an unusually honest anti-RAG pitch.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/depwire-depwire.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-694c1c5f43c73d31-depwire-dev",
+    "base": "https://images.hlido.eu/reviews/depwire-depwire/run-694c1c5f43c73d31-depwire-dev",
+    "files": [
+      "home.png",
+      "page_install.png",
+      "page_subscribe.png",
+      "pageprivacy.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/depwire-depwire/run-694c1c5f43c73d31-depwire-dev/home.png",
+      "https://images.hlido.eu/reviews/depwire-depwire/run-694c1c5f43c73d31-depwire-dev/page_install.png",
+      "https://images.hlido.eu/reviews/depwire-depwire/run-694c1c5f43c73d31-depwire-dev/page_subscribe.png",
+      "https://images.hlido.eu/reviews/depwire-depwire/run-694c1c5f43c73d31-depwire-dev/pageprivacy.png"
+    ]
+  }
+}
