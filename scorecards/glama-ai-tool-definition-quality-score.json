@@ -1,0 +1,188 @@
+{
+  "schema_version": "2.0",
+  "slug": "glama-ai-tool-definition-quality-score",
+  "name": "Tool Definition Quality Score (TDQS)",
+  "agent_url": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+  "category": "Frameworks & Eval",
+  "run_id": "run-af80ddab61879473-glama-ai",
+  "run_at": "2026-08-06T08:07:37.972Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An open-sourced six-dimension score for MCP tool descriptions, grounded in two cited studies rather than opinion — reviewed here from its announcement post, which is the only surface that resolved.",
+    "body": "TDQS scores every tool on an MCP server across six dimensions — purpose clarity, usage guidelines, behavioural transparency, parameter semantics, conciseness and contextual completeness — at 1–5 each, rolled up into a tier. What makes it worth attention is that it is anchored in published research rather than in the author's taste: it cites 'MCP Tool Descriptions Are Smelly' (SAIL Research, arXiv 2602.14878), which found quality defects in 97% of 856 tools across 103 servers, with 56% not clearly stating what the tool does and 89% failing to say when it should or should not be used; and 'From Docs to Descriptions' (arXiv 2602.18914), a study of 10,831 servers reporting that well-described tools are selected 260% more often in competitive settings and that fixing descriptions lifts task success by about 6 percentage points. That is the correct order of operations — establish the problem is real and quantified, then build the measure. The framework has since been open-sourced, which matters for a scoring system: a score nobody can inspect is a ranking, not a measurement, and Hlido has no standing to say otherwise about anyone else's methodology if it will not credit that distinction. Two caveats on this review. First, the surface that resolved is the April 2026 announcement post, not the framework repository or a live scoring endpoint, so what is assessed is the design and its justification, not the implementation. Second, TDQS is operated by Glama, a directory that also ranks the servers it scores; the post does not discuss that conflict, and a scorer with commercial standing in what it scores should address it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) for a measure that starts from cited, quantified research rather than opinion, decomposes into six inspectable dimensions instead of one opaque number, targets a genuine failure mode (tool selection is driven entirely by the description an agent reads), and has been open-sourced so the method can be checked. Held below VITAL because the only surface that resolved is the announcement post rather than the framework or a live scorer — the implementation is unverified — and because the operator also ranks the servers it scores without addressing that conflict.",
+  "what_it_does_well": [
+    "Anchored in two cited studies rather than in the author's judgement",
+    "Quantifies the problem first: 97% of 856 tools across 103 servers carry at least one description defect",
+    "Cites a measured impact — well-described tools selected 260% more often; ~6pp task-success lift from fixing descriptions",
+    "Six named dimensions scored 1–5 each, so a bad score decomposes into what to fix",
+    "Framework has been open-sourced, so the method can be inspected rather than trusted",
+    "Targets the right thing — the description is the only signal an agent reads when choosing a tool",
+    "Publicly renamed 'Description' to 'Definition' to describe what is actually measured"
+  ],
+  "what_it_fails_at": [
+    "Reviewed from an announcement post — the framework repository and any live scoring surface were not the page that resolved",
+    "Operated by a directory that also ranks the servers it scores, a conflict the post does not address",
+    "No inter-rater reliability, calibration or validation of the score itself against downstream outcomes",
+    "Scoring appears to be LLM-graded, with no discussion of variance between runs",
+    "No adoption evidence — how many servers are scored, or whether authors act on it"
+  ],
+  "best_for": [
+    "MCP server authors who want specific, actionable defects rather than 'write better docs'",
+    "Teams choosing between servers offering similar functionality",
+    "Anyone building agent tool-selection who needs a vocabulary for description quality"
+  ],
+  "not_recommended_for": [
+    "Anyone needing a validated, calibrated metric — no reliability evidence is published",
+    "Users who want a score free of operator conflict of interest",
+    "Assessing anything beyond the tool definition, which is all this measures"
+  ],
+  "red_flags": [
+    "TDQS is operated by Glama, which also lists and ranks the MCP servers being scored. The announcement does not address that conflict of interest."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Six dimensions — purpose clarity, usage guidelines, behavioural transparency, parameter semantics, conciseness, contextual completeness — scored 1–5 and rolled into a tier",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Cites SAIL Research arXiv 2602.14878: 97% of 856 tools across 103 servers have at least one defect; 56% unclear purpose; 89% no usage guidance",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Cites arXiv 2602.18914 over 10,831 servers: 260% more selection for well-described tools; ~6pp task-success improvement",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "The TDQS framework has been open-sourced",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Renamed from 'Tool Description Quality Score' to 'Tool Definition Quality Score'",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs",
+      "tested_at": "2026-08-09",
+      "verified": true
+    },
+    {
+      "claim": "Validation, calibration or inter-rater reliability of the score itself",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs (not published)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    },
+    {
+      "claim": "Disclosure of the operator's commercial interest in the servers it scores",
+      "source": "https://glama.ai/blog/2026-04-03-tool-definition-quality-score-tdqs (not addressed)",
+      "tested_at": "2026-08-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Not an agent-callable tool. TDQS is a scoring framework applied to MCP servers; its output is consumed by server authors improving definitions and by users comparing servers. The open-sourced framework could be run in CI, but no agent-facing endpoint is described on the captured surface.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Six-dimension quality score for MCP tool definitions",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "Announcement post — no install, signup or run path on the captured page",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Framework stated as open-sourced",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "claims_cited",
+      "pass": true,
+      "required": false,
+      "evidence": "Two arXiv studies cited with identifiers and figures",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "conflict_disclosed",
+      "pass": false,
+      "required": false,
+      "evidence": "Operator also ranks the servers scored; not addressed",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": false,
+      "required": false,
+      "evidence": "No calibration or reliability evidence for the score",
+      "tested_at": "2026-08-06T08:07:37.972Z"
+    }
+  ],
+  "summary": "An open-sourced six-dimension score for MCP tool descriptions, grounded in two cited studies rather than opinion — reviewed here from its announcement post, which is the only surface that resolved.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-09",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-09",
+  "attestation_url": "/data/attestations/glama-ai-tool-definition-quality-score.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-09",
+    "source": "r4-editorial-enrich-backlog-clear",
+    "note": "Evaluation framework; produces scores over text, not synthetic media."
+  },
+  "evidence_images": {
+    "run_id": "run-af80ddab61879473-glama-ai",
+    "base": "https://images.hlido.eu/reviews/glama-ai-tool-definition-quality-score/run-af80ddab61879473-glama-ai",
+    "files": [
+      "home.png",
+      "page_main-content.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/glama-ai-tool-definition-quality-score/run-af80ddab61879473-glama-ai/home.png",
+      "https://images.hlido.eu/reviews/glama-ai-tool-definition-quality-score/run-af80ddab61879473-glama-ai/page_main-content.png"
+    ]
+  }
+}
