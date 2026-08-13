@@ -1,0 +1,164 @@
+{
+  "schema_version": "2.0",
+  "slug": "dnaerys-onekgpd-mcp",
+  "name": "Dnaerys 1000 Genomes MCP",
+  "agent_url": "https://dnaerys.org",
+  "category": "Specialized verticals",
+  "run_id": "run-dnaerys-onekgpd-mcp-v2-2026-08-10",
+  "run_at": "2026-08-10T21:30:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 63,
+  "tier": "FADING",
+  "laddoo_score": 63,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Natural-language MCP access to the 1000 Genomes dataset, fronting a specialised in-memory variant store — serious engineering argument, but the captured surface documents the database, not the agent.",
+    "body": "The reviewed artefact is an MCP server offering natural-language queries over the 1000 Genomes Project dataset (3,202 samples, GRCh38, sequenced by the New York Genome Center), hosted on the Dnaerys variant store. The public surface we could read is the variant store's own documentation, and on its own terms it is unusually substantive: a clearly stated thesis that general-purpose DBMS architectures are the wrong shape for low-latency variant queries, argued through query-plan optimisation, storage-model efficiency and data-allocation latency, with navigation for performance, RAM and disk footprints, operational architecture and licensing. That is a technical argument made in public with enough specificity to be disagreed with, which is more than most infrastructure sites offer. The gap is the review's subject. Nothing on this surface characterises the MCP layer — what tools it exposes, how natural language maps onto variant queries, what it does when a query is ambiguous, or what guardrails exist around genomic data access. A reviewer can see that the substrate is thoughtfully built and cannot see whether the agent interface on top of it is. Public genomic reference data lowers the privacy stakes considerably, which is the reason this is not scored lower.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-10",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (63) because the underlying variant store publishes a genuine, specific technical argument with documentation depth, but the MCP layer that is actually under review is undocumented on the captured surface — no tool list, no query semantics, no handling of ambiguous natural-language input. Scoring an agent interface requires seeing the agent interface. The dataset is public reference data rather than patient data, and the documentation is open and login-free, which keeps this well above FLATLINE.",
+  "what_it_does_well": [
+    "States a specific, falsifiable engineering thesis rather than generic performance claims",
+    "Documentation covers performance, RAM/disk footprints and operational architecture openly",
+    "Built on public reference data (1000 Genomes, GRCh38, NYGC-sequenced) with clear provenance",
+    "Licensing, terms and support are surfaced in the primary navigation",
+    "Purpose-built architecture argument is technically legible and open to disagreement"
+  ],
+  "what_it_fails_at": [
+    "The MCP layer under review is not documented on the captured surface — no tool list or query semantics",
+    "No evidence of how natural language is mapped to variant queries, or what happens on ambiguity",
+    "Performance claims are argued architecturally, not demonstrated with published benchmarks",
+    "No guidance on correct interpretation of results for non-genomicist agents or users",
+    "Scope is one dataset; no statement about extending to other cohorts"
+  ],
+  "best_for": [
+    "Bioinformatics teams wanting low-latency programmatic access to 1000 Genomes",
+    "Agent developers prototyping genomic question-answering against public reference data",
+    "Researchers evaluating in-memory variant stores against warehouse-based approaches",
+    "Anyone who needs the query path documented at an architectural level before adopting"
+  ],
+  "not_recommended_for": [
+    "Clinical or diagnostic use — this is public research reference data, not a clinical system",
+    "Teams needing published benchmarks rather than an architectural argument",
+    "Users expecting documented MCP tool semantics before integration",
+    "Cohorts other than 1000 Genomes"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Provides natural-language access to the 1000 Genomes Project dataset via MCP",
+      "source": "https://github.com/dnaerys/onekgpd-mcp",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Dataset is 3,202 samples, GRCh38, sequenced and aligned by New York Genome Center",
+      "source": "https://github.com/dnaerys/onekgpd-mcp",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Dnaerys is a distributed, horizontally scalable, in-memory variant store",
+      "source": "https://dnaerys.org",
+      "tested_at": "2026-08-10",
+      "verified": true
+    },
+    {
+      "claim": "Documentation covers performance, footprints, operational architecture and licensing",
+      "source": "https://dnaerys.org",
+      "tested_at": "2026-08-10",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP server fronting a hosted variant store, so an agent can query genomic variation in natural language without handling VCFs. The integration path exists and an API is documented for the store itself; the MCP tool surface is not described publicly, so an integrator cannot determine tool names, arguments or failure behaviour before connecting.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Low Latency Genome Variant Store'; MCP repo offers NL access to 1000 Genomes",
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": false,
+      "required": true,
+      "evidence": "Documentation navigation only; no primary action on the captured page",
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "'Licensing & Support' and 'Online Services' in nav",
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": true,
+      "evidence": "Architectural argument published; no benchmark results or MCP tool documentation captured",
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    },
+    {
+      "id": "docs_public",
+      "pass": true,
+      "required": false,
+      "evidence": "Full documentation tree public, no login",
+      "tested_at": "2026-08-10T00:32:11.425Z"
+    }
+  ],
+  "staleness_after": "2026-11-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-10",
+  "attestation_url": "/data/attestations/dnaerys-onekgpd-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-10",
+    "source": "r4-enrich-2026-08-10",
+    "note": "No marking or provenance statement on the captured surface; the service returns queried genomic data rather than generated content."
+  },
+  "evidence_images": {
+    "run_id": "run-8e8452f486ec3f98-dnaerys-org",
+    "base": "https://images.hlido.eu/reviews/dnaerys-onekgpd-mcp/run-8e8452f486ec3f98-dnaerys-org",
+    "files": [
+      "home.png",
+      "page__what-is-dnaerys-variant-store.png",
+      "page_.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/dnaerys-onekgpd-mcp/run-8e8452f486ec3f98-dnaerys-org/home.png",
+      "https://images.hlido.eu/reviews/dnaerys-onekgpd-mcp/run-8e8452f486ec3f98-dnaerys-org/page__what-is-dnaerys-variant-store.png",
+      "https://images.hlido.eu/reviews/dnaerys-onekgpd-mcp/run-8e8452f486ec3f98-dnaerys-org/page_.png",
+      "https://images.hlido.eu/reviews/dnaerys-onekgpd-mcp/run-8e8452f486ec3f98-dnaerys-org/page_.png"
+    ]
+  },
+  "repo_url": "https://github.com/dnaerys/onekgpd-mcp"
+}
