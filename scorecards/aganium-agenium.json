@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "slug": "aganium-agenium",
+  "name": "Agenium",
+  "agent_url": "https://agenium.net",
+  "category": "Productivity",
+  "run_id": "run-aganium-agenium-v2-2026-08-05",
+  "run_at": "2026-08-05T12:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 58,
+  "tier": "FADING",
+  "laddoo_score": 58,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Two Persian-language solo-operator tools with genuinely careful consent design — a week of silent observation before the sales assistant sends anything — held back by crypto-only billing and no evidence of use.",
+    "body": "Agenium ships two independent services for freelancers and small business owners: Coach, an execution system that turns goals into projects, stages and daily tasks, checks in on a chosen cadence, and adapts to observed behaviour rather than serving a static task list; and DM, a Telegram direct-message assistant that answers customers on the business's behalf. The consent architecture in DM is better than most products ten times its size. It opens in Shadow mode, where replies are composed but never sent — the first week it sends nothing at all and only learns. Suggest mode drafts a reply that the owner approves or edits with one button, and nothing goes out unapproved. There is a global kill switch, it learns from the owner's real replies rather than a scripted scenario, and it needs no premium or business Telegram account. The site states the governing rule plainly: where being helpful and not making a mistake collide, not making a mistake wins. That is a defensible design philosophy for an agent acting in someone's name, and it is the reason this is not scored lower. The rest is thin. The surface is Persian-only with an English toggle we did not verify, subscription is payable solely in TON and USDT on TRON with no conventional payment path, and there are no customers, usage figures, pricing detail, team information or third-party validation of any kind. Both services are described but neither is demonstrated.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (58) for consent design that is genuinely careful — Shadow mode sending nothing for the first week, Suggest mode requiring per-message approval, a global kill switch, and an explicit rule that avoiding mistakes beats being helpful. Held at FADING because nothing on the surface shows the products in use: no customers, usage, pricing detail, team or validation; crypto-only billing (TON/USDT-TRON) with no conventional payment path narrows the addressable audience sharply; and the surface is effectively Persian-only.",
+  "what_it_does_well": [
+    "Shadow mode composes replies but sends nothing for the first week — observation before action, by default",
+    "Suggest mode requires explicit per-message approval; nothing is sent without it",
+    "Global kill switch stops the whole system with one command",
+    "Learns from the owner's own real replies rather than a pre-written script",
+    "Works on any Telegram account — no premium or business account required",
+    "States its governing principle openly: where helpfulness and correctness collide, correctness wins",
+    "Coach adapts to observed behaviour (when the user stalls, when they progress) rather than serving a static task list"
+  ],
+  "what_it_fails_at": [
+    "Subscription is payable only in TON and USDT on TRON — no card, bank or conventional payment path",
+    "No customers, usage numbers, pricing figures, team information, or third-party validation",
+    "Surface is effectively Persian-only; an English toggle exists but was not verified",
+    "Neither service is demonstrated — both are described in feature terms with no evidence of operation",
+    "Two quite different products (personal execution coach, customer-facing sales assistant) share one thin surface",
+    "A DM assistant answering customers in a business's name carries real reputational risk that the safeguards mitigate but cannot remove"
+  ],
+  "best_for": [
+    "Persian-speaking freelancers and solo operators who want an accountability system that adapts to their behaviour",
+    "Small businesses on Telegram wanting after-hours replies with human approval kept in the loop",
+    "Users comfortable paying in TON or USDT"
+  ],
+  "not_recommended_for": [
+    "Anyone who cannot or will not pay in cryptocurrency",
+    "Businesses needing a non-Persian interface or multilingual customer handling",
+    "Buyers who require evidence of production use before letting software answer customers in their name"
+  ],
+  "red_flags": [
+    {
+      "severity": "low",
+      "note": "Subscription is payable only in TON and USDT on TRON. This is disclosed clearly rather than hidden, but the absence of any conventional payment path is a material constraint and, for some buyers, a trust signal in itself."
+    }
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Two independent services: Agenium Coach (execution system) and Agenium DM (Telegram sales assistant)",
+      "source": "https://agenium.net",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Shadow mode composes replies without sending; the first week sends nothing and only learns",
+      "source": "https://agenium.net",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Suggest mode requires one-button owner approval before any message is sent",
+      "source": "https://agenium.net",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Global kill switch halts the entire system with a single command",
+      "source": "https://agenium.net",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Subscription payable in TON and USDT (TRON network) only",
+      "source": "https://agenium.net",
+      "tested_at": "2026-08-05",
+      "verified": true
+    },
+    {
+      "claim": "Customers, usage figures, pricing detail, or team information",
+      "source": "https://agenium.net (none published)",
+      "tested_at": "2026-08-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "End-user services delivered through Telegram and a web app. No public API, CLI, MCP surface or SDK, so this is a product a person uses rather than a component another agent can drive.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-04T12:31:05.337Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'A system to execute with. An assistant to sell with.' (translated)",
+      "tested_at": "2026-08-04T12:31:05.337Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start with Agenium Coach' / 'Start with Agenium DM'",
+      "tested_at": "2026-08-04T12:31:05.337Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Payment rails named (TON, USDT-TRON) but no prices published",
+      "tested_at": "2026-08-04T12:31:05.337Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Feature descriptions only — no demo, screenshots of use, or customer evidence",
+      "tested_at": "2026-08-04T12:31:05.337Z"
+    }
+  ],
+  "summary": "Two Persian-language solo-operator tools with genuinely careful consent design — a week of silent observation before the sales assistant sends anything — held back by crypto-only billing and no evidence of use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-05",
+  "attestation_url": "/data/attestations/aganium-agenium.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-05",
+    "source": "r4-editorial-enrich-backlog-clear"
+  },
+  "evidence_images": {
+    "run_id": "run-22b697aa716f280e-agenium-net",
+    "base": "https://images.hlido.eu/reviews/aganium-agenium/run-22b697aa716f280e-agenium-net",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page__coach.png",
+      "page__dm.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/aganium-agenium/run-22b697aa716f280e-agenium-net/home.png",
+      "https://images.hlido.eu/reviews/aganium-agenium/run-22b697aa716f280e-agenium-net/page_.png",
+      "https://images.hlido.eu/reviews/aganium-agenium/run-22b697aa716f280e-agenium-net/page__coach.png",
+      "https://images.hlido.eu/reviews/aganium-agenium/run-22b697aa716f280e-agenium-net/page__dm.png"
+    ]
+  }
+}
