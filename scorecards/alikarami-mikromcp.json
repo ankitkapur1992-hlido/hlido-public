@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "alikarami-mikromcp",
+  "name": "MikroMCP",
+  "agent_url": "https://mikromcp.com/",
+  "repo_url": "https://github.com/AliKarami/MikroMCP",
+  "category": "Infrastructure",
+  "run_id": "run-c3821cc654d33602-mikromcp-com",
+  "run_at": "2026-08-13T04:31:12.534Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+  "review_url": "/reviews/alikarami-mikromcp/",
+  "hlido_opinion": {
+    "headline": "An MCP server for MikroTik RouterOS that leads with the danger rather than the demo \u2014 dry-run, rollback, RBAC, audit logs and per-router circuit breakers, in a category where most tools ship raw command execution and hope.",
+    "body": "MikroMCP exposes 117 typed tools over RouterOS 7.x and frames the entire product around a single argument: raw CLI is the wrong abstraction for an LLM operating production network gear. Rather than treating that as a disclaimer, it is the product. Strict schemas, idempotent writes, dry-run previews, snapshots, a write journal, plan_changes/apply_plan/rollback_change, per-router circuit breakers, retry policies, RBAC with bcrypt token hashes, correlation IDs and audit logs are all named on the landing page. For anyone who has watched an LLM improvise a firewall rule, that ordering of priorities is the correct one, and it is rare. Coverage is enumerated concretely across router management, network operations, firewall and policy, routing visibility, secure access, diagnostics and change safety, with both stdio and HTTP transports and named clients (Claude, ChatGPT, Cursor, Codex). MIT licensed with a docs link and a FAQ. What is missing is corroboration: the safety machinery is listed but not demonstrated \u2014 no sample dry-run output, no audit-log excerpt, no worked rollback. There is also no statement about how router credentials are stored, which is the sharpest question for a tool holding privileged access to network infrastructure. The design intent is clearly right; the evidence for it is currently assertion.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY because the public surface is specific and well-organised \u2014 enumerated tool count, named capability areas, both transports documented, MIT licence, docs and FAQ present \u2014 and because the safety-first framing is genuinely differentiated for this category. Held out of the top band because every safety feature is asserted rather than demonstrated (no sample dry-run, audit entry or rollback), and because credential handling for privileged router access is not addressed on the public surface.",
+  "what_it_does_well": [
+    "Leads with change-safety rather than capability \u2014 dry-run, snapshots, rollback and a write journal are the headline, not a footnote",
+    "117 typed tools with strict schemas, enumerated across seven named capability areas",
+    "RBAC, bcrypt token hashes, audit logs and correlation IDs published as first-class features",
+    "Per-router circuit breakers and retry policies \u2014 genuine operational maturity for an OSS project",
+    "Both stdio and HTTP transports, with named clients (Claude, ChatGPT, Cursor, Codex)",
+    "MIT licensed, with docs and FAQ linked from the landing page"
+  ],
+  "what_it_fails_at": [
+    "Every safety feature is asserted; none is demonstrated with sample output, an audit excerpt or a worked rollback",
+    "No statement on how router credentials are stored, scoped or rotated \u2014 the key question for privileged infrastructure access",
+    "No version or changelog signal on the landing surface",
+    "Scope is RouterOS 7.x only, with no statement on older-release behaviour",
+    "The confirmation-token and RBAC model is named but its actual semantics are not described"
+  ],
+  "best_for": [
+    "Network teams running MikroTik fleets who want LLM assistance with real guardrails",
+    "Operators who need read-heavy diagnostics (status, interfaces, logs, BGP/OSPF visibility) more than writes",
+    "Anyone who has rejected AI network tooling on safety grounds and wants to reconsider with dry-run and rollback in place"
+  ],
+  "not_recommended_for": [
+    "Non-MikroTik environments \u2014 this is RouterOS-specific by design",
+    "Teams needing evidence of the safety machinery before granting production access; it is currently unevidenced",
+    "Organisations requiring a documented credential-handling posture before deployment"
+  ],
+  "red_flags": [
+    "The safety features that justify this tool's existence \u2014 dry-run, rollback, audit, RBAC \u2014 are listed but never shown. For a tool holding write access to production network gear, that gap between claim and evidence is the one worth closing first.",
+    "Credential storage and rotation for privileged router access is not addressed anywhere on the public surface."
+  ],
+  "compared_to": [
+    {
+      "slug": "awslabs-mcp",
+      "verdict_diff": "AWS's suite is broader and vendor-backed but targets cloud infrastructure; MikroMCP is narrow, community-built and targets physical network gear. Not substitutes \u2014 different infrastructure entirely.",
+      "preferred_for_axis": "physical-network-vs-cloud"
+    },
+    {
+      "slug": "chaandannn-finopsmcp",
+      "verdict_diff": "Both adopt a safety-first posture for infrastructure agents (nable via read-only plus PR review, MikroMCP via dry-run plus rollback). nable is cost-focused and read-only; MikroMCP performs guarded writes.",
+      "preferred_for_axis": "read-only-vs-guarded-write"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with 117 typed tools over stdio and HTTP, HTTP bearer auth, RBAC and per-tool restrictions. Strict schemas and idempotent writes make it unusually well-suited to autonomous operation, and the dry-run/plan/apply pattern gives an agent a safe way to propose before committing.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Loads without auth; states purpose, protocol, target platform and tool count in the first screen.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "MIT-licensed open source; no pricing surface expected.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "A docs link and FAQ are present and the landing page carries a worked tool-call illustration, but no reference content is rendered on the reviewed surface itself.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named clients (Claude, ChatGPT, Cursor, Codex), both stdio and HTTP transports, and seven enumerated capability areas.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Auth mechanisms are named (HTTP bearer, bcrypt token hashes, RBAC, confirmation tokens, audit logs) but router credential storage and rotation are not described.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://mikromcp.com/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://mikromcp.com/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://mikromcp.com/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://mikromcp.com/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://mikromcp.com/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Network device management server; it operates existing infrastructure and does not generate synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-c3821cc654d33602-mikromcp-com",
+    "base": "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com",
+    "files": [
+      "home.png",
+      "page_top.png",
+      "page_features.png",
+      "page_how.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/home.png",
+      "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/page_top.png",
+      "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/page_features.png",
+      "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/page_how.png"
+    ]
+  }
+}
