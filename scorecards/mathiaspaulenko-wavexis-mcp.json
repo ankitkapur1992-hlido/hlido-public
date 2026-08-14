@@ -1,0 +1,183 @@
+{
+  "schema_version": "2.0",
+  "slug": "mathiaspaulenko-wavexis-mcp",
+  "name": "WaveXisMCP",
+  "agent_url": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+  "repo_url": "https://github.com/MathiasPaulenko/wavexis-mcp",
+  "category": "Infrastructure",
+  "run_id": "run-8414d0a4cf0f6981-mathiaspaulenko-github-io",
+  "run_at": "2026-08-11T16:32:05.251Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 81,
+  "tier": "STEADY",
+  "laddoo_score": 81,
+  "confidence": "high",
+  "review_url": "/reviews/mathiaspaulenko-wavexis-mcp/",
+  "hlido_opinion": {
+    "headline": "220 browser-automation tools with the documentation to match \u2014 installation, architecture, security, rate limiting, benchmarks and a comparison table that names its main rival and concedes where it loses.",
+    "body": "WaveXisMCP is the best-documented tool in this batch by a wide margin. The docs site carries installation, quick start, configuration, architecture, capability tiers, HTTP transport, Docker, stealth mode, resources and prompts, rate limiting, security, troubleshooting, benchmarks, a full tool reference organised into 13 tiers, a cookbook of worked recipes, tutorials, a Python API reference, contributing guidance and a changelog. The version (v1.6.24) is displayed in the header. That is a reference surface a buyer or an agent can genuinely evaluate against, and it is why this review carries high confidence where most of its peers carry low. The product position is also concrete: 100% Python with no Node.js dependency and no Chromium download, driving your existing Chrome or Edge over CDP or BiDi. The docs include a direct comparison table against Playwright MCP that names the trade-offs rather than only the wins \u2014 unusual candour. The honest caveat is the tool count itself: 220 tools across 13 tiers is a very large surface to expose to an LLM, and tool-definition volume is a real cost in agent context budgets. The capability-tier structure appears designed to address exactly that, but the docs describe the tiers as an organising principle without quantifying the context saving. A worked example of a tier-limited configuration and its token cost would close the last gap on an otherwise exemplary surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY and near the top of the band because nearly everything a buyer needs is published and checkable: version, architecture, security page, rate limiting, benchmarks, full tool reference, changelog and an honest competitive comparison. Held out of the highest band because the very large tool surface (220) creates an agent context cost that the documentation organises for but does not quantify, and because the benchmarks and stealth-mode features are presented without independent corroboration.",
+  "what_it_does_well": [
+    "Documentation depth is exceptional \u2014 installation through architecture, security, rate limiting, benchmarks and a full tool reference",
+    "Version displayed prominently (v1.6.24) with a maintained changelog",
+    "Publishes a direct comparison against Playwright MCP that concedes trade-offs instead of only claiming wins",
+    "Clear technical position: no Node.js, no Chromium download, drives the browser you already have",
+    "Capability tiers give a real mechanism for limiting the exposed tool surface",
+    "Dedicated security and rate-limiting pages \u2014 rare for an open-source MCP server"
+  ],
+  "what_it_fails_at": [
+    "220 tools is a large definition payload for an LLM context, and the docs do not quantify what tier-limiting actually saves",
+    "Benchmarks are self-published with no independent corroboration",
+    "'Stealth mode' is documented as a feature without discussing the acceptable-use questions it raises",
+    "Requires an existing Chrome or Edge install, which constrains headless and container deployments in ways not fully drawn out",
+    "No hosted or managed option; all operational burden sits with the user"
+  ],
+  "best_for": [
+    "Python teams wanting browser automation for LLMs without adding a Node.js toolchain",
+    "Users who need deep browser capability (video, vision, a11y, DevTools, network) from one server",
+    "Engineers who evaluate on documentation quality \u2014 there is more here than almost any peer publishes",
+    "Deployments where driving an existing managed Chrome/Edge install is preferable to bundling Chromium"
+  ],
+  "not_recommended_for": [
+    "Context-constrained agent setups that cannot afford a large tool-definition payload without careful tier configuration",
+    "Environments where no Chrome or Edge install exists and cannot be provisioned",
+    "Teams wanting a hosted service rather than a self-operated server"
+  ],
+  "red_flags": [
+    "'Stealth mode' is a documented feature for evading bot detection. It is disclosed openly, but the docs do not address the terms-of-service and acceptable-use questions that follow from using it.",
+    "Benchmarks are published by the maintainer with no third-party verification, so they should be read as vendor claims."
+  ],
+  "compared_to": [
+    {
+      "slug": "microsoft-playwright-mcp",
+      "verdict_diff": "Playwright MCP is first-party, TypeScript, and bundles its own browser; WaveXisMCP is Python-native, uses your existing browser and exposes far more tools. The project publishes this comparison itself and is fair about it. Choose on language and tool-depth needs.",
+      "preferred_for_axis": "python-native-and-tool-depth"
+    },
+    {
+      "slug": "segentic-lab-periscope-mcp",
+      "verdict_diff": "Periscope shares the Python-native browser-QA idea but publishes almost nothing; WaveXisMCP publishes almost everything. Same family, opposite ends of assessability.",
+      "preferred_for_axis": "published-documentation"
+    },
+    {
+      "slug": "browser-use",
+      "verdict_diff": "browser-use aims at autonomous task completion; WaveXisMCP is a tool surface the model orchestrates itself. Choose browser-use for 'do this task', WaveXisMCP for precise programmatic control.",
+      "preferred_for_axis": "autonomy-vs-control"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with 220 documented tools in 13 capability tiers, an HTTP transport alongside stdio, a documented Python API and named client support (Claude Desktop, Cursor, Windsurf, VS Code). The published tool reference means an agent can reason about capability before connecting; tier selection is the lever for keeping the definition payload manageable.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Docs home loads without auth and states the proposition precisely: an MCP server exposing the wavexis browser library, 220 tools, 13 tiers, Python-only.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "Open-source project with a licence section; no pricing surface expected.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Extensive public documentation: installation, quick start, configuration, architecture, cookbook, tutorials and a full API reference.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named clients (Claude Desktop, Cursor, Windsurf, VS Code), HTTP and Docker transports, and a complete 13-tier tool inventory.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Dedicated Security page plus Rate Limiting and Configuration sections in the public documentation.",
+      "source_surface": "docs"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://mathiaspaulenko.github.io/wavexis-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Browser automation server; it drives an existing browser and captures pages rather than generating synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-8414d0a4cf0f6981-mathiaspaulenko-github-io",
+    "base": "https://images.hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/run-8414d0a4cf0f6981-mathiaspaulenko-github-io",
+    "files": [
+      "home.png",
+      "page_what-is-wavexismcp.png",
+      "page_q_.png",
+      "page_what-is-wavexismcp.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/run-8414d0a4cf0f6981-mathiaspaulenko-github-io/home.png",
+      "https://images.hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/run-8414d0a4cf0f6981-mathiaspaulenko-github-io/page_what-is-wavexismcp.png",
+      "https://images.hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/run-8414d0a4cf0f6981-mathiaspaulenko-github-io/page_q_.png",
+      "https://images.hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/run-8414d0a4cf0f6981-mathiaspaulenko-github-io/page_what-is-wavexismcp.png"
+    ]
+  }
+}
