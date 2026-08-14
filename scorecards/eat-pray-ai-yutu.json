@@ -1,0 +1,173 @@
+{
+  "schema_version": "2.0",
+  "slug": "eat-pray-ai-yutu",
+  "name": "yutu",
+  "agent_url": "https://yutu.ifor.dev",
+  "repo_url": "https://github.com/eat-pray-ai/yutu",
+  "category": "Marketing & Content",
+  "run_id": "run-429d75745e16933f-yutu-ifor-dev",
+  "run_at": "2026-08-11T00:32:06.593Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "review_url": "/reviews/eat-pray-ai-yutu/",
+  "hlido_opinion": {
+    "headline": "A genuinely tri-modal YouTube toolkit \u2014 CLI, MCP server and A2A agent from one binary \u2014 whose install path is verifiable and whose 'autopilot' claim is not.",
+    "body": "yutu is unusual in this crop for shipping three interfaces over one codebase: a 30+ command CLI, an MCP server you drop into Claude Desktop, Cursor or OpenCode, and an A2A agent mode. The public surface backs the mechanical claims well \u2014 brew, winget and a curl installer are all published, the MCP config snippet is copy-pasteable, and the resource list (video, playlist, caption, thumbnail, membership, super-chat, i18n, abuse report) reads like it was generated from the YouTube Data API surface rather than from a marketing brainstorm. Apache-2.0 with the repo linked from the fold. Where it thins out is exactly where the headline promise lives. 'Grows your YouTube channel on autopilot' and 'autonomous multi-agent system' are the two load-bearing claims, and neither is evidenced anywhere on the public surface \u2014 no demo of the agent running, no description of what the agents decide, no before/after. What is demonstrably shipped is comprehensive YouTube API automation, which is a useful and honest product; the autonomy layer on top is asserted. For a buyer, the CLI and MCP surface is the part to evaluate on, and it is strong. Treat the agent mode as unproven until you run it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY because the verifiable core \u2014 a broad, well-organised YouTube automation surface exposed through three interfaces with real install paths and an OSI licence \u2014 is solid and immediately usable. Held below the top band because the product's own headline claim (autonomous channel growth) has no public evidence behind it, and because there is no demo or docs surface deep enough to check what the agent mode actually does.",
+  "what_it_does_well": [
+    "Three interfaces (CLI, MCP server, A2A agent) from a single install \u2014 rare and genuinely useful",
+    "Install paths published for macOS, Windows and Linux, all copy-pasteable",
+    "MCP config snippet given verbatim, with named clients (Claude Desktop, OpenCode, Cursor)",
+    "Resource coverage is broad and specific \u2014 20+ YouTube entity types enumerated, not hand-waved",
+    "Apache-2.0, repo linked prominently from the landing page"
+  ],
+  "what_it_fails_at": [
+    "'Autopilot' / 'autonomous multi-agent system' is asserted with zero public evidence \u2014 no demo, no decision description",
+    "No documentation surface beyond the landing page; the four-step quickstart is the whole story",
+    "No description of how OAuth credentials are stored or scoped, despite the tool requiring full channel write access",
+    "No changelog, roadmap or release cadence signal on the public surface",
+    "The A2A agent invocation is shown as a bare flag string with no explanation of the modes it takes"
+  ],
+  "best_for": [
+    "Creators and channel operators who want scriptable YouTube automation and are comfortable in a terminal",
+    "Developers wiring YouTube management into an AI editor over MCP",
+    "Teams replacing brittle hand-rolled YouTube Data API scripts with a maintained CLI",
+    "CI/CD publishing pipelines (GitHub Actions and Docker are both named)"
+  ],
+  "not_recommended_for": [
+    "Buyers who need the autonomous growth claim to be real before committing \u2014 it is unevidenced",
+    "Non-technical creators; every documented path starts at a shell prompt",
+    "Anyone needing a documented data-handling or credential-storage posture before granting channel write access"
+  ],
+  "red_flags": [
+    "The headline promise ('grows your YouTube channel on autopilot') is the single least-evidenced thing on the page, which inverts the usual expectation that the biggest claim carries the most proof.",
+    "The tool requires OAuth credentials with broad YouTube write scope, and the public surface says nothing about how those credentials are handled."
+  ],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is the general-purpose automation platform with a YouTube node among hundreds; yutu is YouTube-only but far deeper on that one API. Choose n8n if YouTube is one step in a wider workflow, yutu if YouTube IS the workflow.",
+      "preferred_for_axis": "depth-vs-breadth"
+    },
+    {
+      "slug": "zapier",
+      "verdict_diff": "Zapier is no-code and hosted; yutu is a self-hosted binary you authenticate yourself. Zapier wins on accessibility, yutu on API coverage and cost (free).",
+      "preferred_for_axis": "no-code-vs-developer"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP server with a published stdio config, plus an A2A agent mode. An agent can drive the full YouTube entity surface through named tools. The CLI is equally scriptable. This is one of the more agent-addressable tools in its category \u2014 the limiting factor is credential setup, not interface availability.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Landing page loads without auth; states 'CLI \u00b7 MCP Server \u00b7 AI Agent \u2014 Automate your entire YouTube workflow' above the fold.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "No pricing surface exists. The tool is Apache-2.0 and distributed free via package managers, so a pricing page is not expected; absence is not a defect here.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "A four-step quickstart with real install and config commands is public, but there is no separate docs site or live demo. Enough to install, not enough to evaluate the agent mode.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named integrations published: Claude Desktop, OpenCode, Cursor, GitHub Actions, Docker, A2A, plus an OpenClaw skill.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "The auth step is shown ('yutu auth --credential client_secret.json') but no statement covers how credentials are stored, scoped or revoked.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://yutu.ifor.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://yutu.ifor.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://yutu.ifor.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://yutu.ifor.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://yutu.ifor.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Automation and publishing toolkit for an existing video platform; it does not itself generate synthetic media, so Article 50(4) marking duties do not attach to its output.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-429d75745e16933f-yutu-ifor-dev",
+    "base": "https://images.hlido.eu/reviews/eat-pray-ai-yutu/run-429d75745e16933f-yutu-ifor-dev",
+    "files": [
+      "home.png",
+      "page__usage.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/eat-pray-ai-yutu/run-429d75745e16933f-yutu-ifor-dev/home.png",
+      "https://images.hlido.eu/reviews/eat-pray-ai-yutu/run-429d75745e16933f-yutu-ifor-dev/page__usage.png"
+    ]
+  }
+}
