@@ -1,0 +1,176 @@
+{
+  "schema_version": "2.0",
+  "slug": "feedthrough-feedthrough",
+  "name": "Feedthrough",
+  "agent_url": "https://feedthrough.dev",
+  "repo_url": "https://github.com/feedthrough/feedthrough",
+  "category": "Coding",
+  "run_id": "run-498872e0c4c65152-feedthrough-dev",
+  "run_at": "2026-08-11T04:31:12.366Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium",
+  "review_url": "/reviews/feedthrough-feedthrough/",
+  "hlido_opinion": {
+    "headline": "The rare MCP debugging tool that names its own architectural trade-off and argues it \u2014 an in-page bridge instead of external CDP control, with the reasoning published rather than implied.",
+    "body": "Feedthrough injects a lightweight bridge into a running page and exposes DOM state, console logs and network traffic as 16 MCP tools, so an agent can inspect and drive the app from the inside. The landing page is unusually good at the thing most tools in this category skip: it states the competing approach (Puppeteer/CDP external control), says plainly that it chose differently, and explains why \u2014 the bridge rides inside the existing execution environment rather than attaching a separate automation channel. The extended metaphor about vacuum-chamber feedthroughs is indulgent, but it earns its place by making the design decision legible to someone deciding between this and a browser-driver tool. The architecture is drawn out concretely: @feedthrough/core in the browser doing console and fetch/XHR interception plus DOM inspection, @feedthrough/mcp locally running 16 tools over stdio, a WebSocket on 8765 between them, and named client support for Claude Code and Cursor. Install is a single npm command. What is missing is the operational half \u2014 nothing describes what happens if the WebSocket port is already bound, what the bridge does in a production build, or what data crosses the socket. 'Zero changes to your production build' is claimed but not demonstrated. For a debugging tool that reads console logs and network requests, a short data-handling note would close the last real gap.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY because the public surface does the hard part well \u2014 a specific, defensible technical position, a concrete architecture, a named tool count, a real install path and named client support. Held below the top band because the operational and data-handling story is absent (what crosses the socket, what happens in production builds, port-conflict behaviour) and because the demo is presented as scripted scenarios rather than something a visitor can run.",
+  "what_it_does_well": [
+    "States its architectural trade-off explicitly and argues it, instead of leaving the reader to infer it",
+    "Concrete architecture: named packages, named transport, a specific port, and the responsibility split drawn out",
+    "Tool count published (16) rather than gestured at",
+    "Single-command install, copy-pasteable from the fold",
+    "Named client support (Claude Code, Cursor) and a framework section"
+  ],
+  "what_it_fails_at": [
+    "'Zero changes to your production build' is asserted without demonstration or explanation",
+    "No statement on what data crosses the WebSocket, or whether console/network capture is filtered",
+    "Demo is a set of scripted bug scenarios, not something a visitor can execute",
+    "No guidance on port conflicts, multiple-tab behaviour, or what happens when the bridge is left in a build",
+    "No versioning, changelog or maintenance-cadence signal on the public surface"
+  ],
+  "best_for": [
+    "Developers debugging web apps from inside an AI coding client rather than switching to browser devtools",
+    "Teams whose bugs are state-dependent and hard to reproduce through external browser automation",
+    "Anyone who has hit the limits of CDP-based tools on apps with complex client-side state"
+  ],
+  "not_recommended_for": [
+    "Production or customer-facing environments \u2014 this is a development-time tool and the data posture is undocumented",
+    "Teams needing a documented security review before injecting a bridge that reads console and network traffic",
+    "Non-JavaScript application stacks; the whole design assumes a browser runtime"
+  ],
+  "red_flags": [
+    "The bridge intercepts console output and fetch/XHR traffic, which in a real application can include tokens and personal data \u2014 and no public statement describes what is captured, retained or transmitted.",
+    "'Zero changes to your production build' is a strong safety claim about a tool that injects code into a running page; it deserves evidence and currently has none."
+  ],
+  "compared_to": [
+    {
+      "slug": "microsoft-playwright-mcp",
+      "verdict_diff": "Playwright MCP drives a browser from outside via CDP and is the mature default for automation. Feedthrough deliberately inverts that to reach in-page state a driver cannot see. Choose Playwright MCP for automation and testing, Feedthrough for debugging live application state.",
+      "preferred_for_axis": "external-automation-vs-internal-inspection"
+    },
+    {
+      "slug": "browser-use",
+      "verdict_diff": "browser-use is oriented at task completion by an agent in a browser; Feedthrough is oriented at a developer diagnosing their own app. Different jobs despite the surface similarity.",
+      "preferred_for_axis": "task-execution-vs-debugging"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built as an MCP server with 16 published tools and a documented stdio transport, plus an installable browser-side package. The tool count and responsibility split are public, so an agent can reason about capability before connecting.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Loads without auth; states the mechanism and purpose directly \u2014 injects a bridge, exposes DOM/console/network as MCP tools.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "No pricing surface; distributed as npm packages with a public repo. Absence expected.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Quick-start, architecture and framework sections are all public; a demo section presents worked bug scenarios.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named clients (Claude Code, Cursor) plus a dedicated frameworks section and an explicit component/transport breakdown.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No statement on what the bridge captures or transmits, despite intercepting console logs and network requests.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://feedthrough.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://feedthrough.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://feedthrough.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://feedthrough.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://feedthrough.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Developer debugging tool; produces diagnostic data about an existing application rather than synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-498872e0c4c65152-feedthrough-dev",
+    "base": "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page__demo.png",
+      "page__how-it-works.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/home.png",
+      "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/page_.png",
+      "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/page__demo.png",
+      "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/page__how-it-works.png"
+    ]
+  }
+}
