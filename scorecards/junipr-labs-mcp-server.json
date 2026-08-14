@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "junipr-labs-mcp-server",
+  "name": "Junipr MCP Server",
+  "agent_url": "https://junipr.io",
+  "repo_url": "https://github.com/junipr-labs/mcp-server",
+  "category": "Workflow & Automation",
+  "run_id": "run-5a990dbae41ff0eb-junipr-io",
+  "run_at": "2026-08-11T12:31:37.996Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 41,
+  "tier": "FADING",
+  "laddoo_score": 41,
+  "confidence": "low",
+  "review_url": "/reviews/junipr-labs-mcp-server/",
+  "hlido_opinion": {
+    "headline": "The reviewed surface is a generic Apify-developer brochure that never once mentions an MCP server \u2014 the product named in the repository and the product described on the website are not the same thing.",
+    "body": "This review found a mismatch rather than a product. The repository is junipr-labs/mcp-server; the public site at junipr.io is a short brochure for an independent Apify Actor developer, describing extraction, monitoring and automation Actors in general terms. The words 'MCP', 'Model Context Protocol', 'server', 'tool' and 'agent' do not appear anywhere on it. There is no tool list, no install path, no configuration, no documentation link, no pricing and no changelog \u2014 and, critically, no acknowledgement that an MCP server exists at all. That leaves nothing to assess. The brochure itself is honest and modest about what it is: an independent developer publishing focused Actors on the Apify Store, with a link to that store. As a description of an Apify practice it is coherent. As the public surface of an MCP server it is empty, and an agent or engineer arriving from the repository would find nothing that confirms the software exists, let alone what it does. The right remedy is a project surface \u2014 even a README rendered at the domain \u2014 that states what the server exposes. Until then the score records an unevidenced product, and it should be read that way rather than as a verdict on code nobody could see.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING and near the bottom of the band because effectively every check fails: the reviewed surface does not describe, mention or link the product under review, so there is no value proposition, documentation, integration list or pricing for an MCP server to assess. Held above FLATLINE because the site is live, professionally presented, honest about the Apify practice it does describe, and links a real public storefront \u2014 this is a discoverability failure, not evidence of an abandoned or deceptive project.",
+  "what_it_does_well": [
+    "The site loads cleanly and is honest and unembellished about the Apify Actor practice it describes",
+    "Links a real public storefront (Apify Store) where the developer's work can be inspected",
+    "Positioning as an independent developer is stated plainly, with no inflated claims",
+    "No exaggerated AI marketing language \u2014 rare enough to be worth noting"
+  ],
+  "what_it_fails_at": [
+    "The public surface never mentions an MCP server, which is the product the repository names",
+    "No tool inventory, install path, configuration reference or documentation of any kind",
+    "No pricing, licensing or usage-terms information",
+    "No version, changelog or maintenance signal",
+    "An engineer arriving from the repository gets no confirmation the software exists or what it does"
+  ],
+  "best_for": [
+    "Buyers looking for custom Apify Actor development, which is what the site actually advertises",
+    "Nobody currently evaluating the MCP server \u2014 there is no public information on which to evaluate it"
+  ],
+  "not_recommended_for": [
+    "Anyone trying to assess the MCP server before installing it; the public surface is silent on it",
+    "Agents attempting autonomous discovery \u2014 there is nothing machine-readable to discover",
+    "Teams needing documented tool surfaces or support commitments"
+  ],
+  "red_flags": [
+    "The repository and the public site describe different products. That is a discoverability defect rather than a claim of wrongdoing, but it means nothing about the MCP server is independently checkable.",
+    "No licence, terms or usage conditions are published anywhere on the reviewed surface."
+  ],
+  "compared_to": [
+    {
+      "slug": "apify",
+      "verdict_diff": "Apify is the platform this developer publishes on, and it carries the documentation, pricing and support this site does not. If you want these Actors, evaluate them on the Apify Store rather than here.",
+      "preferred_for_axis": "documented-marketplace"
+    },
+    {
+      "slug": "hshintelligence-agent-scrape",
+      "verdict_diff": "AgentScrape targets a similar web-data job and publishes a complete machine-readable manifest with per-call prices. On public legibility they are opposites.",
+      "preferred_for_axis": "published-capability"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": null,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Not determinable from the public surface. The repository name implies an MCP server, but the website neither confirms nor describes one, so no capability, transport or tool inventory can be established without leaving the reviewed surface.",
+    "agent_friendly_score": 2
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The site loads and states a clear value proposition \u2014 but for Apify Actor development, not for the MCP server under review.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No pricing information anywhere; the only onward route is a link to the Apify Store.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "No documentation, demo, install instructions or reference material of any kind.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "No integrations, MCP clients or frameworks named. MCP is not mentioned on the page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No authentication, data-handling or terms statement published.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://junipr.io",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://junipr.io",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://junipr.io",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://junipr.io",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://junipr.io",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Web-data extraction and automation tooling; it structures existing public data rather than generating synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-5a990dbae41ff0eb-junipr-io",
+    "base": "https://images.hlido.eu/reviews/junipr-labs-mcp-server/run-5a990dbae41ff0eb-junipr-io",
+    "files": [
+      "home.png",
+      "page__main-content.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/junipr-labs-mcp-server/run-5a990dbae41ff0eb-junipr-io/home.png",
+      "https://images.hlido.eu/reviews/junipr-labs-mcp-server/run-5a990dbae41ff0eb-junipr-io/page__main-content.png"
+    ]
+  }
+}
