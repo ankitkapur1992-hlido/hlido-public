@@ -1,0 +1,181 @@
+{
+  "schema_version": "2.0",
+  "slug": "awslabs-mcp",
+  "name": "Open Source MCP Servers for AWS",
+  "agent_url": "https://awslabs.github.io/mcp/",
+  "repo_url": "https://github.com/awslabs/mcp",
+  "category": "Infrastructure",
+  "run_id": "run-d32a0ab121b409d8-awslabs-github-io",
+  "run_at": "2026-08-13T08:06:40.507Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 83,
+  "tier": "STEADY",
+  "laddoo_score": 83,
+  "confidence": "medium",
+  "review_url": "/reviews/awslabs-mcp/",
+  "hlido_opinion": {
+    "headline": "AWS's own suite of MCP servers, documented like AWS documents things \u2014 comprehensive, categorised and institutionally maintained; the catch is that 'it' is a collection, so a single score flattens servers that differ widely in maturity.",
+    "body": "This is the official AWS Labs MCP effort: a suite of specialised servers organised into named categories \u2014 migration and modernization, infrastructure and deployment, AI/ML, data and analytics, developer tools, integration and messaging, cost and operations, healthcare and lifesciences \u2014 plus getting-started material, installation guidance, samples (Bedrock Knowledge Bases, Nova Canvas, Step Functions) and a 'vibe coding tips' section. The documentation is public, versioned in the open, multilingual at the shell level, and backed by a vendor whose continuity is not in question. Named client support spans Kiro, Cline, Cursor, Windsurf and Claude Desktop. For a team already on AWS, this is the default starting point and the provenance alone settles most of the trust question. The honest limitation is structural, and it applies to the review as much as to the product. What is being scored is a catalogue, not a single agent. The individual servers within it vary considerably in maturity, tool surface and update cadence, and the landing documentation is deliberately introductory \u2014 it explains what MCP is before it explains what any particular server does. A buyer evaluating, say, the cost-and-operations server needs to descend into that server's own documentation, and the aggregate score here says little about it. Read this as a verdict on the suite's provenance, organisation and documentation quality, which are strong, rather than on any one server's depth.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY and toward the upper end because provenance, documentation breadth, categorised organisation, named client support and working samples are all present and verifiable, and vendor continuity is effectively assured. Not in the top band because the reviewed surface is an introductory catalogue rather than a product: it does not publish a consolidated tool inventory, per-server maturity signals or version information, so the depth of any individual server remains unverified from here.",
+  "what_it_does_well": [
+    "First-party AWS provenance \u2014 continuity, security process and maintenance are not open questions",
+    "Servers organised into clear functional categories rather than dumped as an undifferentiated list",
+    "Public documentation with installation guidance and no login wall",
+    "Working samples published (Bedrock Knowledge Bases, Nova Canvas, Step Functions)",
+    "Broad named client support: Kiro, Cline, Cursor, Windsurf, Claude Desktop",
+    "Open source, developed in the open under awslabs"
+  ],
+  "what_it_fails_at": [
+    "It is a suite, not a product \u2014 a single evaluation cannot represent servers that differ widely in maturity",
+    "No consolidated tool inventory or per-server version and maturity signals on the landing surface",
+    "Landing documentation is introductory (explaining MCP itself) rather than reference material",
+    "Strongly AWS-centric by design; little value outside that ecosystem",
+    "No stability or support-tier statement distinguishing production-ready servers from experimental ones"
+  ],
+  "best_for": [
+    "Teams already operating on AWS who want first-party MCP access to AWS services",
+    "Engineers who weight provenance and continuity heavily in tooling decisions",
+    "Organisations needing documentation and an open-source supply chain they can audit",
+    "Anyone starting with MCP on AWS \u2014 this is the correct default entry point"
+  ],
+  "not_recommended_for": [
+    "Multi-cloud or non-AWS environments, where the suite has little to offer",
+    "Buyers needing per-server maturity or support-tier guarantees before production use",
+    "Teams wanting a single focused server rather than a catalogue to navigate"
+  ],
+  "red_flags": [
+    "No public signal distinguishes production-ready servers from experimental ones within the suite, so 'AWS Labs' provenance can read as more uniform assurance than it actually provides.",
+    "The aggregate nature of the surface means a favourable overall assessment should not be transferred to any individual server without checking that server directly."
+  ],
+  "compared_to": [
+    {
+      "slug": "alikarami-mikromcp",
+      "verdict_diff": "MikroMCP is one focused server for physical network gear with an explicit safety model; the AWS suite is many servers for cloud services with vendor backing. Different infrastructure, and the AWS suite does not publish an equivalent per-server change-safety story.",
+      "preferred_for_axis": "focused-safety-vs-vendor-breadth"
+    },
+    {
+      "slug": "chaandannn-finopsmcp",
+      "verdict_diff": "nable covers cloud cost across 14 providers including AWS, with an opinionated read-only-plus-PR workflow; the AWS suite's cost-and-operations servers are first-party but leave the workflow to you.",
+      "preferred_for_axis": "opinionated-workflow-vs-first-party-primitives"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A catalogue of MCP servers with installation guidance and broad named client support. Individual servers expose their own tool surfaces, so agent-addressability is high in principle but must be established per server \u2014 the landing surface publishes no consolidated inventory to reason from.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Documentation site loads without auth and states the proposition: a suite of open-source MCP servers for AWS.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "Open-source servers; underlying AWS service costs apply separately. No pricing surface expected for the suite itself.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Public docs covering getting started, installation and samples, with no login wall.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named clients (Kiro, Cline, Cursor, Windsurf, Claude Desktop) and servers grouped into eight functional categories.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Installation and configuration guidance is public and AWS credential handling follows standard AWS practice, but the landing surface carries no consolidated data-handling statement.",
+      "source_surface": "docs"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://awslabs.github.io/mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://awslabs.github.io/mcp/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://awslabs.github.io/mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://awslabs.github.io/mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://awslabs.github.io/mcp/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": "https://awslabs.github.io/mcp/",
+    "checked_at": "2026-08-14",
+    "rationale": "The suite includes generative servers (a Nova Canvas image-generation sample is published), so generated output is in scope; no marking, provenance or labelling statement appears on the reviewed surface, so the signal is recorded as unevidenced rather than absent."
+  },
+  "evidence_images": {
+    "run_id": "run-d32a0ab121b409d8-awslabs-github-io",
+    "base": "https://images.hlido.eu/reviews/awslabs-mcp/run-d32a0ab121b409d8-awslabs-github-io",
+    "files": [
+      "home.png",
+      "page___docusaurus_skipToContent_fallback.png",
+      "page_.png",
+      "pageja_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/awslabs-mcp/run-d32a0ab121b409d8-awslabs-github-io/home.png",
+      "https://images.hlido.eu/reviews/awslabs-mcp/run-d32a0ab121b409d8-awslabs-github-io/page___docusaurus_skipToContent_fallback.png",
+      "https://images.hlido.eu/reviews/awslabs-mcp/run-d32a0ab121b409d8-awslabs-github-io/page_.png",
+      "https://images.hlido.eu/reviews/awslabs-mcp/run-d32a0ab121b409d8-awslabs-github-io/pageja_.png"
+    ]
+  }
+}
