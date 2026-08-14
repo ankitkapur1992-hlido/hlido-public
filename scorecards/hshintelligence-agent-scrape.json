@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "hshintelligence-agent-scrape",
+  "name": "AgentScrape",
+  "agent_url": "https://agent-scrape.healingsunhaven.workers.dev",
+  "repo_url": "https://github.com/hshintelligence/agent-scrape",
+  "category": "Infrastructure",
+  "run_id": "run-a21d27538264070b-agent-scrape-healingsunhaven-workers-dev",
+  "run_at": "2026-08-11T08:30:27.250Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 69,
+  "tier": "FADING",
+  "laddoo_score": 69,
+  "confidence": "medium",
+  "review_url": "/reviews/hshintelligence-agent-scrape/",
+  "hlido_opinion": {
+    "headline": "A scraping API that serves its own machine-readable manifest as its homepage and prices every tool at $0.001 in on-chain USDC \u2014 genuinely agent-native, and almost unusable for a human evaluating it.",
+    "body": "AgentScrape is the most literally agent-first surface in this batch: the root URL returns a JSON manifest, not a marketing page. That manifest is substantive \u2014 it enumerates six HTTP endpoints and six MCP tools, publishes a per-call price of $0.001 for every tool, names the payment network (Base, eip155:8453), the x402 facilitator, the payTo address, the free tier (10 calls per wallet per 30 days), the transport (MCP Streamable HTTP) and even the extraction model (Llama 4 Scout via Groq). By the standard Hlido applies to machine consumers, this is close to exemplary: an agent can discover capability, price and payment path in one unauthenticated request, with no signup and no API key. The trade-offs are real though. There is no human-readable surface at all \u2014 no docs site, no examples, no error-semantics reference, no terms, no operator identity beyond a GitHub org and a wallet address. Payment is USDC on Base via x402, which is an elegant fit for autonomous agents and a hard requirement for everyone else. And the model that matters most for a scraping service \u2014 what it does about robots.txt, rate limits, blocked targets or legal exposure \u2014 is not addressed anywhere. The score is held down by that missing half, not by the design choice: the agent-facing manifest is strong, and the surrounding operational and accountability story is absent.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING because most of the checks fail on the human-facing side: no documentation surface, no terms, no operator accountability, and no statement on scraping conduct or data handling \u2014 for a scraping service, that last gap is material. Not lower, and close to the band above, because the machine-readable manifest is genuinely excellent: complete capability, transparent per-call pricing and a working no-signup path, all discoverable in a single unauthenticated request.",
+  "what_it_does_well": [
+    "Root URL returns a complete machine-readable capability manifest \u2014 no signup, no key, no negotiation",
+    "Per-call pricing published for every single tool ($0.001), which is rarer than it should be",
+    "Both HTTP and MCP surfaces exposed, with all endpoints and tool names enumerated",
+    "Free tier stated precisely (10 calls per wallet per 30 days) with the identifying header named",
+    "Extraction model disclosed (Llama 4 Scout via Groq) rather than hidden behind 'AI-powered'"
+  ],
+  "what_it_fails_at": [
+    "No human-readable documentation, examples or error-semantics reference anywhere",
+    "No terms of service, acceptable-use policy or operator identity beyond a wallet address",
+    "Nothing stated about robots.txt handling, rate limiting or blocked targets \u2014 the core conduct question for a scraper",
+    "Payment is USDC on Base only; no conventional payment path exists",
+    "No uptime, support or contact channel published"
+  ],
+  "best_for": [
+    "Autonomous agents that need to buy scraping capability without a human doing signup or billing",
+    "Developers already operating on Base with USDC who want per-call metered scraping",
+    "Prototypes and experiments where the 10-call free tier is enough to evaluate"
+  ],
+  "not_recommended_for": [
+    "Companies with procurement, invoicing or vendor-accountability requirements \u2014 none of that exists here",
+    "Any use where scraping conduct and legal exposure need a documented position",
+    "Teams without on-chain payment capability; there is no alternative rail"
+  ],
+  "red_flags": [
+    "A scraping service with no published position on robots.txt, rate limiting or prohibited targets pushes the entire conduct and legal risk onto the caller, silently.",
+    "Operator accountability is a GitHub organisation and a wallet address. There is no company identity, terms of service or support channel \u2014 for a paid service, that is a thin basis for reliance.",
+    "The free tier is keyed on an x402 payer header rather than an account, so the 10-call limit is only as strong as wallet identity makes it."
+  ],
+  "compared_to": [
+    {
+      "slug": "firecrawl",
+      "verdict_diff": "Firecrawl is the documented, conventionally-billed incumbent with real terms and support. AgentScrape is cheaper per call and needs no signup, but has none of the accountability. Choose Firecrawl for anything a company depends on, AgentScrape for autonomous or experimental use.",
+      "preferred_for_axis": "accountability-vs-autonomy"
+    },
+    {
+      "slug": "apify",
+      "verdict_diff": "Apify is a full platform with a marketplace, scheduling and compliance posture; AgentScrape is six endpoints and a price list. Not really competitors except at the narrowest point of 'fetch me this page'.",
+      "preferred_for_axis": "platform-vs-primitive"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Among the most agent-addressable surfaces reviewed: an unauthenticated JSON manifest enumerating every endpoint, tool and price, an MCP Streamable HTTP transport, and machine-native payment via x402 that removes the human signup step entirely. An agent can discover, price and pay for capability without a person in the loop.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Root URL returns a JSON manifest stating the service, tagline and version without authentication.",
+      "source_surface": "api"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Per-tool pricing ($0.001 each) plus free-tier limits are in the root manifest itself \u2014 zero clicks.",
+      "source_surface": "api"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The manifest enumerates all endpoints and MCP tools with descriptions, but there is no docs surface, request/response schema or worked example.",
+      "source_surface": "api"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "MCP Streamable HTTP transport named with target clients (Claude Desktop, Cursor); all six MCP tools and six HTTP endpoints enumerated.",
+      "source_surface": "api"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "Payment and free-tier identification are described, but nothing covers data retention, scraping conduct, robots.txt or acceptable use.",
+      "source_surface": "api"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://agent-scrape.healingsunhaven.workers.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://agent-scrape.healingsunhaven.workers.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://agent-scrape.healingsunhaven.workers.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://agent-scrape.healingsunhaven.workers.dev",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://agent-scrape.healingsunhaven.workers.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": "https://agent-scrape.healingsunhaven.workers.dev",
+    "checked_at": "2026-08-14",
+    "rationale": "The extract tool performs AI-powered structured extraction using Llama 4, so generated output is in scope; no marking, provenance or labelling statement is present on the public surface, so the signal is recorded as unevidenced rather than absent."
+  },
+  "evidence_images": {
+    "run_id": "run-a21d27538264070b-agent-scrape-healingsunhaven-workers-dev",
+    "base": "https://images.hlido.eu/reviews/hshintelligence-agent-scrape/run-a21d27538264070b-agent-scrape-healingsunhaven-workers-dev",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/hshintelligence-agent-scrape/run-a21d27538264070b-agent-scrape-healingsunhaven-workers-dev/home.png"
+    ]
+  }
+}
