@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "chaandannn-finopsmcp",
+  "name": "nable",
+  "agent_url": "https://getnable.com",
+  "repo_url": "https://github.com/chaandannn/finopsmcp",
+  "category": "Infrastructure",
+  "run_id": "run-e8bb1ccfaf2b3c23-getnable-com",
+  "run_at": "2026-08-13T08:31:02.992Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "review_url": "/reviews/chaandannn-finopsmcp/",
+  "hlido_opinion": {
+    "headline": "Cloud and AI cost management with the safety posture stated in the subhead \u2014 read-only access, nothing shipped without a human, fixes delivered as reviewable pull requests rather than applied changes.",
+    "body": "nable reads billing across 14 providers (AWS, Azure, GCP, OpenAI, Anthropic, Bedrock, Kubernetes, Datadog, Cloudflare, Snowflake, Databricks, MongoDB and more), runs overnight, and produces a morning brief of what changed and what it costs. The design decisions on display are the right ones for this category: access is read-only, remediation arrives as a pull request against your infrastructure repository scoped to one change with the saving and blast radius in the description, and items it cannot resolve are explicitly labelled 'needs a human' rather than auto-actioned. Detection is described as per-series pattern comparison rather than static thresholds, and the explain step is presented with the working shown, including what the system decided against and why. That last detail \u2014 publishing rejected hypotheses \u2014 is a genuine trust signal. Install is a single uvx command, and pricing, docs, security and GitHub links are all in the primary navigation. The caution is that the entire landing page runs on an illustrative mock: '$47,200 a month recoverable', '14 idle GPU nodes', a CloudFront figure of $120,800 and a '94% attributed' confidence badge are a worked example, not a published result. There is also a '109k' figure adjacent to the GitHub link that is unexplained on the page. None of this is deceptive \u2014 the numbers are clearly a sample brief \u2014 but a buyer should not read them as performance data, and no case study or independent result is offered in their place.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY because the operational posture is strong and explicitly stated (read-only, human-in-the-loop, PR-scoped changes), provider coverage is broad and enumerated, and pricing, docs and security surfaces are all present and one click away. Held out of the top band because every quantified outcome on the public surface is illustrative rather than measured, no case study or independent corroboration is offered, and an unexplained '109k' figure sits next to the repository link.",
+  "what_it_does_well": [
+    "Safety posture stated in the subhead, not buried: read-only access, nothing shipped without a human",
+    "Remediation arrives as a scoped pull request with saving and blast radius described \u2014 reviewable like any other change",
+    "Items it cannot resolve confidently are labelled 'needs a human' instead of auto-actioned",
+    "Broad, enumerated provider coverage across cloud, model, platform and data spend",
+    "Publishes what it decided against and why \u2014 an unusually honest form of explanation",
+    "Single-command install (uvx), with pricing, docs and security all in the primary navigation"
+  ],
+  "what_it_fails_at": [
+    "Every headline number is from an illustrative mock brief, not a measured customer result",
+    "An unexplained '109k' figure sits beside the GitHub link with no context",
+    "No case studies, references or independent validation of the savings claims",
+    "Anomaly detection is described as per-series pattern learning but the method is not explained further",
+    "No stated accuracy or false-positive characteristics, despite '94% attributed' appearing in the sample"
+  ],
+  "best_for": [
+    "Teams with meaningful multi-cloud and model spend who want overnight analysis rather than another dashboard",
+    "Infrastructure-as-code shops where a pull request is the natural remediation format",
+    "Organisations that will not grant write access to a cost tool \u2014 read-only is the default here",
+    "FinOps practitioners wanting AI model spend and cloud spend read together"
+  ],
+  "not_recommended_for": [
+    "Small or single-provider deployments, where the breadth is unnecessary overhead",
+    "Buyers needing verified savings evidence before committing \u2014 none is published",
+    "Teams without an infrastructure repository; the PR-based remediation model assumes one"
+  ],
+  "red_flags": [
+    "The prominent financial figures ('$47,200 a month recoverable', '$120,800' CloudFront overage, '94% attributed') are illustrative mock data. They are presented as a sample brief rather than disguised as results, but they are the most memorable numbers on the page and no real ones are offered alongside.",
+    "The '109k' figure adjacent to the GitHub link is unexplained and unverified on the public surface."
+  ],
+  "compared_to": [
+    {
+      "slug": "awslabs-mcp",
+      "verdict_diff": "AWS's cost-and-operations servers are first-party primitives for AWS only; nable spans 14 providers including model spend and ships an opinionated overnight workflow. Choose AWS-native for AWS-only, nable for multi-provider with a defined process.",
+      "preferred_for_axis": "multi-provider-workflow-vs-first-party"
+    },
+    {
+      "slug": "alikarami-mikromcp",
+      "verdict_diff": "Both take infrastructure-agent safety seriously; nable stays read-only and proposes via PR, MikroMCP performs guarded writes with dry-run and rollback. nable's posture is the more conservative of the two.",
+      "preferred_for_axis": "read-only-vs-guarded-write"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Ships as an MCP server (the repository is finopsmcp) with a uvx-installable CLI, so it is addressable both by agents and by scheduled automation. The read-only access model and PR-based output make it comparatively safe to hand to an autonomous agent \u2014 the agent can analyse and propose, but cannot apply.",
+    "agent_friendly_score": 8
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Loads without auth; states the proposition and its constraints in the first screen \u2014 overnight cost review, read-only, nothing shipped without a human.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "A Pricing link sits in the primary navigation, one click from the landing page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Docs and Security links are in the primary navigation, plus a public repository and a copy-pasteable install command.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "14 providers enumerated across four named groups: clouds, models, platform and data.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Read-only access is stated on the landing page and a dedicated Security page is linked from the primary navigation.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://getnable.com",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://getnable.com",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://getnable.com",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://getnable.com",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://getnable.com",
+      "tested_at": "2026-08-14",
+      "verified": true
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Cost analysis and reporting tool; it produces financial analysis of existing infrastructure rather than synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-e8bb1ccfaf2b3c23-getnable-com",
+    "base": "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_agents.png",
+      "page_pricing.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/home.png",
+      "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/page_.png",
+      "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/page_agents.png",
+      "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/page_pricing.png"
+    ]
+  }
+}
