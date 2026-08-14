@@ -1,0 +1,176 @@
+{
+  "schema_version": "2.0",
+  "slug": "nwiizo-tfmcp",
+  "name": "tfmcp",
+  "agent_url": "https://crates.io/crates/tfmcp",
+  "repo_url": "https://github.com/nwiizo/tfmcp",
+  "category": "Infrastructure",
+  "run_id": "run-3fd6f6cb9df9eb30-crates-io",
+  "run_at": "2026-08-14T08:05:29.882Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:33:25Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "medium",
+  "review_url": "/reviews/nwiizo-tfmcp/",
+  "hlido_opinion": {
+    "headline": "A Terraform MCP server that lets an LLM run apply against your infrastructure, and whose own landing banner tells you it is still under active development \u2014 the warning is the most useful thing on the page.",
+    "body": "tfmcp exposes Terraform to LLMs over MCP: reading configuration, analysing plan output, applying configurations, managing state and creating or modifying configs. The reviewed surface is the crates.io package page (v0.2.2, ten published versions), which carries the README, a cargo install line, topic tags and dependency and version tabs. Release notes for v0.2.2 mention RMCP 3.0.1, MCP 2026-07-28 discovery support, structured JSON tool results with backward-compatible text content, and a five-minute public cache \u2014 concrete, dated detail that suggests real maintenance rather than an abandoned experiment. The concern is the capability list itself. 'Applying Terraform configurations' and 'managing Terraform state' are the two most destructive operations in the infrastructure toolchain, and the project's own banner says it 'includes production-ready security features but is still under active development' while asking you to review all operations carefully in production. That is honest, and it is the correct disclosure \u2014 but the security system it refers to is never described on this surface. There is no dedicated docs site here, no enumerated tool list, no statement of what guardrails exist between an LLM's decision and a state-mutating apply. Compare MikroMCP, which makes dry-run, rollback and audit its headline: tfmcp asks for comparable trust and shows less of its work. The package page is a package page; what this category needs is a security model.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING because the checks that matter most for a tool holding apply-level infrastructure access are unmet on the public surface: no tool inventory, no description of the guardrails between an LLM decision and a state mutation, and no documentation site beyond the package README. Held mid-band rather than lower because maintenance signals are genuinely good \u2014 ten versions, dated release notes, current MCP spec support \u2014 and because the project discloses its own maturity limits instead of hiding them.",
+  "what_it_does_well": [
+    "Publishes real version history \u2014 v0.2.2 with ten released versions visible",
+    "Release notes are specific and dated (RMCP 3.0.1, MCP 2026-07-28 discovery, structured JSON results)",
+    "Tracks the current MCP specification rather than an old snapshot",
+    "Discloses its own maturity limits prominently instead of burying them",
+    "Single-command install via cargo; Rust implementation means a self-contained binary"
+  ],
+  "what_it_fails_at": [
+    "No enumerated tool inventory \u2014 a buyer cannot see what the server exposes before installing",
+    "The 'production-ready security features' it cites are never described anywhere on the surface",
+    "No guardrail story (dry-run, plan gating, approval, rollback) for a tool that can run apply",
+    "No dedicated documentation site; the package README is the entire public surface",
+    "No statement on how Terraform credentials or state backends are accessed"
+  ],
+  "best_for": [
+    "Terraform users who want LLM assistance with reading and analysing configuration and plans",
+    "Rust-comfortable operators who will read the source before granting access",
+    "Non-production or sandbox environments where an unguarded apply is survivable"
+  ],
+  "not_recommended_for": [
+    "Production infrastructure without an external approval gate \u2014 the tool ships no described guardrail of its own",
+    "Teams needing a documented security model before granting state-mutating access",
+    "Anyone wanting a published tool inventory to reason about before installation"
+  ],
+  "red_flags": [
+    "The server can apply Terraform configurations and manage state \u2014 the two most destructive operations available \u2014 while publishing no description of what stands between an LLM's decision and that mutation.",
+    "The project's own banner states it is under active development and asks users to review all operations carefully in production. Treat that as the operative guidance, not marketing caution."
+  ],
+  "compared_to": [
+    {
+      "slug": "alikarami-mikromcp",
+      "verdict_diff": "MikroMCP asks for comparable infrastructure trust and makes dry-run, rollback, RBAC and audit its headline. tfmcp targets Terraform rather than RouterOS but publishes far less about its safety model \u2014 the useful contrast is what each chooses to show.",
+      "preferred_for_axis": "published-safety-model"
+    },
+    {
+      "slug": "awslabs-mcp",
+      "verdict_diff": "AWS's infrastructure-and-deployment servers are first-party with vendor continuity; tfmcp is a single-maintainer community project but is Terraform-native and cloud-agnostic. Choose on provenance versus portability.",
+      "preferred_for_axis": "provenance-vs-portability"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with current-spec discovery support (MCP 2026-07-28) and structured JSON tool results, which is genuinely good agent ergonomics \u2014 a calling agent gets parseable output rather than prose. Undercut by the absence of a published tool inventory, so capability must be discovered at runtime.",
+    "agent_friendly_score": 7
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "crates.io package page loads without auth and states the purpose: manage Terraform through MCP, letting LLMs operate Terraform environments.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "Open-source crate distributed free via cargo; no pricing surface expected.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The README renders publicly with install and capability description, and a demo is referenced, but there is no separate docs site or reference material.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "Claude Desktop is named and MCP discovery support is stated, but no tool inventory or broader client list is published.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "Nothing describes Terraform credential access, state backend handling, or the guardrails around apply.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://crates.io/crates/tfmcp",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://crates.io/crates/tfmcp",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://crates.io/crates/tfmcp",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://crates.io/crates/tfmcp",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://crates.io/crates/tfmcp",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Infrastructure-as-code management server; it operates existing Terraform configuration and does not generate synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-3fd6f6cb9df9eb30-crates-io",
+    "base": "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io",
+    "files": [
+      "home.png",
+      "page_code.png",
+      "page_versions.png",
+      "page_dependencies.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/home.png",
+      "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/page_code.png",
+      "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/page_versions.png",
+      "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/page_dependencies.png"
+    ]
+  }
+}
