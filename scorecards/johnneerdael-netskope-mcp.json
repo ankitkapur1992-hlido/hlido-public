@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "johnneerdael-netskope-mcp",
+  "name": "Netskope NPA MCP",
+  "agent_url": "https://johnneerdael.github.io/privateaccess-mcp/",
+  "repo_url": "https://github.com/johnneerdael/netskope-mcp",
+  "category": "Infrastructure",
+  "run_id": "run-9100eae4f581f3e8-johnneerdael-github-io",
+  "run_at": "2026-08-13T20:30:43.167Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:33:25Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "high",
+  "review_url": "/reviews/johnneerdael-netskope-mcp/",
+  "hlido_opinion": {
+    "headline": "Seventy tools for Netskope Private Access with three documented deployment paths and a decision table telling you which to pick \u2014 enterprise-grade documentation from what appears to be an independent maintainer.",
+    "body": "This is a well-built documentation surface. The server exposes 70 tools covering publishers, private apps, local brokers, policies, SCIM identity data, upgrade profiles, steering, alerts, search and validation. Rather than listing features, the landing page opens with a decision table: hosted HTTP if you want the quickest client setup and can pass tenant URL and API token as MCP request headers, local stdio if your client launches servers as local commands, self-hosted HTTP if you want a private endpoint behind your own network controls. Each row links where to start. That is a genuinely user-centred way to open technical documentation and it is uncommon. Install commands for both npm and Docker (ghcr.io) are given verbatim, the documentation is sectioned into starter, install, tools, workflows, examples, operations and reference \u2014 including a published tool surface and a dedicated tool-and-security page \u2014 and the whole thing is version-stamped as applying to v6.3.0. A version-pinned documentation set with a workflows section describing real operating patterns is the mark of something maintained in earnest. The caveats are about provenance rather than quality: this manages enterprise zero-trust network access infrastructure, and while the docs mention passing an API token as MCP request headers, that mechanism deserves more scrutiny than the surface gives it \u2014 a tenant token transiting request headers to a hosted endpoint is a meaningful trust decision. The hosted option's operator is not identified beyond the maintainer's own GitHub identity, and there is no third-party or vendor endorsement indicating Netskope itself has reviewed this.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY and near the top because nearly every check passes with evidence: version-pinned docs, a published tool surface, three documented deployment paths with a decision table, verbatim install commands for two package channels, and dedicated operations and security sections. Held out of the top band on provenance rather than craft \u2014 this is an independent project managing enterprise zero-trust infrastructure, the hosted endpoint's operator is not identified, and the header-borne tenant-token pattern is documented but not security-argued.",
+  "what_it_does_well": [
+    "Opens with a decision table matching deployment path to situation, instead of a feature list",
+    "70 tools with a published tool surface, not just a headline count",
+    "Three documented deployment paths: hosted HTTP, local stdio, self-hosted HTTP",
+    "Verbatim install commands for both npm and Docker (ghcr.io)",
+    "Documentation version-pinned to v6.3.0 \u2014 the reader knows what the docs describe",
+    "Separate workflows and operations sections covering real operating patterns, plus a tool-and-security reference"
+  ],
+  "what_it_fails_at": [
+    "Independent project managing enterprise zero-trust infrastructure, with no indication Netskope has reviewed it",
+    "The hosted HTTP endpoint's operator and data handling are not identified beyond the maintainer's GitHub identity",
+    "Passing a tenant URL and API token as MCP request headers is documented but not security-argued",
+    "No stated support commitment, SLA or issue-response expectation for an enterprise-facing tool",
+    "No pricing or cost statement for the hosted option"
+  ],
+  "best_for": [
+    "Netskope NPA administrators who want AI-assisted management of publishers, private apps and policies",
+    "Teams that will self-host the HTTP endpoint behind their own network controls \u2014 the documented path that avoids the third-party trust question",
+    "Engineers who evaluate on documentation quality; this is among the strongest surfaces in its class"
+  ],
+  "not_recommended_for": [
+    "Organisations requiring vendor-endorsed or vendor-supported tooling for zero-trust infrastructure",
+    "Teams that cannot accept an unidentified third party in the path of a tenant API token \u2014 use the self-hosted path instead",
+    "Non-Netskope environments; this is entirely platform-specific"
+  ],
+  "red_flags": [
+    "The hosted HTTP path routes a Netskope tenant URL and API token through an endpoint whose operator is identified only by a personal GitHub account. The self-hosted path exists and is documented \u2014 for privileged infrastructure credentials, it is the one to use.",
+    "This manages enterprise zero-trust network access with no visible vendor review or endorsement. The documentation quality is high, but quality is not provenance."
+  ],
+  "compared_to": [
+    {
+      "slug": "awslabs-mcp",
+      "verdict_diff": "AWS's suite carries first-party provenance for cloud infrastructure; this is an independent project for Netskope NPA with arguably better-organised documentation but none of the vendor backing. Provenance is the axis.",
+      "preferred_for_axis": "vendor-backing-vs-independent-craft"
+    },
+    {
+      "slug": "alikarami-mikromcp",
+      "verdict_diff": "Both are single-maintainer infrastructure MCP servers with large typed tool surfaces. MikroMCP leads on change-safety machinery (dry-run, rollback, audit); Netskope NPA MCP leads on documentation structure and deployment guidance.",
+      "preferred_for_axis": "change-safety-vs-documentation"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with 70 published tools across both stdio and Streamable HTTP transports, plus a hosted endpoint requiring only header credentials. The published tool surface and worked prompt examples mean an agent can reason about capability before connecting \u2014 among the better-documented agent surfaces reviewed.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Docs site loads without auth and states purpose, platform and tool count in the opening paragraph.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "Open-source npm and Docker distribution; no pricing surface published, including for the hosted option.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Full public documentation: starter, install, tools, workflows, examples, operations and reference.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Three deployment paths with a decision table, npm and Docker install commands, and a published tool surface covering all 70 tools.",
+      "source_surface": "docs"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Auth mechanism documented (tenant URL plus API token as request headers) with a dedicated tool-and-security reference, but the hosted endpoint's data handling and operator are not described.",
+      "source_surface": "docs"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://johnneerdael.github.io/privateaccess-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://johnneerdael.github.io/privateaccess-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://johnneerdael.github.io/privateaccess-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://johnneerdael.github.io/privateaccess-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://johnneerdael.github.io/privateaccess-mcp/",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Network access infrastructure management server; it configures existing Netskope NPA resources and does not generate synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-9100eae4f581f3e8-johnneerdael-github-io",
+    "base": "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io",
+    "files": [
+      "home.png",
+      "page_.png",
+      "pagestarter_.png",
+      "pageinstall_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/home.png",
+      "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/page_.png",
+      "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/pagestarter_.png",
+      "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/pageinstall_.png"
+    ]
+  }
+}
