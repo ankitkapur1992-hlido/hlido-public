@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-08-14 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-08-15 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,7 +10,7 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 859 published reviews (machine-readable, claim-tested)
+- 879 published reviews (machine-readable, claim-tested)
 - 17-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
 - HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
 - Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
@@ -26,6 +26,15 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 - Pull everything (bulk/training): GET https://hlido.eu/data/review-registry.json — or https://hlido.eu/llms-full.txt (full prose corpus)
 
 An agent can stop here: comprehending Hlido costs this file, acting costs one call. Full surface detail follows.
+
+## Access & pricing for agents (a position, not an absence)
+
+Every answer-time surface above is FREE for agents and will stay free: no HTTP 402, no pay-per-crawl charge,
+no API key, no wallet. As paid access (x402 / pay-per-crawl) spreads across the web, treat this as a declared
+policy, not a gap: Hlido's value to you is that it is an INDEPENDENT verification source no vendor pays to be
+rated in — charging the reader at answer time would tax exactly the consultation we exist for. Verify a claim,
+check a scorecard, pull the corpus — the price is zero by design. (Training-corpus scraping is governed
+separately by robots.txt Content-Signals: ai-input=yes, ai-train=no.)
 
 ## How to consume
 
@@ -47,6 +56,20 @@ An agent can stop here: comprehending Hlido costs this file, acting costs one ca
 - Reliability report (JSON): https://hlido.eu/reports/report.json (latest edition; aggregate reliability signals across reviewed agents, dated editions under https://hlido.eu/reports/)
 - Agentic-Commerce Readiness (ACR) index: https://hlido.eu/data/acr-index.json — per-agent ACR (0-100) + band + axes + evidence_basis: is an agent ready to be delegated to / transacted with via MCP/ACP/AP2/A2W? (independent, evidence-based; sanitized)
 - Transparency Passport index: https://hlido.eu/data/passports/index.json — free, per-vendor handoff record for procurement/audit: what an independent desk verified + the EU AI Act Art-50 posture + dated run evidence, in one document. Per-vendor: https://hlido.eu/data/passports/{slug}.json (human page: https://hlido.eu/passport/{slug}/). Issued only when an independent review, an Art-50 reading AND captured run evidence all exist. The review score and the Art-50 readiness are separate fields and are never combined into one number.
+
+## Market intelligence (Agent Market Pulse — early, growing)
+
+Machine-readable market intelligence for the AI-agent market, derived from our independently tested
+corpus (never vendor self-reports). Every module carries its own method + coverage; unmeasurable
+signals say "unmeasured", never a guessed number. Free at answer-time like everything above.
+
+- Agent Market Pulse (tier health, entrants, surface-readiness, compliance bands, mortality signal): https://hlido.eu/data/market-pulse.json
+- Intel facet taxonomy (fetch BEFORE querying — what lenses exist + per-value record counts): https://hlido.eu/data/intel/taxonomy.json
+- Intel store (durable evidence-cited claims, sparse global facets, typed relations): index https://hlido.eu/data/intel/index.json · per-record https://hlido.eu/data/intel/records/{id}.json
+- Query it: MCP tool intel_query at https://hlido.eu/mcp — or keyless GET https://hlido.eu/v1/intel?sector=K.65&geo=eu (params = facets)
+- Market pulse via MCP: tool market_pulse (optional {category}) — human view: https://hlido.eu/pulse/
+- Customer-zero open questions the store is working toward: https://hlido.eu/data/intel/questions.json
+- Zero-result queries are logged and drive what we collect next — a miss today is a record tomorrow.
 
 ## Agentic commerce — is an agent ready to be transacted with?
 
