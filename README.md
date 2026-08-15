@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (863)
+## Reviewed agents (890)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -891,6 +891,33 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`rdanieli-tentra-mcp`](https://hlido.eu/reviews/rdanieli-tentra-mcp/) | Tentra | Infrastructure | 68 | — |
 | [`tatsuju-opdstar-nhi-mcp`](https://hlido.eu/reviews/tatsuju-opdstar-nhi-mcp/) | OPDSTAR | Specialized verticals | 58 | — |
 | [`uxloom-dev-uxloom`](https://hlido.eu/reviews/uxloom-dev-uxloom/) | UXLoom | Frameworks & Eval | 71 | — |
+| [`segentic-lab-periscope-mcp`](https://hlido.eu/reviews/segentic-lab-periscope-mcp/) | Periscope MCP (Segentic Lab) | Frameworks & Eval | 61 | — |
+| [`john-broadway-proximo`](https://hlido.eu/reviews/john-broadway-proximo/) | Proximo | Infrastructure | 76 | — |
+| [`johnneerdael-netskope-mcp`](https://hlido.eu/reviews/johnneerdael-netskope-mcp/) | Netskope NPA MCP | Infrastructure | 80 | — |
+| [`swimmwatch-cloakbrowser-mcp`](https://hlido.eu/reviews/swimmwatch-cloakbrowser-mcp/) | CloakBrowser MCP | Frameworks & Eval | 77 | — |
+| [`vincentvella-devloop`](https://hlido.eu/reviews/vincentvella-devloop/) | Devloop | Coding | 79 | — |
+| [`nwiizo-tfmcp`](https://hlido.eu/reviews/nwiizo-tfmcp/) | tfmcp | Infrastructure | 64 | — |
+| [`acedatacloud-seedreammcp`](https://hlido.eu/reviews/acedatacloud-seedreammcp/) | AceDataCloud/SeedreamMCP | MCP Server | 82 | — |
+| [`agentscope-ai-agentscope`](https://hlido.eu/reviews/agentscope-ai-agentscope/) | AgentScope | AI Agent | 70 | — |
+| [`aliafsahnoudeh-shahnameh-mcp-server`](https://hlido.eu/reviews/aliafsahnoudeh-shahnameh-mcp-server/) | aliafsahnoudeh/shahnameh-mcp-server | MCP Server | 60 | — |
+| [`alikarami-mikromcp`](https://hlido.eu/reviews/alikarami-mikromcp/) | MikroMCP | Infrastructure | 79 | — |
+| [`attalla1-photopea-mcp-server`](https://hlido.eu/reviews/attalla1-photopea-mcp-server/) | attalla1/photopea-mcp-server | MCP Server | 80 | — |
+| [`awslabs-mcp`](https://hlido.eu/reviews/awslabs-mcp/) | Open Source MCP Servers for AWS | Infrastructure | 83 | — |
+| [`bluesprince-thiri-mcp`](https://hlido.eu/reviews/bluesprince-thiri-mcp/) | BluesPrince/thiri-mcp | MCP Server | 80 | — |
+| [`chaandannn-finopsmcp`](https://hlido.eu/reviews/chaandannn-finopsmcp/) | nable | Infrastructure | 74 | — |
+| [`eat-pray-ai-yutu`](https://hlido.eu/reviews/eat-pray-ai-yutu/) | yutu | Marketing & Content | 71 | — |
+| [`ertad-family-liquid`](https://hlido.eu/reviews/ertad-family-liquid/) | ertad-family/liquid | MCP Server | 80 | — |
+| [`executeautomation-mcp-playwright`](https://hlido.eu/reviews/executeautomation-mcp-playwright/) | Playwright MCP Server (ExecuteAutomation) | Frameworks & Eval | 58 | — |
+| [`feedthrough-feedthrough`](https://hlido.eu/reviews/feedthrough-feedthrough/) | Feedthrough | Coding | 78 | — |
+| [`gregario-astronomy-oracle`](https://hlido.eu/reviews/gregario-astronomy-oracle/) | gregario/astronomy-oracle | MCP Server | 82 | — |
+| [`hshintelligence-agent-scrape`](https://hlido.eu/reviews/hshintelligence-agent-scrape/) | AgentScrape | Infrastructure | 69 | — |
+| [`junipr-labs-mcp-server`](https://hlido.eu/reviews/junipr-labs-mcp-server/) | Junipr MCP Server | Workflow & Automation | 41 | — |
+| [`leo-lilinxiao-codex-autoresearch`](https://hlido.eu/reviews/leo-lilinxiao-codex-autoresearch/) | leo-lilinxiao/codex-autoresearch | Developer Tool | 82 | — |
+| [`mathiaspaulenko-wavexis-mcp`](https://hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/) | WaveXisMCP | Infrastructure | 81 | — |
+| [`tc-rebillion`](https://hlido.eu/reviews/tc-rebillion/) | AI Transaction Coordination for Real Estate | ReBillion | Workflow & Automation | 90 | — |
+| [`youngbryan97-aura`](https://hlido.eu/reviews/youngbryan97-aura/) | youngbryan97/aura | Developer Tool | 80 | — |
+| [`tencentcloudbase-cloudbase-ai-toolkit`](https://hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/) | CloudBase AI ToolKit | Infrastructure | 82 | — |
+| [`txn2-kubefwd`](https://hlido.eu/reviews/txn2-kubefwd/) | kubefwd | Infrastructure | 80 | — |
 
 ## Files in this mirror
 
