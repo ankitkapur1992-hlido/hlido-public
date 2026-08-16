@@ -1,0 +1,176 @@
+{
+  "schema_version": "2.0",
+  "slug": "segentic-lab-periscope-mcp",
+  "name": "Periscope MCP (Segentic Lab)",
+  "agent_url": "https://lab.segentic.dev",
+  "repo_url": "https://github.com/segentic-lab/periscope-mcp",
+  "category": "Frameworks & Eval",
+  "run_id": "run-671e021c628a008b-lab-segentic-dev",
+  "run_at": "2026-08-11T08:06:20.613Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:26:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 61,
+  "tier": "FADING",
+  "laddoo_score": 61,
+  "confidence": "low",
+  "review_url": "/reviews/segentic-lab-periscope-mcp/",
+  "hlido_opinion": {
+    "headline": "A 74-tool Playwright QA server that returns verdicts rather than screenshots \u2014 a sharp idea, reviewed through its parent lab's index page because the project has no public surface of its own.",
+    "body": "The idea is good and stated crisply: most browser-QA MCP servers hand an agent screenshots and let it guess, and Periscope instead exposes 74 Playwright tools that return hard verdicts. For an agent consumer that distinction is real \u2014 a pass/fail verdict is actionable, an image requires a vision round-trip and a judgement call. The project is Python, AGPL-3.0, and marked live alongside three siblings (lens-mcp, glovebox-mcp, hero-fx) from a Slovenian studio that publishes its build write-ups. The problem is that this is all the public surface says. The reviewed URL resolves to the lab's project index, not to Periscope itself \u2014 there is no project page, no tool inventory, no installation instructions, no configuration reference and no example verdict output. Everything specific about the product lives behind a 'read build' link or in the repository. So the differentiating claim, that the verdicts are hard and useful, is exactly the claim with no evidence attached to it. The score reflects a real and well-positioned tool that has not yet been given a surface an evaluator can assess. AGPL-3.0 is also worth flagging early rather than late: it is a deliberate choice with real consequences for anyone embedding this in a commercial product.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING because the checks this category needs \u2014 tool inventory, install path, configuration, evidence of the core claim \u2014 are all unmet on the public surface; the project has no page of its own and is represented only by a two-line card on a lab index. Not lower, because the positioning is specific rather than generic, the licence and language are declared, the project is marked live, and sibling projects suggest an active workshop. Confidence is low: this reviews a listing, not a product surface.",
+  "what_it_does_well": [
+    "Sharp, defensible positioning \u2014 verdicts rather than screenshots is a real distinction for agent consumers",
+    "Tool count (74) and implementation language declared",
+    "Licence stated openly and up front (AGPL-3.0)",
+    "Sits in an actively maintained lab with three sibling projects marked live",
+    "Studio publishes build write-ups, which is more transparency than most tools in this bracket offer"
+  ],
+  "what_it_fails_at": [
+    "No project page \u2014 the tool is represented by a two-line card on its parent lab's index",
+    "No tool inventory despite 74 tools being the headline number",
+    "No installation or configuration instructions on any public surface",
+    "The core claim (hard verdicts) has no example output anywhere to substantiate it",
+    "AGPL-3.0 is stated but its commercial implications are not addressed, and this is a tool teams would embed"
+  ],
+  "best_for": [
+    "Teams already comfortable with AGPL-3.0 who want structured QA verdicts instead of screenshot interpretation",
+    "Python shops preferring a Python-native browser QA server",
+    "Evaluators willing to go to the repository, since that is where all the substance lives"
+  ],
+  "not_recommended_for": [
+    "Commercial products where AGPL-3.0 obligations are a blocker \u2014 decide this before investing time",
+    "Buyers who need to assess capability before installing; there is no public inventory to assess",
+    "Anyone wanting a supported product rather than a released workshop tool"
+  ],
+  "red_flags": [
+    "AGPL-3.0 on a tool designed to be embedded in a testing pipeline carries obligations that many commercial teams will not accept. It is disclosed, but its consequences are not discussed.",
+    "The public surface resolved to the parent lab index rather than a project page, so this review assesses a listing. Treat the score as a measure of public legibility, not of the software."
+  ],
+  "compared_to": [
+    {
+      "slug": "microsoft-playwright-mcp",
+      "verdict_diff": "Playwright MCP is the documented, permissively-licensed default with first-party backing. Periscope's verdict-oriented output is the reason to look past that, but you trade documentation and licence flexibility for it.",
+      "preferred_for_axis": "licence-and-documentation"
+    },
+    {
+      "slug": "mathiaspaulenko-wavexis-mcp",
+      "verdict_diff": "WaveXisMCP is the same Python-native browser-control idea with vastly more published documentation and roughly three times the tool count. If Periscope's verdict framing is not decisive for you, WaveXisMCP is the more assessable option.",
+      "preferred_for_axis": "published-documentation"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP server with a stated 74-tool surface, but no published inventory or configuration, so an agent cannot evaluate or configure it without cloning the repository. The verdict-oriented output design would be strongly agent-friendly if it were documented.",
+    "agent_friendly_score": 5
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "partial_pass",
+      "evidence": "The lab index loads and describes Periscope in one sentence, but this is a listing rather than the product's own page.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "unverified",
+      "evidence": "Open-source project under AGPL-3.0; no pricing surface expected.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "No installation, configuration or reference documentation on the reviewed surface; a 'read build' link is the only route onward.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "fail",
+      "evidence": "No MCP client list, no framework compatibility statement, no tool inventory.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No statement on browser session handling, credentials or data capture.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://lab.segentic.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://lab.segentic.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://lab.segentic.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://lab.segentic.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://lab.segentic.dev",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Browser QA and testing server; it evaluates existing applications and does not generate synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-671e021c628a008b-lab-segentic-dev",
+    "base": "https://images.hlido.eu/reviews/segentic-lab-periscope-mcp/run-671e021c628a008b-lab-segentic-dev",
+    "files": [
+      "home.png",
+      "page__main.png",
+      "page_.png",
+      "page__projects.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/segentic-lab-periscope-mcp/run-671e021c628a008b-lab-segentic-dev/home.png",
+      "https://images.hlido.eu/reviews/segentic-lab-periscope-mcp/run-671e021c628a008b-lab-segentic-dev/page__main.png",
+      "https://images.hlido.eu/reviews/segentic-lab-periscope-mcp/run-671e021c628a008b-lab-segentic-dev/page_.png",
+      "https://images.hlido.eu/reviews/segentic-lab-periscope-mcp/run-671e021c628a008b-lab-segentic-dev/page__projects.png"
+    ]
+  }
+}
