@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "vincentvella-devloop",
+  "name": "Devloop",
+  "agent_url": "https://devloop.build",
+  "repo_url": "https://github.com/vincentvella/devloop",
+  "category": "Coding",
+  "run_id": "run-976eca187c2c09bf-devloop-build",
+  "run_at": "2026-08-14T00:30:59.924Z",
+  "reviewed_at": "2026-08-14",
+  "generated_at": "2026-08-14T21:33:25Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.08",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+  "review_url": "/reviews/vincentvella-devloop/",
+  "hlido_opinion": {
+    "headline": "Correlates browser console errors with the backend stack trace from the same moment on one timeline, and ships the CLAUDE.md block that makes an agent actually reach for it \u2014 including the instruction never to claim a fix works without exercising it.",
+    "body": "Devloop's premise is specific and immediately recognisable to anyone who has debugged a full-stack issue: a browser console error and the dev-server stack trace from the same moment are two halves of one event, and they normally live in two windows with no shared clock. Devloop puts both on a single correlated timeline, then exposes it over MCP so an agent can start the dev server, drive the browser, reproduce an issue and read back a correlated slice of both sides. The install is one command (claude mcp add devloop), and there is a desktop 'cockpit' with tabbed browser panes, Expo iOS/Android targets, a filterable timeline, a repro builder and an element picker. The unusual move is publishing a ready-made CLAUDE.md block that tells an agent when to reach for the tool and what counts as done \u2014 'never claim a fix works without exercising it in the running app', with 'done' defined as verified live with no console or page errors and the expected network calls succeeding. That is prompt-level distribution, and it is a smart, honest answer to the real failure mode of coding agents declaring victory from a diff. Two further details signal maturity: a documented fallback for enterprise sandboxes that block MCP (drive the tools as shell commands), and an explicit statement that Devloop diagnoses missing toolchain and names the fix command but never installs anything itself. What is missing is the operational half \u2014 no version or changelog on the surface, nothing about what the correlated timeline captures or retains, and no security note for a tool that reads console output and network traffic from a running application.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY because the product solves a real and specific problem, the surface backs it with a demo, screenshots, a one-command install, a documented enterprise fallback and a clear scope boundary on installation, and the CLAUDE.md distribution block is a genuine agent-adoption advantage. Held out of the top band because there is no version, changelog or data-handling statement, and because the correlation quality that the whole product rests on is shown in demo form rather than described in a way a buyer can verify.",
+  "what_it_does_well": [
+    "Solves a specific, recognisable problem \u2014 browser and server evidence from the same moment on one timeline",
+    "Ships a copy-paste CLAUDE.md block so agents actually reach for it, with a real definition of done",
+    "One-command MCP install, plus a documented shell-command fallback for sandboxes that block MCP",
+    "Explicit scope boundary: it diagnoses missing toolchain and names the fix, but never installs",
+    "Desktop cockpit with repro builder, element picker and filterable timeline for human use",
+    "Covers Expo iOS/Android targets alongside browser, which is broader than most tools in this class"
+  ],
+  "what_it_fails_at": [
+    "No version, changelog or release-cadence signal anywhere on the surface",
+    "Nothing describes what the correlated timeline captures, retains or transmits",
+    "No security note for a tool reading console output and network traffic from a running app",
+    "Correlation accuracy \u2014 the core value \u2014 is demonstrated by video rather than described or specified",
+    "No pricing or licence statement despite a distributed desktop application"
+  ],
+  "best_for": [
+    "Developers using AI coding agents who are tired of fixes claimed from a diff rather than verified live",
+    "Full-stack teams whose bugs span the browser/server boundary and are painful to correlate by hand",
+    "React Native and Expo developers \u2014 mobile targets are supported alongside browser",
+    "Teams wanting an agent-enforced definition of done tied to observed application behaviour"
+  ],
+  "not_recommended_for": [
+    "Production or customer-facing environments \u2014 this is development-time tooling with no documented data posture",
+    "Teams needing a documented security review before a tool reads console and network traffic",
+    "Backend-only projects with no browser or mobile surface to correlate against"
+  ],
+  "red_flags": [
+    "The tool captures console output and network traffic from a running application, which routinely includes tokens and personal data, and no public statement describes what is captured, retained or transmitted.",
+    "No version or changelog is published for a distributed desktop application, so a buyer cannot tell how actively it is maintained or what changed between builds."
+  ],
+  "compared_to": [
+    {
+      "slug": "feedthrough-feedthrough",
+      "verdict_diff": "The closest comparison \u2014 both expose live web-app debugging state over MCP. Feedthrough reaches into the page itself via an injected bridge; Devloop correlates browser and dev-server timelines and adds mobile targets plus a desktop app. Choose Feedthrough for in-page state, Devloop for cross-boundary correlation.",
+      "preferred_for_axis": "in-page-state-vs-cross-boundary-correlation"
+    },
+    {
+      "slug": "microsoft-playwright-mcp",
+      "verdict_diff": "Playwright MCP drives a browser for automation and testing; Devloop is built for diagnosis, pairing browser control with server-side log correlation. Different jobs despite overlapping browser control.",
+      "preferred_for_axis": "automation-vs-diagnosis"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with named tools (dev_start, browser_navigate, repro, browser_snapshot, diagnose, get_logs_around, native_open), a shared daemon mode for multiple agents, and a published CLAUDE.md rules block that tells an agent when to use each. The shell-command fallback means it still works where MCP is blocked. Distribution-aware agent design, not just an agent-compatible interface.",
+    "agent_friendly_score": 9
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Loads without auth; the correlated-timeline proposition is stated in the first sentence, for both agents and humans.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C02",
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No pricing or licence information anywhere, despite a distributed desktop application with platform installers.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C03",
+      "claim": "Documentation or live demo accessible without login",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Public demo video, screenshots, install commands, worked usage examples and a linked README.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C04",
+      "claim": "Integration list or supported frameworks documented",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Named MCP tools, Claude integration command, npm and GitHub distribution, Expo iOS/Android targets, plus an mcporter shell fallback for sandboxed environments.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "C05",
+      "claim": "Authentication / data handling claims publicly stated",
+      "required": false,
+      "verdict": "fail",
+      "evidence": "No statement on what console and network data is captured, retained or transmitted.",
+      "source_surface": "homepage"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Homepage publicly accessible and value proposition clearly stated",
+      "source": "https://devloop.build",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Pricing page discoverable in 2 clicks from homepage",
+      "source": "https://devloop.build",
+      "tested_at": "2026-08-14",
+      "verified": false
+    },
+    {
+      "claim": "Documentation or live demo accessible without login",
+      "source": "https://devloop.build",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Integration list or supported frameworks documented",
+      "source": "https://devloop.build",
+      "tested_at": "2026-08-14",
+      "verified": true
+    },
+    {
+      "claim": "Authentication / data handling claims publicly stated",
+      "source": "https://devloop.build",
+      "tested_at": "2026-08-14",
+      "verified": false
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "rationale": "Developer debugging tool; it correlates diagnostic output from an existing application rather than generating synthetic media, so Article 50(4) marking duties do not attach.",
+    "checked_at": "2026-08-14"
+  },
+  "evidence_images": {
+    "run_id": "run-976eca187c2c09bf-devloop-build",
+    "base": "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build",
+    "files": [
+      "home.png",
+      "page_shots_cockpit_png.png",
+      "page_shots_repro_png.png",
+      "page_shots_multipane_png.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/home.png",
+      "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/page_shots_cockpit_png.png",
+      "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/page_shots_repro_png.png",
+      "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/page_shots_multipane_png.png"
+    ]
+  }
+}
