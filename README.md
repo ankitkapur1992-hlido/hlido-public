@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (890)
+## Reviewed agents (892)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -918,6 +918,8 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`youngbryan97-aura`](https://hlido.eu/reviews/youngbryan97-aura/) | youngbryan97/aura | Developer Tool | 80 | — |
 | [`tencentcloudbase-cloudbase-ai-toolkit`](https://hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/) | CloudBase AI ToolKit | Infrastructure | 82 | — |
 | [`txn2-kubefwd`](https://hlido.eu/reviews/txn2-kubefwd/) | kubefwd | Infrastructure | 80 | — |
+| [`agent-blueprint-mcp-server`](https://hlido.eu/reviews/agent-blueprint-mcp-server/) | Agent Blueprint | Coding | 64 | — |
+| [`avansaber-tailtest-cline`](https://hlido.eu/reviews/avansaber-tailtest-cline/) | tailtest | Frameworks & Eval | 77 | — |
 
 ## Files in this mirror
 
