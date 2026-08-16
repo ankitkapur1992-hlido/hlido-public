@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "txn2-kubefwd",
+  "name": "kubefwd",
+  "agent_url": "https://kubefwd.com/",
+  "repo_url": "https://github.com/txn2/kubefwd",
+  "category": "Infrastructure",
+  "run_id": "run-3fa184f616ea72b2-kubefwd-com",
+  "run_at": "2026-08-15T00:30:45.130Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A mature CNCF bulk Kubernetes port-forwarder that now speaks MCP — the AI angle is a thin but well-executed graft onto a tool that already earned its trust.",
+    "body": "kubefwd has been on the CNCF Landscape since 2018 and does one unglamorous thing extremely well: it bulk-forwards Kubernetes services to local loopback addresses, giving each service its own 127.x.x.x IP and writing the cluster hostname into /etc/hosts, so in-cluster connection strings (http://api:8080, redis-cli -h cache, mysql -h db) resolve locally without modification. Many databases on port 3306, many gateways on 443, no remapping, no environment-specific config. It watches Kubernetes events and reconnects on pod churn with exponential backoff. Apache 2.0, installable via brew, winget, apt or a release binary. The surface is clean and honest — nothing here overshoots. For the agentic-tooling question Hlido cares about, the relevant hook is the drop-in MCP server: Claude, Cursor and any MCP-capable assistant can connect, browse cluster services and forward what a task needs in plain language ('connect me to staging redis'), alongside a 40+ endpoint REST API and an interactive Bubble Tea TUI with live traffic sparklines and pod-log streaming. Crucially, the MCP server is presented as one interface among several rather than a bolted-on gimmick, and it sits on top of a tool whose core value is deterministic devops plumbing that predates the AI framing by years. The honest limits: it requires sudo (it writes /etc/hosts and binds low ports), so it runs with real local privilege; the AI-assistant surface is a small slice of what is fundamentally a platform-engineering utility; and Hlido assessed the marketing site only, not the running binary. Nothing on the captured surface makes a claim it cannot obviously back.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-15",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) for a mature, honestly-marketed CNCF project (Landscape since 2018, Apache 2.0) with a clean public surface, multiple documented interfaces (TUI, 40+ endpoint REST API, drop-in MCP server), and clear multi-platform install paths, marked as low-medium confidence because the review is surface-only (the marketing site, not the running binary), the AI/MCP surface is a thin slice of a core devops utility, and the tool requires sudo to operate. Not VITAL because the agent-facing surface is one feature among many and nothing was hands-on tested.",
+  "what_it_does_well": [
+    "Mature, trusted project — on the CNCF Landscape since 2018, Apache 2.0, sponsored and maintained",
+    "Solves a real, specific problem: bulk local access to cluster services with per-service loopback IPs and /etc/hosts integration, so in-cluster connection strings work unchanged",
+    "Three documented interfaces — interactive TUI, a 40+ endpoint REST API, and a drop-in MCP server for AI assistants",
+    "Auto-reconnect with exponential backoff on pod churn; handles headless services, port mapping, label selectors, multi-namespace and multi-cluster",
+    "Clean, honest marketing surface with clear multi-platform install paths (brew, winget, apt, binaries)"
+  ],
+  "what_it_fails_at": [
+    "Requires sudo to run — it writes /etc/hosts and binds low ports, so it operates with real local privilege",
+    "The MCP/AI-assistant surface is a thin slice of what is fundamentally a platform-engineering utility",
+    "Surface-only review — Hlido assessed the marketing site, not the running binary; no hands-on verification of the forwarding, TUI or MCP behaviour",
+    "No hosted or managed option and no enterprise/support story on the captured surface — it is a self-run CLI"
+  ],
+  "best_for": [
+    "Platform and devops engineers who need many cluster services accessible locally exactly as they resolve in-cluster",
+    "Developers who want an MCP-drivable path for an AI assistant to reach staging/dev cluster services",
+    "Teams already in the Kubernetes/CNCF ecosystem wanting a well-established, Apache-2.0 local tool"
+  ],
+  "not_recommended_for": [
+    "Non-technical users — this is a sudo-level command-line utility",
+    "Environments where root-level local tooling that edits /etc/hosts is disallowed by policy",
+    "Anyone wanting a managed or hosted service rather than a self-run binary"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Bulk-forwards Kubernetes services, one 127.x.x.x loopback IP per service, with cluster hostnames written to /etc/hosts",
+      "source": "https://kubefwd.com/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Three interfaces documented — interactive TUI, 40+ endpoint REST API, and an MCP server for AI assistants",
+      "source": "https://kubefwd.com/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Apache 2.0, on the CNCF Landscape since 2018; install via brew, winget, apt or release binary",
+      "source": "https://kubefwd.com/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Auto-reconnect with exponential backoff on pod churn; requires sudo to write /etc/hosts and bind low ports",
+      "source": "https://kubefwd.com/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on behaviour of forwarding, TUI and MCP server (verified by running the tool)",
+      "source": "https://kubefwd.com/ (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-15",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A drop-in MCP server (`kubefwd mcp`, added via `claude mcp add kubefwd`) lets Claude, Cursor and any MCP-capable assistant browse cluster services and establish forwards in natural language. A 40+ endpoint REST API also drives forwards programmatically from CI or editor tooling. The tool itself is a Go CLI run with sudo.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'kubefwd port-forwards Kubernetes services in bulk ... each service gets its own 127.x.x.x loopback address'",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'brew install kubefwd' plus install/run and user-guide links",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Getting-started, user guide, configuration, advanced usage, troubleshooting, REST API and MCP integration all linked without login",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "integrations_documented",
+      "pass": true,
+      "required": true,
+      "evidence": "TUI, 40+ endpoint REST API and MCP server (Claude/Cursor) each documented as a distinct interface",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source under Apache 2.0; no pricing surface (N/A)",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    },
+    {
+      "id": "auth_data_handling",
+      "pass": true,
+      "required": false,
+      "evidence": "Runs locally with sudo; writes /etc/hosts (backup kept at ~/hosts.original); binds low ports — stated plainly on the surface",
+      "tested_at": "2026-08-15T00:30:45.130Z"
+    }
+  ],
+  "summary": "A mature CNCF bulk Kubernetes port-forwarder that now speaks MCP — the AI angle is a thin but well-executed graft onto a tool that already earned its trust.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-15",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-15",
+  "attestation_url": "/data/attestations/txn2-kubefwd.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-15",
+    "source": "r-publish-editorial-enrich",
+    "note": "Deterministic devops port-forwarding utility, not a generator of synthetic media — Article-50 marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-3fa184f616ea72b2-kubefwd-com",
+    "base": "https://images.hlido.eu/reviews/txn2-kubefwd/run-3fa184f616ea72b2-kubefwd-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/txn2-kubefwd/run-3fa184f616ea72b2-kubefwd-com/home.png"
+    ]
+  }
+}
