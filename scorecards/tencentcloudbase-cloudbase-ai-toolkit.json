@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "tencentcloudbase-cloudbase-ai-toolkit",
+  "name": "CloudBase AI ToolKit",
+  "agent_url": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/",
+  "repo_url": "https://github.com/TencentCloudBase/CloudBase-AI-ToolKit",
+  "category": "Infrastructure",
+  "run_id": "run-26eda7dc4a509773-docs-cloudbase-net",
+  "run_at": "2026-08-15T00:30:07.127Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 82,
+  "tier": "STEADY",
+  "laddoo_score": 82,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Tencent's official integration layer that wires an unusually broad set of AI coding tools into CloudBase's backend via MCP, Skills and one-click plugins — the widest agent-to-BaaS bridge we've seen, if your backend is (or can become) CloudBase.",
+    "body": "CloudBase AI ToolKit is Tencent Cloud's answer to 'AI writes the code — who runs the backend?': a one-install integration layer (MCP + Skills + Hooks/plugins) that connects an unusually broad set of AI coding tools to CloudBase's managed database, cloud functions, static hosting and auth. The captured docs list more than twenty-five supported clients — Cursor, Claude Code, Codex (App and CLI), Gemini CLI, Cline, WindSurf, Trae, RooCode, Qwen Code, VSCode, OpenCode, Augment Code, Kiro and iFlow among them, plus Tencent's own CodeBuddy and WeChat DevTools. Once connected, the AI IDE can create tables, write and deploy cloud functions, configure hosting and self-repair from deployment logs without the developer opening a console. Onboarding is genuinely low-friction and well-suited to agents: paste one prompt, the agent fetches skill.md and completes setup, choosing between a full plugin, manual MCP, or Skills-only per a documented decision tree. The evidence base is deep for a surface review — extensive structured docs, a large library of video walkthroughs and real open-source example projects (mini-programs, mini-games, web apps, admin backends), and an open-source repo mirrored on both GitHub and CNB. Two honest caveats keep this at STEADY rather than higher. First, the product is heavily oriented to the Chinese and WeChat mini-program ecosystem — the docs, examples and community are China-centric, so English-first teams will feel the friction. Second, and more strategically: the toolkit is free and open source, but it exists to provision Tencent CloudBase resources, whose pricing lives on the platform rather than the captured docs page. The real trade is lock-in — this is a bridge to one vendor's cloud, not a portable backend abstraction. For a team already committing to CloudBase, the breadth of AI-tool support is best-in-class; for a team that wants its backend to stay cloud-agnostic, that same breadth is a well-built on-ramp to a single vendor.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-15",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) for a substantial, vendor-backed (Tencent Cloud) integration layer with the broadest AI-IDE support surface Hlido has seen (25+ named clients), agent-native onboarding via skill.md, documented MCP + Skills + plugin paths, and a deep evidence base of docs, video tutorials and open-source examples. Held at low-medium confidence and short of VITAL because the review is surface-only (the docs overview page, not a running integration), the product and its community are heavily China/WeChat-oriented, and the underlying backend it provisions carries pricing and single-vendor lock-in that the captured surface does not make explicit.",
+  "what_it_does_well": [
+    "Broadest AI-IDE integration surface Hlido has reviewed — 25+ named clients including Cursor, Claude Code, Codex, Gemini CLI, Cline, WindSurf and Tencent's own CodeBuddy",
+    "Agent-native onboarding: paste one prompt, the agent reads skill.md and completes setup via a documented plugin / manual-MCP / Skills-only decision tree",
+    "Once connected, the AI IDE can create databases, write and deploy cloud functions, configure hosting and self-repair from deployment logs without touching a console",
+    "Deep, verifiable evidence base for a surface review — structured docs, a large video-tutorial library and real open-source example projects on GitHub and CNB",
+    "Backed by a major vendor (Tencent Cloud) and open source, which lowers abandonment risk relative to an indie tool"
+  ],
+  "what_it_fails_at": [
+    "Heavily oriented to the Chinese and WeChat mini-program ecosystem — docs, examples and community are China-centric, raising friction for English-first teams",
+    "Provisions a single vendor's backend (CloudBase) — the convenience comes with real cloud lock-in, not a portable abstraction",
+    "The toolkit is free but the CloudBase resources it provisions are paid, and that pricing is not surfaced on the captured docs page",
+    "Surface-only review — Hlido assessed the docs overview, not a running MCP integration or a deployed app"
+  ],
+  "best_for": [
+    "Developers already on, or willing to adopt, Tencent CloudBase who want their AI IDE to drive the full backend end to end",
+    "WeChat mini-program and mini-game builders wanting AI-native code-to-deploy workflows",
+    "Teams that value the widest possible AI-coding-tool compatibility for a single BaaS"
+  ],
+  "not_recommended_for": [
+    "Teams that need a cloud-agnostic or portable backend and want to avoid single-vendor lock-in",
+    "English-first teams unwilling to work through China-centric documentation and examples",
+    "Anyone who needs the underlying backend cost to be transparent up front before committing"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Integration layer (MCP + Skills + plugins) connecting AI coding tools to CloudBase database, cloud functions, hosting and auth",
+      "source": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "25+ supported AI clients listed (Cursor, Claude Code, Codex, Gemini CLI, Cline, WindSurf, CodeBuddy, WeChat DevTools and more)",
+      "source": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "One-prompt onboarding — the agent reads skill.md and completes setup via a documented plugin / MCP / Skills decision tree",
+      "source": "https://docs.cloudbase.net/skill.md",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Open source on GitHub and CNB; deep docs, video tutorials and open-source example projects",
+      "source": "https://github.com/TencentCloudBase/CloudBase-AI-ToolKit",
+      "tested_at": "2026-08-15",
+      "verified": true
+    },
+    {
+      "claim": "Pricing of the CloudBase backend the toolkit provisions",
+      "source": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/ (not surfaced on the captured docs page)",
+      "tested_at": "2026-08-15",
+      "verified": false
+    },
+    {
+      "claim": "Hands-on behaviour of the MCP integration and a deployed app (verified by running it)",
+      "source": "https://docs.cloudbase.net/ai/cloudbase-ai-toolkit/ (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-15",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A CloudBase MCP server (local or hosted mode) plus installable Skills and IDE plugins expose the platform to 25+ AI coding tools. The documented path is agent-driven: the assistant fetches skill.md and self-configures. Web and mini-program SDKs and a CloudBase CLI back the generated code. Built explicitly as an agent-to-backend bridge.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI writes the code. CloudBase runs the backend.' — connect AI dev tools to the cloud platform for AI-native development",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "One-prompt onboarding CTA plus per-tool install icons for 25+ AI IDEs",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Structured docs — overview, AI plugins, MCP connection modes, MCP tools, IDE config, AI Skill, tutorials, FAQ, changelog — all accessible without login",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "integrations_documented",
+      "pass": true,
+      "required": true,
+      "evidence": "25+ AI clients each with a dedicated install path; MCP local/hosted modes documented",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Toolkit is free/open-source, but pricing of the CloudBase backend it provisions is not surfaced on the captured docs page",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    },
+    {
+      "id": "third_party_validation",
+      "pass": true,
+      "required": false,
+      "evidence": "Large library of third-party video tutorials and open-source example projects; open-source repo on GitHub and CNB",
+      "tested_at": "2026-08-15T00:30:07.127Z"
+    }
+  ],
+  "summary": "Tencent's official integration layer that wires an unusually broad set of AI coding tools into CloudBase's backend via MCP, Skills and one-click plugins — the widest agent-to-BaaS bridge we've seen, if your backend is (or can become) CloudBase.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-15",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-15",
+  "attestation_url": "/data/attestations/tencentcloudbase-cloudbase-ai-toolkit.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-15",
+    "source": "r-publish-editorial-enrich",
+    "note": "Backend integration layer for AI code generation, not itself a generator of synthetic media for public distribution — Article-50 marking obligations do not directly apply to the toolkit surface."
+  },
+  "evidence_images": {
+    "run_id": "run-26eda7dc4a509773-docs-cloudbase-net",
+    "base": "https://images.hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/run-26eda7dc4a509773-docs-cloudbase-net",
+    "files": [
+      "home.png",
+      "pageai-agent-plugins.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/run-26eda7dc4a509773-docs-cloudbase-net/home.png",
+      "https://images.hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/run-26eda7dc4a509773-docs-cloudbase-net/pageai-agent-plugins.png"
+    ]
+  }
+}
