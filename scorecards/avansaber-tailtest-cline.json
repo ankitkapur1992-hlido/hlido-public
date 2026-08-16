@@ -1,0 +1,172 @@
+{
+  "schema_version": "2.0",
+  "slug": "avansaber-tailtest-cline",
+  "name": "tailtest",
+  "agent_url": "https://tailtest.com",
+  "repo_url": "https://github.com/avansaber/tailtest-cline",
+  "category": "Frameworks & Eval",
+  "run_id": "run-4bed16dfac35af80-tailtest-com",
+  "run_at": "2026-08-16T04:31:23.551Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 77,
+  "tier": "STEADY",
+  "laddoo_score": 77,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An open-source, hook-based test generator that fires automatically on every AI code edit across Claude Code, Cursor, Codex and Cline — a genuinely useful answer to 'the AI wrote the code AND the tests, so who actually checked it works?'",
+    "body": "tailtest occupies a narrow, sensible niche: it is a plugin for AI coding agents (Claude Code, Cursor, Codex CLI, Cline) that watches what the agent just built, generates production-like test scenarios for it, runs them, and stays silent unless something fails. The framing on the surface is honest about the real problem — when an AI writes both the implementation and the tests, the tests pass by construction and real usage looks nothing like them — and tailtest positions itself as the independent check on that loop rather than as another code generator. The execution details on the page are specific in a way that reads as real engineering, not vapor: a documented R1-R15 rule layer, an adversarial mode (V13) with eight named scenario categories (boundary inputs, format/injection, type confusion, concurrent state, time/locale edges, partial failures, resource exhaustion, off-by-one), framework-aware test patterns for Flask, FastAPI, NestJS, Spring Boot, Django, Rails and Laravel, baseline filtering so pre-existing failures stay quiet, and R12 classification that separates real bugs from environment and test bugs. It is MIT-licensed with an explicit 'zero telemetry, zero analytics, zero tracking' stance and a one-command install, which is exactly the trust posture an agent-tooling buyer wants. The honest limits: Hlido reviewed the marketing surface only, not the running plugin, so the headline claims — 'no false positives', '25 real bugs found in 6 popular Python repos', '1234 tests across all 4 plugins' — are credible but unverified here; the product is young and has no long track record; and adversarial test generation quality is inherently hard to judge from a landing page. Nothing on the captured surface overshoots into a claim it obviously cannot back, and the open-source, no-telemetry posture makes the risk of adopting it low.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-16",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77) for a focused, honestly-marketed, MIT-licensed tool with an explicit no-telemetry stance, a clean one-command install across four major AI coding agents, and a specific, plausibly-real feature set (R1-R15 rule layer, V13 adversarial mode with eight scenario categories, framework-aware patterns, baseline filtering). Marked low-medium confidence because the review is surface-only — the running plugin was not exercised — the quantitative claims ('no false positives', '25 real bugs found', '1234 tests') are unverified, and the product is young with no track record. Not VITAL because nothing was hands-on tested and the marketing metrics can't yet be independently confirmed.",
+  "what_it_does_well": [
+    "Solves a real and specific problem: independently testing the code an AI coding agent just wrote, instead of trusting AI-written tests that pass by construction",
+    "Fires automatically on every AI edit with zero commands and zero configuration — quiet on pass, specific on failure",
+    "Open source under MIT with an explicit 'zero telemetry, zero analytics, zero tracking' posture, which is the right trust stance for agent tooling",
+    "Works across four major AI coding agents (Claude Code, Cursor, Codex CLI, Cline) via a single plugin install",
+    "Specific, engineering-grade feature set on the surface: R1-R15 rule layer, V13 adversarial mode with eight named scenario categories, framework-aware patterns for seven+ web frameworks, baseline filtering, and R12 failure classification"
+  ],
+  "what_it_fails_at": [
+    "Surface-only review — Hlido assessed the marketing site, not the running plugin; the actual test-generation and adversarial behaviour was not exercised",
+    "Headline quantitative claims are unverified from the surface: 'no false positives', '25 real bugs found in 6 popular Python repos', '1234 tests across all 4 plugins'",
+    "Young product with no visible long-term track record or independent adoption evidence on the captured surface",
+    "Test-generation quality (do the scenarios actually resemble production usage?) is inherently hard to judge without running it on real code"
+  ],
+  "best_for": [
+    "Developers using Claude Code, Cursor, Codex CLI or Cline who want an automatic safety net on AI-generated code",
+    "Teams uneasy that AI writes both the code and its tests, and who want an independent adversarial check in the loop",
+    "Privacy-conscious adopters who need a no-telemetry, MIT-licensed tool they can inspect and self-host",
+    "Python/web-framework projects (Flask, FastAPI, Django, Rails, NestJS, Spring Boot, Laravel) where the framework-aware patterns apply out of the box"
+  ],
+  "not_recommended_for": [
+    "Anyone needing a hosted dashboard, run history or team-level reporting — tailtest is deliberately quiet and local, not a CI/observability product",
+    "Workflows that do not run through one of the four supported AI coding agents",
+    "Buyers who require independently verified benchmark evidence before adopting — the surface claims are not yet confirmable",
+    "Teams wanting a managed or supported service rather than an open-source plugin they run themselves"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Hook-based plugin that automatically generates and runs production-like test scenarios on every AI edit, surfacing only failures; works with Claude Code, Cursor, Codex CLI and Cline",
+      "source": "https://tailtest.com",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed with an explicit 'zero telemetry, zero analytics, zero tracking' stance; one-command install via 'claude plugin marketplace add avansaber/tailtest'",
+      "source": "https://tailtest.com",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "R1-R15 rule layer, V13 adversarial mode with eight scenario categories, framework-aware patterns (Flask, FastAPI, NestJS, Spring Boot, Django, Rails, Laravel), baseline filtering and R12 failure classification",
+      "source": "https://tailtest.com",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "'No false positives', '25 real bugs found in 6 popular Python repos in one production run', '1234 tests across all 4 plugins'",
+      "source": "https://tailtest.com (marketing claim; not independently verified in this surface-only review)",
+      "tested_at": "2026-08-16",
+      "verified": false
+    },
+    {
+      "claim": "Hands-on behaviour of test generation, adversarial mode and failure classification (verified by running the plugin)",
+      "source": "https://tailtest.com (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-16",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "tailtest installs directly into AI coding agents as a plugin — 'claude plugin marketplace add avansaber/tailtest' then 'claude plugin install tailtest@avansaber-tailtest' for Claude Code, with documented variants for Cursor, Codex CLI and Cline (the Cline path is via MCP). Once installed it runs hook-based on every agent edit with no further configuration, generating and running tests and surfacing only failures back into the agent loop.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI Software Testing. Open source. Hook-based. Works with Claude Code, Cursor, Codex, and Cline ... Automatically runs the test cycle you'd otherwise have to ask for manually'",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'claude plugin marketplace add avansaber/tailtest' + 'Read the quickstart' / 'View on GitHub'",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Documentation, adversarial-mode docs, and per-agent (Cline/Cursor/Codex/Claude Code) guides all linked from the surface",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "integrations_documented",
+      "pass": true,
+      "required": true,
+      "evidence": "Four AI coding agents documented as first-class targets: Claude Code, Cursor, Codex CLI, Cline (Cline via MCP)",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source under MIT; no paid tier on the captured surface (N/A)",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    },
+    {
+      "id": "auth_data_handling",
+      "pass": true,
+      "required": false,
+      "evidence": "Explicit 'Zero telemetry. Zero analytics. Zero tracking.' stated in the footer",
+      "tested_at": "2026-08-16T04:31:23.551Z"
+    }
+  ],
+  "summary": "An open-source, hook-based test generator that fires automatically on every AI code edit across Claude Code, Cursor, Codex and Cline — a genuinely useful answer to 'the AI wrote the code AND the tests, so who actually checked it works?'",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-16",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-16",
+  "attestation_url": "/data/attestations/avansaber-tailtest-cline.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-16",
+    "source": "r-publish-editorial-enrich",
+    "note": "A developer test-generation plugin, not a generator of synthetic audio/image/video/text for publication — Article-50 synthetic-content marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-4bed16dfac35af80-tailtest-com",
+    "base": "https://images.hlido.eu/reviews/avansaber-tailtest-cline/run-4bed16dfac35af80-tailtest-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/avansaber-tailtest-cline/run-4bed16dfac35af80-tailtest-com/home.png"
+    ]
+  }
+}
