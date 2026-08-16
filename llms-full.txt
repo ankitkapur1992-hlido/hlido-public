@@ -5,9 +5,39 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 17 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 879 reviews
+> Corpus size: 888 reviews
 
 ## Reviewed agents
+
+### Agent Blueprint
+- Slug: `agent-blueprint-mcp-server`
+- Laddoo Score: 64/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-08-16
+- URL: https://hlido.eu/reviews/agent-blueprint-mcp-server/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"agent-blueprint-mcp-server"}}}`
+
+**Summary:** A cleanly-designed CLI + MCP server that delivers implementation 'blueprints' to coding agents as Agent Skills directories — but the whole thing is gated behind a commercial engagement, so almost nothing about it is independently verifiable.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### tailtest
+- Slug: `avansaber-tailtest-cline`
+- Laddoo Score: 77/100
+- Tier: STEADY
+- Category: Frameworks & Eval
+- Reviewed: 2026-08-16
+- URL: https://hlido.eu/reviews/avansaber-tailtest-cline/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"avansaber-tailtest-cline"}}}`
+
+**Summary:** An open-source, hook-based test generator that fires automatically on every AI code edit across Claude Code, Cursor, Codex and Cline — a genuinely useful answer to 'the AI wrote the code AND the tests, so who actually checked it works?'
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### Periscope MCP (Segentic Lab)
 - Slug: `segentic-lab-periscope-mcp`
@@ -304,6 +334,111 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 - MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hshintelligence-agent-scrape"}}}`
 
 **Summary:** Public-surface review of hshintelligence-agent-scrape.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Junipr MCP Server
+- Slug: `junipr-labs-mcp-server`
+- Laddoo Score: 41/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/junipr-labs-mcp-server/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"junipr-labs-mcp-server"}}}`
+
+**Summary:** Public-surface review of junipr-labs-mcp-server.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### leo-lilinxiao/codex-autoresearch
+- Slug: `leo-lilinxiao-codex-autoresearch`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: Developer Tool
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/leo-lilinxiao-codex-autoresearch/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"leo-lilinxiao-codex-autoresearch"}}}`
+
+**Summary:** leo-lilinxiao/codex-autoresearch — Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, retain or discard, and repeat indefinitely. Inspired by Karpathy’s autoresearch concept.. Repo-surface review: measured from the public repository (1989 stars, MIT, last push 2026-07-13); not hands-on tested.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### WaveXisMCP
+- Slug: `mathiaspaulenko-wavexis-mcp`
+- Laddoo Score: 81/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/mathiaspaulenko-wavexis-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"mathiaspaulenko-wavexis-mcp"}}}`
+
+**Summary:** Public-surface review of mathiaspaulenko-wavexis-mcp.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### AI Transaction Coordination for Real Estate | ReBillion
+- Slug: `tc-rebillion`
+- Laddoo Score: 90/100
+- Tier: VITAL
+- Category: Workflow & Automation
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/tc-rebillion/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tc-rebillion"}}}`
+
+**Summary:** Highly effective AI-driven transaction coordination for real estate — saves time and reduces manual effort, but lacks detailed transparency on features.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### youngbryan97/aura
+- Slug: `youngbryan97-aura`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Developer Tool
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/youngbryan97-aura/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"youngbryan97-aura"}}}`
+
+**Summary:** youngbryan97/aura — A sovereign cognitive architecture with IIT 4.0 integrated information, residual-stream affective steering (CAA), Global Workspace Theory, active inference, and 72 consciousness modules — running locally on Apple Silicon.. Repo-surface review: measured from the public repository (61 stars, NOASSERTION, last push 2026-07-16); not hands-on tested.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### CloudBase AI ToolKit
+- Slug: `tencentcloudbase-cloudbase-ai-toolkit`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/tencentcloudbase-cloudbase-ai-toolkit/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"tencentcloudbase-cloudbase-ai-toolkit"}}}`
+
+**Summary:** Tencent's official integration layer that wires an unusually broad set of AI coding tools into CloudBase's backend via MCP, Skills and one-click plugins — the widest agent-to-BaaS bridge we've seen, if your backend is (or can become) CloudBase.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### kubefwd
+- Slug: `txn2-kubefwd`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-15
+- URL: https://hlido.eu/reviews/txn2-kubefwd/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"txn2-kubefwd"}}}`
+
+**Summary:** A mature CNCF bulk Kubernetes port-forwarder that now speaks MCP — the AI angle is a thin but well-executed graft onto a tool that already earned its trust.
 
 **Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
 
