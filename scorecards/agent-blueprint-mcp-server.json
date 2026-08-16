@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "slug": "agent-blueprint-mcp-server",
+  "name": "Agent Blueprint",
+  "agent_url": "https://agentblueprint.ai/developers",
+  "repo_url": "https://github.com/agent-blueprint/mcp-server",
+  "category": "Coding",
+  "run_id": "run-21520bafe2496f7c-agentblueprint-ai",
+  "run_at": "2026-08-16T00:31:40.544Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A cleanly-designed CLI + MCP server that delivers implementation 'blueprints' to coding agents as Agent Skills directories — but the whole thing is gated behind a commercial engagement, so almost nothing about it is independently verifiable.",
+    "body": "Agent Blueprint's developer surface does the agent-integration mechanics correctly. It ships an npm package ('npm install -g agentblueprint') that is both a CLI and a built-in MCP server, and it commits to the Agent Skills open standard — every blueprint exports as a SKILL.md-anchored directory that Claude Code, Cursor, Codex and other Agent-Skills-aware agents auto-discover. The MCP server exposes a sensible, well-named tool set (list_blueprints, get_blueprint, download_blueprint, get_use_case, get_business_case, get_implementation_plan, get_implementation_spec, get_business_profile) and the config snippet is a clean 'npx -y agentblueprint serve'. For an agent that needs structured implementation context for a platform build (the example given is ServiceNow), this is exactly the right shape of integration. The problem for an independent rating is that the product is not open: the page states plainly that 'API tokens are issued with an engagement; if your organization works with us, you're ready to go.' In other words, the npm package is a thin client for a consulting/platform engagement — without an engagement there is no token, no blueprints, and nothing to actually run. The captured surface is correspondingly sparse: no pricing, no self-serve access, no sample blueprint to inspect, no evidence of the blueprints' quality or coverage, and no track record visible. So while the plumbing looks professional and genuinely agent-native, Hlido can only vouch for the integration design, not for the value of what flows through it. This is a review of a gate, not of the product behind it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-16",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) because the agent-integration design is genuinely good — a proper CLI + built-in MCP server, adherence to the Agent Skills open standard, and a clean, well-named tool surface — but the entire product is gated behind a commercial engagement (API tokens issued only 'with an engagement'), the public surface is thin, and there is no self-serve access, pricing, sample blueprint, or independent evidence of the blueprints' quality. Confidence is low: most of what would determine the product's actual worth sits behind the gate and cannot be verified from the surface. Not STEADY because so little is inspectable; not lower because what IS shown (the integration mechanics) is competent and honestly described.",
+  "what_it_does_well": [
+    "Agent-native integration done right: an npm-installed CLI plus a built-in MCP server ('npx -y agentblueprint serve') for Claude Code, Cursor, Codex and other MCP-compatible agents",
+    "Commits to the Agent Skills open standard — blueprints export as SKILL.md-anchored directories that Agent-Skills-aware coding agents auto-discover",
+    "Clean, sensibly-named MCP tool set (list/get/download blueprint, get use-case / business-case / implementation-plan / implementation-spec / business-profile)",
+    "Honest about the access model — it states up front that API tokens come with an engagement, rather than implying self-serve availability"
+  ],
+  "what_it_fails_at": [
+    "Gated behind a commercial engagement: API tokens are 'issued with an engagement', so without becoming a client there is no token, no blueprints and nothing to run",
+    "Thin public surface — no pricing, no self-serve signup, no sample blueprint to inspect, and no evidence of blueprint quality or coverage",
+    "Nothing about the actual deliverable (the implementation specs) is independently verifiable from the surface; Hlido can only assess the integration layer",
+    "No visible track record, customer evidence, or adoption signal on the captured page"
+  ],
+  "best_for": [
+    "Organizations already in (or entering) a delivery engagement with Agent Blueprint who want their coding agents to pull structured implementation specs in-editor",
+    "Teams standardizing on the Agent Skills format who value a first-class MCP + CLI path to structured platform-implementation context",
+    "Platform-implementation work (e.g. ServiceNow) where a vetted implementation spec delivered as an Agent Skills directory saves setup time"
+  ],
+  "not_recommended_for": [
+    "Anyone wanting a self-serve tool they can try today — access requires a commercial engagement and an issued API token",
+    "Buyers who need to inspect pricing, sample output, or independent quality evidence before committing",
+    "Individual developers or small teams without an engagement relationship — there is no free or open path to the blueprints",
+    "Use cases needing an open, inspectable knowledge base rather than a gated, engagement-bound one"
+  ],
+  "red_flags": [
+    "Core functionality is inaccessible without a commercial engagement (API tokens 'issued with an engagement'), and the public surface offers no pricing, sample, or self-serve path — so the product cannot be independently evaluated before purchase."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "npm package 'agentblueprint' includes both a CLI and a built-in MCP server; blueprints export as Agent Skills directories auto-discovered via SKILL.md",
+      "source": "https://agentblueprint.ai/developers",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "MCP server config is 'npx -y agentblueprint serve' and exposes tools list_blueprints, get_blueprint, download_blueprint, get_use_case, get_business_case, get_implementation_plan, get_implementation_spec, get_business_profile",
+      "source": "https://agentblueprint.ai/developers",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "API tokens are issued with an engagement ('if your organization works with us, you're ready to go') — access is gated, not self-serve",
+      "source": "https://agentblueprint.ai/developers",
+      "tested_at": "2026-08-16",
+      "verified": true
+    },
+    {
+      "claim": "Quality, coverage and value of the actual blueprints / implementation specs",
+      "source": "https://agentblueprint.ai/developers (gated behind an engagement; not inspectable in this surface-only review)",
+      "tested_at": "2026-08-16",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A coding agent adds the MCP server via 'npx -y agentblueprint serve' (Claude Code / Cursor / Codex / MCP-compatible) and gains tools to list, fetch and download blueprints as Agent Skills directories; the CLI ('agentblueprint list' / 'download <id> --platform ...') does the same from the terminal. Both paths require an API token, which is issued only with a commercial engagement — so the integration is agent-native but not usable without becoming a client.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Bring Blueprints Into Your Workflow ... Every blueprint exports as an Agent Skills directory, an open standard for giving coding agents structured context'",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'npm install -g agentblueprint' + 'Talk to Us' / 'Contact'",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "docs_present",
+      "pass": true,
+      "required": true,
+      "evidence": "CLI usage, MCP server config, and export-from-platform steps documented on the developers page",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "integrations_documented",
+      "pass": true,
+      "required": true,
+      "evidence": "MCP server config for Claude Code, Cursor, Codex and other MCP-compatible agents; Agent Skills auto-discovery",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing and no self-serve access — API tokens are 'issued with an engagement'",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    },
+    {
+      "id": "auth_data_handling",
+      "pass": true,
+      "required": false,
+      "evidence": "API-token auth on first CLI use; access bound to a commercial engagement",
+      "tested_at": "2026-08-16T00:31:40.544Z"
+    }
+  ],
+  "summary": "A cleanly-designed CLI + MCP server that delivers implementation 'blueprints' to coding agents as Agent Skills directories — but the whole thing is gated behind a commercial engagement, so almost nothing about it is independently verifiable.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-11-16",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-16",
+  "attestation_url": "/data/attestations/agent-blueprint-mcp-server.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-16",
+    "source": "r-publish-editorial-enrich",
+    "note": "A developer context/knowledge-delivery tool (implementation specs as Agent Skills), not a generator of synthetic audio/image/video/text for publication — Article-50 synthetic-content marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-21520bafe2496f7c-agentblueprint-ai",
+    "base": "https://images.hlido.eu/reviews/agent-blueprint-mcp-server/run-21520bafe2496f7c-agentblueprint-ai",
+    "files": [
+      "home.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/agent-blueprint-mcp-server/run-21520bafe2496f7c-agentblueprint-ai/home.png",
+      "https://images.hlido.eu/reviews/agent-blueprint-mcp-server/run-21520bafe2496f7c-agentblueprint-ai/page_.png"
+    ]
+  }
+}
