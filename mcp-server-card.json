@@ -476,6 +476,81 @@
           "server"
         ]
       }
+    },
+    {
+      "name": "market_pulse",
+      "description": "Fetch the Agent Market Pulse — machine-readable market intelligence for the AI-agent market, derived from Hlido's independently tested corpus (never vendor self-reports): tier-health distribution, per-category health, new-entrant rate, public-surface readiness, EU AI Act Article-50 compliance bands, and the not-testable mortality signal. Every module carries its own method and coverage; signals that cannot be measured this edition say 'unmeasured' rather than guessing. Use this for market-level questions ('is category X healthy?', 'how fast are agents entering/dying?'); for one specific agent use trust_check instead. Free, regenerated weekly.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Optional: return only the market summary plus this one category's block (e.g. 'Coding')."
+          }
+        }
+      }
+    },
+    {
+      "name": "intel_query",
+      "description": "Query Hlido's market-intelligence store: durable, evidence-cited claims about the AI-agent market and adjacent domains (agent economy, payments rails, EU compliance), each with dated evidence, confidence, and typed relations to other intel. Filter by any facet: sector (ISIC code or text), geo (ISO country or region like 'eu'/'intl'), compliance (e.g. 'eu-ai-act-art50'), protocol (e.g. 'x402'), kind (fact/estimate/trend/signal), audience, maturity. Facet vocabularies + per-value record counts: https://hlido.eu/data/intel/taxonomy.json (fetch that first to see what's queryable). A zero-result query returns an honest empty AND is logged — misses drive what Hlido collects next, so check back. Free at answer-time, declared policy.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sector": {
+            "type": "string",
+            "description": "ISIC section/division code (e.g. 'K.64', 'J.62') or free-text sector match."
+          },
+          "geo": {
+            "type": "string",
+            "description": "ISO-3166 country code or region: 'cz', 'de', 'eu', 'intl', ..."
+          },
+          "compliance": {
+            "type": "string",
+            "description": "Named regulation, any jurisdiction (e.g. 'eu-ai-act-art50', 'gdpr')."
+          },
+          "protocol": {
+            "type": "string",
+            "description": "e.g. 'mcp', 'x402', 'api', 'cli'"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "fact",
+              "estimate",
+              "trend",
+              "signal"
+            ],
+            "description": "Filter by record kind."
+          },
+          "audience": {
+            "type": "string",
+            "enum": [
+              "b2b",
+              "b2c",
+              "b2g",
+              "mixed"
+            ]
+          },
+          "maturity": {
+            "type": "string",
+            "enum": [
+              "emerging",
+              "growing",
+              "consolidating",
+              "declining"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "Free-text match over headlines (fallback lens — prefer facets)."
+          },
+          "limit": {
+            "type": "integer",
+            "default": 10,
+            "description": "Max records (default 10, max 50)."
+          }
+        }
+      }
     }
   ]
 }
