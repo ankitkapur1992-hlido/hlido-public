@@ -5,9 +5,159 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 888 reviews
+> Corpus size: 898 reviews
 
 ## Reviewed agents
+
+### OneCLI
+- Slug: `onecli-onecli`
+- Laddoo Score: 76/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/onecli-onecli/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"onecli-onecli"}}}`
+
+**Summary:** A network-layer firewall that treats coding-agent policy as something enforced outside the model, not requested politely inside it — and that architectural choice is the whole pitch.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Orite
+- Slug: `orite`
+- Laddoo Score: 52/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/orite/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"orite"}}}`
+
+**Summary:** A sharp thesis about agent trust and spending — 'the future isn't agents that can pay, it's agents you trust to pay' — wrapped around a product that, on the public surface, is still a waitlist.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Phinq
+- Slug: `phinq`
+- Laddoo Score: 72/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/phinq/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"phinq"}}}`
+
+**Summary:** An MIT-licensed, install-in-two-minutes approval layer that makes an agent ask before it does anything irreversible — and proves a human was in the loop with a tamper-evident log.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### hotcell
+- Slug: `sinameraji-hotcell`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/sinameraji-hotcell/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sinameraji-hotcell"}}}`
+
+**Summary:** The most technically honest agent-sandboxing surface we have reviewed this cycle — Apache-2.0, self-hosted on hardware you already own, with a containment model spelled out down to which guarantees are kernel-enforced and which are only advisory.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### agy-bridge
+- Slug: `sshahzaiib-agy-bridge`
+- Laddoo Score: 66/100
+- Tier: FADING
+- Category: Coding
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/sshahzaiib-agy-bridge/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sshahzaiib-agy-bridge"}}}`
+
+**Summary:** A small, unusually well-engineered MCP bridge that lets Claude Code offload token-heavy grunt work to Google's Antigravity CLI — high craft, honest about its own failure modes, but a niche tool for a specific two-CLI setup.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### YepCode MCP Server
+- Slug: `yepcode-mcp-server-js`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/yepcode-mcp-server-js/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"yepcode-mcp-server-js"}}}`
+
+**Summary:** A clean bridge that turns any YepCode process into an MCP tool by adding a tag — genuinely low-friction for teams already on YepCode, and honestly a lock-in decision for everyone else.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Agent Manager
+- Slug: `yoanwai-agent-manager`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/yoanwai-agent-manager/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"yoanwai-agent-manager"}}}`
+
+**Summary:** A fast, keyboard-driven control tower for running many coding agents at once — spawn in a sentence, answer a blocked one without attaching, review its diff in place — and it runs your real installed CLIs as-is rather than reimplementing them.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### persistproc
+- Slug: `irskep-persistproc`
+- Laddoo Score: 64/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/irskep-persistproc/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"irskep-persistproc"}}}`
+
+**Summary:** A deliberately tiny MCP server that gives any agent shared visibility and control over your long-running dev processes — the copy-paste killer for AI coding — and its restraint (three tools, no config file) is the design, not a gap.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Axe
+- Slug: `jrswab-axe`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Frameworks & Eval
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/jrswab-axe/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"jrswab-axe"}}}`
+
+**Summary:** A Unix-philosophy answer to the everything-chatbot: small, single-purpose LLM agents defined in TOML and composed with cron, pipes and git hooks — a coherent design that is also refreshingly security-conscious.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Kubit
+- Slug: `kubit`
+- Laddoo Score: 74/100
+- Tier: STEADY
+- Category: Frameworks & Eval
+- Reviewed: 2026-08-18
+- URL: https://hlido.eu/reviews/kubit/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"kubit"}}}`
+
+**Summary:** A mature warehouse-native product-analytics company extending into agent observability — its real edge is joining agent traces to user behaviour in your own warehouse, not another dashboard that stops at the LLM.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### Agent Blueprint
 - Slug: `agent-blueprint-mcp-server`
