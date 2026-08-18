@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0",
+  "slug": "ksterx-srunx",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r4-editorial-enrich",
+  "run_id": "run-ksterx-srunx-v2-2026-08-18",
+  "run_at": "2026-08-18T21:30:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "srunx",
+  "agent_url": "https://ksterx.github.io/srunx/",
+  "category": "Infrastructure",
+  "score": 70,
+  "laddoo_score": 70,
+  "tier": "STEADY",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A genuinely well-documented SLURM orchestration toolkit that treats an MCP server as a first-class interface rather than an afterthought — strong craft, very small audience.",
+    "body": "srunx does one unglamorous thing well: it makes submitting, chaining and monitoring HPC jobs on SLURM clusters feel like writing CI. The captured surface is unusually complete for a project this size — a full Diátaxis documentation set (tutorials, how-to guides, reference, explanation), a versioned release line (v4.1.1), and a capability list that is specific rather than aspirational: conda/venv/Apptainer/Pyxis wiring, typed YAML workflows with depends_on and retry, Jinja-templated sbatch scripts, parameter sweeps with per-cell tracking, rsync project sync over ProxyJump-aware SSH, and a browser dashboard with DAG visualisation. What earns it attention here is that the MCP server is not a bolted-on demo: the docs describe Claude Code and other MCP clients driving srunx over stdio, including run_workflow with sweep and transport arguments, and the reference section documents the full MCP tool surface alongside the Python API. That is the shape we want to see from infrastructure that expects agents as operators. The honest limits: the adoption signal visible on the surface is tiny (16 stars, 2 forks), there is no pricing or commercial-support story because it is a personal open-source toolkit, and every capability claim here is read from documentation rather than exercised against a live SLURM cluster — which we cannot do from a public-surface review. Treat the score as a reflection of a well-built, well-explained, narrowly-scoped tool, not of proven production adoption.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the public surface is documented to a standard well above its size class — a complete four-mode documentation set, a real versioned release, and a properly specified MCP tool surface — while adoption evidence is minimal and no claim could be exercised against an actual cluster from a public-surface review.",
+  "what_it_does_well": [
+    "Ships a complete Diátaxis documentation set — tutorials, how-to, reference and explanation — rather than a README and a promise",
+    "Treats MCP as a first-class interface, documenting the full tool surface so agents can drive job orchestration directly",
+    "Specifies concrete environment wiring (conda, venv, Apptainer, Pyxis) instead of a generic 'works with your stack' claim",
+    "Typed YAML workflows with depends_on, retry and Jinja templating give the job graph a reviewable, version-controllable form",
+    "Overrideable sbatch templates keep the escape hatch open for cluster-specific requirements"
+  ],
+  "what_it_fails_at": [
+    "Adoption signal on the captured surface is very small (16 stars, 2 forks) — no continuity or maintenance-load evidence",
+    "No pricing, commercial support or sponsorship story; continuity depends on a single maintainer",
+    "Every capability is documented rather than demonstrated — a public-surface review cannot exercise SLURM submission",
+    "No published security or multi-tenancy posture for a tool that holds SSH access to compute clusters",
+    "Requires an existing SLURM/HPC environment, so the addressable audience is inherently narrow"
+  ],
+  "best_for": [
+    "Research groups and ML teams already running SLURM who want reproducible, reviewable job workflows",
+    "Teams that want an AI coding agent to submit and monitor cluster jobs through MCP rather than hand-rolled SSH scripts",
+    "Anyone who values documentation quality as a proxy for maintenance discipline in a small open-source dependency"
+  ],
+  "not_recommended_for": [
+    "Teams without a SLURM cluster — the tool has no meaning outside that environment",
+    "Organisations requiring vendor support, SLAs or a documented security posture",
+    "Buyers who need adoption evidence or a multi-maintainer continuity story before taking a dependency"
+  ],
+  "red_flags": [
+    "Holds SSH credentials and can execute jobs across HPC clusters, yet the captured surface publishes no security model, secret-handling policy or multi-tenancy boundary — evaluate that yourself before granting it cluster access."
+  ],
+  "compared_to": [
+    {
+      "slug": "yepcode-mcp-server-js",
+      "verdict_diff": "Both expose an existing execution substrate to agents through MCP. YepCode's bridge is a thinner, commercially-backed adapter over a hosted platform; srunx is a self-contained open-source toolkit that owns the whole SLURM workflow but carries single-maintainer risk.",
+      "preferred_for_axis": "self-hosted HPC orchestration"
+    },
+    {
+      "slug": "irskep-persistproc",
+      "verdict_diff": "Both give agents controlled visibility over long-running processes. persistproc is deliberately minimal and general; srunx is far richer but only meaningful inside an HPC/SLURM environment.",
+      "preferred_for_axis": "depth within a specific substrate"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides an MCP server documenting a full tool surface for agent-driven job orchestration",
+      "source": "https://ksterx.github.io/srunx/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Ships tutorials, how-to guides, reference and explanation documentation",
+      "source": "https://ksterx.github.io/srunx/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Supports YAML workflows with depends_on, retry and parameter sweeps",
+      "source": "https://ksterx.github.io/srunx/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Capabilities verified against a live SLURM cluster",
+      "source": "https://ksterx.github.io/srunx/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Documented MCP server over stdio, driveable by Claude Code and other MCP clients, with run_workflow exposed for sweeps and transports; a Python API and CLI are documented alongside it. Exercising any of it requires an existing SLURM cluster, so it is not behaviourally testable from a public surface.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "srunx orchestrates compute jobs and does not generate synthetic media or text for publication, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A genuinely well-documented SLURM orchestration toolkit that treats an MCP server as a first-class interface rather than an afterthought — strong craft, very small audience.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
