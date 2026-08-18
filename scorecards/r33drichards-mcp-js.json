@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "slug": "r33drichards-mcp-js",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r4-editorial-enrich",
+  "run_id": "run-r33drichards-mcp-js-v2-2026-08-18",
+  "run_at": "2026-08-18T21:30:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "mcp-v8",
+  "agent_url": "https://r33drichards.github.io/mcp-js",
+  "category": "Infrastructure",
+  "score": 73,
+  "laddoo_score": 73,
+  "tier": "STEADY",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A code-execution MCP server that starts from a deny-by-default posture and documents every capability it can be granted — the right architecture for the most dangerous tool you can hand an agent.",
+    "body": "mcp-v8 makes an argument worth taking seriously: rather than exposing dozens of narrow tools, give the agent one run_js tool and let it write code. That is simultaneously the most token-efficient and the most dangerous shape an agent tool can take, and the captured surface shows a project that appears to understand exactly that. Execution happens inside a V8 isolate with memory and time limits. Network access, filesystem, subprocess spawning, WebAssembly, ES-module imports and calls to upstream MCP servers are each documented as off until explicitly granted, and each is gated through OPA or embedded Rego policy. The operational surface is equally specific: stdio, Streamable HTTP and SSE transports, a REST sidecar, asynchronous execution with polling and pagination, JWT/JWKS request authentication, and Raft-replicated session metadata for clustering. Stateful mode persists the V8 heap as a content-addressed snapshot so an agent can accumulate state across turns instead of re-sending context — a genuinely useful idea, and one the docs are careful to present as a mode rather than a default assumption. The limits are the ordinary ones for a public-surface review: the isolation and policy claims are the entire value proposition and none of them could be exercised or adversarially tested from outside, there is no third-party audit or CVE history on the captured surface, and no adoption or maintenance-load signal is visible. The architecture is what earns the score; the security properties remain the vendor's assertion until someone tests them.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the documented architecture is well-matched to the risk — deny-by-default capabilities, policy-gated grants, resource limits and real auth/transport options — and the documentation is thorough and specific. It is held below the top band because every security property is asserted rather than independently verified, and there is no audit history or adoption signal on the captured surface.",
+  "what_it_does_well": [
+    "Deny-by-default capability model: network, filesystem, subprocess and imports are all off until explicitly granted",
+    "Policy gating through OPA/Rego rather than ad-hoc flags, so grants are expressible and reviewable",
+    "Documents the operational surface properly — three transports, REST sidecar, async execution with pagination and cancellation",
+    "JWT/JWKS authentication and Raft-replicated session metadata show production concerns, not just a demo",
+    "Heap snapshots give agents durable state without re-sending context, and are presented as a mode rather than an assumption",
+    "Documentation is organised by task (install, tutorials, how-to, concepts, reference) and is unusually detailed for the project's size"
+  ],
+  "what_it_fails_at": [
+    "The isolation and policy claims are the whole product and none can be exercised from a public surface",
+    "No third-party security audit, CVE history or disclosure policy visible on the captured surface",
+    "No adoption, maintenance-cadence or continuity signal — an unknown for a dependency that executes arbitrary code",
+    "No published pricing or support model; it is an unsupported open-source component",
+    "Granting an agent a single unbounded code-execution tool concentrates risk even when the sandbox behaves as documented"
+  ],
+  "best_for": [
+    "Teams that have already decided an agent needs to execute code and want a policy-gated sandbox rather than a raw interpreter",
+    "Engineers who prefer one expressive tool over a large surface of narrow tools, for token efficiency",
+    "Operators comfortable writing OPA/Rego policy to define exactly what an agent may reach"
+  ],
+  "not_recommended_for": [
+    "Anyone who needs an independently audited sandbox for regulated or multi-tenant workloads",
+    "Teams without the capacity to author and maintain capability policies correctly",
+    "Buyers requiring vendor support, SLAs or a documented vulnerability-disclosure process"
+  ],
+  "red_flags": [
+    "The security model is the product, and it is entirely self-asserted on the captured surface — no independent audit, no CVE history, no disclosure policy. Treat the isolation guarantees as unverified until you test them yourself.",
+    "A single unbounded code-execution tool is the highest-blast-radius capability you can grant an agent; the sandbox behaving correctly is a precondition, not a nice-to-have."
+  ],
+  "compared_to": [
+    {
+      "slug": "sinameraji-hotcell",
+      "verdict_diff": "Both sandbox agent-executed code. Hotcell was the more technically honest surface we reviewed this cycle and carries an explicit licence and posture; mcp-v8 documents a richer capability-and-policy model with clustering and auth, but its guarantees are equally unaudited.",
+      "preferred_for_axis": "capability granularity and ops features"
+    },
+    {
+      "slug": "phinq",
+      "verdict_diff": "phinq gates what an agent may do by asking a human at the moment of action; mcp-v8 gates it in advance through machine-evaluated policy. Approval scales poorly and policy fails silently — the two are complementary rather than substitutes.",
+      "preferred_for_axis": "policy-time rather than approval-time control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Executes JavaScript and TypeScript inside a V8 isolate with memory and time limits",
+      "source": "https://r33drichards.github.io/mcp-js",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Network, filesystem, subprocess and module imports are off by default and gated by OPA/Rego policy",
+      "source": "https://r33drichards.github.io/mcp-js",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Supports stdio, Streamable HTTP and SSE transports with JWT/JWKS authentication",
+      "source": "https://r33drichards.github.io/mcp-js",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Sandbox isolation independently audited or adversarially tested",
+      "source": "https://r33drichards.github.io/mcp-js",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP server exposing a single run_js tool, reachable over stdio, Streamable HTTP or SSE, with a REST sidecar for async submission and polling. Agents can also compose upstream MCP servers from inside executed code via the documented mcp.* namespace. Not behaviourally testable from a public surface — it must be self-hosted.",
+    "agent_friendly_score": 9
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "mcp-v8 is a code-execution sandbox and does not itself generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A code-execution MCP server that starts from a deny-by-default posture and documents every capability it can be granted — the right architecture for the most dangerous tool you can hand an agent.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
