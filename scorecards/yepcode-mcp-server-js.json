@@ -1,0 +1,102 @@
+{
+  "schema_version": "2.0",
+  "slug": "yepcode-mcp-server-js",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-yepcode-mcp-server-js-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "YepCode MCP Server",
+  "agent_url": "https://yepcode.io/mcp-server",
+  "category": "Infrastructure",
+  "score": 73,
+  "laddoo_score": 73,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A clean bridge that turns any YepCode process into an MCP tool by adding a tag — genuinely low-friction for teams already on YepCode, and honestly a lock-in decision for everyone else.",
+    "body": "YepCode's MCP server answers a specific, real need: exposing existing backend processes to agents as callable tools without standing up new infrastructure. The mechanic is elegant — write a process in Python or Node against your APIs and databases, describe its inputs with JSON Schema, tag it `mcp-tool`, and it appears as a tool in Cursor, Claude Desktop or any MCP client. Execution happens inside YepCode's isolated sandboxes with secrets, dependencies, logs and auditability already handled, which is a meaningful safety and observability story compared with hand-rolled tool servers. It offers both a hosted, always-on endpoint (OAuth or API token) and an open-source self-hosted server runnable via NPX or Docker for air-gapped setups, plus built-in tools like `run_code` for ad-hoc execution and storage/API management helpers. The honest framing on the page — 'build tools, not servers' — is accurate. The unavoidable caveat is that the value is inseparable from the YepCode platform: 'your deployment is publishing a process in YepCode', so the MCP server is a thin, high-quality exposure layer over a runtime you must adopt. That is a fair trade for existing YepCode users and a real commitment for newcomers. The public surface shows no pricing detail, adoption numbers or independent reliability evidence for the MCP layer specifically, so production-scale behaviour is asserted rather than demonstrated. As a way to give agents real, sandboxed actions with minimal glue, it is well-built and clearly explained — just understand you are buying into a runtime, not only a protocol adapter.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it delivers a clear, well-documented capability — turning tagged processes into MCP tools with JSON-Schema-typed inputs, sandboxed execution, and both hosted and open-source self-hosted options — that meaningfully lowers the effort of giving agents real actions. Not VITAL because the offering is tightly coupled to the YepCode platform (adopting it means adopting the runtime), and the captured surface carries no pricing specifics, adoption evidence or independent reliability signal for the MCP layer, leaving production durability unverified.",
+  "what_it_does_well": [
+    "Turns any YepCode process into an MCP tool by adding a tag — no new server to build or deploy",
+    "Types tool inputs with JSON Schema so model tool-calls are accurate and predictable",
+    "Runs tools inside isolated sandboxes with secrets, dependencies, logs and auditability built in",
+    "Offers both an always-on hosted endpoint (OAuth or API token) and an open-source self-hosted server via NPX/Docker",
+    "Ships foundational built-in tools (run_code, storage and API management) alongside your own processes"
+  ],
+  "what_it_fails_at": [
+    "Value is inseparable from the YepCode platform — using it means adopting YepCode's process runtime",
+    "No pricing detail for the MCP capability on the captured surface",
+    "No adoption, scale or independent reliability evidence for the MCP layer specifically",
+    "Air-gapped self-hosting still centres on YepCode-authored processes, limiting portability of the toolchain",
+    "Latency and cold-start behaviour of sandboxed execution are not documented on the surface"
+  ],
+  "best_for": [
+    "Teams already running processes on YepCode who want to expose them to agents with near-zero extra work",
+    "Developers who want agent tools that execute in a sandbox with secrets and audit handled for them",
+    "Setups needing both a hosted always-on endpoint and an air-gapped self-hosted option from one toolchain",
+    "Anyone standardising many internal actions as JSON-Schema-typed MCP tools"
+  ],
+  "not_recommended_for": [
+    "Teams unwilling to adopt the YepCode runtime just to get an MCP exposure layer",
+    "Buyers who need published pricing and reliability SLAs before committing to a tool-execution platform",
+    "Fully portable toolchains that must not couple to a single execution vendor",
+    "Simple single-tool needs where a lightweight standalone MCP server would suffice"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Tagging a process (e.g. mcp-tool) exposes it as an MCP tool in Cursor, Claude and other clients",
+      "source": "https://yepcode.io/mcp-server/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Inputs described with JSON Schema; tools run in isolated sandboxes with secrets and audit",
+      "source": "https://yepcode.io/mcp-server/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Hosted always-on endpoint plus open-source self-hosted server via NPX/Docker",
+      "source": "https://yepcode.io/mcp-server/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Published pricing and independent reliability metrics for the MCP layer",
+      "source": "https://yepcode.io/mcp-server/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP: point any MCP client (Cursor, Claude Desktop, or others) at the hosted endpoint (cloud.yepcode.io/mcp) or run the open-source server locally, and tagged YepCode processes appear as callable tools with JSON-Schema inputs. Built-in tools (run_code, storage, API management) are available immediately. This is squarely agent-facing infrastructure — its entire purpose is to give agents real, sandboxed actions.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "The YepCode MCP Server exposes backend processes as agent tools and does not generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A clean bridge that turns any YepCode process into an MCP tool by adding a tag — genuinely low-friction for teams already on YepCode, and honestly a lock-in decision for everyone else.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
