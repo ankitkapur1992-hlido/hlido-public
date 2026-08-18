@@ -1,0 +1,101 @@
+{
+  "schema_version": "2.0",
+  "slug": "orite",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-orite-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Orite",
+  "agent_url": "https://orite.tech",
+  "category": "Infrastructure",
+  "score": 52,
+  "laddoo_score": 52,
+  "tier": "FADING",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A sharp thesis about agent trust and spending — 'the future isn't agents that can pay, it's agents you trust to pay' — wrapped around a product that, on the public surface, is still a waitlist.",
+    "body": "Orite is selling one of the most important problems in the agentic economy: before an autonomous agent can move money or act on an organisation's behalf, something has to establish who that agent is, what it is allowed to do, and how much trust it has earned. The framing is excellent — agent identity, spending controls, approval workflows, continuous oversight, and a 'trust intelligence' layer that expands autonomy as an agent demonstrates reliability. As a statement of where agent infrastructure needs to go, it is genuinely compelling and well-articulated. The problem for a rating is that almost nothing on the captured surface is verifiable as a shipping product. The primary calls to action are 'Talk to us', 'Join Waitlist' and 'See a demo'; there is no self-serve signup, no public pricing, no documentation you can read, no repository, and no way for an agent or an evaluator to exercise the identity or spending-control claims. The FAQ describes how approvals and trust-scoring would work, but description is not the same as a surface we can test. There is no company-scale, adoption or funding signal on the page either. This is a strong pre-launch positioning site, not yet an assessable product — and Hlido rates what it can independently observe. If Orite ships the identity and spending-control layer with a testable surface, this score should move substantially; today it reflects a credible vision with essentially no verifiable delivery behind it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (52) because the underlying thesis is strong and the problem is real and timely, but the captured public surface is a pre-launch, waitlist-gated marketing site: no self-serve product, no pricing, no documentation, no repository, and no way to independently exercise any of the identity, spending-control or oversight claims. The score reflects a credible vision with no verifiable delivery — not a judgement that the product is bad, but that there is not yet a product surface to rate.",
+  "what_it_does_well": [
+    "Articulates the agent-trust problem crisply — identity, spending controls, approvals and earned autonomy as one system",
+    "Frames trust as evolving over time ('trust grows with every decision') rather than a static permission grant",
+    "Names the concrete governance primitives buyers will need: budgets, merchant rules, approval requirements, audit trails",
+    "Positions squarely at agent-initiated payments, one of the highest-stakes and least-solved parts of the agent stack"
+  ],
+  "what_it_fails_at": [
+    "The public surface is waitlist-gated — no self-serve product, signup or usable interface to evaluate",
+    "No published pricing, documentation, SDK or repository on the captured surface",
+    "Every capability is described rather than demonstrated; none can be independently exercised",
+    "No adoption, customer, funding or company-scale signal to support continuity confidence",
+    "Article-50-adjacent trust claims (identity, oversight) are unverifiable without a testable surface"
+  ],
+  "best_for": [
+    "Teams tracking the agent-payments and agent-identity space who want to follow an early, well-framed entrant",
+    "Organisations willing to engage pre-launch via 'Talk to us' to shape requirements"
+  ],
+  "not_recommended_for": [
+    "Anyone needing a usable, testable agent-identity or spending-control product today",
+    "Buyers who require published pricing, documentation or a self-serve trial before evaluating",
+    "Procurement contexts that need adoption evidence or continuity signals",
+    "Agent developers looking for an integrable API or SDK now"
+  ],
+  "red_flags": [
+    "Substantive product claims (identity, spending controls, oversight) are presented on a waitlist-gated surface with no independently testable implementation — treat as roadmap, not shipped capability, until a usable surface exists."
+  ],
+  "compared_to": [
+    {
+      "slug": "onecli-onecli",
+      "verdict_diff": "Both address trusting autonomous agents with real-world power, but OneCLI ships a usable, free enforcement gateway today (network-layer policy, credential isolation) while Orite currently offers a pre-launch vision of agent identity and spending trust. If you need to gate an agent this week, OneCLI is assessable and installable; Orite is a thesis to watch.",
+      "preferred_for_axis": "shipped-and-testable"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides agent identity, spending controls, approvals and oversight (described)",
+      "source": "https://www.orite.tech/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Trust-based permissions expand autonomy as agents demonstrate reliability (described)",
+      "source": "https://www.orite.tech/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Usable self-serve product with pricing or documentation",
+      "source": "https://www.orite.tech/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None available on the captured surface. Orite describes an agent-identity and spending-control layer but exposes no API, SDK or self-serve product an agent or integrator could use today; access is gated behind a waitlist and 'Talk to us'.",
+    "agent_friendly_score": 3
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Orite is a proposed agent-identity and spending-governance layer, not a generator of synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A sharp thesis about agent trust and spending — 'the future isn't agents that can pay, it's agents you trust to pay' — wrapped around a product that, on the public surface, is still a waitlist.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
