@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "slug": "onecli-onecli",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-onecli-onecli-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "OneCLI",
+  "agent_url": "https://onecli.sh",
+  "category": "Infrastructure",
+  "score": 76,
+  "laddoo_score": 76,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A network-layer firewall that treats coding-agent policy as something enforced outside the model, not requested politely inside it — and that architectural choice is the whole pitch.",
+    "body": "OneCLI sells one clear idea: an agent's permissions should live at the network boundary, not in a prompt the model can talk itself out of. You wrap an agent — Claude Code, Codex, Cursor — with `onecli run` and every path it takes (MCP tool calls, shell commands, curl, and the code it writes) passes through a gateway that blocks endpoints, rate-limits, requires human approval on sensitive operations, and injects scoped credentials so the agent never holds a real secret. The framing is deliberate and, on the surface we captured, honest: 'prompts are suggestions, OneCLI policies are enforced at the network layer, outside the agent, outside the LLM.' That is the correct threat model for autonomous agents, and OneCLI states it more crisply than most. The trust signals are unusually strong for an early tool — Y Combinator backing, a wall of named users (Docker, MindsDB, Zoho, Coralogix, Kakao Entertainment), an open-source core, a free-forever tier for up to two agents, and published comparison pages against HashiCorp Vault, Infisical and LiteLLM. What the public surface cannot tell us is depth: the logos are presented without context on whether they are paying customers or evaluations, there is no independent security audit or bypass-testing evidence on the page, and the credential-vault and network-enforcement claims are exactly the kind that need behavioural verification we could not perform from the marketing surface. The category itself is heating up fast (Phinq, hotcell and others occupy adjacent ground), so positioning clarity alone will not hold the lead. But as a statement of the right architecture with real backing and a usable free tier, OneCLI is a credible pick to actually try.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) because the security model is architecturally sound (enforcement at the network layer, credentials never in the agent, deterministic policy independent of the LLM), the trust surface is strong for the stage (YC backing, named user wall, open-source core, transparent comparison pages, free tier), and it is directly usable by agents today. Not VITAL because none of the enforcement or credential-isolation claims are independently verified on the captured surface — no audit, no published bypass testing — the user logos carry no engagement context, and the agent-security category is crowded enough that durability is unproven.",
+  "what_it_does_well": [
+    "Enforces agent policy at the network layer, outside the model, where a prompt-injection cannot argue its way past it",
+    "Injects scoped, per-request credentials so agents never hold a real secret — a leaked log or malicious dependency finds nothing",
+    "Wraps existing agents (Claude Code, Codex, Cursor) without requiring you to change how you run them",
+    "Covers every egress path — MCP tool calls, CLI commands, curl, and code the agent writes — not just one surface",
+    "Free forever for up to two agents with no credit card, and an open-source core that can be inspected"
+  ],
+  "what_it_fails_at": [
+    "No independent security audit or published bypass-testing evidence on the captured surface — the core claims are unverified",
+    "The named-customer wall carries no context on whether logos are paying users or evaluations",
+    "Policy expressiveness and false-positive/false-negative rates are undocumented on the public page",
+    "Operates in a fast-filling category (Phinq, hotcell, gateway proxies) where architectural clarity alone is not a moat",
+    "Self-hosting, latency overhead and failure modes (what happens when the gateway is down) are not described on the surface"
+  ],
+  "best_for": [
+    "Teams running autonomous coding agents that need a hard stop on destructive actions (DROP, DELETE, payments)",
+    "Organisations that must keep provider and service credentials out of agent processes entirely",
+    "Developers who want deterministic, human-in-the-loop approval on sensitive operations rather than prompt-based guardrails",
+    "Anyone wanting a free way to gate one or two agents before committing to a paid control plane"
+  ],
+  "not_recommended_for": [
+    "Buyers who require a completed third-party security audit before trusting an enforcement boundary",
+    "Teams needing documented SLAs, gateway-failure behaviour and latency guarantees up front",
+    "Single-prompt, non-autonomous LLM usage where there is no agent to gate",
+    "Environments that cannot route agent egress through an external gateway"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "phinq",
+      "verdict_diff": "Both put a deterministic boundary between an agent and dangerous actions, but at different layers: OneCLI is a network gateway that also owns credentials and endpoint policy, while Phinq intercepts individual tool calls and holds risky ones for human approval with a tamper-evident audit log. OneCLI is the broader infrastructure play (creds + network + rate limits); Phinq is the lighter, MIT-licensed approval layer you install in two minutes.",
+      "preferred_for_axis": "network-and-credential-enforcement"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Enforces policy at the network layer, outside the agent and the LLM",
+      "source": "https://onecli.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Scoped credentials injected per request; agents never hold a real secret",
+      "source": "https://onecli.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Y Combinator backing and named users (Docker, MindsDB, Zoho, Coralogix)",
+      "source": "https://onecli.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Free forever for up to two agents; open-source trust layer",
+      "source": "https://onecli.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independent security audit or bypass testing",
+      "source": "https://onecli.sh/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "OneCLI is infrastructure FOR agents rather than an agent itself: you wrap an existing agent with `onecli run -- <agent>` and it gates that agent's MCP calls, shell commands and network egress through a gateway. Direct fit for any autonomous coding-agent stack; the value is enforcement and credential isolation around the agent, not a callable tool surface the agent drives.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "OneCLI is an enforcement gateway that gates agent actions and does not generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A network-layer firewall that treats coding-agent policy as something enforced outside the model, not requested politely inside it — and that architectural choice is the whole pitch.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
