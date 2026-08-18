@@ -1,0 +1,119 @@
+{
+  "schema_version": "2.0",
+  "slug": "kubit",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-kubit-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Kubit",
+  "agent_url": "https://kubit.ai",
+  "category": "Frameworks & Eval",
+  "score": 74,
+  "laddoo_score": 74,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A mature warehouse-native product-analytics company extending into agent observability — its real edge is joining agent traces to user behaviour in your own warehouse, not another dashboard that stops at the LLM.",
+    "body": "Kubit's pitch lands on a gap most agent-observability tools leave open: infrastructure tracing tells you whether the LLM was fast, product analytics tells you whether the user clicked, and neither explains why an AI feature actually failed a user. Kubit connects the two — enriching agent traces (prompts, tool calls, model output) with intent and sentiment and correlating them with real user outcomes like re-prompts, drop-off, conversion and retention. The differentiator that reads as substantive rather than slogan is the architecture: warehouse-native and 'bring your own warehouse', so PII never leaves your store; ingestion via open standards (OpenTelemetry for traces, CDP or direct warehouse query for events); and no proprietary black box. For the agent thesis specifically, two things matter — it is 'headless for coding agents' (feed Claude Code the exact behavioural insight to debug a UX issue) and it embeds product analytics into agent loops as a verifier via MCP, which is a genuinely useful pattern beyond unit tests. Trust signals are strong for enterprise buyers: named customers (Miro, GameChanger, Serko, Vix) with attributed testimonials and a Trust Center. The caveats are those of a company adding an agent story onto an established analytics core: the agent-specific capabilities are newer than the mature product-analytics base, the 'billions of rows' and correlation claims are not independently benchmarked on the surface, and pricing is not public. But the warehouse-native, open-standards posture is a real position in a category full of lock-in, and the trace-to-behaviour join is a legitimately differentiated answer.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because Kubit brings a mature, warehouse-native analytics platform with real enterprise customers and an open-standards (OTel/CDP/SQL) architecture to a genuine gap — correlating agent traces with user outcomes — plus concrete agent hooks (headless insight for coding agents, MCP as an in-loop verifier). Not VITAL because the agent-specific layer is newer than the underlying product-analytics core, the scale and correlation claims are not independently benchmarked on the surface, and pricing and agent-analytics adoption specifics are not public.",
+  "what_it_does_well": [
+    "Joins agent traces to real user behaviour (re-prompts, drop-off, conversion, retention) instead of stopping at the LLM",
+    "Runs warehouse-native / bring-your-own-warehouse so PII and sensitive data never leave your store",
+    "Ingests via open standards — OpenTelemetry, CDP, direct SQL — with no proprietary black box or vendor lock-in",
+    "Exposes analytics to coding agents headlessly and as an in-loop verifier via MCP, beyond unit tests",
+    "Carries strong enterprise trust signals: named customers with attributed testimonials and a Trust Center"
+  ],
+  "what_it_fails_at": [
+    "The agent-analytics capability is newer than, and layered onto, an established product-analytics core",
+    "Scale and correlation claims ('billions of rows') are not independently benchmarked on the captured surface",
+    "No public pricing, so cost and commercial fit cannot be assessed from the surface",
+    "Requires a data warehouse and OTel/CDP plumbing — meaningful setup, not a drop-in",
+    "Agent-specific adoption evidence is thinner than the general product-analytics testimonials"
+  ],
+  "best_for": [
+    "Product and data teams shipping AI features who need to know why users re-prompt or churn, not just that they did",
+    "Enterprises with a data warehouse and OTel/CDP pipeline wanting agent + user analytics without moving PII",
+    "Coding-agent workflows that want behavioural insight and analytics-as-verifier fed in via MCP",
+    "Organisations avoiding proprietary-black-box analytics in favour of open standards"
+  ],
+  "not_recommended_for": [
+    "Small teams without a warehouse or the appetite to wire OTel/CDP ingestion",
+    "Buyers who require public pricing before evaluating",
+    "Anyone wanting a zero-setup, drop-in dashboard rather than a warehouse-native platform",
+    "Pure LLM-latency monitoring needs where user-behaviour correlation is irrelevant"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langsmith",
+      "verdict_diff": "LangSmith and Langfuse optimise agent traces largely in isolation from downstream user behaviour; Kubit's whole thesis is joining those traces to user outcomes in your own warehouse. Kubit wins when the question is 'did this agent behaviour actually help or hurt the user'; the trace-native tools win for deep prompt/chain debugging and eval tooling closer to the model.",
+      "preferred_for_axis": "trace-to-user-outcome-correlation"
+    },
+    {
+      "slug": "langfuse",
+      "verdict_diff": "Langfuse is open-source, trace- and eval-centric observability for LLM apps; Kubit is warehouse-native product analytics that ingests agent traces (via OTel) and correlates them with user behaviour and business dimensions. Use Langfuse for model-side tracing and evals; use Kubit when the analysis must span agent actions and real user journeys without moving PII out of your warehouse.",
+      "preferred_for_axis": "warehouse-native-product-analytics"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Correlates agent traces with user behaviour and outcomes (re-prompts, retention)",
+      "source": "https://kubit.ai/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Warehouse-native / bring-your-own-warehouse; PII stays in the warehouse",
+      "source": "https://kubit.ai/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Open standards ingestion: OTel, CDP, SQL; MCP as in-loop verifier",
+      "source": "https://kubit.ai/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Named enterprise customers (Miro, GameChanger, Serko, Vix)",
+      "source": "https://kubit.ai/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independently benchmarked scale / correlation performance",
+      "source": "https://kubit.ai/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Two agent-facing paths on the surface: it ingests agent traces via OpenTelemetry, and it exposes product analytics to agents through MCP so a coding agent can pull behavioural insight to debug a feature or use analytics as an in-loop verifier. It is analytics infrastructure agents feed into and query, not an agent itself; setup requires a warehouse plus OTel/CDP wiring.",
+    "agent_friendly_score": 7
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Kubit is an analytics/observability platform for agents and users and does not generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A mature warehouse-native product-analytics company extending into agent observability — its real edge is joining agent traces to user behaviour in your own warehouse, not another dashboard that stops at the LLM.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
