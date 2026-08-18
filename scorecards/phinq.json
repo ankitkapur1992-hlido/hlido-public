@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "slug": "phinq",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-phinq-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Phinq",
+  "agent_url": "https://phinq.co",
+  "category": "Infrastructure",
+  "score": 72,
+  "laddoo_score": 72,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An MIT-licensed, install-in-two-minutes approval layer that makes an agent ask before it does anything irreversible — and proves a human was in the loop with a tamper-evident log.",
+    "body": "Phinq occupies the same 'stop the one dangerous action' territory as several 2026 agent-security tools, but it earns attention by being small, open, and honest about what it does. It is an open-source (MIT) runtime governance layer you install with `npx @phinq/phinq` in about two minutes, no control plane to configure. It sits at the boundary — proxy, SDK or plain HTTP gate — intercepts each tool call, classifies it by risk, lets safe actions pass, and holds irreversible ones (a delete, a credential read, a payment, an external message) for human approval routed to your phone. Denied or timed-out actions fail closed, which is the correct default and stated explicitly. What distinguishes Phinq from 'most tools watch your agents' is its evidence posture: every decision is written to a hash-chained, tamper-evident audit log you can verify after the fact, and the site shows a concrete receipt (12,389 decisions classified, 376 held, 51 dangerous actions denied) rather than only promises. The honesty extends to its own boundaries — it names the failure mode (an action that happens while you sleep) and does not oversell. The limits are the usual early-stage ones: the receipt numbers are self-reported and unaudited, Phinq Cloud is a beta behind an early-access waitlist with a founder-rate hook, and the classifier's accuracy — how often it holds the wrong things or waves through the right-looking-but-wrong ones — is not quantified on the surface. For a free, open, verifiable human-in-the-loop layer that works with Claude Code, Codex and any MCP agent today, it is a genuinely sensible thing to install.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because Phinq ships a usable, open-source (MIT) product today, fails closed by default, works with the major agent runtimes via three boundary options, and backs its human-in-the-loop claim with a tamper-evident, verifiable audit log rather than promises alone. Not VITAL because the published receipt figures are self-reported and unaudited, classifier accuracy (false holds vs missed risks) is unquantified on the surface, and the managed cloud is still an early-access beta — so quality and durability at scale remain unproven.",
+  "what_it_does_well": [
+    "Installs in about two minutes via npx with no control plane to configure",
+    "Holds irreversible actions (delete, credential read, payment, external message) for human approval, and fails closed on timeout",
+    "Records every decision in a hash-chained, tamper-evident audit log you can verify after the fact",
+    "Open source under MIT — the classifier, proxy, SDK and audit logger can be inspected",
+    "Works at the proxy, SDK or plain-HTTP boundary with Claude Code, Codex and any MCP agent"
+  ],
+  "what_it_fails_at": [
+    "Published decision counts (12,389 classified, 51 denied) are self-reported and not independently audited",
+    "Classifier accuracy — how often it holds safe actions or passes risky ones — is not quantified on the surface",
+    "Phinq Cloud is an early-access beta behind a waitlist with a founder-pricing hook, not a shipped managed offering",
+    "Latency and throughput impact of intercepting every tool call is not documented",
+    "Risk classification is only as good as its taxonomy; edge-case coverage is unproven on the public surface"
+  ],
+  "best_for": [
+    "Developers who want a free, open, human-in-the-loop gate on a coding agent today",
+    "Teams that need cryptographic proof a human approved a sensitive action, for audit or compliance",
+    "Anyone running autonomous agents overnight who wants irreversible actions to fail closed",
+    "MCP-based agent stacks looking for a drop-in approval boundary without a control plane"
+  ],
+  "not_recommended_for": [
+    "Buyers who require independently audited efficacy metrics before trusting a safety layer",
+    "Fully unattended pipelines where a human cannot respond to an approval prompt (actions will fail closed)",
+    "Teams needing a mature managed/SaaS control plane now rather than a beta",
+    "Latency-critical agent loops that cannot absorb an interception step on every tool call"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "onecli-onecli",
+      "verdict_diff": "Both draw a deterministic boundary an agent cannot talk past, but Phinq is the lighter, MIT-licensed, human-approval layer with a verifiable audit log installed in two minutes, while OneCLI is broader infrastructure that also owns credentials, endpoint policy and rate limiting at the network layer. Choose Phinq for open, provable human-in-the-loop control; choose OneCLI when credential isolation and network-wide policy matter more.",
+      "preferred_for_axis": "open-human-approval-with-audit"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open source, MIT licensed, installable via npx @phinq/phinq",
+      "source": "https://www.phinq.co/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Holds irreversible actions for human approval; unanswered actions fail closed",
+      "source": "https://www.phinq.co/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Decisions recorded in a hash-chained, tamper-evident audit log",
+      "source": "https://www.phinq.co/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Works with Claude Code, Codex and any MCP agent",
+      "source": "https://www.phinq.co/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Reported figures (12,389 classified, 51 denied) independently audited",
+      "source": "https://www.phinq.co/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Phinq inserts at the agent's tool-call boundary via three routes documented on the surface — a proxy, an SDK, or a plain HTTP gate — and explicitly supports Claude Code, Codex and any MCP agent. It is governance infrastructure the agent's calls flow through, not a tool the agent invokes; integration is a two-minute npx install plus routing the approval channel.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Phinq is a runtime approval/governance layer for agent actions and does not generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "An MIT-licensed, install-in-two-minutes approval layer that makes an agent ask before it does anything irreversible — and proves a human was in the loop with a tamper-evident log.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
