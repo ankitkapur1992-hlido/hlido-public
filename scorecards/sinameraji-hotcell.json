@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "slug": "sinameraji-hotcell",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-sinameraji-hotcell-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "hotcell",
+  "agent_url": "https://hotcell.sh",
+  "category": "Infrastructure",
+  "score": 80,
+  "laddoo_score": 80,
+  "tier": "STEADY",
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "The most technically honest agent-sandboxing surface we have reviewed this cycle — Apache-2.0, self-hosted on hardware you already own, with a containment model spelled out down to which guarantees are kernel-enforced and which are only advisory.",
+    "body": "hotcell is what serious infrastructure documentation looks like. It solves a real and sharpening problem — running untrusted AI-agent code at scale without leaking credentials, hemorrhaging spend, or letting a compromised agent phone your data out — and it does so on hardware you already own (a Mac Mini, a Linux VM, bare metal), self-hosted under Apache-2.0, with one daemon. The containment model is specific rather than aspirational: every model call leaves a sandbox through a single egress gateway that swaps a per-sandbox scoped token for the real provider key, so the real key never enters the cell and dies with it on teardown; hard USD spend caps and provider allowlists bound blast radius; three isolation drivers (Docker, Firecracker, Apple VZ) sit behind one interface. What lifts hotcell above the category norm is its honesty. The comparison table against E2B, Daytona, NVIDIA OpenShell and Tencent CubeSandbox marks its own weaknesses plainly — default-deny egress is 'kernel-enforced on Linux and no-NIC microVMs; advisory on the microVM-NIC and macOS-Docker paths' — and it invites corrections via GitHub issue. A vendor that tells you where its guarantee is only advisory is a vendor worth more trust, not less. The honest caveats are the rating's ceiling too: it is built by essentially one person plus contained agents, the managed Cloud is an early-access waitlist, and there is no third-party audit or adoption signal on the surface — so the isolation strength is well-described but not independently verified. As a self-hosted, agent-drivable containment layer with genuine engineering depth and unusual candour, it is a standout.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the captured surface is exceptionally complete and specific — a coherent containment model (per-sandbox token swap at an egress gateway, keys never in the cell, hard spend caps, three isolation drivers), an Apache-2.0 self-hosted architecture, multiple SDKs and a REST surface — and it is candid about exactly which guarantees are kernel-enforced versus advisory. Not VITAL because it is single-maintainer with the managed Cloud still a waitlist, and no independent security audit, isolation-escape testing or adoption evidence appears on the surface, so the strong containment claims remain well-argued rather than externally verified.",
+  "what_it_does_well": [
+    "Keeps the real provider key on the host: each sandbox gets a scoped token swapped at the egress gateway and revoked on teardown",
+    "Bounds blast radius with hard USD spend caps, provider/model allowlists, rate limits and per-sandbox ceilings with real cost metering",
+    "Offers three isolation tiers (Docker, Firecracker, Apple VZ microVMs) behind one interface, with ~80ms microVM resume",
+    "Documents its containment guarantees precisely — and marks where default-deny egress is kernel-enforced vs merely advisory",
+    "Ships as one daemon under Apache-2.0 with CLI plus TypeScript and Python SDKs, and a REST surface for every command",
+    "Runs a fleet of parallel isolated cells per host (one repo, many branches, per-cell tokens) with a single teardown"
+  ],
+  "what_it_fails_at": [
+    "No independent security audit or published isolation-escape testing on the captured surface",
+    "Default-deny egress is only advisory on the macOS-Docker and microVM-NIC paths — a real limit, disclosed but present",
+    "Built essentially by one maintainer; continuity and support depth are unproven",
+    "The managed hotcell Cloud is an early-access waitlist, not a shipped multi-tenant offering",
+    "No adoption, production-use or scale evidence on the surface to corroborate the capability claims"
+  ],
+  "best_for": [
+    "Teams running untrusted or autonomous agent code who want provider keys to never enter the execution environment",
+    "Developers who need parallel isolated sandboxes on their own hardware without per-second managed-sandbox billing",
+    "Data-residency-constrained workloads that must keep egress locked to an allowlist and audited",
+    "Agent builders wanting a self-hosted, SDK- and REST-drivable containment layer with real spend caps"
+  ],
+  "not_recommended_for": [
+    "Buyers who require a completed third-party isolation audit before trusting a containment boundary",
+    "Teams relying on default-deny egress on macOS-Docker, where it is advisory rather than kernel-enforced",
+    "Organisations that need a vendor-managed, multi-tenant SLA today rather than self-hosting",
+    "Users unwilling to operate their own daemon and hardware"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "e2b",
+      "verdict_diff": "Both provide code sandboxes agents can drive, but hotcell is self-hosted on your own hardware under Apache-2.0 with keys held on the host and swapped at an egress gateway, whereas E2B is primarily a managed cloud sandbox billed per second (with a heavier self-host path). hotcell's own comparison claims stronger default credential isolation and spend metering; E2B brings a more established managed platform. Choose hotcell to own the substrate without building it; choose E2B for a hosted service.",
+      "preferred_for_axis": "self-hosted-containment"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provider key stays on the host; each sandbox gets a scoped token swapped at the egress gateway",
+      "source": "https://hotcell.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Hard USD spend caps, provider/model allowlists and per-sandbox cost metering",
+      "source": "https://hotcell.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Three isolation drivers: Docker, Firecracker, Apple VZ",
+      "source": "https://hotcell.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Apache-2.0, self-hosted, one daemon; CLI + TypeScript + Python SDKs",
+      "source": "https://hotcell.sh/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Default-deny egress kernel-enforced on all paths",
+      "source": "https://hotcell.sh/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "hotcell is containment infrastructure agents run inside and can drive: every CLI command is also a REST call, and TypeScript and Python SDKs ship with it, so an orchestrator can create sandboxes, wire keyless egress, exec streamed commands, and tear everything down programmatically. It runs Claude Code, Codex, OpenCode and Mastra inside its cells. No MCP server is advertised, but the REST + SDK surface is fully agent-drivable.",
+    "agent_friendly_score": 9
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "hotcell is a sandboxing/containment substrate for running agents and does not itself generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "The most technically honest agent-sandboxing surface we have reviewed this cycle — Apache-2.0, self-hosted on hardware you already own, with a containment model spelled out down to which guarantees are kernel-enforced and which are only advisory.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
