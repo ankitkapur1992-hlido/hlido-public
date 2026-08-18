@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0",
+  "slug": "irskep-persistproc",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-irskep-persistproc-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "persistproc",
+  "agent_url": "https://steveasleep.com/persistproc/",
+  "category": "Infrastructure",
+  "score": 64,
+  "laddoo_score": 64,
+  "tier": "FADING",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A deliberately tiny MCP server that gives any agent shared visibility and control over your long-running dev processes — the copy-paste killer for AI coding — and its restraint (three tools, no config file) is the design, not a gap.",
+    "body": "persistproc solves an unglamorous but constant friction in AI-assisted development: your dev server, database and build watcher run in terminals your agent cannot see, so you spend the session copy-pasting error output from your terminal into Cursor or Claude Code and back. persistproc is an MCP server and CLI that puts those processes on a shared layer — prefix a command with `persistproc` (e.g. `persistproc npm run dev`) and any MCP-compatible agent can list processes, read their output, and start/stop/restart them, while you still see the output in your own terminal and can Ctrl+C as usual. The design choices are quietly excellent and stated with rare honesty. There is no config file — processes are managed entirely at runtime — and the author explicitly scopes it: 'this is not a replacement for supervisord.' The tool surface is intentionally just three (ctrl, list, output) because 'LLMs perform worse with too many tools, to the point where some IDEs cap how many you can have' — a maturity most tools lack. It is tool-agnostic (Claude Code, Cursor, Gemini CLI all see the same processes, unlike Cursor's own terminal which only its agents can see), MIT-licensed, and pip-installable. The limits are exactly what you would expect from an early, focused utility: it is at v0.2.1 with a small apparent following, solo-maintained, narrow by design, and there is no adoption or reliability evidence on the surface beyond the documentation. It also only helps for processes you start through it. But as a small, honest, well-reasoned piece of agent-dev plumbing, it is easy to recommend for its exact job.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) because persistproc is a focused, well-designed and honestly-scoped utility — an MCP + CLI process layer with a deliberately minimal three-tool surface, tool-agnostic, MIT-licensed and runtime-configured — that genuinely removes copy-paste friction in agent-assisted development. It sits below STEADY because it is early (v0.2.1), solo-maintained, narrow by design, and carries no adoption, scale or reliability evidence on the captured surface beyond its documentation.",
+  "what_it_does_well": [
+    "Gives any MCP agent shared visibility and control (list, read output, start/stop/restart) over long-running dev processes",
+    "Removes the copy-paste loop — the agent reads process output directly instead of you relaying errors",
+    "Keeps the tool surface deliberately to three (ctrl, list, output) because LLMs degrade with too many tools",
+    "Is tool-agnostic: Claude Code, Cursor and Gemini CLI all see the same processes, unlike editor-locked terminals",
+    "Needs no config file — processes are managed entirely at runtime — and installs via pip"
+  ],
+  "what_it_fails_at": [
+    "Only helps for processes you start through persistproc; externally-started processes need a different approach",
+    "Early (v0.2.1), solo-maintained, with a small apparent following and no adoption/reliability evidence on the surface",
+    "Deliberately narrow — explicitly not a supervisord replacement or a general process supervisor",
+    "Requires running a dedicated server process and adopting the `persistproc <cmd>` habit",
+    "No security/auth discussion on the surface for the local MCP server it exposes"
+  ],
+  "best_for": [
+    "Developers using AI coding agents who are tired of copy-pasting dev-server errors into and out of the chat",
+    "Multi-agent or multi-tool setups (Claude Code + Cursor + Gemini CLI) that need one shared view of running processes",
+    "Complex local stacks (API + frontend + builder + database) where an agent reading all logs at once speeds diagnosis",
+    "Anyone wanting a minimal, MIT-licensed, config-free process layer rather than a heavy supervisor"
+  ],
+  "not_recommended_for": [
+    "Production process supervision — the author explicitly says it is not a supervisord replacement",
+    "Teams needing managed support, auth controls or reliability guarantees",
+    "Workflows whose processes are started by other systems and can't be launched through persistproc",
+    "Users wanting a rich, many-tool control surface rather than three deliberate primitives"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "yoanwai-agent-manager",
+      "verdict_diff": "persistproc manages the processes agents depend on (dev servers, databases) and gives agents shared read/control over them; Agent Manager orchestrates the agent sessions themselves. One sits under the agents, the other over them — complementary layers of an agent-dev workflow rather than substitutes.",
+      "preferred_for_axis": "shared-process-visibility-for-agents"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP server + CLI; prefix a command with persistproc to expose it to agents",
+      "source": "https://steveasleep.com/persistproc/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Three tools (ctrl, list, output), intentionally minimal for LLM reliability",
+      "source": "https://steveasleep.com/persistproc/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Tool-agnostic (Claude Code, Cursor, Gemini CLI), MIT-licensed, pip-installable, no config file",
+      "source": "https://steveasleep.com/persistproc/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Adoption or reliability evidence beyond documentation",
+      "source": "https://steveasleep.com/persistproc/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Runs a standard MCP server on 127.0.0.1:8947 with three tools (ctrl, list, output) any MCP-compatible client can call; `persistproc serve` prints per-agent configuration on start. Squarely agent-facing plumbing — its purpose is to let an agent see and control the developer's running processes. Install via pip and start processes through persistproc.",
+    "agent_friendly_score": 7
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "persistproc is a process-management layer for agent-assisted development and does not generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A deliberately tiny MCP server that gives any agent shared visibility and control over your long-running dev processes — the copy-paste killer for AI coding — and its restraint (three tools, no config file) is the design, not a gap.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
