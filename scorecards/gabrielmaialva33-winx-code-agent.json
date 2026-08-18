@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0",
+  "slug": "gabrielmaialva33-winx-code-agent",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r4-editorial-enrich",
+  "run_id": "run-gabrielmaialva33-winx-code-agent-v2-2026-08-18",
+  "run_at": "2026-08-18T21:30:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Winx (winx-code-agent)",
+  "agent_url": "https://crates.io/crates/winx-code-agent",
+  "category": "Coding",
+  "score": 72,
+  "laddoo_score": 72,
+  "tier": "STEADY",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A Rust MCP shell server that has clearly been used in anger — the details it bothers to get right (PTY semantics, tree-sitter-parsed command allowlists, stale-write blocking) are the ones that only surface after real failures.",
+    "body": "Winx is a local MCP server that hands a coding agent a shell, file I/O and PTY-backed interactive sessions in one Rust process. What distinguishes the captured surface from the many thin MCP shell wrappers is that its documentation is organised around failure modes rather than features. Sessions run on a real PTY via portable-pty, so cd persists, Ctrl+C actually interrupts, and background shells survive long-running TUIs without dumping output buffers into the agent's token budget. The workspace model has three modes — full access, read-only architect, and a code_writer mode with a command allowlist and write globs — and crucially the allowlist is parsed with tree-sitter, so it evaluates every command in a line including pipelines, &&/||/;, command substitution and subshells. The README explicitly calls out that this cannot be bypassed with constructions like 'ls && curl … | sh' or 'ls $(rm …)', which is precisely the bypass a naive first-word check permits; naming it suggests someone thought about the adversary. Similar care shows elsewhere: writes are blocked when a file has not been read or the cached content is stale, edits are reversible via UndoEdit, MultiFileEdit validates in memory so a late failure cannot leave earlier files half-written, and NUL bytes are rejected before reaching the shell. Tree-sitter CodeMap gives a token-budgeted symbol map across eleven languages. Against that: it is published on crates.io at v0.2.332 with no adoption, download or maintenance signal visible on the captured page, there is no security audit or disclosure policy, and every safety property is documented rather than demonstrated. It is also, by design, a tool that gives an agent a real shell — the guardrails are what stand between that and your filesystem.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because the engineering judgement visible in the documentation is well above average for this category — adversary-aware command parsing, stale-write protection, all-or-nothing multi-file edits, correct PTY behaviour — while adoption evidence, audit history and any independent verification of the sandboxing claims are entirely absent from the captured surface.",
+  "what_it_does_well": [
+    "Parses command allowlists with tree-sitter so pipelines, substitutions and subshells are all checked, not just the first word",
+    "Names the specific bypasses it defends against, which is stronger evidence of adversarial thinking than a generic 'secure' claim",
+    "Correct PTY semantics — persistent cd, working Ctrl+C, background shells that do not leak buffers into the token budget",
+    "Blocks writes against unread or stale file content, and makes edits reversible with UndoEdit",
+    "MultiFileEdit validates in memory first, so a failure on the last file cannot leave earlier ones mutated",
+    "Three explicit workspace modes (full, read-only architect, allowlisted code_writer) map cleanly to real trust levels",
+    "Token-budgeted tree-sitter symbol maps across eleven languages give agents structure that grep cannot"
+  ],
+  "what_it_fails_at": [
+    "No adoption, download or dependent-count signal visible on the captured crates.io page",
+    "No security audit, disclosure policy or CVE history for a tool whose entire purpose is bounded shell access",
+    "Every safety property is documented rather than independently exercised or adversarially tested",
+    "A very low version number (v0.2.x) despite a high patch count suggests rapid churn and no stability commitment",
+    "No pricing, support or continuity story — a single-maintainer open-source dependency",
+    "Grants an agent a real shell by design; a flaw in the allowlist parser has direct filesystem consequences"
+  ],
+  "best_for": [
+    "Engineers running coding agents against real repositories who want PTY-correct shell behaviour rather than a subprocess wrapper",
+    "Teams that want a read-only 'architect' mode or a genuinely enforced command allowlist for agent sessions",
+    "Rust-comfortable users willing to take a young, fast-moving dependency in exchange for better shell semantics"
+  ],
+  "not_recommended_for": [
+    "Multi-tenant or regulated environments needing an audited sandbox boundary",
+    "Teams requiring API stability guarantees or vendor support",
+    "Anyone who wants agent shell access without reviewing the guardrail implementation themselves"
+  ],
+  "red_flags": [
+    "The command allowlist is the security boundary and its correctness is self-asserted — no audit, no disclosure policy, no CVE history on the captured surface. A parser gap here is a direct path from agent to shell.",
+    "Version v0.2.332 signals pre-stability churn; expect breaking changes and verify guardrail behaviour after upgrades."
+  ],
+  "compared_to": [
+    {
+      "slug": "sshahzaiib-agy-bridge",
+      "verdict_diff": "Both are small, well-engineered MCP bridges serving Claude Code. Agy-bridge is narrower — offloading token-heavy work — while Winx takes on the much larger and riskier surface of a full shell with enforced allowlists. Winx does more and therefore must be trusted more.",
+      "preferred_for_axis": "full shell and file-editing surface"
+    },
+    {
+      "slug": "onecli-onecli",
+      "verdict_diff": "OneCLI enforces agent policy at the network layer, outside the agent's reach; Winx enforces it inside the tool the agent calls. In-process guardrails are easier to adopt and easier to bypass if the parser is wrong — the two are layers, not alternatives.",
+      "preferred_for_axis": "in-process ergonomics"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Rust MCP server providing PTY-backed shell, file I/O and interactive sessions",
+      "source": "https://crates.io/crates/winx-code-agent",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Command allowlists parsed with tree-sitter, covering pipelines, substitution and subshells",
+      "source": "https://crates.io/crates/winx-code-agent",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Three workspace modes: wcgw full access, read-only architect, allowlisted code_writer",
+      "source": "https://crates.io/crates/winx-code-agent",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Guardrails independently audited or adversarially tested",
+      "source": "https://crates.io/crates/winx-code-agent",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A local MCP server over stdio, installable from crates.io, designed to be attached directly to Claude Code, Codex and similar coding agents. Exposes shell, file read/write, SEARCH/REPLACE editing, MultiFileEdit, CodeMap navigation and ContextSave as tools. Requires local installation, so it is not behaviourally testable from a public surface.",
+    "agent_friendly_score": 9
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Winx is a shell and file-editing MCP server; it does not generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A Rust MCP shell server that has clearly been used in anger — the details it bothers to get right (PTY semantics, tree-sitter-parsed command allowlists, stale-write blocking) are the ones that only surface after real failures.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
