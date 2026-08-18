@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "slug": "discoveredmaterials",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r4-editorial-enrich",
+  "run_id": "run-discoveredmaterials-v2-2026-08-18",
+  "run_at": "2026-08-18T21:30:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Discovered Materials",
+  "agent_url": "https://discoveredmaterials.com",
+  "category": "Research",
+  "score": 52,
+  "laddoo_score": 52,
+  "tier": "FADING",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A well-funded, credibly-staffed materials-discovery lab that uses AI agents internally — but publishes no agent anyone outside the company can use or evaluate.",
+    "body": "Discovered Materials is building AI agents that search for new thermal-interface and semiconductor materials, and the captured surface makes an unusually concrete case for the problem: GPUs now dissipate heat fluxes around 140 W/cm², today's materials are at their limit, and the path from a lab result to a fab takes years and hundreds of millions of dollars. The credibility signals are real and specific rather than decorative — a $9M seed led by Lightspeed with Y Combinator and Peak XV participating, named angels, and two named founders whose backgrounds (a Stanford materials-science PhD with eleven years in semiconductor materials; an AI researcher from Carnegie Mellon who built video models and agents at Persona AI and Luma Labs) match the problem they have chosen. They also claim to have released Material Discovery Bench, an open-source benchmark built with contributors from IBM, IMEC, Stanford and Cambridge, which if it holds up is a genuine contribution to a field with few honest evaluation harnesses. None of that makes this an assessable agent product. The captured surface is a company announcement: three navigation items (Research, News, Talk to us), no product, no API, no documentation, no pricing and no way for an outside evaluator — human or agent — to exercise anything. The headline capability claim, that they matched trade-secret thermal-interface products during a three-month YC batch, is stated without published data on the page we captured. Hlido rates what it can independently observe, and what is observable here is a serious research company with a strong story and no public agent surface. That is not a criticism of the science; it is a statement about what exists to rate.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (52) because the funding, team and problem framing are strong and specific, but there is no usable or testable agent surface on the captured page — no product, API, documentation or pricing — and the central performance claim is asserted without published supporting data. The score reflects the absence of an assessable product, not a judgement about the underlying research.",
+  "what_it_does_well": [
+    "States the problem with specific physical numbers rather than generic AI-for-science language",
+    "Carries strong, verifiable-looking funding and institutional signals (Lightspeed, Y Combinator, Peak XV, named angels)",
+    "Founder backgrounds are directly matched to the problem and are checkable",
+    "Releasing an open-source discovery benchmark is a real contribution to a field short of honest evaluation harnesses",
+    "Positions at a genuine bottleneck — the lab-to-fab valley of death — rather than a crowded application layer"
+  ],
+  "what_it_fails_at": [
+    "No agent, product, API or documentation is exposed on the captured surface — nothing can be exercised",
+    "The headline claim of matching long-guarded trade-secret materials is asserted without data on the captured page",
+    "No pricing, access path or self-serve entry; the only call to action is 'Talk to us'",
+    "The open-source benchmark is announced but not linked or demonstrated on the captured surface",
+    "Zero agent-integration surface, which matters because the company's own thesis is agent-driven discovery"
+  ],
+  "best_for": [
+    "Investors, researchers and semiconductor-industry watchers tracking AI-driven materials discovery",
+    "Institutions interested in contributing to or evaluating an open materials-discovery benchmark",
+    "Organisations willing to engage directly and pre-product via 'Talk to us'"
+  ],
+  "not_recommended_for": [
+    "Anyone looking for a usable AI agent today — none is published",
+    "Buyers who need documentation, pricing or an evaluation path before engaging",
+    "Agent developers seeking an integrable API, SDK or MCP surface",
+    "Procurement contexts requiring independently verifiable capability evidence"
+  ],
+  "red_flags": [
+    "The central capability claim — matching thermal-interface products that major chemical companies have held as trade secrets for over twenty years — is a strong assertion presented without published data or third-party verification on the captured surface. Treat it as a company claim, not an established result, until the benchmark and results are independently examinable."
+  ],
+  "compared_to": [
+    {
+      "slug": "kubit",
+      "verdict_diff": "Both are companies applying AI to a specialised technical domain, but Kubit exposes an assessable commercial product surface with observability claims a buyer can inspect, while Discovered Materials publishes only a research announcement. Kubit can be evaluated today; this cannot.",
+      "preferred_for_axis": "assessable product surface"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Builds AI agents for semiconductor materials discovery (described)",
+      "source": "https://discoveredmaterials.com",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Backed by a $9M seed round led by Lightspeed with Y Combinator and Peak XV",
+      "source": "https://discoveredmaterials.com",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Released Material Discovery Bench as an open-source benchmark",
+      "source": "https://discoveredmaterials.com",
+      "tested_at": "2026-08-18",
+      "verified": false
+    },
+    {
+      "claim": "Matched performance of long-standing trade-secret thermal interface materials",
+      "source": "https://discoveredmaterials.com",
+      "tested_at": "2026-08-18",
+      "verified": false
+    },
+    {
+      "claim": "Usable agent, API or documentation available to external evaluators",
+      "source": "https://discoveredmaterials.com",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None on the captured surface. The agents described are internal research tooling; no API, SDK, MCP endpoint or self-serve product is exposed for external integration.",
+    "agent_friendly_score": 1
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "The described agents perform materials simulation and experimental design rather than generating synthetic media or published text, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A well-funded, credibly-staffed materials-discovery lab that uses AI agents internally — but publishes no agent anyone outside the company can use or evaluate.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
