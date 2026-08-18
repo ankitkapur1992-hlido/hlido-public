@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "slug": "jrswab-axe",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-jrswab-axe-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Axe",
+  "agent_url": "https://docs.getaxe.dev",
+  "category": "Frameworks & Eval",
+  "score": 70,
+  "laddoo_score": 70,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A Unix-philosophy answer to the everything-chatbot: small, single-purpose LLM agents defined in TOML and composed with cron, pipes and git hooks — a coherent design that is also refreshingly security-conscious.",
+    "body": "Axe makes an argument as much as a product, and the argument is good: most AI tooling assumes you want one long-running chatbot with a giant context window doing everything, but good software is small, focused and composable, so agents should be too. Axe treats LLM agents the way Unix treats programs — each does one thing, defined in a TOML file with its own system prompt, model, skills, context and memory, and run from the command line. Pipe data in, get results out, chain agents, trigger them from cron, git hooks or CI. It is explicitly 'the executor, not the scheduler,' composing with the Unix tools you already use rather than reinventing orchestration — a disciplined scoping decision. The feature list is substantial and, notably, security-aware in ways many agent frameworks are not: multi-provider (Anthropic, OpenAI, Ollama, OpenCode, AWS Bedrock), sub-agent delegation with depth limiting and parallel execution, persistent timestamped-markdown memory with LLM-assisted garbage collection, built-in file tools sandboxed to the working directory, an output allowlist that restricts url_fetch/web_search to specific hostnames with private/reserved IPs always blocked (SSRF protection), token budgets, configurable retry with backoff, and MCP tool support over SSE/streamable-HTTP. Four direct dependencies, a single Go binary, TOML configs you can version-control. The caveats are those of a young, single-maintainer open-source project: the documentation surface we captured is clear and complete, but there is no adoption, benchmark or reliability evidence, no third-party validation, and the behavioural quality of the agents it runs depends entirely on the user's configs and chosen providers. As a composable, scriptable, security-conscious agent runner for people who live in the terminal, it is a genuinely well-thought-out tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because Axe presents a coherent, well-documented design — Unix-composable single-purpose agents defined in version-controllable TOML, multi-provider, with genuinely security-conscious defaults (working-directory sandboxing, SSRF-protected output allowlist, token budgets, depth-limited delegation) and MCP support — as a clean single binary. Not VITAL because it is an early, solo open-source project with no adoption, benchmark or reliability evidence on the captured surface, and the quality of any agent it runs depends wholly on the user's configuration and provider choices.",
+  "what_it_does_well": [
+    "Models agents the Unix way: small, single-purpose, defined in version-controllable TOML, composed with cron/pipes/git hooks",
+    "Stays scoped as the executor, not the scheduler — composes with existing tools instead of reinventing orchestration",
+    "Ships security-conscious defaults: working-directory-sandboxed file tools, SSRF-protected output allowlist, token budgets",
+    "Supports multiple providers (Anthropic, OpenAI, Ollama, OpenCode, AWS Bedrock) and MCP tools over SSE/streamable-HTTP",
+    "Offers sub-agent delegation with depth limiting and parallel execution, plus persistent memory with LLM-assisted GC",
+    "Distributes as a single Go binary with only four direct dependencies and stdin piping for composition"
+  ],
+  "what_it_fails_at": [
+    "Early, single-maintainer open-source project with no adoption, benchmark or reliability evidence on the surface",
+    "Agent behavioural quality depends entirely on the user's TOML configs and chosen model providers",
+    "No third-party validation of the security controls (sandboxing, SSRF allowlist) on the captured surface",
+    "Terminal- and config-file-centric; not for users wanting a GUI or a managed platform",
+    "Documentation is thorough but the product's real-world robustness at scale is unproven"
+  ],
+  "best_for": [
+    "Developers who want composable, single-purpose LLM agents triggered from cron, git hooks, CI and pipes",
+    "Teams that value version-controllable, declarative agent definitions over a monolithic chatbot",
+    "Security-conscious users who want working-directory sandboxing and SSRF-protected fetches by default",
+    "Polyglot/multi-provider setups (Anthropic, OpenAI, Ollama, Bedrock) run from a single binary"
+  ],
+  "not_recommended_for": [
+    "Users wanting a GUI or an all-in-one conversational assistant rather than a scriptable CLI executor",
+    "Teams needing vendor support, SLAs or proven at-scale reliability before adoption",
+    "Those expecting Axe to schedule/orchestrate for them — it is deliberately the executor only",
+    "Non-technical users uncomfortable authoring TOML agent configs"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "yoanwai-agent-manager",
+      "verdict_diff": "Both run coding/LLM agents from the terminal, but Axe is a headless, composable executor — agents defined in TOML and chained with cron, pipes and CI for automation — whereas Agent Manager is an interactive TUI for driving many live agent sessions by hand. Choose Axe to script and automate single-purpose agents; choose Agent Manager to supervise a fleet of interactive coding agents.",
+      "preferred_for_axis": "composable-headless-agent-execution"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Single-purpose agents defined in TOML, composed with cron/pipes/git hooks; executor not scheduler",
+      "source": "https://docs.getaxe.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Working-directory-sandboxed file tools and SSRF-protected output allowlist (private IPs blocked)",
+      "source": "https://docs.getaxe.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Multi-provider (Anthropic, OpenAI, Ollama, OpenCode, Bedrock) and MCP tool support",
+      "source": "https://docs.getaxe.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Sub-agent delegation with depth limiting; token budgets; four direct dependencies",
+      "source": "https://docs.getaxe.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independent adoption, benchmark or reliability evidence",
+      "source": "https://docs.getaxe.dev/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Axe IS an agent runner: define agents in TOML and invoke them from the shell (e.g. `git diff | axe run reviewer`), chain them, or trigger from cron/CI. It also consumes external MCP servers over SSE/streamable-HTTP to extend an agent's tools, and can delegate to sub-agents. Fully scriptable and composable; JSON output and dry-run mode make it easy to embed in larger automation.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Axe is an agent execution framework; whether Article-50 marking applies depends on what a user's configured agent produces, so no output-marking obligation attaches to the framework itself.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A Unix-philosophy answer to the everything-chatbot: small, single-purpose LLM agents defined in TOML and composed with cron, pipes and git hooks — a coherent design that is also refreshingly security-conscious.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
