@@ -1,0 +1,103 @@
+{
+  "schema_version": "2.0",
+  "slug": "sshahzaiib-agy-bridge",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-sshahzaiib-agy-bridge-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "agy-bridge",
+  "agent_url": "https://shahzaibakram.dev/blog/agy-bridge-delegating-claude-code-heavy-work-to-gemini",
+  "category": "Coding",
+  "score": 66,
+  "laddoo_score": 66,
+  "tier": "FADING",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A small, unusually well-engineered MCP bridge that lets Claude Code offload token-heavy grunt work to Google's Antigravity CLI — high craft, honest about its own failure modes, but a niche tool for a specific two-CLI setup.",
+    "body": "agy-bridge does one narrow thing and does it with more engineering discipline than most products ten times its size. The problem is concrete: Claude Code burns its context window reading raw material — a 3,000-line log, a year of git history — when what you want is the synthesized answer. agy-bridge is an MCP server (on npm, zero-install via npx) that lets Claude Code delegate that heavy reading to Google's Antigravity CLI (agy), which has its own model quota and local file access; only the summary comes back. What lifts it above a weekend hack is the thinking on display in the author's writeup. Rather than one generic 'ask Gemini' tool it exposes six purpose-built tools (analyze_files, deep_search, web_lookup, adversarial_review, follow_up, delegate), because tool descriptions are how the calling model decides when to delegate — a genuinely non-obvious insight. It stays stateless while offering session continuity by reading agy's own conversation cache. Its model routing degrades gracefully because preview-CLI model names change weekly. Most tellingly, v0.2.0 added AGY_ON_FAILURE=strict after the author noticed the worst failure was 'success theater' — a silent fallback where Claude quietly did the heavy work itself, recreating the exact problem the tool exists to solve — and concluded that instructing the calling model what to do on failure is part of an MCP tool's contract. Output is capped to protect the context window; 35 unit tests run without agy installed. The honest limits are inherent to what it is: it requires both Claude Code AND the Antigravity CLI installed, it is a solo project at v0.2, single-purpose, and the only surface we could review is the author's own blog post — no independent adoption or reliability signal. As a piece of craft and a model of how to write an MCP tool, it punches far above its scope; as a product, it is a sharp niche utility.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) — a deliberately narrow score for a deliberately narrow tool. The engineering craft is high (six purpose-built tools with model-aware descriptions, stateless session continuity, graceful model routing, a strict fail-mode that closes the 'silent fallback' hole, 35 CLI-free unit tests) and the design reasoning is exemplary. It sits below STEADY because it is single-purpose and setup-dependent (needs both Claude Code and Google's Antigravity CLI), a solo project at v0.2, and the only reviewable surface is the author's blog post — no independent adoption, reliability or usage evidence.",
+  "what_it_does_well": [
+    "Offloads token-heavy reading (large logs, git archaeology) from Claude Code to agy, returning only the synthesized answer",
+    "Exposes six purpose-built tools whose descriptions give the calling model concrete triggers to delegate — not one generic tool",
+    "Stays stateless while offering session continuity by reading agy's own conversation cache and returning a follow-up ID",
+    "Routes each tool through a graceful model-preference chain, so churning preview-CLI model names don't break it",
+    "Fails loudly by design: AGY_ON_FAILURE=strict stops Claude from silently doing the heavy work itself",
+    "Caps output to protect the very context window it exists to save; 35 unit tests run with no agy install or network"
+  ],
+  "what_it_fails_at": [
+    "Requires both Claude Code and Google's Antigravity CLI (agy) installed — a narrow two-tool prerequisite",
+    "Single-purpose delegation bridge; not a general-purpose agent capability",
+    "Solo project at v0.2 with no independent adoption, reliability or usage evidence on the surface",
+    "The only reviewable surface is the author's own blog post — no product site, docs portal or third-party validation",
+    "Value depends on agy's Gemini quota and behaviour, an external preview CLI outside the bridge's control"
+  ],
+  "best_for": [
+    "Developers already running Claude Code alongside Google's Antigravity CLI who want to conserve Claude's context window",
+    "Workflows with recurring token-heavy tasks — large-file analysis, repo-wide git archaeology, adversarial code review",
+    "Engineers who value a delegation tool that fails loudly rather than silently reverting to expensive local work",
+    "Anyone studying how to design MCP tools well — the writeup is a strong reference"
+  ],
+  "not_recommended_for": [
+    "Users who don't run Google's Antigravity CLI (the bridge has nothing to delegate to)",
+    "Teams needing a supported, multi-contributor product with reliability guarantees",
+    "General agent tasks beyond offloading heavy reading/analysis",
+    "Buyers who require documentation and adoption evidence beyond an author blog post"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server on npm (npx -y agy-bridge) delegating heavy work from Claude Code to agy/Gemini",
+      "source": "https://shahzaibakram.dev/blog/agy-bridge-delegating-claude-code-heavy-work-to-gemini",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Six purpose-built tools with per-tool model routing chains",
+      "source": "https://shahzaibakram.dev/blog/agy-bridge-delegating-claude-code-heavy-work-to-gemini",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "AGY_ON_FAILURE=strict prevents silent local fallback; output capped; 35 unit tests",
+      "source": "https://shahzaibakram.dev/blog/agy-bridge-delegating-claude-code-heavy-work-to-gemini",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independent adoption or reliability evidence beyond the author's blog",
+      "source": "https://shahzaibakram.dev/blog/agy-bridge-delegating-claude-code-heavy-work-to-gemini",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP for Claude Code: add agy-bridge to mcpServers (command npx, args -y agy-bridge) and Claude Code gains six delegation tools. It is agent-facing by construction — a bridge one agent (Claude Code) calls to route heavy work to another CLI (agy/Gemini). Requires the Antigravity CLI installed locally to function.",
+    "agent_friendly_score": 7
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "agy-bridge is a delegation bridge between coding-agent CLIs and does not itself generate published synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A small, unusually well-engineered MCP bridge that lets Claude Code offload token-heavy grunt work to Google's Antigravity CLI — high craft, honest about its own failure modes, but a niche tool for a specific two-CLI setup.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
