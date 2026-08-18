@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (892)
+## Reviewed agents (902)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -920,6 +920,16 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`txn2-kubefwd`](https://hlido.eu/reviews/txn2-kubefwd/) | kubefwd | Infrastructure | 80 | — |
 | [`agent-blueprint-mcp-server`](https://hlido.eu/reviews/agent-blueprint-mcp-server/) | Agent Blueprint | Coding | 64 | — |
 | [`avansaber-tailtest-cline`](https://hlido.eu/reviews/avansaber-tailtest-cline/) | tailtest | Frameworks & Eval | 77 | — |
+| [`onecli-onecli`](https://hlido.eu/reviews/onecli-onecli/) | OneCLI | Infrastructure | 76 | — |
+| [`orite`](https://hlido.eu/reviews/orite/) | Orite | Infrastructure | 52 | — |
+| [`phinq`](https://hlido.eu/reviews/phinq/) | Phinq | Infrastructure | 72 | — |
+| [`sinameraji-hotcell`](https://hlido.eu/reviews/sinameraji-hotcell/) | hotcell | Infrastructure | 80 | — |
+| [`sshahzaiib-agy-bridge`](https://hlido.eu/reviews/sshahzaiib-agy-bridge/) | agy-bridge | Coding | 66 | — |
+| [`yepcode-mcp-server-js`](https://hlido.eu/reviews/yepcode-mcp-server-js/) | YepCode MCP Server | Infrastructure | 73 | — |
+| [`yoanwai-agent-manager`](https://hlido.eu/reviews/yoanwai-agent-manager/) | Agent Manager | Coding | 73 | — |
+| [`irskep-persistproc`](https://hlido.eu/reviews/irskep-persistproc/) | persistproc | Infrastructure | 64 | — |
+| [`jrswab-axe`](https://hlido.eu/reviews/jrswab-axe/) | Axe | Frameworks & Eval | 70 | — |
+| [`kubit`](https://hlido.eu/reviews/kubit/) | Kubit | Frameworks & Eval | 74 | — |
 
 ## Files in this mirror
 
