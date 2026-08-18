@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "slug": "yoanwai-agent-manager",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r-publish-editorial-enrich",
+  "run_id": "run-yoanwai-agent-manager-v2-2026-08-18",
+  "run_at": "2026-08-18T08:45:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "Agent Manager",
+  "agent_url": "https://agent-manager.dev",
+  "category": "Coding",
+  "score": 73,
+  "laddoo_score": 73,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A fast, keyboard-driven control tower for running many coding agents at once — spawn in a sentence, answer a blocked one without attaching, review its diff in place — and it runs your real installed CLIs as-is rather than reimplementing them.",
+    "body": "Agent Manager is a well-executed answer to a problem that is suddenly real: developers now run five, ten, twenty coding-agent sessions in parallel, and a wall of tmux panes is a poor way to manage them. Built in Go on tmux, Apache-2.0, installable via Homebrew on macOS, Linux and WSL, it turns that fleet into a single navigable list where every action is one keypress — space to spawn an agent from a one-sentence task into the right directory, space again on a session row to answer a blocked agent in place without attaching, ctrl+r to open a full review mode with per-file diffs and inline comments, and worktree spawns for work that needs its own branch. The design decisions are thoughtful: sessions rename themselves once the agent knows the task; folded groups keep per-status counts so a collapsed subtree still tells you if something is blocked on you; state (arrangement, groups, archives) survives restarts. Crucially, each session runs your own installed CLI as-is — your login, your config, your MCP servers — so it composes with Claude Code, Codex, OpenCode, Grok and others rather than locking you into one. For Claude Code it reads real hook events instead of guessing pane state, which is the right way to detect status. It has genuine early traction (Hacker News, Product Hunt, Trendshift, TLDR). The honest limits are stage-typical: it is a solo, open-source project, terminal-only, tmux- and Unix-centric (no native Windows outside WSL), and there is no independent reliability or scale evidence beyond the launch coverage. As a power-user workflow layer for multi-agent coding, it is polished and clearly differentiated.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it delivers a genuinely polished, differentiated workflow for a real emerging need — managing many parallel coding agents from one keyboard-driven list — composes with users' existing CLIs rather than replacing them, uses real hook events for Claude Code status, and shows early independent traction. Not VITAL because it is a solo open-source project, terminal- and tmux-centric with no native Windows path, and carries no reliability, scale or sustained-adoption evidence beyond launch coverage.",
+  "what_it_does_well": [
+    "Spawns an agent from a one-sentence task with a single keypress, directory and prompt already set — no form, no cd",
+    "Answers a blocked agent in place (reply lands in its pane) without attaching or switching tabs",
+    "Runs your own installed CLI as-is — your login, config and MCP servers — across Claude Code, Codex, OpenCode, Grok",
+    "Built-in review mode (ctrl+r): per-file diffs, four scopes, split/unified, and inline comments from the list",
+    "Detects Claude Code status from its real hook events rather than guessing at the pane",
+    "Groups, ordering, folds and archives persist across restarts; folded subtrees still show per-status counts"
+  ],
+  "what_it_fails_at": [
+    "Solo, open-source project — continuity and support depth are unproven",
+    "Terminal- and tmux-centric; no native Windows support outside WSL",
+    "No independent reliability, scale or sustained-adoption evidence beyond launch-week coverage",
+    "Assumes comfort with a keyboard-driven TUI and Unix tooling — not for GUI-first users",
+    "Some navigation features are explicitly in beta on the surface"
+  ],
+  "best_for": [
+    "Developers running many parallel coding-agent sessions who want one keyboard-driven place to control them",
+    "Teams mixing multiple agent CLIs (Claude Code, Codex, OpenCode) who want each run to keep its own config and MCP servers",
+    "Power users who want in-place diff review and inline comments without leaving the session list",
+    "macOS/Linux/WSL users comfortable in a tmux-based terminal workflow"
+  ],
+  "not_recommended_for": [
+    "Windows-native users who cannot or will not run under WSL",
+    "GUI-first developers who prefer an IDE panel over a terminal TUI",
+    "Buyers who require vendor-backed support and reliability guarantees",
+    "Single-agent workflows where a fleet manager adds no value"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "irskep-persistproc",
+      "verdict_diff": "Both help humans and agents run software locally, but they target different layers: Agent Manager orchestrates the agent sessions themselves (spawn, answer, review many coding agents), while persistproc manages the long-running processes (dev servers, databases) that agents need to see and control. They are complementary — a session manager over agents versus a shared process layer under them — more often than alternatives.",
+      "preferred_for_axis": "multi-agent-session-orchestration"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Go + tmux, Apache-2.0, installable via Homebrew on macOS, Linux and WSL",
+      "source": "https://agent-manager.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Spawn, answer-in-place, and review-mode (ctrl+r) all one keypress from the list",
+      "source": "https://agent-manager.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Runs your own installed CLI as-is; Claude Code status from real hook events",
+      "source": "https://agent-manager.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independent launch coverage (Hacker News, Product Hunt, Trendshift, TLDR)",
+      "source": "https://agent-manager.dev/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Independent reliability or scale benchmarks",
+      "source": "https://agent-manager.dev/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent Manager is a manager OF agents rather than an agent with a callable surface: it spawns and controls coding-agent CLIs, and exposes MCP tools an agent uses to declare the repo/worktree and merge base it moved into so review-mode targets correctly. It runs Claude Code, Codex, OpenCode and Grok as-is, preserving each one's own MCP servers. Direct relevance to any multi-agent coding workflow; the value is orchestration, not a drivable API.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Agent Manager orchestrates coding-agent sessions and does not itself generate synthetic content, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "A fast, keyboard-driven control tower for running many coding agents at once — spawn in a sentence, answer a blocked one without attaching, review its diff in place — and it runs your real installed CLIs as-is rather than reimplementing them.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
