@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "slug": "lacs-project-sysknife",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "engine": "public-surface",
+  "evidence_tier": "screenshot",
+  "source": "r4-editorial-enrich",
+  "run_id": "run-lacs-project-sysknife-v2-2026-08-18",
+  "run_at": "2026-08-18T21:30:00Z",
+  "staleness_after": "2026-11-16",
+  "next_review_due_at": "2026-11-16",
+  "signature_pending": true,
+  "name": "SysKnife",
+  "agent_url": "https://lacs-project.github.io/sysknife/",
+  "category": "Infrastructure",
+  "score": 74,
+  "laddoo_score": 74,
+  "tier": "STEADY",
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "The rare agent tool whose architecture makes the dangerous thing structurally impossible rather than merely discouraged — the LLM cannot run a shell command, only propose typed actions a separate daemon executes after you approve.",
+    "body": "SysKnife is a Linux sysadmin co-pilot built around one strong architectural commitment: the model never touches the system. You describe a task in plain language, an LLM turns it into a typed plan — named actions carrying formal risk levels — and you approve it before a privileged daemon executes step by step with live output. The three-process split is the whole argument and it is drawn clearly on the captured surface: an unprivileged brain that talks to the LLM and proposes, a user-level shell that shows the plan and collects approval, and a root daemon that executes and audits. Because actions are typed (AddLayeredPackage neovim, not an interpolated rpm-ostree string), the approval surface is reviewable in a way a shell command never is, and the blast radius of a prompt injection is bounded by the action vocabulary rather than by the model's restraint. The supporting detail is consistent with that seriousness: three risk levels distinguishing read-only, reversible and irreversible-or-reboot-required operations, automatic rollback when a high-risk action fails, and an immutable audit trail that is Ed25519-signed and hash-chained. The documentation is genuinely substantial — twenty-six sections including architecture and trust boundaries, an action reference, audit storage and recovery, four architecture decision records, a 'SysKnife vs. alternatives' security comparison and, notably, a page of accepted audit advisories, which is a level of self-disclosure most projects avoid. What it cannot show from a public surface is whether any of it works: the trust boundary, the rollback and the signed audit chain are all documented rather than exercised, there is no third-party audit, and no adoption or maintenance signal is visible. The design is the strongest we have seen in this category this cycle; the implementation remains unverified.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-18",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because the architecture removes the primary risk structurally — the model can only propose typed actions, never execute — and the documentation is unusually complete, including ADRs and published audit advisories. It is held below the top band because every safety property is asserted rather than independently verified, and no adoption, audit or continuity evidence is visible.",
+  "what_it_does_well": [
+    "Structural safety: the LLM proposes typed actions and physically cannot execute a shell command",
+    "Typed actions make the approval surface reviewable, unlike an interpolated shell string",
+    "Clean privilege separation across three processes — unprivileged brain, user-level approval shell, root daemon",
+    "Formal risk levels distinguishing read-only, reversible and irreversible operations before you approve",
+    "Ed25519-signed, hash-chained audit trail gives after-the-fact accountability, not just before-the-fact approval",
+    "Automatic rollback on high-risk action failure rather than leaving a half-applied state",
+    "Publishes accepted audit advisories and architecture decision records — self-disclosure most projects avoid",
+    "Documentation is task-organised and thorough across twenty-six sections"
+  ],
+  "what_it_fails_at": [
+    "No third-party security audit of the trust boundary that constitutes the entire value proposition",
+    "Rollback, audit-chain integrity and daemon isolation are documented but not demonstrated on a public surface",
+    "No adoption, contributor-count or maintenance-cadence signal visible",
+    "Distro support and action coverage appear limited (Ubuntu-focused reference), constraining real-world applicability",
+    "No pricing, support or continuity story; an unsupported open-source project holding root privileges",
+    "Approval quality depends on the operator actually reading typed plans — a real human-factors failure mode the docs do not address"
+  ],
+  "best_for": [
+    "Operators who want LLM assistance with Linux administration but will not give a model shell access",
+    "Teams that need an auditable record of what was changed on a system and who approved it",
+    "Engineers who value an explicit, reviewable trust boundary over convenience"
+  ],
+  "not_recommended_for": [
+    "Fleet-scale or unattended automation — the approval gate is the design and does not scale to hands-off operation",
+    "Environments needing an audited, certified privileged-access path",
+    "Distros or action types outside the documented coverage",
+    "Anyone wanting an agent to just fix the machine without review"
+  ],
+  "red_flags": [
+    "The trust boundary, rollback behaviour and audit-chain integrity are the product, and all are self-asserted — no independent audit is referenced. A daemon running as root on the strength of undemonstrated isolation deserves your own review before deployment.",
+    "Human approval of typed plans is load-bearing; approval fatigue turns the gate into a rubber stamp, and the documentation does not address that failure mode."
+  ],
+  "compared_to": [
+    {
+      "slug": "phinq",
+      "verdict_diff": "Both insert human approval before an agent acts. phinq is a general, install-in-minutes approval layer across agent actions; SysKnife is narrower but far deeper for Linux administration, adding typed actions, risk levels, rollback and a signed audit chain rather than a yes/no prompt.",
+      "preferred_for_axis": "depth of system-administration control"
+    },
+    {
+      "slug": "onecli-onecli",
+      "verdict_diff": "OneCLI enforces policy at the network layer outside the agent's reach; SysKnife enforces it by denying the agent an execution primitive at all. SysKnife's boundary is stronger within its domain, OneCLI's is broader across arbitrary agent traffic.",
+      "preferred_for_axis": "structural denial over policy enforcement"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "The LLM proposes typed actions and cannot execute shell commands directly",
+      "source": "https://lacs-project.github.io/sysknife/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Three-process privilege separation: unprivileged brain, approval shell, root daemon",
+      "source": "https://lacs-project.github.io/sysknife/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Ed25519-signed, hash-chained immutable audit trail",
+      "source": "https://lacs-project.github.io/sysknife/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Automatic rollback when a high-risk action fails",
+      "source": "https://lacs-project.github.io/sysknife/",
+      "tested_at": "2026-08-18",
+      "verified": true
+    },
+    {
+      "claim": "Trust boundary and rollback independently audited or demonstrated",
+      "source": "https://lacs-project.github.io/sysknife/",
+      "tested_at": "2026-08-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Documents an MCP server and explicit 'use with Claude Code / Cursor' support, plus a CLI, a registry and directory listings, and a documented action reference. Requires a VM and privileged daemon setup, so it is not behaviourally testable from a public surface.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "SysKnife performs system-administration actions and does not generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
+    "checked_at": "2026-08-18"
+  },
+  "summary": "The rare agent tool whose architecture makes the dangerous thing structurally impossible rather than merely discouraged — the LLM cannot run a shell command, only propose typed actions a separate daemon executes after you approve.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
