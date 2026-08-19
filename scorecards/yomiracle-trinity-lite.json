@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "slug": "yomiracle-trinity-lite",
+  "name": "Trinity Lite",
+  "agent_url": "https://yomiracle.github.io/trinity-lite/",
+  "category": "Workflow & Automation",
+  "run_id": "run-rpub-v2-yomiracle-trinity-lite-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An evidence-first AgentOps control plane for cross-vendor CLI agents — thoughtfully designed around the right idea (route → review → verify → accept), with adoption the main unknown.",
+    "body": "Trinity Lite targets a real and under-served gap: teams now run several CLI AI agents (Codex, Claude Code, Hermes, custom ones) and have no shared way to route work between them, review it, and — crucially — accept it only against durable evidence. Trinity Lite is a local control plane that imposes exactly that discipline: route → work → review → verify → accept, over the tools developers already use. The design instincts on display are strong — a documented Agent Capability Routing ADR, an explicit security section, worktree previews, and a mock-agent default demo so you can exercise the whole flow before wiring in real commands. It's pip-installable with a doctor command and an orchestrate entrypoint, and it ships an MCP server. The 'acceptable only with durable evidence' framing is the differentiator most orchestration wrappers miss, and it maps directly to Hlido's own thesis that agent output must be verifiable. The honest caveats are maturity and adoption: this is an early, single-origin project, the 'route/review/verify' loop is only as good as its evidence and gating in practice, and none of that reliability can be judged from docs alone. For a team already juggling multiple CLI agents who want governance without buying a platform, it's a compelling pilot.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because it addresses a genuine cross-vendor-agent governance gap with unusually mature design artifacts (a routing ADR, a security section, evidence-gated acceptance) and a try-before-you-wire mock demo. Not higher because it's early and lightly adopted, and the core 'verify → accept' promise is exactly the part that can't be validated from the public surface. Not FADING because it's actively documented and architecturally coherent.",
+  "what_it_does_well": [
+    "Names and structures the real problem: a shared route → work → review → verify → accept loop across vendors",
+    "Evidence-gated acceptance ('acceptable only with durable evidence') — the discipline most orchestration wrappers skip",
+    "Vendor-neutral: wraps Codex, Claude Code, Hermes or any CLI rather than locking you to one",
+    "Mock-agent default demo lets you exercise the full flow before wiring real commands — low-risk trial",
+    "Serious design artifacts: an Agent Capability Routing ADR, an explicit Security section, worktree previews, and an MCP server"
+  ],
+  "what_it_fails_at": [
+    "Early-stage and lightly adopted — the review/verify loop's reliability is unproven at real workloads",
+    "'Trinity Lite' implies a fuller product behind it; the boundary of the Lite version's guarantees isn't obvious from the surface",
+    "Local control plane means the operator owns security/ops — powerful but not turnkey",
+    "The value depends entirely on how good the evidence and gating actually are in practice, which docs can't demonstrate"
+  ],
+  "best_for": [
+    "Teams running multiple CLI AI agents who want routing, review and evidence-based acceptance without a heavy platform",
+    "Engineers who want agent output gated on durable evidence rather than accepted on trust",
+    "Agent builders who value a vendor-neutral orchestration layer with an MCP server",
+    "Anyone wanting to trial an AgentOps flow safely via the mock-agent demo first"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a hosted, vendor-supported AgentOps platform with an SLA",
+    "Single-agent shops with no cross-vendor routing need",
+    "Production-critical gating where an early OSS control plane's failure modes are unacceptable without deep in-house ownership"
+  ],
+  "red_flags": [
+    "Early-stage adoption: the reliability of the verify/accept gate — its whole reason to exist — cannot be judged from documentation and must be validated on your own workloads."
+  ],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Both sit in the agent-tooling layer, but Serena is a coding-agent toolkit/LSP surface while Trinity Lite is a governance/orchestration control plane across agents. Complementary rather than competing: Serena makes one agent better at code, Trinity Lite governs many agents' output.",
+      "preferred_for_axis": "orchestration-governance-vs-single-agent-capability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Local AgentOps control plane for cross-vendor CLI AI agents",
+      "source": "https://yomiracle.github.io/trinity-lite/ (intro paragraph)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Imposes a route → work → review → verify → accept workflow",
+      "source": "https://yomiracle.github.io/trinity-lite/ (workflow diagram)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "pip-installable with doctor and orchestrate commands",
+      "source": "https://yomiracle.github.io/trinity-lite/ (Start Here code block)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Default demo uses mock agents to try the full flow first",
+      "source": "https://yomiracle.github.io/trinity-lite/ ('The default demo uses mock agents')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Ships an MCP server and a documented capability-routing ADR",
+      "source": "https://yomiracle.github.io/trinity-lite/ (Architecture nav: MCP Server, Agent Capability Routing ADR)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built for agents: a vendor-neutral control plane that routes/reviews/verifies CLI agent work, installable via pip with a CLI (trinity-lite orchestrate ...) and an MCP server. The mock-agent demo makes behaviour directly testable by an evaluating agent. Strong agent-native fit.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "An evidence-first AgentOps control plane for cross-vendor CLI agents — thoughtfu",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "An evidence-first AgentOps control plane for cross-vendor CLI agents — thoughtfully designed around the right idea (route → review → verify → accept), with adoption the main unknown.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/yomiracle-trinity-lite.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-f7332722ed445084-yomiracle-github-io",
+    "base": "https://images.hlido.eu/reviews/yomiracle-trinity-lite/run-f7332722ed445084-yomiracle-github-io",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_start-here.png",
+      "page_core-docs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/yomiracle-trinity-lite/run-f7332722ed445084-yomiracle-github-io/home.png",
+      "https://images.hlido.eu/reviews/yomiracle-trinity-lite/run-f7332722ed445084-yomiracle-github-io/page_.png",
+      "https://images.hlido.eu/reviews/yomiracle-trinity-lite/run-f7332722ed445084-yomiracle-github-io/page_start-here.png",
+      "https://images.hlido.eu/reviews/yomiracle-trinity-lite/run-f7332722ed445084-yomiracle-github-io/page_core-docs.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
