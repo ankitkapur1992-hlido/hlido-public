@@ -1,115 +1,126 @@
 {
   "schema_version": "2.0",
   "slug": "oraios-serena",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "engine": "public-surface",
-  "evidence_tier": "screenshot",
-  "source": "r4-editorial-enrich",
-  "run_id": "run-oraios-serena-v2-2026-08-18",
-  "run_at": "2026-08-18T21:30:00Z",
-  "staleness_after": "2026-11-16",
-  "next_review_due_at": "2026-11-16",
-  "signature_pending": true,
   "name": "Serena",
   "agent_url": "https://oraios.github.io/serena",
+  "repo_url": "https://github.com/oraios/serena",
   "category": "Coding",
-  "score": 75,
-  "laddoo_score": 75,
+  "run_id": "run-69fc58ba7b3ed1fd-oraios-github-io",
+  "run_at": "2026-08-18T12:31:17.369Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
   "tier": "STEADY",
-  "confidence": "low",
+  "laddoo_score": 84,
+  "confidence": "low-medium",
   "hlido_opinion": {
-    "headline": "Gives a coding agent the thing plain text search cannot — symbol-level, relationship-aware code navigation over MCP — and documents it like a product rather than a research demo.",
-    "body": "Serena's premise is that coding agents fail on large codebases for a structural reason: they operate on line numbers and text patterns when the code has symbols, references and relationships. It positions itself as 'the IDE for your coding agent', providing semantic code retrieval, editing, refactoring and debugging tools that work at the symbol level and exploit relational structure, exposed to any client or model through MCP. That framing is correct about the problem and the captured surface backs it with the right shape of detail: agent-first tool abstractions deliberately pitched above line-number and grep primitives, an explicit claim that the benefit compounds in larger and more complex codebases, and a documentation set organised into About, Language Support, Features, Serena in Action, Tools, Usage, Special Guides and — notably — Evaluation. A project that ships an evaluation section is making a falsifiable claim rather than a marketing one, and that is worth credit even before the numbers are read. Language Support and Tools sections being first-class suggests the coverage question (which languages actually get semantic treatment, and how well) is being answered rather than avoided. The limits are the usual ones for this review tier and they are real: none of the semantic-retrieval or refactoring claims could be exercised from a public surface, the captured page carries no pricing, licence, adoption or maintenance signal, and the video introduction and evaluation results were not examined. There is also no security or data-handling statement visible for a tool that ingests entire private codebases — a question any team should ask before pointing it at proprietary source. What we can say is that the problem selection is sharp, the abstraction level is the right one, and the documentation behaves like software people are expected to actually use.",
+    "headline": "An agent-first, IDE-grade semantic toolkit that plugs into any MCP client — one of the cleaner examples of tooling designed for the model, not the human.",
+    "body": "Serena provides semantic code retrieval, editing, refactoring and debugging tools that operate at the symbol level rather than on line numbers or raw text, and exposes them to any LLM client over MCP — Claude Code, Codex, Gemini-CLI, Cursor, VS Code, JetBrains and the desktop clients are all listed as supported. The pitch is coherent and, unusually, self-aware: the project states outright that its \"end users\" are the AI agents that actually call the tools, and it publishes an evaluation where agents run ~20 routine coding tasks with and without Serena and report back. Those testimonials (Opus in Claude Code, GPT in Codex CLI, Copilot CLI on a monorepo) are vendor-run and self-selected, so Hlido treats them as illustrative rather than independent proof. What is verifiable from the surface is the design posture — high-level, symbol-aware abstractions that collapse multi-step text surgery into atomic operations, and honest framing that an LLM still does the actual orchestration. Hlido assessed the documentation site only, not a running session, so the efficiency and reliability claims are unconfirmed hands-on. But the architecture is exactly what the agent-to-agent thesis rewards: structured, machine-first, and standards-based via MCP.",
     "voice": "Hlido Editor",
-    "as_of": "2026-08-18",
+    "as_of": "2026-08-19",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY (75) because it targets a real structural weakness in coding agents with the correct abstraction — symbol and relationship level rather than text — exposes it cleanly through MCP, and documents it thoroughly including an evaluation section. It is held below the top band because no capability could be exercised from a public surface and there is no adoption, licence or data-handling evidence on the captured page.",
+  "tier_rationale": "STEADY (84) for a mature, MCP-native coding toolkit with a genuinely agent-first design, broad documented client support, and an unusually honest evaluation posture, held at low-medium confidence because the review is surface-only (docs site, not a running session) and the headline efficiency/reliability gains rest on vendor-run agent testimonials Hlido did not reproduce. Not VITAL because none of the performance claims were independently verified.",
   "what_it_does_well": [
-    "Identifies the right failure mode — agents operating on line numbers and text when code has structure",
-    "Works at symbol and relationship level, which is the abstraction the problem actually requires",
-    "Exposes everything through MCP so any client or model can use it, rather than binding to one vendor",
-    "Ships an Evaluation section, making capability claims falsifiable rather than promotional",
-    "Treats Language Support as a first-class documentation concern instead of an implicit assumption",
-    "Documentation is organised for real use — tutorials, tools reference, usage and special guides"
+    "Genuinely agent-first tool design — symbol-level abstractions (renames, references, refactors) built for the model to call, not line-number text surgery",
+    "Standards-based integration via MCP; documented support across terminal clients (Claude Code, Codex, Gemini-CLI), IDEs (Cursor, VS Code, JetBrains) and desktop/web clients",
+    "Unusually honest framing — it names AI agents as the real end users and publishes an evaluation methodology instead of bare marketing",
+    "Clear explanation that an LLM is still required to orchestrate; no overreach about autonomous capability"
   ],
   "what_it_fails_at": [
-    "No semantic-retrieval, editing or refactoring claim could be exercised from a public surface",
-    "No licence, pricing, adoption or maintenance-cadence signal on the captured page",
-    "No security or data-handling statement for a tool that ingests entire private codebases",
-    "Depth of language support per language is claimed as covered but not quantified on the captured surface",
-    "The performance claim — faster, more efficient, more reliable in complex codebases — is asserted without figures on the page reviewed"
+    "The headline efficiency and reliability gains rest on vendor-run, self-selected agent testimonials — not independent benchmarks",
+    "Surface-only review — Hlido read the documentation site, not a live session, so tool behaviour was not hands-on verified",
+    "No hosted option; it is a self-run server you wire into your own client",
+    "Value is bounded by the host LLM and MCP client — Serena adds tools but does no work on its own"
   ],
   "best_for": [
-    "Teams running coding agents against large or legacy codebases where grep-based context breaks down",
-    "Engineers who want their agent to perform symbol-aware refactors rather than line-range edits",
-    "MCP users who want to add semantic code understanding without switching agent or model"
+    "Developers running an MCP-capable coding agent (Claude Code, Codex, Cursor) who want IDE-grade semantic navigation and refactoring",
+    "Teams working in large or complex codebases where cross-file refactors and reference lookups are error-prone for text-based agents",
+    "Anyone wanting a client-agnostic, open toolkit rather than a single-vendor coding assistant"
   ],
   "not_recommended_for": [
-    "Small codebases where plain file reads already give an agent sufficient context",
-    "Teams that cannot let a tool index proprietary source without a published data-handling policy",
-    "Buyers requiring commercial support, SLAs or licence clarity before adoption"
+    "Users wanting a turnkey hosted coding assistant with no setup",
+    "Non-technical users — this is developer tooling wired into a coding agent",
+    "Anyone needing independently benchmarked performance guarantees before adopting"
   ],
-  "red_flags": [
-    "No data-handling or security statement is visible for a tool designed to index entire codebases — establish where your source is processed and stored before pointing it at proprietary repositories.",
-    "Efficiency and reliability gains are asserted on the captured page without figures; read the Evaluation section before treating them as measured."
-  ],
-  "compared_to": [
-    {
-      "slug": "shashankss1205-codegraphcontext",
-      "verdict_diff": "Both give agents structural rather than textual code understanding over MCP. CodeGraphContext materialises an explicit, queryable and visualisable graph and shows far stronger adoption; Serena embeds symbol-level retrieval and editing directly into the agent's tool surface. CodeGraphContext for exploration and analysis, Serena for in-loop editing.",
-      "preferred_for_axis": "symbol-level editing inside the agent loop"
-    },
-    {
-      "slug": "gabrielmaialva33-winx-code-agent",
-      "verdict_diff": "Winx focuses on safely giving an agent shell and file-editing primitives with enforced guardrails; Serena focuses on giving it semantic understanding of what it is editing. They address adjacent halves of the same job and are complementary.",
-      "preferred_for_axis": "semantic understanding rather than execution safety"
-    }
-  ],
+  "red_flags": [],
+  "compared_to": [],
   "evidence_urls": [
     {
-      "claim": "Provides symbol-level semantic code retrieval, editing, refactoring and debugging tools",
+      "claim": "Genuinely agent-first tool design — symbol-level abstractions (renames, references, refactors) built for the model to call, not line-number text surgery",
       "source": "https://oraios.github.io/serena",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Integrates with any client or model via the Model Context Protocol",
+      "claim": "Standards-based integration via MCP; documented support across terminal clients (Claude Code, Codex, Gemini-CLI), IDEs (Cursor, VS Code, JetBrains) and desktop/web clients",
       "source": "https://oraios.github.io/serena",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Publishes documented language support and an evaluation section",
+      "claim": "Unusually honest framing — it names AI agents as the real end users and publishes an evaluation methodology instead of bare marketing",
       "source": "https://oraios.github.io/serena",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Agents operate faster and more reliably in large codebases (quantified)",
+      "claim": "Clear explanation that an LLM is still required to orchestrate; no overreach about autonomous capability",
       "source": "https://oraios.github.io/serena",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://oraios.github.io/serena (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
       "verified": false
     }
   ],
   "agent_relevance": {
-    "has_api": true,
-    "has_cli": false,
+    "has_api": false,
+    "has_cli": true,
     "has_mcp": true,
     "has_webhook": false,
     "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "An MCP server integrating with any MCP-capable client or model, exposing symbol-level retrieval, editing, refactoring and debugging as agent tools, with a documented Tools reference and setup guides. Requires local installation against a codebase, so it is not behaviourally testable from a public surface.",
+    "behavioral_testable": true,
+    "agent_integration_path": "Serena runs as an MCP server that any MCP-capable client launches (via a launch command) or connects to over HTTP. Coding agents then call its symbol-level retrieval/edit/refactor tools directly in natural-language workflows.",
     "agent_friendly_score": 9
   },
+  "summary": "An agent-first, IDE-grade semantic toolkit that plugs into any MCP client — one of the cleaner examples of tooling designed for the model, not the human.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/oraios-serena.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
     "not_applicable": true,
-    "reason": "Serena provides code navigation and editing tooling and does not generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
-    "checked_at": "2026-08-18"
+    "note": "Semantic code-tooling for coding agents, not a generator of synthetic images/audio/video/deceptive text — Article-50(4) synthetic-content marking obligations do not apply."
   },
-  "summary": "Gives a coding agent the thing plain text search cannot — symbol-level, relationship-aware code navigation over MCP — and documents it like a product rather than a research demo.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+  "evidence_images": {
+    "run_id": "run-69fc58ba7b3ed1fd-oraios-github-io",
+    "base": "https://images.hlido.eu/reviews/oraios-serena/run-69fc58ba7b3ed1fd-oraios-github-io",
+    "files": [
+      "home.png",
+      "page_01-about_000_intro_html_main-content.png",
+      "page_index_html.png",
+      "page_01-about_000_intro_html_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/oraios-serena/run-69fc58ba7b3ed1fd-oraios-github-io/home.png",
+      "https://images.hlido.eu/reviews/oraios-serena/run-69fc58ba7b3ed1fd-oraios-github-io/page_01-about_000_intro_html_main-content.png",
+      "https://images.hlido.eu/reviews/oraios-serena/run-69fc58ba7b3ed1fd-oraios-github-io/page_index_html.png",
+      "https://images.hlido.eu/reviews/oraios-serena/run-69fc58ba7b3ed1fd-oraios-github-io/page_01-about_000_intro_html_.png"
+    ]
+  }
 }
