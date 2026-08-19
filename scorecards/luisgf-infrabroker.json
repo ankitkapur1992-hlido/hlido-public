@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0",
+  "slug": "luisgf-infrabroker",
+  "name": "infrabroker",
+  "agent_url": "https://luisgf.github.io/infrabroker/",
+  "repo_url": "https://github.com/luisgf/infrabroker",
+  "category": "Infrastructure",
+  "run_id": "run-2c1d994261f6bdbb-luisgf-github-io",
+  "run_at": "2026-08-19T08:31:51.990Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An infrastructure access broker built on a genuinely strong idea — the model never holds a credential; it requests an action and the broker mints a single-use key for it.",
+    "body": "infrabroker (formerly ssh-broker) is an SSH and Kubernetes access broker for AI agents whose central design decision is the right one: the model never receives a credential. It requests an action, and the broker executes it with a credential minted for that single operation — an ephemeral, scope-limited SSH certificate from its own CA, or a short-lived bound ServiceAccount token — and returns only the output. That inverts the usual, dangerous pattern of handing an agent long-lived secrets. It offers three frontends from one binary: MCP over stdio for local personal use with process isolation, MCP over HTTP with OAuth2/OIDC where each client authenticates and the user identity and groups propagate to the signer for multi-user setups, and HTTP+mTLS for network agents with a client certificate. The engineering discipline shows in the documentation: the published reference (HTTP endpoints, MCP tool schemas, config fields, CLI) is generated from the actual code by a docgen tool and diff-checked in CI, so it cannot drift from the implementation — and the site foregrounds an explicit threat model and architecture. The honest limits are maturity and reach: at v3.1.2 with a low public star count and an apparently single maintainer, this is an early, specialist tool, and Hlido reviewed the documentation site rather than a running broker, so the credential-minting and isolation behaviour are described and code-referenced rather than exercised. But the security model is exactly what agent infrastructure access should adopt.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a security-first infrastructure access broker with a genuinely strong core design (agents never hold credentials; single-use SSH certs / bound ServiceAccount tokens), three authenticated frontends, and code-generated CI-checked docs with a published threat model — held down to low-medium confidence by early maturity (v3.1.2, low adoption, apparently solo) and a surface-only review that did not exercise the broker. Not VITAL absent hands-on verification and broader track record.",
+  "what_it_does_well": [
+    "Excellent core primitive: the model never receives a credential — it requests an action and the broker mints a single-use, scope-limited SSH cert or short-lived ServiceAccount token",
+    "Three clear frontends from one binary: local MCP/stdio, multi-user MCP/HTTP with OAuth2/OIDC and identity propagation, and HTTP+mTLS for certificate-bearing network agents",
+    "Documentation is generated from code (routes, tool schemas, config structs) and diff-checked in CI, so the reference cannot drift from the implementation",
+    "Foregrounds an explicit threat model and architecture rather than burying security",
+    "Directly targets the right risk — replacing long-lived agent secrets with per-operation, auditable credentials"
+  ],
+  "what_it_fails_at": [
+    "Early and low-adoption — v3.1.2 with a small public star count and an apparently single maintainer",
+    "Surface-only review — Hlido read the docs, not a running broker, so credential minting, scoping and isolation are described, not tested here",
+    "Specialist scope (SSH + Kubernetes) and real operational setup (a CA/PKI, OIDC, mTLS) — not a turnkey product",
+    "No independent security audit is cited on the captured surface"
+  ],
+  "best_for": [
+    "Teams giving AI agents SSH or Kubernetes access who want per-operation, auditable credentials instead of long-lived secrets",
+    "Security-conscious operators comfortable running a broker with its own CA/PKI and OIDC/mTLS",
+    "Multi-user setups needing user identity to propagate to the credential signer"
+  ],
+  "not_recommended_for": [
+    "Users wanting a mature, widely-adopted product with vendor support",
+    "Teams unwilling to operate PKI/OIDC/mTLS infrastructure",
+    "Anyone needing a hands-off, turnkey access solution"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Excellent core primitive: the model never receives a credential — it requests an action and the broker mints a single-use, scope-limited SSH cert or short-lived ServiceAccount token",
+      "source": "https://luisgf.github.io/infrabroker/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Three clear frontends from one binary: local MCP/stdio, multi-user MCP/HTTP with OAuth2/OIDC and identity propagation, and HTTP+mTLS for certificate-bearing network agents",
+      "source": "https://luisgf.github.io/infrabroker/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Documentation is generated from code (routes, tool schemas, config structs) and diff-checked in CI, so the reference cannot drift from the implementation",
+      "source": "https://luisgf.github.io/infrabroker/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Foregrounds an explicit threat model and architecture rather than burying security",
+      "source": "https://luisgf.github.io/infrabroker/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://luisgf.github.io/infrabroker/ (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Run `infrabroker serve-mcp` (local stdio) or `serve-mcp-http` (OAuth2/OIDC, multi-user); agents call MCP tools that request SSH/Kubernetes actions, and the broker executes them with a single-use minted credential. A `serve-http` mTLS endpoint (POST /v1/ssh_run) serves certificate-bearing network agents.",
+    "agent_friendly_score": 9
+  },
+  "summary": "An infrastructure access broker built on a genuinely strong idea — the model never holds a credential; it requests an action and the broker mints a single-use key for it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/luisgf-infrabroker.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "An infrastructure access broker, not a generator of synthetic media or deceptive content — Article-50(4) marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-2c1d994261f6bdbb-luisgf-github-io",
+    "base": "https://images.hlido.eu/reviews/luisgf-infrabroker/run-2c1d994261f6bdbb-luisgf-github-io",
+    "files": [
+      "home.png",
+      "page_infrabroker.png",
+      "page_start-here.png",
+      "page_generated-reference-from-code.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/luisgf-infrabroker/run-2c1d994261f6bdbb-luisgf-github-io/home.png",
+      "https://images.hlido.eu/reviews/luisgf-infrabroker/run-2c1d994261f6bdbb-luisgf-github-io/page_infrabroker.png",
+      "https://images.hlido.eu/reviews/luisgf-infrabroker/run-2c1d994261f6bdbb-luisgf-github-io/page_start-here.png",
+      "https://images.hlido.eu/reviews/luisgf-infrabroker/run-2c1d994261f6bdbb-luisgf-github-io/page_generated-reference-from-code.png"
+    ]
+  }
+}
