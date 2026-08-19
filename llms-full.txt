@@ -5,9 +5,219 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 898 reviews
+> Corpus size: 912 reviews
 
 ## Reviewed agents
+
+### mcp-v8
+- Slug: `r33drichards-mcp-js`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/r33drichards-mcp-js/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"r33drichards-mcp-js"}}}`
+
+**Summary:** A code-execution MCP server that hands an agent one run_js tool inside a locked-down V8 isolate — an ambitious 'agents write code, not tool-calls' bet with a serious security story.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### SysKnife
+- Slug: `lacs-project-sysknife`
+- Laddoo Score: 81/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/lacs-project-sysknife/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"lacs-project-sysknife"}}}`
+
+**Summary:** A Linux sysadmin co-pilot built around the right safety primitive: the AI proposes typed actions, never shell strings, and a privileged daemon executes only what you approve.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Serena
+- Slug: `oraios-serena`
+- Laddoo Score: 84/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/oraios-serena/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"oraios-serena"}}}`
+
+**Summary:** An agent-first, IDE-grade semantic toolkit that plugs into any MCP client — one of the cleaner examples of tooling designed for the model, not the human.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Rover
+- Slug: `rtrvr`
+- Laddoo Score: 66/100
+- Tier: FADING
+- Category: Customer Experience
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/rtrvr/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"rtrvr"}}}`
+
+**Summary:** A polished pitch for an AI 'customer engineer' that joins live customer calls and acts across your stack — but the surface is all promise, demo-gated, and the extraordinary claims are exactly the ones we cannot verify.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### CodeGraphContext
+- Slug: `shashankss1205-codegraphcontext`
+- Laddoo Score: 76/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/shashankss1205-codegraphcontext/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"shashankss1205-codegraphcontext"}}}`
+
+**Summary:** A CLI-plus-MCP tool that turns a local codebase into a navigable knowledge graph for AI assistants — real adoption behind it, with marketing that oversells a bit past the evidence.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### SquadCue
+- Slug: `squadcue`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/squadcue/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"squadcue"}}}`
+
+**Summary:** A local cockpit that turns your Claude Code sessions into named 'employees' you supervise through an approval inbox — early and single-user, but unusually honest about exactly what it is and isn't.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Twill
+- Slug: `twill`
+- Laddoo Score: 74/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/twill/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"twill"}}}`
+
+**Summary:** A 'software factory' that turns GitHub, Slack and Linear tasks into tested pull requests inside a warm, full-stack dev environment — a strong, concrete pitch that the public surface can't yet prove.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Cicada
+- Slug: `wende-cicada`
+- Laddoo Score: 76/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/wende-cicada/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"wende-cicada"}}}`
+
+**Summary:** AST-powered code intelligence for Elixir (and beta Python) delivered over MCP, with a refreshingly transparent — if vendor-run — benchmark instead of vibes.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### infrabroker
+- Slug: `luisgf-infrabroker`
+- Laddoo Score: 74/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/luisgf-infrabroker/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"luisgf-infrabroker"}}}`
+
+**Summary:** An infrastructure access broker built on a genuinely strong idea — the model never holds a credential; it requests an action and the broker mints a single-use key for it.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### srunx
+- Slug: `ksterx-srunx`
+- Laddoo Score: 72/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/ksterx-srunx/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ksterx-srunx"}}}`
+
+**Summary:** A clean, genuinely agent-native toolkit for orchestrating SLURM jobs as code — well-executed and MCP-first, with adoption still the open question.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Vizard
+- Slug: `vizard`
+- Laddoo Score: 74/100
+- Tier: STEADY
+- Category: Marketing & Content
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/vizard/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"vizard"}}}`
+
+**Summary:** Mature, genuinely usable AI video-clipping tool that does the one job well — held back only by a crowded field where its differentiation is thin.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### WhoDunnitAI
+- Slug: `whodunnitai`
+- Laddoo Score: 60/100
+- Tier: FADING
+- Category: Voice
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/whodunnitai/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"whodunnitai"}}}`
+
+**Summary:** A charming, genuinely working voice-driven murder-mystery game — but it's a consumer novelty, not an agent, and its durability rests on a single creator's OpenAI bill.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Trinity Lite
+- Slug: `yomiracle-trinity-lite`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/yomiracle-trinity-lite/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"yomiracle-trinity-lite"}}}`
+
+**Summary:** An evidence-first AgentOps control plane for cross-vendor CLI agents — thoughtfully designed around the right idea (route → review → verify → accept), with adoption the main unknown.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### backscroll
+- Slug: `soren-achebe-backscroll`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-19
+- URL: https://hlido.eu/reviews/soren-achebe-backscroll/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"soren-achebe-backscroll"}}}`
+
+**Summary:** A focused, well-documented terminal-output recorder that agents can query over MCP — does one thing precisely, with pre-1.0 maturity the only real caveat.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### OneCLI
 - Slug: `onecli-onecli`
