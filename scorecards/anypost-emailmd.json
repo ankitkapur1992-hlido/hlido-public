@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "slug": "anypost-emailmd",
+  "name": "emailmd",
+  "agent_url": "https://www.emailmd.dev/",
+  "category": "Marketing & Content",
+  "run_id": "run-rpub-v2-anypost-emailmd-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A neat, genuinely agent-native way to write responsive emails as Markdown — an MCP server lets any AI assistant draft, lint and render them, which is the clever part.",
+    "body": "emailmd attacks a famously miserable problem — writing responsive HTML email that survives Outlook and every other client — with a pleasant premise: write Markdown (with a light directive syntax for headers, callouts, footers and front-matter), ship emails, 'no HTMHELL.' The captured surface is clean and developer-honest: templates, a builder, docs, an npm install path, and a live example showing a confirm-email template rendering from Markdown. The part that earns it a place in Hlido's corpus is the MCP server: any AI assistant (Claude Code, Claude.ai/Desktop, ChatGPT, Cursor, VS Code) can be given the tools to write, lint and render emails with a live preview link for every draft, one click to connect, or npx emailmd mcp locally. That's a real agent-to-agent surface, not a checkbox — it turns 'ask an AI to write a marketing email' into a linted, rendered, previewable artifact. The honest caveats are ordinary for a young dev tool: rendering fidelity across the messy world of email clients is the whole ballgame and can't be certified from the homepage, and the project's maturity/adoption and long-term maintenance aren't evidenced on the surface. For developers and AI-assisted teams who send transactional or marketing email, it's a genuinely useful, well-conceived tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) for a clean, well-conceived tool that solves a real pain (responsive email without hand-written HTML) and ships a genuine agent surface (an MCP server that writes/lints/renders with live previews). Not higher because cross-client rendering fidelity — the core promise — can't be verified from the public surface, and maturity/adoption are unproven. Not FADING because the docs, builder and MCP integration show active, thoughtful development.",
+  "what_it_does_well": [
+    "Write responsive emails in Markdown with a light directive syntax (headers, callouts, footers, front-matter) instead of hand-written HTML",
+    "MCP server lets AI assistants write, lint and render emails with a live preview link per draft — a real agent workflow",
+    "One-click connect for Claude Code / Claude.ai / ChatGPT / Cursor / VS Code, or npx emailmd mcp locally",
+    "Developer-honest surface: templates, a builder, docs, npm install, and a source-available GitHub repo",
+    "Live example (a confirm-email template) shows the Markdown-to-email rendering concretely"
+  ],
+  "what_it_fails_at": [
+    "Cross-client rendering fidelity (Outlook et al.) is the entire value and can't be verified from the homepage",
+    "Maturity/adoption and maintenance cadence aren't evidenced on the public surface",
+    "The directive syntax is a small new thing to learn versus a WYSIWYG builder for non-technical users",
+    "Deliverability, tracking and sending are out of scope — it renders, it doesn't send"
+  ],
+  "best_for": [
+    "Developers who want transactional/marketing email as version-controllable Markdown, not brittle HTML",
+    "AI-assisted teams who want an assistant to draft, lint and preview emails via MCP",
+    "Anyone who has fought Outlook rendering and wants a saner authoring layer",
+    "Teams standardising email templates in a repo with a builder and live previews"
+  ],
+  "not_recommended_for": [
+    "Non-technical marketers wanting a pure drag-and-drop builder with no syntax to learn",
+    "Teams needing an all-in-one ESP (sending, deliverability, analytics) — emailmd is the authoring/render layer only",
+    "Use cases that require certified cross-client rendering guarantees before adoption (test first)"
+  ],
+  "red_flags": [
+    "The core promise is cross-client responsive rendering, which is notoriously hard and is not demonstrated across clients on the public surface — validate against your real target clients before standardising on it."
+  ],
+  "compared_to": [
+    {
+      "slug": "mjml",
+      "verdict_diff": "MJML is the established markup framework for responsive email with wide adoption and tooling; emailmd trades MJML's XML-ish components for plainer Markdown plus, crucially, an MCP server so an AI assistant can author and render. Choose MJML for a proven ecosystem, emailmd for Markdown authoring + native agent integration.",
+      "preferred_for_axis": "markdown-plus-agent-authoring-vs-established-framework"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Write responsive emails in Markdown ('No HTMHELL')",
+      "source": "https://www.emailmd.dev/ (hero: 'Responsive Emails, Written in Markdown')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Directive syntax for headers, callouts, footers and front-matter",
+      "source": "https://www.emailmd.dev/ (confirm-email.md example)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "MCP server lets AI assistants write, lint and render emails with a live preview link",
+      "source": "https://www.emailmd.dev/ ('Or Let Your AI Write the Email' section)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "One-click connect for Claude Code/Claude.ai/ChatGPT/Cursor/VS Code, or npx emailmd mcp",
+      "source": "https://www.emailmd.dev/ (MCP connect buttons + 'run it locally with npx emailmd mcp')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "npm-installable with templates, builder and docs",
+      "source": "https://www.emailmd.dev/ (npm install emailmd; nav Templates/Builder/Docs)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP server: any MCP client (Claude Code, Claude.ai/Desktop, ChatGPT, Cursor, VS Code) gets tools to write, lint and render emails with a live preview link per draft; run locally via npx emailmd mcp. npm-installable, so behaviour is directly testable. A genuine agent-to-agent authoring surface.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A neat, genuinely agent-native way to write responsive emails as Markdown — an M",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "A neat, genuinely agent-native way to write responsive emails as Markdown — an MCP server lets any AI assistant draft, lint and render them, which is the clever part.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/anypost-emailmd.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-a9d3c8472f113180-www-emailmd-dev",
+    "base": "https://images.hlido.eu/reviews/anypost-emailmd/run-a9d3c8472f113180-www-emailmd-dev",
+    "files": [
+      "home.png",
+      "pagetemplates.png",
+      "pagebuilder.png",
+      "pagedocs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/anypost-emailmd/run-a9d3c8472f113180-www-emailmd-dev/home.png",
+      "https://images.hlido.eu/reviews/anypost-emailmd/run-a9d3c8472f113180-www-emailmd-dev/pagetemplates.png",
+      "https://images.hlido.eu/reviews/anypost-emailmd/run-a9d3c8472f113180-www-emailmd-dev/pagebuilder.png",
+      "https://images.hlido.eu/reviews/anypost-emailmd/run-a9d3c8472f113180-www-emailmd-dev/pagedocs.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
