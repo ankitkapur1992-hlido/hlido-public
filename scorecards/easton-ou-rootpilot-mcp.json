@@ -1,0 +1,147 @@
+{
+  "schema_version": "2.0",
+  "slug": "easton-ou-rootpilot-mcp",
+  "name": "RootPilot",
+  "agent_url": "https://rootpilotx.com",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-easton-ou-rootpilot-mcp-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A sharply-positioned automated root-cause tool for ops engineers — paste a log, get the why, not just the what — with a clean product surface and one caveat around its unshown MCP/agent story.",
+    "body": "RootPilot has the clearest positioning in this batch: 'monitoring tells you something broke; we tell you why.' It's aimed squarely at ops and backend engineers running their own servers — paste a log and it pinpoints the root cause instead of restating that the service is down. The captured surface sells this well, with a concrete worked example (a cache-worker OOMKilled at exit 137, traced to a missing memory limit, with the exact docker update fix) and 'real cases' showing three diagnosis reports in the same format you'd receive. It has the trappings of a real commercial product — Diagnose, Download and Pricing pages, and multi-language UI (English/Japanese/Korean/German/French/Chinese) — which signals genuine go-to-market intent rather than a weekend project. The strong value proposition is that 3 a.m. incident compression: stop grepping line by line. The honest gaps: the slug and repo name imply an MCP server ('rootpilot-mcp'), but the captured marketing homepage doesn't surface any MCP tools, API or agent-integration detail, so the agent-to-agent story is asserted by naming, not shown; and diagnosis quality — the entire product — can't be judged from example screenshots and needs real-log testing. For an ops team drowning in alerts, it's a well-framed tool worth trialing on your own incidents.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) for sharp positioning, a concrete and credible worked example, and real product maturity signals (pricing, download, multi-language UI). Not higher because the core promise — diagnosis quality — can't be verified from the marketing surface, and the implied MCP/agent integration isn't actually shown. Not FADING because the product surface is polished and commercially active.",
+  "what_it_does_well": [
+    "Crisp, differentiated positioning: root-cause ('why'), not just alerting ('what')",
+    "Concrete, credible worked example (OOMKill exit 137 → missing memory limit → exact docker fix)",
+    "'Real cases' section shows the actual diagnosis-report format a buyer will receive",
+    "Commercial maturity signals: Diagnose/Download/Pricing pages and six-language UI",
+    "Speaks its buyer's language — the 3 a.m. alert, 'stop grepping through logs line by line'"
+  ],
+  "what_it_fails_at": [
+    "Diagnosis quality — the whole product — is unverifiable from example screenshots; needs real-log testing",
+    "The slug/repo imply an MCP server, but no MCP/API/agent-integration surface is shown on the captured homepage",
+    "No public detail on how logs are handled (privacy/retention) — a concern for pasting production logs",
+    "Breadth of coverage beyond the showcased Docker/OOM/restart-loop cases is unproven from the surface"
+  ],
+  "best_for": [
+    "Ops and backend engineers running their own servers who want automated root-cause on incident logs",
+    "Small teams without a dedicated SRE who need faster 3 a.m. triage",
+    "Anyone tired of grepping logs line-by-line to find why a container died"
+  ],
+  "not_recommended_for": [
+    "Teams that can't paste production logs into a third-party tool without a vetted data-handling policy",
+    "Buyers who need a proven, broad diagnosis engine — verify coverage on your own incidents first",
+    "Agent builders expecting a documented MCP/API surface today (implied by the name, not shown on the site)"
+  ],
+  "red_flags": [
+    "Log privacy: the product ingests pasted logs but the captured surface gives no data-handling/retention detail — clarify before sending production logs.",
+    "Naming-vs-evidence gap: the slug implies an MCP server, but no MCP or API surface appears on the marketing homepage."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Automated root-cause troubleshooting from pasted logs",
+      "source": "https://rootpilotx.com/ (hero: 'paste a log and it pinpoints the root cause')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Concrete worked example: OOMKilled exit 137 traced to missing memory limit with a fix",
+      "source": "https://rootpilotx.com/ (diagnosis example block)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Real-case diagnosis reports shown in the delivered format",
+      "source": "https://rootpilotx.com/ ('Real cases' section)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Commercial product with Download, Pricing and multi-language UI",
+      "source": "https://rootpilotx.com/ (nav: Diagnose/Download/Pricing; language switcher)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The slug and repo name ('rootpilot-mcp') imply an MCP server, but the captured marketing homepage (rootpilotx.com) surfaces no MCP tools, API, CLI or SDK — the agent-integration story is asserted by naming, not demonstrated. Re-review against the actual repo/MCP surface is warranted to confirm an agent path.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A sharply-positioned automated root-cause tool for ops engineers — paste a log, ",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "A sharply-positioned automated root-cause tool for ops engineers — paste a log, get the why, not just the what — with a clean product surface and one caveat around its unshown MCP/agent story.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/easton-ou-rootpilot-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-6463c52b2e18e628-rootpilotx-com",
+    "base": "https://images.hlido.eu/reviews/easton-ou-rootpilot-mcp/run-6463c52b2e18e628-rootpilotx-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_diagnose.png",
+      "page_download.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/easton-ou-rootpilot-mcp/run-6463c52b2e18e628-rootpilotx-com/home.png",
+      "https://images.hlido.eu/reviews/easton-ou-rootpilot-mcp/run-6463c52b2e18e628-rootpilotx-com/page_.png",
+      "https://images.hlido.eu/reviews/easton-ou-rootpilot-mcp/run-6463c52b2e18e628-rootpilotx-com/page_diagnose.png",
+      "https://images.hlido.eu/reviews/easton-ou-rootpilot-mcp/run-6463c52b2e18e628-rootpilotx-com/page_download.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
