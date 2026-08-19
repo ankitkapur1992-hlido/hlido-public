@@ -1,125 +1,130 @@
 {
   "schema_version": "2.0",
   "slug": "squadcue",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "engine": "public-surface",
-  "evidence_tier": "screenshot",
-  "source": "r4-editorial-enrich",
-  "run_id": "run-squadcue-v2-2026-08-18",
-  "run_at": "2026-08-18T21:30:00Z",
-  "staleness_after": "2026-11-16",
-  "next_review_due_at": "2026-11-16",
-  "signature_pending": true,
   "name": "SquadCue",
   "agent_url": "https://squadcue.com",
+  "repo_url": null,
   "category": "Workflow & Automation",
-  "score": 70,
-  "laddoo_score": 70,
+  "run_id": "run-22cf84e4e27007f0-squadcue-com",
+  "run_at": "2026-08-18T20:30:58.183Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
   "tier": "STEADY",
-  "confidence": "low",
+  "laddoo_score": 73,
+  "confidence": "low-medium",
   "hlido_opinion": {
-    "headline": "Unusually honest about its own limits — it calls its approval inbox a supervision workflow, not a security boundary, and points at the SECURITY.md that says so — which is rarer and more valuable than most features on this page.",
-    "body": "SquadCue turns recent local Claude Code sessions into named 'employees' you can chat with, resume across restarts and supervise from your phone, with a visual canvas for orchestrating repeatable pipelines on top. The approval inbox is the substantive part: with tools allowed, a shell command or file write pauses into a queue reachable via web and Telegram, first response wins, and a timeout denies. What makes this scorecard easy to write is the vendor's own candour. The captured surface states plainly that the inbox is a supervision workflow for a trusted local setup and not a security boundary, that SECURITY.md spells out exactly what it does and does not stop, and it enumerates the deliberate bypasses by name — 'Skip approvals', the New-task 'Allow tools' box, canvas allow_tools, and the Telegram '!' prefix. Most projects in this category imply a security guarantee they cannot honour; this one pre-empts the question and names its own escape hatches. It is similarly direct elsewhere: session memory persists only as far as the session's context window, with durable cross-session memory listed as roadmap rather than shipped; discovery runs only after first-launch consent; other CLIs beyond Claude Code are a 'thin adapter layer away' rather than claimed as supported. The comparison table against n8n, Windmill, Dify and GitHub Agent HQ even concedes that n8n offers a richer canvas and tells you to use it if you want a general integration platform. The architecture is deliberately small — a FastAPI server, a one-file cockpit UI, plain JSON/JSONL and SQLite state, no Docker or build step — which is a real advantage for a local cockpit and a real limit for anything shared. Against that: it was extracted in July 2026 from one person's operation, no repository, licence, pricing or adoption signal appears on the captured page, and a Telegram-reachable approval channel over a local machine's shell deserves scrutiny the surface does not resolve.",
+    "headline": "A local cockpit that turns your Claude Code sessions into named 'employees' you supervise through an approval inbox — early and single-user, but unusually honest about exactly what it is and isn't.",
+    "body": "SquadCue (MIT, v0.1.2) is a laptop-scale control plane for AI CLI sessions. Recent Claude Code sessions on your machine become named contacts you chat with, resume across restarts, and supervise from your phone; a visual Drawflow canvas orchestrates repeatable pipelines on top. Its centrepiece is an approval inbox: with tools allowed, a PreToolUse hook routes risky actions (shell, file writes, network fetches) into a web + Telegram queue where the first response wins and a timeout means deny. What earns Hlido's respect is the honesty. The project states plainly and repeatedly that the inbox is a supervision workflow for a trusted local setup, not a security boundary, points to a SECURITY.md that spells out what it cannot stop, and documents its opt-outs, its loopback-only enforcement, and a production 'learned the hard way' caveat that background jobs spawned in a chat turn may die with it. That candour is rare and valuable. The trade-off is maturity and reach: it is explicitly single-user by design, Windows is the daily-driver platform (canvas shell nodes run via PowerShell; session relaunch is Windows-only today), Claude Code is the only first-class engine (Codex is a red-team add-on, other CLIs a roadmap adapter), and the whole thing was extracted in July 2026 from one person's tooling. The 'immortal employees' durable-memory model is roadmap, not shipped. Reviewed from the project surface only; Hlido did not run the cockpit.",
     "voice": "Hlido Editor",
-    "as_of": "2026-08-18",
+    "as_of": "2026-08-19",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY (70) because the product is coherent, the local-first architecture is well matched to its purpose, and the disclosure quality is exceptional — the vendor names its own bypasses and refuses to claim a security boundary it does not provide. It is held below the top band by the absence of licence, repository, pricing and adoption evidence, and by a very young single-operator provenance.",
+  "tier_rationale": "STEADY (73) for an MIT-licensed, genuinely useful local cockpit (session-as-employee, canvas pipelines, a real human-in-the-loop approval inbox) whose standout is exceptional honesty about its own limits and non-security-boundary status — held at low-medium confidence by early-stage maturity (v0.1.2, single-user by design, Windows-primary, Claude-Code-first) and a surface-only review. The candour raises trust; the maturity caps the score.",
   "what_it_does_well": [
-    "States explicitly that the approval inbox is a supervision workflow and not a security boundary, and points to SECURITY.md",
-    "Enumerates its own approval bypasses by name rather than leaving them for a user to discover",
-    "Describes memory honestly — persists only as far as the session context, with durable memory marked roadmap",
-    "Concedes competitors' strengths in its own comparison table and tells readers when to use n8n instead",
-    "Genuinely low-friction architecture: FastAPI server plus one-file UI, no Docker, database server or build step",
-    "State kept as plain JSON/JSONL and SQLite files, described as greppable — inspectable and portable",
-    "Approval routing across web and Telegram with first-response-wins and timeout-equals-deny is a sensible default",
-    "Session rescue after reboot addresses a real, unglamorous failure in day-to-day agent operation"
+    "Turns real Claude Code sessions into named, resumable 'employees' you chat with and supervise — a concrete, useful local abstraction",
+    "A real human-in-the-loop approval inbox (web + Telegram, first-response-wins, timeout = deny) with recorded, auditable decisions",
+    "Exceptionally honest self-documentation: it states the inbox is not a security boundary, links a SECURITY.md of what it cannot stop, and flags hard-won production caveats",
+    "Sensible local security posture — loopback-only enforced at startup, CSRF/DNS-rebind guards, path containment, SSRF guard on fetch, no shell template interpolation",
+    "Zero-infra install (pip install squadcue; plain JSON/JSONL + SQLite state you can grep); MIT-licensed"
   ],
   "what_it_fails_at": [
-    "No repository, licence, pricing or adoption signal on the captured surface",
-    "Extracted in July 2026 from a single-person operation — no continuity, contributor or maintenance evidence",
-    "Approval gate is explicitly not a security control, so it cannot be relied on where one is needed",
-    "Claude Code is the only first-class engine; other CLIs are described as an adapter layer away, not supported today",
-    "A Telegram-reachable approval channel controlling a local machine's shell introduces a trust surface the page does not resolve",
-    "Local-only control plane rules out team or multi-operator use by design"
+    "Early stage — v0.1.2, extracted from one person's tooling; durable cross-session 'immortal employee' memory is roadmap, not shipped",
+    "Single-user by design (loopback only; no auth/RBAC until a second user exists)",
+    "Windows is the daily-driver platform — canvas shell nodes run via PowerShell and session relaunch is Windows-only today; Linux/macOS need adaptation",
+    "Claude Code is the only first-class engine; Codex is a red-team add-on and other CLIs are a roadmap adapter layer",
+    "Surface-only review — Hlido did not run the cockpit, so behaviour is unverified"
   ],
   "best_for": [
-    "Solo operators running several Claude Code sessions who want a cockpit with names, queues and approvals",
-    "People who want to supervise long-running local agents from a phone rather than a terminal",
-    "Users who value inspectable local state and a zero-infrastructure install over hosted convenience"
+    "Solo operators running Claude Code (and optionally Codex) all day who want a local cockpit with named sessions and phone-based supervision",
+    "Users who want a real approval gate over risky agent actions and value plain, greppable local state",
+    "Windows-primary developers comfortable with an early, honestly-scoped open-source tool"
   ],
   "not_recommended_for": [
-    "Teams needing shared, multi-user orchestration — the control plane is deliberately local",
-    "Anyone who needs the approval gate to function as an actual security boundary",
-    "Organisations requiring licence clarity, support or continuity guarantees",
-    "Users of AI CLIs other than Claude Code today"
+    "Teams needing multi-user access, auth or RBAC",
+    "Anyone expecting the approval inbox to be a security sandbox — it is explicitly not",
+    "Linux/macOS users wanting full parity today, or users of CLIs other than Claude Code/Codex"
   ],
   "red_flags": [
-    "The approval inbox is explicitly not a security boundary and several documented bypasses exist by design — do not deploy it where a real control is required. Credit to the vendor for saying so; the caution stands regardless.",
-    "No licence or repository is visible on the captured surface for software that reads local sessions and gates shell execution — establish both before installing."
+    "By the project's own statement, the approval inbox is a supervision workflow, not a security boundary — approving a shell command approves the whole program it runs; do not treat it as a sandbox"
   ],
-  "compared_to": [
-    {
-      "slug": "phinq",
-      "verdict_diff": "Both put a human in front of risky agent actions. phinq is a focused, MIT-licensed approval layer that presents itself as a control; SquadCue wraps approvals inside a broader session-management cockpit and explicitly declines to call them a security boundary. phinq for the gate, SquadCue for the cockpit.",
-      "preferred_for_axis": "session management around the approval"
-    },
-    {
-      "slug": "jrswab-axe",
-      "verdict_diff": "Both take a small-tools, local-first stance rather than an everything-platform one. Axe composes single-purpose agents in the Unix tradition; SquadCue supervises full interactive CLI sessions as long-lived contacts. Different granularity, similar philosophy.",
-      "preferred_for_axis": "supervising long-lived interactive sessions"
-    }
-  ],
+  "compared_to": [],
   "evidence_urls": [
     {
-      "claim": "Approval inbox pauses shell commands and file writes via web and Telegram, first response wins, timeout denies",
+      "claim": "Turns real Claude Code sessions into named, resumable 'employees' you chat with and supervise — a concrete, useful local abstraction",
       "source": "https://squadcue.com",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Vendor states the inbox is a supervision workflow and not a security boundary",
+      "claim": "A real human-in-the-loop approval inbox (web + Telegram, first-response-wins, timeout = deny) with recorded, auditable decisions",
       "source": "https://squadcue.com",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Local-first: FastAPI server and one-file UI, state in JSON/JSONL and SQLite, no Docker or build step",
+      "claim": "Exceptionally honest self-documentation: it states the inbox is not a security boundary, links a SECURITY.md of what it cannot stop, and flags hard-won production caveats",
       "source": "https://squadcue.com",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Claude Code sessions become resumable named contacts with persistent session memory",
+      "claim": "Sensible local security posture — loopback-only enforced at startup, CSRF/DNS-rebind guards, path containment, SSRF guard on fetch, no shell template interpolation",
       "source": "https://squadcue.com",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Support for AI CLIs other than Claude Code and Codex",
-      "source": "https://squadcue.com",
-      "tested_at": "2026-08-18",
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://squadcue.com (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
       "verified": false
     }
   ],
   "agent_relevance": {
     "has_api": true,
-    "has_cli": false,
+    "has_cli": true,
     "has_mcp": false,
-    "has_webhook": true,
+    "has_webhook": false,
     "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "Not an agent an external system integrates with — it is a control plane for locally-running AI CLI sessions. Integrates downward into Claude Code via a PreToolUse hook and session resume, and outward to Telegram for approvals. Runs entirely on the operator's machine, so it is not testable from a public surface.",
-    "agent_friendly_score": 5
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via pip and run locally (FastAPI server + single-file cockpit); it discovers Claude Code sessions as 'employees', routes risky tool calls through an approval inbox (web + Telegram), and orchestrates pipelines on a canvas. Control plane and state stay on your machine.",
+    "agent_friendly_score": 7
   },
+  "summary": "A local cockpit that turns your Claude Code sessions into named 'employees' you supervise through an approval inbox — early and single-user, but unusually honest about exactly what it is and isn't.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/squadcue.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
     "not_applicable": true,
-    "reason": "SquadCue supervises and orchestrates local AI CLI sessions; it does not itself generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
-    "checked_at": "2026-08-18"
+    "note": "A local orchestration/supervision cockpit for coding agents, not a generator of synthetic media or deceptive content — Article-50(4) marking obligations do not apply."
   },
-  "summary": "Unusually honest about its own limits — it calls its approval inbox a supervision workflow, not a security boundary, and points at the SECURITY.md that says so — which is rarer and more valuable than most features on this page.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+  "evidence_images": {
+    "run_id": "run-22cf84e4e27007f0-squadcue-com",
+    "base": "https://images.hlido.eu/reviews/squadcue/run-22cf84e4e27007f0-squadcue-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page__why-squadcue.png",
+      "page__features.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/squadcue/run-22cf84e4e27007f0-squadcue-com/home.png",
+      "https://images.hlido.eu/reviews/squadcue/run-22cf84e4e27007f0-squadcue-com/page_.png",
+      "https://images.hlido.eu/reviews/squadcue/run-22cf84e4e27007f0-squadcue-com/page__why-squadcue.png",
+      "https://images.hlido.eu/reviews/squadcue/run-22cf84e4e27007f0-squadcue-com/page__features.png"
+    ]
+  }
 }
