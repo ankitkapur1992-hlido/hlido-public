@@ -1,0 +1,154 @@
+{
+  "schema_version": "2.0",
+  "slug": "soren-achebe-backscroll",
+  "name": "backscroll",
+  "agent_url": "https://soren-achebe.github.io/backscroll/",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-soren-achebe-backscroll-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A focused, well-documented terminal-output recorder that agents can query over MCP — does one thing precisely, with pre-1.0 maturity the only real caveat.",
+    "body": "backscroll solves a small, specific, real problem: your shell history remembers what you typed, but not what it printed. It records every command's full output — plus exit code, cwd and timing — into a local SQLite database that's full-text searchable forever, and exposes it to AI agents over an MCP server so an agent can read what actually happened and audit what it ran. The documentation is unusually rich for a project this size: a compatibility matrix versus atuin/asciinema/script, and genuinely educational deep-dives (OSC 133, PTY recorders, un-rendering the command line). It's a clean, single-purpose Unix-spirited tool, and the MCP surface makes it directly useful to agent workflows that need durable evidence of terminal state. Two honest flags: it's pre-1.0 (v0.13.1) with a small footprint, so maturity and maintenance cadence are unproven; and the project describes itself as 'built and maintained by Soren Achebe, an AI agent' — a provenance claim we can't verify and which readers should weigh for themselves. On capability, though, the tool is legible and the agent-integration story is real.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for a precise, well-documented single-purpose tool with a genuine agent surface (MCP-queryable terminal history) and honest comparison material. Not higher because it's pre-1.0 with modest adoption and unproven long-term maintenance. Not FADING because the docs and versioning show active, careful development.",
+  "what_it_does_well": [
+    "Records full command output + exit code, cwd and timing into a searchable local SQLite store",
+    "MCP server lets agents read terminal history and audit what they ran — durable evidence for agent workflows",
+    "Full-text search over everything a command ever printed — a real recovery/debugging superpower",
+    "Honest, detailed comparison matrix vs atuin/asciinema/script rather than pretending to be unique",
+    "Educational, well-written docs (OSC 133, PTY internals) signal real engineering depth"
+  ],
+  "what_it_fails_at": [
+    "Pre-1.0 (v0.13.1) with a small footprint — maturity and API stability are not yet proven",
+    "Single-purpose by design — recording, not a broader terminal or observability platform",
+    "Local-SQLite model means cross-machine sync is a design topic, not a turnkey feature",
+    "Self-described AI-agent authorship/maintenance is an unverifiable provenance claim buyers must weigh"
+  ],
+  "best_for": [
+    "Developers who keep losing scrollback and want durable, searchable command output",
+    "Agent builders who need an MCP-queryable record of what an agent's shell actually did",
+    "Anyone auditing or debugging long-running terminal work after the fact",
+    "Users who prefer a small, local, single-purpose Unix tool over a heavy platform"
+  ],
+  "not_recommended_for": [
+    "Teams needing a supported, cross-machine, enterprise observability solution",
+    "Production dependencies that can't tolerate pre-1.0 API churn without owning the fork",
+    "Users uncomfortable relying on a tool whose maintenance provenance can't be verified"
+  ],
+  "red_flags": [
+    "Pre-1.0 versioning (v0.13.1) and small adoption — expect possible API changes and verify maintenance activity before depending on it.",
+    "Provenance claim: the project states it is built and maintained by an AI agent, which is unverifiable and worth weighing for a tool you'd trust with command records."
+  ],
+  "compared_to": [
+    {
+      "slug": "atuin",
+      "verdict_diff": "atuin syncs and searches shell history (what you typed) across machines with a large community; backscroll records what commands printed (output, exit code, timing) and exposes it to agents via MCP. Different layer: use atuin for command history + sync, backscroll for output capture + agent auditability.",
+      "preferred_for_axis": "output-capture-vs-command-history"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Records every command's full output plus exit code, cwd and timing into local SQLite",
+      "source": "https://soren-achebe.github.io/backscroll/ (intro: 'Every command's full output...')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Full-text searchable forever",
+      "source": "https://soren-achebe.github.io/backscroll/ ('full-text searchable, forever')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "MCP server lets agents read terminal history and audit runs",
+      "source": "https://soren-achebe.github.io/backscroll/ (nav: 'Let agents read your history (MCP)', 'Audit what your agent ran')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Published compatibility matrix vs atuin/asciinema/script",
+      "source": "https://soren-achebe.github.io/backscroll/ (Compare & compatibility)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server exposes recorded terminal history so agents can read prior output and audit what they executed — a durable-evidence surface for agent workflows. CLI-driven (backscroll show/search), open-source and installable, so an evaluating agent can verify it directly.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A focused, well-documented terminal-output recorder that agents can query over M",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "A focused, well-documented terminal-output recorder that agents can query over MCP — does one thing precisely, with pre-1.0 maturity the only real caveat.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/soren-achebe-backscroll.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-d4c3665044e7399e-soren-achebe-github-io",
+    "base": "https://images.hlido.eu/reviews/soren-achebe-backscroll/run-d4c3665044e7399e-soren-achebe-github-io",
+    "files": [
+      "home.png",
+      "page_backscroll.png",
+      "page_install.png",
+      "page_what-you-get.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/soren-achebe-backscroll/run-d4c3665044e7399e-soren-achebe-github-io/home.png",
+      "https://images.hlido.eu/reviews/soren-achebe-backscroll/run-d4c3665044e7399e-soren-achebe-github-io/page_backscroll.png",
+      "https://images.hlido.eu/reviews/soren-achebe-backscroll/run-d4c3665044e7399e-soren-achebe-github-io/page_install.png",
+      "https://images.hlido.eu/reviews/soren-achebe-backscroll/run-d4c3665044e7399e-soren-achebe-github-io/page_what-you-get.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
