@@ -1,0 +1,143 @@
+{
+  "schema_version": "2.0",
+  "slug": "whodunnitai",
+  "name": "WhoDunnitAI",
+  "agent_url": "https://whodunnitai.com",
+  "category": "Voice",
+  "run_id": "run-rpub-v2-whodunnitai-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 60,
+  "tier": "FADING",
+  "laddoo_score": 60,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A charming, genuinely working voice-driven murder-mystery game — but it's a consumer novelty, not an agent, and its durability rests on a single creator's OpenAI bill.",
+    "body": "WhoDunnitAI is a real, playable experience: you interrogate AI-voiced suspects in a locked-room murder case, pressing alibis and catching contradictions, with live voices running on gpt-realtime-2. The homepage is honest and likeable — it states plainly that interview time is free but limited (or bring your own OpenAI key for unlimited play), shows live metrics (296 investigations underway, 12 solved, 21-minute typical solve time), and is candid that donations cover the AI bill. As a demonstration of real-time voice AI for interactive fiction, it works and it's well-made. What it is not is an agent in the sense Hlido evaluates: it's a single-creator consumer game with near-zero agent-to-agent surface (no API, no MCP, no automation path), and its continuity depends explicitly on donations covering per-minute realtime-voice costs — a fragile economic base for anything a buyer would rely on. We rate it honestly as a working, low-testability consumer product: enjoyable and technically real, but outside the durable-tooling lane, and thin on the operational maturity signals that move a score upward.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING-band (60) reflects a working but narrow consumer novelty with a fragile, donation-dependent economic base and essentially no agent-integration surface — not a judgement that it's declining, but that its verifiable durability and utility as tooling are limited. Not lower because it genuinely works and is transparently run; not higher because there's no API/automation, no evidence of a sustainable business, and low testability (a single homepage capture, no interaction tested).",
+  "what_it_does_well": [
+    "A genuinely working real-time voice interrogation loop (gpt-realtime-2) — the core experience delivers",
+    "Honest, likeable framing: clearly states free-but-limited time and the bring-your-own-key option",
+    "Transparent about economics — openly asks for donations to cover the AI bill rather than hiding costs",
+    "Live public metrics (investigations underway, mysteries solved, typical solve time) add credibility"
+  ],
+  "what_it_fails_at": [
+    "No agent surface at all — no API, MCP, CLI or automation path; it's a play-in-browser consumer app",
+    "Continuity depends on donations covering per-minute realtime-voice costs — economically fragile",
+    "Single-creator project ('authored by Chase Myers') with the bus-factor risk that implies",
+    "Content depth unproven — a single published case ('Death at Blackwood Manor') on the captured surface"
+  ],
+  "best_for": [
+    "Players who want a novel, voice-driven interactive-fiction experience",
+    "Builders studying a real-world real-time-voice AI implementation for interactive fiction",
+    "Anyone curious to see gpt-realtime-2 driving a live conversational NPC"
+  ],
+  "not_recommended_for": [
+    "Buyers looking for an AI agent or automatable tool — this is a consumer game, not tooling",
+    "Anyone needing a dependable, funded service (its base is donation-supported)",
+    "Use cases requiring an API, integration surface or SLA"
+  ],
+  "red_flags": [
+    "Economic fragility: the site states its live voices 'cost real money' and leans on donations to keep running — availability is not guaranteed.",
+    "Low testability: only the homepage was captured; the actual gameplay/voice loop was not exercised in this review."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Voice-driven murder-mystery with live suspect voices on gpt-realtime-2",
+      "source": "https://whodunnitai.com/ (hero + 'KEEP THE MANOR OPEN' section)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Interview time is free but limited, or bring your own OpenAI key",
+      "source": "https://whodunnitai.com/ ('Interview time is free but limited...')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Live metrics: investigations underway / mysteries solved / typical solve time",
+      "source": "https://whodunnitai.com/ (metrics section: 296 / 12 / 21 min)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Donation-supported to cover AI costs",
+      "source": "https://whodunnitai.com/ ('a donation of any size helps cover the AI bill')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None. WhoDunnitAI is a browser-based consumer game with no programmatic surface. The only developer-facing touch is an optional 'bring your own OpenAI key' for unlimited play, which is not an integration path.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A charming, genuinely working voice-driven murder-mystery game — but it's a cons",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "A charming, genuinely working voice-driven murder-mystery game — but it's a consumer novelty, not an agent, and its durability rests on a single creator's OpenAI bill.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/whodunnitai.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-b977201b3c65b189-whodunnitai-com",
+    "base": "https://images.hlido.eu/reviews/whodunnitai/run-b977201b3c65b189-whodunnitai-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/whodunnitai/run-b977201b3c65b189-whodunnitai-com/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
