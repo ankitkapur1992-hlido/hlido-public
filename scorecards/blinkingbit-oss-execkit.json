@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "slug": "blinkingbit-oss-execkit",
+  "name": "execkit",
+  "agent_url": "https://blinkingbit-oss.github.io/execkit/",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-blinkingbit-oss-execkit-2026-08-19",
+  "run_at": "2026-08-19T18:10:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A well-designed, safety-first shell-session layer built specifically for AI agents — the docs and API shape are excellent; adoption and battle-testing are what's left to prove.",
+    "body": "execkit is one of the more thoughtfully-scoped agent-infrastructure projects to cross our surface. It names a real failure mode precisely: hand an AI agent a raw shell and you get one-shot commands with no memory, mixed stdout/stderr it has to guess through, secrets in plaintext, no audit trail and no undo. execkit replaces that with a session abstraction built for agents — cd and environment persist across calls, each command returns split stdout/stderr with exit code, duration and cwd as structured data, output is ANSI-stripped, secret-redacted and bounded so a noisy build can't blow the context window, and there are checkpoints, a security model and a watch viewer for auditing. It ships both a Rust library and a Python SDK, with explicit 'wiring into an agent' guidance. Everything about the API design and documentation reflects someone who has actually watched agents flail in a raw shell and engineered the guardrails. The honest gap is the same one most young infra tools have: this is early open source, so the security model's robustness and the tool's behaviour under real adversarial/agentic load can't be certified from docs — they have to be tested. As a capability and a design, though, it's a strong bet for anyone giving an agent shell access and wanting to do it safely.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a sharply-scoped, safety-first design with excellent documentation, structured results, and real guardrails (redaction, output budgets, checkpoints, an audit viewer) — plus dual Rust/Python surfaces. Not higher because it's early OSS whose security model and adversarial robustness are unproven from the public surface. Not FADING because the engineering and docs signal active, careful development.",
+  "what_it_does_well": [
+    "Stateful sessions: cd and environment persist across calls, like a real terminal, instead of resetting each command",
+    "Structured results — split stdout/stderr, exit code, duration and cwd as data an agent can act on, not a blob to parse",
+    "Safe by default: ANSI-stripped, secret-redacted, output-bounded so a noisy build can't blow the agent's context",
+    "Checkpoints, an explicit security model, and a watch viewer for auditing what ran",
+    "Dual surface — a Rust library and a Python SDK — with explicit 'wiring into an agent' docs"
+  ],
+  "what_it_fails_at": [
+    "Early open source — the security model's robustness under adversarial/agentic load is unproven from docs alone",
+    "Adoption/maturity signals are limited; production dependence needs your own validation",
+    "Scope is deliberately narrow (shell sessions for agents) — not a full sandbox/orchestration platform",
+    "'Safe by default' is a design claim that must be verified against real secret-redaction and isolation behaviour"
+  ],
+  "best_for": [
+    "Agent builders giving an AI agent shell access who want structured, bounded, redacted results by default",
+    "Teams that need an audit trail and checkpoints around agent-executed commands",
+    "Rust or Python shops wanting a native SDK for agent shell sessions",
+    "Anyone who has been burned by raw-shell agents blowing context or leaking secrets"
+  ],
+  "not_recommended_for": [
+    "Teams needing a certified, audited sandbox with formal security guarantees today",
+    "Use cases requiring a hosted/managed service rather than a self-run library",
+    "Production-critical isolation where an early OSS security model can't be accepted without independent review"
+  ],
+  "red_flags": [
+    "Security is the core promise ('safe by default', secret redaction, bounded output) yet it's an early OSS project — the redaction and isolation behaviour must be independently verified before trusting it with real secrets."
+  ],
+  "compared_to": [
+    {
+      "slug": "e2b",
+      "verdict_diff": "E2B provides hosted, fully-isolated cloud sandboxes for agent code execution; execkit is a lighter, self-run session layer over real infrastructure with structured/redacted results. Choose E2B for managed isolation, execkit for a native library adding guardrails to shells you already control.",
+      "preferred_for_axis": "self-run-guardrails-vs-hosted-sandbox"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Stateful shell sessions where cd and environment persist across calls",
+      "source": "https://blinkingbit-oss.github.io/execkit/ (Stateful sessions)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Structured results: split stdout/stderr, exit code, duration, cwd",
+      "source": "https://blinkingbit-oss.github.io/execkit/ (Structured results)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Safe by default: ANSI-stripped, secret-redacted, output-bounded",
+      "source": "https://blinkingbit-oss.github.io/execkit/ (Safe by default)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Rust library and Python SDK with agent-wiring docs",
+      "source": "https://blinkingbit-oss.github.io/execkit/ (Libraries: Rust library, Python SDK; 'Wiring into an agent')",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Checkpoints, security model and audit/watch viewer",
+      "source": "https://blinkingbit-oss.github.io/execkit/ (Operating it: Security model, Auditing and the watch viewer)",
+      "tested_at": "2026-08-19",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built for agents: structured, bounded, redacted shell sessions exposed via a Rust library and a Python SDK, with explicit agent-wiring guidance and a session/transport model suited to MCP-style tool use. Open-source and installable, so behaviour is directly testable. Among the most agent-native tools in this batch.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A well-designed, safety-first shell-session layer built specifically for AI agen",
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "summary": "A well-designed, safety-first shell-session layer built specifically for AI agents — the docs and API shape are excellent; adoption and battle-testing are what's left to prove.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/blinkingbit-oss-execkit.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-83e1f0e86add8d3f-blinkingbit-oss-github-io",
+    "base": "https://images.hlido.eu/reviews/blinkingbit-oss-execkit/run-83e1f0e86add8d3f-blinkingbit-oss-github-io",
+    "files": [
+      "home.png",
+      "pageintroduction_html.png",
+      "page_two-ways-to-use-it.png",
+      "page_a-note-on-safety.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/blinkingbit-oss-execkit/run-83e1f0e86add8d3f-blinkingbit-oss-github-io/home.png",
+      "https://images.hlido.eu/reviews/blinkingbit-oss-execkit/run-83e1f0e86add8d3f-blinkingbit-oss-github-io/pageintroduction_html.png",
+      "https://images.hlido.eu/reviews/blinkingbit-oss-execkit/run-83e1f0e86add8d3f-blinkingbit-oss-github-io/page_two-ways-to-use-it.png",
+      "https://images.hlido.eu/reviews/blinkingbit-oss-execkit/run-83e1f0e86add8d3f-blinkingbit-oss-github-io/page_a-note-on-safety.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
