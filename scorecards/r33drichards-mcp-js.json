@@ -1,97 +1,84 @@
 {
   "schema_version": "2.0",
   "slug": "r33drichards-mcp-js",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "engine": "public-surface",
-  "evidence_tier": "screenshot",
-  "source": "r4-editorial-enrich",
-  "run_id": "run-r33drichards-mcp-js-v2-2026-08-18",
-  "run_at": "2026-08-18T21:30:00Z",
-  "staleness_after": "2026-11-16",
-  "next_review_due_at": "2026-11-16",
-  "signature_pending": true,
   "name": "mcp-v8",
   "agent_url": "https://r33drichards.github.io/mcp-js",
+  "repo_url": "https://github.com/r33drichards/mcp-js",
   "category": "Infrastructure",
-  "score": 73,
-  "laddoo_score": 73,
+  "run_id": "run-a83a7a4d13ed9846-r33drichards-github-io",
+  "run_at": "2026-08-17T08:05:44.205Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
   "tier": "STEADY",
-  "confidence": "low",
+  "laddoo_score": 80,
+  "confidence": "low-medium",
   "hlido_opinion": {
-    "headline": "A code-execution MCP server that starts from a deny-by-default posture and documents every capability it can be granted — the right architecture for the most dangerous tool you can hand an agent.",
-    "body": "mcp-v8 makes an argument worth taking seriously: rather than exposing dozens of narrow tools, give the agent one run_js tool and let it write code. That is simultaneously the most token-efficient and the most dangerous shape an agent tool can take, and the captured surface shows a project that appears to understand exactly that. Execution happens inside a V8 isolate with memory and time limits. Network access, filesystem, subprocess spawning, WebAssembly, ES-module imports and calls to upstream MCP servers are each documented as off until explicitly granted, and each is gated through OPA or embedded Rego policy. The operational surface is equally specific: stdio, Streamable HTTP and SSE transports, a REST sidecar, asynchronous execution with polling and pagination, JWT/JWKS request authentication, and Raft-replicated session metadata for clustering. Stateful mode persists the V8 heap as a content-addressed snapshot so an agent can accumulate state across turns instead of re-sending context — a genuinely useful idea, and one the docs are careful to present as a mode rather than a default assumption. The limits are the ordinary ones for a public-surface review: the isolation and policy claims are the entire value proposition and none of them could be exercised or adversarially tested from outside, there is no third-party audit or CVE history on the captured surface, and no adoption or maintenance-load signal is visible. The architecture is what earns the score; the security properties remain the vendor's assertion until someone tests them.",
+    "headline": "A code-execution MCP server that hands an agent one run_js tool inside a locked-down V8 isolate — an ambitious 'agents write code, not tool-calls' bet with a serious security story.",
+    "body": "mcp-v8 is a Model Context Protocol server that executes JavaScript and TypeScript inside a V8 isolate. Instead of exposing dozens of narrow tools, it gives an agent a single run_js tool: the agent writes code that can loop, branch, transform data and chain other MCP servers, which the vendor argues costs fewer tokens than equivalent tool-call sequences. In its default stateful mode it persists the V8 heap as a content-addressed snapshot so state survives across calls — a genuinely useful primitive for multi-turn agent work. The security framing is the strongest part of the surface: network fetch, filesystem, subprocess, WASM and ES-module imports are all off by default and each is gated by OPA/Rego policy, requests can be authenticated with JWT/JWKS, and the server can form a Raft cluster to replicate session metadata. It speaks stdio, Streamable HTTP and SSE with a REST sidecar. This is documentation, not a running audit — Hlido did not execute code against a live instance, so the isolation and policy enforcement are described capabilities rather than tested ones. But the design is coherent, the sandbox-first defaults are the right ones for handing an LLM an execution surface, and the docs are structured (install / tutorials / how-to / concepts / reference) rather than hype.",
     "voice": "Hlido Editor",
-    "as_of": "2026-08-18",
+    "as_of": "2026-08-19",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY (73) because the documented architecture is well-matched to the risk — deny-by-default capabilities, policy-gated grants, resource limits and real auth/transport options — and the documentation is thorough and specific. It is held below the top band because every security property is asserted rather than independently verified, and there is no audit history or adoption signal on the captured surface.",
+  "tier_rationale": "STEADY (80) for a well-architected code-execution MCP server with sandbox-by-default capabilities (OPA/Rego-gated network/FS/subprocess), durable heap-snapshot state, JWKS auth and production transports, marked low-medium confidence because the review is surface-only — the isolation, policy gating and clustering are documented, not exercised against a live instance by Hlido. Not VITAL absent hands-on verification of the sandbox that is the whole value proposition.",
   "what_it_does_well": [
-    "Deny-by-default capability model: network, filesystem, subprocess and imports are all off until explicitly granted",
-    "Policy gating through OPA/Rego rather than ad-hoc flags, so grants are expressible and reviewable",
-    "Documents the operational surface properly — three transports, REST sidecar, async execution with pagination and cancellation",
-    "JWT/JWKS authentication and Raft-replicated session metadata show production concerns, not just a demo",
-    "Heap snapshots give agents durable state without re-sending context, and are presented as a mode rather than an assumption",
-    "Documentation is organised by task (install, tutorials, how-to, concepts, reference) and is unusually detailed for the project's size"
+    "Compelling 'one tool, write code' model — a single run_js call replaces long tool-call chains and can compose other MCP servers, often at lower token cost",
+    "Durable state via content-addressed V8 heap snapshots, so an agent builds context across turns without re-sending it",
+    "Secure-by-default: network, filesystem, subprocess and module imports are all off until an explicit OPA/Rego policy grants them",
+    "Production-grade operations on paper — stdio/HTTP/SSE transports, REST sidecar, JWKS auth, and Raft-replicated clustering",
+    "Structured documentation (install, tutorials, how-to, concepts, reference) rather than a single marketing page"
   ],
   "what_it_fails_at": [
-    "The isolation and policy claims are the whole product and none can be exercised from a public surface",
-    "No third-party security audit, CVE history or disclosure policy visible on the captured surface",
-    "No adoption, maintenance-cadence or continuity signal — an unknown for a dependency that executes arbitrary code",
-    "No published pricing or support model; it is an unsupported open-source component",
-    "Granting an agent a single unbounded code-execution tool concentrates risk even when the sandbox behaves as documented"
+    "Handing an agent arbitrary code execution is inherently high-blast-radius — the entire safety case rests on policy configuration the operator must get right",
+    "Surface-only review — Hlido did not run code against a live isolate, so sandbox isolation and policy enforcement are unverified",
+    "Self-run infrastructure with real operational surface (policies, auth, optionally Raft) — not a turnkey product",
+    "No independent security audit is cited on the captured surface"
   ],
   "best_for": [
-    "Teams that have already decided an agent needs to execute code and want a policy-gated sandbox rather than a raw interpreter",
-    "Engineers who prefer one expressive tool over a large surface of narrow tools, for token efficiency",
-    "Operators comfortable writing OPA/Rego policy to define exactly what an agent may reach"
+    "Agent builders who want a code-interpreter tool that composes other MCP servers and persists state across calls",
+    "Teams comfortable authoring OPA/Rego policies to scope exactly what agent-run code may touch",
+    "Advanced MCP deployments needing auth (JWKS) and multi-node replication"
   ],
   "not_recommended_for": [
-    "Anyone who needs an independently audited sandbox for regulated or multi-tenant workloads",
-    "Teams without the capacity to author and maintain capability policies correctly",
-    "Buyers requiring vendor support, SLAs or a documented vulnerability-disclosure process"
+    "Anyone wanting a zero-config tool — the security depends on policies you write",
+    "Environments that cannot accept agent-driven code execution under any sandbox",
+    "Users needing a vendor-audited, certified isolation guarantee"
   ],
   "red_flags": [
-    "The security model is the product, and it is entirely self-asserted on the captured surface — no independent audit, no CVE history, no disclosure policy. Treat the isolation guarantees as unverified until you test them yourself.",
-    "A single unbounded code-execution tool is the highest-blast-radius capability you can grant an agent; the sandbox behaving correctly is a precondition, not a nice-to-have."
+    "Arbitrary code execution handed to an LLM is only as safe as the OPA/Rego policies configured around it; misconfiguration widens the blast radius substantially"
   ],
-  "compared_to": [
-    {
-      "slug": "sinameraji-hotcell",
-      "verdict_diff": "Both sandbox agent-executed code. Hotcell was the more technically honest surface we reviewed this cycle and carries an explicit licence and posture; mcp-v8 documents a richer capability-and-policy model with clustering and auth, but its guarantees are equally unaudited.",
-      "preferred_for_axis": "capability granularity and ops features"
-    },
-    {
-      "slug": "phinq",
-      "verdict_diff": "phinq gates what an agent may do by asking a human at the moment of action; mcp-v8 gates it in advance through machine-evaluated policy. Approval scales poorly and policy fails silently — the two are complementary rather than substitutes.",
-      "preferred_for_axis": "policy-time rather than approval-time control"
-    }
-  ],
+  "compared_to": [],
   "evidence_urls": [
     {
-      "claim": "Executes JavaScript and TypeScript inside a V8 isolate with memory and time limits",
+      "claim": "Compelling 'one tool, write code' model — a single run_js call replaces long tool-call chains and can compose other MCP servers, often at lower token cost",
       "source": "https://r33drichards.github.io/mcp-js",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Network, filesystem, subprocess and module imports are off by default and gated by OPA/Rego policy",
+      "claim": "Durable state via content-addressed V8 heap snapshots, so an agent builds context across turns without re-sending it",
       "source": "https://r33drichards.github.io/mcp-js",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Supports stdio, Streamable HTTP and SSE transports with JWT/JWKS authentication",
+      "claim": "Secure-by-default: network, filesystem, subprocess and module imports are all off until an explicit OPA/Rego policy grants them",
       "source": "https://r33drichards.github.io/mcp-js",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Sandbox isolation independently audited or adversarially tested",
+      "claim": "Production-grade operations on paper — stdio/HTTP/SSE transports, REST sidecar, JWKS auth, and Raft-replicated clustering",
       "source": "https://r33drichards.github.io/mcp-js",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://r33drichards.github.io/mcp-js (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
       "verified": false
     }
   ],
@@ -101,15 +88,42 @@
     "has_mcp": true,
     "has_webhook": false,
     "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "An MCP server exposing a single run_js tool, reachable over stdio, Streamable HTTP or SSE, with a REST sidecar for async submission and polling. Agents can also compose upstream MCP servers from inside executed code via the documented mcp.* namespace. Not behaviourally testable from a public surface — it must be self-hosted.",
+    "behavioral_testable": true,
+    "agent_integration_path": "Runs as an MCP server (stdio, Streamable HTTP or SSE, plus a REST sidecar). An MCP client calls a single run_js tool; capabilities beyond compute are granted per OPA/Rego policy and requests can be JWKS-authenticated.",
     "agent_friendly_score": 9
   },
+  "summary": "A code-execution MCP server that hands an agent one run_js tool inside a locked-down V8 isolate — an ambitious 'agents write code, not tool-calls' bet with a serious security story.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/r33drichards-mcp-js.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
     "not_applicable": true,
-    "reason": "mcp-v8 is a code-execution sandbox and does not itself generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
-    "checked_at": "2026-08-18"
+    "note": "A code-execution sandbox / agent runtime, not a generator of synthetic media or deceptive content — Article-50(4) marking obligations do not apply."
   },
-  "summary": "A code-execution MCP server that starts from a deny-by-default posture and documents every capability it can be granted — the right architecture for the most dangerous tool you can hand an agent.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+  "evidence_images": {
+    "run_id": "run-a83a7a4d13ed9846-r33drichards-github-io",
+    "base": "https://images.hlido.eu/reviews/r33drichards-mcp-js/run-a83a7a4d13ed9846-r33drichards-github-io",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page__.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/r33drichards-mcp-js/run-a83a7a4d13ed9846-r33drichards-github-io/home.png",
+      "https://images.hlido.eu/reviews/r33drichards-mcp-js/run-a83a7a4d13ed9846-r33drichards-github-io/page_.png",
+      "https://images.hlido.eu/reviews/r33drichards-mcp-js/run-a83a7a4d13ed9846-r33drichards-github-io/page_.png",
+      "https://images.hlido.eu/reviews/r33drichards-mcp-js/run-a83a7a4d13ed9846-r33drichards-github-io/page__.png"
+    ]
+  }
 }
