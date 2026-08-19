@@ -1,124 +1,129 @@
 {
   "schema_version": "2.0",
   "slug": "shashankss1205-codegraphcontext",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "engine": "public-surface",
-  "evidence_tier": "screenshot",
-  "source": "r4-editorial-enrich",
-  "run_id": "run-shashankss1205-codegraphcontext-v2-2026-08-18",
-  "run_at": "2026-08-18T21:30:00Z",
-  "staleness_after": "2026-11-16",
-  "next_review_due_at": "2026-11-16",
-  "signature_pending": true,
   "name": "CodeGraphContext",
   "agent_url": "https://cgc.codes",
+  "repo_url": "https://github.com/Shashankss1205/CodeGraphContext",
   "category": "Coding",
-  "score": 78,
-  "laddoo_score": 78,
+  "run_id": "run-70f92117c1e33804-cgc-codes",
+  "run_at": "2026-08-18T16:31:14.877Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
   "tier": "STEADY",
-  "confidence": "low",
+  "laddoo_score": 76,
+  "confidence": "low-medium",
   "hlido_opinion": {
-    "headline": "Real adoption behind a real idea — a pip-installable CLI and MCP server that turns a codebase into a queryable graph — undercut by a self-comparison table that asserts rivals hallucinate and it does not.",
-    "body": "CodeGraphContext indexes a codebase into a navigable knowledge graph and exposes it to AI assistants through both a CLI toolkit and an MCP server. The idea is sound for the same reason Serena's is: agents reason badly about large codebases because text search cannot express call chains, class hierarchies or multi-hop dependencies, and a graph can. What separates this from most projects at this tier is that the adoption evidence is concrete and on the page — 4,095 stars, 824 forks, 18,243 downloads in the last month, MIT licence, v0.5.1 — alongside a working browser-based explorer that indexes a public GitHub or GitLab repository, which means an evaluator can actually see output rather than read about it. The operational detail is sensible too: FalkorDB Lite as the default on Unix and WSL with Neo4j available via Docker or native install, live file watching that updates the graph as you code, and an interactive setup wizard, which matters because graph-database setup is exactly where this class of tool usually loses people. Then there is the comparison table, and it is a problem. It rates two unnamed competitors against itself and awards itself 'EXTREMELY ACCURATE' AI explanation quality while marking a rival 'HALLUCINATED' — a claim about another product's failure mode presented without a benchmark, a method or a named subject. Nothing on the captured surface substantiates it. That single table does more damage to the project's credibility than any missing feature would, because it invites the reader to discount the accompanying claims that are probably true. The underlying tool looks genuinely useful and genuinely used; the marketing is writing cheques the evidence does not cover.",
+    "headline": "A CLI-plus-MCP tool that turns a local codebase into a navigable knowledge graph for AI assistants — real adoption behind it, with marketing that oversells a bit past the evidence.",
+    "body": "CodeGraphContext (v0.5.1, MIT) indexes local code into a graph an AI assistant can query in natural language: callers and callees, class hierarchies, imports, dead code and complexity. It ships as both a CLI toolkit and an MCP server (cgc mcp setup / cgc mcp start) that wires into Cursor, VS Code, Windsurf and Claude, backed by FalkorDB Lite by default or Neo4j via Docker. The traction signals on the captured surface are concrete and in its favour — 4,095 GitHub stars, 824 forks, ~18,243 downloads in the last month, and a public registry of 96 pre-indexed bundles for well-known repos (React, Django, Terraform, pandas) that load instantly. That is a genuinely useful discovery surface. The place Hlido pulls back is the marketing: a comparison table rates unnamed competitors as \"HALLUCINATED\" and \"SLOWS WITH SIZE\" while grading itself \"EXTREMELY ACCURATE\" across the board, and a lone Reddit quote stands in for testimonials. Those are vendor claims, not measured results, and the accuracy assertion is exactly what a surface review cannot confirm. The underlying idea — graph-structured context instead of blind grep — is sound and increasingly common, and the install path is clean (pip install codegraphcontext). Reviewed from the marketing and docs surface only; the indexing quality itself was not exercised.",
     "voice": "Hlido Editor",
-    "as_of": "2026-08-18",
+    "as_of": "2026-08-19",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY (78) because it pairs a well-chosen problem with the strongest adoption evidence in this cohort (4,095 stars, 824 forks, 18,243 monthly downloads), an MIT licence, a live public demo an evaluator can exercise, and pragmatic setup defaults. It is held out of the top band by unsubstantiated comparative accuracy claims and by the fact that graph quality itself could not be verified from a public surface.",
+  "tier_rationale": "STEADY (76) for a real, MIT-licensed code-knowledge-graph tool with meaningful adoption (4k+ stars, ~18k monthly installs), a dual CLI+MCP surface, and a useful pre-indexed bundle registry — discounted from the higher band because the marketing makes unverifiable superiority claims (a self-graded competitor table, \"EXTREMELY ACCURATE\") and the review is surface-only, so indexing accuracy was not tested. Low-medium confidence.",
   "what_it_does_well": [
-    "Publishes concrete, checkable adoption numbers rather than vague social proof",
-    "Offers a live browser explorer that indexes a public repository, so capability can be seen not just described",
-    "Ships both a CLI toolkit and an MCP server, serving humans and agents through the same index",
-    "Sensible database defaults (FalkorDB Lite on Unix/WSL, Neo4j optional) with an interactive setup wizard",
-    "Live file watching keeps the graph current as code changes instead of requiring manual reindexing",
-    "MIT licence and a versioned release line make adoption and forking straightforward",
-    "Targets the specific queries text search cannot answer — callers, callees, class hierarchies, multi-hop dependencies"
+    "Solves a real agent problem: structured graph queries (callers, callees, class hierarchy, imports) instead of token-burning blind greps",
+    "Dual surface — a CLI toolkit and an MCP server that sets itself up for Cursor / VS Code / Windsurf / Claude with a wizard",
+    "Concrete adoption on the captured surface: 4,095 stars, 824 forks, ~18,243 downloads last month, MIT-licensed",
+    "A registry of 96 pre-indexed bundles for popular repos that load instantly — a genuinely useful discovery layer",
+    "Sensible defaults (FalkorDB Lite) with a Neo4j upgrade path, live file-watching, and a clean pip install"
   ],
   "what_it_fails_at": [
-    "The comparison table asserts a competitor produces 'HALLUCINATED' explanations with no benchmark, method or named subject",
-    "Claims 'EXTREMELY ACCURATE' AI explanation quality for itself without published evaluation data",
-    "Graph completeness and accuracy could not be verified from a public surface",
-    "No security or data-handling statement for a tool that indexes private codebases and can fetch remote repositories",
-    "Requires a graph database, which remains meaningful operational overhead despite good defaults",
-    "Language coverage and per-language analysis depth are not quantified on the captured surface"
+    "Marketing overreaches: a self-authored comparison table grades unnamed rivals \"HALLUCINATED\"/\"SLOWS WITH SIZE\" and itself \"EXTREMELY ACCURATE\" — claims, not measurements",
+    "Social proof is thin — a single Reddit quote — so the 'loved by developers' framing is weakly supported",
+    "Surface-only review — Hlido did not index a codebase, so the accuracy and completeness of the graph are unverified",
+    "Requires a graph database (bundled Lite or Neo4j) and setup; not a hands-off install for non-developers"
   ],
   "best_for": [
-    "Teams whose agents lose context in large or unfamiliar codebases and need dependency-aware navigation",
-    "Engineers who want to visualise and query call chains and file hierarchies interactively",
-    "MCP users who want one index serving both a CLI workflow and their AI IDE"
+    "Developers who want their AI assistant to answer precise structural questions about a codebase (call sites, hierarchies, dead code)",
+    "Teams on Cursor / VS Code / Windsurf / Claude wanting an MCP-native code-graph backend",
+    "Anyone wanting to try graph context quickly against a popular repo via the pre-indexed bundles"
   ],
   "not_recommended_for": [
-    "Small codebases where the graph-database overhead outweighs the benefit",
-    "Teams that cannot run or maintain a graph database, even a lightweight one",
-    "Buyers who need published accuracy benchmarks before trusting AI code explanations",
-    "Environments requiring a documented data-handling policy before indexing proprietary source"
+    "Users who want measured accuracy guarantees before trusting the graph — the strongest claims are vendor-stated",
+    "Non-developers uncomfortable running a local graph database",
+    "Teams needing enterprise support or an audited SLA"
   ],
   "red_flags": [
-    "The competitor comparison table labels a rival's AI explanation quality 'HALLUCINATED' and its own 'EXTREMELY ACCURATE' with no benchmark, method or named product behind either claim. Treat the entire table as marketing, and judge the tool on its adoption and demo instead.",
-    "No data-handling statement despite the tool indexing private code and fetching remote repositories — establish where your source is processed before use."
+    "The competitor-comparison table and 'EXTREMELY ACCURATE' grade are self-authored marketing, not independent benchmarks — weigh them accordingly"
   ],
-  "compared_to": [
-    {
-      "slug": "oraios-serena",
-      "verdict_diff": "Both give agents structural rather than textual code understanding over MCP. CodeGraphContext materialises an explicit, visualisable graph with far stronger adoption evidence and a live demo; Serena embeds symbol-level retrieval and editing into the agent's tool surface with more restrained claims. CodeGraphContext for analysis and exploration, Serena for in-loop editing.",
-      "preferred_for_axis": "adoption evidence and queryable graph"
-    },
-    {
-      "slug": "sshahzaiib-agy-bridge",
-      "verdict_diff": "Both reduce the token cost of giving an agent code context. Agy-bridge offloads token-heavy work through a narrow bridge; CodeGraphContext attacks the same cost by replacing bulk file reads with targeted graph queries, at the price of running a database.",
-      "preferred_for_axis": "structural context over raw offloading"
-    }
-  ],
+  "compared_to": [],
   "evidence_urls": [
     {
-      "claim": "CLI toolkit and MCP server indexing code into a navigable knowledge graph",
+      "claim": "Solves a real agent problem: structured graph queries (callers, callees, class hierarchy, imports) instead of token-burning blind greps",
       "source": "https://cgc.codes",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "4,095 stars, 824 forks and 18,243 downloads in the last month, MIT licence, v0.5.1",
+      "claim": "Dual surface — a CLI toolkit and an MCP server that sets itself up for Cursor / VS Code / Windsurf / Claude with a wizard",
       "source": "https://cgc.codes",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Live browser explorer indexes a public GitHub or GitLab repository",
+      "claim": "Concrete adoption on the captured surface: 4,095 stars, 824 forks, ~18,243 downloads last month, MIT-licensed",
       "source": "https://cgc.codes",
-      "tested_at": "2026-08-18",
+      "tested_at": "2026-08-19",
       "verified": true
     },
     {
-      "claim": "Delivers 'extremely accurate' AI explanations where competitors hallucinate",
+      "claim": "A registry of 96 pre-indexed bundles for popular repos that load instantly — a genuinely useful discovery layer",
       "source": "https://cgc.codes",
-      "tested_at": "2026-08-18",
-      "verified": false
+      "tested_at": "2026-08-19",
+      "verified": true
     },
     {
-      "claim": "Graph completeness and accuracy independently verified",
-      "source": "https://cgc.codes",
-      "tested_at": "2026-08-18",
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://cgc.codes (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
       "verified": false
     }
   ],
   "agent_relevance": {
-    "has_api": true,
+    "has_api": false,
     "has_cli": true,
     "has_mcp": true,
     "has_webhook": false,
-    "has_sdk": true,
+    "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "Installed via pip, exposing both a CLI (cgc) and an MCP server documented for VS Code, Cursor, Windsurf and Claude. Agents query the graph in natural language for callers, callees, class hierarchies and dependencies. A hosted explorer allows partial evaluation without local installation.",
-    "agent_friendly_score": 9
+    "agent_integration_path": "Install via pip; `cgc mcp setup` configures an IDE and `cgc mcp start` runs the MCP server so an AI assistant queries the code graph in natural language. Also usable as a standalone CLI toolkit.",
+    "agent_friendly_score": 8
   },
+  "summary": "A CLI-plus-MCP tool that turns a local codebase into a navigable knowledge graph for AI assistants — real adoption behind it, with marketing that oversells a bit past the evidence.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/shashankss1205-codegraphcontext.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
     "not_applicable": true,
-    "reason": "CodeGraphContext indexes and queries source code and does not generate synthetic media or published text, so Article-50 output-marking obligations do not attach.",
-    "checked_at": "2026-08-18"
+    "note": "A code-indexing / knowledge-graph tool, not a generator of synthetic media or deceptive content — Article-50(4) marking obligations do not apply."
   },
-  "summary": "Real adoption behind a real idea — a pip-installable CLI and MCP server that turns a codebase into a queryable graph — undercut by a self-comparison table that asserts rivals hallucinate and it does not.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+  "evidence_images": {
+    "run_id": "run-70f92117c1e33804-cgc-codes",
+    "base": "https://images.hlido.eu/reviews/shashankss1205-codegraphcontext/run-70f92117c1e33804-cgc-codes",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page__features.png",
+      "page_understand.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/shashankss1205-codegraphcontext/run-70f92117c1e33804-cgc-codes/home.png",
+      "https://images.hlido.eu/reviews/shashankss1205-codegraphcontext/run-70f92117c1e33804-cgc-codes/page_.png",
+      "https://images.hlido.eu/reviews/shashankss1205-codegraphcontext/run-70f92117c1e33804-cgc-codes/page__features.png",
+      "https://images.hlido.eu/reviews/shashankss1205-codegraphcontext/run-70f92117c1e33804-cgc-codes/page_understand.png"
+    ]
+  }
 }
