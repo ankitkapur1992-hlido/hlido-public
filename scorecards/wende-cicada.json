@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0",
+  "slug": "wende-cicada",
+  "name": "Cicada",
+  "agent_url": "https://cicada-mcp.vercel.app/",
+  "repo_url": "https://github.com/wende/cicada",
+  "category": "Coding",
+  "run_id": "run-d3ad6e30c5229115-cicada-mcp-vercel-app",
+  "run_at": "2026-08-19T00:32:15.224Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "AST-powered code intelligence for Elixir (and beta Python) delivered over MCP, with a refreshingly transparent — if vendor-run — benchmark instead of vibes.",
+    "body": "Cicada (cicada-mcp, MIT) gives an AI assistant structured, symbol-level access to an Elixir codebase — modules, functions, signatures, typespecs, docs with precise locations — plus a full call graph and impact analysis, semantic search by concept rather than exact name, and git-integrated attribution (who wrote code, review context, co-change patterns). Python support is in beta. It runs local and private with zero telemetry and installs cleanly via uv (uv tool install cicada-mcp), working with Claude, Cursor, Gemini, VS Code, OpenCode and Codex. What lifts Cicada above the crowded 'code context for agents' field is its willingness to show numbers: a dated November 2025 benchmark against a standard agent on two real repos (4kLoC litmus, 12kLoC oban) reports 20–69% fewer tokens, 27–48% less wall time, and higher accuracy scores, with a linked full report and a published JSON. Hlido treats these as vendor-run and self-judged (scored by an LLM analysing the two end reports), so they are credible-but-not-independent — but publishing the methodology and raw data is materially more honest than the unbacked superiority claims common in this category. The testimonials are an interesting twist: they are attributed to AI tools (Gemini, Codex, Claude Code, Cursor) rather than humans, fitting the agent-as-user framing but not independently verifiable. Reviewed from the marketing and docs surface only; the indexing and query quality were not exercised.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) for an MIT-licensed, local, MCP-native code-intelligence tool with a real design (AST symbol access, call graph, semantic search, git attribution) and — unusually — a dated, methodology-published benchmark rather than bare claims, discounted because that benchmark is vendor-run and LLM-judged, Python is still beta, the Elixir focus is niche, and the review is surface-only. Low-medium confidence.",
+  "what_it_does_well": [
+    "Structured, symbol-level code access over MCP — modules, functions, signatures, typespecs and docs with precise locations, plus a full call graph and impact analysis",
+    "Semantic search by concept (finds verify_credentials when you search 'authentication') and git-integrated attribution for design context",
+    "Transparent benchmarking: a dated Nov-2025 test on two real repos with a linked full report and published JSON — method shown, not just a headline",
+    "Local and private with zero telemetry; clean uv install; works with Claude, Cursor, Gemini, VS Code, OpenCode and Codex",
+    "MIT-licensed and open source"
+  ],
+  "what_it_fails_at": [
+    "The benchmark is vendor-run and LLM-judged (Sonnet analysing the two end reports) — credible but not independent",
+    "Elixir-first with Python only in beta — narrow language coverage versus general-purpose code-graph tools",
+    "Testimonials are AI-authored and unverifiable; there is little independent human social proof on the surface",
+    "Surface-only review — Hlido did not index a codebase, so query accuracy and completeness are unverified"
+  ],
+  "best_for": [
+    "Elixir teams who want their AI assistant to navigate, understand impact, and refactor safely without token-burning greps",
+    "Developers who value a local, telemetry-free tool with a published benchmark methodology",
+    "Python users comfortable adopting a beta feature"
+  ],
+  "not_recommended_for": [
+    "Teams needing mature multi-language coverage today (Python is beta; most languages unsupported)",
+    "Anyone requiring independent, third-party benchmark verification",
+    "Non-developers — this is an MCP tool wired into a coding assistant"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Structured, symbol-level code access over MCP — modules, functions, signatures, typespecs and docs with precise locations, plus a full call graph and impact analysis",
+      "source": "https://cicada-mcp.vercel.app/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Semantic search by concept (finds verify_credentials when you search 'authentication') and git-integrated attribution for design context",
+      "source": "https://cicada-mcp.vercel.app/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Transparent benchmarking: a dated Nov-2025 test on two real repos with a linked full report and published JSON — method shown, not just a headline",
+      "source": "https://cicada-mcp.vercel.app/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Local and private with zero telemetry; clean uv install; works with Claude, Cursor, Gemini, VS Code, OpenCode and Codex",
+      "source": "https://cicada-mcp.vercel.app/",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://cicada-mcp.vercel.app/ (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install with `uv tool install cicada-mcp`; it runs as a local MCP server that Claude, Cursor, Gemini, VS Code, OpenCode or Codex query for symbol-level code intelligence, call-graph impact and semantic search.",
+    "agent_friendly_score": 9
+  },
+  "summary": "AST-powered code intelligence for Elixir (and beta Python) delivered over MCP, with a refreshingly transparent — if vendor-run — benchmark instead of vibes.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/wende-cicada.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "A code-intelligence tool, not a generator of synthetic media or deceptive content — Article-50(4) marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-d3ad6e30c5229115-cicada-mcp-vercel-app",
+    "base": "https://images.hlido.eu/reviews/wende-cicada/run-d3ad6e30c5229115-cicada-mcp-vercel-app",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/wende-cicada/run-d3ad6e30c5229115-cicada-mcp-vercel-app/home.png",
+      "https://images.hlido.eu/reviews/wende-cicada/run-d3ad6e30c5229115-cicada-mcp-vercel-app/page_.png",
+      "https://images.hlido.eu/reviews/wende-cicada/run-d3ad6e30c5229115-cicada-mcp-vercel-app/page_.png",
+      "https://images.hlido.eu/reviews/wende-cicada/run-d3ad6e30c5229115-cicada-mcp-vercel-app/page_.png"
+    ]
+  }
+}
