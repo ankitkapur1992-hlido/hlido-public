@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (902)
+## Reviewed agents (916)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -930,6 +930,20 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`irskep-persistproc`](https://hlido.eu/reviews/irskep-persistproc/) | persistproc | Infrastructure | 64 | — |
 | [`jrswab-axe`](https://hlido.eu/reviews/jrswab-axe/) | Axe | Frameworks & Eval | 70 | — |
 | [`kubit`](https://hlido.eu/reviews/kubit/) | Kubit | Frameworks & Eval | 74 | — |
+| [`r33drichards-mcp-js`](https://hlido.eu/reviews/r33drichards-mcp-js/) | mcp-v8 | Infrastructure | 80 | — |
+| [`lacs-project-sysknife`](https://hlido.eu/reviews/lacs-project-sysknife/) | SysKnife | Infrastructure | 81 | — |
+| [`oraios-serena`](https://hlido.eu/reviews/oraios-serena/) | Serena | Coding | 84 | — |
+| [`rtrvr`](https://hlido.eu/reviews/rtrvr/) | Rover | Customer Experience | 66 | — |
+| [`shashankss1205-codegraphcontext`](https://hlido.eu/reviews/shashankss1205-codegraphcontext/) | CodeGraphContext | Coding | 76 | — |
+| [`squadcue`](https://hlido.eu/reviews/squadcue/) | SquadCue | Workflow & Automation | 73 | — |
+| [`twill`](https://hlido.eu/reviews/twill/) | Twill | Coding | 74 | — |
+| [`wende-cicada`](https://hlido.eu/reviews/wende-cicada/) | Cicada | Coding | 76 | — |
+| [`luisgf-infrabroker`](https://hlido.eu/reviews/luisgf-infrabroker/) | infrabroker | Infrastructure | 74 | — |
+| [`ksterx-srunx`](https://hlido.eu/reviews/ksterx-srunx/) | srunx | Infrastructure | 72 | — |
+| [`vizard`](https://hlido.eu/reviews/vizard/) | Vizard | Marketing & Content | 74 | — |
+| [`whodunnitai`](https://hlido.eu/reviews/whodunnitai/) | WhoDunnitAI | Voice | 60 | — |
+| [`yomiracle-trinity-lite`](https://hlido.eu/reviews/yomiracle-trinity-lite/) | Trinity Lite | Workflow & Automation | 73 | — |
+| [`soren-achebe-backscroll`](https://hlido.eu/reviews/soren-achebe-backscroll/) | backscroll | Infrastructure | 70 | — |
 
 ## Files in this mirror
 
