@@ -1,0 +1,128 @@
+{
+  "schema_version": "2.0",
+  "slug": "twill",
+  "name": "Twill",
+  "agent_url": "https://twill.ai",
+  "repo_url": null,
+  "category": "Coding",
+  "run_id": "run-c82e612be4e3bb4b-twill-ai",
+  "run_at": "2026-08-19T00:31:23.334Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A 'software factory' that turns GitHub, Slack and Linear tasks into tested pull requests inside a warm, full-stack dev environment — a strong, concrete pitch that the public surface can't yet prove.",
+    "body": "Twill (twill.ai) markets a hosted 'software factory': a task from GitHub, Slack or Linear spins up Claude Code, Codex or OpenCode in its own isolated copy of your company's environment — repos cloned, dependencies installed, services warm, the app runnable — and returns a pull request with proof attached. The differentiators it names are concrete and credible as a design: multi-repo reasoning across frontend/backend/workers/infra, agents that can install packages, run Docker, seed databases, start dev servers and run tests inside an isolated task fork, and model routing that puts frontier models on hard tasks and cheaper open-source models (Qwen, Kimi, GLM) on routine work using your own keys at provider rates. The integration list (GitHub, Slack, Linear, Notion, Sentry, GCP, AWS, Asana, Datadog) and a specific, believable automation catalogue — Sentry triage-and-fix, daily GitHub issue triage, dependency-update PRs, flaky-test remediation, stale-PR cleanup — make the offering legible rather than hand-wavy, and MCP-server/skill extensibility is advertised. It is 'backed by' an investor and offers a free Pro tier for open source. The gap is the usual one for a demo-gated commercial product: everything here is the vendor's own description, there is no independent evidence or public case study, pricing sits behind the nav, and Hlido reviewed the marketing surface, not a running task. The 'proof attached to every PR' claim is the most interesting and the least verifiable from outside. A coherent, well-scoped pitch; treat the capabilities as claimed until demonstrated.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-19",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a coherent, concretely-specified autonomous-coding platform (isolated full-stack task environments, multi-repo reasoning, real integrations, a believable automation catalogue, own-key model routing) with a legible value proposition — discounted to low-medium confidence because it is a demo-gated commercial surface with no public evidence, case studies or transparent pricing, and Hlido reviewed the marketing pages rather than a running task. The 'proof attached to every PR' claim is unverified.",
+  "what_it_does_well": [
+    "Concrete, well-scoped pitch — triggers from GitHub/Slack/Linear produce tested PRs inside a warm, full-stack isolated environment (repos cloned, deps installed, services running)",
+    "Multi-repo reasoning across frontend, backend, workers, infra and shared packages in one task",
+    "Own-key model routing across providers (frontier models for hard tasks, cheaper open-source models for routine work at provider rates) — a real cost lever",
+    "Broad, named integrations (GitHub, Slack, Linear, Notion, Sentry, GCP, AWS, Asana, Datadog) and MCP-server/skill extensibility",
+    "A specific, believable automation catalogue (Sentry triage-and-fix, issue triage, dependency updates, flaky-test remediation, stale-PR cleanup) plus a free Pro tier for open source"
+  ],
+  "what_it_fails_at": [
+    "No independent evidence or public case studies — every capability is vendor-described",
+    "The signature 'proof attached to every PR' claim is exactly what a surface review cannot verify",
+    "Pricing is behind the nav, not on the captured surface — a transparency gap for buyers",
+    "Surface-only review — Hlido did not run a task, so environment isolation, test execution and PR quality are unverified"
+  ],
+  "best_for": [
+    "Engineering teams wanting to route routine work (triage, dependency updates, flaky-test fixes) to agents that open tested PRs",
+    "Teams whose tasks span multiple repos and need a full stack running to be done well",
+    "Cost-conscious adopters who want to run cheaper open-source models on their own keys for routine work",
+    "Open-source maintainers eligible for the free Pro tier"
+  ],
+  "not_recommended_for": [
+    "Buyers who need independent evidence, case studies or transparent pricing before adopting",
+    "Teams that cannot grant a hosted agent access to run their full stack and open PRs",
+    "Anyone wanting a self-hosted, on-prem-only solution (this is a hosted factory)"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Concrete, well-scoped pitch — triggers from GitHub/Slack/Linear produce tested PRs inside a warm, full-stack isolated environment (repos cloned, deps installed, services running)",
+      "source": "https://twill.ai",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Multi-repo reasoning across frontend, backend, workers, infra and shared packages in one task",
+      "source": "https://twill.ai",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Own-key model routing across providers (frontier models for hard tasks, cheaper open-source models for routine work at provider rates) — a real cost lever",
+      "source": "https://twill.ai",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Broad, named integrations (GitHub, Slack, Linear, Notion, Sentry, GCP, AWS, Asana, Datadog) and MCP-server/skill extensibility",
+      "source": "https://twill.ai",
+      "tested_at": "2026-08-19",
+      "verified": true
+    },
+    {
+      "claim": "Hands-on runtime behaviour (executing the tool / a live task)",
+      "source": "https://twill.ai (surface-only review; not hands-on tested)",
+      "tested_at": "2026-08-19",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Tasks are created from the web app, a desktop app, a CLI, or triggers in GitHub/Slack/Linear; each spins up Claude Code / Codex / OpenCode in an isolated full-stack environment and returns a PR. Extensible via MCP servers and skills; runs on your own model keys.",
+    "agent_friendly_score": 7
+  },
+  "summary": "A 'software factory' that turns GitHub, Slack and Linear tasks into tested pull requests inside a warm, full-stack dev environment — a strong, concrete pitch that the public surface can't yet prove.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-19",
+  "attestation_url": "/data/attestations/twill.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-19",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "An autonomous software-engineering platform that produces code/PRs, not synthetic media or deceptive content — Article-50(4) synthetic-content marking obligations do not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-c82e612be4e3bb4b-twill-ai",
+    "base": "https://images.hlido.eu/reviews/twill/run-c82e612be4e3bb4b-twill-ai",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_pricing.png",
+      "page_download.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/twill/run-c82e612be4e3bb4b-twill-ai/home.png",
+      "https://images.hlido.eu/reviews/twill/run-c82e612be4e3bb4b-twill-ai/page_.png",
+      "https://images.hlido.eu/reviews/twill/run-c82e612be4e3bb4b-twill-ai/page_pricing.png",
+      "https://images.hlido.eu/reviews/twill/run-c82e612be4e3bb4b-twill-ai/page_download.png"
+    ]
+  }
+}
