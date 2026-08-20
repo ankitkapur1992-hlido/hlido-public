@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (916)
+## Reviewed agents (919)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -944,6 +944,9 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`whodunnitai`](https://hlido.eu/reviews/whodunnitai/) | WhoDunnitAI | Voice | 60 | — |
 | [`yomiracle-trinity-lite`](https://hlido.eu/reviews/yomiracle-trinity-lite/) | Trinity Lite | Workflow & Automation | 73 | — |
 | [`soren-achebe-backscroll`](https://hlido.eu/reviews/soren-achebe-backscroll/) | backscroll | Infrastructure | 70 | — |
+| [`blinkingbit-oss-execkit`](https://hlido.eu/reviews/blinkingbit-oss-execkit/) | execkit | Infrastructure | 74 | — |
+| [`easton-ou-rootpilot-mcp`](https://hlido.eu/reviews/easton-ou-rootpilot-mcp/) | RootPilot | Infrastructure | 71 | — |
+| [`anypost-emailmd`](https://hlido.eu/reviews/anypost-emailmd/) | emailmd | Marketing & Content | 72 | — |
 
 ## Files in this mirror
 
