@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "slug": "cactuscompute",
+  "name": "Cactus",
+  "agent_url": "https://cactuscompute.com",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-cactuscompute-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "On-device AI for phones, wearables and microcontrollers, with a cloud fallback — a focused, credible edge-inference stack (runtime + a 14MB agentic model) with 5.9k+ stars.",
+    "body": "Cactus is an edge/on-device inference stack with three clearly separated pieces: Cactus Hybrid (post-trained models that know when they're wrong and escalate to the cloud), Cactus Needle (a 14MB agentic LLM doing tool-calling, device use and structured extraction on tiny devices), and Cactus Engine (a resource-constrained runtime with quantization tuned for battery, speed and memory). The positioning is sharp and technically coherent — on-device AI for phones, wearables, robots, home assistants and microcontrollers, with cloud fallback rather than pure-local dogma — and 5.9k+ GitHub stars plus visible docs, blog, a changelog and a compare page signal a real, actively developed project. For agent builders, a 14MB model that does tool-calling and structured extraction locally is a genuinely interesting primitive. The limits of a homepage review apply: the actual quantization quality, inference speed, battery claims and the 'knows when it's wrong' hybrid-escalation behaviour are exactly the things that decide whether an edge stack is usable, and none can be verified without hands-on benchmarking. Promising and well-scoped; verify the performance claims on your target hardware.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) for a focused, credible edge-inference stack with a clear three-part architecture (Hybrid / Needle / Engine), a differentiated 14MB agentic model, and real signals of active development (5.9k+ stars, docs, changelog, compare page). Not higher because the load-bearing claims — quantization quality, battery/speed, and the hybrid 'knows when it's wrong' escalation — are unverifiable from the public surface and are precisely what determine on-device usability. Not FADING because the product is concrete, technically coherent and clearly maintained.",
+  "what_it_does_well": [
+    "Sharp, coherent positioning: on-device AI for phones/wearables/robots/microcontrollers with cloud fallback (not pure-local dogma)",
+    "Cactus Needle — a 14MB agentic LLM doing tool-calling, device use and structured extraction on tiny devices — is a genuinely interesting edge primitive",
+    "Clear three-part separation (Hybrid models, Needle model, Engine runtime) that maps to real deployment decisions",
+    "Signals of an active, real project: 5.9k+ GitHub stars, docs, blog, changelog and a compare page"
+  ],
+  "what_it_fails_at": [
+    "The decisive claims — quantization quality, inference speed, battery consumption — are asserted ('SOTA') but unverifiable from the homepage",
+    "The Hybrid 'models that know when they're wrong and request cloud help' behaviour is unproven on the surface and hard to guarantee",
+    "Edge deployment success is highly hardware-dependent; homepage says nothing about supported chips/OS matrix",
+    "No pricing/licensing detail captured on the surface for the commercial pieces"
+  ],
+  "best_for": [
+    "Mobile/embedded developers who need local inference with an optional cloud fallback",
+    "Agent builders wanting a tiny on-device model that can tool-call and extract structured output offline",
+    "Products with privacy, latency or connectivity constraints that rule out cloud-only inference"
+  ],
+  "not_recommended_for": [
+    "Teams that need certified performance/battery numbers before adoption (benchmark on target hardware first)",
+    "Server-side/cloud-only workloads where on-device constraints add no value",
+    "Anyone needing broad, documented hardware-compatibility guarantees up front"
+  ],
+  "red_flags": [
+    "Edge-inference value lives entirely in real-world quantization quality, speed and battery on YOUR hardware — these 'SOTA' claims can't be verified from the site, so benchmark before committing.",
+    "The Hybrid self-doubt-and-escalate mechanism is a strong claim with no surface evidence of how reliable it is."
+  ],
+  "compared_to": [
+    {
+      "slug": "ollama",
+      "verdict_diff": "Ollama makes it trivial to run open models locally on desktops/servers; Cactus targets the harder edge tier — phones, wearables, microcontrollers — with a purpose-built runtime, aggressive quantization and a tiny agentic model plus cloud fallback. Choose Ollama for easy local desktop inference, Cactus for genuinely on-device/embedded deployment.",
+      "preferred_for_axis": "embedded-edge-inference-vs-desktop-local-inference"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "On-device AI with cloud fallback for phones, wearables, robots, home assistants and microcontrollers",
+      "source": "https://cactuscompute.com (homepage hero)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Cactus Needle: a 14MB agentic LLM with tool calling, device use and structured extraction",
+      "source": "https://cactuscompute.com ('Cactus Needle' product block + [NEW] banner)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Cactus Hybrid: post-trained models that know when they're wrong and request cloud help",
+      "source": "https://cactuscompute.com ('Cactus Hybrid' product block)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Cactus Engine: resource-constrained inference runtime with quantization for battery/speed",
+      "source": "https://cactuscompute.com ('Cactus Engine' product block)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "5.9k+ GitHub stars; docs, blog, changelog and compare pages present",
+      "source": "https://cactuscompute.com (hero stats + nav/footer)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Provides an on-device inference runtime (Cactus Engine) and models (Needle/Hybrid) with SDK/docs for integrating local tool-calling and structured extraction into apps and agents. Behaviour is testable via the open-source runtime, though real performance is hardware-dependent. Relevant to agents as an edge-inference primitive rather than a hosted agent surface.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "On-device AI for phones, wearables and microcontrollers, with a cloud fallback —",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "On-device AI for phones, wearables and microcontrollers, with a cloud fallback — a focused, credible edge-inference stack (runtime + a 14MB agentic model) with 5.9k+ stars.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/cactuscompute.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Cactus is an inference runtime/model provider; whether Article-50 output-marking applies depends on the downstream app. No marking statement or detection tool is present on the surface — recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-9f5b6c1990ff7b1d-cactuscompute-com",
+    "base": "https://images.hlido.eu/reviews/cactuscompute/run-9f5b6c1990ff7b1d-cactuscompute-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_hybrid.png",
+      "page_needle.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/cactuscompute/run-9f5b6c1990ff7b1d-cactuscompute-com/home.png",
+      "https://images.hlido.eu/reviews/cactuscompute/run-9f5b6c1990ff7b1d-cactuscompute-com/page_.png",
+      "https://images.hlido.eu/reviews/cactuscompute/run-9f5b6c1990ff7b1d-cactuscompute-com/page_hybrid.png",
+      "https://images.hlido.eu/reviews/cactuscompute/run-9f5b6c1990ff7b1d-cactuscompute-com/page_needle.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
