@@ -21,19 +21,19 @@
   "confidence": "high",
   "review_url": "/reviews/johnneerdael-netskope-mcp/",
   "hlido_opinion": {
-    "headline": "Seventy tools for Netskope Private Access with three documented deployment paths and a decision table telling you which to pick \u2014 enterprise-grade documentation from what appears to be an independent maintainer.",
-    "body": "This is a well-built documentation surface. The server exposes 70 tools covering publishers, private apps, local brokers, policies, SCIM identity data, upgrade profiles, steering, alerts, search and validation. Rather than listing features, the landing page opens with a decision table: hosted HTTP if you want the quickest client setup and can pass tenant URL and API token as MCP request headers, local stdio if your client launches servers as local commands, self-hosted HTTP if you want a private endpoint behind your own network controls. Each row links where to start. That is a genuinely user-centred way to open technical documentation and it is uncommon. Install commands for both npm and Docker (ghcr.io) are given verbatim, the documentation is sectioned into starter, install, tools, workflows, examples, operations and reference \u2014 including a published tool surface and a dedicated tool-and-security page \u2014 and the whole thing is version-stamped as applying to v6.3.0. A version-pinned documentation set with a workflows section describing real operating patterns is the mark of something maintained in earnest. The caveats are about provenance rather than quality: this manages enterprise zero-trust network access infrastructure, and while the docs mention passing an API token as MCP request headers, that mechanism deserves more scrutiny than the surface gives it \u2014 a tenant token transiting request headers to a hosted endpoint is a meaningful trust decision. The hosted option's operator is not identified beyond the maintainer's own GitHub identity, and there is no third-party or vendor endorsement indicating Netskope itself has reviewed this.",
+    "headline": "Seventy tools for Netskope Private Access with three documented deployment paths and a decision table telling you which to pick — enterprise-grade documentation from what appears to be an independent maintainer.",
+    "body": "This is a well-built documentation surface. The server exposes 70 tools covering publishers, private apps, local brokers, policies, SCIM identity data, upgrade profiles, steering, alerts, search and validation. Rather than listing features, the landing page opens with a decision table: hosted HTTP if you want the quickest client setup and can pass tenant URL and API token as MCP request headers, local stdio if your client launches servers as local commands, self-hosted HTTP if you want a private endpoint behind your own network controls. Each row links where to start. That is a genuinely user-centred way to open technical documentation and it is uncommon. Install commands for both npm and Docker (ghcr.io) are given verbatim, the documentation is sectioned into starter, install, tools, workflows, examples, operations and reference — including a published tool surface and a dedicated tool-and-security page — and the whole thing is version-stamped as applying to v6.3.0. A version-pinned documentation set with a workflows section describing real operating patterns is the mark of something maintained in earnest. The caveats are about provenance rather than quality: this manages enterprise zero-trust network access infrastructure, and while the docs mention passing an API token as MCP request headers, that mechanism deserves more scrutiny than the surface gives it — a tenant token transiting request headers to a hosted endpoint is a meaningful trust decision. The hosted option's operator is not identified beyond the maintainer's own GitHub identity, and there is no third-party or vendor endorsement indicating Netskope itself has reviewed this.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY and near the top because nearly every check passes with evidence: version-pinned docs, a published tool surface, three documented deployment paths with a decision table, verbatim install commands for two package channels, and dedicated operations and security sections. Held out of the top band on provenance rather than craft \u2014 this is an independent project managing enterprise zero-trust infrastructure, the hosted endpoint's operator is not identified, and the header-borne tenant-token pattern is documented but not security-argued.",
+  "tier_rationale": "STEADY and near the top because nearly every check passes with evidence: version-pinned docs, a published tool surface, three documented deployment paths with a decision table, verbatim install commands for two package channels, and dedicated operations and security sections. Held out of the top band on provenance rather than craft — this is an independent project managing enterprise zero-trust infrastructure, the hosted endpoint's operator is not identified, and the header-borne tenant-token pattern is documented but not security-argued.",
   "what_it_does_well": [
     "Opens with a decision table matching deployment path to situation, instead of a feature list",
     "70 tools with a published tool surface, not just a headline count",
     "Three documented deployment paths: hosted HTTP, local stdio, self-hosted HTTP",
     "Verbatim install commands for both npm and Docker (ghcr.io)",
-    "Documentation version-pinned to v6.3.0 \u2014 the reader knows what the docs describe",
+    "Documentation version-pinned to v6.3.0 — the reader knows what the docs describe",
     "Separate workflows and operations sections covering real operating patterns, plus a tool-and-security reference"
   ],
   "what_it_fails_at": [
@@ -45,16 +45,16 @@
   ],
   "best_for": [
     "Netskope NPA administrators who want AI-assisted management of publishers, private apps and policies",
-    "Teams that will self-host the HTTP endpoint behind their own network controls \u2014 the documented path that avoids the third-party trust question",
+    "Teams that will self-host the HTTP endpoint behind their own network controls — the documented path that avoids the third-party trust question",
     "Engineers who evaluate on documentation quality; this is among the strongest surfaces in its class"
   ],
   "not_recommended_for": [
     "Organisations requiring vendor-endorsed or vendor-supported tooling for zero-trust infrastructure",
-    "Teams that cannot accept an unidentified third party in the path of a tenant API token \u2014 use the self-hosted path instead",
+    "Teams that cannot accept an unidentified third party in the path of a tenant API token — use the self-hosted path instead",
     "Non-Netskope environments; this is entirely platform-specific"
   ],
   "red_flags": [
-    "The hosted HTTP path routes a Netskope tenant URL and API token through an endpoint whose operator is identified only by a personal GitHub account. The self-hosted path exists and is documented \u2014 for privileged infrastructure credentials, it is the one to use.",
+    "The hosted HTTP path routes a Netskope tenant URL and API token through an endpoint whose operator is identified only by a personal GitHub account. The self-hosted path exists and is documented — for privileged infrastructure credentials, it is the one to use.",
     "This manages enterprise zero-trust network access with no visible vendor review or endorsement. The documentation quality is high, but quality is not provenance."
   ],
   "compared_to": [
@@ -76,7 +76,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "MCP server with 70 published tools across both stdio and Streamable HTTP transports, plus a hosted endpoint requiring only header credentials. The published tool surface and worked prompt examples mean an agent can reason about capability before connecting \u2014 among the better-documented agent surfaces reviewed.",
+    "agent_integration_path": "MCP server with 70 published tools across both stdio and Streamable HTTP transports, plus a hosted endpoint requiring only header credentials. The published tool surface and worked prompt examples mean an agent can reason about capability before connecting — among the better-documented agent surfaces reviewed.",
     "agent_friendly_score": 9
   },
   "claims": [
@@ -173,5 +173,14 @@
       "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/pagestarter_.png",
       "https://images.hlido.eu/reviews/johnneerdael-netskope-mcp/run-9100eae4f581f3e8-johnneerdael-github-io/pageinstall_.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-13",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
