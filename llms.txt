@@ -1,6 +1,6 @@
 # Hlido — The Trust Layer for AI Agents
 # https://hlido.eu
-# llms.txt v1 — last updated 2026-08-20 (auto-regenerated on every publish)
+# llms.txt v1 — last updated 2026-08-21 (auto-regenerated on every publish)
 
 ## What Hlido is
 
@@ -10,10 +10,10 @@ claim-by-claim evidence. Reviews are agent-parseable first, human-readable secon
 
 ## What we have right now
 
-- 915 published reviews (machine-readable, claim-tested)
+- 925 published reviews (machine-readable, claim-tested)
 - 19-tool MCP server live at https://hlido.eu/mcp (JSON-RPC 2.0, no auth)
-- HuggingFace dataset: https://huggingface.co/datasets/hlido-eu/agent-benchmark
-- Public mirror: https://github.com/ankitkapur1992-hlido/hlido-public
+- [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark)
+- [Public mirror](https://github.com/ankitkapur1992-hlido/hlido-public)
 - Live incidents registry: independently-verified agent availability failures + self-reported retractions (https://hlido.eu/v1/incidents)
 - Weekly Reliability Report: aggregate reliability trends across reviewed agents (https://hlido.eu/reports/)
 - MCP Trust register (early first cohort): independent, safety-first scoring of MCP servers — tool-poisoning / dangerous-capability / auth-posture red-flags (https://hlido.eu/mcp/, JSON: https://hlido.eu/data/mcp-register.json)
@@ -38,24 +38,24 @@ separately by robots.txt Content-Signals: ai-input=yes, ai-train=no.)
 
 ## How to consume
 
-- All reviews JSON: https://hlido.eu/data/review-registry.json
-- Per-review scorecard: https://hlido.eu/data/scorecards/{slug}.json (sanitized v1.0 schema; LLM-backed agents also carry a `safety_probe` block — jailbreak/manipulation-resistance rate + open instrument + per-probe evidence, rolling out)
-- HMAC-signed Trust Attestation: https://hlido.eu/data/attestations/{slug}.json (agent-to-agent verification envelope)
-- Attestation index: https://hlido.eu/data/attestations/index.json
-- Open data dump (CC-BY-4.0): https://hlido.eu/data/open/hlido-corpus.jsonl (with manifest + sha256 + LICENSE). Every row carries claim/check verdicts with evidence quotes, the EU AI Act Art-50 transparency row, an incident count, and the date each was established — the dated facts needed to cross-check a statement about a tool.
-- Dataset descriptors for the dump: https://hlido.eu/data/open/dataset.jsonld (schema.org/Dataset) and https://hlido.eu/data/open/croissant.json (MLCommons Croissant 1.1)
-- Live changelog feed: https://hlido.eu/changelog/ (HTML), https://hlido.eu/changelog/feed.xml (RSS), https://hlido.eu/changelog/feed.json (JSON Feed)
-- RSS feed (publishes only): https://hlido.eu/feed.xml
-- Full corpus: https://hlido.eu/llms-full.txt
-- MCP discovery: https://hlido.eu/.well-known/mcp-server-card/server.json
-- AGENTS.md entry point (agents.md convention): https://hlido.eu/AGENTS.md
-- MCP config (copy-paste / auto-load): https://hlido.eu/.mcp.json
-- Agent discovery manifest: https://hlido.eu/agents.json
-- Incidents JSON: https://hlido.eu/data/incidents.json (also API: https://hlido.eu/v1/incidents, RSS: https://hlido.eu/v1/incidents/feed.xml)
+- [All reviews JSON](https://hlido.eu/data/review-registry.json)
+- [Per-review scorecard](https://hlido.eu/data/scorecards/{slug}.json): (sanitized v1.0 schema; LLM-backed agents also carry a `safety_probe` block — jailbreak/manipulation-resistance rate + open instrument + per-probe evidence, rolling out)
+- [HMAC-signed Trust Attestation](https://hlido.eu/data/attestations/{slug}.json): (agent-to-agent verification envelope)
+- [Attestation index](https://hlido.eu/data/attestations/index.json)
+- [Open data dump (CC-BY-4.0)](https://hlido.eu/data/open/hlido-corpus.jsonl): (with manifest + sha256 + LICENSE). Every row carries claim/check verdicts with evidence quotes, the EU AI Act Art-50 transparency row, an incident count, and the date each was established — the dated facts needed to cross-check a statement about a tool.
+- [Dataset descriptors for the dump](https://hlido.eu/data/open/dataset.jsonld): (schema.org/Dataset) and https://hlido.eu/data/open/croissant.json (MLCommons Croissant 1.1)
+- [Live changelog feed](https://hlido.eu/changelog/): (HTML), https://hlido.eu/changelog/feed.xml (RSS), https://hlido.eu/changelog/feed.json (JSON Feed)
+- [RSS feed (publishes only)](https://hlido.eu/feed.xml)
+- [Full corpus](https://hlido.eu/llms-full.txt)
+- [MCP discovery](https://hlido.eu/.well-known/mcp-server-card/server.json)
+- [AGENTS.md entry point (agents.md convention)](https://hlido.eu/AGENTS.md)
+- [MCP config (copy-paste / auto-load)](https://hlido.eu/.mcp.json)
+- [Agent discovery manifest](https://hlido.eu/agents.json)
+- [Incidents JSON](https://hlido.eu/data/incidents.json): (also API: https://hlido.eu/v1/incidents, RSS: https://hlido.eu/v1/incidents/feed.xml)
 - MCP incident query: `{"method":"tools/call","params":{"name":"get_incidents","arguments":{}}}`
-- Reliability report (JSON): https://hlido.eu/reports/report.json (latest edition; aggregate reliability signals across reviewed agents, dated editions under https://hlido.eu/reports/)
-- Agentic-Commerce Readiness (ACR) index: https://hlido.eu/data/acr-index.json — per-agent ACR (0-100) + band + axes + evidence_basis: is an agent ready to be delegated to / transacted with via MCP/ACP/AP2/A2W? (independent, evidence-based; sanitized)
-- Transparency Passport index: https://hlido.eu/data/passports/index.json — free, per-vendor handoff record for procurement/audit: what an independent desk verified + the EU AI Act Art-50 posture + dated run evidence, in one document. Per-vendor: https://hlido.eu/data/passports/{slug}.json (human page: https://hlido.eu/passport/{slug}/). Issued only when an independent review, an Art-50 reading AND captured run evidence all exist. The review score and the Art-50 readiness are separate fields and are never combined into one number.
+- [Reliability report (JSON)](https://hlido.eu/reports/report.json): (latest edition; aggregate reliability signals across reviewed agents, dated editions under https://hlido.eu/reports/)
+- [Agentic-Commerce Readiness (ACR) index](https://hlido.eu/data/acr-index.json): — per-agent ACR (0-100) + band + axes + evidence_basis: is an agent ready to be delegated to / transacted with via MCP/ACP/AP2/A2W? (independent, evidence-based; sanitized)
+- [Transparency Passport index](https://hlido.eu/data/passports/index.json): — free, per-vendor handoff record for procurement/audit: what an independent desk verified + the EU AI Act Art-50 posture + dated run evidence, in one document. Per-vendor: https://hlido.eu/data/passports/{slug}.json (human page: https://hlido.eu/passport/{slug}/). Issued only when an independent review, an Art-50 reading AND captured run evidence all exist. The review score and the Art-50 readiness are separate fields and are never combined into one number.
 
 ## Market intelligence (Agent Market Pulse — early, growing)
 
@@ -64,28 +64,28 @@ corpus (never vendor self-reports). Every module carries its own method + covera
 signals say "unmeasured", never a guessed number. Free at answer-time like everything above.
 
 - Agent Market Pulse (tier health, entrants, surface-readiness, compliance bands, mortality signal): https://hlido.eu/data/market-pulse.json
-- Intel facet taxonomy (fetch BEFORE querying — what lenses exist + per-value record counts): https://hlido.eu/data/intel/taxonomy.json
+- [Intel facet taxonomy (fetch BEFORE querying — what lenses exist + per-value record counts)](https://hlido.eu/data/intel/taxonomy.json)
 - Intel store (durable evidence-cited claims, sparse global facets, typed relations): index https://hlido.eu/data/intel/index.json · per-record https://hlido.eu/data/intel/records/{id}.json
 - Query it: MCP tool intel_query at https://hlido.eu/mcp — or keyless GET https://hlido.eu/v1/intel?sector=K.65&geo=eu (params = facets)
 - Market pulse via MCP: tool market_pulse (optional {category}) — human view: https://hlido.eu/pulse/
-- Customer-zero open questions the store is working toward: https://hlido.eu/data/intel/questions.json
+- [Customer-zero open questions the store is working toward](https://hlido.eu/data/intel/questions.json)
 - Zero-result queries are logged and drive what we collect next — a miss today is a record tomorrow.
 
 ## Agentic commerce — is an agent ready to be transacted with?
 
-- ACR open data: https://hlido.eu/data/acr-index.json (per-agent score + band: COMMERCE-READY / INTEGRABLE / SURFACE-ONLY / CLOSED, with evidence_basis)
+- [ACR open data](https://hlido.eu/data/acr-index.json): (per-agent score + band: COMMERCE-READY / INTEGRABLE / SURFACE-ONLY / CLOSED, with evidence_basis)
 - ACR check via MCP: tool commerce_check {"agent_or_url":"<slug>"} — is this agent ready to be delegated to / transacted with in the agentic-commerce world (MCP/ACP/AP2/A2W)?
-- Free ACR checker (web): https://hlido.eu/check/
-- Ask about any agent (free, grounded AI Q&A over our reviews): https://hlido.eu/ask/
-- Trending agents (top-rated / freshest / rising, data-backed): https://hlido.eu/trending/ (JSON: https://hlido.eu/data/trending.json)
+- [Free ACR checker (web)](https://hlido.eu/check/)
+- [Ask about any agent (free, grounded AI Q&A over our reviews)](https://hlido.eu/ask/)
+- [Trending agents (top-rated / freshest / rising, data-backed)](https://hlido.eu/trending/): (JSON: https://hlido.eu/data/trending.json)
 - EU AI Act Article-50 Readiness Register (independent transparency-readiness signal, 800+ agents; deadline 2026-08-02): https://hlido.eu/eu-ai-act/register/ (JSON: https://hlido.eu/data/article50-register.json)
 - EU AI Act Evidence File builder (deployers: pick your agents → dated, citable evidence document, free): https://hlido.eu/eu-ai-act/evidence-file/
 - Instant Article-50 transparency check (ANY agent URL, including ones Hlido has not reviewed → live public-surface probe of AI-interaction disclosure, machine-readable marking, synthetic-content labelling; free, no sign-up): https://hlido.eu/eu-ai-act/transparency-check/ (agent-callable: MCP tool verify_transparency at https://hlido.eu/mcp)
 - Article-50 provider fix list (per agent: the observable public-surface changes that would let Hlido verify a signal it currently cannot — vendors act on it directly, agents read it as structured data): https://hlido.eu/eu-ai-act/fix-list/ (JSON: https://hlido.eu/data/art50-fix-list.json)
-- Vendor Stack Monitor (free, shareable trust-health page for your AI-agent vendor stack): https://hlido.eu/stack/
+- [Vendor Stack Monitor (free, shareable trust-health page for your AI-agent vendor stack)](https://hlido.eu/stack/)
 - Why trust Hlido / independence pledge + who runs it (named editor, no pay-to-rank, private un-gameable weights): https://hlido.eu/about/
-- Report: https://hlido.eu/blog/agentic-commerce-readiness-index-2026-06/
-- Methodology: https://hlido.eu/methodology/agentic-commerce-readiness/
+- [Report](https://hlido.eu/blog/agentic-commerce-readiness-index-2026-06/)
+- [Methodology](https://hlido.eu/methodology/agentic-commerce-readiness/)
 
 ## MCP-server safety — the MCP Trust register
 
@@ -98,15 +98,15 @@ package, or repo) — registered servers answer instantly with evidence; unseen 
 scan in seconds; unseen stdio packages are queued for an isolated sandbox scan (reported honestly as
 not_scanned until then — never assumed safe).
 
-- MCP Trust register (human): https://hlido.eu/mcp/
-- Register data (machine-readable): https://hlido.eu/data/mcp-register.json — per server: security_tier, security_score, tool_poisoning_detected, dangerous_capabilities, no_auth, findings[]
-- Per-server evidence: https://hlido.eu/data/mcp-register/{slug}.json
+- [MCP Trust register (human)](https://hlido.eu/mcp/)
+- [Register data (machine-readable)](https://hlido.eu/data/mcp-register.json): — per server: security_tier, security_score, tool_poisoning_detected, dangerous_capabilities, no_auth, findings[]
+- [Per-server evidence](https://hlido.eu/data/mcp-register/{slug}.json)
 - On-demand scan (agent): `scan_mcp` tool on https://hlido.eu/mcp · CI: `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-mcp-scan@main` (scans a repo's MCP configs per PR)
-- Enterprise allowlist feed: https://hlido.eu/data/mcp-allowlist.json — independently-evidenced allowlist candidates for org MCP policies (published conservative criteria; absence ≠ unsafe)
+- [Enterprise allowlist feed](https://hlido.eu/data/mcp-allowlist.json): — independently-evidenced allowlist candidates for org MCP policies (published conservative criteria; absence ≠ unsafe)
 
 ## Developer / agent integrations
 
-- Reference docs (MCP tools, data endpoints, scorecard schema, badge, CLI, licensing): https://hlido.eu/docs/
+- [Reference docs (MCP tools, data endpoints, scorecard schema, badge, CLI, licensing)](https://hlido.eu/docs/)
 - CLI: `npx @hlido/cli check <slug>` (also: search / compare / tier; no auth, ~10 KB pack, npm)
 - GitHub Action (vendor CI gate): `uses: ankitkapur1992-hlido/hlido-public/actions/hlido-gate@main` — fails PRs on score regression
 - Browser extension (Chrome/Firefox/Edge sideload): see https://hlido.eu/extension/ for install + manifest v3 source
@@ -114,29 +114,29 @@ not_scanned until then — never assumed safe).
 
 ## Embeddable surfaces
 
-- README/image trust badge (SVG, works where iframes don't — GitHub, npm): https://hlido.eu/badge/{slug}.svg — Markdown `[![Hlido trust score](https://hlido.eu/badge/{slug}.svg)](https://hlido.eu/check/?agent={slug})`
+- [README/image trust badge (SVG, works where iframes don't — GitHub, npm)](https://hlido.eu/badge/{slug}.svg): — Markdown `[![Hlido trust score](https://hlido.eu/badge/{slug}.svg)](https://hlido.eu/check/?agent={slug})`
 - "Verified Honest" badge variant (green mark — only for agents whose entire claim audit passed): https://hlido.eu/badge/{slug}.svg?variant=honest
-- Badge as data (shields.io endpoint schema): https://hlido.eu/badge/{slug}.json
-- Live score badge per slug (rich iframe card): https://hlido.eu/embed/{slug}/
-- Sparkline embed (score history per slug): https://hlido.eu/embed/sparkline/{slug}/
+- [Badge as data (shields.io endpoint schema)](https://hlido.eu/badge/{slug}.json)
+- [Live score badge per slug (rich iframe card)](https://hlido.eu/embed/{slug}/)
+- [Sparkline embed (score history per slug)](https://hlido.eu/embed/sparkline/{slug}/)
 - Vendor-side: free embeds, no paywall — paste an iframe
 
 ## Discovery surfaces (programmatic SEO)
 
-- Side-by-side comparison: https://hlido.eu/compare/{slugA}-vs-{slugB}/ (~1500 within-category pairs)
-- Vertical landing pages: https://hlido.eu/best/{category-or-use-case}/ (37 curated)
-- Verified Honest club (agents whose entire public claim audit passed — zero failed claims): https://hlido.eu/verified/ (JSON: https://hlido.eu/data/verified-honest.json)
+- [Side-by-side comparison](https://hlido.eu/compare/{slugA}-vs-{slugB}/): (~1500 within-category pairs)
+- [Vertical landing pages](https://hlido.eu/best/{category-or-use-case}/): (37 curated)
+- [Verified Honest club (agents whose entire public claim audit passed — zero failed claims)](https://hlido.eu/verified/): (JSON: https://hlido.eu/data/verified-honest.json)
 
 ## Data rankings & analysis (blog)
 
 Evidence-backed rankings and reliability analyses derived from the live corpus (newest first):
-- We hands-on tested 26 AI research agents. 62% are fading. (2026-08-03): https://hlido.eu/blog/research-agents-reliability-ranking/
+- [We hands-on tested 26 AI research agents. 62% are fading. (2026-08-03)](https://hlido.eu/blog/research-agents-reliability-ranking/)
 - 840 AI agents, tested and re-tested. Zero paid rankings. How an independent review desk works. (2026-07-19): https://hlido.eu/blog/how-an-independent-review-desk-works/
-- The agent economy can't talk to itself (2026-07-13): https://hlido.eu/blog/agent-economy-cant-talk-to-itself/
+- [The agent economy can't talk to itself (2026-07-13)](https://hlido.eu/blog/agent-economy-cant-talk-to-itself/)
 - 27 days out: Article 50 is the part of the EU AI Act that did not move to 2027 (2026-07-06): https://hlido.eu/blog/article-50-the-deadline-that-did-not-move/
 - We Hands-On Tested 134 AI Coding Agents — Here's How Reliable They Actually Are (2026-06-21): https://hlido.eu/blog/coding-agent-reliability-index-2026-06/
-- The State of AI Agents, 2026 — what 664 hands-on reviews reveal (2026-06-14): https://hlido.eu/blog/state-of-ai-agents-2026/
-- Index: https://hlido.eu/blog/
+- [The State of AI Agents, 2026 — what 664 hands-on reviews reveal (2026-06-14)](https://hlido.eu/blog/state-of-ai-agents-2026/)
+- [Index](https://hlido.eu/blog/)
 
 ## Scoring
 
