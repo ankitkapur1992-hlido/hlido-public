@@ -21,13 +21,13 @@
   "confidence": "medium",
   "review_url": "/reviews/feedthrough-feedthrough/",
   "hlido_opinion": {
-    "headline": "The rare MCP debugging tool that names its own architectural trade-off and argues it \u2014 an in-page bridge instead of external CDP control, with the reasoning published rather than implied.",
-    "body": "Feedthrough injects a lightweight bridge into a running page and exposes DOM state, console logs and network traffic as 16 MCP tools, so an agent can inspect and drive the app from the inside. The landing page is unusually good at the thing most tools in this category skip: it states the competing approach (Puppeteer/CDP external control), says plainly that it chose differently, and explains why \u2014 the bridge rides inside the existing execution environment rather than attaching a separate automation channel. The extended metaphor about vacuum-chamber feedthroughs is indulgent, but it earns its place by making the design decision legible to someone deciding between this and a browser-driver tool. The architecture is drawn out concretely: @feedthrough/core in the browser doing console and fetch/XHR interception plus DOM inspection, @feedthrough/mcp locally running 16 tools over stdio, a WebSocket on 8765 between them, and named client support for Claude Code and Cursor. Install is a single npm command. What is missing is the operational half \u2014 nothing describes what happens if the WebSocket port is already bound, what the bridge does in a production build, or what data crosses the socket. 'Zero changes to your production build' is claimed but not demonstrated. For a debugging tool that reads console logs and network requests, a short data-handling note would close the last real gap.",
+    "headline": "The rare MCP debugging tool that names its own architectural trade-off and argues it — an in-page bridge instead of external CDP control, with the reasoning published rather than implied.",
+    "body": "Feedthrough injects a lightweight bridge into a running page and exposes DOM state, console logs and network traffic as 16 MCP tools, so an agent can inspect and drive the app from the inside. The landing page is unusually good at the thing most tools in this category skip: it states the competing approach (Puppeteer/CDP external control), says plainly that it chose differently, and explains why — the bridge rides inside the existing execution environment rather than attaching a separate automation channel. The extended metaphor about vacuum-chamber feedthroughs is indulgent, but it earns its place by making the design decision legible to someone deciding between this and a browser-driver tool. The architecture is drawn out concretely: @feedthrough/core in the browser doing console and fetch/XHR interception plus DOM inspection, @feedthrough/mcp locally running 16 tools over stdio, a WebSocket on 8765 between them, and named client support for Claude Code and Cursor. Install is a single npm command. What is missing is the operational half — nothing describes what happens if the WebSocket port is already bound, what the bridge does in a production build, or what data crosses the socket. 'Zero changes to your production build' is claimed but not demonstrated. For a debugging tool that reads console logs and network requests, a short data-handling note would close the last real gap.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY because the public surface does the hard part well \u2014 a specific, defensible technical position, a concrete architecture, a named tool count, a real install path and named client support. Held below the top band because the operational and data-handling story is absent (what crosses the socket, what happens in production builds, port-conflict behaviour) and because the demo is presented as scripted scenarios rather than something a visitor can run.",
+  "tier_rationale": "STEADY because the public surface does the hard part well — a specific, defensible technical position, a concrete architecture, a named tool count, a real install path and named client support. Held below the top band because the operational and data-handling story is absent (what crosses the socket, what happens in production builds, port-conflict behaviour) and because the demo is presented as scripted scenarios rather than something a visitor can run.",
   "what_it_does_well": [
     "States its architectural trade-off explicitly and argues it, instead of leaving the reader to infer it",
     "Concrete architecture: named packages, named transport, a specific port, and the responsibility split drawn out",
@@ -48,12 +48,12 @@
     "Anyone who has hit the limits of CDP-based tools on apps with complex client-side state"
   ],
   "not_recommended_for": [
-    "Production or customer-facing environments \u2014 this is a development-time tool and the data posture is undocumented",
+    "Production or customer-facing environments — this is a development-time tool and the data posture is undocumented",
     "Teams needing a documented security review before injecting a bridge that reads console and network traffic",
     "Non-JavaScript application stacks; the whole design assumes a browser runtime"
   ],
   "red_flags": [
-    "The bridge intercepts console output and fetch/XHR traffic, which in a real application can include tokens and personal data \u2014 and no public statement describes what is captured, retained or transmitted.",
+    "The bridge intercepts console output and fetch/XHR traffic, which in a real application can include tokens and personal data — and no public statement describes what is captured, retained or transmitted.",
     "'Zero changes to your production build' is a strong safety claim about a tool that injects code into a running page; it deserves evidence and currently has none."
   ],
   "compared_to": [
@@ -84,7 +84,7 @@
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
       "verdict": "pass",
-      "evidence": "Loads without auth; states the mechanism and purpose directly \u2014 injects a bridge, exposes DOM/console/network as MCP tools.",
+      "evidence": "Loads without auth; states the mechanism and purpose directly — injects a bridge, exposes DOM/console/network as MCP tools.",
       "source_surface": "homepage"
     },
     {
@@ -172,5 +172,14 @@
       "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/page__demo.png",
       "https://images.hlido.eu/reviews/feedthrough-feedthrough/run-498872e0c4c65152-feedthrough-dev/page__how-it-works.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
