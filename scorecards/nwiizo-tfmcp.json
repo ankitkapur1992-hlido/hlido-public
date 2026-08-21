@@ -21,22 +21,22 @@
   "confidence": "medium",
   "review_url": "/reviews/nwiizo-tfmcp/",
   "hlido_opinion": {
-    "headline": "A Terraform MCP server that lets an LLM run apply against your infrastructure, and whose own landing banner tells you it is still under active development \u2014 the warning is the most useful thing on the page.",
-    "body": "tfmcp exposes Terraform to LLMs over MCP: reading configuration, analysing plan output, applying configurations, managing state and creating or modifying configs. The reviewed surface is the crates.io package page (v0.2.2, ten published versions), which carries the README, a cargo install line, topic tags and dependency and version tabs. Release notes for v0.2.2 mention RMCP 3.0.1, MCP 2026-07-28 discovery support, structured JSON tool results with backward-compatible text content, and a five-minute public cache \u2014 concrete, dated detail that suggests real maintenance rather than an abandoned experiment. The concern is the capability list itself. 'Applying Terraform configurations' and 'managing Terraform state' are the two most destructive operations in the infrastructure toolchain, and the project's own banner says it 'includes production-ready security features but is still under active development' while asking you to review all operations carefully in production. That is honest, and it is the correct disclosure \u2014 but the security system it refers to is never described on this surface. There is no dedicated docs site here, no enumerated tool list, no statement of what guardrails exist between an LLM's decision and a state-mutating apply. Compare MikroMCP, which makes dry-run, rollback and audit its headline: tfmcp asks for comparable trust and shows less of its work. The package page is a package page; what this category needs is a security model.",
+    "headline": "A Terraform MCP server that lets an LLM run apply against your infrastructure, and whose own landing banner tells you it is still under active development — the warning is the most useful thing on the page.",
+    "body": "tfmcp exposes Terraform to LLMs over MCP: reading configuration, analysing plan output, applying configurations, managing state and creating or modifying configs. The reviewed surface is the crates.io package page (v0.2.2, ten published versions), which carries the README, a cargo install line, topic tags and dependency and version tabs. Release notes for v0.2.2 mention RMCP 3.0.1, MCP 2026-07-28 discovery support, structured JSON tool results with backward-compatible text content, and a five-minute public cache — concrete, dated detail that suggests real maintenance rather than an abandoned experiment. The concern is the capability list itself. 'Applying Terraform configurations' and 'managing Terraform state' are the two most destructive operations in the infrastructure toolchain, and the project's own banner says it 'includes production-ready security features but is still under active development' while asking you to review all operations carefully in production. That is honest, and it is the correct disclosure — but the security system it refers to is never described on this surface. There is no dedicated docs site here, no enumerated tool list, no statement of what guardrails exist between an LLM's decision and a state-mutating apply. Compare MikroMCP, which makes dry-run, rollback and audit its headline: tfmcp asks for comparable trust and shows less of its work. The package page is a package page; what this category needs is a security model.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "FADING because the checks that matter most for a tool holding apply-level infrastructure access are unmet on the public surface: no tool inventory, no description of the guardrails between an LLM decision and a state mutation, and no documentation site beyond the package README. Held mid-band rather than lower because maintenance signals are genuinely good \u2014 ten versions, dated release notes, current MCP spec support \u2014 and because the project discloses its own maturity limits instead of hiding them.",
+  "tier_rationale": "FADING because the checks that matter most for a tool holding apply-level infrastructure access are unmet on the public surface: no tool inventory, no description of the guardrails between an LLM decision and a state mutation, and no documentation site beyond the package README. Held mid-band rather than lower because maintenance signals are genuinely good — ten versions, dated release notes, current MCP spec support — and because the project discloses its own maturity limits instead of hiding them.",
   "what_it_does_well": [
-    "Publishes real version history \u2014 v0.2.2 with ten released versions visible",
+    "Publishes real version history — v0.2.2 with ten released versions visible",
     "Release notes are specific and dated (RMCP 3.0.1, MCP 2026-07-28 discovery, structured JSON results)",
     "Tracks the current MCP specification rather than an old snapshot",
     "Discloses its own maturity limits prominently instead of burying them",
     "Single-command install via cargo; Rust implementation means a self-contained binary"
   ],
   "what_it_fails_at": [
-    "No enumerated tool inventory \u2014 a buyer cannot see what the server exposes before installing",
+    "No enumerated tool inventory — a buyer cannot see what the server exposes before installing",
     "The 'production-ready security features' it cites are never described anywhere on the surface",
     "No guardrail story (dry-run, plan gating, approval, rollback) for a tool that can run apply",
     "No dedicated documentation site; the package README is the entire public surface",
@@ -48,18 +48,18 @@
     "Non-production or sandbox environments where an unguarded apply is survivable"
   ],
   "not_recommended_for": [
-    "Production infrastructure without an external approval gate \u2014 the tool ships no described guardrail of its own",
+    "Production infrastructure without an external approval gate — the tool ships no described guardrail of its own",
     "Teams needing a documented security model before granting state-mutating access",
     "Anyone wanting a published tool inventory to reason about before installation"
   ],
   "red_flags": [
-    "The server can apply Terraform configurations and manage state \u2014 the two most destructive operations available \u2014 while publishing no description of what stands between an LLM's decision and that mutation.",
+    "The server can apply Terraform configurations and manage state — the two most destructive operations available — while publishing no description of what stands between an LLM's decision and that mutation.",
     "The project's own banner states it is under active development and asks users to review all operations carefully in production. Treat that as the operative guidance, not marketing caution."
   ],
   "compared_to": [
     {
       "slug": "alikarami-mikromcp",
-      "verdict_diff": "MikroMCP asks for comparable infrastructure trust and makes dry-run, rollback, RBAC and audit its headline. tfmcp targets Terraform rather than RouterOS but publishes far less about its safety model \u2014 the useful contrast is what each chooses to show.",
+      "verdict_diff": "MikroMCP asks for comparable infrastructure trust and makes dry-run, rollback, RBAC and audit its headline. tfmcp targets Terraform rather than RouterOS but publishes far less about its safety model — the useful contrast is what each chooses to show.",
       "preferred_for_axis": "published-safety-model"
     },
     {
@@ -75,7 +75,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "MCP server with current-spec discovery support (MCP 2026-07-28) and structured JSON tool results, which is genuinely good agent ergonomics \u2014 a calling agent gets parseable output rather than prose. Undercut by the absence of a published tool inventory, so capability must be discovered at runtime.",
+    "agent_integration_path": "MCP server with current-spec discovery support (MCP 2026-07-28) and structured JSON tool results, which is genuinely good agent ergonomics — a calling agent gets parseable output rather than prose. Undercut by the absence of a published tool inventory, so capability must be discovered at runtime.",
     "agent_friendly_score": 7
   },
   "claims": [
@@ -172,5 +172,14 @@
       "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/page_versions.png",
       "https://images.hlido.eu/reviews/nwiizo-tfmcp/run-3fd6f6cb9df9eb30-crates-io/page_dependencies.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-14",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
