@@ -87,11 +87,40 @@
     "agent_friendly_score": 3
   },
   "checklist": [
-    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-07-25T08:33:10Z" },
-    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'The AI Agent for Maps and Spatial Data' / 'Anyone can build with maps now'", "tested_at": "2026-07-25T08:33:10Z" },
-    { "id": "cta_present", "pass": true, "required": true, "evidence": "'Start building' and 'Sign up - it's free' CTAs on homepage", "tested_at": "2026-07-25T08:33:10Z" },
-    { "id": "pricing_or_access", "pass": false, "required": false, "evidence": "Pricing nav link present but no pricing surfaced in capture; free sign-up offered", "tested_at": "2026-07-25T08:33:10Z" },
-    { "id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Template gallery with concrete real-world map applications", "tested_at": "2026-07-25T08:33:10Z" }
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-07-25T08:33:10Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The AI Agent for Maps and Spatial Data' / 'Anyone can build with maps now'",
+      "tested_at": "2026-07-25T08:33:10Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start building' and 'Sign up - it's free' CTAs on homepage",
+      "tested_at": "2026-07-25T08:33:10Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pricing nav link present but no pricing surfaced in capture; free sign-up offered",
+      "tested_at": "2026-07-25T08:33:10Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Template gallery with concrete real-world map applications",
+      "tested_at": "2026-07-25T08:33:10Z"
+    }
   ],
   "summary": "AI-native GIS aimed at people who could never make a map before — a differentiated niche with a credible template gallery, but reviewed on marketing surface alone.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion. Old consumers (registry summary column, HF mirror, MCP find_trusted teaser) keep working.",
@@ -106,5 +135,20 @@
     "checked_at": "2026-08-01",
     "source": "rpublish-editorial-enrich",
     "note": "Atlas is a spatial/GIS application-building tool, not a synthetic-content generator; Article-50 output-marking obligations do not apply."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Pricing nav link present but no pricing surfaced in capture; free sign-up offered",
+      "tested_at": "2026-07-25"
+    },
+    "last_verified": "2026-07-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
