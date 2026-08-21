@@ -1,0 +1,154 @@
+{
+  "schema_version": "2.0",
+  "slug": "bababoi-bibilabu-agent-mq",
+  "name": "agent-mq",
+  "agent_url": "https://agent-mq.com",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-bababoi-bibilabu-agent-mq-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 58,
+  "tier": "FADING",
+  "laddoo_score": 58,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An early (v0.2), MCP-native message queue that lets AI coding assistants talk to each other across tools — a clean idea with a thin, unproven surface.",
+    "body": "agent-mq is a small, honestly-presented message queue aimed at cross-tool agent communication: any MCP client (Claude Code, Cursor, Codex) can send and receive messages so agents running in different tools can coordinate. The premise is good and increasingly relevant — as people run several coding assistants at once, a shared, tool-agnostic message bus is a real gap. The surface shows the right primitives: seven MCP tools, a one-npx install, UUID-based namespace isolation (same token = same namespace, different tokens can't see each other), and self-hosting via Docker or a hosted server. What holds it back is maturity and evidence: it is version 0.2.0, the on-page counters are tiny (8 users, 25 agents, 24 messages), and the landing page is essentially an install pitch — there is no visible detail on delivery guarantees, ordering, persistence, or security beyond the namespace-isolation line. For an early adopter comfortable with a young MIT project this is worth a look; for anything load-bearing it is too early to trust from the public surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (58) reflects a genuinely useful idea (cross-tool, MCP-native agent messaging) at a very early stage: v0.2.0, single-digit users, and a landing page that is mostly an install call-to-action with little evidence of delivery semantics, persistence or security. Not lower because the core primitives (7 MCP tools, UUID namespace isolation, self-hostable, MIT) are real and sensibly chosen. Not STEADY because nothing about reliability, scale or adoption is demonstrated, and the surface is too thin to verify the claims that would make it dependable.",
+  "what_it_does_well": [
+    "MCP-native cross-tool messaging: Claude Code, Cursor, Codex or anything that can run a bash command",
+    "UUID-based namespace isolation — same token shares a namespace, different tokens are mutually invisible",
+    "Self-hostable (Docker) as well as a hosted option; MIT-licensed",
+    "Low-friction adoption: seven MCP tools installed via a single npx command"
+  ],
+  "what_it_fails_at": [
+    "Very early: v0.2.0 with tiny on-page usage counters (8 users / 25 agents / 24 messages)",
+    "No visible detail on delivery guarantees, message ordering, persistence, durability or throughput",
+    "Security posture beyond token-based namespace isolation is not described on the surface",
+    "Landing page is essentially an install pitch — little documentation or evidence of production use is exposed"
+  ],
+  "best_for": [
+    "Early adopters wiring up experiments where several AI coding assistants need to pass messages",
+    "Developers who want a self-hostable, MIT-licensed agent message bus and are comfortable with a v0.x tool",
+    "Prototyping multi-agent, multi-tool coordination without building queue infrastructure"
+  ],
+  "not_recommended_for": [
+    "Any load-bearing or production workload needing delivery/ordering/durability guarantees",
+    "Teams with strict security/compliance requirements (isolation model is minimal on the surface)",
+    "Users who need proven scale, support or a stable API — this is pre-1.0"
+  ],
+  "red_flags": [
+    "v0.2.0 with single-digit usage — treat as experimental; do not build anything you cannot afford to lose on it yet.",
+    "Delivery semantics, persistence and security are not evidenced on the public surface, so reliability is unknown."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Message queue for AI coding assistants; cross-tool via MCP (Claude Code, Cursor, Codex)",
+      "source": "https://agent-mq.com (homepage hero)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Seven MCP tools, one npx command to install; self-hostable via Docker; MIT-licensed",
+      "source": "https://agent-mq.com ('MCP native' + 'Self-hostable' feature cards + footer)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "UUID-based isolation: same token = same namespace, different tokens can't see each other",
+      "source": "https://agent-mq.com ('UUID-based isolation' feature card)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Version 0.2.0 with on-page counters of 8 users, 25 agents, 24 messages",
+      "source": "https://agent-mq.com (version badge + stats block)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP-native message queue with seven tools, installed via one npx command; any MCP-capable coding assistant can send/receive messages. Self-hostable, so behaviour is testable — but the tool is pre-1.0 (v0.2.0) and delivery semantics are undocumented on the surface.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "An early (v0.2), MCP-native message queue that lets AI coding assistants talk to",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "3 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "An early (v0.2), MCP-native message queue that lets AI coding assistants talk to each other across tools — a clean idea with a thin, unproven surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/bababoi-bibilabu-agent-mq.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-01fb27d019accaed-agent-mq-com",
+    "base": "https://images.hlido.eu/reviews/bababoi-bibilabu-agent-mq/run-01fb27d019accaed-agent-mq-com",
+    "files": [
+      "home.png",
+      "page_install_md.png",
+      "page_usage_md.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/bababoi-bibilabu-agent-mq/run-01fb27d019accaed-agent-mq-com/home.png",
+      "https://images.hlido.eu/reviews/bababoi-bibilabu-agent-mq/run-01fb27d019accaed-agent-mq-com/page_install_md.png",
+      "https://images.hlido.eu/reviews/bababoi-bibilabu-agent-mq/run-01fb27d019accaed-agent-mq-com/page_usage_md.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-21",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
+  }
+}
