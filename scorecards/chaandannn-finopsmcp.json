@@ -21,8 +21,8 @@
   "confidence": "medium",
   "review_url": "/reviews/chaandannn-finopsmcp/",
   "hlido_opinion": {
-    "headline": "Cloud and AI cost management with the safety posture stated in the subhead \u2014 read-only access, nothing shipped without a human, fixes delivered as reviewable pull requests rather than applied changes.",
-    "body": "nable reads billing across 14 providers (AWS, Azure, GCP, OpenAI, Anthropic, Bedrock, Kubernetes, Datadog, Cloudflare, Snowflake, Databricks, MongoDB and more), runs overnight, and produces a morning brief of what changed and what it costs. The design decisions on display are the right ones for this category: access is read-only, remediation arrives as a pull request against your infrastructure repository scoped to one change with the saving and blast radius in the description, and items it cannot resolve are explicitly labelled 'needs a human' rather than auto-actioned. Detection is described as per-series pattern comparison rather than static thresholds, and the explain step is presented with the working shown, including what the system decided against and why. That last detail \u2014 publishing rejected hypotheses \u2014 is a genuine trust signal. Install is a single uvx command, and pricing, docs, security and GitHub links are all in the primary navigation. The caution is that the entire landing page runs on an illustrative mock: '$47,200 a month recoverable', '14 idle GPU nodes', a CloudFront figure of $120,800 and a '94% attributed' confidence badge are a worked example, not a published result. There is also a '109k' figure adjacent to the GitHub link that is unexplained on the page. None of this is deceptive \u2014 the numbers are clearly a sample brief \u2014 but a buyer should not read them as performance data, and no case study or independent result is offered in their place.",
+    "headline": "Cloud and AI cost management with the safety posture stated in the subhead — read-only access, nothing shipped without a human, fixes delivered as reviewable pull requests rather than applied changes.",
+    "body": "nable reads billing across 14 providers (AWS, Azure, GCP, OpenAI, Anthropic, Bedrock, Kubernetes, Datadog, Cloudflare, Snowflake, Databricks, MongoDB and more), runs overnight, and produces a morning brief of what changed and what it costs. The design decisions on display are the right ones for this category: access is read-only, remediation arrives as a pull request against your infrastructure repository scoped to one change with the saving and blast radius in the description, and items it cannot resolve are explicitly labelled 'needs a human' rather than auto-actioned. Detection is described as per-series pattern comparison rather than static thresholds, and the explain step is presented with the working shown, including what the system decided against and why. That last detail — publishing rejected hypotheses — is a genuine trust signal. Install is a single uvx command, and pricing, docs, security and GitHub links are all in the primary navigation. The caution is that the entire landing page runs on an illustrative mock: '$47,200 a month recoverable', '14 idle GPU nodes', a CloudFront figure of $120,800 and a '94% attributed' confidence badge are a worked example, not a published result. There is also a '109k' figure adjacent to the GitHub link that is unexplained on the page. None of this is deceptive — the numbers are clearly a sample brief — but a buyer should not read them as performance data, and no case study or independent result is offered in their place.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
@@ -30,10 +30,10 @@
   "tier_rationale": "STEADY because the operational posture is strong and explicitly stated (read-only, human-in-the-loop, PR-scoped changes), provider coverage is broad and enumerated, and pricing, docs and security surfaces are all present and one click away. Held out of the top band because every quantified outcome on the public surface is illustrative rather than measured, no case study or independent corroboration is offered, and an unexplained '109k' figure sits next to the repository link.",
   "what_it_does_well": [
     "Safety posture stated in the subhead, not buried: read-only access, nothing shipped without a human",
-    "Remediation arrives as a scoped pull request with saving and blast radius described \u2014 reviewable like any other change",
+    "Remediation arrives as a scoped pull request with saving and blast radius described — reviewable like any other change",
     "Items it cannot resolve confidently are labelled 'needs a human' instead of auto-actioned",
     "Broad, enumerated provider coverage across cloud, model, platform and data spend",
-    "Publishes what it decided against and why \u2014 an unusually honest form of explanation",
+    "Publishes what it decided against and why — an unusually honest form of explanation",
     "Single-command install (uvx), with pricing, docs and security all in the primary navigation"
   ],
   "what_it_fails_at": [
@@ -46,12 +46,12 @@
   "best_for": [
     "Teams with meaningful multi-cloud and model spend who want overnight analysis rather than another dashboard",
     "Infrastructure-as-code shops where a pull request is the natural remediation format",
-    "Organisations that will not grant write access to a cost tool \u2014 read-only is the default here",
+    "Organisations that will not grant write access to a cost tool — read-only is the default here",
     "FinOps practitioners wanting AI model spend and cloud spend read together"
   ],
   "not_recommended_for": [
     "Small or single-provider deployments, where the breadth is unnecessary overhead",
-    "Buyers needing verified savings evidence before committing \u2014 none is published",
+    "Buyers needing verified savings evidence before committing — none is published",
     "Teams without an infrastructure repository; the PR-based remediation model assumes one"
   ],
   "red_flags": [
@@ -77,7 +77,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "Ships as an MCP server (the repository is finopsmcp) with a uvx-installable CLI, so it is addressable both by agents and by scheduled automation. The read-only access model and PR-based output make it comparatively safe to hand to an autonomous agent \u2014 the agent can analyse and propose, but cannot apply.",
+    "agent_integration_path": "Ships as an MCP server (the repository is finopsmcp) with a uvx-installable CLI, so it is addressable both by agents and by scheduled automation. The read-only access model and PR-based output make it comparatively safe to hand to an autonomous agent — the agent can analyse and propose, but cannot apply.",
     "agent_friendly_score": 8
   },
   "claims": [
@@ -86,7 +86,7 @@
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
       "verdict": "pass",
-      "evidence": "Loads without auth; states the proposition and its constraints in the first screen \u2014 overnight cost review, read-only, nothing shipped without a human.",
+      "evidence": "Loads without auth; states the proposition and its constraints in the first screen — overnight cost review, read-only, nothing shipped without a human.",
       "source_surface": "homepage"
     },
     {
@@ -174,5 +174,14 @@
       "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/page_agents.png",
       "https://images.hlido.eu/reviews/chaandannn-finopsmcp/run-e8bb1ccfaf2b3c23-getnable-com/page_pricing.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-13",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
