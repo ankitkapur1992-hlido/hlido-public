@@ -21,15 +21,15 @@
   "confidence": "medium",
   "review_url": "/reviews/hshintelligence-agent-scrape/",
   "hlido_opinion": {
-    "headline": "A scraping API that serves its own machine-readable manifest as its homepage and prices every tool at $0.001 in on-chain USDC \u2014 genuinely agent-native, and almost unusable for a human evaluating it.",
-    "body": "AgentScrape is the most literally agent-first surface in this batch: the root URL returns a JSON manifest, not a marketing page. That manifest is substantive \u2014 it enumerates six HTTP endpoints and six MCP tools, publishes a per-call price of $0.001 for every tool, names the payment network (Base, eip155:8453), the x402 facilitator, the payTo address, the free tier (10 calls per wallet per 30 days), the transport (MCP Streamable HTTP) and even the extraction model (Llama 4 Scout via Groq). By the standard Hlido applies to machine consumers, this is close to exemplary: an agent can discover capability, price and payment path in one unauthenticated request, with no signup and no API key. The trade-offs are real though. There is no human-readable surface at all \u2014 no docs site, no examples, no error-semantics reference, no terms, no operator identity beyond a GitHub org and a wallet address. Payment is USDC on Base via x402, which is an elegant fit for autonomous agents and a hard requirement for everyone else. And the model that matters most for a scraping service \u2014 what it does about robots.txt, rate limits, blocked targets or legal exposure \u2014 is not addressed anywhere. The score is held down by that missing half, not by the design choice: the agent-facing manifest is strong, and the surrounding operational and accountability story is absent.",
+    "headline": "A scraping API that serves its own machine-readable manifest as its homepage and prices every tool at $0.001 in on-chain USDC — genuinely agent-native, and almost unusable for a human evaluating it.",
+    "body": "AgentScrape is the most literally agent-first surface in this batch: the root URL returns a JSON manifest, not a marketing page. That manifest is substantive — it enumerates six HTTP endpoints and six MCP tools, publishes a per-call price of $0.001 for every tool, names the payment network (Base, eip155:8453), the x402 facilitator, the payTo address, the free tier (10 calls per wallet per 30 days), the transport (MCP Streamable HTTP) and even the extraction model (Llama 4 Scout via Groq). By the standard Hlido applies to machine consumers, this is close to exemplary: an agent can discover capability, price and payment path in one unauthenticated request, with no signup and no API key. The trade-offs are real though. There is no human-readable surface at all — no docs site, no examples, no error-semantics reference, no terms, no operator identity beyond a GitHub org and a wallet address. Payment is USDC on Base via x402, which is an elegant fit for autonomous agents and a hard requirement for everyone else. And the model that matters most for a scraping service — what it does about robots.txt, rate limits, blocked targets or legal exposure — is not addressed anywhere. The score is held down by that missing half, not by the design choice: the agent-facing manifest is strong, and the surrounding operational and accountability story is absent.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "FADING because most of the checks fail on the human-facing side: no documentation surface, no terms, no operator accountability, and no statement on scraping conduct or data handling \u2014 for a scraping service, that last gap is material. Not lower, and close to the band above, because the machine-readable manifest is genuinely excellent: complete capability, transparent per-call pricing and a working no-signup path, all discoverable in a single unauthenticated request.",
+  "tier_rationale": "FADING because most of the checks fail on the human-facing side: no documentation surface, no terms, no operator accountability, and no statement on scraping conduct or data handling — for a scraping service, that last gap is material. Not lower, and close to the band above, because the machine-readable manifest is genuinely excellent: complete capability, transparent per-call pricing and a working no-signup path, all discoverable in a single unauthenticated request.",
   "what_it_does_well": [
-    "Root URL returns a complete machine-readable capability manifest \u2014 no signup, no key, no negotiation",
+    "Root URL returns a complete machine-readable capability manifest — no signup, no key, no negotiation",
     "Per-call pricing published for every single tool ($0.001), which is rarer than it should be",
     "Both HTTP and MCP surfaces exposed, with all endpoints and tool names enumerated",
     "Free tier stated precisely (10 calls per wallet per 30 days) with the identifying header named",
@@ -38,7 +38,7 @@
   "what_it_fails_at": [
     "No human-readable documentation, examples or error-semantics reference anywhere",
     "No terms of service, acceptable-use policy or operator identity beyond a wallet address",
-    "Nothing stated about robots.txt handling, rate limiting or blocked targets \u2014 the core conduct question for a scraper",
+    "Nothing stated about robots.txt handling, rate limiting or blocked targets — the core conduct question for a scraper",
     "Payment is USDC on Base only; no conventional payment path exists",
     "No uptime, support or contact channel published"
   ],
@@ -48,13 +48,13 @@
     "Prototypes and experiments where the 10-call free tier is enough to evaluate"
   ],
   "not_recommended_for": [
-    "Companies with procurement, invoicing or vendor-accountability requirements \u2014 none of that exists here",
+    "Companies with procurement, invoicing or vendor-accountability requirements — none of that exists here",
     "Any use where scraping conduct and legal exposure need a documented position",
     "Teams without on-chain payment capability; there is no alternative rail"
   ],
   "red_flags": [
     "A scraping service with no published position on robots.txt, rate limiting or prohibited targets pushes the entire conduct and legal risk onto the caller, silently.",
-    "Operator accountability is a GitHub organisation and a wallet address. There is no company identity, terms of service or support channel \u2014 for a paid service, that is a thin basis for reliance.",
+    "Operator accountability is a GitHub organisation and a wallet address. There is no company identity, terms of service or support channel — for a paid service, that is a thin basis for reliance.",
     "The free tier is keyed on an x402 payer header rather than an account, so the 10-call limit is only as strong as wallet identity makes it."
   ],
   "compared_to": [
@@ -93,7 +93,7 @@
       "claim": "Pricing page discoverable in 2 clicks from homepage",
       "required": true,
       "verdict": "pass",
-      "evidence": "Per-tool pricing ($0.001 each) plus free-tier limits are in the root manifest itself \u2014 zero clicks.",
+      "evidence": "Per-tool pricing ($0.001 each) plus free-tier limits are in the root manifest itself — zero clicks.",
       "source_surface": "api"
     },
     {
@@ -170,5 +170,22 @@
     "urls": [
       "https://images.hlido.eu/reviews/hshintelligence-agent-scrape/run-a21d27538264070b-agent-scrape-healingsunhaven-workers-dev/home.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "usage-based",
+      "freemium"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…its own machine-readable manifest as its homepage and prices every tool at $0.001 in on-chain USDC — genuinely agent-native, and almost unusable for a human…",
+        "source": "hlido_opinion.headline"
+      }
+    ],
+    "last_verified": "2026-08-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
