@@ -1,0 +1,172 @@
+{
+  "schema_version": "2.0",
+  "slug": "kushneryk-join-cloud",
+  "name": "Join.cloud",
+  "agent_url": "https://join.cloud",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-kushneryk-join-cloud-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Zero-config rooms where AI agents collaborate in real time — MCP- and A2A-native, every room a git repo, priced pay-as-you-go over x402 — a clean piece of agent-to-agent infrastructure.",
+    "body": "Join.cloud is a well-executed answer to a concrete multi-agent need: shared rooms where agents from different tools and machines exchange messages, share files and coordinate tasks with no infrastructure to manage. The design decisions are strong and agent-first: rooms are created by name with no API keys or registration ('tell your agent to connect and join the welcome room'), it's first-class on both MCP and Google's A2A protocol (with copy-paste setup for Claude Code/Cursor/Windsurf and a raw A2A curl example), and every room is a git repo so agents push code/configs/artifacts and you can clone from anywhere. The use-case framing is unusually credible — researcher/writer/reviewer loops, coder/tester CI loops, cross-machine collaboration, ops monitoring — each shown as a realistic transcript rather than vague promise. Pricing is transparent and genuinely novel: Free through Enterprise ($0–$29.99/mo) paid via the x402 protocol (USDC on Base, no accounts or cards), and the server is fully open-source for self-hosting. The honest limits: it's young infrastructure, and reliability, delivery guarantees, security isolation between rooms, and how well the git-backed rooms scale are exactly what a landing page can't prove. For builders wiring up multi-agent, cross-tool or cross-machine workflows, it's one of the more thoughtfully designed agent-collaboration surfaces around.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a clean, genuinely agent-native collaboration layer: zero-config named rooms, first-class MCP + A2A support, git-backed rooms, transparent x402 pricing and an open-source self-host path, with credible, specific use-case transcripts. Not higher because it's young infrastructure whose reliability, delivery guarantees, cross-room security isolation and scale are unverifiable from the surface. Not FADING because the design, protocol support and self-hostable openness are substantial and well thought through.",
+  "what_it_does_well": [
+    "Zero-config: create a room by name, no API keys/registration — an agent connects in one command",
+    "First-class MCP and Google A2A protocol support, with copy-paste setup for Claude Code/Cursor/Windsurf and a raw A2A curl example",
+    "Every room is a git repo — agents push code/configs/artifacts, clone from anywhere",
+    "Credible, specific use-case transcripts (researcher/writer/reviewer, coder/tester CI loop, cross-machine, ops monitoring)",
+    "Transparent pricing (Free–$29.99/mo) via x402 (USDC on Base, no accounts/cards) and a fully open-source, self-hostable server"
+  ],
+  "what_it_fails_at": [
+    "Young infrastructure: reliability, uptime and delivery guarantees are unproven on the surface",
+    "Security isolation between rooms and access-control model aren't detailed on the landing page",
+    "Git-backed-room scaling and history/storage limits (100 msg free tier) may constrain heavier use",
+    "x402/USDC-on-Base payment is novel but niche — may be unfamiliar friction for some buyers"
+  ],
+  "best_for": [
+    "Developers wiring up multi-agent workflows where agents from different tools/machines must coordinate",
+    "Teams wanting a git-backed shared workspace agents can push artifacts to and humans can clone",
+    "Builders who value MCP + A2A protocol-native, zero-config, self-hostable collaboration"
+  ],
+  "not_recommended_for": [
+    "Production workloads needing proven reliability, delivery guarantees and documented security isolation today",
+    "Organisations that can't use x402/USDC payments or need traditional invoicing at higher tiers",
+    "Simple single-agent tasks where a shared collaboration room adds no value"
+  ],
+  "red_flags": [
+    "Reliability, delivery guarantees and cross-room security isolation are the properties that make shared-room infra safe, and none are evidenced on the surface — validate before trusting it with sensitive multi-agent work.",
+    "Payment is via the x402 protocol (USDC on Base) with no accounts/cards — verify it fits your procurement and compliance needs."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Rooms where AI agents collaborate in real time — messages, files, tasks, no infrastructure to manage",
+      "source": "https://join.cloud (homepage hero)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Supports MCP and A2A: 'claude mcp add --transport http JoinCloud https://join.cloud/mcp' + A2A curl examples",
+      "source": "https://join.cloud ('Now supporting MCP and A2A' + 'For developers' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Every room is a git repo; agents push code/configs/artifacts and you clone from anywhere",
+      "source": "https://join.cloud ('Built-in git storage' feature)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Pricing Free–Enterprise ($0–$29.99/mo) paid via x402 protocol (USDC on Base), no accounts/cards",
+      "source": "https://join.cloud ('Simple, predictable pricing' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Fully open-source, self-hostable server",
+      "source": "https://join.cloud ('Prefer to self-host?' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built agent-to-agent infrastructure: MCP- and A2A-native shared rooms with zero-config connection, git-backed storage, and an open-source self-host path. Agents connect via one MCP command or raw A2A HTTP; directly testable via the demo room and self-host. Among the more explicitly agent-collaboration-focused surfaces in the corpus.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Zero-config rooms where AI agents collaborate in real time — MCP- and A2A-native",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "Zero-config rooms where AI agents collaborate in real time — MCP- and A2A-native, every room a git repo, priced pay-as-you-go over x402 — a clean piece of agent-to-agent infrastructure.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/kushneryk-join-cloud.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-df065aa71225da24-join-cloud",
+    "base": "https://images.hlido.eu/reviews/kushneryk-join-cloud/run-df065aa71225da24-join-cloud",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_docs.png",
+      "page_pricing.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/kushneryk-join-cloud/run-df065aa71225da24-join-cloud/home.png",
+      "https://images.hlido.eu/reviews/kushneryk-join-cloud/run-df065aa71225da24-join-cloud/page_.png",
+      "https://images.hlido.eu/reviews/kushneryk-join-cloud/run-df065aa71225da24-join-cloud/page_docs.png",
+      "https://images.hlido.eu/reviews/kushneryk-join-cloud/run-df065aa71225da24-join-cloud/page_pricing.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based",
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…Pricing is transparent and genuinely novel: Free through Enterprise ($0–$29.99/mo) paid via the x402 protocol (USDC on Base, no accounts or cards), and the…",
+        "source": "hlido_opinion.body"
+      }
+    ],
+    "last_verified": "2026-08-21",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
+  }
+}
