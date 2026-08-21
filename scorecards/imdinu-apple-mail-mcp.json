@@ -1,0 +1,153 @@
+{
+  "schema_version": "2.0",
+  "slug": "imdinu-apple-mail-mcp",
+  "name": "Apple Mail MCP",
+  "agent_url": "https://imdinu.github.io/apple-mail-mcp/",
+  "category": "Productivity",
+  "run_id": "run-rpub-v2-imdinu-apple-mail-mcp-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "The Apple Mail MCP server that actually searches your whole mailbox — full-coverage FTS5 body search that stays fast on ~73K messages where AppleScript-based servers time out, with honest competitive benchmarks.",
+    "body": "Apple Mail MCP is a refreshingly evidence-led tool: an MCP server (and standalone CLI) with eight tools for reading, searching and extracting email, whose headline claim is full-coverage FTS5 full-text body search across the entire mailbox. What earns trust is that the maintainer benchmarked it against six other Apple Mail MCP servers on a real ~73K-message mailbox and reports specifics — only server with full-coverage body search (a named competitor caps at the 5000 most recent messages, silently missing older mail), ~3ms single-email fetch via disk-first .emlx reading, ~7ms subject search via FTS5, and reliability across all six benchmarked operations where AppleScript/JXA servers time out or throw. That is exactly the kind of concrete, falsifiable claim-making Hlido rewards. It's clean on the agent surface too: pipx run for zero-install, a one-line Claude Desktop config, CLI parity for every tool, a --watch flag for live index updates, and a py.typed type-safe codebase (v0.4.3, 56 stars). The honest caveats: the benchmarks are self-run (not third-party), it's macOS/Apple-Mail-only by nature, and real-world performance depends on mailbox shape. For anyone giving an AI assistant access to Apple Mail, this is a well-engineered, honestly-marketed choice.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75 — top of this batch) for a well-engineered Apple Mail MCP server that competes on the right axis (full-mailbox FTS5 body search) and backs it with concrete, falsifiable, competitively-benchmarked numbers rather than adjectives — plus a clean agent surface (8 tools, CLI parity, pipx, --watch, type-safe). Not higher because the benchmarks are self-run rather than independently verified, it's inherently macOS/Apple-Mail-only, and real performance is mailbox-dependent. Not lower because the evidence-led presentation and engineering detail are notably above the norm for a single-maintainer tool.",
+  "what_it_does_well": [
+    "Full-coverage FTS5 full-text body search across the entire mailbox — where a named competitor caps at the 5000 most recent messages (silent miss on older mail)",
+    "Concrete, competitively-benchmarked performance on a real ~73K-message mailbox: ~3ms email fetch (disk-first .emlx), ~7ms subject search, reliable across all six operations",
+    "Eight MCP tools with full CLI parity (search/read/list/extract), unified filters (unread/flagged/today/last-7-days), --watch live indexing",
+    "Low-friction, type-safe engineering: pipx run zero-install, one-line Claude Desktop config, PEP 561 py.typed, v0.4.3",
+    "Can generate a Claude Code skill for CLI access (apple-mail-mcp integrate claude) — thoughtful agent ergonomics"
+  ],
+  "what_it_fails_at": [
+    "Benchmarks are self-run by the maintainer, not independently verified",
+    "macOS / Apple Mail only by nature — no cross-platform reach",
+    "Real-world speed and index-build time depend on mailbox size/shape, which vary widely",
+    "Single-maintainer project (56 stars, v0.4.x); long-term maintenance is unproven"
+  ],
+  "best_for": [
+    "macOS users who want an AI assistant to reliably search and read their full Apple Mail history",
+    "People with large mailboxes where AppleScript-based Mail MCP servers time out or miss older mail",
+    "Developers who want the same tools as an MCP server AND a standalone CLI, with live index updates"
+  ],
+  "not_recommended_for": [
+    "Non-macOS / non-Apple-Mail users",
+    "Teams that require third-party-verified performance claims before adoption",
+    "Users needing send/compose or full mail-management (this is read/search/extract-focused)"
+  ],
+  "red_flags": [
+    "The performance and coverage advantages are self-benchmarked, not independently verified — credible and specific, but confirm on your own mailbox size before depending on them.",
+    "Giving any tool full read access to your mailbox is sensitive; review scope and run locally."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Apple Mail MCP server with full-coverage FTS5 body search; 8 tools; also a standalone CLI; v0.4.3",
+      "source": "https://imdinu.github.io/apple-mail-mcp/ (homepage intro + 'Key Features')",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Benchmarked against 6 other Apple Mail MCP servers on a real ~73K-message mailbox; only one with full-coverage body search",
+      "source": "https://imdinu.github.io/apple-mail-mcp/ ('Why Apple Mail MCP?' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "~3ms single email fetch (disk-first .emlx), ~7ms subject search via FTS5, reliable across all 6 operations",
+      "source": "https://imdinu.github.io/apple-mail-mcp/ ('Why Apple Mail MCP?' benchmark bullets)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "pipx run zero-install; one-line Claude Desktop config; --watch live indexing; PEP 561 py.typed",
+      "source": "https://imdinu.github.io/apple-mail-mcp/ ('Quick Install' + 'Key Features')",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "CLI parity for all tools and can generate a Claude Code skill (apple-mail-mcp integrate claude)",
+      "source": "https://imdinu.github.io/apple-mail-mcp/ ('CLI Usage' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with eight tools plus full CLI parity; pipx run for zero-install and a one-line Claude Desktop config. Can emit a Claude Code skill for CLI access. Fully local and directly testable, with a --watch flag for live index updates — a clean, agent-native Apple Mail surface.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The Apple Mail MCP server that actually searches your whole mailbox — full-cover",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "The Apple Mail MCP server that actually searches your whole mailbox — full-coverage FTS5 body search that stays fast on ~73K messages where AppleScript-based servers time out, with honest competitive benchmarks.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/imdinu-apple-mail-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-7738c8e50fb37e83-imdinu-github-io",
+    "base": "https://images.hlido.eu/reviews/imdinu-apple-mail-mcp/run-7738c8e50fb37e83-imdinu-github-io",
+    "files": [
+      "home.png",
+      "page_apple-mail-mcp.png",
+      "page_why-apple-mail-mcp.png",
+      "page_key-features.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/imdinu-apple-mail-mcp/run-7738c8e50fb37e83-imdinu-github-io/home.png",
+      "https://images.hlido.eu/reviews/imdinu-apple-mail-mcp/run-7738c8e50fb37e83-imdinu-github-io/page_apple-mail-mcp.png",
+      "https://images.hlido.eu/reviews/imdinu-apple-mail-mcp/run-7738c8e50fb37e83-imdinu-github-io/page_why-apple-mail-mcp.png",
+      "https://images.hlido.eu/reviews/imdinu-apple-mail-mcp/run-7738c8e50fb37e83-imdinu-github-io/page_key-features.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
