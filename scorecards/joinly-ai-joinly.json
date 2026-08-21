@@ -1,0 +1,158 @@
+{
+  "schema_version": "2.0",
+  "slug": "joinly-ai-joinly",
+  "name": "joinly.ai",
+  "agent_url": "https://joinly.ai",
+  "category": "Productivity",
+  "run_id": "run-rpub-v2-joinly-ai-joinly-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Meeting agents that actually participate — an AI that listens, writes in the chat, and speaks back during the call, exposed as an MCP interface — a genuinely different take on meeting AI that's still early.",
+    "body": "joinly.ai reframes meeting AI away from passive note-taking toward active participation: an agent that writes into the meeting chat, listens and speaks back interactively during the call, and does work in-meeting (web search, drafting presentations, updating a Miro board, follow-up emails, documents). The interesting architectural bet is that joinly is 'the meeting interface for your AI agents' — MCP is used inside the product and you can connect external MCP servers to customise the meeting agent — which fits the agent-to-agent thesis better than closed notetakers do. There's a real blog documenting the MCP backbone and a 'digital twin that joins low-value meetings for you' tutorial, signalling genuine building. It lands as FADING rather than STEADY because it reads as early and unproven: key capabilities like screen-sharing are marked 'Soon', there's no pricing/scale/reliability evidence on the surface, and real-time speak-and-listen-in-meeting is a hard reliability problem whose quality can't be judged from the page. Differentiated and worth watching for teams comfortable with early tools; verify latency, transcription accuracy and stability in your own meetings before relying on it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68, just below STEADY) for a genuinely differentiated, MCP-native approach to meeting AI (an agent that participates rather than just transcribes, and is itself an interface other agents plug into) with real evidence of building (blog on the MCP backbone, digital-twin tutorial). Not lower because the concept and MCP-first architecture are real and distinctive. Not STEADY because it's early — a flagship feature is 'Soon', there's no pricing/scale/reliability evidence, and interactive real-time speak/listen quality is exactly what a homepage can't demonstrate.",
+  "what_it_does_well": [
+    "Genuinely differentiated: an agent that participates in the meeting (writes in chat, listens, speaks back) rather than only transcribing afterward",
+    "MCP-native architecture: joinly uses MCP internally and lets you connect external MCP servers to customise the meeting agent — a real agent-to-agent surface",
+    "Concrete in-meeting actions: web search, drafting presentations, Miro-board updates, follow-up emails, document creation",
+    "Evidence of real building: blog on 'MCP: the backbone of joinly' and a 'digital twin that joins low-value meetings' tutorial"
+  ],
+  "what_it_fails_at": [
+    "Early and unproven: a flagship capability (screen sharing) is explicitly marked 'Soon'",
+    "No pricing, scale, adoption or reliability evidence on the public surface",
+    "Real-time listen-and-speak in meetings is a hard latency/accuracy problem whose quality can't be judged from the page",
+    "Interactive meeting participation raises consent/recording considerations not addressed on the surface"
+  ],
+  "best_for": [
+    "Teams wanting an AI that actively participates in meetings (searches, drafts, updates boards) rather than just taking notes",
+    "Developers who want a meeting agent they can extend by connecting their own MCP servers",
+    "Early adopters comfortable trialing a young, differentiated product"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a proven, reliable notetaker with pricing and scale evidence today",
+    "Environments with strict meeting-recording/consent policies (not addressed on the surface)",
+    "Anyone who needs the 'Soon' features (e.g. screen sharing) now"
+  ],
+  "red_flags": [
+    "The differentiator — real-time interactive speak/listen participation — is the hardest thing to get right and is unverifiable from the surface; test latency, transcription accuracy and stability in real meetings first.",
+    "A headline capability (screen sharing) is marked 'Soon', so the current product is narrower than the pitch implies."
+  ],
+  "compared_to": [
+    {
+      "slug": "get-meetgeek",
+      "verdict_diff": "MeetGeek is a mature, hosted meeting-notetaker focused on recording, transcription and summaries; joinly.ai bets on active in-meeting participation and an MCP-native, agent-extensible architecture instead. Choose MeetGeek for proven notetaking today, joinly for a differentiated (but earlier) interactive meeting agent you can extend.",
+      "preferred_for_axis": "interactive-mcp-native-meeting-agent-vs-mature-hosted-notetaker"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Make meetings accessible to AI agents: brainstorm, search, draft presentations in-meeting",
+      "source": "https://joinly.ai (homepage hero)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Writes with you (into meeting chat), speaks with you (interactive listen/speak), screen sharing marked 'Soon'",
+      "source": "https://joinly.ai ('joinly.ai speaks for itself' feature blocks)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "In-meeting capabilities: web search, presentations, Miro-board updates, follow-up mails, documents",
+      "source": "https://joinly.ai ('Use it for whatever you want' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "MCP-native: joinly uses MCP internally and supports connecting external MCP servers",
+      "source": "https://joinly.ai (blog: 'MCP: The backbone of joinly')",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Digital-twin tutorial: create a twin that joins low-value meetings for you",
+      "source": "https://joinly.ai (blog: digital-twin tutorial)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Positioned as 'the meeting interface for your AI agents': MCP is used internally and external MCP servers can be connected to customise the meeting agent, so agents can act inside live meetings. Agent-to-agent-relevant by design, but real behaviour depends on live meeting infrastructure and can't be exercised from the public surface.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Meeting agents that actually participate — an AI that listens, writes in the cha",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "Meeting agents that actually participate — an AI that listens, writes in the chat, and speaks back during the call, exposed as an MCP interface — a genuinely different take on meeting AI that's still early.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/joinly-ai-joinly.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-15b724c7c5b47f55-joinly-ai",
+    "base": "https://images.hlido.eu/reviews/joinly-ai-joinly/run-15b724c7c5b47f55-joinly-ai",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_blog_mcp-the-backbone-of-joinly_.png",
+      "page_blog_digital-twin-tutorial_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/joinly-ai-joinly/run-15b724c7c5b47f55-joinly-ai/home.png",
+      "https://images.hlido.eu/reviews/joinly-ai-joinly/run-15b724c7c5b47f55-joinly-ai/page_.png",
+      "https://images.hlido.eu/reviews/joinly-ai-joinly/run-15b724c7c5b47f55-joinly-ai/page_blog_mcp-the-backbone-of-joinly_.png",
+      "https://images.hlido.eu/reviews/joinly-ai-joinly/run-15b724c7c5b47f55-joinly-ai/page_blog_digital-twin-tutorial_.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
