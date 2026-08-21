@@ -1,0 +1,152 @@
+{
+  "schema_version": "2.0",
+  "slug": "operative-sh-web-eval-agent",
+  "name": "Operative (web-eval-agent)",
+  "agent_url": "https://www.operative.sh/mcp",
+  "category": "Frameworks & Eval",
+  "run_id": "run-rpub-v2-operative-sh-web-eval-agent-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A browser agent that lets your coding agent vibe-test its own web changes over MCP — a genuinely useful 'let the coding agent debug itself' loop, YC-backed with a one-line install.",
+    "body": "Operative's web-eval-agent gives a coding agent a browser agent it can call over MCP to end-to-end test the web app it just changed: navigate flows (login, dashboard, API-key creation), capture network traffic (all requests/responses in real time), and autonomously debug by driving the app like a user. It's a sharp answer to a real gap — coding agents write changes confidently but rarely verify them in a running browser — and the framing ('let the coding agent debug itself') is exactly right for the agent-to-agent thesis. Install is a single curl-pipe-bash line, it's Y-Combinator-backed, and the ~1240 GitHub stars suggest real traction. Honestly, it's built on browser-use ('we hooked browseruse up to our backend to make it 2x faster'), so it's a productized harness around an existing browser-automation engine rather than a from-scratch one — which is fine, but worth knowing. Surface limits: the autonomy and reliability of the debugging loop, and how well the network-capture and verification actually catch regressions, can't be judged from the landing page, and a curl | bash install warrants the usual caution. For agent-assisted web development it's one of the more directly useful MCP tools around.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) for a well-targeted, agent-native testing tool that closes a real loop (coding agent verifies its own web changes in a browser via MCP), with a one-line install, YC backing and ~1240 stars indicating traction. Not higher because the decisive properties — reliability of the autonomous debug loop and how well it actually catches regressions — are unverifiable from the surface, and it is a harness layered on browser-use rather than a novel engine. Not FADING because the concept, integration path and traction signals are all real.",
+  "what_it_does_well": [
+    "Closes a genuinely missing loop: gives a coding agent a browser agent to end-to-end test the web changes it just made, over MCP",
+    "Real-time network traffic capture (all requests/responses) for comprehensive debugging",
+    "Autonomous flow testing (login, dashboard, API-key creation) driving the app like a user",
+    "One-line install (curl | bash), Y-Combinator-backed, ~1240 GitHub stars indicating traction"
+  ],
+  "what_it_fails_at": [
+    "Built on browser-use ('we hooked browseruse up to our backend') — a productized harness rather than a novel engine",
+    "Autonomy/reliability of the debug loop and its true regression-catching ability are unverifiable from the landing page",
+    "curl | bash install pattern warrants the usual supply-chain caution",
+    "Depth of assertions/coverage the browser agent actually performs isn't documented on the surface"
+  ],
+  "best_for": [
+    "Developers using coding agents (Cursor, Claude Code) who want the agent to verify web changes in a real browser",
+    "Teams wanting MCP-driven end-to-end smoke tests and network-capture debugging without writing a harness",
+    "Agent pipelines that need a 'did my change actually work in the UI?' verification step"
+  ],
+  "not_recommended_for": [
+    "Teams needing a mature, deterministic test framework with documented coverage guarantees (this is exploratory 'vibe-testing')",
+    "Environments where curl | bash installs are disallowed",
+    "Non-web applications — it's a browser agent"
+  ],
+  "red_flags": [
+    "'Vibe-test' autonomy is the whole pitch, but the reliability and regression-catching depth of the debug loop are unverifiable from the surface — validate it finds the bugs you care about before trusting it as a gate.",
+    "Installs via curl | bash; review the script before running in a sensitive environment."
+  ],
+  "compared_to": [
+    {
+      "slug": "browser-use",
+      "verdict_diff": "browser-use is the general-purpose browser-automation engine agents use to drive web pages; Operative is a productized, MCP-native harness built on top of it, aimed specifically at letting a coding agent test and debug its own web changes (with network capture and one-line install). Choose browser-use to build your own automation, Operative for a ready-made agent self-testing loop.",
+      "preferred_for_axis": "ready-made-agent-self-test-harness-vs-general-browser-automation-engine"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Browser agent that lets your coding agent vibe-test web applications via MCP ('let the coding agent debug itself')",
+      "source": "https://www.operative.sh/mcp (homepage hero)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "One-line install: curl -LSf https://operative.sh/install.sh -o install.sh && bash install.sh",
+      "source": "https://www.operative.sh/mcp ('Quick Install' block)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Network traffic capture: monitor all requests/responses in real time for debugging",
+      "source": "https://www.operative.sh/mcp ('Network Traffic Capture' feature)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Autonomous debugging: browser-use agent tests and verifies the app end-to-end",
+      "source": "https://www.operative.sh/mcp ('Autonomous Debugging' feature)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Built on browser-use ('hooked browseruse up to our backend to make it 2x faster'); Y-Combinator-backed; ~1240 GitHub stars",
+      "source": "https://www.operative.sh/mcp ('Navigates with BrowserUse' + footer + star count)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server a coding agent calls to drive a browser: navigate flows, capture network traffic, and autonomously test/verify web changes. One-line install; works with MCP hosts (Cursor, Claude Code). Directly agent-to-agent — one agent verifying another's output — and testable given a target web app.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A browser agent that lets your coding agent vibe-test its own web changes over M",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "A browser agent that lets your coding agent vibe-test its own web changes over MCP — a genuinely useful 'let the coding agent debug itself' loop, YC-backed with a one-line install.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/operative-sh-web-eval-agent.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-9ffa6e2cd0927645-www-operative-sh",
+    "base": "https://images.hlido.eu/reviews/operative-sh-web-eval-agent/run-9ffa6e2cd0927645-www-operative-sh",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/operative-sh-web-eval-agent/run-9ffa6e2cd0927645-www-operative-sh/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  }
+}
