@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "ethanqc-feishu-user-plugin",
+  "name": "feishu-user-plugin",
+  "agent_url": "https://ethanqc.github.io/feishu-user-plugin/",
+  "category": "Productivity",
+  "run_id": "run-rpub-v2-ethanqc-feishu-user-plugin-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A remarkably deep Feishu/Lark MCP server (85 tools, three auth layers) whose headline trick — sending messages as the actual user, not a bot — is also its biggest risk.",
+    "body": "feishu-user-plugin is one of the most feature-complete Feishu/Lark MCP servers on the public surface: 85 tools across IM, docs, Bitable (multi-dimensional tables), wiki, drive, calendar, tasks v2, OKR and a real-time-events websocket, with nine slash-command MCP prompts, MIT-licensed and Node 18+. Its differentiator is explicit and technically interesting: because Feishu's official open API has no send_as_user permission (bot tokens always mark messages sender_type: 'app'), this plugin uses a cookie + protobuf path to send text/images/files/rich-post as the user themselves. Three independent auth layers (LARK_COOKIE for user-identity sends, official app ID/secret for the 70+ bot-API tools, and user OAuth UAT for P2P reads) is a thoughtful design, and details like read_doc_markdown ('saves ~60% token'), 10-minute chat-ID caching, and cross-profile retry on specific error codes show a maintainer who has actually used it. The catch is the same as the headline feature: the user-identity path depends on a copied browser cookie and an unofficial protobuf route, which is inherently fragile (cookies expire, protocols change) and lives in a grey area versus Feishu's official API and terms. For a developer inside the Feishu/Lark ecosystem this is a powerful, agent-native tool; the cookie-based user-impersonation layer should be adopted with eyes open.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) for an unusually deep, well-documented Feishu/Lark MCP server (85 tools, three auth layers, real-time events, MIT) that clearly reflects real use, with a genuinely differentiated user-identity send capability. Not higher because its defining feature relies on a copied cookie + an unofficial protobuf path that is fragile and sits in a terms-of-service grey zone, and because breadth this large can't be verified for reliability from the surface. Not FADING because the tool inventory, auth design and honest engineering detail are substantial and specific.",
+  "what_it_does_well": [
+    "85 tools spanning IM, docs, Bitable, wiki, drive, calendar, tasks v2, OKR and real-time events — very broad Feishu/Lark coverage",
+    "Genuinely differentiated: send as the actual user (text/image/file/rich-post/@) where the official API only allows bot-tagged messages",
+    "Three independent auth layers (cookie user-identity, official bot API, user OAuth UAT) that can be configured independently",
+    "Thoughtful engineering details: read_doc_markdown token savings, 10-min chat-ID caching, cross-profile retry on specific error codes, multi-account profiles",
+    "Nine MCP slash-command prompts (/send, /reply, /digest, /doc, /table, /wiki, /drive, /status), MIT-licensed, Node 18+"
+  ],
+  "what_it_fails_at": [
+    "The headline user-identity path depends on a copied browser cookie (LARK_COOKIE) — fragile (cookies expire) and awkward to obtain safely",
+    "Uses an unofficial cookie+protobuf route that sits in a grey area versus Feishu's official API and terms of service",
+    "85 tools is a large surface whose reliability and edge-case behaviour can't be verified from the docs page",
+    "Niche by design — only useful inside the Feishu/Lark ecosystem"
+  ],
+  "best_for": [
+    "Developers and teams inside the Feishu/Lark ecosystem who want deep, agent-driven automation via MCP",
+    "Use cases that specifically need messages to appear from the real user rather than a bot",
+    "Power users who want docs/Bitable/wiki/calendar/tasks/OKR all reachable from one MCP server"
+  ],
+  "not_recommended_for": [
+    "Organisations that require strictly official-API, terms-compliant integrations (avoid the cookie/protobuf user-send path)",
+    "Anyone outside the Feishu/Lark ecosystem",
+    "Deployments that can't tolerate periodic re-auth when the copied cookie expires"
+  ],
+  "red_flags": [
+    "The signature 'send as user' capability relies on a copied HttpOnly cookie and an unofficial protobuf path that Feishu's official API deliberately does not expose — expect breakage on cookie expiry or protocol changes, and weigh the terms-of-service risk before production use.",
+    "Handling a raw LARK_COOKIE is a credential-hygiene hazard; treat it like a full session token."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Feishu/Lark MCP server for Claude Code, Codex, Cursor, Windsurf, VS Code, Claude Desktop; 85 tools, 3 auth layers, MIT, Node >=18",
+      "source": "https://ethanqc.github.io/feishu-user-plugin/ (landing hero + intro paragraph)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Sends messages as the user via cookie+protobuf because the official API has no send_as_user (bot tokens force sender_type: 'app')",
+      "source": "https://ethanqc.github.io/feishu-user-plugin/ ('与其他飞书 MCP 的区别' differentiator paragraph)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Three auth layers: LARK_COOKIE (user identity, 8 tools), app ID/secret (70+ bot-API tools), user OAuth UAT (2 explicit + UAT-first)",
+      "source": "https://ethanqc.github.io/feishu-user-plugin/ ('三层鉴权' auth table)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Nine MCP slash-command prompts (/send /reply /digest /search /doc /table /wiki /drive /status)",
+      "source": "https://ethanqc.github.io/feishu-user-plugin/ (prompt table)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "read_doc_markdown returns markdown saving ~60% token; 10-min chat-ID caching; cross-profile retry on specific error codes",
+      "source": "https://ethanqc.github.io/feishu-user-plugin/ ('文档生态' + '多账号' sections)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "MCP server with 85 tools and nine slash-command prompts across Claude Code, Codex, Cursor, Windsurf, VS Code and Claude Desktop; real-time events over websocket. npx setup/oauth flow. Directly testable given Feishu credentials, though the user-identity path depends on a copied cookie.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A remarkably deep Feishu/Lark MCP server (85 tools, three auth layers) whose hea",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "A remarkably deep Feishu/Lark MCP server (85 tools, three auth layers) whose headline trick — sending messages as the actual user, not a bot — is also its biggest risk.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/ethanqc-feishu-user-plugin.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-2d6f30cd173e0f56-ethanqc-github-io",
+    "base": "https://images.hlido.eu/reviews/ethanqc-feishu-user-plugin/run-2d6f30cd173e0f56-ethanqc-github-io",
+    "files": [
+      "home.png",
+      "page_content.png",
+      "pageen_html.png",
+      "pageen_html.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/ethanqc-feishu-user-plugin/run-2d6f30cd173e0f56-ethanqc-github-io/home.png",
+      "https://images.hlido.eu/reviews/ethanqc-feishu-user-plugin/run-2d6f30cd173e0f56-ethanqc-github-io/page_content.png",
+      "https://images.hlido.eu/reviews/ethanqc-feishu-user-plugin/run-2d6f30cd173e0f56-ethanqc-github-io/pageen_html.png",
+      "https://images.hlido.eu/reviews/ethanqc-feishu-user-plugin/run-2d6f30cd173e0f56-ethanqc-github-io/pageen_html.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-21",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
+  }
+}
