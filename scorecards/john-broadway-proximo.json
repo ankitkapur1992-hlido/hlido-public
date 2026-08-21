@@ -21,15 +21,15 @@
   "confidence": "medium",
   "review_url": "/reviews/john-broadway-proximo/",
   "hlido_opinion": {
-    "headline": "A Proxmox MCP server whose landing page includes a section listing what it cannot protect you from \u2014 including that its own risk ratings are 'advice, not armor'. The prose is theatrical; the safety thinking underneath is not.",
-    "body": "Proximo wraps Proxmox virtualisation management in an explicit safety model: PLAN returns the blast radius of every mutation and nothing executes until confirm=true; PROVE writes to a keyed, hash-chained ledger where altering one line breaks the chain at that line, with an off-box head pin so truncation is also detectable; UNDO takes a snapshot before risky operations wherever the platform supports it; DIAGNOSE is a read-only evidence battery that reports what it could not see, so silence never reads as a clean result. Six further controls \u2014 consent, kill-switch, lease, scope, envelope, taint-guard \u2014 are described as opt-in, with the important caveat stated plainly: each becomes a real wall only once its state lives beyond the agent's own reach. That last point is the sort of thing most tools in this category never say, and it recurs. The page carries an explicit disclosure section \u2014 'the helmet comes off' \u2014 that states risk ratings are advice rather than armour, that LOW means 'no state change' and never 'safe', and that the absence of a HIGH flag is not a safety signal. A vendor volunteering the limits of its own guardrails is rare and worth crediting. The costs are that the gladiatorial framing is laid on heavily enough to slow down a reader trying to extract facts, and that the safety machinery \u2014 like MikroMCP's \u2014 is described rather than demonstrated: no sample ledger entry, no worked plan output, no verification walkthrough. The design intent is unusually sound; the evidence for it remains assertion.",
+    "headline": "A Proxmox MCP server whose landing page includes a section listing what it cannot protect you from — including that its own risk ratings are 'advice, not armor'. The prose is theatrical; the safety thinking underneath is not.",
+    "body": "Proximo wraps Proxmox virtualisation management in an explicit safety model: PLAN returns the blast radius of every mutation and nothing executes until confirm=true; PROVE writes to a keyed, hash-chained ledger where altering one line breaks the chain at that line, with an off-box head pin so truncation is also detectable; UNDO takes a snapshot before risky operations wherever the platform supports it; DIAGNOSE is a read-only evidence battery that reports what it could not see, so silence never reads as a clean result. Six further controls — consent, kill-switch, lease, scope, envelope, taint-guard — are described as opt-in, with the important caveat stated plainly: each becomes a real wall only once its state lives beyond the agent's own reach. That last point is the sort of thing most tools in this category never say, and it recurs. The page carries an explicit disclosure section — 'the helmet comes off' — that states risk ratings are advice rather than armour, that LOW means 'no state change' and never 'safe', and that the absence of a HIGH flag is not a safety signal. A vendor volunteering the limits of its own guardrails is rare and worth crediting. The costs are that the gladiatorial framing is laid on heavily enough to slow down a reader trying to extract facts, and that the safety machinery — like MikroMCP's — is described rather than demonstrated: no sample ledger entry, no worked plan output, no verification walkthrough. The design intent is unusually sound; the evidence for it remains assertion.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY because the public surface does something genuinely rare \u2014 it states the boundaries of its own protections rather than only their strengths \u2014 and because the four standard controls are specific and mechanically described rather than gestured at. Held out of the top band because none of it is demonstrated with sample output, the six optional controls are explicitly conditional on external state that the user must arrange, and the heavy stylistic framing raises the cost of evaluating the tool.",
+  "tier_rationale": "STEADY because the public surface does something genuinely rare — it states the boundaries of its own protections rather than only their strengths — and because the four standard controls are specific and mechanically described rather than gestured at. Held out of the top band because none of it is demonstrated with sample output, the six optional controls are explicitly conditional on external state that the user must arrange, and the heavy stylistic framing raises the cost of evaluating the tool.",
   "what_it_does_well": [
-    "Publishes what its guardrails do NOT protect against \u2014 including that risk ratings are advice, not armour",
+    "Publishes what its guardrails do NOT protect against — including that risk ratings are advice, not armour",
     "Plan-before-execute with an explicit confirm=true gate on every mutation",
     "Hash-chained, keyed ledger with an off-box head pin, so both alteration and truncation are detectable",
     "Snapshot-first undo wherever the platform supports snapshots",
@@ -37,7 +37,7 @@
     "States that the optional controls only become real once their state lives outside the agent's reach"
   ],
   "what_it_fails_at": [
-    "No sample ledger entry, plan output or verification walkthrough \u2014 the safety model is described, never shown",
+    "No sample ledger entry, plan output or verification walkthrough — the safety model is described, never shown",
     "Six of the ten controls are opt-in and conditional on user-arranged external state",
     "The gladiatorial framing is heavy enough to slow factual evaluation",
     "No version, changelog or release-cadence signal on the reviewed surface",
@@ -50,17 +50,17 @@
   ],
   "not_recommended_for": [
     "Readers who need to extract facts quickly; the styling materially slows evaluation",
-    "Non-Proxmox environments \u2014 this is platform-specific by design",
+    "Non-Proxmox environments — this is platform-specific by design",
     "Teams wanting demonstrated rather than described safety guarantees before production use"
   ],
   "red_flags": [
-    "The safety machinery is described in detail but never demonstrated \u2014 no sample ledger, plan or rollback appears anywhere on the surface.",
+    "The safety machinery is described in detail but never demonstrated — no sample ledger, plan or rollback appears anywhere on the surface.",
     "Six of the ten advertised controls are opt-in and only become effective once their state is held outside the agent's reach. The page says so honestly, but a reader skimming the feature list could easily count ten protections when four are active by default."
   ],
   "compared_to": [
     {
       "slug": "alikarami-mikromcp",
-      "verdict_diff": "The closest philosophical sibling \u2014 both lead with change-safety for infrastructure agents. MikroMCP covers RouterOS network gear and publishes a larger typed tool surface; Proximo covers Proxmox and goes further in disclosing where its own guarantees stop.",
+      "verdict_diff": "The closest philosophical sibling — both lead with change-safety for infrastructure agents. MikroMCP covers RouterOS network gear and publishes a larger typed tool surface; Proximo covers Proxmox and goes further in disclosing where its own guarantees stop.",
       "preferred_for_axis": "platform-and-disclosure-depth"
     },
     {
@@ -169,5 +169,15 @@
       "https://images.hlido.eu/reviews/john-broadway-proximo/run-2aae75e32a79fa1f-john-broadway-github-io/home.png",
       "https://images.hlido.eu/reviews/john-broadway-proximo/run-2aae75e32a79fa1f-john-broadway-github-io/page_kit.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-13",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
