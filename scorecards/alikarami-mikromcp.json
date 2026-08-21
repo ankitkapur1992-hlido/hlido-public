@@ -21,24 +21,24 @@
   "confidence": "medium",
   "review_url": "/reviews/alikarami-mikromcp/",
   "hlido_opinion": {
-    "headline": "An MCP server for MikroTik RouterOS that leads with the danger rather than the demo \u2014 dry-run, rollback, RBAC, audit logs and per-router circuit breakers, in a category where most tools ship raw command execution and hope.",
-    "body": "MikroMCP exposes 117 typed tools over RouterOS 7.x and frames the entire product around a single argument: raw CLI is the wrong abstraction for an LLM operating production network gear. Rather than treating that as a disclaimer, it is the product. Strict schemas, idempotent writes, dry-run previews, snapshots, a write journal, plan_changes/apply_plan/rollback_change, per-router circuit breakers, retry policies, RBAC with bcrypt token hashes, correlation IDs and audit logs are all named on the landing page. For anyone who has watched an LLM improvise a firewall rule, that ordering of priorities is the correct one, and it is rare. Coverage is enumerated concretely across router management, network operations, firewall and policy, routing visibility, secure access, diagnostics and change safety, with both stdio and HTTP transports and named clients (Claude, ChatGPT, Cursor, Codex). MIT licensed with a docs link and a FAQ. What is missing is corroboration: the safety machinery is listed but not demonstrated \u2014 no sample dry-run output, no audit-log excerpt, no worked rollback. There is also no statement about how router credentials are stored, which is the sharpest question for a tool holding privileged access to network infrastructure. The design intent is clearly right; the evidence for it is currently assertion.",
+    "headline": "An MCP server for MikroTik RouterOS that leads with the danger rather than the demo — dry-run, rollback, RBAC, audit logs and per-router circuit breakers, in a category where most tools ship raw command execution and hope.",
+    "body": "MikroMCP exposes 117 typed tools over RouterOS 7.x and frames the entire product around a single argument: raw CLI is the wrong abstraction for an LLM operating production network gear. Rather than treating that as a disclaimer, it is the product. Strict schemas, idempotent writes, dry-run previews, snapshots, a write journal, plan_changes/apply_plan/rollback_change, per-router circuit breakers, retry policies, RBAC with bcrypt token hashes, correlation IDs and audit logs are all named on the landing page. For anyone who has watched an LLM improvise a firewall rule, that ordering of priorities is the correct one, and it is rare. Coverage is enumerated concretely across router management, network operations, firewall and policy, routing visibility, secure access, diagnostics and change safety, with both stdio and HTTP transports and named clients (Claude, ChatGPT, Cursor, Codex). MIT licensed with a docs link and a FAQ. What is missing is corroboration: the safety machinery is listed but not demonstrated — no sample dry-run output, no audit-log excerpt, no worked rollback. There is also no statement about how router credentials are stored, which is the sharpest question for a tool holding privileged access to network infrastructure. The design intent is clearly right; the evidence for it is currently assertion.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY because the public surface is specific and well-organised \u2014 enumerated tool count, named capability areas, both transports documented, MIT licence, docs and FAQ present \u2014 and because the safety-first framing is genuinely differentiated for this category. Held out of the top band because every safety feature is asserted rather than demonstrated (no sample dry-run, audit entry or rollback), and because credential handling for privileged router access is not addressed on the public surface.",
+  "tier_rationale": "STEADY because the public surface is specific and well-organised — enumerated tool count, named capability areas, both transports documented, MIT licence, docs and FAQ present — and because the safety-first framing is genuinely differentiated for this category. Held out of the top band because every safety feature is asserted rather than demonstrated (no sample dry-run, audit entry or rollback), and because credential handling for privileged router access is not addressed on the public surface.",
   "what_it_does_well": [
-    "Leads with change-safety rather than capability \u2014 dry-run, snapshots, rollback and a write journal are the headline, not a footnote",
+    "Leads with change-safety rather than capability — dry-run, snapshots, rollback and a write journal are the headline, not a footnote",
     "117 typed tools with strict schemas, enumerated across seven named capability areas",
     "RBAC, bcrypt token hashes, audit logs and correlation IDs published as first-class features",
-    "Per-router circuit breakers and retry policies \u2014 genuine operational maturity for an OSS project",
+    "Per-router circuit breakers and retry policies — genuine operational maturity for an OSS project",
     "Both stdio and HTTP transports, with named clients (Claude, ChatGPT, Cursor, Codex)",
     "MIT licensed, with docs and FAQ linked from the landing page"
   ],
   "what_it_fails_at": [
     "Every safety feature is asserted; none is demonstrated with sample output, an audit excerpt or a worked rollback",
-    "No statement on how router credentials are stored, scoped or rotated \u2014 the key question for privileged infrastructure access",
+    "No statement on how router credentials are stored, scoped or rotated — the key question for privileged infrastructure access",
     "No version or changelog signal on the landing surface",
     "Scope is RouterOS 7.x only, with no statement on older-release behaviour",
     "The confirmation-token and RBAC model is named but its actual semantics are not described"
@@ -49,18 +49,18 @@
     "Anyone who has rejected AI network tooling on safety grounds and wants to reconsider with dry-run and rollback in place"
   ],
   "not_recommended_for": [
-    "Non-MikroTik environments \u2014 this is RouterOS-specific by design",
+    "Non-MikroTik environments — this is RouterOS-specific by design",
     "Teams needing evidence of the safety machinery before granting production access; it is currently unevidenced",
     "Organisations requiring a documented credential-handling posture before deployment"
   ],
   "red_flags": [
-    "The safety features that justify this tool's existence \u2014 dry-run, rollback, audit, RBAC \u2014 are listed but never shown. For a tool holding write access to production network gear, that gap between claim and evidence is the one worth closing first.",
+    "The safety features that justify this tool's existence — dry-run, rollback, audit, RBAC — are listed but never shown. For a tool holding write access to production network gear, that gap between claim and evidence is the one worth closing first.",
     "Credential storage and rotation for privileged router access is not addressed anywhere on the public surface."
   ],
   "compared_to": [
     {
       "slug": "awslabs-mcp",
-      "verdict_diff": "AWS's suite is broader and vendor-backed but targets cloud infrastructure; MikroMCP is narrow, community-built and targets physical network gear. Not substitutes \u2014 different infrastructure entirely.",
+      "verdict_diff": "AWS's suite is broader and vendor-backed but targets cloud infrastructure; MikroMCP is narrow, community-built and targets physical network gear. Not substitutes — different infrastructure entirely.",
       "preferred_for_axis": "physical-network-vs-cloud"
     },
     {
@@ -173,5 +173,15 @@
       "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/page_features.png",
       "https://images.hlido.eu/reviews/alikarami-mikromcp/run-c3821cc654d33602-mikromcp-com/page_how.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-13",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
