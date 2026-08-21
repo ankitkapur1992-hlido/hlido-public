@@ -21,15 +21,15 @@
   "confidence": "medium",
   "review_url": "/reviews/vincentvella-devloop/",
   "hlido_opinion": {
-    "headline": "Correlates browser console errors with the backend stack trace from the same moment on one timeline, and ships the CLAUDE.md block that makes an agent actually reach for it \u2014 including the instruction never to claim a fix works without exercising it.",
-    "body": "Devloop's premise is specific and immediately recognisable to anyone who has debugged a full-stack issue: a browser console error and the dev-server stack trace from the same moment are two halves of one event, and they normally live in two windows with no shared clock. Devloop puts both on a single correlated timeline, then exposes it over MCP so an agent can start the dev server, drive the browser, reproduce an issue and read back a correlated slice of both sides. The install is one command (claude mcp add devloop), and there is a desktop 'cockpit' with tabbed browser panes, Expo iOS/Android targets, a filterable timeline, a repro builder and an element picker. The unusual move is publishing a ready-made CLAUDE.md block that tells an agent when to reach for the tool and what counts as done \u2014 'never claim a fix works without exercising it in the running app', with 'done' defined as verified live with no console or page errors and the expected network calls succeeding. That is prompt-level distribution, and it is a smart, honest answer to the real failure mode of coding agents declaring victory from a diff. Two further details signal maturity: a documented fallback for enterprise sandboxes that block MCP (drive the tools as shell commands), and an explicit statement that Devloop diagnoses missing toolchain and names the fix command but never installs anything itself. What is missing is the operational half \u2014 no version or changelog on the surface, nothing about what the correlated timeline captures or retains, and no security note for a tool that reads console output and network traffic from a running application.",
+    "headline": "Correlates browser console errors with the backend stack trace from the same moment on one timeline, and ships the CLAUDE.md block that makes an agent actually reach for it — including the instruction never to claim a fix works without exercising it.",
+    "body": "Devloop's premise is specific and immediately recognisable to anyone who has debugged a full-stack issue: a browser console error and the dev-server stack trace from the same moment are two halves of one event, and they normally live in two windows with no shared clock. Devloop puts both on a single correlated timeline, then exposes it over MCP so an agent can start the dev server, drive the browser, reproduce an issue and read back a correlated slice of both sides. The install is one command (claude mcp add devloop), and there is a desktop 'cockpit' with tabbed browser panes, Expo iOS/Android targets, a filterable timeline, a repro builder and an element picker. The unusual move is publishing a ready-made CLAUDE.md block that tells an agent when to reach for the tool and what counts as done — 'never claim a fix works without exercising it in the running app', with 'done' defined as verified live with no console or page errors and the expected network calls succeeding. That is prompt-level distribution, and it is a smart, honest answer to the real failure mode of coding agents declaring victory from a diff. Two further details signal maturity: a documented fallback for enterprise sandboxes that block MCP (drive the tools as shell commands), and an explicit statement that Devloop diagnoses missing toolchain and names the fix command but never installs anything itself. What is missing is the operational half — no version or changelog on the surface, nothing about what the correlated timeline captures or retains, and no security note for a tool that reads console output and network traffic from a running application.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
   "tier_rationale": "STEADY because the product solves a real and specific problem, the surface backs it with a demo, screenshots, a one-command install, a documented enterprise fallback and a clear scope boundary on installation, and the CLAUDE.md distribution block is a genuine agent-adoption advantage. Held out of the top band because there is no version, changelog or data-handling statement, and because the correlation quality that the whole product rests on is shown in demo form rather than described in a way a buyer can verify.",
   "what_it_does_well": [
-    "Solves a specific, recognisable problem \u2014 browser and server evidence from the same moment on one timeline",
+    "Solves a specific, recognisable problem — browser and server evidence from the same moment on one timeline",
     "Ships a copy-paste CLAUDE.md block so agents actually reach for it, with a real definition of done",
     "One-command MCP install, plus a documented shell-command fallback for sandboxes that block MCP",
     "Explicit scope boundary: it diagnoses missing toolchain and names the fix, but never installs",
@@ -40,17 +40,17 @@
     "No version, changelog or release-cadence signal anywhere on the surface",
     "Nothing describes what the correlated timeline captures, retains or transmits",
     "No security note for a tool reading console output and network traffic from a running app",
-    "Correlation accuracy \u2014 the core value \u2014 is demonstrated by video rather than described or specified",
+    "Correlation accuracy — the core value — is demonstrated by video rather than described or specified",
     "No pricing or licence statement despite a distributed desktop application"
   ],
   "best_for": [
     "Developers using AI coding agents who are tired of fixes claimed from a diff rather than verified live",
     "Full-stack teams whose bugs span the browser/server boundary and are painful to correlate by hand",
-    "React Native and Expo developers \u2014 mobile targets are supported alongside browser",
+    "React Native and Expo developers — mobile targets are supported alongside browser",
     "Teams wanting an agent-enforced definition of done tied to observed application behaviour"
   ],
   "not_recommended_for": [
-    "Production or customer-facing environments \u2014 this is development-time tooling with no documented data posture",
+    "Production or customer-facing environments — this is development-time tooling with no documented data posture",
     "Teams needing a documented security review before a tool reads console and network traffic",
     "Backend-only projects with no browser or mobile surface to correlate against"
   ],
@@ -61,7 +61,7 @@
   "compared_to": [
     {
       "slug": "feedthrough-feedthrough",
-      "verdict_diff": "The closest comparison \u2014 both expose live web-app debugging state over MCP. Feedthrough reaches into the page itself via an injected bridge; Devloop correlates browser and dev-server timelines and adds mobile targets plus a desktop app. Choose Feedthrough for in-page state, Devloop for cross-boundary correlation.",
+      "verdict_diff": "The closest comparison — both expose live web-app debugging state over MCP. Feedthrough reaches into the page itself via an injected bridge; Devloop correlates browser and dev-server timelines and adds mobile targets plus a desktop app. Choose Feedthrough for in-page state, Devloop for cross-boundary correlation.",
       "preferred_for_axis": "in-page-state-vs-cross-boundary-correlation"
     },
     {
@@ -174,5 +174,14 @@
       "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/page_shots_repro_png.png",
       "https://images.hlido.eu/reviews/vincentvella-devloop/run-976eca187c2c09bf-devloop-build/page_shots_multipane_png.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-14",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
