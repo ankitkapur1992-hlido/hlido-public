@@ -21,22 +21,22 @@
   "confidence": "medium",
   "review_url": "/reviews/eat-pray-ai-yutu/",
   "hlido_opinion": {
-    "headline": "A genuinely tri-modal YouTube toolkit \u2014 CLI, MCP server and A2A agent from one binary \u2014 whose install path is verifiable and whose 'autopilot' claim is not.",
-    "body": "yutu is unusual in this crop for shipping three interfaces over one codebase: a 30+ command CLI, an MCP server you drop into Claude Desktop, Cursor or OpenCode, and an A2A agent mode. The public surface backs the mechanical claims well \u2014 brew, winget and a curl installer are all published, the MCP config snippet is copy-pasteable, and the resource list (video, playlist, caption, thumbnail, membership, super-chat, i18n, abuse report) reads like it was generated from the YouTube Data API surface rather than from a marketing brainstorm. Apache-2.0 with the repo linked from the fold. Where it thins out is exactly where the headline promise lives. 'Grows your YouTube channel on autopilot' and 'autonomous multi-agent system' are the two load-bearing claims, and neither is evidenced anywhere on the public surface \u2014 no demo of the agent running, no description of what the agents decide, no before/after. What is demonstrably shipped is comprehensive YouTube API automation, which is a useful and honest product; the autonomy layer on top is asserted. For a buyer, the CLI and MCP surface is the part to evaluate on, and it is strong. Treat the agent mode as unproven until you run it.",
+    "headline": "A genuinely tri-modal YouTube toolkit — CLI, MCP server and A2A agent from one binary — whose install path is verifiable and whose 'autopilot' claim is not.",
+    "body": "yutu is unusual in this crop for shipping three interfaces over one codebase: a 30+ command CLI, an MCP server you drop into Claude Desktop, Cursor or OpenCode, and an A2A agent mode. The public surface backs the mechanical claims well — brew, winget and a curl installer are all published, the MCP config snippet is copy-pasteable, and the resource list (video, playlist, caption, thumbnail, membership, super-chat, i18n, abuse report) reads like it was generated from the YouTube Data API surface rather than from a marketing brainstorm. Apache-2.0 with the repo linked from the fold. Where it thins out is exactly where the headline promise lives. 'Grows your YouTube channel on autopilot' and 'autonomous multi-agent system' are the two load-bearing claims, and neither is evidenced anywhere on the public surface — no demo of the agent running, no description of what the agents decide, no before/after. What is demonstrably shipped is comprehensive YouTube API automation, which is a useful and honest product; the autonomy layer on top is asserted. For a buyer, the CLI and MCP surface is the part to evaluate on, and it is strong. Treat the agent mode as unproven until you run it.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY because the verifiable core \u2014 a broad, well-organised YouTube automation surface exposed through three interfaces with real install paths and an OSI licence \u2014 is solid and immediately usable. Held below the top band because the product's own headline claim (autonomous channel growth) has no public evidence behind it, and because there is no demo or docs surface deep enough to check what the agent mode actually does.",
+  "tier_rationale": "STEADY because the verifiable core — a broad, well-organised YouTube automation surface exposed through three interfaces with real install paths and an OSI licence — is solid and immediately usable. Held below the top band because the product's own headline claim (autonomous channel growth) has no public evidence behind it, and because there is no demo or docs surface deep enough to check what the agent mode actually does.",
   "what_it_does_well": [
-    "Three interfaces (CLI, MCP server, A2A agent) from a single install \u2014 rare and genuinely useful",
+    "Three interfaces (CLI, MCP server, A2A agent) from a single install — rare and genuinely useful",
     "Install paths published for macOS, Windows and Linux, all copy-pasteable",
     "MCP config snippet given verbatim, with named clients (Claude Desktop, OpenCode, Cursor)",
-    "Resource coverage is broad and specific \u2014 20+ YouTube entity types enumerated, not hand-waved",
+    "Resource coverage is broad and specific — 20+ YouTube entity types enumerated, not hand-waved",
     "Apache-2.0, repo linked prominently from the landing page"
   ],
   "what_it_fails_at": [
-    "'Autopilot' / 'autonomous multi-agent system' is asserted with zero public evidence \u2014 no demo, no decision description",
+    "'Autopilot' / 'autonomous multi-agent system' is asserted with zero public evidence — no demo, no decision description",
     "No documentation surface beyond the landing page; the four-step quickstart is the whole story",
     "No description of how OAuth credentials are stored or scoped, despite the tool requiring full channel write access",
     "No changelog, roadmap or release cadence signal on the public surface",
@@ -49,7 +49,7 @@
     "CI/CD publishing pipelines (GitHub Actions and Docker are both named)"
   ],
   "not_recommended_for": [
-    "Buyers who need the autonomous growth claim to be real before committing \u2014 it is unevidenced",
+    "Buyers who need the autonomous growth claim to be real before committing — it is unevidenced",
     "Non-technical creators; every documented path starts at a shell prompt",
     "Anyone needing a documented data-handling or credential-storage posture before granting channel write access"
   ],
@@ -76,7 +76,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "First-class MCP server with a published stdio config, plus an A2A agent mode. An agent can drive the full YouTube entity surface through named tools. The CLI is equally scriptable. This is one of the more agent-addressable tools in its category \u2014 the limiting factor is credential setup, not interface availability.",
+    "agent_integration_path": "First-class MCP server with a published stdio config, plus an A2A agent mode. An agent can drive the full YouTube entity surface through named tools. The CLI is equally scriptable. This is one of the more agent-addressable tools in its category — the limiting factor is credential setup, not interface availability.",
     "agent_friendly_score": 8
   },
   "claims": [
@@ -85,7 +85,7 @@
       "claim": "Homepage publicly accessible and value proposition clearly stated",
       "required": true,
       "verdict": "pass",
-      "evidence": "Landing page loads without auth; states 'CLI \u00b7 MCP Server \u00b7 AI Agent \u2014 Automate your entire YouTube workflow' above the fold.",
+      "evidence": "Landing page loads without auth; states 'CLI · MCP Server · AI Agent — Automate your entire YouTube workflow' above the fold.",
       "source_surface": "homepage"
     },
     {
@@ -169,5 +169,15 @@
       "https://images.hlido.eu/reviews/eat-pray-ai-yutu/run-429d75745e16933f-yutu-ifor-dev/home.png",
       "https://images.hlido.eu/reviews/eat-pray-ai-yutu/run-429d75745e16933f-yutu-ifor-dev/page__usage.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
