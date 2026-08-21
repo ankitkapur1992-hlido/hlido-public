@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "automatelab-tech-content-distribution-mcp",
+  "name": "Content Distribution MCP",
+  "agent_url": "https://automatelab.tech/products/mcp/content-distribution-mcp/",
+  "category": "Marketing & Content",
+  "run_id": "run-rpub-v2-automatelab-tech-content-distribution-mcp-2026-08-21",
+  "run_at": "2026-08-21T08:45:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A genuinely agent-native content-distribution MCP: your agent writes the copy, the server does idempotent I/O to eight developer channels — no LLM calls, no double-posts.",
+    "body": "Content Distribution MCP (by AutomateLab, MIT-licensed, npx-installable as @ratamaha/content-distribution-mcp) is a clean, well-scoped answer to a real agent workflow: 'ask an AI to publish this post everywhere.' It ships eight MCP tools and eight channel adapters across three publish tiers — six auto-publish through native APIs (dev.to Forem, Hashnode GraphQL, GitHub Discussions, Bluesky atproto), and two/four fall back to a plain-text draft plus a pre-filled compose URL where the platform's API is hostile (Reddit, Medium, LinkedIn, Twitter). The design choices are the good part and they are honestly stated on the surface: publish is idempotent on (content_id, channel) so a retry returns the same URL instead of a duplicate thread; there are zero LLM calls in the server ('grep src/ for anthropic — you'll find nothing'), so the host model supplies copy and credentials while the MCP supplies I/O; and it works over stdio or SSE against Claude Code, Cursor, n8n and the plain mcp client. A dual YAML-local / Notion-team backend is a thoughtful touch for solo-vs-agency. The honest caveats are ordinary for a young single-maintainer tool: the manual channels still need a human paste-and-click, the anti-spam/subreddit rules are only as good as the curated catalog, and idempotency/retry behaviour can't be exercised from the homepage. For an AI-assisted developer or DevRel team that wants distribution as a callable tool rather than a SaaS dashboard, it's a genuinely useful, agent-first surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a focused, agent-native tool that solves a concrete distribution workflow with two design decisions that matter — idempotency on (content_id, channel) and a no-LLM-in-server split — clearly evidenced on the surface, MIT-licensed and npx-installable with eight documented MCP tools. Not higher because the actual publish/idempotency/retry behaviour and the anti-spam rules can't be verified from the public page, four of eight channels still require a human paste step, and it's a young single-maintainer project with adoption unproven. Not FADING because the tool surface, tool contract and honest scoping show real, thoughtful engineering.",
+  "what_it_does_well": [
+    "Eight namespaced MCP tools (post_publish/schedule/drain/status/unpublish, channel_hints, profile_list, subreddit_list) with a clear one-envelope-plus-variants contract",
+    "Idempotent on (content_id, channel): a re-run of the same envelope is a no-op — no double-posts or duplicate Reddit threads (as stated)",
+    "Zero LLM calls in the server: host supplies copy/credentials/decisions, MCP supplies I/O — model- and host-agnostic",
+    "npx -y install with one JSON block, Node 18+ only; works over stdio or SSE against Claude Code, Cursor, n8n and the plain mcp client",
+    "Honest tiering of channels (AUTO vs MANUAL) instead of pretending every platform has a usable API; dual YAML-local / Notion-team backend"
+  ],
+  "what_it_fails_at": [
+    "Four of eight channels (Reddit, Medium, LinkedIn, Twitter) are MANUAL — a human still pastes and clicks Publish; not fully autonomous distribution",
+    "Idempotency, retry and anti-spam/subreddit-cooldown behaviour are design claims that can't be exercised or verified from the public surface",
+    "Young, single-maintainer project (@ratamaha); adoption, maintenance cadence and long-term platform-API resilience are unproven on the surface",
+    "unpublish is best-effort only (Reddit is honor-system, browser channels operator-driven)"
+  ],
+  "best_for": [
+    "AI-assisted developers and DevRel teams who want cross-posting as a callable MCP tool, not a SaaS dashboard",
+    "Agent pipelines that need idempotent publishing with per-channel canonical-URL handling for SEO",
+    "Solo developers (YAML backend) or small agencies (Notion backend) publishing to developer-community channels"
+  ],
+  "not_recommended_for": [
+    "Teams wanting fully hands-off publishing to Reddit/LinkedIn/Medium/Twitter (those remain manual paste-and-click)",
+    "Non-technical marketers who want a hosted GUI scheduler (Buffer/Hootsuite) rather than an MCP server they configure with tokens",
+    "Anyone needing guaranteed platform-API stability — free-tier APIs (Twitter, Reddit) are explicitly called out as unreliable"
+  ],
+  "red_flags": [
+    "Idempotency and anti-double-post behaviour are the core value and are asserted, not demonstrated, on the public surface — validate against your own channels before trusting it for unattended publishing.",
+    "Depends on multiple third-party platform APIs (some free-tier and explicitly 'hostile'/'unusable'); channel reliability is outside the tool's control."
+  ],
+  "compared_to": [
+    {
+      "slug": "zapier",
+      "verdict_diff": "Zapier is a mature hosted automation platform with a GUI, huge app catalog and managed reliability; Content Distribution MCP is a narrow, code-first MCP server that an AI agent drives directly, with idempotency and canonical-URL handling built for developer-community channels specifically. Choose Zapier for breadth and a no-code UI, this for agent-native, MIT-licensed, tokens-you-control publishing.",
+      "preferred_for_axis": "agent-native-mcp-vs-hosted-no-code-automation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP server publishing one piece of content to eight developer-community channels, MIT-licensed, npx @ratamaha/content-distribution-mcp",
+      "source": "https://automatelab.tech/products/mcp/content-distribution-mcp/ (homepage hero + 'Install in 2 steps')",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Eight MCP tools namespaced by domain (post_publish/schedule/drain/status/unpublish, channel_hints, profile_list, subreddit_list)",
+      "source": "https://automatelab.tech/products/mcp/content-distribution-mcp/ ('What it gives your agent' tool table)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Idempotent on (content_id, channel); re-running the same envelope is a no-op",
+      "source": "https://automatelab.tech/products/mcp/content-distribution-mcp/ ('What makes it different — Idempotent' section)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Zero LLM calls in the server; works with any model/host over stdio or SSE (Claude Code, Cursor, n8n, mcp client)",
+      "source": "https://automatelab.tech/products/mcp/content-distribution-mcp/ ('Zero LLM calls in the server' + 'Works in any MCP host' sections)",
+      "tested_at": "2026-08-21",
+      "verified": true
+    },
+    {
+      "claim": "Three publish tiers: six AUTO native-API channels, remaining channels MANUAL draft+compose-URL",
+      "source": "https://automatelab.tech/products/mcp/content-distribution-mcp/ (channel/tier table (devto, hashnode, github_discussions, bluesky AUTO; reddit/medium/linkedin/twitter MANUAL))",
+      "tested_at": "2026-08-21",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP server (npx @ratamaha/content-distribution-mcp) exposing eight tools over stdio or SSE; any MCP host (Claude Code, Cursor, n8n, plain mcp client) drives publishing directly. No LLM calls in the server, so behaviour is deterministic and directly testable given channel credentials. A genuine agent-to-agent distribution surface.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "A genuinely agent-native content-distribution MCP: your agent writes the copy, t",
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-08-21T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot(s) captured",
+      "tested_at": "2026-08-21T00:00:00Z"
+    }
+  ],
+  "summary": "A genuinely agent-native content-distribution MCP: your agent writes the copy, the server does idempotent I/O to eight developer channels — no LLM calls, no double-posts.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-21",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-21",
+  "attestation_url": "/data/attestations/automatelab-tech-content-distribution-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-21",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true
+  },
+  "evidence_images": {
+    "run_id": "run-d14a0c28698f9b6a-automatelab-tech",
+    "base": "https://images.hlido.eu/reviews/automatelab-tech-content-distribution-mcp/run-d14a0c28698f9b6a-automatelab-tech",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/automatelab-tech-content-distribution-mcp/run-d14a0c28698f9b6a-automatelab-tech/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under. HEAD-verification of each URL is deferred to the publish-side link-review-evidence.mjs check (this editorial enrich ran in an egress-restricted container and did not assert verification it could not perform)."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-21",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
+  }
+}
