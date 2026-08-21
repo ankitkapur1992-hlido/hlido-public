@@ -21,8 +21,8 @@
   "confidence": "high",
   "review_url": "/reviews/swimmwatch-cloakbrowser-mcp/",
   "hlido_opinion": {
-    "headline": "A Playwright-MCP-compatible browser server that publishes a version compatibility matrix and says parity with upstream is verified in CI \u2014 the honest answer to 'will this break when Playwright MCP updates?'",
-    "body": "CloakBrowser MCP is positioned precisely: a drop-in Playwright-MCP-compatible server that runs upstream @playwright/mcp as the canonical tool surface, with CloakBrowser Chromium and deployment features layered around it. Because the tools are unchanged upstream tools, the compatibility question becomes the whole risk, and the docs answer it directly with a matrix mapping every cloakbrowser-mcp release to its @playwright/mcp version, Playwright MCP Docker base image, CloakBrowser version and transports \u2014 with a Parity column reading 'Compared in CI'. Publishing a compatibility matrix at all is uncommon; testing that parity in CI and saying so is genuinely good engineering practice made legible to a buyer. The added value is stated as deployment-oriented rather than functional: persistent profiles, extension loading, context validation, GeoIP-aware proxy matching for regional QA, and humanized input behaviour for interaction-sensitive flows. Version is current and visible (v1.11.0), packaging covers npm, Docker and Streamable HTTP, and the documentation is translated into ten languages, which signals a maintainer investing well beyond a weekend project. The thing to be clear-eyed about is what 'CloakBrowser' and 'humanized input behavior' mean: these are anti-detection features. There is a legitimate use \u2014 regional QA and testing interaction-sensitive flows are real jobs \u2014 but the same capabilities evade bot detection, and the documentation does not address the acceptable-use question that raises. Buyers in regulated contexts should resolve that before adopting.",
+    "headline": "A Playwright-MCP-compatible browser server that publishes a version compatibility matrix and says parity with upstream is verified in CI — the honest answer to 'will this break when Playwright MCP updates?'",
+    "body": "CloakBrowser MCP is positioned precisely: a drop-in Playwright-MCP-compatible server that runs upstream @playwright/mcp as the canonical tool surface, with CloakBrowser Chromium and deployment features layered around it. Because the tools are unchanged upstream tools, the compatibility question becomes the whole risk, and the docs answer it directly with a matrix mapping every cloakbrowser-mcp release to its @playwright/mcp version, Playwright MCP Docker base image, CloakBrowser version and transports — with a Parity column reading 'Compared in CI'. Publishing a compatibility matrix at all is uncommon; testing that parity in CI and saying so is genuinely good engineering practice made legible to a buyer. The added value is stated as deployment-oriented rather than functional: persistent profiles, extension loading, context validation, GeoIP-aware proxy matching for regional QA, and humanized input behaviour for interaction-sensitive flows. Version is current and visible (v1.11.0), packaging covers npm, Docker and Streamable HTTP, and the documentation is translated into ten languages, which signals a maintainer investing well beyond a weekend project. The thing to be clear-eyed about is what 'CloakBrowser' and 'humanized input behavior' mean: these are anti-detection features. There is a legitimate use — regional QA and testing interaction-sensitive flows are real jobs — but the same capabilities evade bot detection, and the documentation does not address the acceptable-use question that raises. Buyers in regulated contexts should resolve that before adopting.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
@@ -31,14 +31,14 @@
   "what_it_does_well": [
     "Publishes a full version compatibility matrix across cloakbrowser-mcp, @playwright/mcp, Docker base and CloakBrowser",
     "States that upstream parity is compared in CI, rather than merely asserting compatibility",
-    "Honest about what it inherits versus what it adds \u2014 upstream tools unchanged, deployment features layered on",
+    "Honest about what it inherits versus what it adds — upstream tools unchanged, deployment features layered on",
     "Current version visible (v1.11.0) with prior releases and their pinnings retained",
     "Three packaging routes: npm, Docker and Streamable HTTP",
     "Documentation translated into ten languages, plus comparison and recipe sections"
   ],
   "what_it_fails_at": [
     "Anti-detection features (CloakBrowser, humanized input) are central to the value proposition and carry no acceptable-use discussion",
-    "As a wrapper, it inherits upstream's release cadence \u2014 a standing dependency risk the matrix documents but cannot remove",
+    "As a wrapper, it inherits upstream's release cadence — a standing dependency risk the matrix documents but cannot remove",
     "The tool surface is deliberately upstream's, so it is documented there rather than here",
     "No statement on how persistent profiles store cookies or credentials",
     "GeoIP-aware proxy matching implies proxy infrastructure that is not described or sourced"
@@ -49,23 +49,23 @@
     "Deployments needing Docker or Streamable HTTP packaging that upstream does not provide as directly"
   ],
   "not_recommended_for": [
-    "Organisations whose policies prohibit anti-bot-detection tooling \u2014 resolve this before adopting",
+    "Organisations whose policies prohibit anti-bot-detection tooling — resolve this before adopting",
     "Users who need only standard browser automation; upstream Playwright MCP is the simpler dependency",
     "Teams unwilling to carry a wrapper's upstream-tracking risk, however well documented"
   ],
   "red_flags": [
-    "'CloakBrowser' and 'humanized input behavior' are anti-detection capabilities. The stated uses \u2014 regional QA, interaction-sensitive testing \u2014 are legitimate, but the same features defeat bot detection and the docs raise no acceptable-use question at all.",
+    "'CloakBrowser' and 'humanized input behavior' are anti-detection capabilities. The stated uses — regional QA, interaction-sensitive testing — are legitimate, but the same features defeat bot detection and the docs raise no acceptable-use question at all.",
     "Persistent profiles and extension loading imply stored browser state, potentially including credentials and cookies, with no documented handling or isolation model."
   ],
   "compared_to": [
     {
       "slug": "microsoft-playwright-mcp",
-      "verdict_diff": "This wraps that. Take upstream unless you specifically need persistent profiles, extension loading, GeoIP proxy matching or the Docker/HTTP packaging \u2014 every wrapper adds a tracking dependency, and this one documents that cost more honestly than most.",
+      "verdict_diff": "This wraps that. Take upstream unless you specifically need persistent profiles, extension loading, GeoIP proxy matching or the Docker/HTTP packaging — every wrapper adds a tracking dependency, and this one documents that cost more honestly than most.",
       "preferred_for_axis": "upstream-simplicity-vs-deployment-features"
     },
     {
       "slug": "mathiaspaulenko-wavexis-mcp",
-      "verdict_diff": "WaveXisMCP reimplements browser control in Python with its own 220-tool surface; CloakBrowser deliberately keeps upstream's tools and changes only execution. Opposite strategies \u2014 reimplementation versus compatible wrapping.",
+      "verdict_diff": "WaveXisMCP reimplements browser control in Python with its own 220-tool surface; CloakBrowser deliberately keeps upstream's tools and changes only execution. Opposite strategies — reimplementation versus compatible wrapping.",
       "preferred_for_axis": "reimplementation-vs-wrapping"
     }
   ],
@@ -76,7 +76,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": true,
-    "agent_integration_path": "Drop-in Playwright MCP compatible over stdio and Streamable HTTP, so any agent already configured for upstream works unchanged \u2014 the compatibility matrix makes the version contract explicit, which is exactly what an agent operator needs to pin against.",
+    "agent_integration_path": "Drop-in Playwright MCP compatible over stdio and Streamable HTTP, so any agent already configured for upstream works unchanged — the compatibility matrix makes the version contract explicit, which is exactly what an agent operator needs to pin against.",
     "agent_friendly_score": 8
   },
   "claims": [
@@ -173,5 +173,14 @@
       "https://images.hlido.eu/reviews/swimmwatch-cloakbrowser-mcp/run-47b7472de3d037be-swimmwatch-github-io/pageru_.png",
       "https://images.hlido.eu/reviews/swimmwatch-cloakbrowser-mcp/run-47b7472de3d037be-swimmwatch-github-io/pagebe_.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "last_verified": "2026-08-14",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
