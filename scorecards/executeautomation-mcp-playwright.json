@@ -21,21 +21,21 @@
   "confidence": "low",
   "review_url": "/reviews/executeautomation-mcp-playwright/",
   "hlido_opinion": {
-    "headline": "A widely-installed Playwright MCP server whose public surface is three marketing sentences and a link to Udemy \u2014 the tool may well be good, but almost nothing about it is checkable from outside.",
-    "body": "This is a case where the review has to be explicit about what it did and did not see. The documentation site is a near-default Docusaurus scaffold: a tagline, three feature cards ('Easy to Use', 'Test UI and APIs', 'Powered by NodeJS'), links to a tutorial and to the maintainer's YouTube and Udemy courses, and a 2025 copyright line. There is no tool list, no configuration reference on the landing surface, no version, no changelog, and no statement about what the server does or does not permit an agent to do against a browser. That matters more for this category than most. A Playwright MCP server hands an LLM control of a real browser; the questions a buyer needs answered are which tools are exposed, whether there is any sandboxing, and how credentials or session state are handled. None of that is answerable from the public surface. The tutorial pages exist and may cover it, but the entry surface \u2014 the thing an evaluating agent or a hurried engineer lands on \u2014 does not. The low score reflects a thin, unverifiable public surface, not a judgement that the software is bad; a docs pass exposing the tool inventory and a security note would move this substantially.",
+    "headline": "A widely-installed Playwright MCP server whose public surface is three marketing sentences and a link to Udemy — the tool may well be good, but almost nothing about it is checkable from outside.",
+    "body": "This is a case where the review has to be explicit about what it did and did not see. The documentation site is a near-default Docusaurus scaffold: a tagline, three feature cards ('Easy to Use', 'Test UI and APIs', 'Powered by NodeJS'), links to a tutorial and to the maintainer's YouTube and Udemy courses, and a 2025 copyright line. There is no tool list, no configuration reference on the landing surface, no version, no changelog, and no statement about what the server does or does not permit an agent to do against a browser. That matters more for this category than most. A Playwright MCP server hands an LLM control of a real browser; the questions a buyer needs answered are which tools are exposed, whether there is any sandboxing, and how credentials or session state are handled. None of that is answerable from the public surface. The tutorial pages exist and may cover it, but the entry surface — the thing an evaluating agent or a hurried engineer lands on — does not. The low score reflects a thin, unverifiable public surface, not a judgement that the software is bad; a docs pass exposing the tool inventory and a security note would move this substantially.",
     "voice": "Hlido Editor",
     "as_of": "2026-08-14",
     "editor_signature_pending": true
   },
-  "tier_rationale": "FADING because the public surface supports almost none of the checks this category demands: no tool inventory, no version or changelog, no security or data-handling statement, and no integration detail beyond 'change the Claude config file'. Not lower, because the docs site does load, a real tutorial path exists, and the product's purpose is stated unambiguously. The confidence on this review is low by design \u2014 the score describes what is publicly verifiable, and a documentation update could change it quickly.",
+  "tier_rationale": "FADING because the public surface supports almost none of the checks this category demands: no tool inventory, no version or changelog, no security or data-handling statement, and no integration detail beyond 'change the Claude config file'. Not lower, because the docs site does load, a real tutorial path exists, and the product's purpose is stated unambiguously. The confidence on this review is low by design — the score describes what is publicly verifiable, and a documentation update could change it quickly.",
   "what_it_does_well": [
-    "Purpose is stated in one unambiguous sentence \u2014 no ambiguity about what the server is for",
+    "Purpose is stated in one unambiguous sentence — no ambiguity about what the server is for",
     "Documentation site is public with no login wall",
     "A tutorial path exists and is linked from the landing page",
     "Setup burden is honestly described as a single config-file change"
   ],
   "what_it_fails_at": [
-    "No tool inventory anywhere on the public surface \u2014 a buyer cannot see what the server exposes to an agent",
+    "No tool inventory anywhere on the public surface — a buyer cannot see what the server exposes to an agent",
     "No version, release or changelog signal; the copyright reads 2025 with no freshness indicator",
     "No security or sandboxing statement, despite the server granting an LLM control of a real browser",
     "No credential or session-state handling description",
@@ -48,11 +48,11 @@
   ],
   "not_recommended_for": [
     "Buyers who need a published tool inventory or permission model before letting an agent drive a browser",
-    "Regulated or security-reviewed environments \u2014 there is no public posture to review",
+    "Regulated or security-reviewed environments — there is no public posture to review",
     "Agents evaluating autonomously; there is not enough structured public information to decide on"
   ],
   "red_flags": [
-    "A browser-control MCP server with no public security or sandboxing statement is a meaningful gap \u2014 this class of tool can navigate, click and read anything the browser session can reach.",
+    "A browser-control MCP server with no public security or sandboxing statement is a meaningful gap — this class of tool can navigate, click and read anything the browser session can reach.",
     "The most prominent community links are to paid courses, not to technical reference material, which shifts evaluation cost onto the buyer."
   ],
   "compared_to": [
@@ -74,7 +74,7 @@
     "has_webhook": false,
     "has_sdk": false,
     "behavioral_testable": false,
-    "agent_integration_path": "An MCP server by definition, installed via a client config change. But with no published tool list, an agent cannot determine its capabilities ahead of connecting \u2014 discovery has to happen at runtime, which is the weakest form of agent-addressability.",
+    "agent_integration_path": "An MCP server by definition, installed via a client config change. But with no published tool list, an agent cannot determine its capabilities ahead of connecting — discovery has to happen at runtime, which is the weakest form of agent-addressability.",
     "agent_friendly_score": 4
   },
   "claims": [
@@ -99,7 +99,7 @@
       "claim": "Documentation or live demo accessible without login",
       "required": true,
       "verdict": "partial_pass",
-      "evidence": "A tutorial section is linked and public, but the landing surface carries no reference content \u2014 no tool list, no configuration detail.",
+      "evidence": "A tutorial section is linked and public, but the landing surface carries no reference content — no tool list, no configuration detail.",
       "source_surface": "docs"
     },
     {
@@ -171,5 +171,15 @@
       "https://images.hlido.eu/reviews/executeautomation-mcp-playwright/run-06c430ea5592ee18-executeautomation-github-io/pagedocs_intro.png",
       "https://images.hlido.eu/reviews/executeautomation-mcp-playwright/run-06c430ea5592ee18-executeautomation-github-io/pagedocs_intro.png"
     ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-21"
   }
 }
