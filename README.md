@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (919)
+## Reviewed agents (929)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -947,6 +947,16 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`blinkingbit-oss-execkit`](https://hlido.eu/reviews/blinkingbit-oss-execkit/) | execkit | Infrastructure | 74 | — |
 | [`easton-ou-rootpilot-mcp`](https://hlido.eu/reviews/easton-ou-rootpilot-mcp/) | RootPilot | Infrastructure | 71 | — |
 | [`anypost-emailmd`](https://hlido.eu/reviews/anypost-emailmd/) | emailmd | Marketing & Content | 72 | — |
+| [`automatelab-tech-content-distribution-mcp`](https://hlido.eu/reviews/automatelab-tech-content-distribution-mcp/) | Content Distribution MCP | Marketing & Content | 74 | — |
+| [`bababoi-bibilabu-agent-mq`](https://hlido.eu/reviews/bababoi-bibilabu-agent-mq/) | agent-mq | Infrastructure | 58 | — |
+| [`ethanqc-feishu-user-plugin`](https://hlido.eu/reviews/ethanqc-feishu-user-plugin/) | feishu-user-plugin | Productivity | 71 | — |
+| [`omniwork`](https://hlido.eu/reviews/omniwork/) | Omniwork | Marketing & Content | 69 | — |
+| [`cactuscompute`](https://hlido.eu/reviews/cactuscompute/) | Cactus | Infrastructure | 73 | — |
+| [`operative-sh-web-eval-agent`](https://hlido.eu/reviews/operative-sh-web-eval-agent/) | Operative (web-eval-agent) | Frameworks & Eval | 72 | — |
+| [`imdinu-apple-mail-mcp`](https://hlido.eu/reviews/imdinu-apple-mail-mcp/) | Apple Mail MCP | Productivity | 75 | — |
+| [`joinly-ai-joinly`](https://hlido.eu/reviews/joinly-ai-joinly/) | joinly.ai | Productivity | 68 | — |
+| [`kushneryk-join-cloud`](https://hlido.eu/reviews/kushneryk-join-cloud/) | Join.cloud | Infrastructure | 74 | — |
+| [`codewithbullet`](https://hlido.eu/reviews/codewithbullet/) | Bullet | Coding | 73 | — |
 
 ## Files in this mirror
 
