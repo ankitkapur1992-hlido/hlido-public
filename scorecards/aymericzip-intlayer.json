@@ -1,0 +1,185 @@
+{
+  "schema_version": "2.0",
+  "slug": "aymericzip-intlayer",
+  "name": "Intlayer",
+  "agent_url": "https://intlayer.org",
+  "category": "Coding",
+  "run_id": "run-rpub-v2-aymericzip-intlayer-2026-08-22",
+  "run_at": "2026-08-22T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A thoughtfully designed, open-source per-component i18n framework — type-safe, AI-assisted translation, and a visual CMS — that quietly fixes how React/Next/Vue/Svelte apps handle localization.",
+    "body": "Intlayer is a developer-tooling project that rethinks internationalization around the component rather than the giant central JSON file. You declare translations next to the component that uses them, get full type safety, can auto-translate with AI, and invite non-developers to edit through a visual CMS. That per-component model is a genuinely opinionated take in a space long dominated by react-i18next / next-intl / FormatJS, and the surface backs it up: a clean quickstart (npx intlayer init), support advertised across React, Next.js, Vue and Svelte, 20+ locales, a live playground/sandbox, and an actively shipped codebase (v9.3.3, ~800 GitHub stars). It reads as a well-maintained, single-author-led OSS project with real craft. The honest caveats are the ones that apply to most young frameworks: the ecosystem and adoption are still modest next to the incumbents, the 'translate with AI' quality and the bundle-size claims are asserted rather than demonstrated on the surface, and betting an app's localization layer on a fast-moving pre-1.0-feeling framework carries lock-in risk. For teams that feel the pain of central-file i18n, it's a credible, low-cost thing to trial.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) for a coherent, well-crafted, openly published framework with a differentiated per-component model, type safety, multi-framework support, a working playground and clear signs of active maintenance. Not higher because adoption and ecosystem are modest against entrenched incumbents (react-i18next, next-intl) and the differentiating claims (AI-translation quality, bundle impact) are unverified from the surface. Not FADING: the project is current, actively shipping, and technically credible.",
+  "what_it_does_well": [
+    "Per-component i18n model — translations live next to the component, not in one sprawling central file",
+    "Full type safety over content keys, a real advantage for large TypeScript codebases",
+    "Multi-framework support advertised: React, Next.js, Vue and Svelte",
+    "Frictionless entry (npx intlayer init) plus a live playground and visual CMS for non-dev editors",
+    "Open source with visible, active maintenance (v9.3.3, ~800 stars) and 20+ supported locales"
+  ],
+  "what_it_fails_at": [
+    "Adoption and ecosystem are modest next to react-i18next / next-intl incumbents",
+    "'Translate with AI' quality is asserted, not demonstrated — no visible evaluation of translation fidelity",
+    "Bundle-size / performance claims are stated on the surface without benchmarks to back them",
+    "Adopting a young framework for the localization layer carries migration and lock-in risk if it stalls"
+  ],
+  "best_for": [
+    "React/Next.js/Vue/Svelte teams frustrated by monolithic central i18n files",
+    "TypeScript-heavy codebases that want type-safe content keys",
+    "Projects that need non-developers to edit copy through a CMS",
+    "Developers who want to trial AI-assisted translation with a low-friction setup"
+  ],
+  "not_recommended_for": [
+    "Teams that need the largest ecosystem, plugin surface and community answers (incumbents win here)",
+    "Risk-averse projects unwilling to depend on a young, fast-moving framework for a core layer",
+    "Use cases needing audited, human-reviewed translation quality guarantees out of the box"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "react-i18next",
+      "verdict_diff": "react-i18next is the battle-tested default with the largest ecosystem; Intlayer trades that maturity for a cleaner per-component model, type safety and built-in AI translation + CMS. Choose react-i18next for ecosystem safety, Intlayer for developer ergonomics.",
+      "preferred_for_axis": "ecosystem-maturity-vs-ergonomics"
+    },
+    {
+      "slug": "next-intl",
+      "verdict_diff": "next-intl is tightly focused on Next.js with strong App Router support; Intlayer is broader (React/Vue/Svelte too) and adds the visual CMS and AI translation. Choose next-intl for a Next-only stack, Intlayer for multi-framework or CMS-driven content.",
+      "preferred_for_axis": "next-only-vs-multi-framework"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Per-component i18n model",
+      "source": "https://intlayer.org/ (homepage + code example)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Type-safe content with AI translation and visual editor",
+      "source": "https://intlayer.org/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Multi-framework support (React/Next/Vue/Svelte)",
+      "source": "https://intlayer.org/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "npx intlayer init quickstart",
+      "source": "https://intlayer.org/ (get started)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Open source, actively shipped (v9.3.3)",
+      "source": "https://github.com/aymericzip/intlayer",
+      "tested_at": "2026-08-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Intlayer is a developer library/CLI, not an autonomous agent. It is highly automatable — a coding agent can scaffold and run it via npx intlayer init, edit .content.ts files, and drive the AI-translation step programmatically. The open-source repo makes it behaviorally testable. No MCP server or hosted API is exposed.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Per-Component i18n — Type-Safe, Translate with AI, Edit Visually",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get started / npx intlayer init",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source; free to install",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live playground/sandbox + code examples; 4 screenshots captured",
+      "tested_at": "2026-08-22T09:00:00Z"
+    }
+  ],
+  "summary": "A thoughtfully designed, open-source per-component i18n framework — type-safe, AI-assisted translation, and a visual CMS — that quietly fixes how React/Next/Vue/Svelte apps handle localization.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "attestation_url": "/data/attestations/aymericzip-intlayer.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-22",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Intlayer offers AI-assisted translation of developer-supplied strings; whether downstream output marking applies depends on the host app. No marking statement or detection tool is present on the surface — recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-9ef4c034f3c7f138-intlayer-org",
+    "base": "https://images.hlido.eu/reviews/aymericzip-intlayer/run-9ef4c034f3c7f138-intlayer-org",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_playground.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/aymericzip-intlayer/run-9ef4c034f3c7f138-intlayer-org/home.png",
+      "https://images.hlido.eu/reviews/aymericzip-intlayer/run-9ef4c034f3c7f138-intlayer-org/page_.png",
+      "https://images.hlido.eu/reviews/aymericzip-intlayer/run-9ef4c034f3c7f138-intlayer-org/page_.png",
+      "https://images.hlido.eu/reviews/aymericzip-intlayer/run-9ef4c034f3c7f138-intlayer-org/page_playground.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source; free to install",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-22"
+  }
+}
