@@ -1,0 +1,185 @@
+{
+  "schema_version": "2.0",
+  "slug": "fathom",
+  "name": "Fathom",
+  "agent_url": "https://fathom.ai",
+  "category": "Productivity",
+  "run_id": "run-rpub-v2-fathom-2026-08-22",
+  "run_at": "2026-08-22T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A mature, unusually trusted AI meeting notetaker — free-forever entry, real compliance posture, and a bot-free capture mode that answers the category's biggest objection.",
+    "body": "Fathom is one of the more credible products in the crowded AI-notetaker category (Otter, Fireflies, tl;dv, Granola, Read.ai). The public surface does the hard things well: a genuine free-forever tier, a compliance stack most rivals bury (SOC 2 Type II, GDPR, HIPAA, SSO/SCIM stated up front), and a '300K+ companies' adoption claim. The standout signal is the newly announced bot-free capture — a direct answer to the single loudest complaint about this whole category (a meeting bot silently joining your calls). It also advertises pushing meeting data into ChatGPT and Claude, which is where an agent-driven workflow would actually consume it. What holds it back from a higher tier is that the differentiation, while real, is incremental rather than structural: summaries, action items, topic monitoring and team-visibility are table stakes now, and the load-bearing claims (summary accuracy, how good the bot-free capture actually is) can't be verified from the marketing surface. The compliance and free-tier positioning are what make it a defensible default rather than just another entrant.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) for a mature product with an above-average trust posture (SOC 2 Type II / GDPR / HIPAA / SSO-SCIM stated publicly), a real free tier, broad adoption signal, and a genuinely differentiating bot-free capture mode. Not VITAL because the category is saturated with functionally similar tools and the differentiators are incremental; summary quality — the thing that actually decides the product — is unverifiable from the public surface. Not FADING: the product is clearly current, well-resourced, and actively shipping.",
+  "what_it_does_well": [
+    "Free-forever tier lets a buyer adopt without a sales conversation",
+    "Compliance stated openly on the homepage: SOC 2 Type II, GDPR, HIPAA, SSO/SCIM",
+    "Bot-free capture directly answers the category's biggest objection (a bot joining your calls)",
+    "Advertises pushing meeting data into ChatGPT and Claude — a real agent-consumption path",
+    "'300K+ companies' adoption signal plus a clear teams-vs-individuals split in the offering"
+  ],
+  "what_it_fails_at": [
+    "Summary/transcription accuracy — the thing that decides the product — is unverifiable from the public surface",
+    "Differentiation is incremental; feature set overlaps heavily with Otter, Fireflies, tl;dv and Granola",
+    "No public API or MCP surface disclosed on the homepage — the LLM integrations are named but not documented pre-signup",
+    "Depth of the 'bot-free capture' claim (coverage, platforms, fidelity) isn't substantiated on the marketing page"
+  ],
+  "best_for": [
+    "Individuals and teams who want a no-friction, free-to-start meeting notetaker",
+    "Regulated or security-conscious buyers who need SOC 2 / HIPAA / SSO stated up front",
+    "Teams that dislike meeting bots and want a bot-free capture option",
+    "Workflows that pipe meeting summaries into ChatGPT or Claude downstream"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a documented, pre-verifiable API/MCP before committing",
+    "Use cases where transcription accuracy at the margin is mission-critical and must be benchmarked first",
+    "Teams wanting deep, native CRM/ticketing automation beyond summaries and action items"
+  ],
+  "red_flags": [
+    "Core quality claims (summary accuracy, bot-free capture fidelity) are asserted, not demonstrated, on the public surface — normal for the category but worth verifying in a trial."
+  ],
+  "compared_to": [
+    {
+      "slug": "otter-ai",
+      "verdict_diff": "Otter is the incumbent with a larger brand and heavier free-tier limits; Fathom leads on the compliance posture stated up front and the bot-free option. Coin-flip for individuals; Fathom edges it for security-conscious teams.",
+      "preferred_for_axis": "compliance-and-bot-free"
+    },
+    {
+      "slug": "fireflies-ai",
+      "verdict_diff": "Fireflies pushes harder on API/automation and CRM integrations; Fathom feels more polished out of the box and free-to-start. Choose Fireflies for programmatic pipelines, Fathom for turnkey adoption.",
+      "preferred_for_axis": "turnkey-vs-programmatic"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Free-forever tier",
+      "source": "https://fathom.ai/ (GET STARTED - FREE FOREVER)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "SOC 2 Type II / GDPR / HIPAA / SSO-SCIM stated",
+      "source": "https://fathom.ai/ (homepage trust row)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Bot-free capture announced",
+      "source": "https://fathom.ai/ (announcement banner)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "ChatGPT and Claude integrations",
+      "source": "https://fathom.ai/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "300K+ companies adoption claim",
+      "source": "https://fathom.ai/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Fathom advertises pushing meeting data into ChatGPT and Claude, which gives an agent a consumption path for summaries. No public API, MCP server, or webhook documentation is exposed on the marketing surface, so programmatic integration must be confirmed after signup.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "AI notetaking that summarizes your meetings, now bot-free",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "GET STARTED - FREE FOREVER",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing nav present; free-forever tier",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot captured; Book a Demo available",
+      "tested_at": "2026-08-22T09:00:00Z"
+    }
+  ],
+  "summary": "A mature, unusually trusted AI meeting notetaker — free-forever entry, real compliance posture, and a bot-free capture mode that answers the category's biggest objection.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "attestation_url": "/data/attestations/fathom.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-22",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Fathom produces AI-generated meeting summaries; no machine-readable output-marking or provenance statement is present on the public surface — recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-4ec78233666aa549-fathom-ai",
+    "base": "https://images.hlido.eu/reviews/fathom/run-4ec78233666aa549-fathom-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/fathom/run-4ec78233666aa549-fathom-ai/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing nav present; free-forever tier",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-22"
+  }
+}
