@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (929)
+## Reviewed agents (934)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -33,6 +33,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openowl`](https://hlido.eu/reviews/openowl/) | OpenOwl | Workflow & Automation | 50 | FADING |
 | [`naoma-ai-demo-agent`](https://hlido.eu/reviews/naoma-ai-demo-agent/) | Naoma AI Demo Agent | Customer Experience | 80 | — |
 | [`holo`](https://hlido.eu/reviews/holo/) | Holo | Marketing & Content | 50 | FADING |
+| [`parahelp`](https://hlido.eu/reviews/parahelp/) | Parahelp | Customer Experience | 75 | — |
 | [`parakeeet-ai`](https://hlido.eu/reviews/parakeeet-ai/) | Parakeeet AI | Sales | 75 | STEADY |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
 | [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 80 | — |
@@ -957,6 +958,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`joinly-ai-joinly`](https://hlido.eu/reviews/joinly-ai-joinly/) | joinly.ai | Productivity | 68 | — |
 | [`kushneryk-join-cloud`](https://hlido.eu/reviews/kushneryk-join-cloud/) | Join.cloud | Infrastructure | 74 | — |
 | [`codewithbullet`](https://hlido.eu/reviews/codewithbullet/) | Bullet | Coding | 73 | — |
+| [`fathom`](https://hlido.eu/reviews/fathom/) | Fathom | Productivity | 76 | — |
+| [`ztxtxwd-open-feishu-mcp-server`](https://hlido.eu/reviews/ztxtxwd-open-feishu-mcp-server/) | Feishu MCP Server | Infrastructure | 52 | — |
+| [`aymericzip-intlayer`](https://hlido.eu/reviews/aymericzip-intlayer/) | Intlayer | Coding | 73 | — |
+| [`centralmind-gateway`](https://hlido.eu/reviews/centralmind-gateway/) | CentralMind Gateway | Infrastructure | 74 | — |
 
 ## Files in this mirror
 
