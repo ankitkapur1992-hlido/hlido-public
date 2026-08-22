@@ -1,0 +1,184 @@
+{
+  "schema_version": "2.0",
+  "slug": "parahelp",
+  "name": "Parahelp",
+  "agent_url": "https://parahelp.com",
+  "category": "Customer Experience",
+  "run_id": "run-rpub-v2-parahelp-2026-08-22",
+  "run_at": "2026-08-22T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A serious, well-referenced AI customer-support agent — end-to-end resolution across email/chat/Slack, a self-improving 'internal agent', and named customers that genuinely carry credibility.",
+    "body": "Parahelp is one of the more convincing entries in the AI customer-support agent space (Sierra, Decagon, Intercom Fin, Gorgias AI). Its framing is sharper than most: two agents — a Customer Agent that resolves issues end-to-end across email, live chat and Slack, and an Internal Agent that builds, tests and continuously improves the Customer Agent from natural-language instructions. The '3-hour to first resolution' onboarding narrative is concrete rather than vague, and the social proof is unusually strong for the category — named founders and operators, including a builder at Cursor, plus a stated 94% CSAT and 'runs over half our support' testimonials. The secure tool-connection story ('if a tool has an API, you can securely connect it just by chatting') is exactly the capability that separates a real support agent from a canned-answer bot. What keeps it out of the top tier from the public surface alone: the security model behind 'securely connect' is asserted, not documented; pricing is behind a demo; and the headline resolution and CSAT numbers are vendor-supplied testimonials rather than independently verifiable. For a buyer evaluating agentic support, though, this is a strong shortlist candidate.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for a sharply positioned, evidently well-adopted support agent with a differentiated two-agent architecture, a concrete onboarding story, and above-average named social proof. Not VITAL because the load-bearing claims (secure tool access model, CSAT, resolution rate) are vendor-asserted and unverifiable from the public surface, and pricing is gated behind a demo. Not FADING: the product is current, credible and clearly in active commercial use.",
+  "what_it_does_well": [
+    "Differentiated two-agent model: a Customer Agent that resolves, plus an Internal Agent that builds and improves it",
+    "End-to-end resolution across email, live chat and Slack — not just suggested replies",
+    "Secure tool-connection via chat ('if a tool has an API, you can connect it') — the real agentic capability",
+    "Unusually strong, named social proof (incl. a builder at Cursor) and a stated 94% CSAT",
+    "Concrete 3-hour onboarding narrative rather than a vague 'get started' promise"
+  ],
+  "what_it_fails_at": [
+    "The 'securely connect' model (permissions, data handling, scoping) is asserted but not documented on the public surface",
+    "Pricing is gated behind 'Book a demo' — no public tier a buyer can evaluate unaided",
+    "Headline outcomes (94% CSAT, 'over half our support') are vendor-supplied testimonials, not independently verified",
+    "No public API/MCP documentation for buyers who want to embed or verify the agent programmatically pre-sale"
+  ],
+  "best_for": [
+    "Mid-market and scaling teams that need genuine end-to-end ticket resolution, not just draft suggestions",
+    "Support orgs with many tools/APIs they want an agent to operate securely",
+    "Teams that value a self-improving agent tuned via natural-language instructions",
+    "Buyers reassured by named, credible customer references"
+  ],
+  "not_recommended_for": [
+    "Buyers who need public, self-serve pricing before taking a sales call",
+    "Security teams that require a documented tool-access and data-handling model before a trial",
+    "Very small teams whose volume doesn't justify an agent platform over a shared inbox"
+  ],
+  "red_flags": [
+    "'Securely uses all your tools' is the central promise, yet the security/permission model isn't described on the public surface — a buyer must probe this directly given the access such an agent would hold.",
+    "All outcome metrics are vendor-presented testimonials; treat the 94% CSAT and resolution claims as directional until validated in a pilot."
+  ],
+  "compared_to": [
+    {
+      "slug": "intercom-fin",
+      "verdict_diff": "Intercom Fin is the platform-native incumbent with deep Intercom integration and enterprise posture; Parahelp bets on end-to-end resolution and secure tool use across your existing stack. Choose Fin inside Intercom, Parahelp for tool-heavy resolution.",
+      "preferred_for_axis": "platform-native-vs-tool-agnostic"
+    },
+    {
+      "slug": "gorgias",
+      "verdict_diff": "Gorgias is stronger for e-commerce-specific support workflows; Parahelp is more general-purpose and leans harder into autonomous resolution and self-improvement. Choose Gorgias for Shopify-centric CX, Parahelp for complex multi-tool resolution.",
+      "preferred_for_axis": "ecommerce-vs-general-resolution"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "End-to-end resolution across email, live chat, Slack",
+      "source": "https://parahelp.com/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Two-agent model (Customer Agent + Internal Agent)",
+      "source": "https://parahelp.com/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Secure tool connection via chat",
+      "source": "https://parahelp.com/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "3-hour onboarding to first resolution",
+      "source": "https://parahelp.com/setup",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Named customer testimonials incl. 94% CSAT",
+      "source": "https://parahelp.com/ (customer quotes)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Parahelp is itself an agent product: its Customer Agent resolves tickets autonomously and connects to third-party tools via their APIs, configured through natural-language chat. There is no public developer API/MCP surface for embedding Parahelp into another agent; integration is inbound (it operates your tools) rather than outbound, and details are gated behind a demo.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Build an AI support agent that securely uses all your tools",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Book a demo",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pricing gated behind demo",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Watch video + setup page; 2 screenshots captured",
+      "tested_at": "2026-08-22T09:00:00Z"
+    }
+  ],
+  "summary": "A serious, well-referenced AI customer-support agent — end-to-end resolution across email/chat/Slack, a self-improving 'internal agent', and named customers that genuinely carry credibility.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "attestation_url": "/data/attestations/parahelp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-22",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Parahelp generates AI support responses to customers; no machine-readable AI-output marking or disclosure statement is present on the public surface — recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-75ac6b702083e570-parahelp-com",
+    "base": "https://images.hlido.eu/reviews/parahelp/run-75ac6b702083e570-parahelp-com",
+    "files": [
+      "home.png",
+      "page__setup.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/parahelp/run-75ac6b702083e570-parahelp-com/home.png",
+      "https://images.hlido.eu/reviews/parahelp/run-75ac6b702083e570-parahelp-com/page__setup.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Pricing gated behind demo",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-22"
+  }
+}
