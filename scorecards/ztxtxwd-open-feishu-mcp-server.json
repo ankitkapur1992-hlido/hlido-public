@@ -1,0 +1,165 @@
+{
+  "schema_version": "2.0",
+  "slug": "ztxtxwd-open-feishu-mcp-server",
+  "name": "Feishu MCP Server",
+  "agent_url": "https://fms-tapeless.lovable.app",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-ztxtxwd-open-feishu-mcp-server-2026-08-22",
+  "run_at": "2026-08-22T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 52,
+  "tier": "FADING",
+  "laddoo_score": 52,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An early, thin MCP server for automating Feishu (Lark) documents with AI — a real, buildable idea, but the public surface is a minimal no-code landing page with little to verify.",
+    "body": "This project exposes an MCP server that lets an AI assistant operate on Feishu (Lark) documents — the user supplies a document link and an instruction, and the changes are made in the doc. The idea is legitimate and useful for the large Feishu/Lark user base, and the stated stack (Cloudflare Workers + Hono) is a sensible, low-cost way to ship an MCP endpoint. But the review has to be honest about what's actually on the public surface: a thin, Lovable-hosted landing page (fms-tapeless.lovable.app), mostly a single value-prop and a 'join our community' call, a use-cases page, and a 'view source' link — with no visible documentation depth, no pricing, no security/permission model for the Feishu access it would hold, and no evidence of adoption or maintenance. That's an early hobby-to-community-stage surface, not a productized offering, and the score reflects low confidence rather than a judgment that the underlying tool is bad. The concept could be genuinely handy; the public presentation gives an evaluator very little to stand on, and handing an MCP server write access to your Feishu documents warrants a permission model this surface doesn't describe.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (52) is a low-confidence reading of a thin surface, not a verdict that the tool is broken. The concept — an MCP server for AI-driven Feishu document automation — is real and the stack is sensible, but the public presentation is a minimal Lovable landing page with no documentation depth, no security model, no pricing and no adoption signal, so almost nothing can be independently verified. Not lower because there is a genuine, working-sounding product idea and a source link; not higher because the evidence surface is too thin to support a confident STEADY.",
+  "what_it_does_well": [
+    "Solves a real need: AI-driven automation of Feishu (Lark) documents via MCP",
+    "Sensible, low-cost architecture stated (Cloudflare Workers + Hono)",
+    "No-code framing lowers the barrier for non-technical Feishu users",
+    "Source link offered, allowing some inspection of the actual implementation"
+  ],
+  "what_it_fails_at": [
+    "Public surface is a thin Lovable-hosted landing page — no real documentation depth",
+    "No security/permission model described for the Feishu document access it would require",
+    "No pricing, no adoption signal, and no evidence of active maintenance on the surface",
+    "Product maturity reads as early/community-stage rather than a dependable offering"
+  ],
+  "best_for": [
+    "Feishu/Lark users experimenting with AI-driven document automation",
+    "Developers comfortable reading the source and self-hosting an early MCP server",
+    "Tinkerers who want a low-stakes way to try MCP against Feishu docs"
+  ],
+  "not_recommended_for": [
+    "Teams needing a documented, supported, security-reviewed integration",
+    "Anyone who requires a clear permission/data-handling model before granting document access",
+    "Production use where reliability, maintenance and support guarantees matter"
+  ],
+  "red_flags": [
+    "An MCP server that edits your Feishu documents needs a clear permission and data-handling model; none is described on the public surface. Inspect the source and scope access carefully before use.",
+    "Hosted on a generic Lovable subdomain with a 'join our community' framing and no maintenance/adoption signal — treat as early-stage until proven otherwise."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server for Feishu document automation",
+      "source": "https://fms-tapeless.lovable.app/ (homepage)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Built on Cloudflare Workers + Hono",
+      "source": "https://fms-tapeless.lovable.app/ (footer)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Use-cases page present",
+      "source": "https://fms-tapeless.lovable.app/use-cases",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Source link offered",
+      "source": "https://fms-tapeless.lovable.app/ (view source)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The product is itself an MCP server, so an AI assistant can in principle connect to it and act on Feishu documents. In practice the public surface documents neither the endpoint, the tool schema, nor the auth model, so integration would require reading the source; it is not verifiable from the marketing surface.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Feishu MCP Server — connect AI assistants to Feishu, no coding",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "evidence": "现在体验 / 立即体验 (Try now)",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or access terms on surface",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Use-cases page; 2 screenshots captured",
+      "tested_at": "2026-08-22T09:00:00Z"
+    }
+  ],
+  "summary": "An early, thin MCP server for automating Feishu (Lark) documents with AI — a real, buildable idea, but the public surface is a minimal no-code landing page with little to verify.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "attestation_url": "/data/attestations/ztxtxwd-open-feishu-mcp-server.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-22",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "MCP server tooling for document automation, not a generative content surface; Article-50 output-marking not directly applicable and nothing is stated. Recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-5a93d917118a27f6-fms-tapeless-lovable-app",
+    "base": "https://images.hlido.eu/reviews/ztxtxwd-open-feishu-mcp-server/run-5a93d917118a27f6-fms-tapeless-lovable-app",
+    "files": [
+      "home.png",
+      "page__use-cases.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/ztxtxwd-open-feishu-mcp-server/run-5a93d917118a27f6-fms-tapeless-lovable-app/home.png",
+      "https://images.hlido.eu/reviews/ztxtxwd-open-feishu-mcp-server/run-5a93d917118a27f6-fms-tapeless-lovable-app/page__use-cases.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing or access terms on surface",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-22"
+  }
+}
