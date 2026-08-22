@@ -1,0 +1,176 @@
+{
+  "schema_version": "2.0",
+  "slug": "centralmind-gateway",
+  "name": "CentralMind Gateway",
+  "agent_url": "https://centralmind.ai",
+  "category": "Infrastructure",
+  "run_id": "run-rpub-v2-centralmind-gateway-2026-08-22",
+  "run_at": "2026-08-22T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An open-source gateway that turns any database into an MCP server or OpenAPI 3.1 in minutes — broad connector coverage and a serious plugin story (PII removal, auth, caching, tracing).",
+    "body": "CentralMind Gateway addresses a concrete, current problem: safely exposing a production database to AI agents. Point it at a connection string and it generates a REST API (with Swagger UI) and an MCP SSE endpoint agents can consume. The documentation surface is strong and specific — a one-line Docker run, broad connector coverage (Postgres, MySQL, ClickHouse, BigQuery, Snowflake, MongoDB, MS SQL, Oracle, Supabase and more), named integrations (ChatGPT, LangChain, LlamaIndex, Claude Desktop, Cursor), and — importantly for the use case — a plugin layer that speaks directly to the risks of handing an agent a database: PII remover, Presidio anonymizer, API-keys, OAuth, row-level security via Lua, LRU cache and OpenTelemetry. That security/observability plugin set is what lifts it above a thin 'db-to-MCP' wrapper. It's open source (GHCR image, GitHub), which makes it verifiable and self-hostable. What keeps it at STEADY rather than higher from the public surface: it's a young infrastructure project whose reliability, performance and the real robustness of the auto-generated API and RLS enforcement can't be judged from docs alone, and it sits in a fast-moving space where the database-to-MCP pattern is becoming contested.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) for a well-documented, open-source database-to-MCP/OpenAPI gateway with unusually broad connector coverage and a security/observability plugin layer (PII removal, RLS, OAuth, caching, OTel) that takes the actual risk of the use case seriously. Not VITAL because it's a young infra project whose reliability, performance and the robustness of auto-generated APIs and access controls can't be verified from the documentation surface. Not FADING: current, actively developed, and openly self-hostable.",
+  "what_it_does_well": [
+    "Turns a database into both an MCP server and an OpenAPI 3.1 REST API from a connection string",
+    "Broad connector coverage: Postgres, MySQL, ClickHouse, BigQuery, Snowflake, MongoDB, MS SQL, Oracle, Supabase and more",
+    "Security-aware plugin layer: PII remover, Presidio anonymizer, OAuth, API keys, Lua row-level security",
+    "Operable and observable: LRU cache and OpenTelemetry plugins, one-line Docker run, Swagger UI",
+    "Open source and self-hostable (GHCR image + GitHub), so behavior is verifiable"
+  ],
+  "what_it_fails_at": [
+    "Reliability and performance of the auto-generated API can't be judged from the documentation surface",
+    "Robustness of access controls (RLS, PII removal) under real adversarial agent use is unproven from docs alone",
+    "The database-to-MCP pattern is fast-becoming contested; durable differentiation isn't yet established",
+    "Auto-generated APIs risk over-exposing schema/data unless carefully constrained — the burden is on the operator"
+  ],
+  "best_for": [
+    "Teams that need to expose an existing database to AI agents via MCP or REST quickly",
+    "Data/platform engineers who want PII masking, RLS and OAuth in front of agent access",
+    "Self-hosters who want an open-source, Docker-deployable gateway they can audit",
+    "Multi-database environments needing one gateway across many connector types"
+  ],
+  "not_recommended_for": [
+    "Teams needing a vendor-backed, SLA'd managed service rather than a self-hosted OSS project",
+    "Security-critical exposure where the auto-generated API and access controls must be independently certified first",
+    "Simple single-app cases where a purpose-built endpoint is cheaper than a general gateway"
+  ],
+  "red_flags": [
+    "Auto-generating an API/MCP surface over a live database is inherently sensitive; the safety of the result depends heavily on correct plugin configuration (RLS, PII removal, auth). The tooling exists, but the responsibility — and the failure mode — sits with the operator."
+  ],
+  "compared_to": [
+    {
+      "slug": "postgrest",
+      "verdict_diff": "PostgREST is the mature, Postgres-only way to auto-generate a REST API; CentralMind adds MCP output, many more database connectors, and an agent-oriented security plugin layer. Choose PostgREST for a proven Postgres-only REST layer, CentralMind for multi-DB + MCP + agent controls.",
+      "preferred_for_axis": "postgres-rest-vs-multidb-mcp"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Database to MCP server or OpenAPI 3.1",
+      "source": "https://centralmind.ai (docs — Overview)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "One-line Docker run generates API + MCP SSE",
+      "source": "https://centralmind.ai (docs — Quickstart)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Broad database connector coverage",
+      "source": "https://centralmind.ai (docs — Connectors)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Security/observability plugins (PII, OAuth, RLS, cache, OTel)",
+      "source": "https://centralmind.ai (docs — Plugins)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    },
+    {
+      "claim": "Open source, GHCR image + GitHub",
+      "source": "https://centralmind.ai (docs — Introduction)",
+      "tested_at": "2026-08-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "This product exists to make databases agent-consumable: it emits an MCP SSE endpoint and an OpenAPI 3.1 REST API, with documented integrations for Claude Desktop, Cursor, ChatGPT, LangChain and LlamaIndex. Open source and Docker-deployable, so it is directly behaviorally testable by an evaluating agent.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Expose your database to AI agents via MCP or OpenAPI in minutes",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": false,
+      "evidence": "Quickstart / Docker run",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source; GHCR image",
+      "tested_at": "2026-08-22T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Docs with runnable quickstart + interactive demo referenced; 1 screenshot captured",
+      "tested_at": "2026-08-22T09:00:00Z"
+    }
+  ],
+  "summary": "An open-source gateway that turns any database into an MCP server or OpenAPI 3.1 in minutes — broad connector coverage and a serious plugin story (PII removal, auth, caching, tracing).",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "attestation_url": "/data/attestations/centralmind-gateway.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-22",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "CentralMind Gateway is data infrastructure, not a generative surface; Article-50 output-marking is not directly applicable. Recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-5cd672ff99b57512-centralmind-ai",
+    "base": "https://images.hlido.eu/reviews/centralmind-gateway/run-5cd672ff99b57512-centralmind-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/centralmind-gateway/run-5cd672ff99b57512-centralmind-ai/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source; GHCR image",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-22"
+  }
+}
