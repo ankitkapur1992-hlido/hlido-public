@@ -1,0 +1,183 @@
+{
+  "schema_version": "2.0",
+  "slug": "googleapis-genai-toolbox",
+  "name": "MCP Toolbox for Databases",
+  "agent_url": "https://mcp-toolbox.dev/documentation/introduction/",
+  "category": "Infrastructure",
+  "run_id": "run-r4-v2-googleapis-genai-toolbox-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Google's open-source MCP server for enterprise databases — dual-purpose, well-documented, and already tracking the newest stateless MCP spec.",
+    "body": "MCP Toolbox for Databases connects AI agents, IDEs and applications directly to enterprise databases, and it does two separable jobs rather than one. The build-time half is a ready-to-use MCP server with prebuilt generic tools — list_tables, execute_sql and similar — that lets Gemini CLI, Antigravity, Claude Code, Codex or any MCP client explore a schema and generate code without boilerplate. The run-time half is a framework for defining your own constrained tools: structured queries, semantic search, NL2SQL, scoped so a production agent gets exactly the surface you intend and nothing more. That split matters, because the generic tools are the thing you want in an IDE and precisely the thing you do not want pointed at production. The documentation surface is the strongest signal here. Versioned docs with a version selector, a stated position on supported MCP versions separating stable releases from draft specifications, sections for configuration, deployment, and monitoring and observability, and a same-page notice that the project already supports the 2026-07-28 stateless MCP spec. Projects that document their own spec-compatibility boundary tend to be the ones that maintain it. The repository rename from genai-toolbox to mcp-toolbox is announced in-page with the exact git remote command, which is a small thing that says something about the maintenance posture. What the public surface does not settle is operational: there is no independent security review linked, and the security model for the generic execute_sql path in a shared environment is left to the deployer. Read the security guidance before pointing this at anything that matters.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) for a well-maintained, well-documented open-source MCP server with a clear dual-purpose architecture, explicit spec-version discipline, and observability treated as a first-class documentation section. Vendor backing raises the continuity floor. Not VITAL because the surface leaves the security model of the generic database-access path to the deployer without a linked independent review, and because a prebuilt execute_sql tool is a genuinely sharp edge that deserves more guardrail documentation than the introduction gives it.",
+  "what_it_does_well": [
+    "Clean separation of build-time exploration tools from run-time constrained production tools",
+    "Explicit supported-MCP-version statement distinguishing stable releases from draft specs",
+    "Already supports the 2026-07-28 stateless MCP spec, with a launch write-up",
+    "Documentation covers configuration, deployment, and monitoring & observability as first-class sections",
+    "Open source with vendor backing — a higher continuity floor than a solo project",
+    "Repository rename announced in-page with the exact remediation command"
+  ],
+  "what_it_fails_at": [
+    "No independent security review linked from the introduction",
+    "Generic execute_sql tooling is a sharp edge; guardrails are left to the deployer",
+    "Configuration format has already changed (flat format), requiring a version selector to read older docs",
+    "Introduction alone is a 13-minute read — the on-ramp is not light",
+    "No public statement on tested database coverage limits from this surface"
+  ],
+  "best_for": [
+    "Teams giving IDE agents read access to a development database without hand-writing an MCP server",
+    "Production agents needing tightly scoped, predefined database tools rather than open SQL",
+    "Organisations standardising on MCP who want a vendor-maintained server rather than a bespoke one",
+    "NL2SQL and semantic-search use cases that need a defined tool boundary"
+  ],
+  "not_recommended_for": [
+    "Anyone wanting to point generic SQL execution at production without building their own guardrails",
+    "Teams needing a linked third-party security attestation before adoption",
+    "Lightweight single-database use where a purpose-built server is simpler"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langchain-mcp-adapters",
+      "verdict_diff": "The LangChain adapters bridge existing MCP servers into a framework; Toolbox IS the server, and owns the database connection and tool definition. Use the adapters to consume, Toolbox to expose.",
+      "preferred_for_axis": "server-vs-adapter"
+    },
+    {
+      "slug": "viperjuice-mcp-gateway",
+      "verdict_diff": "A gateway multiplexes and routes across many MCP servers; Toolbox is the specialised database endpoint one of them would front. Different layers of the same stack.",
+      "preferred_for_axis": "endpoint-vs-gateway"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source MCP server connecting AI agents to enterprise databases",
+      "source": "https://mcp-toolbox.dev/documentation/introduction/ ('is an open source Model Context Protocol (MCP) server that connects your AI agents, IDEs, and applications directly to your enterprise databases')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Dual purpose: prebuilt generic tools and a custom tools framework",
+      "source": "https://mcp-toolbox.dev/documentation/introduction/ ('It serves a dual purpose: Ready-to-use MCP Server ... Custom Tools Framework')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Supports the 2026-07-28 stateless MCP spec",
+      "source": "https://mcp-toolbox.dev/documentation/introduction/ ('MCP Toolbox Now Supports the New Stateless MCP Spec!')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Documentation includes Monitoring & Observability and Deploy sections",
+      "source": "https://mcp-toolbox.dev/documentation/introduction/ (left navigation)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Explicit Supported MCP Version section separating stable releases from draft specifications",
+      "source": "https://mcp-toolbox.dev/documentation/introduction/ (page contents)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "This is an MCP server by definition — that is the whole product. Documented quickstart via NPX, install and run paths, and named client compatibility (Gemini CLI, Antigravity, Claude Code, Codex, other MCP clients). The custom-tools framework lets an operator define exactly the tool surface an agent sees, which is the correct control point for production agents.",
+    "agent_friendly_score": 10
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T00:31:08.978Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Connects your AI agents, IDEs, and applications directly to your enterprise databases",
+      "tested_at": "2026-08-23T00:31:08.978Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Quickstart: Running Toolbox using NPX",
+      "tested_at": "2026-08-23T00:31:08.978Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source; access terms stated, no paywall on documentation or releases",
+      "tested_at": "2026-08-23T00:31:08.978Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "2 screenshots captured; quickstart, samples and reference sections present",
+      "tested_at": "2026-08-23T00:31:08.978Z"
+    }
+  ],
+  "summary": "Google's open-source MCP server for enterprise databases — dual-purpose, well-documented, and already tracking the newest stateless MCP spec.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/googleapis-genai-toolbox.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative infrastructure: the server brokers database access and returns query results, not synthetic content. Article-50 output-marking obligations do not attach to this surface; any marking duty would sit with the agent consuming it."
+  },
+  "evidence_images": {
+    "run_id": "run-44b375bce0aea04e-mcp-toolbox-dev",
+    "base": "https://images.hlido.eu/reviews/googleapis-genai-toolbox/run-44b375bce0aea04e-mcp-toolbox-dev",
+    "files": [
+      "home.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/googleapis-genai-toolbox/run-44b375bce0aea04e-mcp-toolbox-dev/home.png",
+      "https://images.hlido.eu/reviews/googleapis-genai-toolbox/run-44b375bce0aea04e-mcp-toolbox-dev/page_.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source; access terms stated, no paywall on documentation or releases",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
