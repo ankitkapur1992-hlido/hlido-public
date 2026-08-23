@@ -1,0 +1,190 @@
+{
+  "schema_version": "2.0",
+  "slug": "clarkchat",
+  "name": "Clark Labs",
+  "agent_url": "https://clarkchat.com",
+  "category": "AI Agent",
+  "run_id": "run-r4-v2-clarkchat-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 66,
+  "tier": "FADING",
+  "laddoo_score": 66,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Two credible products — a cloud agent that keeps working with the tab closed and a memory-carrying desktop coding agent — wrapped in a lab claim nobody outside can check.",
+    "body": "Clark Labs ships a pair. Clark Agent runs on Clark's own cloud computer with a browser, terminal and file storage, taking a job and working it for hours while you are offline: research, site and document building, form filling, recurring workflows, with the result presented for review. Clark Code runs on your machine or a remote host over SSH, reads and edits your real project, holds persistent memory of the codebase's architecture and conventions, and can fan out to cloud research when it gets stuck. Both are concrete propositions, and the distribution is handled properly — macOS signed and notarized, Windows signed and released independently, Linux with .deb and .rpm packages. That is more distribution discipline than most agent startups manage, and it is the direct contrast with several peers in this batch. Two things hold the score down. The first is the framing: Clark describes itself as \"the AI lab whose own engineering and research run as autonomous AI loops\", which is a strong differentiating claim about how the company operates and is unverifiable from outside by construction. The second is commercial opacity — the surface says Clark Code is \"priced so you can leave it running all day\" without publishing a number, and the reviewed capture surfaced no pricing detail. \"Cheap enough\" is not a price. iOS is listed as coming soon and the Android/web split is stated honestly. This is a young lab with real engineering hygiene and a marketing register that outruns what a buyer can confirm.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) because the two products are concrete and the release engineering is genuinely good — signed and notarized macOS, signed Windows, Linux packages — but the differentiating claim about the company (its own work running as autonomous AI loops) is unfalsifiable from outside, and pricing is described qualitatively rather than published. Comfortably clear of FLATLINE. It moves into STEADY when a number replaces 'priced so you can leave it running all day' and a third party can corroborate the operating claim.",
+  "what_it_does_well": [
+    "Two clearly separated products with distinct, concrete jobs rather than one blurred offering",
+    "Clark Agent continues working with the tab closed — a real differentiator, plainly stated",
+    "Clark Code holds persistent memory of repo architecture and past decisions",
+    "macOS build is signed and notarized; Windows signed; Linux ships .deb and .rpm",
+    "Runs on your machine or over SSH — no forced cloud sandbox for the coding agent",
+    "Platform availability stated honestly, including iOS as not yet shipped"
+  ],
+  "what_it_fails_at": [
+    "No published price for either product — 'priced so you can leave it running all day' is not a number",
+    "The 'our own engineering runs as autonomous AI loops' claim cannot be verified from outside",
+    "No named customers, case studies, or usage evidence on the surface",
+    "No API, MCP server or SDK surfaced for programmatic integration",
+    "Young lab; no continuity or funding signal published",
+    "iOS unavailable, limiting the mobile story the cloud agent implies"
+  ],
+  "best_for": [
+    "Individuals wanting a cloud agent that finishes long-running errands unattended",
+    "Developers who want a coding agent with persistent codebase memory running locally or over SSH",
+    "Users on Linux or Windows underserved by macOS-only agent tooling"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a published price before evaluating",
+    "Teams requiring programmatic integration — there is no documented API or MCP surface",
+    "Procurement processes needing customer references or a continuity signal",
+    "iOS-first users"
+  ],
+  "red_flags": [
+    "Central differentiating claim — that the lab's own engineering and research run as autonomous AI loops — is unverifiable from any public surface"
+  ],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is the established editor-based coding agent with a published price and large user base; Clark Code adds persistent repo memory and an SSH path but publishes no pricing. Cursor for a known quantity, Clark for the memory model and remote-host support.",
+      "preferred_for_axis": "persistent-repo-memory"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a mature open CLI agent you can inspect end to end; Clark Code is a closed native app with a research-fanout backend. Aider for transparency and zero lock-in, Clark for the packaged desktop experience.",
+      "preferred_for_axis": "packaged-vs-open"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Clark Agent runs on Clark's cloud computer with browser, terminal and file storage",
+      "source": "https://clarkchat.com ('Clark Agent has its own computer in the cloud: a browser, a terminal, and file storage.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Continues working while the user is offline with the tab closed",
+      "source": "https://clarkchat.com ('Works while you're offline — close the tab, it keeps going')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Clark Code runs locally or over SSH with persistent codebase memory",
+      "source": "https://clarkchat.com ('Your machine or SSH — no cloud sandbox you don't control'; 'Remembers architecture, conventions, past decisions')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "macOS build is signed and notarized; Windows signed; Linux .deb and .rpm available",
+      "source": "https://clarkchat.com ('macOS is signed & notarized; Windows is signed and released independently.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "No published price for Clark Code",
+      "source": "https://clarkchat.com ('Priced so you can leave it running all day' — no figure given)",
+      "tested_at": "2026-08-23",
+      "verified": false
+    },
+    {
+      "claim": "Claims the lab's own engineering and research run as autonomous AI loops",
+      "source": "https://clarkchat.com ('the AI lab whose own engineering and research run as autonomous AI loops')",
+      "tested_at": "2026-08-23",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Both products are end-user applications — a hosted web/Android agent and a native desktop coding agent. No API, MCP server, SDK or webhook is documented on the public surface, so an agent cannot discover or drive Clark programmatically. Clark Code itself consumes tools, but does not expose any.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T08:32:37.619Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "An AI agent in the cloud. A coding agent on your machine.",
+      "tested_at": "2026-08-23T08:32:37.619Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Launch Clark Agent",
+      "tested_at": "2026-08-23T08:32:37.619Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No price published; access described only as 'Priced so you can leave it running all day'",
+      "tested_at": "2026-08-23T08:32:37.619Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot captured; in-page product walkthroughs for both Clark Agent and Clark Code",
+      "tested_at": "2026-08-23T08:32:37.619Z"
+    }
+  ],
+  "summary": "Two credible products — a cloud agent that keeps working with the tab closed and a memory-carrying desktop coding agent — wrapped in a lab claim nobody outside can check.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/clarkchat.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Clark Agent produces generative output — documents, websites, research write-ups — and Clark Code generates source changes. No marking, provenance, watermarking or content-credential statement appears on the public surface, and no detection tool is linked. Recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-7445912a1e5bf0c2-clarkchat-com",
+    "base": "https://images.hlido.eu/reviews/clarkchat/run-7445912a1e5bf0c2-clarkchat-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/clarkchat/run-7445912a1e5bf0c2-clarkchat-com/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No price published; access described only as 'Priced so you can leave it running all day'",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
