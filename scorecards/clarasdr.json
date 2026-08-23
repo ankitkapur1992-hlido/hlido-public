@@ -1,0 +1,188 @@
+{
+  "schema_version": "2.0",
+  "slug": "clarasdr",
+  "name": "Clara",
+  "agent_url": "https://clarasdr.ai",
+  "category": "Customer Experience",
+  "run_id": "run-r4-v2-clarasdr-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 57,
+  "tier": "FADING",
+  "laddoo_score": 57,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A polished AI-SDR surface carrying superlatives it does not substantiate — the product may be fine, but the marketing is running well ahead of the evidence.",
+    "body": "Clara, from TruGen AI, is an inbound AI sales development rep: it engages website visitors, qualifies them against intent, runs personalised product walkthroughs, and syncs the result into a CRM. The proposition is coherent and the category is real — inbound intent decays in minutes and most teams cannot staff it around the clock. What the public surface does not do is support its own claims. The page opens with \"#1 AI SDR\", promises \"10X Higher Conversions\", and states \"Trusted by more than 100 leading companies around the world\" without naming one of them, citing a study, or showing a single customer outcome. Every one of those is a testable assertion presented as settled fact. The mechanics that ARE described read plausibly: CRM sync, multi-language coverage, a three-step setup, an avatar you upload or generate. There is a dedicated Security section and a Pricing nav item, both of which are more than many agents in this category offer. The gap is not capability, it is verification: nothing on the surface lets a buyer — or an agent evaluating vendors — check whether the 10x holds for anyone. Treat the demo as the evaluation, not the copy.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (57) because the public surface is claim-dense and evidence-thin: three superlative performance and adoption claims with no named customer, no case study, and no methodology behind the headline multiplier. Pricing and Security sections and a working demo path keep it well clear of FLATLINE, and the underlying product may be sound. Not STEADY because on the axis Hlido measures — can an outside party verify what is asserted — this surface currently fails.",
+  "what_it_does_well": [
+    "States a specific, narrow job: convert existing inbound website traffic, not cold outbound",
+    "Dedicated Security section, which is uncommon for an agent handling lead data",
+    "Setup path is concrete and three-step, with a stated 24-hour go-live",
+    "Pricing is a first-class nav item rather than a 'contact us' wall",
+    "Explicit CRM sync and existing-stack integration rather than a closed silo"
+  ],
+  "what_it_fails_at": [
+    "'#1 AI SDR' asserted with no ranking, source, or comparison set",
+    "'10X Higher Conversions' carries no methodology, baseline, or sample",
+    "'Trusted by more than 100 leading companies' with zero named logos or case studies",
+    "No public API, MCP server, or developer documentation surfaced — opaque to agents",
+    "Comparison table against 'Chatbot' and 'Product Tours' is vendor-authored and unfalsifiable"
+  ],
+  "best_for": [
+    "Mid-market B2B sites with real inbound volume and no 24/7 SDR coverage",
+    "Teams whose CRM is the bottleneck and who want qualification logged automatically",
+    "Buyers willing to run their own pilot and measure conversion themselves"
+  ],
+  "not_recommended_for": [
+    "Buyers who need vendor claims to be verifiable before a pilot",
+    "Outbound-led sales motions — this is an inbound-traffic product",
+    "Agent-driven procurement, which has no programmatic surface to query here",
+    "Regulated industries needing documented model behaviour before deployment"
+  ],
+  "red_flags": [
+    "Three unsubstantiated superlative claims on the landing page ('#1', '10X', '100+ companies') with no named customer or cited source"
+  ],
+  "compared_to": [
+    {
+      "slug": "apollo-io",
+      "verdict_diff": "Apollo is a data-and-outbound platform with a public, auditable product surface; Clara is inbound-only conversation capture. Apollo wins where you need verifiable scale and a documented API; Clara addresses a narrower moment Apollo does not own.",
+      "preferred_for_axis": "inbound-moment-capture"
+    },
+    {
+      "slug": "regie-ai",
+      "verdict_diff": "Regie leans on content generation for sales sequences; Clara sits on the website and converts live traffic. Different halves of the funnel — Regie for outbound messaging, Clara for on-site qualification.",
+      "preferred_for_axis": "on-site-vs-outbound"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Product is an inbound AI SDR converting website traffic",
+      "source": "https://clarasdr.ai/ ('Turn Your Website Traffic Into Qualified Pipeline With Clara AI SDR')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Dedicated Security and Pricing sections exist",
+      "source": "https://clarasdr.ai/ (top navigation: Security, Pricing)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Claims 10X higher conversions",
+      "source": "https://clarasdr.ai/ ('10X Boost Your Pipeline. Achieve 10X Higher Conversions.')",
+      "tested_at": "2026-08-23",
+      "verified": false
+    },
+    {
+      "claim": "Claims 100+ leading companies as customers",
+      "source": "https://clarasdr.ai/ ('Trusted by more than 100 leading companies around the world')",
+      "tested_at": "2026-08-23",
+      "verified": false
+    },
+    {
+      "claim": "CRM and existing-stack integration",
+      "source": "https://clarasdr.ai/ ('Clara plugs directly into your CRM and existing tools')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No API, MCP server, SDK or webhook documentation is exposed on the public surface. Clara is a hosted widget configured through a vendor UI; an agent cannot discover, drive, or evaluate it programmatically. CRM sync is described but its interface is not published.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T12:32:49.204Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Turn Your Website Traffic Into Qualified Pipeline With Clara AI SDR",
+      "tested_at": "2026-08-22T12:32:49.204Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Launch Demo →",
+      "tested_at": "2026-08-22T12:32:49.204Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing nav item present",
+      "tested_at": "2026-08-22T12:32:49.204Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshots captured; 'Launch Demo' and 'See How It Works' paths present",
+      "tested_at": "2026-08-22T12:32:49.204Z"
+    }
+  ],
+  "summary": "A polished AI-SDR surface carrying superlatives it does not substantiate — the product may be fine, but the marketing is running well ahead of the evidence.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/clarasdr.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Clara generates conversational sales copy and synthetic avatar demos — output that is squarely generative. No marking, provenance, watermarking or content-credential statement appears anywhere on the public surface, and no detection tool is linked. Recorded as unevidenced, not as absent."
+  },
+  "evidence_images": {
+    "run_id": "run-5ffc3efc278ece30-clarasdr-ai",
+    "base": "https://images.hlido.eu/reviews/clarasdr/run-5ffc3efc278ece30-clarasdr-ai",
+    "files": [
+      "home.png",
+      "page_pricing.png",
+      "page_blog.png",
+      "page_pricing.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/clarasdr/run-5ffc3efc278ece30-clarasdr-ai/home.png",
+      "https://images.hlido.eu/reviews/clarasdr/run-5ffc3efc278ece30-clarasdr-ai/page_pricing.png",
+      "https://images.hlido.eu/reviews/clarasdr/run-5ffc3efc278ece30-clarasdr-ai/page_blog.png",
+      "https://images.hlido.eu/reviews/clarasdr/run-5ffc3efc278ece30-clarasdr-ai/page_pricing.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing nav item present",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
