@@ -1,0 +1,196 @@
+{
+  "schema_version": "2.0",
+  "slug": "frowningdev-django-orm-lens",
+  "name": "Django ORM Lens",
+  "agent_url": "https://frowningdev.github.io/django-orm-lens/",
+  "category": "Coding",
+  "run_id": "run-r4-v2-frowningdev-django-orm-lens-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
+  "tier": "STEADY",
+  "laddoo_score": 84,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "An unusually honest developer tool: schema intelligence for Django delivered MIT-licensed with an explicit refusal to build a paid tier, and 13 read-only MCP tools that make it genuinely agent-native.",
+    "body": "Django ORM Lens parses a Django project statically — no database connection, no runserver, no working virtualenv — and turns the model graph into something an editor, a CI pipeline, or an AI agent can query. That constraint is the design decision that matters: because it never boots the project, it works on a cold clone with a broken environment, which is exactly the state a code agent usually finds a repository in. Three distributions share one parser core: a VS Code / Cursor / Windsurf extension with autocomplete and a live ER diagram, a pip package with 17 subcommands plus SARIF output, PR annotations and a GitHub Action, and an MCP variant exposing 13 read-only tools. The read-only scoping is the right default for a schema tool an agent drives. The commercial posture is the other thing worth noting. The page names, item by item, the capabilities normally sold behind a per-seat subscription — cross-function N+1 analysis, schema drift detection, index proposals from observed usage, migration blast radius weighted by real table statistics — and states that all of it is MIT with no tier gate, no account, and no telemetry, and that no Pro tier is planned. Vendors rarely enumerate the paid features they are giving away, and the specificity makes the claim checkable rather than decorative. Against that: this is a young project with a small maintainer footprint, the traction section shows star growth rather than production deployments, and the honest reading is that longevity is unproven. Nothing here is overstated, which in this category is itself the differentiator.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (84) for a tool whose claims are specific and falsifiable, whose licensing and telemetry posture are stated plainly, and whose MCP surface is read-only by design — a deliberate safety choice, not an omission. Third-party pickup (Django News #347, PyCoder's Weekly #746) is real corroboration. Not VITAL because the project is young, the maintainer footprint is small, and the evidence of production use is star growth rather than deployment; a tool this dependent on a single parser core needs a longer track record before it earns the top band.",
+  "what_it_does_well": [
+    "Static parsing means it works on a cold clone with no database and no bootable environment",
+    "13 read-only MCP tools — agent-native by design, with a safe default scope",
+    "Names the specific paid-tier capabilities it gives away, making the claim checkable",
+    "No account, no telemetry, no tier gate, stated explicitly and unambiguously",
+    "Three surfaces (editor, CLI/CI, MCP) share one parser core rather than diverging",
+    "Independent pickup in Django News and PyCoder's Weekly corroborates the tool exists in the wild"
+  ],
+  "what_it_fails_at": [
+    "Young project — no evidence of production deployment at scale on the public surface",
+    "Traction is presented as star growth, which measures attention rather than use",
+    "Single-maintainer footprint makes continuity a genuine risk for a CI dependency",
+    "Django-only by construction — no path to other ORMs",
+    "MCP setup requires pointing an env var at an absolute project path, which is brittle in containerised agent environments"
+  ],
+  "best_for": [
+    "Django teams inheriting an unfamiliar or long-lived codebase",
+    "CI pipelines that need schema-drift and migration-risk gates without a paid seat",
+    "AI coding agents that need ground-truth schema answers instead of grep archaeology",
+    "Reviewers who want migration blast radius surfaced on the pull request itself"
+  ],
+  "not_recommended_for": [
+    "Non-Django stacks — there is no generalisation path",
+    "Teams needing a vendor-backed support contract for a CI dependency",
+    "Anyone requiring runtime query profiling; this is static analysis only"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "sourcegraph-cody",
+      "verdict_diff": "Cody is broad code intelligence across any language with commercial backing; Django ORM Lens is narrow, deep, and free. Cody for org-wide code understanding, Lens for Django schema questions an agent must get exactly right.",
+      "preferred_for_axis": "depth-over-breadth"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is the agent that writes the code; Lens is the ground truth it should consult before touching a migration. Complementary rather than competing — Lens plugs into Cursor over MCP.",
+      "preferred_for_axis": "complement-not-substitute"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Static parsing with no database, runserver, or working venv required",
+      "source": "https://frowningdev.github.io/django-orm-lens/ ('All from static parsing: no database, no runserver, no working venv.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "13 read-only MCP tools for AI-agent use",
+      "source": "https://frowningdev.github.io/django-orm-lens/ ('13 read-only MCP tools answering schema questions from ground truth')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed with no paid tier planned",
+      "source": "https://frowningdev.github.io/django-orm-lens/ ('There is no Pro tier, and none is planned.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "No account, no seat count, no telemetry",
+      "source": "https://frowningdev.github.io/django-orm-lens/ ('with no tier gate, no seat count, no account, and no telemetry')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Featured in Django News #347 and PyCoder's Weekly #746",
+      "source": "https://frowningdev.github.io/django-orm-lens/ (Featured in section)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "17 CLI subcommands with SARIF output, PR annotations and a GitHub Action",
+      "source": "https://frowningdev.github.io/django-orm-lens/ (distribution table)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP server (`pip install \"django-orm-lens[mcp]\"`) exposing 13 read-only tools, documented for Cursor, Claude Code, Aider, Zed and Continue with a single JSON config block. A CLI with 17 subcommands and SARIF output gives a second programmatic path for CI agents. Read-only scoping means an agent cannot mutate the project through it — the correct default.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-22T20:31:38.376Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The schema intelligence layer for Django.",
+      "tested_at": "2026-08-22T20:31:38.376Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "uvx django-orm-lens scan",
+      "tested_at": "2026-08-22T20:31:38.376Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT, free, explicitly no paid tier — access terms stated unambiguously",
+      "tested_at": "2026-08-22T20:31:38.376Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "3 screenshots captured; 10-second quickstart command and capability table on page",
+      "tested_at": "2026-08-22T20:31:38.376Z"
+    }
+  ],
+  "summary": "An unusually honest developer tool: schema intelligence for Django delivered MIT-licensed with an explicit refusal to build a paid tier, and 13 read-only MCP tools that make it genuinely agent-native.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/frowningdev-django-orm-lens.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative: the tool performs static analysis and emits diagrams, SARIF findings and schema answers, not synthetic media or prose. Article-50 output-marking obligations do not attach to this surface."
+  },
+  "evidence_images": {
+    "run_id": "run-00ab18fa28c04e17-frowningdev-github-io",
+    "base": "https://images.hlido.eu/reviews/frowningdev-django-orm-lens/run-00ab18fa28c04e17-frowningdev-github-io",
+    "files": [
+      "home.png",
+      "page_the-schema-intelligence-layer-for-django.png",
+      "page_-10-seconds-to-first-insight.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/frowningdev-django-orm-lens/run-00ab18fa28c04e17-frowningdev-github-io/home.png",
+      "https://images.hlido.eu/reviews/frowningdev-django-orm-lens/run-00ab18fa28c04e17-frowningdev-github-io/page_the-schema-intelligence-layer-for-django.png",
+      "https://images.hlido.eu/reviews/frowningdev-django-orm-lens/run-00ab18fa28c04e17-frowningdev-github-io/page_-10-seconds-to-first-insight.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "subscription"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "MIT, free, explicitly no paid tier — access terms stated unambiguously",
+      "tested_at": "2026-08-22"
+    },
+    "last_verified": "2026-08-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
