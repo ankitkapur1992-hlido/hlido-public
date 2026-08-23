@@ -1,0 +1,206 @@
+{
+  "schema_version": "2.0",
+  "slug": "roomote",
+  "name": "Roomote",
+  "agent_url": "https://roomote.dev",
+  "category": "Coding",
+  "run_id": "run-r4-v2-roomote-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A cloud coding agent that takes ownership seriously — self-hostable, single-tenant, model-agnostic BYOK, and it runs your actual app before claiming the work is done.",
+    "body": "Roomote, from the team behind Roo Code, is a cloud coding agent built around a specific objection: most hosted agents ask you to give up control of the environment, the model, and the tenancy. Roomote answers each one. It is self-hostable or run on their cloud, always single-tenant, model-agnostic with bring-your-own-key, source-available, and works across GitHub, GitLab, Azure DevOps, Gitea and Bitbucket rather than assuming GitHub. For teams whose blocker to adopting an agent is procurement rather than capability, that list is the pitch. The execution loop is the second substantive part. Roomote runs your real dev environment, verifies its own work, reviews the change with a *different* model than the one that wrote it, and returns a pull request with a live preview URL for reviewers to inspect. Cross-model review is a meaningful design choice — self-review by the authoring model is the known weak point in agentic coding — and a live running app beats a diff for catching what a diff cannot show. Interaction happens where teams already are: Slack, Teams, Discord, Telegram, plus a mobile web UI, which makes the async framing credible rather than aspirational. What the surface does not settle: there are no named customers or case studies, \"source available\" is not the same as open source and the licence terms are not stated on the landing page, and the built-in analytics and automation claims are described but not evidenced. Pricing is a nav item, so terms exist, but the reviewed capture did not resolve them.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) for a coherent, control-preserving architecture — self-hostable, single-tenant, BYOK, multi-forge — combined with an execution loop that verifies against a running application and reviews with a second model. Those are substantive engineering choices, not marketing. Not VITAL because the surface carries no named customers or case studies, the licence behind 'source available' is unstated, and the automation and analytics claims are asserted without evidence a buyer can check.",
+  "what_it_does_well": [
+    "Self-hostable or cloud, always single-tenant — answers the real procurement objection",
+    "Model-agnostic with BYOK; no lock-in to a single provider's pricing or capability",
+    "Reviews its own changes with a different model than the one that wrote them",
+    "Runs the actual application and hands reviewers a live preview URL, not just a diff",
+    "Works across GitHub, GitLab, Azure DevOps, Gitea and Bitbucket",
+    "Operates through Slack, Teams, Discord and Telegram, making async use credible",
+    "Built by the Roo Code team — an existing track record in the category"
+  ],
+  "what_it_fails_at": [
+    "No named customers or case studies on the surface",
+    "'Source available' stated without naming the licence — not equivalent to open source",
+    "Automation and built-in analytics claims are described but not evidenced",
+    "Pricing exists as a nav item but terms are not resolved on the landing surface",
+    "Self-hosting cost and operational burden are not discussed",
+    "'Unlimited parallel tasks' is asserted without stating what bounds it in practice"
+  ],
+  "best_for": [
+    "Teams whose blocker is tenancy, data residency or model choice rather than agent capability",
+    "Organisations on GitLab, Bitbucket, Gitea or Azure DevOps that most agents ignore",
+    "Async and mobile-heavy workflows driven from chat tools",
+    "Reviewers who want to click a running app rather than read a diff"
+  ],
+  "not_recommended_for": [
+    "Solo developers wanting the simplest possible local setup",
+    "Buyers who need a named licence before adopting source-available software",
+    "Teams requiring published customer references for procurement"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is a local editor-based agent; Roomote is cloud/self-hosted and PR-oriented with live previews. Cursor for interactive in-editor work, Roomote for async delegated tasks that come back as reviewable pull requests.",
+      "preferred_for_axis": "async-pr-delivery"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a fully open local CLI with no infrastructure; Roomote adds hosted or self-hosted execution, cross-model review and live previews at the cost of running something. Aider for minimalism, Roomote for team workflow.",
+      "preferred_for_axis": "team-workflow-vs-minimalism"
+    },
+    {
+      "slug": "windsurf",
+      "verdict_diff": "Windsurf is an agentic IDE with a polished local experience; Roomote gives up the editor to gain single-tenancy, BYOK and multi-forge support. Windsurf for editor experience, Roomote for control and deployment flexibility.",
+      "preferred_for_axis": "control-and-tenancy"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Self-hostable or cloud, always single-tenant",
+      "source": "https://roomote.dev ('Self-hostable, isolated sandboxes'; 'Always single-tenant'; 'Self-hosted or on our Cloud.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Model-agnostic with bring-your-own-key",
+      "source": "https://roomote.dev ('Model-agnostic, BYOK')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Reviews its own code with a different model",
+      "source": "https://roomote.dev ('reviews the code with a different model, and hands back PRs with live previews')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Runs the actual application and provides a live preview URL",
+      "source": "https://roomote.dev ('Roomote runs your actual app before calling work done, and gives reviewers a live URL to inspect.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Works with GitHub, GitLab, Azure DevOps, Gitea and Bitbucket",
+      "source": "https://roomote.dev ('Works with Github, Gitlab, Azure DevOps, Gitea, Bitbucket')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Operates through Slack, Teams, Discord and Telegram",
+      "source": "https://roomote.dev ('Works where you work: Slack, Teams, Discord, Telegram')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Built by the creators of Roo Code",
+      "source": "https://roomote.dev ('By the creators of' — Roo Code attribution)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Roomote is itself an autonomous coding agent rather than a component agents call. It integrates inbound through git forges (issues, PRs) and chat platforms, which gives an event-driven path for triggering work, and self-hosting means the deployment is scriptable. No public API, MCP server or SDK is documented for driving Roomote programmatically.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T20:30:50.964Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The cloud coding agent you actually own.",
+      "tested_at": "2026-08-23T20:30:50.964Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Try now free",
+      "tested_at": "2026-08-23T20:30:50.964Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing nav item present; free trial path offered",
+      "tested_at": "2026-08-23T20:30:50.964Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshots captured; deployment options and live-preview walkthrough on page",
+      "tested_at": "2026-08-23T20:30:50.964Z"
+    }
+  ],
+  "summary": "A cloud coding agent that takes ownership seriously — self-hostable, single-tenant, model-agnostic BYOK, and it runs your actual app before claiming the work is done.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/roomote.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Roomote generates source code and pull-request content — generative output. No marking, provenance or content-credential statement appears on the public surface, and no detection tool is linked. Recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-af490f4e50404b0e-roomote-dev",
+    "base": "https://images.hlido.eu/reviews/roomote/run-af490f4e50404b0e-roomote-dev",
+    "files": [
+      "home.png",
+      "page_product_cloud-agents.png",
+      "page_product_automations.png",
+      "page_product_agent-roles.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/roomote/run-af490f4e50404b0e-roomote-dev/home.png",
+      "https://images.hlido.eu/reviews/roomote/run-af490f4e50404b0e-roomote-dev/page_product_cloud-agents.png",
+      "https://images.hlido.eu/reviews/roomote/run-af490f4e50404b0e-roomote-dev/page_product_automations.png",
+      "https://images.hlido.eu/reviews/roomote/run-af490f4e50404b0e-roomote-dev/page_product_agent-roles.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing nav item present; free trial path offered",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
