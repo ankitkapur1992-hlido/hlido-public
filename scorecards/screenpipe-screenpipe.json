@@ -1,0 +1,205 @@
+{
+  "schema_version": "2.0",
+  "slug": "screenpipe-screenpipe",
+  "name": "screenpipe",
+  "agent_url": "https://screenpipe.com",
+  "category": "Productivity",
+  "run_id": "run-r4-v2-screenpipe-screenpipe-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 81,
+  "tier": "STEADY",
+  "laddoo_score": 81,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Local-first computer history that any approved AI can search — strong traction, an explicit privacy default, and the rare case where the scary version of the product is the one they chose not to build.",
+    "body": "screenpipe records screen, audio and application activity into a local history, then lets an approved AI agent search it, reason over it, and act. The proposition is straightforward and the demonstration on the surface is unusually concrete: the same prompt and the same model, run with and without screenpipe's context, with the difference shown side by side — four Linear tickets updated with linked PRs and a feedback log, drawn from 47 days of memory. Showing the delta rather than asserting it is the right way to make this argument, and most tools in the category do not bother. The trust posture is the deciding factor. \"Keeping the raw history local by default\" is stated in the opening paragraph, not buried, and the product carries a dedicated Security section alongside Enterprise and Pricing. For a tool that by design sees everything on your screen and hears everything in your calls, local-by-default is not a feature — it is the only defensible architecture, and choosing it costs the vendor the data. Traction corroborates: 21,187 GitHub stars and Y Combinator backing are external signals, not self-assertions. The agent story is the second half. Recorded context feeds background agents — meeting notes, CRM updates, SOP generation, time tracking — with the surface showing what triggered each agent, what context it used, what it did, and where the result went. That per-run visibility is exactly the audit trail most agent products omit. What is not resolved on the surface: what \"approved agent\" means in enforcement terms, what leaves the machine when a cloud model is used, and how the local/cloud boundary is drawn in practice. For a product with this blast radius, that boundary is the thing to verify before deployment.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (81) on strong external corroboration (21k+ GitHub stars, Y Combinator backing), an explicit local-by-default privacy posture stated up front, a dedicated Security surface, and an agent model that shows trigger, context, action and destination per run. Held below VITAL because the enforcement mechanics of 'approved agent' and the precise local/cloud boundary are not specified — and on a tool that captures screen and audio continuously, that boundary is the single most consequential unresolved detail.",
+  "what_it_does_well": [
+    "Local-by-default raw history, stated in the opening paragraph rather than buried",
+    "Demonstrates value by A/B-ing the same prompt with and without context, instead of asserting it",
+    "21,187 GitHub stars and Y Combinator backing — external, checkable traction signals",
+    "Dedicated Security and Enterprise sections alongside Pricing",
+    "Per-agent run visibility: what triggered it, what context it used, what it did, where the result went",
+    "Open to any AI rather than locking the history to one vendor's model",
+    "Free download with a published pricing path"
+  ],
+  "what_it_fails_at": [
+    "'Approved agent' is not defined in enforcement terms on the surface",
+    "The local/cloud boundary — what leaves the machine when a cloud model is used — is unspecified",
+    "No independent security audit linked for a tool with continuous screen and audio capture",
+    "Retention, deletion and redaction controls are not described on the reviewed surface",
+    "Consent handling for other participants captured in recorded calls is not addressed",
+    "Product demonstrations are vendor-produced rather than third-party evaluated"
+  ],
+  "best_for": [
+    "Individuals who want searchable recall of everything they have seen and heard at work",
+    "Teams automating meeting notes, CRM updates and follow-ups from real activity rather than manual entry",
+    "Privacy-conscious users who want AI context without shipping raw history to a vendor",
+    "Developers building agents that need grounded personal work context"
+  ],
+  "not_recommended_for": [
+    "Regulated environments without a documented retention, redaction and consent model",
+    "Organisations requiring an independent security audit before deploying continuous capture",
+    "Anyone recording calls where all-party consent cannot be established",
+    "Users unwilling to accept the blast radius of a continuous screen and audio recorder"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "otter-ai",
+      "verdict_diff": "Otter captures and transcribes meetings into a cloud service; screenpipe captures everything — screen, audio, apps — and keeps it local by default. Otter for a narrow, mature, compliance-friendly meeting record; screenpipe for total recall with the data staying on your machine.",
+      "preferred_for_axis": "local-total-recall"
+    },
+    {
+      "slug": "superhuman",
+      "verdict_diff": "Superhuman optimises one channel (email) with a polished client; screenpipe indexes everything you did and lets any AI query it. Different scopes entirely — Superhuman for inbox throughput, screenpipe for cross-application memory.",
+      "preferred_for_axis": "cross-application-memory"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Records screen, audio and app activity, keeping raw history local by default",
+      "source": "https://screenpipe.com ('while keeping the raw history local by default')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "21,187 GitHub stars at time of review",
+      "source": "https://screenpipe.com ('21,187' star counter)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Backed by Y Combinator",
+      "source": "https://screenpipe.com ('Backed by Y Combinator')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Dedicated Security, Enterprise and Pricing sections",
+      "source": "https://screenpipe.com (top navigation: Use cases, Pricing, Enterprise, Security)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "History is open to any AI rather than a single vendor's model",
+      "source": "https://screenpipe.com ('Your computer history. Open to any AI.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Agent runs show trigger, context used, action taken and destination",
+      "source": "https://screenpipe.com ('See what triggered the agent, what context it used, what it did, and where the result went.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Free download available",
+      "source": "https://screenpipe.com ('Download for free')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Explicitly positioned as context infrastructure for agents — 'computer history for every AI agent' — with background agents consuming the local index and a documented per-run trace of trigger, context, action and destination. The surface advertises openness to any AI and shows connected integrations, but does not publish an MCP server or a named public API endpoint on the reviewed page; the integration contract must be confirmed in the developer documentation.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T20:31:20.695Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Your computer history. Open to any AI.",
+      "tested_at": "2026-08-23T20:31:20.695Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Download for free",
+      "tested_at": "2026-08-23T20:31:20.695Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing nav item present; free download path",
+      "tested_at": "2026-08-23T20:31:20.695Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshots captured; 44-second product film and interactive with/without comparison on page",
+      "tested_at": "2026-08-23T20:31:20.695Z"
+    }
+  ],
+  "summary": "Local-first computer history that any approved AI can search — strong traction, an explicit privacy default, and the rare case where the scary version of the product is the one they chose not to build.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/screenpipe-screenpipe.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "screenpipe generates summaries, meeting notes and drafted messages from captured activity — generative output derived from recorded material. No marking, provenance or content-credential statement appears on the public surface, and no detection tool is linked. Recorded as unevidenced. Note separately that continuous screen and audio capture raises consent obligations distinct from Article 50 output marking."
+  },
+  "evidence_images": {
+    "run_id": "run-b20bfc2b11d515d1-screenpipe-com",
+    "base": "https://images.hlido.eu/reviews/screenpipe-screenpipe/run-b20bfc2b11d515d1-screenpipe-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_use-cases.png",
+      "page_onboarding.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/screenpipe-screenpipe/run-b20bfc2b11d515d1-screenpipe-com/home.png",
+      "https://images.hlido.eu/reviews/screenpipe-screenpipe/run-b20bfc2b11d515d1-screenpipe-com/page_.png",
+      "https://images.hlido.eu/reviews/screenpipe-screenpipe/run-b20bfc2b11d515d1-screenpipe-com/page_use-cases.png",
+      "https://images.hlido.eu/reviews/screenpipe-screenpipe/run-b20bfc2b11d515d1-screenpipe-com/page_onboarding.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "usage-based"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing nav item present; free download path",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
