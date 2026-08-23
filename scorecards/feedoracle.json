@@ -1,0 +1,190 @@
+{
+  "schema_version": "2.0",
+  "slug": "feedoracle",
+  "name": "FeedOracle",
+  "agent_url": "https://feedoracle.io",
+  "category": "Specialized verticals",
+  "run_id": "run-r4-v2-feedoracle-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Stablecoin compliance evidence built on an unusually disciplined premise: it reports what a named source showed at a named time, marks the gaps as gaps, and refuses to hand you a verdict.",
+    "body": "FeedOracle turns fragmented stablecoin disclosures and market signals into structured, timestamped evidence — MiCA register status, issuer disclosures, reserve attestation dates, peg observations, redemption terms — delivered as read-only JSON with a SHA-256 content hash and an observation timestamp in every response. Fintech product teams, compliance operations, treasury and risk functions, and builders of autonomous agents are the stated audience, and the API shape (a single GET against an asset) is exactly right for the last of those. What distinguishes this surface is the epistemics, and they are stated rather than implied. The sample response shows an explicit EVIDENCE GAP status next to a reserve attestation date — a product that renders its own missing data as a first-class value, rather than defaulting to a silent null or an optimistic pass. The page says outright that facts age at different speeds (a peg observation is minutes old, an attestation can be months old or undated) and that a decision record hiding that difference hides the risk. And it draws the boundary most compliance-adjacent vendors blur: data, policy and legal judgment are three different things; the evidence states what was found, the customer's policy classifies it, and the legal determination belongs to qualified professionals — not to a data feed, and not to FeedOracle. That is a company declining to sell the most valuable-sounding thing it could sell, which is the strongest trust signal a surface of this kind can carry. The caveats are scope and youth. Coverage breadth across issuers is not stated, the captured snapshot is explicitly not a live feed, and there is no independent audit of the collection methodology linked. The discipline is visible; the track record is not yet.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) on the strength of an evidence model that is honest by construction — explicit gap states, per-field timestamps, a content hash in every response, and a stated refusal to convert evidence into a legal verdict. That posture is rare and directly aligned with what Hlido measures. Held out of the top band because coverage breadth is unstated, the data is explicitly snapshot rather than live, and no independent review of the collection methodology is linked; the discipline is asserted well but not yet externally corroborated.",
+  "what_it_does_well": [
+    "Renders missing data as an explicit EVIDENCE GAP rather than a null or an optimistic default",
+    "SHA-256 content hash and observation timestamp in every response",
+    "States plainly that facts age at different rates and that hiding this hides risk",
+    "Draws a hard line between data, policy, and legal judgment — and declines the last one",
+    "Read-only GET API returning structured JSON — directly consumable by an agent",
+    "Names the specific sources it reconciles (EU register, issuer disclosures, market)",
+    "Explicitly labels captured snapshots as 'not a live feed' rather than implying real-time"
+  ],
+  "what_it_fails_at": [
+    "Coverage breadth across issuers and assets is not stated on the surface",
+    "No independent audit of the collection methodology linked",
+    "Snapshot rather than live data — freshness depends on capture cadence, which is undocumented here",
+    "Young product with no visible customer references or track record",
+    "MiCA and DORA framing is EU-specific; other jurisdictions are not addressed"
+  ],
+  "best_for": [
+    "Fintech and treasury teams that must record why a stablecoin decision was made, not just what it was",
+    "Compliance operations needing timestamped, hashable evidence for an audit file",
+    "Autonomous agents that need machine-usable status vocabulary rather than prose disclosures",
+    "EU entities working through MiCA and DORA obligations"
+  ],
+  "not_recommended_for": [
+    "Anyone wanting a single pass/fail verdict on an asset — the product deliberately refuses to give one",
+    "Real-time trading decisions requiring live feeds",
+    "Non-EU regulatory frameworks",
+    "Buyers needing an audited methodology before adoption"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "x402-index-x402search-mcp",
+      "verdict_diff": "x402search indexes an emerging payments ecosystem for discovery; FeedOracle produces dated compliance evidence about specific assets. Discovery versus decision record — adjacent corners of the same stack, not substitutes.",
+      "preferred_for_axis": "evidence-over-discovery"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Read-only GET API returning structured JSON with timestamps and content hash",
+      "source": "https://feedoracle.io ('Read-only GET · Structured JSON · Timestamps and content hash in every response')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Surfaces explicit EVIDENCE GAP states for missing data",
+      "source": "https://feedoracle.io (sample response: 'Reserve attestation date — EVIDENCE GAP')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "SHA-256 content hash shown in the sample response",
+      "source": "https://feedoracle.io ('Content hash · SHA-256 · d447a393…0fa9d31c')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Data is explicitly a captured snapshot, not a live feed",
+      "source": "https://feedoracle.io ('Captured snapshot · observed 2026-08-19T11:08:16Z · not a live feed.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "States that legal determination is not provided by the product",
+      "source": "https://feedoracle.io ('The legal determination belongs to qualified professionals — not to a data feed, and not to FeedOracle.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Pricing and API documentation are published navigation items",
+      "source": "https://feedoracle.io (nav: Docs, Pricing)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A documented read-only REST API (GET api.feedoracle.io/api/v3/stablecoin/mica/{asset}) returning structured JSON with an explicit status vocabulary, per-field timestamps and a content hash — directly consumable by an agent with no scraping. The product explicitly names 'developers of autonomous agents' as a target audience. No MCP server or webhook surface is published.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T08:31:29.465Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Stablecoin decision infrastructure — verifiable stablecoin evidence.",
+      "tested_at": "2026-08-23T08:31:29.465Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Run a preflight",
+      "tested_at": "2026-08-23T08:31:29.465Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing nav item present",
+      "tested_at": "2026-08-23T08:31:29.465Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshots captured; live sample API response with real values rendered on the page",
+      "tested_at": "2026-08-23T08:31:29.465Z"
+    }
+  ],
+  "summary": "Stablecoin compliance evidence built on an unusually disciplined premise: it reports what a named source showed at a named time, marks the gaps as gaps, and refuses to hand you a verdict.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/feedoracle.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative: FeedOracle reports observed third-party disclosures with source attribution, timestamps and content hashes rather than producing synthetic content. Article-50 output-marking obligations do not attach; the provenance discipline it does apply (hash plus observation time) exceeds what the article would require of a data surface."
+  },
+  "evidence_images": {
+    "run_id": "run-050718475a1031db-feedoracle-io",
+    "base": "https://images.hlido.eu/reviews/feedoracle/run-050718475a1031db-feedoracle-io",
+    "files": [
+      "home.png",
+      "page_index_html.png",
+      "page_stablecoin-preflight_.png",
+      "page_docs_mica-compliance_html.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/feedoracle/run-050718475a1031db-feedoracle-io/home.png",
+      "https://images.hlido.eu/reviews/feedoracle/run-050718475a1031db-feedoracle-io/page_index_html.png",
+      "https://images.hlido.eu/reviews/feedoracle/run-050718475a1031db-feedoracle-io/page_stablecoin-preflight_.png",
+      "https://images.hlido.eu/reviews/feedoracle/run-050718475a1031db-feedoracle-io/page_docs_mica-compliance_html.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing nav item present",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
