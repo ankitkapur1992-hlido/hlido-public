@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "neo4j-contrib-mcp-neo4j",
+  "name": "Neo4j MCP Integrations",
+  "agent_url": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/",
+  "category": "Infrastructure",
+  "run_id": "run-r4-v2-neo4j-contrib-mcp-neo4j-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Vendor-official MCP integration guidance for Neo4j that is unusually candid about the protocol's unsolved problems — strong on trust, thin on the servers themselves.",
+    "body": "This is Neo4j's own developer-centre page for Model Context Protocol integrations against the graph database. As a surface it does two things well and one thing incompletely. It explains MCP accurately — host, servers, clients, tools, resources, prompts — and situates it in the wider ecosystem, naming the cloud and framework adopters (Google, Microsoft, AWS, OpenAI, the Docker MCP Catalog, LangChain, CrewAI, Pydantic.AI, ADK) rather than implying Neo4j invented the category. More notably, it states plainly that MCP still has open issues around security, discovery, trusted deployment and permission control. A vendor page that names the unsolved risks in the protocol it is promoting is a meaningfully better trust signal than one that does not, and it is rare. What the surface does not do is give a buyer or an agent a crisp inventory of what the Neo4j MCP servers actually expose: which tools, what scoping, read-only or read-write, and what happens when an agent gets Cypher access to a production graph. The page is a developer guide sitting inside a large documentation estate, so the reviewed surface is orientation rather than product specification. That is a fair thing for it to be — but it means the evaluation stops one level short of the thing that matters most, which is the security boundary around graph write access.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because vendor-official documentation from an established database company carries a high continuity floor, the MCP explanation is accurate and non-promotional, and the candid statement of the protocol's open security problems is a genuine trust signal. Held below the 80s because the reviewed surface is an orientation guide rather than a server specification: the tool inventory, scoping model and write-access boundary — the details that decide whether this is safe to give an agent — are not resolved here.",
+  "what_it_does_well": [
+    "Names MCP's open problems (security, discovery, trusted deployment, permission control) rather than glossing them",
+    "Accurate, non-promotional explanation of the MCP host/server/client architecture",
+    "Situates Neo4j within the ecosystem instead of overclaiming ownership of the category",
+    "Vendor-official surface from an established database company — high continuity floor",
+    "Links onward into GraphRAG guides, examples and the wider GenAI ecosystem"
+  ],
+  "what_it_fails_at": [
+    "No inventory of the actual tools the Neo4j MCP servers expose",
+    "Read-only versus read-write scoping is not resolved on this surface",
+    "No security guidance specific to giving an agent Cypher access to a production graph",
+    "Cookie-consent interstitial is the first content encountered — a real friction for automated readers",
+    "Reviewed surface is a guide, not a product page, so version and release state are absent"
+  ],
+  "best_for": [
+    "Teams already on Neo4j evaluating whether to expose the graph to an agent",
+    "GraphRAG builders who need the vendor's framing before choosing a server",
+    "Anyone wanting an honest, vendor-authored primer on MCP's current limitations"
+  ],
+  "not_recommended_for": [
+    "Buyers needing a concrete tool inventory and permission model before adoption",
+    "Non-Neo4j graph stacks",
+    "Agents attempting to auto-discover a callable endpoint from this page — it is prose, not a manifest"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langchain-mcp-adapters",
+      "verdict_diff": "LangChain's adapters are framework-side plumbing for consuming any MCP server; this is a database vendor's guidance for exposing one. Read the Neo4j page to decide what to expose, the adapters to wire it in.",
+      "preferred_for_axis": "expose-vs-consume"
+    },
+    {
+      "slug": "genomoncology-biomcp",
+      "verdict_diff": "BioMCP is a domain-specific server with a concrete published tool surface; the Neo4j page is general integration guidance without one. BioMCP is easier to evaluate; Neo4j has the stronger vendor floor.",
+      "preferred_for_axis": "specification-clarity"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Vendor-official Neo4j developer guide for MCP integrations",
+      "source": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/ (Neo4j Developer Center → Model Context Protocol)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "States open issues remain in MCP around security, discovery, trusted deployment and permission control",
+      "source": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/ ('There are still a number of open issues, especially around security, discovery, trusted deployment, permission control in the MCP protocol.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Names major cloud and framework MCP adopters",
+      "source": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/ (Google, Microsoft, AWS, OpenAI, Docker MCP Catalog; LangChain, CrewAI, Pydantic.AI, ADK)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "No tool inventory or permission model published on this surface",
+      "source": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/ (absent from page content as captured)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Neo4j publishes MCP server integrations for the graph database, and this guide is the vendor's entry point to them. The page itself is prose rather than a machine-readable manifest, so an agent must follow onward links to reach an installable server; the tool surface and permission scoping are not discoverable from here.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T00:33:24.561Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Model Context Protocol (MCP) Integrations for the Neo4j Graph Database",
+      "tested_at": "2026-08-23T00:33:24.561Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get Started Free",
+      "tested_at": "2026-08-23T00:33:24.561Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or access terms on the reviewed guide surface; a 'Get Started Free' path exists but terms are elsewhere",
+      "tested_at": "2026-08-23T00:33:24.561Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "3 screenshots captured; guide links to comprehensive overview with examples",
+      "tested_at": "2026-08-23T00:33:24.561Z"
+    }
+  ],
+  "summary": "Vendor-official MCP integration guidance for Neo4j that is unusually candid about the protocol's unsolved problems — strong on trust, thin on the servers themselves.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/neo4j-contrib-mcp-neo4j.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative infrastructure: the integration brokers graph queries and returns records, not synthetic content. Article-50 output-marking obligations do not attach to this surface."
+  },
+  "evidence_images": {
+    "run_id": "run-c703bb83d24db4c2-neo4j-com",
+    "base": "https://images.hlido.eu/reviews/neo4j-contrib-mcp-neo4j/run-c703bb83d24db4c2-neo4j-com",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/neo4j-contrib-mcp-neo4j/run-c703bb83d24db4c2-neo4j-com/home.png",
+      "https://images.hlido.eu/reviews/neo4j-contrib-mcp-neo4j/run-c703bb83d24db4c2-neo4j-com/page_.png",
+      "https://images.hlido.eu/reviews/neo4j-contrib-mcp-neo4j/run-c703bb83d24db4c2-neo4j-com/page_.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing or access terms on the reviewed guide surface; a 'Get Started Free' path exists but terms are elsewhere",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
