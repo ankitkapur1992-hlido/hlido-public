@@ -1,0 +1,195 @@
+{
+  "schema_version": "2.0",
+  "slug": "superhq-ai-superhq",
+  "name": "SuperHQ",
+  "agent_url": "http://superhq.ai/",
+  "category": "Coding",
+  "run_id": "run-r4-v2-superhq-ai-superhq-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 63,
+  "tier": "FADING",
+  "laddoo_score": 63,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A genuinely good idea — coding agents isolated in microVMs with diff approval — shipped as an unnotarized macOS-only binary with early-stage traction.",
+    "body": "SuperHQ runs AI coding agents in real sandboxes: Claude Code, OpenAI Codex and Pi, each in its own microVM, with a dashboard showing what each is working on and a review-and-merge step before changes land. The architectural argument is correct and increasingly the consensus one — giving an autonomous coding agent unmediated access to a real repository is the thing that goes wrong, and per-agent isolation with an approval gate is the right default. The remote-control story is a nice second act: pair a phone by QR, and workspaces, diffs, agent output and command execution travel with you without an app-store install. Licensing is AGPL-3.0 and the source is public. Where this loses ground is delivery. The requirements are macOS 14+ on Apple Silicon, which excludes every Linux and Windows developer and every CI environment. The page states directly that the app is not yet notarized and that macOS Gatekeeper will block it on first launch, with a documented one-time unblock step — honest disclosure, and a real barrier for exactly the security-conscious audience a sandboxing tool should attract. Traction is 180 GitHub stars and four testimonials sourced from social posts, one of which is itself a feature request asking for tool-call and network-egress logging per run. That request is the fair critique: a sandbox whose value proposition is containment currently does not surface an audit trail of what escaped it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (63) not because the product is weak in conception but because the public surface shows an early-stage delivery: single-platform (macOS 14+, Apple Silicon only), an unnotarized binary that the OS blocks on first launch, 180 stars, and social-post testimonials in place of deployment evidence. Well above FLATLINE — the source is public under AGPL-3.0, the disclosure about notarization is honest, and the isolation model is sound. It moves up when the binary is signed, the platform coverage broadens, or per-run audit logging lands.",
+  "what_it_does_well": [
+    "Per-agent microVM isolation is the right architectural default for autonomous coding agents",
+    "Diff review and approval before changes land, rather than trusting the agent's output",
+    "Supports three named agents out of the box (Claude Code, OpenAI Codex, Pi)",
+    "Remote control from any phone by QR pairing, with no app install",
+    "Source available under AGPL-3.0",
+    "Discloses the Gatekeeper problem and the unblock step openly rather than hiding it"
+  ],
+  "what_it_fails_at": [
+    "macOS 14+ on Apple Silicon only — excludes Linux, Windows, and every CI environment",
+    "Binary is not notarized; macOS blocks it on first launch and requires a manual unblock",
+    "No per-run audit log of tool calls or network egress — the gap a testimonial itself flags",
+    "180 GitHub stars; no production deployment evidence on the surface",
+    "Testimonials are social-media quotes, not case studies or named deployments",
+    "No pricing or commercial terms visible beyond the free download"
+  ],
+  "best_for": [
+    "Solo developers and small teams on Apple Silicon running multiple coding agents in parallel",
+    "Anyone who wants agent changes gated behind an explicit diff approval",
+    "Developers who want to check on long-running agents from a phone"
+  ],
+  "not_recommended_for": [
+    "Linux or Windows developers — there is no build",
+    "CI or server environments",
+    "Security teams that cannot accept an unnotarized binary",
+    "Organisations needing an auditable record of what an agent did inside the sandbox"
+  ],
+  "red_flags": [
+    "Distributed as an unnotarized macOS binary requiring a manual Gatekeeper bypass — disclosed by the vendor, but an unusual ask from a tool whose premise is security isolation"
+  ],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is the agent-bearing editor itself; SuperHQ is the containment layer you would run agents inside. Different jobs — but Cursor is cross-platform and commercially supported, which SuperHQ is not yet.",
+      "preferred_for_axis": "isolation-layer"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a mature cross-platform CLI coding agent operating directly on your repo; SuperHQ sandboxes agents like it. Aider for portability and track record, SuperHQ if isolation matters more than platform reach.",
+      "preferred_for_axis": "containment-over-portability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Runs AI coding agents in isolated microVMs with review and merge",
+      "source": "http://superhq.ai/ ('Claude Code, OpenAI Codex, and Pi. Each in its own microVM. See what they're working on at a glance, then review and merge their changes.')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Requires macOS 14+ on Apple Silicon",
+      "source": "http://superhq.ai/ ('REQUIRES MACOS 14+ · APPLE SILICON')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Application is not notarized and is blocked by Gatekeeper on first launch",
+      "source": "http://superhq.ai/ ('the app is not yet notarized, so macOS Gatekeeper will block it on first launch')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "AGPL-3.0 licensed with public source",
+      "source": "http://superhq.ai/ (footer: SOURCE · GitHub · README · AGPL-3.0)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "180 GitHub stars at time of review",
+      "source": "http://superhq.ai/ ('Star 180')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Phone remote control via QR pairing at remote.superhq.ai",
+      "source": "http://superhq.ai/ ('Scan the pairing QR on your Mac, open remote.superhq.ai on your phone')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "SuperHQ is a host for agents rather than an agent-callable component: it runs Claude Code, Codex and Pi inside microVMs. Installation is a Homebrew cask, so provisioning is scriptable, but no API, MCP server or webhook surface is published for driving SuperHQ itself programmatically.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T08:30:43.207Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Run AI coding agents in real sandboxes.",
+      "tested_at": "2026-08-23T08:30:43.207Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Download for Mac",
+      "tested_at": "2026-08-23T08:30:43.207Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Free download offered; no pricing or commercial terms published on the reviewed surface",
+      "tested_at": "2026-08-23T08:30:43.207Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "1 screenshot captured; brew install command and product walkthrough sections on page",
+      "tested_at": "2026-08-23T08:30:43.207Z"
+    }
+  ],
+  "summary": "A genuinely good idea — coding agents isolated in microVMs with diff approval — shipped as an unnotarized macOS-only binary with early-stage traction.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/superhq-ai-superhq.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative host: SuperHQ isolates and supervises other agents rather than producing content itself. Any output-marking duty attaches to the coding agents it runs, not to this layer."
+  },
+  "evidence_images": {
+    "run_id": "run-7a704f2522bd6fbb-superhq-ai",
+    "base": "https://images.hlido.eu/reviews/superhq-ai-superhq/run-7a704f2522bd6fbb-superhq-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/superhq-ai-superhq/run-7a704f2522bd6fbb-superhq-ai/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Free download offered; no pricing or commercial terms published on the reviewed surface",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
