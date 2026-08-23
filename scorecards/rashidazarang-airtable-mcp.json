@@ -1,0 +1,196 @@
+{
+  "schema_version": "2.0",
+  "slug": "rashidazarang-airtable-mcp",
+  "name": "Airtable MCP",
+  "agent_url": "https://www.airtablemcp.com/",
+  "category": "Infrastructure",
+  "run_id": "run-r4-v2-rashidazarang-airtable-mcp-2026-08-23",
+  "run_at": "2026-08-23T21:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "42 documented Airtable tools over MCP, MIT-licensed and installable in one line — a rare case where the tool inventory is published up front instead of discovered after install.",
+    "body": "Airtable MCP does one thing and publishes exactly what it does: 42 tools across 11 categories covering the Airtable API surface — record CRUD, bulk import, upsert with deduplication, formula filtering, schema discovery and field creation, view management, attachments, comments, batch operations, and webhook lifecycle including payload retrieval. That inventory is on the landing page, broken out by category with tool names visible, before any install. For an agent evaluating whether a server can do the job, that is the single most useful thing a page can offer, and most MCP servers do not offer it. Installation is a single npx invocation, with copy-ready config blocks for Claude Desktop on both macOS and Windows and for Claude Code, plus a Smithery one-click path that removes the token-setup step. The licence is MIT and stated on the page. There is no pricing because there is no price. The weaknesses are the ones the category carries generally. The tool set includes full write access — create, update, bulk create, upsert, field creation, webhook creation — and the surface does not discuss scoping, least privilege, or what a misbehaving agent can do with a personal access token that has base-wide permissions. The security question with a 42-tool write-capable server is not whether it works but what happens when it works on the wrong base. Nothing on the surface addresses it, and that is the gap between this and a top-band score.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-23",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) because the tool inventory, licence and install path are all published before install, which is exactly the transparency an agent-consumed component should offer, and the Smithery listing corroborates distribution outside the vendor's own page. Not higher because a 42-tool, fully write-capable server publishes no guidance on token scoping or least privilege — the risk surface is real and entirely undiscussed.",
+  "what_it_does_well": [
+    "Full 42-tool inventory published by category on the landing page, before install",
+    "One-line npx install with copy-ready config for Claude Desktop (macOS and Windows) and Claude Code",
+    "MIT licence stated plainly on the surface",
+    "Smithery listing gives an independent distribution path and removes token setup",
+    "Covers the genuinely useful hard parts: upsert with deduplication, bulk operations, webhook payload retrieval",
+    "Schema discovery tools let an agent understand a base before acting on it"
+  ],
+  "what_it_fails_at": [
+    "No guidance on token scoping or least privilege for a write-capable 42-tool surface",
+    "No discussion of what an agent can damage with base-wide credentials",
+    "Single-maintainer open-source project — continuity is unproven",
+    "No stated versioning or release cadence on the reviewed surface",
+    "Depends entirely on Airtable's API; no statement on behaviour when that API changes"
+  ],
+  "best_for": [
+    "Agents that need to read and write Airtable bases as a working data layer",
+    "Teams already using Airtable as an operational database who want agent access without custom glue",
+    "Workflow automation where schema discovery matters as much as record access"
+  ],
+  "not_recommended_for": [
+    "Environments needing documented least-privilege scoping before granting write access",
+    "Non-Airtable data stores",
+    "Teams requiring a vendor support contract for an operational dependency"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is a full workflow platform with an Airtable node among hundreds; this is a single-purpose MCP server exposing Airtable directly to an agent. n8n for orchestrated multi-system flows, Airtable MCP for letting the agent itself hold the connection.",
+      "preferred_for_axis": "direct-agent-access"
+    },
+    {
+      "slug": "zapier",
+      "verdict_diff": "Zapier is trigger-and-action automation with a managed surface and a price; this is free, MIT, and gives the agent the raw tool set. Zapier for non-technical reliability, Airtable MCP for agent-driven work with no per-task cost.",
+      "preferred_for_axis": "raw-tools-vs-managed"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "42 tools across 11 categories, inventory published on the landing page",
+      "source": "https://www.airtablemcp.com/ ('42 tools. Every Airtable operation. Zero config.' plus per-category tool listing)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed, open source",
+      "source": "https://www.airtablemcp.com/ ('Open Source · MIT License')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Single-command install via npx",
+      "source": "https://www.airtablemcp.com/ ('npx @rashidazarang/airtable-mcp')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Copy-ready MCP config for Claude Desktop (macOS/Windows) and Claude Code",
+      "source": "https://www.airtablemcp.com/ (configuration code blocks)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Listed on Smithery with one-click install",
+      "source": "https://www.airtablemcp.com/ ('Also on Smithery ... One-click install for Claude, Cursor, and other MCP-compatible clients')",
+      "tested_at": "2026-08-23",
+      "verified": true
+    },
+    {
+      "claim": "Includes write and webhook-creation tools",
+      "source": "https://www.airtablemcp.com/ (create_record, bulk_create_records, upsert_records, create_field, create_webhook)",
+      "tested_at": "2026-08-23",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server, installable with one npx command, with published config for Claude Desktop and Claude Code and a Smithery one-click path. 42 named tools across 11 categories are documented before install, so an agent can determine capability fit without running anything. Webhook tools give an event path in addition to request/response.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-23T08:06:09.015Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Let your AI talk to Airtable. 42 tools. Every Airtable operation. Zero config.",
+      "tested_at": "2026-08-23T08:06:09.015Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get started →",
+      "tested_at": "2026-08-23T08:06:09.015Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT licensed and free; access terms stated on the page",
+      "tested_at": "2026-08-23T08:06:09.015Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "4 screenshots captured; full tool inventory and runnable config blocks shown on page",
+      "tested_at": "2026-08-23T08:06:09.015Z"
+    }
+  ],
+  "summary": "42 documented Airtable tools over MCP, MIT-licensed and installable in one line — a rare case where the tool inventory is published up front instead of discovered after install.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/rashidazarang-airtable-mcp.json",
+  "signature_pending": true,
+  "source": "r4-editorial-enrich-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-23",
+    "source": "r4-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "Non-generative infrastructure: the server performs Airtable record and schema operations and returns structured data, not synthetic content. Article-50 output-marking obligations do not attach to this surface."
+  },
+  "evidence_images": {
+    "run_id": "run-e26c6babf861caca-www-airtablemcp-com",
+    "base": "https://images.hlido.eu/reviews/rashidazarang-airtable-mcp/run-e26c6babf861caca-www-airtablemcp-com",
+    "files": [
+      "home.png",
+      "pagedocs_what-is-airtable-mcp.png",
+      "pagedocs_what-is-airtable-mcp.png",
+      "pagedocs_what-is-airtable-mcp.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/rashidazarang-airtable-mcp/run-e26c6babf861caca-www-airtablemcp-com/home.png",
+      "https://images.hlido.eu/reviews/rashidazarang-airtable-mcp/run-e26c6babf861caca-www-airtablemcp-com/pagedocs_what-is-airtable-mcp.png",
+      "https://images.hlido.eu/reviews/rashidazarang-airtable-mcp/run-e26c6babf861caca-www-airtablemcp-com/pagedocs_what-is-airtable-mcp.png",
+      "https://images.hlido.eu/reviews/rashidazarang-airtable-mcp/run-e26c6babf861caca-www-airtablemcp-com/pagedocs_what-is-airtable-mcp.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "MIT licensed and free; access terms stated on the page",
+      "tested_at": "2026-08-23"
+    },
+    "last_verified": "2026-08-23",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-23"
+  }
+}
