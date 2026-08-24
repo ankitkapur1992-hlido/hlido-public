@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0",
+  "category": "Coding",
+  "editor": "Hlido Editor",
+  "editorial_method": "cli-tier-1+editorial-narrative-v2+claude-native",
+  "methodology_version": "2026.05",
+  "methodology_url": "https://hlido.eu/methodology/",
+  "run_at": "2026-08-24T17:43:16.593Z",
+  "confidence": "medium",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "signature_pending": true,
+  "source": "session-editorial-enrich-v2-claude-native",
+  "slug": "openai-codex",
+  "name": "Codex CLI",
+  "agent_url": "https://openai.com/codex",
+  "run_id": "run-openai-codex-mt7ivvha",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "hlido_opinion": {
+    "headline": "A fast, capable vendor CLI with real safety ideas — held back by a failure mode its own doctor would diagnose.",
+    "body": "We installed Codex CLI cold from npm (codex-cli 0.149.1) and probed its public surface. Much of it is genuinely strong: a rich command set (non-interactive exec, code review, session resume/fork), MCP management plus the ability to run Codex itself as an MCP server, a built-in sandbox subcommand, and a trusted-directory guard that refuses to run outside a trusted git repository unless explicitly overridden — a safe default we verified. Its doctor is excellent: run in our restricted sandbox it named every real problem (missing credentials, blocked egress) with a concrete fix each. But the flagship check failed: `codex exec` without credentials printed its session banner and then hung, silently, until we killed it at 40 seconds. No auth error, no timeout, no hint — while its own doctor knows exactly what is wrong. A CLI that other agents will drive non-interactively must fail fast; this one does not. What this review does NOT cover: the agentic loop requires paid credentials and was not exercised; medium confidence. Disclosure: Hlido’s review pipeline runs on Claude models from Anthropic, a direct competitor of OpenAI. The mechanical checks are reproducible by anyone; weigh the editorial layer with that knowledge.",
+    "voice": "measured",
+    "as_of": "2026-08-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the public surface is broad and mostly excellent — sandbox subcommand, trusted-directory guard, self-hosting as an MCP server, an actionable doctor — but the one behavior that matters most for unattended and agent-driven use, failing fast on missing credentials, failed our test outright (40s silent hang, killed by timeout). That is a production-path defect on a CLI explicitly designed for non-interactive execution, and it caps the craft dimension below the VITAL band until fixed.",
+  "what_it_does_well": [
+    "Trusted-directory guard: refuses to run outside a trusted git repo without an explicit override flag (tested)",
+    "Ships a sandbox subcommand for running commands in a Codex-provided sandbox (tested help surface)",
+    "Can run itself as an MCP server (codex mcp-server) in addition to managing external ones (tested help surface)",
+    "doctor produces precise, actionable diagnostics — it correctly named every defect of our restricted sandbox (tested)",
+    "Non-interactive exec plus code-review mode designed for scripting (tested help surface)"
+  ],
+  "what_it_fails_at": [
+    "Hangs instead of failing on missing credentials: `codex exec` printed a banner then hung 40+ seconds with no error until killed (tested) — its own doctor diagnoses the same condition instantly",
+    "Primary distribution page sits behind GitHub bot protection; our browser runner was CAPTCHA-blocked (prior run evidence)"
+  ],
+  "best_for": [
+    "Developers in the OpenAI stack who want a scriptable terminal agent with session management",
+    "Teams that value an explicit sandbox boundary for agent-executed commands",
+    "Agent builders who want a coding agent addressable AS an MCP server"
+  ],
+  "not_recommended_for": [
+    "Unattended pipelines that need deterministic fail-fast behavior on auth/config errors (verified defect)",
+    "Anyone needing a credential-free trial of the actual editing loop"
+  ],
+  "red_flags": [
+    "Verified: silent 40s+ hang on unauthenticated non-interactive exec — the exact path other agents would drive",
+    "Reviewer-vendor note, disclosed: Hlido’s pipeline runs on Claude models (Anthropic), a competitor of OpenAI. Mechanical checks are reproducible; weigh the editorial layer accordingly."
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code failed fast without credentials (clean error, 1.3s); Codex hung 40+ seconds in the identical test. Codex counters with a built-in sandbox subcommand and can itself serve as an MCP server. Both are vendor-locked; both hide the agentic loop behind paid auth."
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is open-source and model-agnostic with a live-tested edit loop (92). Codex is OpenAI-native with a broader session/cloud surface but an untested loop and a verified fail-slow defect."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.npmjs.com/package/@openai/codex"
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via npm (@openai/codex); drive non-interactively with `codex exec`; run as an MCP server with `codex mcp-server`; requires OpenAI credentials. Guard automation with explicit timeouts — verified: missing credentials hang rather than error."
+  },
+  "checklist": [
+    {
+      "id": "version-output",
+      "pass": true,
+      "required": true,
+      "evidence": "codex-cli 0.149.1, exit 0",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "help-core-usage",
+      "pass": true,
+      "required": true,
+      "evidence": "exec/review/resume/fork/sandbox/cloud documented",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "mcp-management",
+      "pass": true,
+      "required": true,
+      "evidence": "mcp list/get/add/remove + mcp-server (serve as MCP)",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "doctor-health",
+      "pass": true,
+      "required": true,
+      "evidence": "exit 1 with correct, actionable findings about our sandbox",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "unauthenticated-behavior",
+      "pass": false,
+      "required": true,
+      "evidence": "silent hang, killed at 40s (exit 124) — no auth error",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    }
+  ],
+  "summary": "Codex CLI 0.149.1 — OpenAI’s terminal coding agent. CLI surface live-tested from a cold npm install: strong command breadth, sandbox subcommand, trusted-directory guard, excellent doctor — but non-interactive exec hangs silently without credentials instead of failing fast (verified). Agentic loop requires paid auth (untested); medium confidence."
+}
