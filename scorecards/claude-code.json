@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.0",
+  "category": "Coding",
+  "editor": "Hlido Editor",
+  "editorial_method": "cli-tier-1+editorial-narrative-v2+claude-native",
+  "methodology_version": "2026.05",
+  "methodology_url": "https://hlido.eu/methodology/",
+  "run_at": "2026-08-24T17:43:16.593Z",
+  "confidence": "medium",
+  "staleness_after": "2026-11-22",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-22",
+  "signature_pending": true,
+  "source": "session-editorial-enrich-v2-claude-native",
+  "slug": "claude-code",
+  "name": "Claude Code",
+  "agent_url": "https://claude.com/product/claude-code",
+  "run_id": "run-claude-code-mt7ivvha",
+  "score": 91,
+  "tier": "VITAL",
+  "laddoo_score": 91,
+  "hlido_opinion": {
+    "headline": "The reference terminal coding agent — a disciplined, safety-legible CLI whose public surface passed every check we ran.",
+    "body": "We installed Claude Code cold from npm (v2.1.241, ~11s, zero vulnerabilities) and probed every public surface a buyer can verify without an account. All of it held: non-interactive -p/--print mode for scripting and CI, first-class MCP server management with inline examples, permission scoping via --allowedTools and --add-dir, a working doctor, and — the detail we weight heavily — when run without credentials it fails in 1.3 seconds with a clean, legible authentication error instead of hanging or crashing. Even its most dangerous flag is named --allow-dangerously-skip-permissions with help text steering it to sandboxes: the safety posture is legible in the surface itself. What this review does NOT cover: the agentic editing loop requires a paid subscription or API key, so we did not live-test multi-file edits the way we did for Aider — the score carries medium confidence accordingly. Disclosure: Hlido’s own review pipeline runs on Claude models from Anthropic, the vendor of this product. The tested checks above are mechanical and reproducible by anyone; the editorial layer is where a reader should apply that knowledge.",
+    "voice": "measured",
+    "as_of": "2026-08-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "VITAL (91) because every mechanically verifiable claim on the public CLI surface passed, failure modes are fast and legible (the strongest craft signal a CLI can show without credentials), the agent-integration story (MCP management, non-interactive print mode, SDK) is the most complete in the category, and the product is the de-facto reference against which other terminal agents document themselves — our own corpus’s Aider review already compares against it by name. Scored one point under Aider (92), whose full agentic edit loop we did live-test; Claude Code’s we could not, and an untested loop never outranks a tested one on this register.",
+  "what_it_does_well": [
+    "Fails fast and legibly: unauthenticated non-interactive call returned a clean auth error, exit 1, in 1.3s (tested)",
+    "MCP server management is first-class and documented with working examples (tested)",
+    "Non-interactive -p/--print mode makes it scriptable by other agents and CI (documented on the tested help surface)",
+    "Permission model is visible at the flag level: --allowedTools, --add-dir, and a deliberately scary name for the bypass flag (tested help surface)",
+    "Clean cold install from npm, 0 vulnerabilities flagged (tested)"
+  ],
+  "what_it_fails_at": [
+    "No free tier to verify the agentic loop: everything behind authentication is invisible to an unauthenticated evaluator (tested: auth wall reached in 1.3s)",
+    "The product page (claude.com) is a login-walled marketing surface — our browser runner could not evaluate it, which pushes all public verification onto the CLI itself (prior run evidence)"
+  ],
+  "best_for": [
+    "Teams already on Anthropic models who want the deepest native integration",
+    "Agent builders who need a scriptable, non-interactive coding agent (-p mode) with MCP wiring",
+    "Developers who weight legible permission scoping and sandbox-aware defaults"
+  ],
+  "not_recommended_for": [
+    "Anyone needing a credential-free trial of the actual editing loop before buying",
+    "Model-agnostic teams who want to swap LLM vendors freely (see Aider)"
+  ],
+  "red_flags": [
+    "Reviewer-vendor overlap, disclosed: Hlido’s pipeline runs on Claude models. The mechanical checks are reproducible; weigh the editorial layer accordingly."
+  ],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is open-source, model-agnostic, and its full edit loop is live-tested on this register (92). Claude Code is Anthropic-native with a stronger agent-integration surface (MCP management, print mode) but its edit loop sits behind paid auth we did not exercise. Choose Aider for vendor independence; Claude Code for depth in the Anthropic stack."
+    },
+    {
+      "slug": "openai-codex",
+      "verdict_diff": "Both are vendor CLIs with MCP support. Claude Code failed fast without credentials (1.3s, clean error); Codex CLI hung for 40+ seconds in the same test. Codex counters with a built-in sandbox subcommand and the ability to run itself as an MCP server."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.npmjs.com/package/@anthropic-ai/claude-code"
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via npm (@anthropic-ai/claude-code); invoke non-interactively with `claude -p \"<prompt>\"`; scope tools with --allowedTools; attach MCP servers via `claude mcp add`. Requires ANTHROPIC_API_KEY or subscription auth."
+  },
+  "checklist": [
+    {
+      "id": "version-output",
+      "pass": true,
+      "required": true,
+      "evidence": "2.1.241 (Claude Code), exit 0",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "help-core-usage",
+      "pass": true,
+      "required": true,
+      "evidence": "-p/--print, --allowedTools, --add-dir, MCP, background agents documented",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "mcp-management",
+      "pass": true,
+      "required": true,
+      "evidence": "claude mcp add/list with HTTP-transport examples",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "doctor-health",
+      "pass": true,
+      "required": true,
+      "evidence": "doctor exit 0; install/platform/deps reported",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    },
+    {
+      "id": "unauthenticated-behavior",
+      "pass": true,
+      "required": true,
+      "evidence": "clean auth error, exit 1, 1.3s — no hang",
+      "tested_at": "2026-08-24T17:43:16.593Z"
+    }
+  ],
+  "summary": "Claude Code 2.1.241 — Anthropic’s terminal coding agent. CLI surface live-tested from a cold npm install: non-interactive print mode, first-class MCP management, legible permission flags, fast clean failure without credentials. Agentic loop requires paid auth (untested); medium confidence.",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-08-24",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-24"
+  }
+}
