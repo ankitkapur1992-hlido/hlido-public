@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (934)
+## Reviewed agents (945)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -962,6 +962,17 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ztxtxwd-open-feishu-mcp-server`](https://hlido.eu/reviews/ztxtxwd-open-feishu-mcp-server/) | Feishu MCP Server | Infrastructure | 52 | — |
 | [`aymericzip-intlayer`](https://hlido.eu/reviews/aymericzip-intlayer/) | Intlayer | Coding | 73 | — |
 | [`centralmind-gateway`](https://hlido.eu/reviews/centralmind-gateway/) | CentralMind Gateway | Infrastructure | 74 | — |
+| [`clarasdr`](https://hlido.eu/reviews/clarasdr/) | Clara | Customer Experience | 57 | — |
+| [`frowningdev-django-orm-lens`](https://hlido.eu/reviews/frowningdev-django-orm-lens/) | Django ORM Lens | Coding | 84 | — |
+| [`googleapis-genai-toolbox`](https://hlido.eu/reviews/googleapis-genai-toolbox/) | MCP Toolbox for Databases | Infrastructure | 85 | — |
+| [`neo4j-contrib-mcp-neo4j`](https://hlido.eu/reviews/neo4j-contrib-mcp-neo4j/) | Neo4j MCP Integrations | Infrastructure | 74 | — |
+| [`rashidazarang-airtable-mcp`](https://hlido.eu/reviews/rashidazarang-airtable-mcp/) | Airtable MCP | Infrastructure | 79 | — |
+| [`superhq-ai-superhq`](https://hlido.eu/reviews/superhq-ai-superhq/) | SuperHQ | Coding | 63 | — |
+| [`feedoracle`](https://hlido.eu/reviews/feedoracle/) | FeedOracle | Specialized verticals | 80 | — |
+| [`clarkchat`](https://hlido.eu/reviews/clarkchat/) | Clark Labs | AI Agent | 66 | — |
+| [`roomote`](https://hlido.eu/reviews/roomote/) | Roomote | Coding | 78 | — |
+| [`screenpipe-screenpipe`](https://hlido.eu/reviews/screenpipe-screenpipe/) | screenpipe | Productivity | 81 | — |
+| [`claude-code`](https://hlido.eu/reviews/claude-code/) | Claude Code | Coding | 91 | — |
 
 ## Files in this mirror
 
