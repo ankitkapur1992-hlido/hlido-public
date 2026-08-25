@@ -1,0 +1,180 @@
+{
+  "schema_version": "2.0",
+  "slug": "deusdata-codebase-memory-mcp",
+  "name": "codebase-memory-mcp",
+  "agent_url": "https://deusdata.github.io/codebase-memory-mcp/",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-deusdata-codebase-memory-mcp-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 82,
+  "tier": "STEADY",
+  "laddoo_score": 82,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A structural-analysis backend for coding agents — indexes a repo into a persistent knowledge graph so the agent answers structural questions with far fewer tokens, and it is honest that it holds no LLM of its own.",
+    "body": "codebase-memory-mcp is an open-source MCP server that turns a repository into a persistent knowledge graph of functions, classes, call chains, HTTP routes and cross-service links, so an AI coding agent queries the graph instead of reading files one at a time. The pitch is efficiency: Tree-sitter parsing across 158 languages, Hybrid LSP type resolution, a native executable that needs no language runtime, and — the headline number — roughly 120x fewer tokens on structural questions. The most important sentence on the whole page is a disclaimer of ambition: 'It is a structural-analysis backend, not a chatbot: there is no embedded LLM and no API key. Your MCP client is the intelligence layer.' That honesty about what it is not is exactly what you want from infrastructure, and it is rarer than it should be. The project also does something most tools in this category do not: it grounds its claims in a research preprint (arXiv:2603.27277) with a stated evaluation across 31 real-world repositories — 83% answer quality, 10x fewer tokens, 2.1x fewer tool calls versus file-by-file exploration. That is a credibility multiplier, with the usual caveat that these are the vendor's own benchmarks and the two token figures quoted on the page (120x in the hero, 10x in the preprint summary) are not the same number and a buyer should read the methodology before quoting either. Net: a technically serious, honestly-scoped tool that a token-conscious coding agent can genuinely benefit from, held just short of the mid-80s only by the gap between the hero's 120x and the preprint's 10x and the absence of independent verification.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) because this is a technically serious, open-source, agent-native tool with an unusually honest scope statement (no embedded LLM, no API key) and — rare for the category — a research preprint backing its efficiency claims across 31 repositories. It is held below the mid-80s because the two token-reduction figures on the surface (120x hero vs 10x preprint) are inconsistent without reading the methodology, and all benchmarks are vendor-run and not independently reproduced.",
+  "what_it_does_well": [
+    "Indexes a repo into a persistent knowledge graph of functions, classes, call chains, routes and cross-service links",
+    "Explicitly honest about scope: 'a structural-analysis backend, not a chatbot ... no embedded LLM and no API key'",
+    "Tree-sitter parsing across 158 languages with Hybrid LSP type resolution",
+    "Ships as a native executable requiring no language runtime — low install friction",
+    "Grounds claims in a research preprint (arXiv:2603.27277) evaluated across 31 real-world repositories",
+    "Open-source MCP server that works with Claude Code and any MCP-compatible agent",
+    "Optional 3D graph visualisation for humans to inspect the same graph the agent queries"
+  ],
+  "what_it_fails_at": [
+    "The two headline token figures disagree — 120x fewer tokens in the hero versus 10x in the preprint summary — without a reconciling note on the surface",
+    "All efficiency and quality benchmarks are vendor-run; none are independently reproduced",
+    "Value depends on the agent's structural questions matching what the graph indexes; free-text semantic recall is a separate feature",
+    "Young project; no continuity, maintenance-cadence or funding signal published",
+    "No named production adopters beyond the preprint's evaluation repositories"
+  ],
+  "best_for": [
+    "Token-conscious coding agents that answer structural questions (callers, routes, impact) over large repos",
+    "Teams indexing very large codebases where file-by-file exploration is too slow or too expensive",
+    "MCP users who want a runtime-free native backend with no API key to manage"
+  ],
+  "not_recommended_for": [
+    "Users wanting an all-in-one coding assistant — this is a backend, not the intelligence layer",
+    "Buyers who need independently verified benchmarks before adopting",
+    "Workflows dominated by free-text semantic search rather than structural queries"
+  ],
+  "red_flags": [
+    "Inconsistent token-reduction claims on the same surface (120x in the hero, 10x in the cited preprint) — read the methodology before quoting either figure"
+  ],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena is a semantic code-navigation MCP toolkit that leans on LSP for symbol-level operations; codebase-memory-mcp builds a persistent structural knowledge graph across 158 languages with a research-preprint backing. Serena for LSP-driven symbol work, codebase-memory-mcp for graph-scale structural queries with token efficiency as the headline.",
+      "preferred_for_axis": "structural-graph-vs-lsp-navigation"
+    },
+    {
+      "slug": "neo4j-contrib-mcp-neo4j",
+      "verdict_diff": "Neo4j's MCP server exposes a general graph database to agents; codebase-memory-mcp is a purpose-built code-structure graph that indexes repos automatically. Neo4j's for arbitrary graph data you model yourself, codebase-memory-mcp for out-of-the-box codebase intelligence.",
+      "preferred_for_axis": "purpose-built-code-graph"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source MCP server indexing a codebase into a persistent knowledge graph queried by the agent",
+      "source": "https://deusdata.github.io/codebase-memory-mcp/ ('indexes a codebase into a persistent knowledge graph of functions, classes, call chains, HTTP routes, and cross-service links')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Explicitly holds no embedded LLM and requires no API key; the MCP client is the intelligence layer",
+      "source": "https://deusdata.github.io/codebase-memory-mcp/ ('It is a structural-analysis backend, not a chatbot: there is no embedded LLM and no API key. Your MCP client ... is the intelligence layer')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Tree-sitter parsing across 158 languages, native executable, Hybrid LSP type resolution",
+      "source": "https://deusdata.github.io/codebase-memory-mcp/ ('Tree-sitter parsing across 158 languages, Hybrid LSP type resolution, native executable with verified assets')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Efficiency claims backed by a preprint evaluated on 31 repositories, but hero (120x) and preprint (10x) token figures differ",
+      "source": "https://deusdata.github.io/codebase-memory-mcp/ (hero '~120x fewer tokens'; preprint summary 'Evaluated across 31 real-world repositories: 83% answer quality, 10x fewer tokens, and 2.1x fewer tool calls')",
+      "tested_at": "2026-08-25",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A native MCP server. A coding agent (Claude Code or any MCP client) connects to codebase-memory-mcp and queries the pre-built knowledge graph — callers, routes, impact, cross-service links — instead of reading files. No API key or embedded model; the agent supplies the reasoning and the server supplies fast structural facts. Runtime-free native binary keeps setup minimal.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The fastest, most efficient code intelligence engine for AI coding agents",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "View on GitHub / Download latest release",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source, free; native executable download and GitHub source with no API key required",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Research preprint (arXiv:2603.27277) with benchmarks across 31 repos; 3D graph visualisation; documented tool surface",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "A structural-analysis backend for coding agents — indexes a repo into a persistent knowledge graph so the agent answers structural questions with far fewer tokens, and it is honest that it holds no LLM of its own.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/deusdata-codebase-memory-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "codebase-memory-mcp is a structural code-analysis backend that produces graph facts, not synthetic media or published generative content. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-ff0d9e34f3effd18-deusdata-github-io",
+    "base": "https://images.hlido.eu/reviews/deusdata-codebase-memory-mcp/run-ff0d9e34f3effd18-deusdata-github-io",
+    "files": [
+      "home.png",
+      "page_what-is-it.png",
+      "page_install.png",
+      "page_hybrid-lsp.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/deusdata-codebase-memory-mcp/run-ff0d9e34f3effd18-deusdata-github-io/home.png",
+      "https://images.hlido.eu/reviews/deusdata-codebase-memory-mcp/run-ff0d9e34f3effd18-deusdata-github-io/page_what-is-it.png",
+      "https://images.hlido.eu/reviews/deusdata-codebase-memory-mcp/run-ff0d9e34f3effd18-deusdata-github-io/page_install.png",
+      "https://images.hlido.eu/reviews/deusdata-codebase-memory-mcp/run-ff0d9e34f3effd18-deusdata-github-io/page_hybrid-lsp.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source, free; native executable download and GitHub source with no API key required",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
