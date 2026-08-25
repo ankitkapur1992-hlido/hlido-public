@@ -1,0 +1,182 @@
+{
+  "schema_version": "2.0",
+  "slug": "callstackincubator-agent-device",
+  "name": "agent-device",
+  "agent_url": "https://agent-device.dev",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-callstackincubator-agent-device-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Playwright's snapshot-and-act model, ported to native mobile and TV — a token-efficient device-automation CLI built specifically for agents, from a team that knows the mobile tooling space.",
+    "body": "agent-device takes the pattern that made web agents practical — expose the page as a structured accessibility tree with stable references, let the agent read it, then act on those references — and brings it to native iOS, Android, TV and desktop apps. The insight is explicitly about tokens: instead of feeding an agent raw screenshots or verbose UI dumps, `snapshot -i` returns only the interactive elements with stable refs like @e2, keeping the context small enough that a real exploration loop stays affordable. From there the agent acts with either those refs or semantic selectors ('find Sign In click', 'find role button click'), which keeps generated flows readable and resilient to layout churn. It is a single global npm install, one mental model across simulators, physical QA devices and TV targets, and evidence (screenshots) is captured only when needed rather than on every step. Two things earn it real credibility: it is built by callstack, a well-known React Native consultancy, so the mobile-tooling competence is not in doubt; and the 4.2k GitHub stars signal genuine early traction for what is a narrow, technical tool. What keeps it in the middle of the STEADY band rather than the top is maturity and proof — the value proposition is clean but the surface leans on the concept demo rather than published reliability data across real apps, device farms, or CI, and there is no pricing or hosted-service story visible (it reads as an open-source CLI). For an agent that needs to drive a real mobile app, though, this is the right shape of tool and a rare one.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because agent-device applies a proven, token-conscious automation model to an underserved surface (native mobile/TV), ships as a clean single-install CLI designed for agents, and comes from a team with real mobile-tooling pedigree plus early traction (4.2k stars). It sits mid-band rather than higher because the public surface is concept-and-command led — it does not yet publish reliability evidence across real apps or a CI/device-farm story — and the commercial/support model is unstated.",
+  "what_it_does_well": [
+    "Token-efficient by design: `snapshot -i` exposes only interactive elements with stable refs instead of raw screenshots or verbose dumps",
+    "Semantic selectors ('find Sign In click') make agent-authored flows readable and resilient to layout changes",
+    "One mental model across iOS, Android, TV and desktop — simulators, physical QA devices and TV targets alike",
+    "Purpose-built for agents rather than a human test framework with an agent wrapper",
+    "Single global npm install; evidence captured only when needed",
+    "Built by callstack, a recognised React Native tooling team — real domain competence",
+    "4.2k GitHub stars indicate genuine early traction for a narrow technical tool"
+  ],
+  "what_it_fails_at": [
+    "Surface leans on concept demos rather than published reliability data across real apps or device farms",
+    "No CI-integration or device-farm story surfaced on the reviewed page",
+    "No pricing, support or hosted-service model stated — reads as an open-source CLI you self-operate",
+    "Native device automation is inherently brittle across OS versions; the surface does not address that head-on",
+    "No named production users or case studies as evidence"
+  ],
+  "best_for": [
+    "Agent builders who need to drive real native iOS/Android/TV apps, not just web pages",
+    "Mobile QA teams wiring an AI agent into device testing with token cost in mind",
+    "Developers who want a single automation model across simulators and physical devices"
+  ],
+  "not_recommended_for": [
+    "Web-only agent workflows already served by browser automation",
+    "Teams needing a supported, SLA-backed commercial product out of the box",
+    "Buyers who require published cross-OS reliability evidence before adopting"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "executeautomation-mcp-playwright",
+      "verdict_diff": "The Playwright MCP server automates web browsers; agent-device brings the same snapshot-and-act model to native mobile and TV apps. Playwright MCP for the web surface, agent-device for native app targets a browser tool cannot reach.",
+      "preferred_for_axis": "native-mobile-vs-web"
+    },
+    {
+      "slug": "browser-use",
+      "verdict_diff": "browser-use gives agents structured control of a web browser; agent-device is its native-app analogue with an explicit token-efficiency focus. Same philosophy, different surface — pick by whether the target is a website or a real device app.",
+      "preferred_for_axis": "device-vs-browser-target"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Device automation CLI for AI agents across real iOS, Android, TV and desktop apps",
+      "source": "https://agent-device.dev ('Device automation CLI for AI agents. Real apps on iOS, Android, TV, and desktop.')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "snapshot exposes the accessibility tree with stable refs, keeping context smaller than screenshots",
+      "source": "https://agent-device.dev ('snapshot exposes the accessibility tree and assigns stable refs (like @e2), keeping context smaller than raw screenshots or verbose dumps')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Acts via stable refs or semantic selectors and installs via a single global npm command",
+      "source": "https://agent-device.dev ('agent-device find \"Sign In\" click'; '$ npm install -g agent-device')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Approximately 4.2k GitHub stars indicating early traction",
+      "source": "https://agent-device.dev (star count '4.2k' shown in header)",
+      "tested_at": "2026-08-25",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A CLI built for agents: an agent shells out to `agent-device open`, `snapshot`, `press`, `fill`, and `find` to explore and drive a native app. The snapshot output is formatted for LLM consumption (interactive-only, stable refs), and semantic selectors let the agent target elements by text or role. No MCP server is documented on the surface, but the CLI itself is the agent interface.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "The mobile verification for AI Agents — device automation CLI for AI agents",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Read the Docs / npm install -g agent-device",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing surfaced; reads as an open-source CLI installed via npm",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Worked terminal examples of open/snapshot/press/fill/find; cross-platform command samples",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "Playwright's snapshot-and-act model, ported to native mobile and TV — a token-efficient device-automation CLI built specifically for agents, from a team that knows the mobile tooling space.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/callstackincubator-agent-device.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "agent-device is a device-automation tool that drives apps; it does not itself produce synthetic media or generative content for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-7469c725a338cb3a-agent-device-dev",
+    "base": "https://images.hlido.eu/reviews/callstackincubator-agent-device/run-7469c725a338cb3a-agent-device-dev",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_cloud.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/callstackincubator-agent-device/run-7469c725a338cb3a-agent-device-dev/home.png",
+      "https://images.hlido.eu/reviews/callstackincubator-agent-device/run-7469c725a338cb3a-agent-device-dev/page_.png",
+      "https://images.hlido.eu/reviews/callstackincubator-agent-device/run-7469c725a338cb3a-agent-device-dev/page_.png",
+      "https://images.hlido.eu/reviews/callstackincubator-agent-device/run-7469c725a338cb3a-agent-device-dev/page_cloud.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing surfaced; reads as an open-source CLI installed via npm",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
