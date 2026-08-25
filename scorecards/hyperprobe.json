@@ -1,0 +1,171 @@
+{
+  "schema_version": "2.0",
+  "slug": "hyperprobe",
+  "name": "HyperProbe",
+  "agent_url": "https://hyperprobe.co",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-hyperprobe-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A YC-backed AI on-call agent with a genuinely differentiated mechanism — it has your coding agent drop a read-only probe on the exact prod line that failed, capturing evidence your logs never had, without a redeploy.",
+    "body": "HyperProbe positions itself as the AI that works an incident so your engineers do not have to: alert to confirmed root cause before someone opens their laptop. Most incident-AI tools reason harder over the telemetry you already collected; HyperProbe's differentiator is that it captures new evidence. It has your coding agents place a read-only probe on the exact line where a problem occurred in production, capturing values that were never logged, without redeploying or restarting the service. That is a real mechanism, not a repackaging of log search, and it targets the true bottleneck the page names correctly — 'the fix takes 10 minutes, finding it takes hours, because the value that explains failure is never logged.' It is Y-Combinator-backed, works with Cursor, Claude Code, Codex and Opencode across Node.js, TypeScript, Java and Python, and has a pricing page and demo booking, so the commercial surface is more complete than most of this batch. What holds it to the low-STEADY band is that the entire value rests on strong, quantified outcome claims — 3–4 hours to under 10 minutes for time-to-root-cause, redeployments per incident from 3–4 to zero — that are the vendor's own and unverifiable from the public surface, and the read-only-probe-in-production mechanism, while powerful, is exactly the kind of capability a security-conscious buyer will want to interrogate hard (what it can see, how access is scoped, what audit trail exists). Compelling idea, credible backing, claims that need a buyer's own proof-of-concept before they are trusted.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71), just into the band, because HyperProbe has a genuinely differentiated mechanism (capturing new, previously-unlogged production evidence via read-only probes without redeploy), YC backing, multi-agent and multi-language support, and a complete commercial surface. It sits at the band floor because its core value rests on strong quantified outcome claims that are vendor-stated and unverifiable publicly, and a probe-in-production capability whose security scoping a buyer must interrogate before trusting.",
+  "what_it_does_well": [
+    "Differentiated mechanism: captures new evidence by probing the exact failing prod line, rather than only reasoning over existing logs",
+    "Names the real bottleneck accurately — finding the cause, not applying the fix",
+    "Read-only probes without redeployment or service restart — low operational disruption in principle",
+    "Y-Combinator-backed, signalling vetting and some continuity",
+    "Works with Cursor, Claude Code, Codex and Opencode across Node.js, TypeScript, Java and Python",
+    "Complete commercial surface: pricing page and demo booking present"
+  ],
+  "what_it_fails_at": [
+    "Core value rests on strong quantified claims (3–4h → <10min, redeploys 3–4 → 0) that are vendor-stated and unverifiable from the surface",
+    "A read-only probe running in production is a capability a security team must scrutinise — scoping and audit trail are not detailed on the surface",
+    "Young company; limited independent evidence or named customer references on the reviewed page",
+    "Language/runtime support is bounded (Node/TS/Java/Python) — outside that, no coverage",
+    "The 'engineers didn't join to be on call' framing is persuasive but is marketing, not evidence"
+  ],
+  "best_for": [
+    "Engineering teams drowning in on-call toil who want faster, evidence-backed root-cause on production incidents",
+    "Shops already using Cursor, Claude Code, Codex or Opencode in Node/TS/Java/Python stacks",
+    "Teams willing to run a scoped proof-of-concept to validate the time-to-root-cause claims themselves"
+  ],
+  "not_recommended_for": [
+    "Security-constrained environments that cannot allow a third-party probe to run in production without deep review",
+    "Buyers who need independent, non-vendor evidence for the headline outcome numbers before adopting",
+    "Stacks outside the supported languages and runtimes"
+  ],
+  "red_flags": [
+    "Headline outcome metrics (time-to-root-cause 3–4h → <10min; redeployments 3–4 → 0) are vendor-stated and not independently verifiable from the public surface",
+    "A read-only agent probe running inside production needs explicit access-scoping and audit detail that the surface does not provide"
+  ],
+  "compared_to": [
+    {
+      "slug": "devops-incident-response",
+      "verdict_diff": "General incident-response agents coordinate and reason over existing signals; HyperProbe's distinct move is capturing new, previously-unlogged evidence at the failure point. Conventional tools for orchestration over what you already have, HyperProbe for gathering what you never logged.",
+      "preferred_for_axis": "new-evidence-capture"
+    },
+    {
+      "slug": "incidentops-openenv",
+      "verdict_diff": "IncidentOps-style environments focus on the incident workflow and tooling harness; HyperProbe focuses narrowly on root-cause evidence capture via in-prod probes. The former for workflow breadth, HyperProbe for the specific find-the-cause bottleneck.",
+      "preferred_for_axis": "root-cause-specialisation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Has coding agents drop a read-only probe on the exact failing prod line to capture unlogged data without redeploy",
+      "source": "https://hyperprobe.co ('HyperProbe makes your coding agents drop a read-only probe on the exact line where the problem happened in prod. It captures data your logs do not have, without redeployment or restarting the service.')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Y-Combinator-backed AI on-call agent working with major coding agents across several languages",
+      "source": "https://hyperprobe.co ('BACKED BY Y COMBINATOR · AI ON-CALL AGENT'; 'Node.js · TypeScript · Java · Python · Works with Cursor, Claude Code, Codex, Opencode')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Claims time-to-root-cause of 3–4 hours reduced to under 10 minutes and redeployments per incident reduced to zero",
+      "source": "https://hyperprobe.co ('3 to 4 hrs → <10 min Time to root cause'; '3 to 4 → 0 Redeployments per incident')",
+      "tested_at": "2026-08-25",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "HyperProbe operates through existing coding agents (Cursor, Claude Code, Codex, Opencode) — it directs them to place read-only probes at the failure point. The public surface documents which agents it works with but does not surface a public API, MCP server, CLI or SDK for arbitrary programmatic integration, so an outside agent cannot discover and drive HyperProbe directly from the reviewed page.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Your 24/7 AI on-call agent — alert to confirmed root cause before engineers open their laptop",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Try Now / Book a Demo",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing page present in navigation; Try Now and Book a Demo access paths",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Concrete mechanism described (in-prod read-only probes); demo booking; docs linked. Outcome metrics are vendor-stated, not demonstrated",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "A YC-backed AI on-call agent with a genuinely differentiated mechanism — it has your coding agent drop a read-only probe on the exact prod line that failed, capturing evidence your logs never had, without a redeploy.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/hyperprobe.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "HyperProbe is an incident/on-call analysis agent producing root-cause findings, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-63518942b42ac822-hyperprobe-co",
+    "base": "https://images.hlido.eu/reviews/hyperprobe/run-63518942b42ac822-hyperprobe-co",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/hyperprobe/run-63518942b42ac822-hyperprobe-co/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing page present in navigation; Try Now and Book a Demo access paths",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
