@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "ozgurcd-gograph",
+  "name": "gograph",
+  "agent_url": "https://gograph.identuum.ai",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-ozgurcd-gograph-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Compiler-aware repository context for Go coding agents — a local structural graph with optional type-checked enrichment, and a genuinely unusual commitment to publishing its own benchmark ground truth.",
+    "body": "gograph builds a local structural graph of a Go repository — callers, interface implementations, change-impact, architecture enforcement — usable from the CLI or as an MCP server, with no embeddings and no hosted code index. Its differentiator is being compiler-aware: an optional type-checked CHA/SSA enrichment (`build . --precise`) means it can resolve interface implementations and call paths with more precision than a pure-AST tool, while still tolerating incomplete packages for a fast first pass. The commands are practical and honest about their limits — `stats` verifies build health and analysis precision, `flow --no-tests` surfaces potential production source-to-sink paths — and the docs point you at running `--precise` before a major refactor. What genuinely sets this apart from the crowded code-context field is the Evidence view: gograph publishes a separate page preserving 'the precise benchmark, declared ground truth, exact commands, and complete raw output', and compares its results against plain ripgrep on three structural examples. Publishing your ground truth and raw output, and inviting a comparison against a baseline, is the opposite of the vendor-benchmark hand-wave — it is exactly the honesty a rating service rewards. The ceiling on the score is scope: it is Go-only by design, which is the right call for precision but narrows the audience, and it is a young single-language tool without a broad adoption signal on the surface. Within its lane, though, this is one of the more rigorously presented code-intelligence tools in the batch.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because gograph is compiler-aware (type-checked CHA/SSA), agent-native via CLI and MCP, and — rare and creditable — publishes its own benchmark ground truth, exact commands and raw output against a ripgrep baseline rather than asserting results. It is held at 80 rather than higher because it is deliberately Go-only, which narrows its audience, and it is a young tool without a broad public adoption signal.",
+  "what_it_does_well": [
+    "Compiler-aware: optional type-checked CHA/SSA enrichment resolves callers and interface implementations with real precision",
+    "Runs locally with no embeddings and no hosted code index — context stays on your machine",
+    "Publishes an Evidence view with declared ground truth, exact commands and complete raw output",
+    "Compares its output against a ripgrep baseline on concrete structural examples — an honest, falsifiable claim",
+    "Tolerates incomplete packages for a fast first pass, with `--precise` for pre-refactor rigor",
+    "Usable from the CLI or as an MCP server for coding agents",
+    "Documents its own methodology and limitations openly"
+  ],
+  "what_it_fails_at": [
+    "Go-only by design — no value for polyglot or non-Go codebases",
+    "Young, single-language tool without a broad public adoption or star signal on the surface",
+    "Precision depends on a compilable repository; the fast AST pass is necessarily less exact",
+    "No pricing/commercial-support story surfaced — reads as a developer tool you self-run",
+    "Benchmarks, while unusually transparent, are still authored by the project itself"
+  ],
+  "best_for": [
+    "Go teams whose coding agent needs precise, compiler-aware structural context",
+    "Engineers planning a major Go refactor who want call-graph and change-impact analysis",
+    "Developers who value a tool that publishes its benchmark ground truth and raw output"
+  ],
+  "not_recommended_for": [
+    "Polyglot codebases or any project not primarily in Go",
+    "Teams needing a commercially supported product with SLAs",
+    "Workflows that need embeddings-based semantic search rather than structural analysis"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena is a multi-language semantic code toolkit built on LSP; gograph is Go-specific but compiler-aware with type-checked enrichment and published benchmark evidence. Serena for breadth across languages, gograph for Go-specific precision and transparent methodology.",
+      "preferred_for_axis": "go-compiler-aware-precision"
+    },
+    {
+      "slug": "sourcegraph-cody",
+      "verdict_diff": "Cody is a broad code-search-and-assistant product across languages and repos; gograph is a narrow, local, Go-only structural-graph tool for agents. Cody for general breadth, gograph for compiler-grade Go structure with no hosted index.",
+      "preferred_for_axis": "local-structural-vs-hosted-assistant"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Builds a local structural graph of a Go repo with optional type-checked CHA/SSA enrichment, via CLI or MCP",
+      "source": "https://gograph.identuum.ai ('gograph builds a local structural graph of a Go repository, with optional type-checked CHA/SSA enrichment ... through CLI or MCP without embeddings or a hosted code index')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Publishes an Evidence view with declared ground truth, exact commands and complete raw output",
+      "source": "https://gograph.identuum.ai ('The separate evidence view preserves the precise benchmark, declared ground truth, exact commands, and complete raw output')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Compares gograph output against ripgrep on structural examples",
+      "source": "https://gograph.identuum.ai ('Compare actual gograph and rg output through three clear structural examples')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Recommends `build . --precise` before a major refactor and tolerates incomplete packages on a fast pass",
+      "source": "https://gograph.identuum.ai ('gograph build .  # fast AST graph; tolerates incomplete packages'; 'run gograph build . --precise before a major refactor')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Usable as an MCP server or CLI. A Go coding agent calls gograph to build the structural graph and then query callers, interface implementations, hotspots, change-impact and source-to-sink flows — with type-checked precision when the repo compiles. No embeddings or hosted index; everything runs locally. The published command set maps cleanly to agent tool calls.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Compiler-aware repository context for Go coding agents",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Try Demo / Get Started",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Local tool, no hosted index; try-demo and get-started paths with GitHub source",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Guided demo workspace, separate Evidence view with ground truth and raw output, worked command examples",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "Compiler-aware repository context for Go coding agents — a local structural graph with optional type-checked enrichment, and a genuinely unusual commitment to publishing its own benchmark ground truth.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/ozgurcd-gograph.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "gograph produces structural code-analysis output, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-ac1b02cba78739c5-gograph-identuum-ai",
+    "base": "https://images.hlido.eu/reviews/ozgurcd-gograph/run-ac1b02cba78739c5-gograph-identuum-ai",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_demo_.png",
+      "page_docs_getting-started_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/ozgurcd-gograph/run-ac1b02cba78739c5-gograph-identuum-ai/home.png",
+      "https://images.hlido.eu/reviews/ozgurcd-gograph/run-ac1b02cba78739c5-gograph-identuum-ai/page_.png",
+      "https://images.hlido.eu/reviews/ozgurcd-gograph/run-ac1b02cba78739c5-gograph-identuum-ai/page_demo_.png",
+      "https://images.hlido.eu/reviews/ozgurcd-gograph/run-ac1b02cba78739c5-gograph-identuum-ai/page_docs_getting-started_.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Local tool, no hosted index; try-demo and get-started paths with GitHub source",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
