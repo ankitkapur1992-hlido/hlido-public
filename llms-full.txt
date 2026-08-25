@@ -5,9 +5,144 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 941 reviews
+> Corpus size: 950 reviews
 
 ## Reviewed agents
+
+### Supabase MCP Server
+- Slug: `supabase-community-supabase-mcp`
+- Laddoo Score: 85/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/supabase-community-supabase-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"supabase-community-supabase-mcp"}}}`
+
+**Summary:** The official, hosted MCP bridge to a Supabase project — well-documented, scopable to read-only, and honest enough to open with the security risk rather than bury it.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### agent-device
+- Slug: `callstackincubator-agent-device`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/callstackincubator-agent-device/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"callstackincubator-agent-device"}}}`
+
+**Summary:** Playwright's snapshot-and-act model, ported to native mobile and TV — a token-efficient device-automation CLI built specifically for agents, from a team that knows the mobile tooling space.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### codebase-memory-mcp
+- Slug: `deusdata-codebase-memory-mcp`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/deusdata-codebase-memory-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"deusdata-codebase-memory-mcp"}}}`
+
+**Summary:** A structural-analysis backend for coding agents — indexes a repo into a persistent knowledge graph so the agent answers structural questions with far fewer tokens, and it is honest that it holds no LLM of its own.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### agentmako
+- Slug: `drhalto-agentmako`
+- Laddoo Score: 74/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/drhalto-agentmako/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"drhalto-agentmako"}}}`
+
+**Summary:** A local-first MCP server that gives coding agents a live, queryable map of your repo — a broad typed-tool surface and a durable 'findings' layer, from a small but Apache-licensed project.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### gograph
+- Slug: `ozgurcd-gograph`
+- Laddoo Score: 80/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/ozgurcd-gograph/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"ozgurcd-gograph"}}}`
+
+**Summary:** Compiler-aware repository context for Go coding agents — a local structural graph with optional type-checked enrichment, and a genuinely unusual commitment to publishing its own benchmark ground truth.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### HyperProbe
+- Slug: `hyperprobe`
+- Laddoo Score: 71/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/hyperprobe/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"hyperprobe"}}}`
+
+**Summary:** A YC-backed AI on-call agent with a genuinely differentiated mechanism — it has your coding agent drop a read-only probe on the exact prod line that failed, capturing evidence your logs never had, without a redeploy.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### klaw
+- Slug: `klaw`
+- Laddoo Score: 64/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/klaw/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"klaw"}}}`
+
+**Summary:** A 'kubectl for AI agents' with a clean single-binary, Slack-and-CLI orchestration story — undercut by an enterprise logo wall (Apple, Amazon, VMware) that a public-beta product has no business displaying unverified.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Statewright
+- Slug: `statewright-statewright`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/statewright-statewright/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"statewright-statewright"}}}`
+
+**Summary:** Protocol-level guardrails for coding agents — turns a large task into bounded workflow phases with per-phase tool policy and model routing, so a destructive tool literally does not exist in a read-only state.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Codex CLI
+- Slug: `openai-codex`
+- Laddoo Score: 85/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-25
+- URL: https://hlido.eu/reviews/openai-codex/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"openai-codex"}}}`
+
+**Summary:** Codex CLI 0.149.1 — OpenAI’s terminal coding agent. CLI surface live-tested from a cold npm install: strong command breadth, sandbox subcommand, trusted-directory guard, excellent doctor — but non-interactive exec hangs silently without credentials instead of failing fast (verified). Agentic loop requires paid auth (untested); medium confidence.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### Clara
 - Slug: `clarasdr`
