@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "statewright-statewright",
+  "name": "Statewright",
+  "agent_url": "https://statewright.com",
+  "category": "Workflow & Automation",
+  "run_id": "run-r-publish-v2-statewright-statewright-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Protocol-level guardrails for coding agents — turns a large task into bounded workflow phases with per-phase tool policy and model routing, so a destructive tool literally does not exist in a read-only state.",
+    "body": "Statewright's thesis is that structure beats reasoning: rather than trusting a prompt to keep an agent in line, it decomposes a large agent task into bounded workflow phases, each carrying its own model, reasoning level, tool policy and budget, and enforces the boundaries at the protocol level. The sharpest expression of this is tool enforcement per phase — 'destructive tools don't exist in read-only states; the agent can't call what it can't see' — which is a materially stronger safety posture than the usual prompt-level 'please don't delete anything'. Around that sit decision checkpoints that force progress or fail (no idle looping), read-deduplication, edit guards against scope explosion, and — in the 0.3.0 plugin — native autonomous model routing that switches Claude or Codex between tiers at phase boundaries while the developer stays in the TUI they already use. The workflow itself is built visually (drag states, draw transitions, assign tools per phase), and it integrates with Codex, Claude Code, opencode and Cursor. This is a genuinely good idea addressing a real failure mode — agents that loop, over-read, or reach for tools they should not — and the enforcement-not-suggestion framing is the right one. It sits in the lower-middle of STEADY because it is early (a 0.3.0 plugin), the reliability of the enforcement across real long-running tasks is asserted rather than evidenced on the surface, and pricing sits behind a sign-up ('Start Free' with no published tiers). The concept is strong; the proof and the commercial detail are still thin.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73), lower-middle, because Statewright targets a real agent failure mode (looping, scope creep, unsafe tool use) with a materially stronger answer than prompting — protocol-level per-phase tool enforcement — plus model routing and a visual builder across major agent clients. It is held down because it is early (0.3.0), the enforcement's reliability on real long tasks is asserted rather than demonstrated, and pricing is behind sign-up with no published tiers.",
+  "what_it_does_well": [
+    "Protocol-level tool enforcement: destructive tools are absent from read-only phases, not merely discouraged by a prompt",
+    "Bounds a large task into phases each with its own model, reasoning level, tool policy and budget",
+    "Decision checkpoints force progress or fail, curbing idle looping",
+    "Read-deduplication and edit guards curb repeated reads and scope explosion",
+    "Native autonomous model routing (0.3.0) switches Claude/Codex tiers at phase boundaries inside the existing TUI",
+    "Visual workflow editor to design states, transitions and per-phase tool policy",
+    "Integrates with Codex, Claude Code, opencode and Cursor"
+  ],
+  "what_it_fails_at": [
+    "Early-stage (0.3.0 plugin); the model and its guarantees are still moving",
+    "Enforcement reliability across real long-running tasks is asserted, not evidenced on the surface",
+    "Pricing is behind 'Start Free' sign-up with no published tiers",
+    "Designing good workflows is itself work — the safety depends on the human modelling phases well",
+    "No named production adopters or case studies as evidence"
+  ],
+  "best_for": [
+    "Teams running autonomous coding agents who need hard, protocol-level limits on destructive actions",
+    "Developers who want per-phase model routing to spend frontier reasoning only where it earns its keep",
+    "Anyone burned by agents that loop, over-read, or exceed their intended scope"
+  ],
+  "not_recommended_for": [
+    "Users wanting a zero-configuration agent — Statewright requires modelling the workflow",
+    "Buyers who need published pricing and proven long-task reliability before adopting",
+    "Simple single-step tasks where phase decomposition is overhead"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "block-goose",
+      "verdict_diff": "Goose is an open, extensible agent that executes tasks; Statewright is a control layer that constrains an agent (including ones like these) into enforced phases. Goose to do the work, Statewright to bound how an agent is allowed to do it.",
+      "preferred_for_axis": "enforced-workflow-control"
+    },
+    {
+      "slug": "langchain-langgraph-supervisor",
+      "verdict_diff": "LangGraph Supervisor orchestrates multi-agent flows in code; Statewright enforces phase boundaries and tool policy for a single coding agent with a visual builder and a TUI. LangGraph for programmatic multi-agent orchestration, Statewright for protocol-level guardrails on an interactive coding agent.",
+      "preferred_for_axis": "guardrails-vs-orchestration"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Turns a large agent task into bounded workflow phases with per-phase model, reasoning level, tool policy and budget",
+      "source": "https://statewright.com ('Statewright turns a large agent task into bounded workflow phases. Each phase carries the right model, reasoning level, tool policy, and budget')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Tool enforcement is protocol-level: destructive tools do not exist in read-only states",
+      "source": "https://statewright.com ('Destructive tools don't exist in read-only states. The agent can't call what it can't see. Protocol-level enforcement, not prompt suggestions.')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "0.3.0 adds native autonomous model routing for Claude and Codex at workflow boundaries",
+      "source": "https://statewright.com ('Native autonomous model routing is here for Claude and Codex'; 'Claude and Codex switch at workflow boundaries while you stay in the TUI')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Pricing is behind sign-up with no published tiers on the surface",
+      "source": "https://statewright.com ('Start Free' CTA; nav shows 'Log in / Sign up' with no pricing figures)",
+      "tested_at": "2026-08-25",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Statewright is a control layer for coding agents rather than an agent itself. It installs as a plugin/CLI (e.g. `npx statewright-codex@latest init`) into Codex, Claude Code, opencode or Cursor, then enforces the phase workflow — tool policy, model tier, budget — as the host agent runs. The integration path is agent-facing by design; it constrains an agent rather than exposing tools to one.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Autonomous runs. Deliberate boundaries. — bounded, enforced workflow phases for AI coding agents",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Start Free / View on GitHub",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "'Start Free' with no published pricing tiers on the surface",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Three-step workflow walkthrough, visual editor, per-client init commands (Codex/Claude Code/opencode/Cursor)",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "Protocol-level guardrails for coding agents — turns a large task into bounded workflow phases with per-phase tool policy and model routing, so a destructive tool literally does not exist in a read-only state.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/statewright-statewright.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "Statewright is a workflow-control layer that constrains coding agents; it does not itself produce synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-3f6c85effd018606-statewright-ai",
+    "base": "https://images.hlido.eu/reviews/statewright-statewright/run-3f6c85effd018606-statewright-ai",
+    "files": [
+      "home.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/statewright-statewright/run-3f6c85effd018606-statewright-ai/home.png",
+      "https://images.hlido.eu/reviews/statewright-statewright/run-3f6c85effd018606-statewright-ai/page_.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "'Start Free' with no published pricing tiers on the surface",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
