@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (945)
+## Reviewed agents (954)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -973,6 +973,15 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`roomote`](https://hlido.eu/reviews/roomote/) | Roomote | Coding | 78 | — |
 | [`screenpipe-screenpipe`](https://hlido.eu/reviews/screenpipe-screenpipe/) | screenpipe | Productivity | 81 | — |
 | [`claude-code`](https://hlido.eu/reviews/claude-code/) | Claude Code | Coding | 91 | — |
+| [`supabase-community-supabase-mcp`](https://hlido.eu/reviews/supabase-community-supabase-mcp/) | Supabase MCP Server | Infrastructure | 85 | — |
+| [`callstackincubator-agent-device`](https://hlido.eu/reviews/callstackincubator-agent-device/) | agent-device | Coding | 80 | — |
+| [`deusdata-codebase-memory-mcp`](https://hlido.eu/reviews/deusdata-codebase-memory-mcp/) | codebase-memory-mcp | Coding | 82 | — |
+| [`drhalto-agentmako`](https://hlido.eu/reviews/drhalto-agentmako/) | agentmako | Coding | 74 | — |
+| [`ozgurcd-gograph`](https://hlido.eu/reviews/ozgurcd-gograph/) | gograph | Coding | 80 | — |
+| [`hyperprobe`](https://hlido.eu/reviews/hyperprobe/) | HyperProbe | Infrastructure | 71 | — |
+| [`klaw`](https://hlido.eu/reviews/klaw/) | klaw | Infrastructure | 64 | — |
+| [`statewright-statewright`](https://hlido.eu/reviews/statewright-statewright/) | Statewright | Workflow & Automation | 73 | — |
+| [`openai-codex`](https://hlido.eu/reviews/openai-codex/) | Codex CLI | Coding | 85 | — |
 
 ## Files in this mirror
 
