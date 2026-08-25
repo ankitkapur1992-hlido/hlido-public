@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0",
+  "slug": "supabase-community-supabase-mcp",
+  "name": "Supabase MCP Server",
+  "agent_url": "https://supabase.com/mcp",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-supabase-community-supabase-mcp-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "The official, hosted MCP bridge to a Supabase project — well-documented, scopable to read-only, and honest enough to open with the security risk rather than bury it.",
+    "body": "The Supabase MCP server does one job and documents it properly: it connects an MCP client — Claude Code, Cursor, and the rest — to a Supabase project so an agent can query and manage it on your behalf. What separates this from the long tail of database MCP servers is that it is first-party, hosted as a remote MCP endpoint at mcp.supabase.com, and shipped with the kind of controls a database connection actually needs. You scope the server to a single project or expose all of them; you toggle read-only; you pick which feature groups (docs, account, database, debugging, development, functions, branching) the agent can touch, and those choices are encoded directly in the server URL. The install path is concrete and copy-pasteable per client, and authentication runs through a real browser login flow rather than a pasted service key. The single most creditable thing on the surface is editorial: the docs lead with 'connecting an LLM to your Supabase projects carries security risks. Read our security best practices before running the MCP server' before they tell you how to install it. For a tool whose whole function is handing an autonomous model access to a production database, putting the warning first is the correct order and most vendors get it backwards. It loses points only where every hosted MCP server does: the blast radius of a mis-scoped or prompt-injected agent against a live database is real, and the read-only default is opt-in rather than the floor. But as an agent integration surface this is close to the reference implementation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85), near the top of the band, because this is a first-party, well-documented, hosted MCP server with genuine scoping controls (per-project, read-only, feature groups) and a security posture that leads with the risk. It is held just short of VITAL because the powerful defaults skew open — read-only and project-scoping are choices the operator must make, not the safe floor — and because a database MCP's failure mode under prompt injection remains severe by construction. It moves toward VITAL if read-only becomes the default and per-tool audit logging is surfaced on the public docs.",
+  "what_it_does_well": [
+    "First-party, official Supabase server — not a community re-wrap of the database protocol",
+    "Hosted as a remote MCP endpoint, so there is no local server process to run or maintain",
+    "Scopable to a single project or all projects, with an explicit read-only toggle",
+    "Feature groups (docs, account, database, debugging, functions, branching) let you narrow the tool surface the agent sees",
+    "Config choices are encoded in the server URL, making the granted scope auditable at a glance",
+    "Documentation leads with the security warning and links best practices before install steps",
+    "Authentication runs through a browser login flow rather than a pasted long-lived key"
+  ],
+  "what_it_fails_at": [
+    "Read-only is opt-in rather than the default, so the unsafe configuration is one omission away",
+    "No pricing surfaced on the MCP docs page itself — access is tied to a Supabase account whose plan governs it",
+    "Public docs do not surface per-tool audit logging or an activity trail for what the agent did",
+    "The security burden is placed on the operator ('read our best practices') rather than enforced by conservative defaults",
+    "Like all database MCP servers, a prompt-injected agent with write scope can do real damage to live data"
+  ],
+  "best_for": [
+    "Teams already on Supabase who want their coding agent to query and manage projects through a maintained, official server",
+    "Developers who want a hosted MCP endpoint with no local process to run",
+    "Anyone who needs per-project and read-only scoping baked into the connection"
+  ],
+  "not_recommended_for": [
+    "Users not on Supabase — the server is bound to the Supabase platform",
+    "Environments that require write access to production data to be off by hard policy rather than a toggle",
+    "Buyers needing published per-seat pricing on the MCP surface before adopting"
+  ],
+  "red_flags": [
+    "Read-only mode and project scoping are operator opt-ins, not enforced defaults — the most dangerous configuration is the one you get by not choosing"
+  ],
+  "compared_to": [
+    {
+      "slug": "neo4j-contrib-mcp-neo4j",
+      "verdict_diff": "Both are database MCP servers, but Neo4j's is graph-native and community-maintained while Supabase's is first-party and hosted with URL-encoded scoping. Supabase for a managed Postgres stack with official support; Neo4j's for graph workloads.",
+      "preferred_for_axis": "first-party-hosted-scoping"
+    },
+    {
+      "slug": "googleapis-genai-toolbox",
+      "verdict_diff": "Google's GenAI Toolbox is a general database-tooling server you host yourself across many engines; the Supabase server is a single-vendor hosted endpoint. Toolbox for multi-database, self-hosted control; Supabase for a zero-maintenance official bridge to one platform.",
+      "preferred_for_axis": "managed-single-vendor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Official remote MCP server hosted at mcp.supabase.com connecting AI tools to Supabase projects",
+      "source": "https://supabase.com/mcp ('Connect your AI tools to Supabase using MCP'; server URL https://mcp.supabase.com/mcp)",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Server is scopable to a project, supports a read-only option, and exposes feature groups",
+      "source": "https://supabase.com/mcp ('Scope the MCP server to a project'; 'Options: Read-only'; feature groups docs/account/database/debugging/development/functions/branching)",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Documentation leads with a security warning before install instructions",
+      "source": "https://supabase.com/mcp ('Connecting an LLM to your Supabase projects carries security risks. Read our security best practices before running the MCP server.')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Authentication runs through a browser login flow rather than a pasted key",
+      "source": "https://supabase.com/mcp ('Either method opens a browser window where you log in to your Supabase account')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "This is itself an MCP server — the integration surface is the point. An agent connects via the hosted endpoint at mcp.supabase.com with scope and feature groups encoded in the URL, authenticates through a browser flow, and then queries or manages the Supabase project through MCP tools. Install is a single `claude mcp add` command or an .mcp.json block. Directly and natively agent-consumable.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Connect your AI tools to Supabase using MCP",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Remote MCP installation with per-client instructions",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No price on the MCP docs page; access is governed by the linked Supabase account plan",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Copy-pasteable install commands and .mcp.json config for multiple MCP clients; live server URL",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "The official, hosted MCP bridge to a Supabase project — well-documented, scopable to read-only, and honest enough to open with the security risk rather than bury it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/supabase-community-supabase-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "The Supabase MCP server is a data-access bridge, not a generative-content producer. Article-50 synthetic-content marking obligations do not apply to it. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-c72e9219be1ca836-supabase-com",
+    "base": "https://images.hlido.eu/reviews/supabase-community-supabase-mcp/run-c72e9219be1ca836-supabase-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/supabase-community-supabase-mcp/run-c72e9219be1ca836-supabase-com/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No price on the MCP docs page; access is governed by the linked Supabase account plan",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
