@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "slug": "klaw",
+  "name": "klaw",
+  "agent_url": "https://klaw.sh",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-klaw-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A 'kubectl for AI agents' with a clean single-binary, Slack-and-CLI orchestration story — undercut by an enterprise logo wall (Apple, Amazon, VMware) that a public-beta product has no business displaying unverified.",
+    "body": "klaw wants to be the operational control plane for a fleet of AI agents: enterprise orchestration to manage, monitor and scale an 'AI workforce', with a deliberately familiar kubectl-style CLI (get, describe, logs, apply), Slack control ('@klaw status'), and a single ~20MB binary with no Python, no Docker and no dependencies. The product ideas are sound and the ergonomics are genuinely attractive — if you know kubectl you know klaw, namespaces give logical isolation for teams and secrets, Podman handles filesystem sandboxing, and it routes across 300+ models. For teams already thinking about agents as production workloads, that framing lands. But the surface carries a serious credibility problem that a rating service cannot look past: under 'TRUSTED BY TEAMS AT' it displays VMware, Red Hat, Apple, Twilio, Shopify, GitLab, PayPal, Amazon, Square and more — a wall of the most recognisable enterprise logos in tech — while the hero simultaneously labels the product 'Now in public beta.' A public-beta tool claiming trust from Apple and Amazon, with no case study, named contact, or usage evidence to substantiate it, reads as aspirational-logo-wall marketing, and that gap between claim and evidence is exactly the pattern Hlido exists to flag. The engineering story (single binary, kubectl parity, sandboxing) is credible and appealing; the trust signalling is not, and until the logo wall is substantiated or removed it drags the whole surface's believability down with it. Strong concept, honest 'public beta' label, and a trust claim it cannot yet back.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) because klaw pairs a genuinely appealing engineering story — single ~20MB dependency-free binary, kubectl-parity CLI, Slack control, namespace isolation, multi-model routing — with an enterprise 'TRUSTED BY' logo wall (Apple, Amazon, VMware, PayPal and more) on a product it simultaneously labels 'public beta', with no case study or evidence to substantiate it. The unsubstantiated trust claim is a material credibility deduction. It moves into STEADY the moment those logos are backed by named references or removed.",
+  "what_it_does_well": [
+    "Familiar kubectl-style CLI (get, describe, logs, apply) — near-zero learning curve for anyone who knows Kubernetes",
+    "Single ~20MB binary with no Python, no Docker and no dependencies — genuinely low install friction",
+    "Slack control ('@klaw status', '@klaw run agent') meets teams where they already work",
+    "Namespaces for logical isolation of teams and secrets, with Podman for filesystem sandboxing",
+    "Routes across 300+ models via a router or direct provider access",
+    "Positions agents as production workloads with visibility (get/logs/describe) — the right operational framing"
+  ],
+  "what_it_fails_at": [
+    "Displays an enterprise 'TRUSTED BY' logo wall (Apple, Amazon, VMware, PayPal, Shopify, GitLab and more) with no case study, named reference, or usage evidence",
+    "Claims that trust while simultaneously labelling itself 'Now in public beta' — the two do not sit together honestly",
+    "No pricing surfaced on the reviewed page",
+    "Young, early-stage product; continuity and support model not evidenced",
+    "The operational depth (scheduling, monitoring at scale) is described but not demonstrated with real deployments"
+  ],
+  "best_for": [
+    "Teams comfortable with kubectl who want the same operational model for a fleet of AI agents",
+    "Ops-minded engineers who value a single dependency-free binary and Slack/CLI control",
+    "Early adopters willing to trial a public-beta orchestration tool and judge it on their own workloads"
+  ],
+  "not_recommended_for": [
+    "Buyers who weigh vendor trust signals heavily — the logo wall is unsubstantiated and should not be relied on",
+    "Production-critical deployments needing proven scale and a published support/continuity model",
+    "Anyone needing published pricing before evaluating"
+  ],
+  "red_flags": [
+    "'TRUSTED BY TEAMS AT' wall of major enterprise logos (VMware, Red Hat, Apple, Twilio, Shopify, GitLab, PayPal, Amazon, Square) shown on a self-described 'public beta' product with no case study, named reference or usage evidence to substantiate the claim"
+  ],
+  "compared_to": [
+    {
+      "slug": "googleapis-genai-toolbox",
+      "verdict_diff": "Google's GenAI Toolbox is a maintained, first-party tooling server for agents; klaw is an early public-beta orchestration CLI with a strong ergonomics story but an unsubstantiated trust wall. Toolbox for first-party credibility, klaw for the kubectl-style operational model if you can look past the marketing.",
+      "preferred_for_axis": "operational-control-plane"
+    },
+    {
+      "slug": "block-goose",
+      "verdict_diff": "Goose is an open, extensible agent you run and inspect; klaw is a closed orchestration layer for managing many agents as workloads. Goose for transparency and a single agent, klaw for the fleet-management framing — pending the evidence to back its enterprise claims.",
+      "preferred_for_axis": "fleet-orchestration"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Enterprise AI agent orchestration with a kubectl-style CLI, Slack control and a single dependency-free binary",
+      "source": "https://klaw.sh ('kubectl for AI Agents'; 'One binary. Deploys in seconds. Control from Slack or CLI'; 'One ~20MB binary. No Python, no Docker, no dependencies.')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Product is self-described as in public beta",
+      "source": "https://klaw.sh ('Now in public beta')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Displays a 'TRUSTED BY TEAMS AT' wall of major enterprise logos without substantiating evidence",
+      "source": "https://klaw.sh ('TRUSTED BY TEAMS AT — VMware, Red Hat, Apple, Twilio, Shopify, Payrails, GitLab, PayPal, Browserbase, Square, Amazon') — no case study or named reference on the surface",
+      "tested_at": "2026-08-25",
+      "verified": false
+    },
+    {
+      "claim": "Namespaces for isolation, Podman sandboxing, and routing across 300+ models",
+      "source": "https://klaw.sh ('Namespaces — Logical isolation for teams and secrets. Use Podman containers for filesystem sandboxing.'; '300+ LLM Models ... via each::labs Router or direct provider access')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "klaw is an orchestration layer that manages agents as workloads via a kubectl-style CLI and Slack commands, with a REST surface implied by its control model. It runs and supervises agents rather than exposing itself as a tool an external agent consumes; the integration path is operational (deploy and control your agents through klaw) rather than an MCP/tool surface for another agent to drive.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "kubectl for AI Agents — enterprise AI agent orchestration: manage, monitor, and scale your AI workforce",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "curl -fsSL https://klaw.sh/install.sh | sh / View on GitHub",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing surfaced on the reviewed page; install-and-star access only",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Feature descriptions and install command present, but the 'trusted by' enterprise logos carry no case study or named reference to substantiate them",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "A 'kubectl for AI agents' with a clean single-binary, Slack-and-CLI orchestration story — undercut by an enterprise logo wall (Apple, Amazon, VMware) that a public-beta product has no business displaying unverified.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/klaw.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "klaw orchestrates and controls AI agents as workloads; it is not itself a producer of synthetic media for publication. Article-50 marking obligations do not apply to the orchestration layer. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-bd913e368ce12102-klaw-sh",
+    "base": "https://images.hlido.eu/reviews/klaw/run-bd913e368ce12102-klaw-sh",
+    "files": [
+      "home.png",
+      "page_docs_.png",
+      "page_docs.png",
+      "page_docs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/klaw/run-bd913e368ce12102-klaw-sh/home.png",
+      "https://images.hlido.eu/reviews/klaw/run-bd913e368ce12102-klaw-sh/page_docs_.png",
+      "https://images.hlido.eu/reviews/klaw/run-bd913e368ce12102-klaw-sh/page_docs.png",
+      "https://images.hlido.eu/reviews/klaw/run-bd913e368ce12102-klaw-sh/page_docs.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing surfaced on the reviewed page; install-and-star access only",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
