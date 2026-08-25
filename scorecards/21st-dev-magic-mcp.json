@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "slug": "21st-dev-magic-mcp",
+  "name": "21st Magic MCP",
+  "agent_url": "https://21st.dev/mcp",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-21st-dev-magic-mcp-2026-08-25",
+  "run_at": "2026-08-25T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A UI-component catalog turned into an agent-native surface — search, install, generate, audit and publish React components from the terminal or any MCP client, with the skills model doing the heavy lifting.",
+    "body": "21st Magic MCP is the agent-facing half of 21st.dev, a community catalog of React/UI components. Instead of a human browsing a gallery, the CLI and MCP server let a coding agent do the whole loop: search the catalog and read the real component code, install a component with its dependencies, sketch UI variants from a prompt, audit an existing page for accessibility and responsive issues and fix them, and publish your own components or themes back. The design decision worth noting is the 'skills' model — each job (find-and-install, generate, audit, publish) is a discrete skill the CLI loads on demand, and every action ships with a copy-as-prompt button that hands your agent the exact instruction, which is a genuinely thoughtful way to bridge human intent and agent execution. It works across Claude, Codex, Cursor and Lovable, with a global npm install and a browser login that saves a local token, plus an API-key path for CI. The honesty is decent: free search, two component installs a day on the free tier, and generation explicitly 'uses AI credits' rather than pretending to be unlimited. What holds it back from a higher score is that the surface is a capabilities tour more than a proof — the pricing is gated behind a sign-in click rather than laid out, and the quality of generated UI (the part buyers most want to trust) is asserted, not demonstrated with before/after evidence on the public page. For a coding agent that already lives in React, though, this is a well-shaped tool that meets the agent where it works.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-25",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) because this is a mature, genuinely agent-native product — MCP server plus CLI, multi-client, with a well-thought-out skills-and-copy-prompt model and an honest free-tier limit stated up front. It is held below the mid-80s because the public surface demonstrates breadth of commands rather than evidence of output quality, and pricing is behind a sign-in rather than published. It rises with a public before/after of generated UI and a visible pricing table.",
+  "what_it_does_well": [
+    "Genuinely agent-native: the same catalog is drivable from CLI or any MCP client, not a human-only gallery with an API bolted on",
+    "The skills model breaks work into discrete, on-demand jobs (search, install, generate, audit, publish) rather than one monolithic tool",
+    "Every action ships a copy-as-prompt button that hands the agent the exact instruction",
+    "Search reads the real component code and installs with dependencies, not just a snippet paste",
+    "Works across Claude, Codex, Cursor and Lovable with one global install",
+    "Free-tier limits are stated plainly ('Search free · 2 installs a day', generation 'uses AI credits')",
+    "Two-way: you can publish your own components and themes back to the catalog"
+  ],
+  "what_it_fails_at": [
+    "Pricing is gated behind a sign-in click rather than published on the surface",
+    "Generated-UI quality — the thing buyers most want to trust — is asserted, not shown with public before/after evidence",
+    "Value is tied to React/component workflows; teams outside that stack get little",
+    "The free install cap (2/day) is low enough to force an upgrade decision quickly",
+    "No named customers or usage evidence on the reviewed surface"
+  ],
+  "best_for": [
+    "React and Next.js teams whose coding agent should search, install and generate UI components without leaving the terminal",
+    "Agent builders who want a component-library skill that works across Claude, Cursor and Codex",
+    "Designers and developers who want to publish reusable components or themes for a team"
+  ],
+  "not_recommended_for": [
+    "Teams outside the React/component ecosystem",
+    "Buyers who need published pricing before evaluating",
+    "Anyone who needs demonstrated output quality — not just a capability list — before trusting generated UI in production"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is a full editor-based coding agent; 21st Magic is a focused UI-component layer that plugs into Cursor (and others) via MCP. They are complements more than rivals — Cursor for the whole coding loop, 21st for the component catalog inside it.",
+      "preferred_for_axis": "ui-component-specialization"
+    },
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is a general terminal coding agent; 21st Magic is a skill it can load to gain a component catalog and UI generation. Claude Code for general work; 21st as the UI-specialized tool surface it consumes.",
+      "preferred_for_axis": "specialized-tool-vs-general-agent"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP server and CLI let an agent search, install, generate, audit and publish UI components",
+      "source": "https://21st.dev/mcp ('Search the catalog, install components, generate UI and publish your own work — from the terminal or any MCP client')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Works across multiple agent clients via one global install and a login token",
+      "source": "https://21st.dev/mcp ('CLI / Claude / Codex / Cursor / Lovable'; 'npm i -g @21st-dev/cli'; 'login opens the browser and saves a token locally')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Free tier allows search plus two installs a day; generation consumes AI credits",
+      "source": "https://21st.dev/mcp ('Search free · 2 installs a day'; 'Sketch UI with 21st AI ... Uses AI credits')",
+      "tested_at": "2026-08-25",
+      "verified": true
+    },
+    {
+      "claim": "Detailed pricing is behind a sign-in rather than published on the surface",
+      "source": "https://21st.dev/mcp (nav shows 'Pricing' and 'Sign in'; no figures on the reviewed page)",
+      "tested_at": "2026-08-25",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server plus a CLI designed for agents. A coding agent installs the CLI globally, authenticates once, then loads discrete skills (search, install, generate, audit, publish) — each with a copy-as-prompt handoff. Works from any MCP client (Claude, Codex, Cursor, Lovable) and supports an API key for CI. The whole product is built to be driven by an agent, not a human.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Use 21st in your agent — search the catalog, install components, generate UI and publish your own work",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get started / npm i -g @21st-dev/cli",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Free tier limits stated (search free, 2 installs/day, generation uses AI credits) but full pricing is behind sign-in",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Concrete CLI commands per job and copy-as-prompt buttons; multi-client install docs",
+      "tested_at": "2026-08-25T09:00:00.000Z"
+    }
+  ],
+  "summary": "A UI-component catalog turned into an agent-native surface — search, install, generate, audit and publish React components from the terminal or any MCP client, with the skills model doing the heavy lifting.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-23",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-23",
+  "attestation_url": "/data/attestations/21st-dev-magic-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-25",
+    "source": "r-publish-editorial-enrich",
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "note": "21st Magic generates UI code/components (generative output). No marking, provenance or content-credential statement for AI-generated output appears on the public surface, and no detection tool is linked. Recorded as unevidenced."
+  },
+  "evidence_images": {
+    "run_id": "run-46d4cef92965f525-21st-dev",
+    "base": "https://images.hlido.eu/reviews/21st-dev-magic-mcp/run-46d4cef92965f525-21st-dev",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/21st-dev-magic-mcp/run-46d4cef92965f525-21st-dev/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Free tier limits stated (search free, 2 installs/day, generation uses AI credits) but full pricing is behind sign-in",
+      "tested_at": "2026-08-25"
+    },
+    "last_verified": "2026-08-25",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-25"
+  }
+}
