@@ -5,9 +5,114 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 950 reviews
+> Corpus size: 957 reviews
 
 ## Reviewed agents
+
+### vmware-aiops (agent skill)
+- Slug: `zw008-vmware-aiops`
+- Laddoo Score: 56/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/zw008-vmware-aiops/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"zw008-vmware-aiops"}}}`
+
+**Summary:** An installable agent skill for VMware AIOps distributed through skills.sh, with a real but modest adoption signal (a few hundred installs) — and a public surface too thin to judge what the skill actually does in depth.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Augments
+- Slug: `augmnt-augments-mcp-server`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/augmnt-augments-mcp-server/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"augmnt-augments-mcp-server"}}}`
+
+**Summary:** A focused MCP server that hands Claude Code real type signatures, prose docs and working examples for any npm package — not a curated list — so the model stops guessing from stale training data.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### MCP.Link
+- Slug: `automation-ai-labs-mcp-link`
+- Laddoo Score: 72/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/automation-ai-labs-mcp-link/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"automation-ai-labs-mcp-link"}}}`
+
+**Summary:** Turns any OpenAPI specification into Model Context Protocol endpoints, so an AI assistant can call an existing API as MCP tools with no custom integration code.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Octocode
+- Slug: `bgauryy-octocode-mcp`
+- Laddoo Score: 82/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/bgauryy-octocode-mcp/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"bgauryy-octocode-mcp"}}}`
+
+**Summary:** Evidence-first code research for AI agents — 13 read-only tools over GitHub, npm and local code that return answers with citations, shipped as an MCP server, a CLI, a skill and an agent harness, all MIT-licensed with no indexing.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Shrimp Task Manager
+- Slug: `cjo4m06-mcp-shrimp-task-manager`
+- Laddoo Score: 75/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"cjo4m06-mcp-shrimp-task-manager"}}}`
+
+**Summary:** An MCP task manager that gives AI coding assistants long-term memory, structured task decomposition with dependencies, and execution tracking — aimed squarely at the 'assistant forgets across conversations' problem.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Octocode (muvon)
+- Slug: `muvon-octocode`
+- Laddoo Score: 78/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/muvon-octocode/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"muvon-octocode"}}}`
+
+**Summary:** A Rust, local-first semantic code-search and knowledge-graph tool that turns a codebase into a queryable graph and exposes it to AI assistants over MCP — sub-2-second indexing, 12+ languages, Apache-2.0.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### PhpCodeArcheology
+- Slug: `phpcodearcheology-phpcodearcheology`
+- Laddoo Score: 77/100
+- Tier: STEADY
+- Category: Coding
+- Reviewed: 2026-08-26
+- URL: https://hlido.eu/reviews/phpcodearcheology-phpcodearcheology/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"phpcodearcheology-phpcodearcheology"}}}`
+
+**Summary:** A PHP static-analysis tool that measures architecture rather than just style — 60+ metrics, 14 problem detectors and six output formats — and is, by its own claim, the first PHP analyzer with a native MCP server and a generated CLAUDE.md.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### Supabase MCP Server
 - Slug: `supabase-community-supabase-mcp`
