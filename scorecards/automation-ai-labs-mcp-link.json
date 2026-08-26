@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "automation-ai-labs-mcp-link",
+  "name": "MCP.Link",
+  "agent_url": "https://mcp-link.vercel.app",
+  "category": "Workflow & Automation",
+  "run_id": "run-r-publish-v2-automation-ai-labs-mcp-link-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Turns any OpenAPI specification into Model Context Protocol endpoints, so an AI assistant can call an existing API as MCP tools with no custom integration code.",
+    "body": "MCP.Link addresses a genuinely useful seam in the agent stack: most business systems already publish an OpenAPI specification, and MCP.Link transforms that spec plus a target API URL into MCP tools an assistant can call — no bespoke server per API. The promise is 'universal compatibility: works with any API that has an OpenAPI specification', and the workflow is exactly what you'd want — provide a spec URL, get a link, browse a directory of pre-configured links or create your own. That is real leverage: it collapses the per-API MCP-server-writing work that otherwise gates every new integration. It sits at the entry of STEADY rather than higher because the reviewed public surface is a marketing landing page (hosted on vercel.app) with a Discord and GitHub but no visible evidence on the captured surface of auth handling, rate limiting, how it copes with large or non-conformant specs, or an adoption/license signal. The idea is sound and the category matters; what the public page does not yet let a rater verify is how well it holds up on messy real-world specs and authenticated APIs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because MCP.Link targets a real integration bottleneck — one OpenAPI spec to MCP tools with no custom code — and exposes a coherent create/browse workflow plus a public links directory. Held near the STEADY floor because the captured surface is a landing page with no visible evidence of auth handling, rate limiting, large/non-conformant-spec behaviour, or an adoption/license signal.",
+  "what_it_does_well": [
+    "Transforms any OpenAPI spec + target API URL into MCP endpoints — no custom integration code",
+    "Directly removes the per-API MCP-server-writing work that gates new agent integrations",
+    "Coherent workflow: provide a spec, get a link, browse pre-configured links or create your own",
+    "Public directory of MCP links plus GitHub and Discord community"
+  ],
+  "what_it_fails_at": [
+    "Reviewed surface is a marketing landing page (vercel.app) — limited evidence of production depth",
+    "No captured evidence of authentication handling, rate limiting, or behaviour on large/non-conformant specs",
+    "No visible license or adoption/star signal on the captured surface",
+    "Reliability on messy real-world OpenAPI specs is asserted, not demonstrated here"
+  ],
+  "best_for": [
+    "Teams that want to expose an existing OpenAPI-documented API to AI assistants quickly",
+    "Builders prototyping agent access to many APIs without writing an MCP server per API"
+  ],
+  "not_recommended_for": [
+    "Production integrations that need proven auth, rate-limit and error handling guarantees today",
+    "APIs without a usable OpenAPI specification"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "viperjuice-mcp-gateway",
+      "verdict_diff": "Both bridge existing APIs to MCP; a gateway typically routes/manages many MCP servers, while MCP.Link's angle is spec-to-tools generation from an OpenAPI document. Gateway for centralized routing/management, MCP.Link for fast spec-driven tool creation.",
+      "preferred_for_axis": "openapi-spec-generation-vs-gateway-routing"
+    },
+    {
+      "slug": "centralmind-gateway",
+      "verdict_diff": "CentralMind focuses on database-to-API/MCP exposure; MCP.Link focuses on OpenAPI-to-MCP for existing HTTP APIs. Different source of truth — pick by whether you start from a database or from an OpenAPI spec.",
+      "preferred_for_axis": "openapi-source-vs-database-source"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Transforms OpenAPI specifications into MCP endpoints with no custom code",
+      "source": "https://mcp-link.vercel.app ('Transform OpenAPI specifications into Model-Context-Protocol (MCP) endpoints ... No custom code needed to add support for new APIs')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Works with any API that has an OpenAPI specification",
+      "source": "https://mcp-link.vercel.app ('Universal Compatibility ... Works with any API that has an OpenAPI specification')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Provides a browsable directory of MCP links and a create-your-own flow",
+      "source": "https://mcp-link.vercel.app ('Browse MCP Links / Create Custom Link')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "You point MCP.Link at an OpenAPI spec URL and a target API; it produces MCP endpoints the assistant connects to, exposing the API's operations as MCP tools. This lets an agent call an existing HTTP API without a hand-written MCP server. Depends on the source API publishing a usable OpenAPI specification.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "OpenAPI spec to MCP endpoints, no custom code",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Create Link / Browse MCP Links / Get Started",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or license surfaced on the captured page",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "How-It-Works section, links directory, connect-api page",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "Turns any OpenAPI specification into Model Context Protocol endpoints, so an AI assistant can call an existing API as MCP tools with no custom integration code.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/automation-ai-labs-mcp-link.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "MCP.Link exposes existing APIs to assistants as MCP tools; it does not generate synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-d77981dd1fefef48-mcp-link-vercel-app",
+    "base": "https://images.hlido.eu/reviews/automation-ai-labs-mcp-link/run-d77981dd1fefef48-mcp-link-vercel-app",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_links.png",
+      "page_connect-api.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/automation-ai-labs-mcp-link/run-d77981dd1fefef48-mcp-link-vercel-app/home.png",
+      "https://images.hlido.eu/reviews/automation-ai-labs-mcp-link/run-d77981dd1fefef48-mcp-link-vercel-app/page_.png",
+      "https://images.hlido.eu/reviews/automation-ai-labs-mcp-link/run-d77981dd1fefef48-mcp-link-vercel-app/page_links.png",
+      "https://images.hlido.eu/reviews/automation-ai-labs-mcp-link/run-d77981dd1fefef48-mcp-link-vercel-app/page_connect-api.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing or license surfaced on the captured page",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
