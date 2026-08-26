@@ -1,0 +1,169 @@
+{
+  "schema_version": "2.0",
+  "slug": "muvon-octocode",
+  "name": "Octocode (muvon)",
+  "agent_url": "https://octomind.run/product/octocode/",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-muvon-octocode-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A Rust, local-first semantic code-search and knowledge-graph tool that turns a codebase into a queryable graph and exposes it to AI assistants over MCP — sub-2-second indexing, 12+ languages, Apache-2.0.",
+    "body": "This Octocode (by muvon, distinct from the octocode.ai tool of the same name) builds a cross-file knowledge graph from your codebase using tree-sitter AST parsing and vector embeddings, then lets you query it in natural language — 'how does authentication work?' returns relevant code across files, and dependency queries return callers, callees and related types. It is local-first, Apache-2.0, claims sub-2-second indexing and 12+ language support, and ships an MCP server exposing three clear tools to Claude, Cursor and Windsurf: `semantic_search`, `view_signatures` (signatures without full implementations — a real token-saver for agents) and `graphrag` (relationship/dependency queries). The framing is honest about the problem it targets — grep fails on conceptual queries, and AI assistants lack structural awareness — and the GitHub star signal (a few hundred) is a modest but real adoption marker. The ceiling on the score is that the differentiators (indexing speed, semantic quality, the '200M free tokens/mo' figure) are vendor claims on the marketing surface rather than measured here, and the embeddings approach means quality depends on the embedding model and repo shape. Note the name collision: an unrelated evidence-first research tool also called 'Octocode' exists — pick by mechanism (this one is embeddings + knowledge graph; the other is cited tool-based retrieval).",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because it is genuinely agent-native (MCP with semantic_search/view_signatures/graphrag), local-first, Apache-2.0, multi-language, and solves a real gap grep cannot. Held at 78 because indexing-speed and semantic-quality claims are vendor-stated rather than benchmarked here, embeddings quality varies with model and repo, and it shares the 'Octocode' name with an unrelated tool, muddying discovery.",
+  "what_it_does_well": [
+    "Semantic search understands meaning, not keywords — conceptual queries return relevant code even without matching terms",
+    "Builds a cross-file knowledge graph via tree-sitter AST parsing — callers, callees, imports and type references",
+    "MCP server exposes semantic_search, view_signatures and graphrag to Claude, Cursor and Windsurf",
+    "`view_signatures` returns signatures without full implementations — token-efficient context for agents",
+    "Local-first and Apache-2.0, brew-installable, 12+ languages, claimed sub-2-second indexing",
+    "Honest positioning about where grep and unaided assistants fall short"
+  ],
+  "what_it_fails_at": [
+    "Indexing-speed, language-count and '200M free tokens/mo' figures are vendor claims on the marketing surface, not measured in this review",
+    "Semantic-search quality depends on the embedding model and codebase shape",
+    "Shares the name 'Octocode' with an unrelated evidence-first research tool — discovery ambiguity",
+    "Modest public adoption signal (a few hundred GitHub stars) — young tool"
+  ],
+  "best_for": [
+    "Developers onboarding to an unfamiliar codebase who want natural-language answers spanning files",
+    "AI pair-programming setups that need semantic context and dependency graphs handed to the assistant over MCP",
+    "Teams that want local-first, Apache-2.0 code intelligence with no hosted index"
+  ],
+  "not_recommended_for": [
+    "Teams that need a commercially supported, SLA-backed product",
+    "Workflows that prefer cited, tool-driven retrieval over embeddings-based ranking"
+  ],
+  "red_flags": [
+    "Name collision: an unrelated 'Octocode' (octocode.ai, evidence-first cited research) exists from a different author — confirm you are installing muvon/tap/octocode if this is the tool you want."
+  ],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena uses LSP for exact symbol operations; this Octocode uses tree-sitter + embeddings for semantic search and a knowledge graph. Serena for precise language-server-grade navigation, Octocode for meaning-based cross-file queries.",
+      "preferred_for_axis": "semantic-embeddings-vs-lsp-precision"
+    },
+    {
+      "slug": "deusdata-codebase-memory-mcp",
+      "verdict_diff": "Both give an agent codebase awareness over MCP; codebase-memory-mcp persists memory, while Octocode indexes into a semantic knowledge graph queried live. Memory for recall, Octocode for structural/semantic search.",
+      "preferred_for_axis": "semantic-graph-vs-persistent-memory"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Semantic code search + cross-file knowledge graph via tree-sitter AST and vector embeddings",
+      "source": "octomind.run/product/octocode ('Transform your codebase into a queryable semantic knowledge graph'; 'Builds cross-file dependency maps using tree-sitter AST parsing')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "MCP server exposes semantic_search, view_signatures and graphrag to AI assistants",
+      "source": "octomind.run/product/octocode ('MCP Tools ... semantic_search ... view_signatures ... graphrag')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Local-first, Apache-2.0, 12+ languages, brew-installable",
+      "source": "octomind.run/product/octocode ('Tree-sitter AST · Vector Embeddings · Local-First · Apache 2.0'; 'brew install muvon/tap/octocode'; '12+ LANGUAGES')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Runs as an MCP server exposing semantic_search, view_signatures and graphrag to Claude, Cursor, Windsurf and any MCP client, giving the assistant meaning-based search and dependency-graph queries over a locally indexed codebase. view_signatures returns type/function signatures without full bodies, which keeps agent context small. Also usable directly as a local CLI.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Semantic code search + knowledge graph exposed to AI assistants over MCP",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Install / brew install muvon/tap/octocode / GitHub",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Apache-2.0, local-first; brew-installable; 200M free tokens/mo claimed",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "MCP tool list, feature descriptions, use-case walkthroughs",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "A Rust, local-first semantic code-search and knowledge-graph tool that turns a codebase into a queryable graph and exposes it to AI assistants over MCP — sub-2-second indexing, 12+ languages, Apache-2.0.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/muvon-octocode.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "Octocode (muvon) produces code-search results and graph queries, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-31adba7018e90b1f-octomind-run",
+    "base": "https://images.hlido.eu/reviews/muvon-octocode/run-31adba7018e90b1f-octomind-run",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/muvon-octocode/run-31adba7018e90b1f-octomind-run/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Apache-2.0, local-first; brew-installable; 200M free tokens/mo claimed",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
