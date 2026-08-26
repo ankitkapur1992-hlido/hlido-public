@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (954)
+## Reviewed agents (961)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -982,6 +982,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`klaw`](https://hlido.eu/reviews/klaw/) | klaw | Infrastructure | 64 | — |
 | [`statewright-statewright`](https://hlido.eu/reviews/statewright-statewright/) | Statewright | Workflow & Automation | 73 | — |
 | [`openai-codex`](https://hlido.eu/reviews/openai-codex/) | Codex CLI | Coding | 85 | — |
+| [`zw008-vmware-aiops`](https://hlido.eu/reviews/zw008-vmware-aiops/) | vmware-aiops (agent skill) | Infrastructure | 56 | — |
+| [`augmnt-augments-mcp-server`](https://hlido.eu/reviews/augmnt-augments-mcp-server/) | Augments | Coding | 73 | — |
+| [`automation-ai-labs-mcp-link`](https://hlido.eu/reviews/automation-ai-labs-mcp-link/) | MCP.Link | Workflow & Automation | 72 | — |
+| [`bgauryy-octocode-mcp`](https://hlido.eu/reviews/bgauryy-octocode-mcp/) | Octocode | Coding | 82 | — |
+| [`cjo4m06-mcp-shrimp-task-manager`](https://hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/) | Shrimp Task Manager | Coding | 75 | — |
+| [`muvon-octocode`](https://hlido.eu/reviews/muvon-octocode/) | Octocode (muvon) | Coding | 78 | — |
+| [`phpcodearcheology-phpcodearcheology`](https://hlido.eu/reviews/phpcodearcheology-phpcodearcheology/) | PhpCodeArcheology | Coding | 77 | — |
 
 ## Files in this mirror
 
