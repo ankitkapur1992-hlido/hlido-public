@@ -1,0 +1,155 @@
+{
+  "schema_version": "2.0",
+  "slug": "zw008-vmware-aiops",
+  "name": "vmware-aiops (agent skill)",
+  "agent_url": "https://skills.sh/zw008/VMware-AIops",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-zw008-vmware-aiops-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 56,
+  "tier": "FADING",
+  "laddoo_score": 56,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An installable agent skill for VMware AIOps distributed through skills.sh, with a real but modest adoption signal (a few hundred installs) — and a public surface too thin to judge what the skill actually does in depth.",
+    "body": "vmware-aiops is a single agent skill published on the skills.sh directory, installable into coding agents (Claude Code, Cursor, Codex and others) with one command (`npx skills add vmware-skills/vmware-aiops`). Its one genuinely useful, verifiable signal is adoption: the listing reports a couple of hundred installs, which for a niche VMware operations skill is a real, if small, marker that people are actually pulling it. Beyond that, the reviewed public surface is the skills.sh directory chrome — navigation, topic lists, the install command and the install count — rather than a documentation page describing what the skill instructs an agent to do, what VMware operations it covers, or how it behaves. That is why this review is explicitly low-confidence and scored in the FADING band: not because the skill is poor, but because the captured evidence does not support a stronger claim. A skill is easy to install and inspect on GitHub, so the honest recommendation is to read its SKILL.md before relying on it. If a fuller surface (a dedicated skill page or repo README) is captured on re-test, this score should be revisited — the adoption signal suggests it may deserve better than a thin directory listing allows us to say today.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (56), low confidence — the one solid signal is a real if modest install count for a niche VMware AIOps skill, and it is a genuinely installable agent skill. It is not scored higher because the captured public surface is the skills.sh directory listing, not documentation of what the skill does, so there is no evidence base to credit depth or reliability. This is an evidence ceiling, not a judgement that the skill is weak; a fuller re-test could raise it.",
+  "what_it_does_well": [
+    "A genuinely installable agent skill — one command (`npx skills add vmware-skills/vmware-aiops`) into common coding agents",
+    "A real, if modest, adoption signal (a few hundred installs) for a niche VMware operations use case",
+    "Open source and inspectable on GitHub, so its actual instructions can be read before use"
+  ],
+  "what_it_fails_at": [
+    "Reviewed surface is the skills.sh directory listing, not documentation of what the skill actually does",
+    "No captured detail on covered VMware operations, prerequisites, safety, or behaviour",
+    "No independent quality signal beyond an install counter",
+    "Single-skill, niche scope; maintenance cadence not visible on the captured surface"
+  ],
+  "best_for": [
+    "VMware operators already using an MCP/skills-capable coding agent who want an off-the-shelf AIOps skill to trial",
+    "Users comfortable reading a skill's SKILL.md on GitHub before relying on it"
+  ],
+  "not_recommended_for": [
+    "Anyone needing documented, supported, production-grade VMware automation with guarantees",
+    "Users who want a full product rather than a single installable agent skill"
+  ],
+  "red_flags": [
+    "Thin public surface: the captured page documents the skill's existence and install count but not its actual behaviour — inspect the SKILL.md before use."
+  ],
+  "compared_to": [
+    {
+      "slug": "devops-incident-response",
+      "verdict_diff": "devops-incident-response is a broader incident-response agent capability; vmware-aiops is a single, narrowly-scoped installable skill for VMware operations. Broader agent for general incident handling, vmware-aiops for a specific VMware AIOps task if its SKILL.md fits.",
+      "preferred_for_axis": "narrow-vmware-skill-vs-broad-incident-agent"
+    },
+    {
+      "slug": "luisgf-infrabroker",
+      "verdict_diff": "infrabroker brokers infrastructure operations more generally; vmware-aiops is a packaged skill on skills.sh scoped to VMware AIOps. Pick infrabroker for breadth, vmware-aiops for a drop-in VMware-specific skill.",
+      "preferred_for_axis": "packaged-skill-vs-infra-broker"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Distributed as an installable agent skill on skills.sh via npx skills add",
+      "source": "https://skills.sh/zw008/VMware-AIops ('npx skills add vmware-skills/vmware-aiops')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Reports a modest but real install count",
+      "source": "https://skills.sh/zw008/VMware-AIops ('239 total installs')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Installed as a skill into a coding agent (Claude Code, Cursor, Codex and others) via `npx skills add vmware-skills/vmware-aiops`; the agent then follows the skill's SKILL.md instructions for VMware AIOps tasks. Directly agent-targeted, but the captured surface does not document what the skill instructs the agent to do, so behavioural testability could not be established here.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": false,
+      "required": true,
+      "evidence": "Listing states the skill's name and install count but not what it does",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "npx skills add vmware-skills/vmware-aiops",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free, open-source skill via skills.sh / GitHub",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo or behaviour documentation captured — directory listing only",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "An installable agent skill for VMware AIOps distributed through skills.sh, with a real but modest adoption signal (a few hundred installs) — and a public surface too thin to judge what the skill actually does in depth.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/zw008-vmware-aiops.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "An agent skill for VMware operations does not generate synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-397dfee7408ae659-skills-sh",
+    "base": "https://images.hlido.eu/reviews/zw008-vmware-aiops/run-397dfee7408ae659-skills-sh",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/zw008-vmware-aiops/run-397dfee7408ae659-skills-sh/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free, open-source skill via skills.sh / GitHub",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
