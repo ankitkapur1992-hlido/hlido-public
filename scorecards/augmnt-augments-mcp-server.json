@@ -1,0 +1,160 @@
+{
+  "schema_version": "2.0",
+  "slug": "augmnt-augments-mcp-server",
+  "name": "Augments",
+  "agent_url": "https://augments.dev",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-augmnt-augments-mcp-server-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A focused MCP server that hands Claude Code real type signatures, prose docs and working examples for any npm package — not a curated list — so the model stops guessing from stale training data.",
+    "body": "Augments does one thing and states it plainly: it is an MCP server that gives Claude Code types, docs and examples pulled from npm for any package, not a hand-curated subset. The value proposition is sharp and real — coding agents routinely hallucinate APIs or lean on outdated training data, and a tool that injects current type signatures and working examples at the moment of use directly attacks that failure mode (the site frames it as a clean 'before: guesses / after: type signatures, prose docs, working examples'). Setup is a single line (`claude mcp add -s user augments -- npx -y @augmnt-sh/augments-mcp-server`), which is exactly the low-friction path an agent user wants. The reasons it sits mid-STEADY rather than higher: the reviewed public surface is a single landing page, so there is little evidence of depth — how many registries beyond npm, how it handles private packages, version pinning, or rate limits — and there is no visible license, adoption signal, or independent benchmark on the captured surface. It is a promising, well-scoped utility whose ceiling here is set by how little the public page lets us verify.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because Augments targets a real, specific agent failure mode (guessing npm APIs) with a genuinely agent-native, one-line MCP install and an 'any package, not a curated list' scope. Held at the lower end of STEADY because the public surface is a single page with limited evidence of depth, no visible license or adoption signal, and unverified handling of private packages, versioning and rate limits.",
+  "what_it_does_well": [
+    "Precisely scoped: current type signatures, prose docs and working examples for any npm package, injected over MCP",
+    "Directly attacks a real agent failure — hallucinated or outdated API usage from stale training data",
+    "One-line install into Claude Code (`claude mcp add -s user augments ...`)",
+    "'Any package, not just a curated list' — no gatekept allowlist"
+  ],
+  "what_it_fails_at": [
+    "Reviewed surface is a single landing page — little evidence of depth or edge-case handling",
+    "No visible license, GitHub star count, or independent adoption signal on the captured surface",
+    "Unclear handling of private packages, version pinning, monorepos and rate limits",
+    "Scope is npm-only on the evidence seen — no other registries or languages demonstrated"
+  ],
+  "best_for": [
+    "Claude Code users who want accurate, current npm type signatures and examples at generation time",
+    "JavaScript/TypeScript teams whose agents frequently misuse library APIs"
+  ],
+  "not_recommended_for": [
+    "Teams needing multi-language/multi-registry documentation coverage beyond npm",
+    "Users who require a documented license, SLA, or proven handling of private-package auth"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena gives an agent structural/symbol context about your own codebase; Augments injects external npm package docs and type signatures. Complementary rather than competing — Serena for your code, Augments for the libraries it depends on.",
+      "preferred_for_axis": "external-library-docs-vs-own-code-structure"
+    },
+    {
+      "slug": "continue-dev",
+      "verdict_diff": "Continue is a full open-source AI coding-assistant framework; Augments is a single-purpose MCP server feeding npm docs into an existing assistant. Continue for the whole assistant, Augments as a targeted context plug-in.",
+      "preferred_for_axis": "single-purpose-context-vs-full-assistant"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP server that gives Claude Code types, docs and examples from npm for any package",
+      "source": "https://augments.dev ('An MCP server that gives Claude Code types, docs, and examples from npm. Any package. Not just a curated list.')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "One-line install via claude mcp add",
+      "source": "https://augments.dev ('claude mcp add -s user augments -- npx -y @augmnt-sh/augments-mcp-server')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Positioned to replace guesses/stale training data with real type signatures and working examples",
+      "source": "https://augments.dev ('BEFORE Claude guesses or uses outdated training data / AFTER Claude gets type signatures, prose docs, and working examples')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Installed as an MCP server into Claude Code with a single `claude mcp add` command; the agent then calls it to fetch current type signatures, docs and examples for any npm package at generation time, reducing hallucinated or outdated library usage. Single-purpose and low-friction, intended to sit alongside a coding agent rather than replace it.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Types, docs and examples from npm for any package, over MCP",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "claude mcp add one-line install command",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing or license surfaced on the captured page",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Before/after framing and install command; no live demo captured",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "A focused MCP server that hands Claude Code real type signatures, prose docs and working examples for any npm package — not a curated list — so the model stops guessing from stale training data.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/augmnt-augments-mcp-server.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "Augments serves package documentation and type signatures to a coding agent, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-38a81c131ae220b6-augments-dev",
+    "base": "https://images.hlido.eu/reviews/augmnt-augments-mcp-server/run-38a81c131ae220b6-augments-dev",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/augmnt-augments-mcp-server/run-38a81c131ae220b6-augments-dev/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing or license surfaced on the captured page",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
