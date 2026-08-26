@@ -1,0 +1,173 @@
+{
+  "schema_version": "2.0",
+  "slug": "cjo4m06-mcp-shrimp-task-manager",
+  "name": "Shrimp Task Manager",
+  "agent_url": "https://cjo4m06.github.io/mcp-shrimp-task-manager/",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-cjo4m06-mcp-shrimp-task-manager-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An MCP task manager that gives AI coding assistants long-term memory, structured task decomposition with dependencies, and execution tracking — aimed squarely at the 'assistant forgets across conversations' problem.",
+    "body": "Shrimp Task Manager names its target precisely: the three ways AI programming assistants fail at multi-step work — memory loss across conversations, structural chaos in complex tasks, and starting every session from scratch — and answers each with a concrete feature. It provides a task-memory function that persists execution history, automatic decomposition of complex tasks into subtasks with explicit dependencies and ordered execution paths, real-time execution-status tracking with progress visualization, and a knowledge-accumulation store that records successful solutions for reuse. Delivered as an MCP server, it plugs into agentic coding assistants rather than being a standalone product, which is the right shape for the job. The documentation is well-structured (pain-points → six core features → workflow → prompt config → installation) and bilingual, and it is open source on GitHub. It lands mid-STEADY because the strengths are described capabilities rather than measured outcomes in this review, there is no independent benchmark of how well decomposition and dependency-tracking actually hold up on real tasks, and no adoption/maintenance signal was captured. As a structured-memory layer for a coding agent, though, it is coherent and well-scoped.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because Shrimp Task Manager maps three real failure modes of AI coding assistants to concrete features — persistent task memory, dependency-aware decomposition, execution tracking, knowledge reuse — delivered agent-native over MCP with clear docs. Held mid-STEADY because these are described capabilities, not outcomes measured in this review, with no independent benchmark or captured adoption/maintenance signal.",
+  "what_it_does_well": [
+    "Persistent task memory across conversations — directly targets the assistant's cross-session amnesia",
+    "Automatic decomposition of complex tasks into subtasks with explicit dependencies and ordered execution",
+    "Real-time execution-status tracking with progress visualization and completion reports",
+    "Knowledge-accumulation store that records successful solutions for reuse on similar tasks",
+    "Agent-native as an MCP server; clear, well-structured, bilingual documentation and prompt config",
+    "Open source on GitHub"
+  ],
+  "what_it_fails_at": [
+    "Strengths are described features, not outcomes measured in this review",
+    "No independent benchmark of decomposition/dependency-tracking quality on real tasks",
+    "No captured adoption, maintenance-cadence or license detail on the reviewed surface",
+    "Value depends on the host assistant honouring the structured plan it produces"
+  ],
+  "best_for": [
+    "Developers whose AI coding assistant loses track of multi-step tasks across a session",
+    "Agentic workflows that need explicit task decomposition, dependencies and progress tracking",
+    "Teams that want a reusable knowledge base of solved tasks feeding future prompts"
+  ],
+  "not_recommended_for": [
+    "Users wanting a standalone project-management app rather than an MCP layer for an assistant",
+    "Teams that require proven, benchmarked reliability guarantees today"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "mybono-ai-orchestrator",
+      "verdict_diff": "Both structure multi-step agent work; the orchestrator coordinates agents/flows broadly, while Shrimp is a focused MCP memory-and-decomposition layer for a coding assistant. Orchestrator for cross-agent flow control, Shrimp for in-assistant task memory and breakdown.",
+      "preferred_for_axis": "in-assistant-task-memory-vs-cross-agent-orchestration"
+    },
+    {
+      "slug": "deusdata-codebase-memory-mcp",
+      "verdict_diff": "codebase-memory-mcp persists knowledge about the codebase; Shrimp persists task state and decomposition. Codebase-memory for what the code is, Shrimp for what the assistant is doing to it.",
+      "preferred_for_axis": "task-state-memory-vs-codebase-memory"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Provides long-term/task memory so assistants remember progress across conversations",
+      "source": "cjo4m06.github.io/mcp-shrimp-task-manager ('Task Memory Function ... provide long-term memory capability, allowing AI assistants to remember previous task progress')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Automatically decomposes complex tasks into subtasks with dependencies and ordered execution",
+      "source": "cjo4m06.github.io/mcp-shrimp-task-manager ('Structured Task Decomposition ... establish clear dependencies, provide ordered execution paths')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Six core features incl. execution-status tracking and knowledge accumulation",
+      "source": "cjo4m06.github.io/mcp-shrimp-task-manager ('six core features'; 'Execution Status Tracking'; 'Knowledge Accumulation & Experience Reference')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Runs as an MCP server connected to an AI coding assistant; the assistant calls it to plan and decompose tasks, persist task memory across sessions, track execution status, and reference a knowledge base of prior solutions. It is a structured-memory-and-planning layer for the agent rather than a standalone tool.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Structured task management + long-term memory for AI programming assistants",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get Started / Installation / GitHub",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source on GitHub; MCP install",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Pain-points, six-feature breakdown, workflow and prompt-config docs",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "An MCP task manager that gives AI coding assistants long-term memory, structured task decomposition with dependencies, and execution tracking — aimed squarely at the 'assistant forgets across conversations' problem.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/cjo4m06-mcp-shrimp-task-manager.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "Shrimp Task Manager manages task state and memory for a coding assistant; it does not generate synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-a98709bb99713d17-cjo4m06-github-io",
+    "base": "https://images.hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/run-a98709bb99713d17-cjo4m06-github-io",
+    "files": [
+      "home.png",
+      "page_pain-points.png",
+      "page_features.png",
+      "page_workflow.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/run-a98709bb99713d17-cjo4m06-github-io/home.png",
+      "https://images.hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/run-a98709bb99713d17-cjo4m06-github-io/page_pain-points.png",
+      "https://images.hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/run-a98709bb99713d17-cjo4m06-github-io/page_features.png",
+      "https://images.hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/run-a98709bb99713d17-cjo4m06-github-io/page_workflow.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source on GitHub; MCP install",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
