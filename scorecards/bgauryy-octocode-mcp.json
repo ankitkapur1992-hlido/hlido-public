@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "slug": "bgauryy-octocode-mcp",
+  "name": "Octocode",
+  "agent_url": "https://octocode.ai/",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-bgauryy-octocode-mcp-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 82,
+  "tier": "STEADY",
+  "laddoo_score": 82,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "Evidence-first code research for AI agents — 13 read-only tools over GitHub, npm and local code that return answers with citations, shipped as an MCP server, a CLI, a skill and an agent harness, all MIT-licensed with no indexing.",
+    "body": "Octocode's pitch is unusually disciplined for the code-context field: instead of embedding your repo into a hosted index, it exposes 13 research tools that search GitHub, npm and local code and return answers grounded in real evidence with citations, so an agent cites source rather than guessing. It is deliberately read-only by default and strips secrets from both inputs and outputs — two safety properties most code-context tools do not advertise, and exactly the properties a coding agent operating on private repos needs. The surface is genuinely multi-modal: the same engine ships as an MCP server (`octocode-mcp`, one-click for Cursor/VS Code, paste-in for Claude Code/Windsurf/Zed), a CLI (`npx octocode`, 12 commands, JSON output, no AI host required), a SKILL.md protocol that orchestrates the tools into an evidence loop, and a Pi agent-extension bundle. It is free and open source under MIT, authenticates through your existing GitHub login, and needs no indexing step. The honest limits: the reviewed evidence is the marketing surface, not a measured tool run, so the '13 tools' and citation quality are described rather than independently benchmarked here; and there is a naming clash in the wild — an unrelated Rust tool by a different author also ships as 'Octocode', which can confuse discovery. Within its lane, the combination of read-only-by-default, secret-stripping, citation-grounded answers and a no-lock-in MIT license is a strong, agent-native posture.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) because Octocode is agent-native on four surfaces (MCP, CLI, skill, agent bundle), read-only by default with secrets stripped, citation-grounded, MIT-licensed and index-free — a rigorous and safety-conscious posture for code research. Held at 82 rather than higher because the tool count and citation quality are described on the public surface rather than independently benchmarked in this review, and because an unrelated tool shares the 'Octocode' name, which muddies discovery.",
+  "what_it_does_well": [
+    "Read-only by default and strips secrets from inputs and outputs — a safety posture built for agents on private repos",
+    "Returns answers grounded in real evidence with citations instead of unsourced guesses",
+    "Four agent-native surfaces from one engine: MCP server, CLI, SKILL.md protocol, and a Pi agent-extension bundle",
+    "No indexing step and no hosted code index — authenticates through your existing GitHub login",
+    "Free and open source under MIT, with a Rust-powered engine option",
+    "Works across Cursor, Claude Code, VS Code, Windsurf and any MCP host with one-click or paste-in setup"
+  ],
+  "what_it_fails_at": [
+    "The reviewed surface is marketing/documentation, not a measured tool run — '13 tools' and citation quality are described, not independently benchmarked here",
+    "An unrelated Rust tool by a different author also ships as 'Octocode', creating discovery ambiguity",
+    "No pricing/commercial-support story — reads as a self-run developer tool",
+    "Depth of results on very large private monorepos is not demonstrated on the public surface"
+  ],
+  "best_for": [
+    "Coding agents that need cited, evidence-backed answers about a codebase rather than guesses",
+    "Teams that want read-only, secret-stripping code research on private repos with no hosted index",
+    "Developers who want the same engine available as MCP, CLI and a repeatable skill"
+  ],
+  "not_recommended_for": [
+    "Teams that specifically want a hosted, pre-indexed semantic search product with SLAs",
+    "Users who need embeddings-based ranking rather than tool-driven, cited retrieval"
+  ],
+  "red_flags": [
+    "Name collision: an unrelated Rust-based 'Octocode' (semantic search / knowledge graph) exists from a different author — confirm you are installing `octocode-mcp` from octocode.ai if that is the tool you want."
+  ],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena is an LSP-based semantic code toolkit; Octocode is an evidence-first research layer that returns cited answers across GitHub/npm/local code and is read-only with secrets stripped. Serena for symbol-level IDE-style operations, Octocode for cited cross-source research with an agent-safety posture.",
+      "preferred_for_axis": "cited-evidence-research-vs-symbol-operations"
+    },
+    {
+      "slug": "deusdata-codebase-memory-mcp",
+      "verdict_diff": "codebase-memory-mcp persists codebase memory for an agent; Octocode focuses on live, cited retrieval across GitHub/npm/local with no indexing. Memory tool for recall across sessions, Octocode for fresh evidence-grounded lookups.",
+      "preferred_for_axis": "live-cited-retrieval-vs-persistent-memory"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "13 read-only tools search GitHub, npm and local code and return answers with citations, no indexing",
+      "source": "https://octocode.ai/ ('13 tools search GitHub, npm, and local code and return answers with citations. No indexing, works over MCP or the command line')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Read-only by default; secrets stripped from inputs and outputs; MIT licensed",
+      "source": "https://octocode.ai/ ('FREE & OPEN SOURCE (MIT) / READ-ONLY BY DEFAULT / SECRETS STRIPPED FROM INPUTS AND OUTPUTS')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Ships as MCP server, CLI (npx octocode, 12 commands), a SKILL.md protocol, and a Pi agent extension",
+      "source": "https://octocode.ai/ ('OCTOCODE-MCP ... Run the 13 research tools inside your AI client'; 'NPX OCTOCODE ... 12 commands, JSON output'; 'NPX OCTOCODE SKILL'; '@OCTOCODEAI/PI-EXTENSION')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Primary path is the MCP server (`octocode-mcp` over stdio) connected to Cursor, Claude Code, VS Code, Windsurf or any MCP host, exposing 13 read-only research tools an agent calls to retrieve cited evidence from GitHub, npm and local code. The same engine is also a CLI (`npx octocode`, JSON output) for non-agent scripting and a SKILL.md evidence loop. Read-only-by-default and secret-stripping make it comparatively safe to hand to an autonomous agent.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Evidence-first code research for AI agents — cited answers over GitHub/npm/local code",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Installation / one-click MCP install / npx octocode",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free & open source (MIT); GitHub auth; no hosted index",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Tools page, installation guide, worked MCP config and command examples",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "Evidence-first code research for AI agents — 13 read-only tools over GitHub, npm and local code that return answers with citations, shipped as an MCP server, a CLI, a skill and an agent harness, all MIT-licensed with no indexing.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/bgauryy-octocode-mcp.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "Octocode produces code-research answers and citations, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-7aef41b06ea7a6fe-octocode-ai",
+    "base": "https://images.hlido.eu/reviews/bgauryy-octocode-mcp/run-7aef41b06ea7a6fe-octocode-ai",
+    "files": [
+      "home.png",
+      "page_main.png",
+      "pagetools.png",
+      "pageinstallation.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/bgauryy-octocode-mcp/run-7aef41b06ea7a6fe-octocode-ai/home.png",
+      "https://images.hlido.eu/reviews/bgauryy-octocode-mcp/run-7aef41b06ea7a6fe-octocode-ai/page_main.png",
+      "https://images.hlido.eu/reviews/bgauryy-octocode-mcp/run-7aef41b06ea7a6fe-octocode-ai/pagetools.png",
+      "https://images.hlido.eu/reviews/bgauryy-octocode-mcp/run-7aef41b06ea7a6fe-octocode-ai/pageinstallation.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free & open source (MIT); GitHub auth; no hosted index",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
