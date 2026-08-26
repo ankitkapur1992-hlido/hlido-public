@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "phpcodearcheology-phpcodearcheology",
+  "name": "PhpCodeArcheology",
+  "agent_url": "https://phpcodearcheology.github.io",
+  "category": "Coding",
+  "run_id": "run-r-publish-v2-phpcodearcheology-phpcodearcheology-2026-08-26",
+  "run_at": "2026-08-26T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 77,
+  "tier": "STEADY",
+  "laddoo_score": 77,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A PHP static-analysis tool that measures architecture rather than just style — 60+ metrics, 14 problem detectors and six output formats — and is, by its own claim, the first PHP analyzer with a native MCP server and a generated CLAUDE.md.",
+    "body": "PhpCodeArcheology positions itself past the linter tier: 60+ architecture and maintainability metrics (cyclomatic and cognitive complexity, maintainability index, LCOM, Halstead, instability, coupling, type coverage) computed per file, class, method and function, plus 14 problem detectors (god classes, dead code, circular dependencies, deep inheritance) flagged with error/warning/info severity and actionable descriptions. It is MIT, PHP 8.2–8.5, composer-installed, needs no extensions, and — unusually for this category — is framework-aware, reading composer.json to detect Symfony/Laravel/Doctrine and adjust thresholds so framework boilerplate does not generate false positives. Two features make it genuinely agent-relevant and lift the score: it ships a native MCP server (it claims to be the first PHP static-analysis tool with one) so an assistant can query hotspots, dependency graphs and refactoring priorities in natural language, and it generates a CLAUDE.md project overview an AI assistant can read before touching the code. The six output formats include SARIF for GitHub Code Scanning and a JSON path for CI, so it slots into existing pipelines. The honest limits: it is PHP-only by design, the '60+/14/first-with-MCP' figures are the project's own claims rather than independently benchmarked here, and self-authored metric thresholds are still self-authored. Within PHP, this is a thorough, transparent and unusually agent-forward analyzer.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77) because PhpCodeArcheology is a thorough, transparent architecture analyzer (60+ metrics with a formula glossary, 14 detectors, six formats incl. SARIF), is framework-aware to avoid false positives, and is genuinely agent-native — a native MCP server plus a generated CLAUDE.md. Held at 77 because it is PHP-only by design, the headline counts and 'first-with-MCP' claim are self-reported rather than benchmarked here, and its thresholds are self-authored.",
+  "what_it_does_well": [
+    "60+ architecture/maintainability metrics per file/class/method/function, with a glossary of formulas and thresholds",
+    "14 problem detectors (god classes, dead code, circular dependencies, deep inheritance) with severity and actionable descriptions",
+    "Native MCP server — query hotspots, dependency graphs and refactoring priorities in natural language",
+    "Generates a CLAUDE.md project overview for an AI coding assistant to read first",
+    "Six output formats including SARIF for GitHub Code Scanning and JSON for CI",
+    "Framework-aware: reads composer.json (Symfony/Laravel/Doctrine) and adjusts thresholds to cut false positives",
+    "MIT, PHP 8.2–8.5, composer-installed, no extensions required; test-coverage integration (PHPUnit/Pest/Codeception)"
+  ],
+  "what_it_fails_at": [
+    "PHP-only by design — no value for other languages",
+    "Headline figures (60+ metrics, 14 detectors, 'first PHP tool with native MCP') are project claims, not benchmarked here",
+    "Metric thresholds are self-authored, as with any single-vendor analyzer",
+    "Depth on very large legacy codebases is asserted rather than demonstrated on the reviewed surface"
+  ],
+  "best_for": [
+    "PHP teams maintaining long-lived codebases who need architecture and maintainability metrics, not just style checks",
+    "Engineers who want an AI assistant to query codebase health and refactoring priorities over MCP",
+    "CI pipelines that consume SARIF (GitHub Code Scanning) or JSON alongside architecture reports"
+  ],
+  "not_recommended_for": [
+    "Non-PHP or polyglot codebases",
+    "Teams that only need a fast style linter rather than architecture metrics"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "sonarly",
+      "verdict_diff": "Sonarly is a general code-quality/analysis play; PhpCodeArcheology is PHP-specific, architecture-focused (LCOM, coupling, instability) and ships a native MCP server plus a generated CLAUDE.md. Sonarly for broad quality, PhpCodeArcheology for deep PHP architecture with agent-native querying.",
+      "preferred_for_axis": "php-architecture-depth-vs-general-quality"
+    },
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Serena is a multi-language semantic code toolkit for navigation/editing; PhpCodeArcheology measures PHP architecture health and exposes it over MCP. Serena for cross-language structural operations, PhpCodeArcheology for PHP metrics and refactoring priorities.",
+      "preferred_for_axis": "metrics-and-health-vs-structural-navigation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "60+ metrics and 14 problem detectors across files, classes and methods",
+      "source": "phpcodearcheology.github.io ('60+ metrics across files, classes, and methods'; '14 Problem Detectors ... God classes, ... dead code, circular dependencies')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Ships a native MCP server and generates a CLAUDE.md for AI assistants",
+      "source": "phpcodearcheology.github.io ('ships with a built-in MCP (Model Context Protocol) server ... query your architecture with natural language'; 'generates a CLAUDE.md')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    },
+    {
+      "claim": "Six report formats including SARIF and JSON; framework-aware via composer.json; MIT, PHP 8.2–8.5",
+      "source": "phpcodearcheology.github.io ('6 Report Formats ... SARIF for GitHub Code Scanning ... JSON for CI'; 'Reads your composer.json to detect Symfony, Laravel, and Doctrine'; 'MIT LICENSE · PHP 8.2–8.5')",
+      "tested_at": "2026-08-26",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Two agent paths: a native MCP server the assistant queries in natural language for hotspots, dependency graphs, health scores and refactoring priorities (MCP tool calls such as get_hotspots and get_refactoring priorities), and a generated CLAUDE.md the assistant reads before editing the codebase. Also runs as a composer-installed CLI producing JSON/SARIF for CI. Directly designed for AI-assisted PHP maintenance.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "PHP architecture metrics + problem detectors, with native MCP querying",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "Get Started / composer require / View on GitHub",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "MIT license; composer require --dev; no extensions required",
+      "tested_at": "2026-08-26T09:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature breakdown, metric glossary, report-format and MCP-tool examples",
+      "tested_at": "2026-08-26T09:00:00Z"
+    }
+  ],
+  "summary": "A PHP static-analysis tool that measures architecture rather than just style — 60+ metrics, 14 problem detectors and six output formats — and is, by its own claim, the first PHP analyzer with a native MCP server and a generated CLAUDE.md.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-24",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-24",
+  "attestation_url": "/data/attestations/phpcodearcheology-phpcodearcheology.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "checked_at": "2026-08-26",
+    "source": "r-publish-editorial-enrich",
+    "not_applicable": true,
+    "note": "PhpCodeArcheology produces static-analysis metrics and reports, not synthetic media for publication. Article-50 marking obligations do not apply. Recorded as not applicable."
+  },
+  "evidence_images": {
+    "run_id": "run-2ea5b5fac0ede252-phpcodearcheology-github-io",
+    "base": "https://images.hlido.eu/reviews/phpcodearcheology-phpcodearcheology/run-2ea5b5fac0ede252-phpcodearcheology-github-io",
+    "files": [
+      "home.png",
+      "page__.png",
+      "page__features.png",
+      "page__quickstart.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/phpcodearcheology-phpcodearcheology/run-2ea5b5fac0ede252-phpcodearcheology-github-io/home.png",
+      "https://images.hlido.eu/reviews/phpcodearcheology-phpcodearcheology/run-2ea5b5fac0ede252-phpcodearcheology-github-io/page__.png",
+      "https://images.hlido.eu/reviews/phpcodearcheology-phpcodearcheology/run-2ea5b5fac0ede252-phpcodearcheology-github-io/page__features.png",
+      "https://images.hlido.eu/reviews/phpcodearcheology-phpcodearcheology/run-2ea5b5fac0ede252-phpcodearcheology-github-io/page__quickstart.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "MIT license; composer require --dev; no extensions required",
+      "tested_at": "2026-08-26"
+    },
+    "last_verified": "2026-08-26",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-26"
+  }
+}
