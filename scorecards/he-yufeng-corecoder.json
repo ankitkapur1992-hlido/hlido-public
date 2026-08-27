@@ -37,7 +37,7 @@
   "score": 70,
   "tier": "STEADY",
   "summary": "Public-surface review of he-yufeng/CoreCoder.",
-  "confidence": "low",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -67,5 +67,54 @@
     "last_verified": "2026-06-13",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "schema_version": "2.0",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A deliberately minimal ~1,400-line Python coding agent inspired by Claude Code — the \"NanoGPT for coding agents\" — that works with any LLM and installs from PyPI.",
+    "body": "CoreCoder (formerly NanoCoder, renamed to avoid collision with another project) makes a clear and honest pitch: a tiny, readable ~1,400-line Python coding agent that works with any LLM provider — OpenAI, DeepSeek and others — and installs straight from PyPI. Its strength is exactly its smallness: it is legible enough to read end to end, fork, and learn from, which is why the \"NanoGPT for coding agents\" framing lands. The flip side is equally clear — a minimal agent will not match the tool-use depth, guardrails, or ecosystem of the mature coding agents it is inspired by, and the public surface shows an early-stage project rather than a production tool. Best understood as an educational, hackable base to build on, not a Claude Code replacement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70). A clear, honest value proposition, PyPI distribution, provider-agnostic design and a legible minimal codebase clear STEADY. VITAL is withheld because it is explicitly minimal and early-stage, with no hands-on verification of coding performance and none of the depth of a mature coding agent.",
+  "what_it_does_well": [
+    "Deliberately minimal (~1,400 LoC Python) — legible, forkable, easy to learn from",
+    "Works with any LLM provider (OpenAI, DeepSeek, and others)",
+    "Installs cleanly from PyPI as a CLI",
+    "Honest framing — positions itself as a nano/educational agent, not a Claude Code rival"
+  ],
+  "what_it_fails_at": [
+    "Minimal by design — lacks the tool-use depth and guardrails of mature coding agents",
+    "Early-stage public surface, small footprint",
+    "Coding performance unverified hands-on"
+  ],
+  "best_for": [
+    "Developers who want to read and understand a coding agent end to end",
+    "Hackers building a custom coding agent on a minimal base",
+    "Users wanting a provider-agnostic CLI coding helper for light tasks"
+  ],
+  "not_recommended_for": [
+    "Teams needing a full-featured, production-grade coding agent",
+    "Users expecting Claude Code / Aider-level tooling and ecosystem"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is the mature, full-featured CLI coding agent with deep git integration and a large user base; CoreCoder is a ~1,400-line minimal agent meant to be read and forked. Choose Aider to get real work done today; choose CoreCoder to learn how a coding agent works or to build your own on a small base.",
+      "preferred_for_axis": "minimal / educational"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A standalone CLI coding agent installable from PyPI that drives any LLM provider; behaviorally testable in principle but not run hands-on for this review.",
+    "agent_friendly_score": 6
+  },
+  "enriched_at": "2026-08-27"
 }
