@@ -2,7 +2,7 @@
   "slug": "jeinlee1991-chinese-llm-benchmark",
   "name": "jeinlee1991/chinese-llm-benchmark",
   "agent_url": "https://github.com/jeinlee1991/chinese-llm-benchmark",
-  "category": "Chat & Companion",
+  "category": "Frameworks & Eval",
   "run_id": "run-jeinlee1991-chinese-llm-benchmark-m9r7d8kd",
   "run_at": "2026-06-14T12:01:18.559Z",
   "source": "hlido-drain-worker",
@@ -37,7 +37,7 @@
   "score": 70,
   "tier": "STEADY",
   "summary": "Public-surface review of jeinlee1991/chinese-llm-benchmark.",
-  "confidence": "low",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -67,5 +67,47 @@
     "last_verified": "2026-06-14",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "schema_version": "2.0",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A continuously-updated Chinese-language LLM leaderboard (ReLE, formerly CLiB) covering 380+ commercial and open models, plus a large model-defect library — a reference resource, not an agent you run.",
+    "body": "ReLE (Really Reliable Live Evaluation, formerly CLiB) is a substantial, continuously-updated evaluation resource: a Chinese-language capability leaderboard spanning 380+ models — GPT, Gemini, Claude, ERNIE, Qwen, DeepSeek, GLM and more — alongside a large-scale defect library the project says exceeds two million entries for community analysis. Its value is as a reference and research artifact, and the breadth plus the \"live/continuously updated\" posture is its main strength. The honest limits are inherent to the format: the methodology and scoring behind the rankings are the maintainers' own, non-independent choices, and there is no programmatic interface here for an agent to consume — it is a leaderboard to read, not an API to call. Useful primarily for teams selecting models for Chinese-language workloads who want a single continuously-maintained comparison point.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70). Genuine breadth (380+ models), a continuously-updated posture and a sizeable defect library clear STEADY as a reference resource. VITAL is withheld because it is a maintainer-curated leaderboard with no independent methodology guarantee, no programmatic surface, and no hands-on verification of the underlying scores.",
+  "what_it_does_well": [
+    "Continuously-updated leaderboard covering 380+ Chinese and international models",
+    "Includes both commercial and open-source models in one comparison",
+    "Ships a large-scale model-defect library for community research",
+    "Fills a real gap for Chinese-language LLM capability comparison"
+  ],
+  "what_it_fails_at": [
+    "Rankings rest on the maintainers' own methodology — not independently audited",
+    "No programmatic/API surface for agents to consume the data",
+    "Underlying scores unverified by any hands-on check here"
+  ],
+  "best_for": [
+    "Teams selecting models for Chinese-language workloads",
+    "Researchers wanting a broad, maintained model comparison and defect corpus"
+  ],
+  "not_recommended_for": [
+    "Anyone needing an independently-audited benchmark methodology",
+    "Agent pipelines wanting to query results programmatically"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A published leaderboard and defect dataset consumed by people reading the rankings; no programmatic interface for an agent to call. No hands-on behavioral test performed.",
+    "agent_friendly_score": 2
+  },
+  "enriched_at": "2026-08-27"
 }
