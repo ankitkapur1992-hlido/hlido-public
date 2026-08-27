@@ -2,7 +2,7 @@
   "slug": "jackwener-opencli",
   "name": "jackwener/OpenCLI",
   "agent_url": "https://github.com/jackwener/OpenCLI",
-  "category": "AI Agent",
+  "category": "Workflow & Automation",
   "run_id": "run-jackwener-opencli-5x7pbm7w",
   "run_at": "2026-06-14T12:00:59.345Z",
   "source": "hlido-drain-worker",
@@ -37,7 +37,7 @@
   "score": 75,
   "tier": "STEADY",
   "summary": "Public-surface review of jackwener/OpenCLI.",
-  "confidence": "low",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -61,11 +61,64 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false
     },
     "last_verified": "2026-06-14",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  }
+    "derived_at": "2026-08-27"
+  },
+  "schema_version": "2.0",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "Turns any website — plus browser sessions, Electron and local tools — into a deterministic CLI for humans and AI agents, and runs Browser Use on your logged-in Chrome. A genuinely agent-shaped idea.",
+    "body": "OpenCLI aims squarely at a real agent pain point: web surfaces are non-deterministic and login-gated, so it wraps them as deterministic command-line interfaces an agent can drive, and can run Browser Use against your already-authenticated Chrome. The value proposition is clear on the public surface and it ships as an npm package with a documentation homepage. What the public surface doesn't settle is depth: there's no visible pricing or hard call-to-action (expected for an open-source tool), and we could not verify hands-on how robustly the \"any website\" promise holds across messy real-world pages — that is exactly the kind of claim that degrades on the long tail. Promising for agent builders who want deterministic, logged-in web access without standing up their own browser harness; validate on your specific target sites before depending on it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75). A clear, differentiated, agent-native value proposition, an npm distribution and a documentation homepage clear STEADY. VITAL is withheld because the breadth claim (\"any website\") is unverified hands-on and the public surface alone cannot confirm robustness across real-world pages.",
+  "what_it_does_well": [
+    "Wraps arbitrary websites, browser sessions, Electron and local tools as deterministic CLIs",
+    "Runs Browser Use against a logged-in Chrome — reuses existing authenticated sessions",
+    "Explicitly designed for both humans and AI agents (deterministic interfaces)",
+    "Distributed on npm with a documentation homepage"
+  ],
+  "what_it_fails_at": [
+    "The \"any website\" breadth claim is unverified on the long tail of messy pages",
+    "No hands-on behavioral confirmation of robustness",
+    "Public surface shows no clear call-to-action or usage limits"
+  ],
+  "best_for": [
+    "Agent builders needing deterministic, logged-in web access",
+    "Automations that must reuse an authenticated browser session",
+    "Developers wrapping internal web tools as agent-drivable interfaces"
+  ],
+  "not_recommended_for": [
+    "Users needing a guaranteed, tested success rate across arbitrary sites",
+    "Non-technical users wanting a no-code automation product"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "browser-use",
+      "verdict_diff": "Browser Use is the general browser-automation agent library OpenCLI actually builds on; OpenCLI adds the \"wrap any site as a deterministic CLI\" layer and the logged-in-Chrome path on top. Choose Browser Use for the underlying automation primitive; choose OpenCLI when you want deterministic command interfaces over existing, authenticated web tools.",
+      "preferred_for_axis": "deterministic CLI wrapping"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Installable CLI/npm package that exposes websites and local tools as deterministic commands an agent can invoke, plus Browser Use over a logged-in browser. Behaviorally testable in principle; not tested hands-on for this review.",
+    "agent_friendly_score": 8
+  },
+  "enriched_at": "2026-08-27"
 }
