@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "attalla1-photopea-mcp-server",
   "name": "attalla1/photopea-mcp-server",
   "agent_url": "https://github.com/attalla1/photopea-mcp-server",
   "repo_url": "https://github.com/attalla1/photopea-mcp-server",
-  "category": "MCP Server",
+  "category": "Image & Design",
   "run_id": "run-attalla1-photopea-mcp-server-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
@@ -102,5 +102,59 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "attalla1/photopea-mcp-server — MCP server for AI-driven image editing with Photopea. Repo-surface review: measured from the public repository (23 stars, MIT, last push 2026-04-05); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A tidy MIT-licensed MCP server that hands agents Photopea's image-editing surface — genuinely agent-native, but early (23 stars) and quiet for ~5 months.",
+    "body": "This is a focused, well-formed piece of agent plumbing: an MCP server that lets an AI agent design posters, edit photos and transform images by driving Photopea, the free browser-based Photoshop alternative. Because it speaks MCP, it is agent-consumable by construction — the checklist confirms it — and it ships MIT-licensed with documented install and tagged releases, which is more release discipline than most tools this size show. The cautions are about maturity and momentum, not design: it has only 23 stars, no CI, and its last push was in early April 2026 — roughly five months quiet — so confirm it still tracks Photopea before depending on it. It is also a thin bridge over a third-party service, so its usefulness is bounded by Photopea's continued availability. Repo-surface read; the editing quality itself was not tested hands-on.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80, repo-surface ceiling). MIT licensing, documented install, tagged releases and — crucially — genuine agent-consumability over MCP clear STEADY. VITAL is withheld because traction is low (23 stars), there is no CI, the repo has been quiet for ~5 months, and editing quality is unverified from the repo surface.",
+  "what_it_does_well": [
+    "Genuinely agent-native — exposes image editing to agents over MCP",
+    "MIT-licensed with documented install and tagged releases",
+    "Clear, narrow scope: drives Photopea, a free browser-based Photoshop alternative",
+    "Gives agents an image-editing capability without a paid design API"
+  ],
+  "what_it_fails_at": [
+    "Low traction (23 stars) and no CI present",
+    "Last push ~5 months ago — momentum has cooled",
+    "A thin wrapper over third-party Photopea — bounded by that service's availability",
+    "Editing quality and reliability unverified hands-on"
+  ],
+  "best_for": [
+    "Agent builders who need an image-editing tool callable over MCP",
+    "Workflows wanting programmatic poster/photo edits without a paid design API"
+  ],
+  "not_recommended_for": [
+    "Teams needing an actively-maintained, high-traction dependency",
+    "Use cases that cannot tolerate reliance on a third-party (Photopea) surface"
+  ],
+  "red_flags": [
+    "Quiet for ~5 months with no CI — confirm it still tracks Photopea before depending on it"
+  ],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "An MCP server an agent connects to directly to drive Photopea for image editing; agent-consumable by construction. Behaviorally testable via MCP but not run hands-on for this review.",
+    "agent_friendly_score": 8
+  },
+  "enriched_at": "2026-08-27",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
 }
