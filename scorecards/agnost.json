@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "slug": "agnost",
+  "name": "Agnost AI",
+  "agent_url": "https://agnost.ai",
+  "category": "Frameworks & Eval",
+  "run_id": "run-r4-v2-agnost-2026-08-27",
+  "run_at": "2026-08-27T08:06:00.866Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Conversation analytics for production agents that clusters real chats into ranked failure patterns and links every one back to the exact trace — with a live demo you can open without signing up.",
+    "body": "Agnost is answering a question most agent teams cannot currently answer: of the thousands of conversations your agent had this week, which recurring failures are actually costing you users? It auto-clusters conversations into recurring problems ranked by impact, surfaces where users get frustrated and churn begins, flags hallucinations, broken promises and policy violations, and — the part that matters — links every pattern back to the exact conversations and traces behind it. Analytics that cannot show you the underlying evidence are just a chart; the explicit evidence link is what makes this actionable, and it is consistent with how the product presents itself throughout. Two things stand out on the surface. First, the live demo is open with no signup — 'Click any insight in the live demo. No signup needed' — which is a real cost to the vendor and a real gift to a buyer; a product confident enough to be inspected before a form is a product that expects to survive inspection. Second, pricing is published in full across four tiers with concrete event volumes and retention windows (Free at 1,000 events/mo and 7-day retention, Starter $49/mo at 10,000 events and 30 days, Pro $499/mo at 1M events and 90 days, Enterprise custom with self-hosted VPC and audit logs), and the free tier is described as the full product for agents in early production rather than a crippled teaser. Integration is a two-step skill install. The reservations: the $49-to-$499 step is steep with nothing between, self-hosting and audit logs sit behind Enterprise, and the clustering quality — the thing you are actually buying — is demonstrated in a curated demo, not measured. YC backing is a funding signal, not a quality one.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the value proposition is specific and evidence-linked (clusters tie back to the exact conversations and traces), the pricing is fully published with concrete event and retention limits per tier including a usable free tier, and the open no-signup live demo lets a buyer verify the product before giving anything up. Held below the top of the band because clustering quality is shown through a curated demo rather than measured, the $49→$499 pricing step has nothing in between, and self-hosting and audit logs are Enterprise-only.",
+  "what_it_does_well": [
+    "Auto-clusters thousands of conversations into recurring problems ranked by impact rather than raw dashboards",
+    "Every pattern links back to the exact conversations and traces behind it — evidence, not just a chart",
+    "Live demo is open with no signup, so the product can be inspected before any commitment",
+    "Fully published pricing with concrete event volumes and retention windows on every tier",
+    "Free tier is presented as the full product for agents in early production, not a crippled teaser",
+    "Detects hallucinations, broken promises and policy violations specifically, not generic \"quality\"",
+    "Two-step integration via a published skill install"
+  ],
+  "what_it_fails_at": [
+    "Clustering and detection quality are demonstrated in a curated demo, not independently measured",
+    "Steep pricing gap between Starter ($49/mo, 10k events) and Pro ($499/mo, 1M events) with nothing in between",
+    "Self-hosted VPC deployment and audit logs are Enterprise-only, custom-priced",
+    "Free-tier retention of 7 days is short for spotting patterns that emerge over weeks",
+    "YC backing is a funding signal and says nothing about detection accuracy"
+  ],
+  "best_for": [
+    "Teams running a conversational agent in production who cannot tell which failures actually matter",
+    "Product owners who need failure evidence tied to specific conversations before prioritising a fix",
+    "Early-production agents that fit inside the free tier and want the analysis from day one"
+  ],
+  "not_recommended_for": [
+    "Pre-production agents with no real conversation volume yet — there is nothing to cluster",
+    "Teams needing self-hosted deployment or audit logs without an Enterprise contract",
+    "Mid-volume users whose needs fall awkwardly between the Starter and Pro tiers"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langfuse",
+      "verdict_diff": "Langfuse is a broad tracing, prompt-management and evaluation platform across the whole AI engineering loop. Agnost is narrower and downstream: it takes production conversations and clusters them into ranked, evidence-linked failure patterns. Langfuse for full-loop observability; Agnost for \"which failures are costing us users\".",
+      "preferred_for_axis": "ranked-failure-clustering-vs-full-loop-observability"
+    },
+    {
+      "slug": "helicone",
+      "verdict_diff": "Helicone focuses on LLM request logging, cost and performance monitoring. Agnost operates at the conversation level, clustering user-visible failures and frustration rather than per-request metrics. Helicone for cost and latency; Agnost for user-experience failure analysis.",
+      "preferred_for_axis": "conversation-level-failure-analysis-vs-request-level-monitoring"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Auto-clusters conversations into recurring, impact-ranked problems with links to the exact conversations and traces",
+      "source": "https://agnost.ai ('Turn thousands of chats into the recurring problems that disappoint users, ranked by impact and ready to investigate.'; 'Every pattern links to the exact conversations and traces so you can fix it fast.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Live demo is open with no signup required",
+      "source": "https://agnost.ai ('Click any insight in the live demo. No signup needed.'; 'OPEN LIVE DEMO')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Published tiers: Free (1,000 events/mo, 7-day retention), Starter $49/mo (10,000 events, 30 days), Pro $499/mo (1M events, 90 days), Enterprise custom with self-hosted VPC and audit logs",
+      "source": "https://agnost.ai ('FREE … Up to 1,000 events / mo, 7-day data retention'; 'STARTER $49/mo … Up to 10,000 events / mo, 30-day data retention'; 'PRO $499/mo … Up to 1,000,000 events / mo, 90-day data retention'; 'ENTERPRISE Custom … Self-hosted VPC deployments, Audit logs')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Detects hallucinations, broken promises and policy violations with the conversation and trace behind each failure",
+      "source": "https://agnost.ai ('Catch hallucinations, broken promises, and policy violations with the exact conversation and trace behind every failure.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Integration is a published skill install (`npx skills add AgnostAI/skills --skill agnost-ai`) followed by a prompt that wires analytics into your agent, so the connection path is itself agent-native. Agnost then ingests conversation events from your running agent. It observes agents rather than being called by them — the consumer of its output is a human product owner.",
+    "agent_friendly_score": 6
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "An analytics platform that observes agent conversations; it publishes no synthetic content of its own, so output-marking obligations do not apply to it."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Catch silent failures fast — See what broke before users leave.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'START FREE' / 'OPEN LIVE DEMO'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Four published tiers with concrete event volumes and retention: Free, Starter $49/mo, Pro $499/mo, Enterprise custom",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "demo_without_signup",
+      "pass": true,
+      "required": true,
+      "evidence": "'Click any insight in the live demo. No signup needed.'",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-7eb4f7c92697fe06-agnost-ai",
+    "base": "https://images.hlido.eu/reviews/agnost/run-7eb4f7c92697fe06-agnost-ai",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_blog.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/agnost/run-7eb4f7c92697fe06-agnost-ai/home.png",
+      "https://images.hlido.eu/reviews/agnost/run-7eb4f7c92697fe06-agnost-ai/page_.png",
+      "https://images.hlido.eu/reviews/agnost/run-7eb4f7c92697fe06-agnost-ai/page_.png",
+      "https://images.hlido.eu/reviews/agnost/run-7eb4f7c92697fe06-agnost-ai/page_blog.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…and retention windows (Free at 1,000 events/mo and 7-day retention, Starter $49/mo at 10,000 events and 30 days, Pro $499/mo at 1M events and 90 days, Enterprise…",
+        "source": "hlido_opinion.body"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Four published tiers with concrete event volumes and retention: Free, Starter $49/mo, Pro $499/mo, Enterprise custom",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
