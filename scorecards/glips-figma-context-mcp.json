@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "glips-figma-context-mcp",
+  "name": "Framelink",
+  "agent_url": "https://www.framelink.ai/",
+  "category": "Coding",
+  "run_id": "run-r4-v2-glips-figma-context-mcp-2026-08-27",
+  "run_at": "2026-08-27T00:30:54.312Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A Figma-to-code MCP server that deliberately sends descriptive data rather than generated React — and publishes an honest, self-deprecating comparison against Figma’s own MCP.",
+    "body": "Framelink solves a narrow problem well and explains its reasoning better than most tools in this category bother to. It pulls layouts, styles and components straight out of Figma into a coding agent's context over MCP, so the agent stops working from screenshots. The interesting decision is what it sends: descriptive JSON ('this element has a 1px border and 16px padding') rather than the prescriptive React and Tailwind that Figma's official MCP emits. The vendor's argument is that prescriptive output poisons the context — the model mimics auto-generated structure with arbitrary pixel values instead of using your components and conventions, so you end up refactoring the AI's output rather than using it. That is a real, specific failure mode, and the page shows the two outputs side by side rather than asserting the difference. Adoption backs the design: 15,000+ GitHub stars, and it advertises working with Cursor, Claude Code, VS Code, Codex and OpenCode. What earns Framelink credit beyond the engineering is the footnote under its own comparison table: the ~25% size advantage is marked '*Based on a few admittedly haphazard tests. I should probably do more.' A vendor that labels its own benchmark as weak is telling you where the evidence ends, and we would rather rate that than a confident unsourced number. The limits are the flip side of the focus: this is a single-purpose connector with no pricing or commercial-support story on the surface, the paid tier is a waitlist ('Special features coming soon. Sign up for early access'), and the size and quality claims remain the vendor's own haphazard tests, not an independent measurement.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the design choice is technically specific and demonstrated side-by-side rather than asserted, adoption is substantial at 15,000+ stars across every major MCP host, and the vendor labels the weakness of its own benchmark in plain language — an honesty signal we weight. Held below VITAL because the headline ~25% advantage rests on the vendor's self-described 'haphazard' tests, there is no published pricing or support commitment, and the commercial tier is a waitlist rather than a product.",
+  "what_it_does_well": [
+    "Sends descriptive design data instead of prescriptive generated code, so the agent uses your components and conventions",
+    "Preserves style names and represents nested components accurately rather than flattening them",
+    "Publishes a direct side-by-side comparison against Figma’s official MCP instead of asserting superiority",
+    "Explicitly labels its own benchmark as weak — \"a few admittedly haphazard tests\" — rather than presenting it as rigorous",
+    "Broad host support: Cursor, Claude Code, VS Code, Codex, OpenCode and other MCP clients",
+    "15,000+ GitHub stars indicates real adoption for a single-purpose connector"
+  ],
+  "what_it_fails_at": [
+    "The ~25% output-size advantage is the vendor’s own self-described haphazard testing, not an independent measurement",
+    "No published pricing, licence terms or support commitment on the reviewed surface",
+    "Paid capability is a waitlist (\"Special features coming soon\") rather than a shipped tier",
+    "Single-purpose by design — it does Figma-to-context and nothing else",
+    "Output quality still depends entirely on the downstream agent; Framelink supplies context, not code"
+  ],
+  "best_for": [
+    "Teams whose coding agent produces design-faithful markup but drifts from their own component conventions",
+    "Anyone currently pasting Figma screenshots into a coding agent",
+    "Design-system codebases where preserved style names matter more than generated markup"
+  ],
+  "not_recommended_for": [
+    "Teams that want generated React/Tailwind handed to them directly — Figma’s own MCP is the prescriptive option",
+    "Buyers who need a commercial support agreement or published SLA",
+    "Non-Figma design workflows"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is the agent host; Framelink is a context source that plugs into it over MCP. They are complementary rather than alternatives — Framelink improves what Cursor sees about a design, it does not replace the editor.",
+      "preferred_for_axis": "context-source-vs-agent-host"
+    },
+    {
+      "slug": "bgauryy-octocode-mcp",
+      "verdict_diff": "Both are MCP context servers that feed a coding agent evidence instead of guesses. Octocode sources cited context from GitHub, npm and local code; Framelink sources it from Figma design files. Pick by where your missing context lives.",
+      "preferred_for_axis": "design-context-vs-code-context"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Pulls layouts, styles and components from Figma into an AI coding workflow over MCP",
+      "source": "https://www.framelink.ai/ ('Framelink pulls layouts, styles, and components straight from Figma into your AI’s workflow.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Sends descriptive JSON rather than prescriptive React/Tailwind; preserves style names; represents nested components accurately",
+      "source": "https://www.framelink.ai/ (comparison table: 'Output format Descriptive JSON / Prescriptive React/Tailwind'; 'Style names Preserved / Lost'; 'Nested components Accurately represented / Flattened (misleading)')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "The ~25% size advantage is the vendor’s own self-described haphazard testing",
+      "source": "https://www.framelink.ai/ ('*Based on a few admittedly haphazard tests. I should probably do more.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "15,000+ GitHub stars; works with Cursor, Claude Code, VS Code, Codex, OpenCode",
+      "source": "https://www.framelink.ai/ ('15,000+ stars'; 'Works with all agents: Cursor, Claude Code, VS Code, Codex, OpenCode')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Connect the Framelink MCP server to any MCP host (Cursor, Claude Code, VS Code, Codex, OpenCode). The agent then calls it to retrieve descriptive layout, style and component data for a Figma node, and generates code in whatever language the user asks for. It is a pure context provider — the agent does the generation.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "Developer context server for design-to-code; it produces structured design data for an agent, not public-facing synthetic media, so machine-readable output marking is not an applicable obligation here."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Turn Figma designs into pixel-perfect code in one shot'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Quickstart' / 'Sign up for early access'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No pricing published; paid capability is a waitlist — \"Special features coming soon. Sign up for early access.\"",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "competitive_claim_sourced",
+      "pass": true,
+      "required": true,
+      "evidence": "Comparison table against Figma’s official MCP with a self-declared weak-evidence footnote",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-a626c0a0cef117fa-www-framelink-ai",
+    "base": "https://images.hlido.eu/reviews/glips-figma-context-mcp/run-a626c0a0cef117fa-www-framelink-ai",
+    "files": [
+      "home.png",
+      "pagewaitlist.png",
+      "pagedocs.png",
+      "pagedocs_quickstart.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/glips-figma-context-mcp/run-a626c0a0cef117fa-www-framelink-ai/home.png",
+      "https://images.hlido.eu/reviews/glips-figma-context-mcp/run-a626c0a0cef117fa-www-framelink-ai/pagewaitlist.png",
+      "https://images.hlido.eu/reviews/glips-figma-context-mcp/run-a626c0a0cef117fa-www-framelink-ai/pagedocs.png",
+      "https://images.hlido.eu/reviews/glips-figma-context-mcp/run-a626c0a0cef117fa-www-framelink-ai/pagedocs_quickstart.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing published; paid capability is a waitlist — \"Special features coming soon. Sign up for early access.\"",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
