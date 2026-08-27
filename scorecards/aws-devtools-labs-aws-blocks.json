@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "aws-devtools-labs-aws-blocks",
   "name": "aws-devtools-labs/aws-blocks",
   "agent_url": "https://github.com/aws-devtools-labs/aws-blocks",
@@ -132,5 +132,51 @@
     "last_verified": "2026-07-16",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "An Apache-2.0, AWS-backed full-stack framework that unifies infrastructure and runtime with end-to-end TypeScript type safety — credible, but explicitly a Preview with 77 open issues.",
+    "body": "AWS Blocks is a well-scoped developer framework: define AWS infrastructure and runtime code together, get end-to-end TypeScript type safety, local mocking, and native client codegen for Kotlin, Swift and Dart. The repo surface is clean — Apache-2.0, TypeScript, CI present, install documented, published to npm, and actively pushed. Two honest cautions keep it at STEADY rather than higher: the project labels itself a Preview, and it carries 77 open issues against 358 stars, which reads as early, in-flux surface area rather than a settled 1.0. There are also no tagged releases yet. For teams already standardized on AWS and TypeScript it is worth a serious look; just budget for churn while it stabilizes. Repo-surface read; we did not build an app with it hands-on.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82, repo-surface ceiling). Apache-2.0, TypeScript with CI, documented install, npm distribution and an AWS-affiliated org clear STEADY comfortably. VITAL is withheld because the project self-describes as a Preview, has no tagged releases, and functional quality cannot be verified from repo signals.",
+  "what_it_does_well": [
+    "Unifies infrastructure-as-code and runtime code with end-to-end TypeScript type safety",
+    "Native client codegen for Kotlin, Swift and Dart — real mobile/full-stack reach",
+    "Apache-2.0, CI present, documented install, published to npm",
+    "Backed by an AWS dev-tools org, targeting a concrete, popular platform"
+  ],
+  "what_it_fails_at": [
+    "Explicitly a Preview — API stability not yet promised",
+    "77 open issues against 358 stars signals early, in-flux surface area",
+    "No tagged releases to pin against",
+    "Not consumable as a standalone agent interface (agent_consumable did not pass)"
+  ],
+  "best_for": [
+    "Teams already standardized on AWS and TypeScript",
+    "Full-stack apps that need typed infrastructure plus native mobile clients",
+    "Developers comfortable adopting a fast-moving Preview framework"
+  ],
+  "not_recommended_for": [
+    "Teams needing a stable, versioned API today",
+    "Non-AWS or non-TypeScript stacks",
+    "Agent pipelines wanting a programmatic interface rather than a build-time framework"
+  ],
+  "red_flags": [
+    "Self-labelled Preview with no tagged releases — expect breaking changes"
+  ],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "A build-time developer framework and SDK for AWS apps; consumed by developers (and agent code-generation) at author time rather than driven as a runtime agent API. No hands-on behavioral test performed.",
+    "agent_friendly_score": 4
+  },
+  "enriched_at": "2026-08-27"
 }
