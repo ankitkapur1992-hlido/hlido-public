@@ -1,0 +1,160 @@
+{
+  "schema_version": "2.0",
+  "slug": "haris-musa-excel-mcp-server",
+  "name": "Excel MCP Server",
+  "agent_url": "https://excelmcpserver.com",
+  "category": "Productivity",
+  "run_id": "run-r4-v2-haris-musa-excel-mcp-server-2026-08-27",
+  "run_at": "2026-08-27T00:31:15.121Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "An open-source MCP server that reads and writes real Excel workbooks — charts, pivot tables, formulas — without Microsoft Excel installed anywhere.",
+    "body": "This is a focused, well-adopted utility that does one genuinely useful thing: it gives an AI agent the ability to create and modify .xlsx workbooks — data, formatting, formulas, charts, pivot tables and native tables — with no Excel installation and no Microsoft licence in the loop. For agent workflows that must hand a finished spreadsheet to a human, that removes a dependency that otherwise forces a Windows box or a paid API into the architecture. The tool surface is enumerated by category rather than left vague (workbook, data, formatting, formula, chart, pivot table and table operations), and it supports three transports — stdio, streamable HTTP and SSE — which means it drops into local agent hosts and remote deployments alike rather than assuming one topology. Adoption is meaningful at 4,143 GitHub stars for a single-format utility. The reservations are about what the public surface does not carry rather than anything it gets wrong. It is a one-page site with a feature list: there is no pricing or licensing statement, no security or sandboxing discussion for a server that writes files on your behalf, no version or changelog, and no documentation of failure behaviour on large or malformed workbooks. Our capture returned a single screenshot, so this review rests on a thin surface. The GitHub repository is linked and is almost certainly the substantive documentation — but a review must rate what it saw, and what it saw was an accurate but shallow landing page.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because the capability is real, specific and well adopted (4,143 stars), the tool surface is enumerated by operation category rather than hand-waved, and triple transport support makes it usable in both local and remote agent topologies. Held at the lower end of the band because the public surface is a single thin page — no licence, no pricing or access statement, no security discussion for a tool that writes files, and no versioning — so confidence in operational behaviour rests on the linked repository rather than on anything we could verify here.",
+  "what_it_does_well": [
+    "Creates and modifies real .xlsx workbooks with no Microsoft Excel installation required",
+    "Covers the operations that actually matter: data, formatting, formulas, charts, pivot tables and native Excel tables",
+    "Triple transport support — stdio, streamable HTTP and SSE — so it fits local and remote agent deployments",
+    "Tool surface is enumerated by operation category rather than described vaguely",
+    "4,143 GitHub stars is strong adoption for a single-format utility",
+    "Open source, removing the licensing dependency that spreadsheet automation usually carries"
+  ],
+  "what_it_fails_at": [
+    "The public surface is one thin page — this review rests on a single captured screenshot",
+    "No licence, pricing or access statement anywhere on the reviewed site",
+    "No security or sandboxing discussion for a server that writes files on the user’s behalf",
+    "No version, changelog or stability signal on the landing page",
+    "Behaviour on large, protected or malformed workbooks is undocumented on the surface"
+  ],
+  "best_for": [
+    "Agent workflows whose deliverable is a spreadsheet a human will open in Excel",
+    "Linux or container environments where installing Excel is not an option",
+    "Reporting and data-export automation that needs charts and pivot tables, not just CSV"
+  ],
+  "not_recommended_for": [
+    "Teams that require a stated licence and support commitment before adopting a dependency",
+    "Workloads needing live Excel-specific features beyond the enumerated operations (macros, add-ins, real-time co-authoring)",
+    "Buyers who need documented behaviour under adversarial or malformed input"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is a general workflow automation platform with spreadsheet steps among hundreds of integrations. This is a single-purpose MCP server an agent calls directly to author a workbook. n8n for orchestrating a pipeline; Excel MCP Server for giving one agent native .xlsx authoring.",
+      "preferred_for_axis": "single-purpose-mcp-tool-vs-general-workflow-platform"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Manipulates Excel files without Microsoft Excel installed",
+      "source": "https://excelmcpserver.com ('A Model Context Protocol (MCP) server that lets you manipulate Excel files without needing Microsoft Excel installed.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Supports charts, pivot tables, formatting, formulas and native tables",
+      "source": "https://excelmcpserver.com ('Create and modify Excel workbooks'; 'Apply formatting and styles'; 'Create charts and visualizations'; 'Generate pivot tables'; 'Table Operations: Create native Excel tables.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Triple transport support: stdio, streamable HTTP and SSE",
+      "source": "https://excelmcpserver.com ('🔌 Triple transport support: stdio, streamable HTTP, and SSE')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "4,143 GitHub stars; open-source project by haris-musa",
+      "source": "https://excelmcpserver.com ('★ 4143'; '© 2025 excelmcpserver.com - An open source project by haris-musa.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Run the MCP server over stdio for a local agent host, or over streamable HTTP/SSE for a remote deployment, and the agent calls the workbook, data, formatting, formula, chart, pivot-table and table operations directly. It is a pure capability provider with no orchestration of its own — well suited to being one tool among many in an agent’s toolbox.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "A file-manipulation MCP server producing spreadsheets for the requesting user, not public-facing synthetic media — output marking is not an applicable obligation here."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'A Model Context Protocol (MCP) server that lets you manipulate Excel files without needing Microsoft Excel installed.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'View on GitHub'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No pricing, licence or access statement on the reviewed page; described as an open source project but no licence named",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "surface_depth",
+      "pass": false,
+      "required": true,
+      "evidence": "Single-page surface; one screenshot captured — substantive documentation is off-site in the linked repository",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-295b2a23b4e4fffb-excelmcpserver-com",
+    "base": "https://images.hlido.eu/reviews/haris-musa-excel-mcp-server/run-295b2a23b4e4fffb-excelmcpserver-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/haris-musa-excel-mcp-server/run-295b2a23b4e4fffb-excelmcpserver-com/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing, licence or access statement on the reviewed page; described as an open source project but no licence named",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
