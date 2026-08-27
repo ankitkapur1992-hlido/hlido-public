@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "blackwell-systems-agent-lsp",
+  "name": "agent-lsp",
+  "agent_url": "http://www.agent-lsp.com/",
+  "category": "Coding",
+  "run_id": "run-r4-v2-blackwell-systems-agent-lsp-2026-08-27",
+  "run_at": "2026-08-27T08:32:48.741Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A stateful MCP bridge to real language servers — 66 tools across 30 languages whose support is verified by running the actual language server in CI, not listed in a config file.",
+    "body": "agent-lsp identifies the failure mode precisely: coding agents make wrong changes because they cannot see who calls a function, what a rename breaks, or whether the build still passes — and language servers already know all of that. Existing MCP-to-LSP bridges either cold-start on every request or expose raw LSP primitives that agents then use incorrectly. agent-lsp's answer is a stateful runtime that indexes the workspace once and keeps the index warm across files, packages and repositories, plus a skill layer that encodes correct multi-step operations so they actually complete rather than stalling halfway. One process routes .go to gopls, .ts to typescript-language-server and .py to pyright with no reconfiguration when you switch projects, and it ships as a single Go binary. The claim we rate highest is the verification one, because it is the rare kind that is falsifiable: 'Every other MCP-LSP implementation lists supported languages in a config file. None of them run the actual language server in CI to verify it works.' agent-lsp states its CI runs 30 real language servers against real fixture codebases on every push, and names them — Go, Python, TypeScript, Rust, Java, C, C++, C#, Ruby, PHP, Kotlin, Swift, Scala, Zig, Lua, Elixir, Gleam, Clojure, Dart, Terraform, Nix, Prisma, SQL, MongoDB and more. 'When we say works with gopls, that's a verified, automated claim, not a hope' is exactly the posture we want vendors to take, and it is the main reason this scores where it does. The counterweight is scale: 116 stars and v0.18.0, from a single organisation, for a component that would sit in the critical path of every code edit an agent makes. The comparative claim about other implementations is the vendor's own characterisation of competitors, and the token-savings and speculative-execution claims are documented but not measured here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) because agent-lsp makes a falsifiable verification claim and describes the mechanism behind it — 30 real language servers run against real fixtures in CI on every push — which is a materially stronger evidentiary posture than the config-file support lists it criticises, and the stateful warm-index design addresses a real, specific agent failure. Held below the top of the band because adoption is small (116 stars, v0.18.0), the CI claim is stated on the vendor's own documentation rather than independently confirmed here, and its characterisation of competing implementations is vendor-authored.",
+  "what_it_does_well": [
+    "Verifies language support by running 30 real language servers against real fixture codebases in CI on every push",
+    "States the verification claim in falsifiable terms — \"a verified, automated claim, not a hope\" — rather than listing supported languages in a config",
+    "Stateful warm index across files, packages and repositories instead of cold-starting per request",
+    "Skill layer encodes correct multi-step operations so agent-driven refactors complete rather than stalling",
+    "Automatic per-language routing (gopls, typescript-language-server, pyright) with no reconfiguration between projects",
+    "Ships as a single Go binary — a simple, auditable deployment for a privileged component",
+    "Broad language coverage: 66 tools across 30 CI-verified languages and 24 agent workflows"
+  ],
+  "what_it_fails_at": [
+    "116 GitHub stars and v0.18.0 is thin adoption for a component in the critical path of every agent code edit",
+    "The CI verification claim is documented by the vendor and not independently confirmed in this review",
+    "Its comparison against other MCP-LSP implementations is the vendor’s own characterisation of competitors",
+    "Token-savings and speculative-execution claims are documented but unmeasured here",
+    "No pricing, licensing or support commitment captured on the reviewed surface",
+    "Single-organisation project — continuity risk for a load-bearing dependency"
+  ],
+  "best_for": [
+    "Coding agents that need real call-graph, rename-impact and build-validity answers rather than inference from text",
+    "Polyglot monorepos where one warm index across many languages beats per-project reconfiguration",
+    "Teams that specifically value a vendor verifying its support matrix in CI rather than declaring it"
+  ],
+  "not_recommended_for": [
+    "Teams that require a mature, widely adopted dependency in the critical path",
+    "Languages outside the 30 CI-verified set, where the verification argument does not apply",
+    "Buyers who need a support agreement or licensing commitment before adopting"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "oraios-serena",
+      "verdict_diff": "Both give agents LSP-grade code intelligence. Serena is the established semantic toolkit; agent-lsp is a stateful warm-index runtime with a skill layer and a CI-verified 30-language support matrix. Serena for maturity; agent-lsp if the warm index and the verified support claim are what you are buying.",
+      "preferred_for_axis": "ci-verified-warm-index-vs-established-semantic-toolkit"
+    },
+    {
+      "slug": "bgauryy-octocode-mcp",
+      "verdict_diff": "Octocode retrieves cited evidence from GitHub, npm and local code; agent-lsp answers structural questions from a live language server — who calls this, what breaks if I rename it. Octocode for sourced research, agent-lsp for symbol-level correctness.",
+      "preferred_for_axis": "symbol-level-lsp-correctness-vs-cited-code-research"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "66 tools, 30 CI-verified languages, 24 agent workflows, shipped as a single Go binary",
+      "source": "http://www.agent-lsp.com/ ('The most complete MCP server for language intelligence. 66 tools, 30 CI-verified languages, 24 agent workflows. Single Go binary.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "CI runs 30 real language servers against real fixture codebases on every push",
+      "source": "http://www.agent-lsp.com/ ('agent-lsp CI runs 30 real language servers against real fixture codebases on every push'; 'When we say \"works with gopls,\" that\\'s a verified, automated claim, not a hope.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Stateful runtime that indexes the workspace once and keeps the index warm across files, packages and repositories",
+      "source": "http://www.agent-lsp.com/ ('agent-lsp is a stateful runtime over real language servers. It indexes your workspace once, keeps the index warm, and adds a skill layer that encodes correct multi-step operations so they actually complete.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Automatic per-language routing without reconfiguration between projects; v0.18.0 with 116 stars",
+      "source": "http://www.agent-lsp.com/ ('It routes .go to gopls, .ts to typescript-language-server, .py to pyright. No reconfiguration when you switch projects.'; 'v0.18.0'; '116')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install the single Go binary and connect it as an MCP server to Claude Code or any MCP host, pointing it at a code root. The agent then calls the 66 language-intelligence tools and the 24 encoded agent workflows; the skill layer sequences multi-step operations (rename, find-references, refactor) so they complete correctly rather than exposing raw LSP primitives the agent has to orchestrate itself.",
+    "agent_friendly_score": 9
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "A developer language-intelligence MCP server; it returns structural code facts, not public-facing synthetic content, so output-marking obligations do not apply."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The most complete MCP server for language intelligence. 66 tools, 30 CI-verified languages, 24 agent workflows.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install' one-line curl / 'Getting Started'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No pricing, licence or access statement captured on the reviewed documentation surface",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "claims_verifiable",
+      "pass": true,
+      "required": true,
+      "evidence": "Support matrix backed by a described CI process running 30 real language servers against fixtures on every push",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-7ccf6419a44ea8e6-www-agent-lsp-com",
+    "base": "https://images.hlido.eu/reviews/blackwell-systems-agent-lsp/run-7ccf6419a44ea8e6-www-agent-lsp-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/blackwell-systems-agent-lsp/run-7ccf6419a44ea8e6-www-agent-lsp-com/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "usage-based"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing, licence or access statement captured on the reviewed documentation surface",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
