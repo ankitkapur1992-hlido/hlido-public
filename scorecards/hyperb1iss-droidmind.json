@@ -1,0 +1,161 @@
+{
+  "schema_version": "2.0",
+  "slug": "hyperb1iss-droidmind",
+  "name": "DroidMind",
+  "agent_url": "https://hyperb1iss.github.io/droidmind/",
+  "category": "Specialized verticals",
+  "run_id": "run-r4-v2-hyperb1iss-droidmind-2026-08-27",
+  "run_at": "2026-08-27T04:30:29.893Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An MCP server that exposes Android Debug Bridge to an AI assistant — real device control, logs and UI automation in natural language, with confirmation gates on high-risk actions.",
+    "body": "DroidMind occupies a narrow and genuinely underserved slot: it turns ADB into MCP resources and tools so that Claude, Cursor or any MCP client can execute commands on a real Android device, manage files, automate UI interactions, pull logs and inspect device properties. For Android developers, ROM builders and system analysts, that is the difference between an assistant that talks about a bug and one that reproduces it on the handset. The design principles stated on the surface are the right ones for a tool with this much reach: it is AI-first by intent rather than a CLI with a chat wrapper bolted on, and it states that operations are validated with high-risk actions requiring explicit user confirmation. A tool that can wipe a device or push arbitrary files needs exactly that gate, and it is credit-worthy that the vendor leads with it. The caution is that this is a documentation site, not a product surface, and the review reflects that. It is v0.4.0 — early — with 430 stars, and it is a single-maintainer GitHub Pages project. The security posture is described in principle ('robust security measures ensure that all operations are validated') without naming the specific controls, which is the sort of claim we would want to see enumerated before handing a tool this privileged to an autonomous agent. There is no licence, pricing or support statement in the captured material and no stability commitment. The capability is real and the intent is sound; the assurance is asserted rather than shown.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) because the capability is real, distinctly useful and hard to substitute — full ADB reach exposed over MCP with a documented Docker path and an explicit confirmation gate on high-risk actions. Held near the floor of the band because the surface is documentation rather than product, the version is an early v0.4.0 with 430 stars and a single maintainer, and the security claim is stated as a principle without the specific controls being enumerated — which matters more than usual for a tool that can execute arbitrary commands on a device.",
+  "what_it_does_well": [
+    "Exposes real ADB capability — command execution, file management, UI automation, log retrieval, device inspection — over MCP",
+    "States that high-risk actions require explicit user confirmation, the correct gate for a tool with device-level reach",
+    "AI-first by design rather than a chat wrapper over an existing CLI",
+    "Documented installation and Docker paths for containerised operation",
+    "Fills a genuinely underserved niche — few tools give an assistant hands-on Android device access"
+  ],
+  "what_it_fails_at": [
+    "The reviewed surface is a documentation site, not a product surface — no pricing, licensing or support statement captured",
+    "Early v0.4.0 with 430 stars and a single maintainer — stability and continuity are unproven",
+    "Security is asserted as a principle (\"all operations are validated\") without the specific controls enumerated",
+    "No published evidence of behaviour when a confirmation gate is bypassed or a device is in an unexpected state",
+    "Requires trusting an MCP server with device-level command execution — a high-privilege dependency"
+  ],
+  "best_for": [
+    "Android app developers who want an assistant that can build, install and debug on a real device",
+    "ROM developers and system analysts doing hands-on device diagnostics",
+    "Containerised CI setups that already have ADB reach and want natural-language control on top"
+  ],
+  "not_recommended_for": [
+    "Production or fleet device management — this is a development tool, not an MDM",
+    "Teams that require enumerated security controls before granting device-level execution",
+    "Anyone needing a supported product with a stability or licensing commitment"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "bgauryy-octocode-mcp",
+      "verdict_diff": "Both are MCP servers extending a coding agent, but along different axes: Octocode is read-only code research with secrets stripped, DroidMind executes commands on a physical device. Octocode is the low-risk context tool; DroidMind is a high-privilege actuator and should be granted deliberately.",
+      "preferred_for_axis": "device-actuation-vs-read-only-code-research"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Exposes ADB functionality as MCP resources and tools for AI assistants including Claude and Cursor",
+      "source": "https://hyperb1iss.github.io/droidmind/ ('a sophisticated server that securely exposes Android Debug Bridge (ADB) functionalities as MCP resources and tools. This allows AI assistants like Claude, Cursor, and other MCP-compatible clients to…')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Capabilities include command execution, file management, UI automation, log retrieval and device inspection",
+      "source": "https://hyperb1iss.github.io/droidmind/ ('Directly Control Devices: Execute commands, manage files, and automate UI interactions.'; 'Analyze and Diagnose: Retrieve logs, inspect device properties, and capture diagnostic information.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "States that operations are validated and high-risk actions require explicit user confirmation",
+      "source": "https://hyperb1iss.github.io/droidmind/ ('Robust security measures ensure that all operations are validated, and high-risk actions require explicit user confirmation. You are always in control.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "v0.4.0 with 430 GitHub stars; installation and Docker guides published",
+      "source": "https://hyperb1iss.github.io/droidmind/ ('v0.4.0'; '430'; 'Installation', 'Docker Guide', 'MCP Reference')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Run the DroidMind MCP server (natively or in Docker) with ADB reach to a connected Android device, then point Claude, Cursor or any MCP client at it. The agent calls the exposed resources and tools to execute commands, move files, drive the UI and pull diagnostics. This is a high-privilege actuator, not a read-only context source — grant it deliberately and keep the confirmation gate on.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "A device-control MCP server for developers; it produces no public-facing synthetic content, so output-marking obligations do not apply."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Control Android devices with AI through the Model Context Protocol'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Installation Guide' / 'Quick Start'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": true,
+      "evidence": "No pricing, licence or access statement in the captured documentation surface",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "security_posture_stated",
+      "pass": true,
+      "required": true,
+      "evidence": "'high-risk actions require explicit user confirmation' — stated as a principle, specific controls not enumerated",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-a25135d9cbc97a49-hyperb1iss-github-io",
+    "base": "https://images.hlido.eu/reviews/hyperb1iss-droidmind/run-a25135d9cbc97a49-hyperb1iss-github-io",
+    "files": [
+      "home.png",
+      "page_droidmind.png",
+      "pageplan_.png",
+      "pageinstallation_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/hyperb1iss-droidmind/run-a25135d9cbc97a49-hyperb1iss-github-io/home.png",
+      "https://images.hlido.eu/reviews/hyperb1iss-droidmind/run-a25135d9cbc97a49-hyperb1iss-github-io/page_droidmind.png",
+      "https://images.hlido.eu/reviews/hyperb1iss-droidmind/run-a25135d9cbc97a49-hyperb1iss-github-io/pageplan_.png",
+      "https://images.hlido.eu/reviews/hyperb1iss-droidmind/run-a25135d9cbc97a49-hyperb1iss-github-io/pageinstallation_.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing, licence or access statement in the captured documentation surface",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
