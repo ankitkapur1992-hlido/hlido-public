@@ -671,8 +671,8 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`holaboss-ai-holaos`](https://hlido.eu/reviews/holaboss-ai-holaos/) | holaboss-ai/holaOS | AI Agent | 50 | FADING |
 | [`hugohe3-ppt-master`](https://hlido.eu/reviews/hugohe3-ppt-master/) | hugohe3/ppt-master | Voice | 80 | STEADY |
 | [`itayinbarr-little-coder`](https://hlido.eu/reviews/itayinbarr-little-coder/) | itayinbarr/little-coder | Coding | 70 | STEADY |
-| [`jackwener-opencli`](https://hlido.eu/reviews/jackwener-opencli/) | jackwener/OpenCLI | AI Agent | 75 | STEADY |
-| [`jeinlee1991-chinese-llm-benchmark`](https://hlido.eu/reviews/jeinlee1991-chinese-llm-benchmark/) | jeinlee1991/chinese-llm-benchmark | Chat & Companion | 70 | STEADY |
+| [`jackwener-opencli`](https://hlido.eu/reviews/jackwener-opencli/) | jackwener/OpenCLI | Workflow & Automation | 75 | STEADY |
+| [`jeinlee1991-chinese-llm-benchmark`](https://hlido.eu/reviews/jeinlee1991-chinese-llm-benchmark/) | jeinlee1991/chinese-llm-benchmark | Frameworks & Eval | 70 | STEADY |
 | [`jordanrendric-claude-video-vision`](https://hlido.eu/reviews/jordanrendric-claude-video-vision/) | jordanrendric/claude-video-vision | MCP Server | 82 | STEADY |
 | [`langroid-langroid`](https://hlido.eu/reviews/langroid-langroid/) | langroid/langroid | AI Agent | 85 | STEADY |
 | [`leon-ai-leon`](https://hlido.eu/reviews/leon-ai-leon/) | leon-ai/leon | AI Agent | 75 | STEADY |
@@ -724,7 +724,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`zhulinsen-daily-stock-analysis`](https://hlido.eu/reviews/zhulinsen-daily-stock-analysis/) | ZhuLinsen/daily_stock_analysis | Marketing & Content | 75 | STEADY |
 | [`google-adk-python`](https://hlido.eu/reviews/google-adk-python/) | google/adk-python | Coding | 50 | FADING |
 | [`pingcap-tidb`](https://hlido.eu/reviews/pingcap-tidb/) | pingcap/tidb | Infrastructure | 50 | FADING |
-| [`claudiodrews-memory-os`](https://hlido.eu/reviews/claudiodrews-memory-os/) | ClaudioDrews/memory-os | Coding | 73 | STEADY |
+| [`claudiodrews-memory-os`](https://hlido.eu/reviews/claudiodrews-memory-os/) | ClaudioDrews/memory-os | Infrastructure | 73 | STEADY |
 | [`elizaos-eliza`](https://hlido.eu/reviews/elizaos-eliza/) | elizaOS/eliza | AI Agent | 50 | FADING |
 | [`tencent-weknora`](https://hlido.eu/reviews/tencent-weknora/) | Tencent/WeKnora | AI Agent | 50 | FADING |
 | [`flyteorg-flyte`](https://hlido.eu/reviews/flyteorg-flyte/) | flyteorg/flyte | Workflow & Automation | 50 | FADING |
@@ -902,7 +902,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`agentscope-ai-agentscope`](https://hlido.eu/reviews/agentscope-ai-agentscope/) | AgentScope | AI Agent | 70 | — |
 | [`aliafsahnoudeh-shahnameh-mcp-server`](https://hlido.eu/reviews/aliafsahnoudeh-shahnameh-mcp-server/) | aliafsahnoudeh/shahnameh-mcp-server | MCP Server | 60 | — |
 | [`alikarami-mikromcp`](https://hlido.eu/reviews/alikarami-mikromcp/) | MikroMCP | Infrastructure | 79 | — |
-| [`attalla1-photopea-mcp-server`](https://hlido.eu/reviews/attalla1-photopea-mcp-server/) | attalla1/photopea-mcp-server | MCP Server | 80 | — |
+| [`attalla1-photopea-mcp-server`](https://hlido.eu/reviews/attalla1-photopea-mcp-server/) | attalla1/photopea-mcp-server | Image & Design | 80 | — |
 | [`awslabs-mcp`](https://hlido.eu/reviews/awslabs-mcp/) | Open Source MCP Servers for AWS | Infrastructure | 83 | — |
 | [`bluesprince-thiri-mcp`](https://hlido.eu/reviews/bluesprince-thiri-mcp/) | BluesPrince/thiri-mcp | MCP Server | 80 | — |
 | [`chaandannn-finopsmcp`](https://hlido.eu/reviews/chaandannn-finopsmcp/) | nable | Infrastructure | 74 | — |
