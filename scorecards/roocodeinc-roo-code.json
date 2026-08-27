@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "roocodeinc-roo-code",
+  "name": "Roomote",
+  "agent_url": "https://roocode.com",
+  "category": "Coding",
+  "run_id": "run-r4-v2-roocodeinc-roo-code-2026-08-27",
+  "run_at": "2026-08-25T16:32:25.028Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 84,
+  "tier": "STEADY",
+  "laddoo_score": 84,
+  "confidence": "high",
+  "hlido_opinion": {
+    "headline": "A cloud coding agent you can actually self-host — runs your real dev environment, verifies its own work with a second model, and hands back PRs with live preview URLs.",
+    "body": "Roomote is the hosted sibling of Roo Code, and the pitch is aimed squarely at the objection most cloud coding agents cannot answer: you do not have to give up ownership to get the convenience. The same application ships as a managed cloud deployment (live in about two minutes, you supply only an inference key) and as Docker images you run on your own infrastructure, where the vendor states your data never leaves. Deployments are always single-tenant and the source is available. That is a materially stronger control story than the typical closed cloud agent, and it is the main reason this scores where it does. The engineering claims are specific rather than vague: Roomote runs the actual dev environment instead of a sandboxed approximation, executes the app before declaring work done and gives reviewers a live URL to inspect, and reviews its own diff with a different model before a human is asked to look. It is model-agnostic and BYOK, connects to GitHub, GitLab, Azure DevOps, Gitea and Bitbucket, and is driven from Slack, Teams, Discord or Telegram, which makes the async and mobile story credible rather than aspirational. Pricing is published in full — free under ten users with no licence, then $249/mo for 11–50 and $499/mo for 51–100 on cloud — which is rarer in this category than it should be. What we cannot tell you from the public surface is how the self-review loop performs on a real codebase: the verification claims, the parallel-task ceiling and the quality of the second-model review are described by the vendor and demonstrated in testimonials, not measured here. Treat the control and pricing posture as verified from the surface, and the autonomy claims as the vendor's own.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (84) because the deployment story is unusually honest for a cloud coding agent — self-hostable, single-tenant, model-agnostic BYOK, source available, with full public pricing including a genuinely free tier under ten users — and the verification design (runs the real app, live preview URL, second-model review) is specific enough to be falsifiable. Held below VITAL because none of those autonomy claims are independently measured on this public-surface review, and the strongest evidence for output quality on the page is vendor-selected testimonial.",
+  "what_it_does_well": [
+    "Self-hostable on your own infrastructure with the same application as the cloud product — data never leaves your infra",
+    "Always single-tenant and source-available, an ownership posture most cloud coding agents do not offer",
+    "Model-agnostic and BYOK — mix providers and models for intelligence, price or throughput",
+    "Runs your actual app before calling work done and hands reviewers a live preview URL",
+    "Reviews its own changes with a different model before a human is asked to step in",
+    "Full published pricing including free under ten users with no licence required",
+    "Works across GitHub, GitLab, Azure DevOps, Gitea and Bitbucket, and is driven from Slack, Teams, Discord or Telegram"
+  ],
+  "what_it_fails_at": [
+    "The self-review and verification claims are described on the vendor surface, not independently measured in this review",
+    "\"Unlimited parallel tasks\" is asserted without a published concurrency or rate ceiling",
+    "Output-quality evidence on the public page is vendor-selected testimonial rather than benchmark",
+    "Self-hosting shifts hosting, sandboxes, inference and maintenance onto you — the cost is real even though the licence is free under ten users"
+  ],
+  "best_for": [
+    "Teams that want a cloud coding agent but cannot let source leave their infrastructure",
+    "Organisations with a BYOK model policy or a specific provider mix they must keep",
+    "Small teams under ten users who want a full-featured agent at no licence cost",
+    "Async and mobile-first workflows driven from Slack, Teams, Discord or Telegram"
+  ],
+  "not_recommended_for": [
+    "Solo developers who want an in-editor completion agent rather than a PR-producing cloud service",
+    "Buyers who need independently benchmarked autonomy claims before adopting",
+    "Teams without the operational capacity to run sandboxes and inference if they choose self-hosting"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "openai-codex",
+      "verdict_diff": "Codex is a hosted agent on OpenAI infrastructure with OpenAI models. Roomote is model-agnostic, BYOK, single-tenant and self-hostable, with a published second-model review loop. Codex for the least operational overhead on one vendor; Roomote when ownership, provider choice or data residency is the constraint.",
+      "preferred_for_axis": "self-hostable-model-agnostic-vs-managed-single-vendor"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is an editor you sit in; Roomote is an async cloud agent that returns PRs with live previews and is driven from chat apps. Cursor for interactive in-editor work, Roomote for delegated parallel tasks reviewed as pull requests.",
+      "preferred_for_axis": "async-delegated-prs-vs-interactive-editor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Self-hostable with the same application; data never leaves your infrastructure; always single-tenant and source available",
+      "source": "https://roocode.com ('Self-host it — The exact same app on your own infra. Full control, your data never leaves.'; 'Always single-tenant'; 'Source available')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Runs the actual app before completion and gives reviewers a live preview URL; reviews its own changes with a different model",
+      "source": "https://roocode.com ('Roomote runs your actual app before calling work done, and gives reviewers a live URL to inspect'; 'reviews the code with a different model')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Published pricing: free under 10 users, $249/mo for 11–50, $499/mo for 51–100",
+      "source": "https://roocode.com ('Up to 10 users Free No license needed'; '11–50 users $249/mo'; '51–100 users $499/mo')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Model-agnostic BYOK; works with GitHub, GitLab, Azure DevOps, Gitea, Bitbucket",
+      "source": "https://roocode.com ('Model-agnostic, BYOK'; 'Works with Github, Gitlab, Azure DevOps, Gitea, Bitbucket')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Roomote is itself the agent rather than a component another agent drives. It is invoked by a human through Slack, Teams, Discord, Telegram or its web UI, and integrates with git forges to return pull requests. No public API, MCP server or SDK is advertised on the reviewed surface, so it is not a building block an external agent can call — it is a delegate you hand work to.",
+    "agent_friendly_score": 4
+  },
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-27",
+    "note": "No machine-readable marking or provenance claim appears on the reviewed public surface. Recorded as unevidenced, not as absent."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The cloud coding agent you actually own.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Try now free' / 'Try now — 2 min, no card'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Full tier table published: free <10 users, $249/mo 11–50, $499/mo 51–100, 'Talk to us' 100+; self-hosted option listed",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "deployment_transparency",
+      "pass": true,
+      "required": true,
+      "evidence": "Cloud and self-hosted options each list what the vendor runs vs what you run",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-3e23dfa693e69ebe-roocode-com",
+    "base": "https://images.hlido.eu/reviews/roocodeinc-roo-code/run-3e23dfa693e69ebe-roocode-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/roocodeinc-roo-code/run-3e23dfa693e69ebe-roocode-com/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Full tier table published: free <10 users, $249/mo 11–50, $499/mo 51–100, 'Talk to us' 100+; self-hosted option listed",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
