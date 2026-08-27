@@ -1,10 +1,10 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "claudiodrews-memory-os",
   "name": "ClaudioDrews/memory-os",
   "agent_url": "https://github.com/ClaudioDrews/memory-os",
   "repo_url": "https://github.com/ClaudioDrews/memory-os",
-  "category": "Coding",
+  "category": "Infrastructure",
   "run_id": "run-claudiodrews-memory-os-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
@@ -122,5 +122,66 @@
     "verified_at": "2026-07-31T09:31:40.512Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "hlido_opinion": {
+    "headline": "A serious, MIT-licensed local-first memory layer for agents with real traction (1.3k stars) — but no tagged release and thin surfaced install signals temper the maturity read.",
+    "body": "Memory OS is an ambitious, genuinely useful-sounding piece of agent infrastructure: a seven-layer persistent-memory stack (Qdrant vectors, structured facts with trust scoring, a self-curating wiki, semantic recall) that runs entirely on the user's machine and stays provider-agnostic across OpenRouter, OpenAI, Anthropic and Ollama. The repo signals back the pitch — 1,272 stars, MIT license, Python, CI present, and a commit within the last ~36 days. Two things keep it out of the top band on the repo surface: there are no tagged releases (so \"stable\" is a judgment call, not a versioned promise), and our checklist did not detect standard install/usage markers even though the README advertises a one-command curl installer — a documentation-shape gap worth closing. It's built to embed into one specific host (Hermes Agent) via a plugin, so treat it as a memory component to wire in, not a drop-in for arbitrary stacks. Repo-surface read only; we did not run the memory pipeline hands-on.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73, repo-surface ceiling). MIT licensing, Python with CI, strong traction (1,272 stars) and recent activity clear STEADY. VITAL is withheld because repo signals cannot verify the memory pipeline works as claimed, and both the absence of tagged releases and the missing install/usage markers hold it below the top of the band.",
+  "what_it_does_well": [
+    "Local-first, self-hosted — memory infrastructure runs on the user's own machine",
+    "Provider-agnostic across OpenRouter, OpenAI, Anthropic and Ollama (no vendor lock-in)",
+    "Strong community traction for an infra project (1,272 stars, MIT)",
+    "CI present and actively maintained (last push within ~36 days)"
+  ],
+  "what_it_fails_at": [
+    "No tagged releases — no versioned stability contract",
+    "Install/usage markers not detected on the repo surface despite an advertised one-command installer",
+    "Coupled to Hermes Agent as its host rather than exposing a general agent interface",
+    "Functional quality of the memory pipeline unverified from the repo surface"
+  ],
+  "best_for": [
+    "Developers building on Hermes Agent who want persistent, local memory",
+    "Privacy-conscious setups that need on-device memory with no memory subscription",
+    "Teams wanting provider-agnostic memory they can self-host"
+  ],
+  "not_recommended_for": [
+    "Teams needing a versioned, release-pinned dependency",
+    "Non-Hermes stacks wanting a plug-and-play memory API",
+    "Anyone who needs verified behavioral guarantees before adopting"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "letta",
+      "verdict_diff": "Letta (formerly MemGPT) is the better-known, more general stateful-agent framework with a hosted path; Memory OS is a self-hosted, local-first memory layer aimed at one host (Hermes Agent). Choose Letta for a general, managed statefulness layer; choose Memory OS for on-device, provider-agnostic memory you control end to end.",
+      "preferred_for_axis": "local-first self-hosting"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Embeds into Hermes Agent as a memory plugin; installed and run locally via a setup script rather than consumed as a standalone programmatic API. No hands-on behavioral test performed.",
+    "agent_friendly_score": 5
+  },
+  "enriched_at": "2026-08-27",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "subscription"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
   }
 }
