@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "hidai25-eval-view",
+  "name": "EvalView",
+  "agent_url": "https://evalview.com",
+  "category": "Frameworks & Eval",
+  "run_id": "run-r4-v2-hidai25-eval-view-2026-08-27",
+  "run_at": "2026-08-27T00:31:35.485Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An Apache-2.0 regression-testing framework for multi-step agents — \"pytest for AI agents\" — that gates changes instead of only charting them, but is still pre-1.0 with a small community.",
+    "body": "EvalView's framing is the most useful thing about it: the category is full of tracing dashboards that tell you what happened after a regression shipped, and EvalView positions itself as the gate that stops the change instead. Its own comparison pages make that argument explicitly against LangSmith, Langfuse, Braintrust and DeepEval — regression gating rather than monitoring, trajectory and tool-path diffs, golden baselines for tool-calling agents. The feature list is substantive for a testing framework: YAML test definitions, weighted scoring across tool use, output and sequence, LLM-as-judge with custom prompts, sequence matching in exact/subsequence/unordered modes, JSON-schema output validation, and explicit hallucination and safety detection. It claims 9+ framework integrations (LangGraph, CrewAI, OpenAI, Anthropic, AutoGen, Dify, LangServe, Ollama, Claude Code), runs locally, and is 100% open source under Apache 2.0 — which for a security-sensitive testing tool that sees your prompts and traces is the right default. The honest caveat is maturity, and the surface states it plainly rather than hiding it: v0.8.1 Public Beta, 130 GitHub stars, and the cloud product is a waitlist, not a product. A testing framework's value depends on the community that finds its bugs, and 130 stars is a small one. The auto-generation claims ('generate a suite from a URL or logs', '100+ test variations') are the kind that sound strong and are hardest to verify from a landing page — nothing here demonstrates the quality of a generated suite.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70), at the floor of the band. The positioning is genuinely differentiated — regression gating rather than post-hoc dashboards — the evaluator surface is detailed and specific, and Apache 2.0 with local execution is the correct posture for a tool that reads your prompts and traces. Held exactly at the boundary because it is self-declared v0.8.1 Public Beta with 130 stars and a waitlist-only cloud: the design is credible, the adoption that would prove it is not there yet, and the auto-generation claims are undemonstrated on the public surface.",
+  "what_it_does_well": [
+    "Positions as a regression gate in CI rather than another post-hoc tracing dashboard",
+    "Detailed, specific evaluator surface: weighted tool/output/sequence scoring, LLM-as-judge, sequence matching modes, JSON-schema validation",
+    "Explicit hallucination and safety detection rather than generic quality scoring",
+    "100% open source under Apache 2.0 and runs locally — the right default for a tool that sees your prompts and traces",
+    "Claims 9+ framework integrations spanning LangGraph, CrewAI, AutoGen, Dify, LangServe, Ollama and Claude Code",
+    "States its own maturity honestly on the landing page (v0.8.1 Public Beta) rather than implying stability"
+  ],
+  "what_it_fails_at": [
+    "Pre-1.0 (v0.8.1 Public Beta) — API and behaviour should be assumed unstable",
+    "130 GitHub stars is a small community for a testing framework, where community size is what surfaces the bugs",
+    "The cloud product is a waitlist, not a shipped tier — no managed option today",
+    "Auto-generation claims (\"suite from a URL or logs\", \"100+ test variations\") are asserted with no demonstrated output quality",
+    "Its competitor comparisons are vendor-authored, as all such pages are"
+  ],
+  "best_for": [
+    "Teams that want agent regressions blocked in CI rather than discovered in a dashboard afterwards",
+    "Security-sensitive environments that need evaluation to run locally on their own infrastructure",
+    "Tool-calling agents where trajectory and tool-order correctness matter as much as final output",
+    "Early adopters comfortable with a pre-1.0 dependency"
+  ],
+  "not_recommended_for": [
+    "Teams needing a managed, supported evaluation platform today — the cloud tier is a waitlist",
+    "Production-critical pipelines that cannot absorb pre-1.0 API churn",
+    "Buyers who weight ecosystem maturity and community size heavily"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langfuse",
+      "verdict_diff": "Langfuse is a mature, widely adopted observability and evaluation platform with hosted and self-hosted options. EvalView is a pre-1.0 local-first framework that gates changes in CI. Langfuse for production observability at scale; EvalView if the specific need is a regression gate and you accept beta maturity.",
+      "preferred_for_axis": "ci-regression-gating-vs-production-observability"
+    },
+    {
+      "slug": "braintrust",
+      "verdict_diff": "Braintrust is a commercial eval platform with managed infrastructure. EvalView is Apache-2.0 and runs locally with no managed tier available yet. Braintrust for a supported product; EvalView when local execution and open licensing are hard requirements.",
+      "preferred_for_axis": "open-source-local-vs-commercial-managed"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source testing framework for multi-step agents, positioned to catch hallucinations, regressions and cost spikes before production",
+      "source": "https://evalview.com ('The complete open-source testing framework for multi-step agents. Catch hallucinations, regressions, and cost spikes before production.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Self-declared v0.8.1 Public Beta with 130 GitHub stars and a cloud waitlist",
+      "source": "https://evalview.com ('v0.8.1 Public Beta'; 'GitHub 130'; 'EvalView Cloud is coming soon — Join Waitlist')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Apache 2.0, security-first local execution, positioned against tracing-only tools",
+      "source": "https://evalview.com ('100% Open Source (Apache 2.0)'; 'Security-first (run locally)'; 'Why EvalView vs Tracing-Only Tools?')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Evaluator surface: YAML tests, weighted scoring, LLM-as-judge, sequence matching, schema validation, hallucination and safety detection",
+      "source": "https://evalview.com ('YAML-based test definitions'; 'Weighted scoring (tool, output, sequence)'; 'LLM-as-judge with custom prompts'; 'Sequence matching (exact/subsequence/unordered)'; 'Hallucination & safety detection')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Installed with pip and driven by a CLI (`evalview run`) over YAML test definitions, wired into CI to gate agent changes. It integrates against 9+ agent frameworks as the system under test rather than exposing itself as a tool an agent calls. The consumer is your pipeline, not your agent.",
+    "agent_friendly_score": 7
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "A developer testing framework; it evaluates agent output rather than publishing synthetic content, so output-marking obligations do not apply to it."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'pytest for AI agents' — 'The complete open-source testing framework for multi-step agents.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'pip install evalview' / 'Join Cloud Waitlist'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open source and free to install (Apache 2.0, 'pip install evalview'); the Cloud tier is an unpriced waitlist",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "maturity_disclosed",
+      "pass": true,
+      "required": true,
+      "evidence": "Vendor states 'v0.8.1 Public Beta' on the landing page",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-cbd02731404034a9-evalview-com",
+    "base": "https://images.hlido.eu/reviews/hidai25-eval-view/run-cbd02731404034a9-evalview-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/hidai25-eval-view/run-cbd02731404034a9-evalview-com/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source and free to install (Apache 2.0, 'pip install evalview'); the Cloud tier is an unpriced waitlist",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
