@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "slug": "lpigeon-ros-mcp-server",
+  "name": "RobotMCP",
+  "agent_url": "https://robotmcp.ai",
+  "category": "Specialized verticals",
+  "run_id": "run-r4-v2-lpigeon-ros-mcp-server-2026-08-27",
+  "run_at": "2026-08-27T20:30:44.424Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 81,
+  "tier": "STEADY",
+  "laddoo_score": 81,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "One MCP server that turns natural language into ROS topics, services and actions across drones, quadrupeds, mobile manipulators and industrial arms — Apache 2.0, in the official MCP Registry, with no changes to your robot code.",
+    "body": "RobotMCP is the most convincing demonstration in this batch of a genuinely hard integration problem being reduced to one connector. It bridges the Model Context Protocol to ROS 1 and ROS 2, so an instruction typed to Claude, ChatGPT or Gemini becomes ROS topic, service and action calls. The claim that earns the score is breadth demonstrated rather than asserted: four classes of machine — an aerial drone via Gemini, a legged robot via Cursor, a mobile manipulator via Gemini and a warehouse unloading arm via Claude — each shown running the same MCP server with a different model and no per-robot integration work. Multi-robot, multi-model portability is exactly the claim most robotics middleware fails, and showing four distinct machines under different models is a much stronger form of evidence than a feature matrix. The supporting signals are consistent: 1,200+ GitHub stars, officially listed in the MCP Registry, Apache 2.0, installable with a single pipx command, and stated to require no changes to robot code beyond adding a rosbridge node. It names work with KUKA, Doosan, Intrinsic (Google) and the Linux Foundation, which for an industrial-robotics connector is a meaningful credibility signal. What we cannot verify from a public surface, and what a buyer must weigh heavily here, is safety. This is a natural-language actuator for physical machines that can injure people. The reviewed surface describes installation, portability and a Cloudflare tunnel to your robot, but does not document safety interlocks, command validation, e-stop integration, or what happens when a model misinterprets an instruction — and the tunnel itself deserves scrutiny before it is pointed at industrial hardware. The demo clips are vendor-selected successes; failure behaviour is not shown.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (81) because the portability claim is demonstrated across four genuinely different machine classes under three different models rather than asserted, adoption and provenance are strong (1,200+ stars, official MCP Registry listing, Apache 2.0, named work with KUKA, Doosan, Intrinsic and the Linux Foundation), and installation is a single command with no robot-code changes. Held below VITAL because this is a natural-language actuator for physical machines and the public surface documents no safety interlocks, command validation or e-stop integration — the demos show selected successes, never a misinterpreted instruction.",
+  "what_it_does_well": [
+    "Demonstrates the same MCP server driving four different machine classes — aerial, legged, mobile manipulation and industrial — under three different models",
+    "Model-agnostic and robot-agnostic: works with Claude, ChatGPT, Gemini or any MCP client, across ROS 1 and ROS 2",
+    "No changes to robot code required — add a rosbridge node and connect",
+    "Apache 2.0 and officially listed in the MCP Registry, with 1,200+ GitHub stars",
+    "Single-command install via pipx with modules downloaded on first run",
+    "Names collaboration with KUKA, Doosan, Intrinsic (Google) and the Linux Foundation",
+    "Translates instructions into ROS topics, services and actions rather than a proprietary abstraction"
+  ],
+  "what_it_fails_at": [
+    "No safety interlocks, command validation or e-stop integration documented on the reviewed surface — the critical gap for a physical actuator",
+    "Behaviour when a model misinterprets an instruction is not shown or described",
+    "The Cloudflare tunnel to your robot is presented as a convenience without a security discussion",
+    "Every demo clip is a vendor-selected success; no failure case is published",
+    "No pricing, commercial support or SLA statement for what would be industrial deployment",
+    "Natural-language control of machinery that can injure people demands assurance the public surface does not provide"
+  ],
+  "best_for": [
+    "Robotics researchers and ROS developers prototyping natural-language control across heterogeneous fleets",
+    "Teams evaluating multi-robot, multi-model portability without per-robot integration work",
+    "Lab and simulator environments where a misinterpreted instruction is not dangerous"
+  ],
+  "not_recommended_for": [
+    "Production industrial deployment without an independent safety review — the surface documents no interlocks",
+    "Any setting where a misinterpreted natural-language command could injure a person or damage equipment",
+    "Teams requiring commercial support or an SLA for safety-critical machinery"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "hyperb1iss-droidmind",
+      "verdict_diff": "Both expose physical-device control to an AI assistant over MCP — DroidMind to Android handsets, RobotMCP to ROS robots. DroidMind explicitly states a confirmation gate on high-risk actions; RobotMCP demonstrates far broader hardware reach but documents no equivalent safety gate. Different blast radius, and RobotMCP’s is larger.",
+      "preferred_for_axis": "ros-robot-fleet-reach-vs-documented-confirmation-gate"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "One MCP server drives four robot classes under three different models with no per-robot integration work",
+      "source": "https://robotmcp.ai ('Every clip below is the same MCP server, driven by a different model, commanding a different machine. No per-robot integration work.' — Aerial via Gemini, Legged via Cursor, Mobile manipulation via Gemini, Industrial via Claude)",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Natural-language instructions become ROS topics, services and actions across ROS 1 and ROS 2, with any MCP client",
+      "source": "https://robotmcp.ai ('Instructions become ROS topics, services, and actions automatically.'; 'Built on the open Model Context Protocol. Works with Claude, ChatGPT, Gemini, and any MCP client, across ROS 1 and ROS 2.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Apache 2.0, 1,200+ GitHub stars, officially in the MCP Registry; built with KUKA, Doosan, Intrinsic (Google) and the Linux Foundation",
+      "source": "https://robotmcp.ai ('Open-source, Apache 2.0.'; '1,200+ GitHub stars'; 'Officially in the MCP Registry'; 'Built with KUKA · Doosan · Intrinsic (Google) · Linux Foundation')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    },
+    {
+      "claim": "Single-command install with no changes to robot code; opens a Cloudflare tunnel to the robot",
+      "source": "https://robotmcp.ai ('pipx install git+https://github.com/robotmcp/robotmcp_server.git'; 'No changes to your robot code. Just add a rosbridge node and connect.'; 'Start the server. It opens a secure Cloudflare tunnel to your robot.')",
+      "tested_at": "2026-08-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via pipx, add a rosbridge node to the robot, start the server (which opens a Cloudflare tunnel), then point Claude, ChatGPT, Gemini or any MCP client at it. The agent issues natural-language instructions that the server translates into ROS topics, services and actions. This is a high-consequence physical actuator, not a read-only tool — treat granting it to an autonomous agent as a safety decision, not a configuration one.",
+    "agent_friendly_score": 9
+  },
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-08-27",
+    "note": "A robotics control connector; it issues ROS commands rather than publishing synthetic content, so output-marking obligations do not apply."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Any robot. Any AI. A single connector.'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started in 5 Minutes' / 'Star on GitHub'",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open source and free under Apache 2.0; single pipx install command published, no paid tier advertised",
+      "tested_at": "2026-08-27"
+    },
+    {
+      "id": "safety_posture_stated",
+      "pass": false,
+      "required": true,
+      "evidence": "No safety interlocks, command validation or e-stop integration documented for a natural-language physical actuator",
+      "tested_at": "2026-08-27"
+    }
+  ],
+  "evidence_images": {
+    "run_id": "run-c2ea691ab0bf9fee-robotmcp-ai",
+    "base": "https://images.hlido.eu/reviews/lpigeon-ros-mcp-server/run-c2ea691ab0bf9fee-robotmcp-ai",
+    "files": [
+      "home.png",
+      "page____docusaurus_skipToContent_fallback.png",
+      "page_.png",
+      "page_intro.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/lpigeon-ros-mcp-server/run-c2ea691ab0bf9fee-robotmcp-ai/home.png",
+      "https://images.hlido.eu/reviews/lpigeon-ros-mcp-server/run-c2ea691ab0bf9fee-robotmcp-ai/page____docusaurus_skipToContent_fallback.png",
+      "https://images.hlido.eu/reviews/lpigeon-ros-mcp-server/run-c2ea691ab0bf9fee-robotmcp-ai/page_.png",
+      "https://images.hlido.eu/reviews/lpigeon-ros-mcp-server/run-c2ea691ab0bf9fee-robotmcp-ai/page_intro.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source and free under Apache 2.0; single pipx install command published, no paid tier advertised",
+      "tested_at": "2026-08-27"
+    },
+    "last_verified": "2026-08-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-08-27"
+  }
+}
