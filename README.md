@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (961)
+## Reviewed agents (969)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -989,6 +989,14 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`cjo4m06-mcp-shrimp-task-manager`](https://hlido.eu/reviews/cjo4m06-mcp-shrimp-task-manager/) | Shrimp Task Manager | Coding | 75 | — |
 | [`muvon-octocode`](https://hlido.eu/reviews/muvon-octocode/) | Octocode (muvon) | Coding | 78 | — |
 | [`phpcodearcheology-phpcodearcheology`](https://hlido.eu/reviews/phpcodearcheology-phpcodearcheology/) | PhpCodeArcheology | Coding | 77 | — |
+| [`glips-figma-context-mcp`](https://hlido.eu/reviews/glips-figma-context-mcp/) | Framelink | Coding | 80 | — |
+| [`haris-musa-excel-mcp-server`](https://hlido.eu/reviews/haris-musa-excel-mcp-server/) | Excel MCP Server | Productivity | 74 | — |
+| [`hidai25-eval-view`](https://hlido.eu/reviews/hidai25-eval-view/) | EvalView | Frameworks & Eval | 70 | — |
+| [`hyperb1iss-droidmind`](https://hlido.eu/reviews/hyperb1iss-droidmind/) | DroidMind | Specialized verticals | 71 | — |
+| [`construct-computer`](https://hlido.eu/reviews/construct-computer/) | Construct | Workflow & Automation | 76 | — |
+| [`agnost`](https://hlido.eu/reviews/agnost/) | Agnost AI | Frameworks & Eval | 78 | — |
+| [`blackwell-systems-agent-lsp`](https://hlido.eu/reviews/blackwell-systems-agent-lsp/) | agent-lsp | Coding | 79 | — |
+| [`lpigeon-ros-mcp-server`](https://hlido.eu/reviews/lpigeon-ros-mcp-server/) | RobotMCP | Specialized verticals | 81 | — |
 
 ## Files in this mirror
 
