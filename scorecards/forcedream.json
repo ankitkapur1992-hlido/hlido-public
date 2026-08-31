@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "slug": "forcedream",
+  "name": "ForceDream",
+  "agent_url": "https://forcedream.ai",
+  "category": "Infrastructure",
+  "run_id": "run-f70abd463e739df9-forcedream-ai",
+  "run_at": "2026-08-31T04:31:02.954Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "tier_of_test": "T2",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A genuinely agent-native execution runtime — discover, price, execute and cryptographically verify agent work over A2A/MCP — wrapped in oversized \"sovereign OS\" language and still very small.",
+    "body": "Underneath the maximalist branding ('the sovereign AI operating system', 'sovereign intelligence'), ForceDream is doing something concrete and unusually on-thesis for an agent-to-agent world: it runs a live A2A + MCP marketplace where an agent can discover a capability with no API key, get a firm price before work starts, execute over JSON-RPC, and receive an Ed25519 + Merkle-signed proof any third party can verify without an account. It publishes to the Google Agent Registry and the official MCP registry, implements A2A v0.3.0 and v1.0, exposes 17 MCP tools (five credential-free), and ships proof SDKs across twelve languages gated in CI. For a register that cares about machine-readability and verifiability first, those are real credits. The reasons to stay measured: the scale is tiny and stated as such (17 agents, ~5,000 audit records), so this is early infrastructure, not a proven economy; the verification and 'zero altered' claims are exactly what needs independent auditing rather than being taken from the marketing surface; and the sovereign-OS framing oversells what is, today, a niche verifiable-execution runtime. Promising and legible to agents — but small and unproven.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70), on the border: a genuinely agent-native design (credential-free discovery/quoting, A2A + MCP, cryptographically verifiable proofs, twelve SDKs, registered where agents look) earns real credit for machine-readability. Held at the band floor because the scale is tiny and self-stated (17 agents, ~5,000 records), the integrity/\"zero altered\" claims are unaudited from the public surface, and the \"sovereign OS\" framing overstates a still-niche runtime.",
+  "what_it_does_well": [
+    "Credential-free agent discovery and price-quoting before any work starts (no API key required)",
+    "Cryptographically verifiable outputs (Ed25519 + Merkle) any third party can check without an account",
+    "Standards-based: A2A v0.3.0/v1.0 + a real MCP server (17 tools), published to the Google Agent Registry and official MCP registry",
+    "Twelve language SDKs against one proof spec, gated in CI",
+    "Machine-readable throughout (agent-card.json, documented endpoints) — legible to other agents first"
+  ],
+  "what_it_fails_at": [
+    "Very small scale, self-stated (17 agents, ~5,000 audit records) — early infrastructure, not a proven economy",
+    "Integrity claims (\"zero altered\", WORM-sealed) are unaudited from the public surface",
+    "Grandiose \"sovereign intelligence OS\" framing oversells the current, niche reality",
+    "Split public presence (forcedream.ai technical surface vs forcedream.com) can confuse buyers"
+  ],
+  "best_for": [
+    "Developers building A2A or MCP agents who want priced, verifiable third-party capabilities",
+    "Teams that need cryptographic proof of what an agent did, verifiable by outside parties",
+    "Early adopters exploring an open, standards-based agent economy"
+  ],
+  "not_recommended_for": [
+    "Production workloads needing scale, uptime history, or an audited integrity guarantee today",
+    "Buyers put off by maximalist framing who want claims independently verified first",
+    "Non-technical users — this is a developer/agent-facing runtime"
+  ],
+  "red_flags": [
+    "\"AUDIT RECORDS VERIFIED, ZERO ALTERED\" and WORM integrity are asserted on the marketing surface without independent audit",
+    "Maximalist \"sovereign intelligence OS\" positioning is disproportionate to the stated scale"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Credential-free discovery and quoting over A2A (POST /v1/discover, /v1/agents/quote)",
+      "source": "https://forcedream.ai",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "MCP server with 17 tools, five requiring no credentials",
+      "source": "https://forcedream.ai",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Published to Google Agent Registry and the official MCP registry; A2A v0.3.0/v1.0",
+      "source": "https://forcedream.ai",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Ed25519 + Merkle proofs; 5,000 audit records, zero altered",
+      "source": "https://forcedream.ai",
+      "tested_at": "2026-08-31",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "High by design: a live MCP server (17 tools) and A2A v0.3.0/v1.0 runtime with credential-free discovery/quoting, machine-readable agent cards, and twelve proof SDKs. Registered in agent indexes. Not behaviourally verified by Hlido from the public surface; scale is small.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Discover, price, execute and verify agent work over A2A/MCP",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Control Room' / 'API access' / signup returns a key immediately",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Per-successful-call billing; discovery/quoting credential-free; instant self-serve key",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Documented live endpoints, verification endpoints, 3D agent-network view",
+      "tested_at": "2026-08-31T00:00:00Z"
+    }
+  ],
+  "summary": "A genuinely agent-native execution runtime — discover, price, execute and cryptographically verify agent work over A2A/MCP — wrapped in oversized \"sovereign OS\" language and still very small.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-29",
+  "attestation_url": "/data/attestations/forcedream.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-31",
+    "source": "r-publish-editorial-enrich",
+    "note": "The product is a verifiable-execution runtime, not a synthetic-media generator; it emphasises cryptographic execution proofs (Ed25519/Merkle) rather than Article-50 content marking. No C2PA/watermark statement for generated media found."
+  },
+  "evidence_images": {
+    "run_id": "run-f70abd463e739df9-forcedream-ai",
+    "base": "https://images.hlido.eu/reviews/forcedream/run-f70abd463e739df9-forcedream-ai",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_.png",
+      "page_os.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/forcedream/run-f70abd463e739df9-forcedream-ai/home.png",
+      "https://images.hlido.eu/reviews/forcedream/run-f70abd463e739df9-forcedream-ai/page_.png",
+      "https://images.hlido.eu/reviews/forcedream/run-f70abd463e739df9-forcedream-ai/page_.png",
+      "https://images.hlido.eu/reviews/forcedream/run-f70abd463e739df9-forcedream-ai/page_os.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine (CF Browser Rendering) during the reviewed run, served from R2. `run_id` is the ENGINE run id."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "free",
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Five MCP tools credential-free; remaining twelve billed per successful call; discovery and quoting require no API key",
+      "tested_at": "2026-08-31"
+    },
+    "last_verified": "2026-08-31",
+    "basis": "Derived from Hlido-held evidence only (public surface). Per-call amounts not enumerated on the captured surface; verify with the vendor.",
+    "derived_at": "2026-08-31"
+  }
+}
