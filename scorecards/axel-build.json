@@ -1,0 +1,165 @@
+{
+  "schema_version": "2.0",
+  "slug": "axel-build",
+  "name": "Axel",
+  "agent_url": "https://axel.build",
+  "category": "Workflow & Automation",
+  "run_id": "run-95e0da52fc8f702e-axel-build",
+  "run_at": "2026-08-31T00:33:48.034Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "tier_of_test": "T2",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A native-Mac control room for dispatching coding agents — a thoughtful niche tool with a strong approval model, judged on a thin public surface.",
+    "body": "Axel is a macOS app that treats AI coding agents as a task queue: add tasks, pick which agent (Claude, Codex, OpenCode, Antigravity) runs each, reorder priorities live, and watch them execute in parallel. The details it chose to build are the encouraging part — a single approval inbox where every file edit, command, and API call needs explicit permission (with diff preview and auto-approve rules), portable skill files symlinked into each agent's expected location, and git-worktree + tmux session spawning per branch. For a developer running several coding agents at once, that human-in-the-loop control surface is exactly the missing piece, and 'nothing runs without approval' is a genuinely good default. The heavy caveat, and the reason this review carries low confidence: the public surface is thin — a single captured screenshot, no pricing shown, macOS-only, and a young vendor (© 2025 Txtx, Inc.) — so this is a promising-looking, narrowly-scoped utility assessed from its landing page, not a verified evaluation. Treat the score as provisional pending a fuller, hands-on review.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) at low confidence: the design choices visible on the surface are strong (explicit per-action approval inbox, portable skills, worktree/tmux orchestration for dispatching coding agents). Kept at the band floor and flagged low-confidence because the public evidence is thin (one screenshot, no pricing), the product is macOS-only, and the vendor is early — the score is provisional pending a hands-on review.",
+  "what_it_does_well": [
+    "Explicit approval inbox — every file edit, command, and API call is gated with diff/preview and auto-approve rules",
+    "Multi-agent dispatch from one queue (Claude, Codex, OpenCode, Antigravity), reorderable while running",
+    "Portable skills: one skill file symlinked into each agent’s expected location at launch",
+    "Per-branch git worktree + tmux session spawning; sessions persist and reattach",
+    "Native macOS app with keyboard-first control and token/cost tracking"
+  ],
+  "what_it_fails_at": [
+    "Very thin public surface (single captured screenshot) — limits confidence in this assessment",
+    "macOS-only (plus iOS/visionOS) — no cross-platform story",
+    "No pricing disclosed on the reviewed surface",
+    "Early vendor with no public track record or reliability evidence"
+  ],
+  "best_for": [
+    "Mac developers running multiple coding agents who want tight human-in-the-loop approval",
+    "Users who value keyboard-driven, local orchestration over cloud dashboards",
+    "Teams standardizing on portable skill files across agents"
+  ],
+  "not_recommended_for": [
+    "Non-macOS users",
+    "Buyers who need transparent pricing before trialing",
+    "Anyone needing a proven, mature orchestration platform today"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Queue tasks and dispatch to multiple coding agents (Claude, Codex, OpenCode, Antigravity)",
+      "source": "https://axel.build",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Per-action approval inbox with diff preview and auto-approve rules",
+      "source": "https://axel.build",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Portable skills symlinked per agent; git worktree + tmux per branch",
+      "source": "https://axel.build",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Native macOS / iOS / visionOS SwiftUI app",
+      "source": "https://axel.build",
+      "tested_at": "2026-08-31",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Indirect: Axel is a local orchestration client for driving OTHER coding agents (Claude/Codex/OpenCode), not a component other agents call. Strong human-in-the-loop control surface; no programmatic interface for third-party agents surfaced.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Accelerated Task Manager for Mac' — queue and dispatch tasks to agents",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for Mac'",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing shown on the reviewed surface (download link only)",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature walkthrough with approval-inbox and queue UI examples",
+      "tested_at": "2026-08-31T00:00:00Z"
+    }
+  ],
+  "summary": "A native-Mac control room for dispatching coding agents — a thoughtful niche tool with a strong approval model, judged on a thin public surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-29",
+  "attestation_url": "/data/attestations/axel-build.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-08-31",
+    "source": "r-publish-editorial-enrich",
+    "note": "Local agent-orchestration client, not a synthetic-media generator; no C2PA/watermark statement applicable or found."
+  },
+  "evidence_images": {
+    "run_id": "run-95e0da52fc8f702e-axel-build",
+    "base": "https://images.hlido.eu/reviews/axel-build/run-95e0da52fc8f702e-axel-build",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/axel-build/run-95e0da52fc8f702e-axel-build/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine (CF Browser Rendering) during the reviewed run, served from R2. `run_id` is the ENGINE run id."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "unknown"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing shown on the reviewed surface; a \"Download for Mac\" CTA is the primary access path",
+      "tested_at": "2026-08-31"
+    },
+    "last_verified": "2026-08-31",
+    "basis": "Derived from Hlido-held evidence only. Pricing not disclosed on the captured surface; verify with the vendor.",
+    "derived_at": "2026-08-31"
+  }
+}
