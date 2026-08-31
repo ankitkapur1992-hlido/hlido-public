@@ -1,0 +1,171 @@
+{
+  "schema_version": "2.0",
+  "slug": "maritime",
+  "name": "Maritime",
+  "agent_url": "https://maritime.sh",
+  "category": "Infrastructure",
+  "run_id": "run-f8712cd20e309b66-maritime-sh",
+  "run_at": "2026-08-31T04:32:31.080Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "tier_of_test": "T2",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Agent-first hosting that gives every agent its own micro-VM at a flat $1/month — a genuinely differentiated infra bet, still early and self-benchmarked.",
+    "body": "Maritime is infrastructure built for one specific shape of demand: running many isolated AI agents cheaply, one hardware-isolated micro-VM per agent rather than threads in a shared runtime. The pitch is unusually concrete for this category — a non-interactive CLI (so your own agents can provision agents), typed TypeScript and Python SDKs, lifecycle webhooks, encrypted per-VM secrets, sleep/wake in about a second, and a flat $1-per-agent-per-month price with nothing metered. That combination — hard isolation plus flat, legible pricing plus an agent-provisionable CLI — is a real position, and it is aimed squarely at the emerging pattern of shipping a dedicated agent per end-customer. Where to stay skeptical: the headline comparison table against E2B, Modal, Fly.io and others is vendor-authored and should be treated as a claim, not a benchmark; 'no cold starts / ~1s wake' and the isolation guarantees are exactly the things that need independent measurement before they are trusted for production; and the company is young with limited public track record. As a component in an agent stack this scores well because it is designed to be driven programmatically — but the reliability claims are unverified from the public surface alone.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-08-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) on a clear, differentiated value proposition (per-agent micro-VM isolation), transparent flat pricing, and a genuinely agent-first control surface (non-interactive CLI + typed SDKs + webhooks). Held below higher bands because the review is public-surface only: the isolation and no-cold-start claims are unmeasured, the competitive comparison is self-authored, and the company has a short public track record.",
+  "what_it_does_well": [
+    "One hardware-isolated micro-VM per agent — a clear, defensible isolation model over shared-runtime rivals",
+    "Flat, legible pricing ($1/agent/month, nothing metered) that is easy to reason about at scale",
+    "Agent-first control surface: a fully non-interactive CLI so agents can provision agents, plus typed TS/Python SDKs and REST",
+    "Lifecycle webhooks (deploy/sleep/wake/fail) and per-VM encrypted secrets",
+    "Migration paths advertised from E2B, LangGraph and other platforms, plus SSH access and exportable state (low lock-in posture)"
+  ],
+  "what_it_fails_at": [
+    "The headline performance/isolation claims (no cold starts, ~1s wake, hard boundaries) are unmeasured on the public surface",
+    "The side-by-side comparison table against competitors is vendor-authored — a marketing claim, not an independent benchmark",
+    "Short public track record; no third-party reliability or security evidence visible",
+    "No public status/SLA or incident history surfaced from the homepage"
+  ],
+  "best_for": [
+    "Startups selling a dedicated AI agent per end-customer that need hard per-tenant isolation",
+    "Teams that want their own agents to programmatically provision and tear down agent runtimes",
+    "Cost-sensitive workloads where flat per-agent pricing beats metered compute"
+  ],
+  "not_recommended_for": [
+    "Workloads needing a proven, long-standing reliability/SLA track record today",
+    "Buyers who need the isolation and cold-start claims independently verified before adoption",
+    "Single-agent hobby use where a generic PaaS is simpler"
+  ],
+  "red_flags": [
+    "Competitive comparison table is self-published and should not be read as an independent benchmark"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "One isolated micro-VM per agent, provisioned from your backend",
+      "source": "https://maritime.sh",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Flat pricing at $1 per agent per month, nothing metered",
+      "source": "https://maritime.sh (pricing table)",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "Non-interactive CLI + TypeScript/Python SDKs + REST",
+      "source": "https://maritime.sh",
+      "tested_at": "2026-08-31",
+      "verified": true
+    },
+    {
+      "claim": "No cold starts / ~1s wake from sleep",
+      "source": "https://maritime.sh",
+      "tested_at": "2026-08-31",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Strong: Maritime is designed to be driven programmatically — a non-interactive CLI plus typed TS/Python SDKs and REST let an agent provision, wake, and tear down agent runtimes. Not behaviourally tested by Hlido from the public surface.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Run a thousand agents as easily as one' — per-agent micro-VM isolation",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start free' / 'Book a demo'",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Transparent flat tiers Free/$20/$100/$500/Custom + $1/agent",
+      "tested_at": "2026-08-31T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live dashboard URL example + comparison table (vendor-authored)",
+      "tested_at": "2026-08-31T00:00:00Z"
+    }
+  ],
+  "summary": "Agent-first hosting that gives every agent its own micro-VM at a flat $1/month — a genuinely differentiated infra bet, still early and self-benchmarked.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-11-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-11-29",
+  "attestation_url": "/data/attestations/maritime.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Agent-hosting infrastructure, not a generative-output surface — Article-50 synthetic-content marking does not apply to the platform itself.",
+    "checked_at": "2026-08-31",
+    "source": "r-publish-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-f8712cd20e309b66-maritime-sh",
+    "base": "https://images.hlido.eu/reviews/maritime/run-f8712cd20e309b66-maritime-sh",
+    "files": [
+      "home.png",
+      "page_.png",
+      "page_pricing.png",
+      "page_docs.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/maritime/run-f8712cd20e309b66-maritime-sh/home.png",
+      "https://images.hlido.eu/reviews/maritime/run-f8712cd20e309b66-maritime-sh/page_.png",
+      "https://images.hlido.eu/reviews/maritime/run-f8712cd20e309b66-maritime-sh/page_pricing.png",
+      "https://images.hlido.eu/reviews/maritime/run-f8712cd20e309b66-maritime-sh/page_docs.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine (CF Browser Rendering) during the reviewed run, served from R2. `run_id` is the ENGINE run id."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "free",
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Flat tiers Free/$20/$100/$500 + $1 per additional agent/month; per-GB RAM and SSD add-ons listed",
+      "tested_at": "2026-08-31"
+    },
+    "last_verified": "2026-08-31",
+    "basis": "Derived from Hlido-held evidence only (public pricing table captured during the reviewed run). Verify current prices on the vendor pricing page.",
+    "derived_at": "2026-08-31"
+  }
+}
