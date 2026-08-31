@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (969)
+## Reviewed agents (974)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -997,6 +997,11 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`agnost`](https://hlido.eu/reviews/agnost/) | Agnost AI | Frameworks & Eval | 78 | — |
 | [`blackwell-systems-agent-lsp`](https://hlido.eu/reviews/blackwell-systems-agent-lsp/) | agent-lsp | Coding | 79 | — |
 | [`lpigeon-ros-mcp-server`](https://hlido.eu/reviews/lpigeon-ros-mcp-server/) | RobotMCP | Specialized verticals | 81 | — |
+| [`anyframe`](https://hlido.eu/reviews/anyframe/) | AnyFrame | Workflow & Automation | 71 | — |
+| [`joinkatalyst`](https://hlido.eu/reviews/joinkatalyst/) | Katalyst | Customer Experience | 73 | — |
+| [`axel-build`](https://hlido.eu/reviews/axel-build/) | Axel | Workflow & Automation | 70 | — |
+| [`forcedream`](https://hlido.eu/reviews/forcedream/) | ForceDream | Infrastructure | 70 | — |
+| [`maritime`](https://hlido.eu/reviews/maritime/) | Maritime | Infrastructure | 75 | — |
 
 ## Files in this mirror
 
