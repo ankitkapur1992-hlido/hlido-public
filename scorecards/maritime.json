@@ -156,16 +156,22 @@
   "pricing_facts": {
     "schema": "pricing-facts/1",
     "model": [
-      "free",
-      "paid"
+      "usage-based",
+      "subscription"
+    ],
+    "price_points": [
+      {
+        "quote": "Agent-first hosting that gives every agent its own micro-VM at a flat $1/month — a genuinely differentiated infra bet, still early and self-benchmarked.",
+        "source": "summary"
+      }
     ],
     "pricing_disclosed": {
       "pass": true,
-      "evidence": "Flat tiers Free/$20/$100/$500 + $1 per additional agent/month; per-GB RAM and SSD add-ons listed",
+      "evidence": "Transparent flat tiers Free/$20/$100/$500/Custom + $1/agent",
       "tested_at": "2026-08-31"
     },
     "last_verified": "2026-08-31",
-    "basis": "Derived from Hlido-held evidence only (public pricing table captured during the reviewed run). Verify current prices on the vendor pricing page.",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-31"
   }
 }
