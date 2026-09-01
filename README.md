@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (974)
+## Reviewed agents (978)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1002,6 +1002,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`axel-build`](https://hlido.eu/reviews/axel-build/) | Axel | Workflow & Automation | 70 | — |
 | [`forcedream`](https://hlido.eu/reviews/forcedream/) | ForceDream | Infrastructure | 70 | — |
 | [`maritime`](https://hlido.eu/reviews/maritime/) | Maritime | Infrastructure | 75 | — |
+| [`proliferate-ai-proliferate`](https://hlido.eu/reviews/proliferate-ai-proliferate/) | Proliferate | Coding | 73 | — |
+| [`sbroenne-mcp-server-excel`](https://hlido.eu/reviews/sbroenne-mcp-server-excel/) | Excel MCP Server | Workflow & Automation | 80 | — |
+| [`srclight-srclight`](https://hlido.eu/reviews/srclight-srclight/) | Srclight | Coding | 72 | — |
+| [`utensils-mcp-nixos`](https://hlido.eu/reviews/utensils-mcp-nixos/) | MCP-NixOS | Infrastructure | 78 | — |
 
 ## Files in this mirror
 
