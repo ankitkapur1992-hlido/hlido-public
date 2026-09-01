@@ -1,0 +1,198 @@
+{
+  "schema_version": "2.0",
+  "slug": "veelenga-claude-mermaid",
+  "name": "claude-mermaid",
+  "agent_url": "https://veelenga.github.io/claude-mermaid/",
+  "repo_url": "https://github.com/veelenga/claude-mermaid",
+  "category": "Coding",
+  "run_id": "run-veelenga-claude-mermaid-r4enrich-2026-09-01",
+  "run_at": "2026-09-01T21:20:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A two-tool MCP server that does one narrow job — live Mermaid previews inside Claude Code — and documents it better than most products ten times its size.",
+    "body": "claude-mermaid solves a specific irritation in agent-assisted work: you ask a coding agent for a diagram, it writes Mermaid source, and you then leave the loop to look at it. This server closes that loop. It renders the diagram with @mermaid-js/mermaid-cli, serves it from a local server on port 3737, and pushes a WebSocket reload on every subsequent edit, so the browser tab keeps pace with the agent. The public surface is unusually strong for a single-maintainer open-source tool. It publishes the complete tool contract — both tools, every parameter, type and default, in a table on the landing page — which is exactly the artifact another agent needs to decide whether to call it, and it is the artifact most MCP servers omit. Installation is documented for three client paths (Claude Code plugin, npm, generic MCP clients), the licence is stated (MIT), the author is named, and a standalone gallery mode is offered for use without an agent at all. The limits are structural rather than sloppy. Everything is local: there is no hosted or remote surface, so the server is only as available as the developer's own machine, and it inherits a Node plus mermaid-cli dependency chain the page does not version. Live reload is scoped to SVG; PNG and PDF are render-on-save. And the surface carries no adoption, release-cadence or reliability evidence at all — no changelog, no version history, no downloads figure, no third-party usage — so nothing here speaks to whether the project is maintained beyond the day it was read. That is the gap between a well-documented tool and a dependable one, and it is the reason this sits at STEADY rather than higher.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the public surface does the hard part well: the full two-tool contract is published with parameters, types and defaults, installation is documented for three distinct client paths, the licence and author are stated, and the product's single claim — live reload of a rendered diagram as the agent edits it — is explained mechanically enough to be checked. Not VITAL because nothing on the surface evidences durability: no changelog, no release history, no version or download signal, no third-party usage, and a hard dependency on a local Node plus mermaid-cli toolchain that is never pinned. High documentation quality is not the same as demonstrated reliability, and only the first is visible here.",
+  "what_it_does_well": [
+    "Publishes the complete tool contract on the landing page — both tools, every parameter with type and default",
+    "Explains the render loop mechanically (tool call, mermaid-cli render, local serve on :3737, WebSocket reload) rather than asserting it",
+    "Documents three separate install paths: Claude Code plugin, npm, and generic MCP clients",
+    "States licence (MIT), author, and links both GitHub and npm from the landing page",
+    "Supports concurrent previews via named preview_id, so several diagrams can be worked in parallel",
+    "Offers a standalone gallery mode (claude-mermaid --serve) that works with no agent attached"
+  ],
+  "what_it_fails_at": [
+    "No adoption or reliability evidence on the surface — no changelog, release history, version list, or download figure",
+    "Entirely local: no hosted or remote endpoint, so availability is the developer's own machine",
+    "Unpinned dependency chain — requires Node and @mermaid-js/mermaid-cli, neither version-constrained on the page",
+    "Live reload is SVG-only; PNG and PDF render on save rather than continuously",
+    "Fixed default port 3737 with no documented conflict or reconfiguration story",
+    "Single-maintainer project with no stated support or maintenance commitment"
+  ],
+  "best_for": [
+    "Claude Code users who iterate on architecture, sequence or ER diagrams during a coding session",
+    "Developers who want diagrams-as-code reviewed visually without leaving the agent loop",
+    "Teams already standardised on Mermaid who want a local, no-account rendering path",
+    "Anyone needing SVG/PNG/PDF export of agent-authored diagrams into a repo path"
+  ],
+  "not_recommended_for": [
+    "Hosted or CI environments — the server assumes a local machine and a local browser",
+    "Diagram formats other than Mermaid (no PlantUML, Graphviz or D2 path)",
+    "Teams requiring a supported dependency with a published maintenance or security commitment",
+    "Shared or multi-user rendering — previews are per-machine, on a fixed local port"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "sbroenne-mcp-server-excel",
+      "verdict_diff": "Both are narrow, well-documented single-purpose MCP servers with published tool contracts. The Excel server acts on a durable artifact the user keeps; claude-mermaid renders an ephemeral preview the user looks at. Choose by whether you need the agent to change a file or to show you something.",
+      "preferred_for_axis": "visual-feedback-loop"
+    },
+    {
+      "slug": "utensils-mcp-nixos",
+      "verdict_diff": "mcp-nixos exposes a large external knowledge surface for the agent to query; claude-mermaid exposes two tools and a rendering loop. mcp-nixos is the better model for read-heavy lookup, claude-mermaid for tight human-in-the-loop iteration.",
+      "preferred_for_axis": "iteration-over-lookup"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Exposes exactly two MCP tools, mermaid_preview and mermaid_save, with full parameter tables",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Live reload pushed over WebSocket on every agent edit; local server at localhost:3737",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "MIT licensed, free and open source, built by Vitalii Elenhaupt",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Installable as a Claude Code plugin, via npm, or with any MCP-compatible client",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Exports to SVG, PNG and PDF; live preview is SVG-only",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "No changelog, release history or adoption figure published on the landing page",
+      "source": "https://veelenga.github.io/claude-mermaid/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server. Install as a Claude Code plugin or run the claude-mermaid command from any MCP-compatible client; the agent then calls mermaid_preview(diagram, preview_id, ...) to render and mermaid_save(save_path, preview_id, ...) to write the result to disk. Both tools and all their parameters are documented publicly, so an agent can bind to the contract without reading source. Local-only — the agent and the server must share a machine.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-01T21:20:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Ask Claude for a diagram. Watch it render as you refine it.'",
+      "tested_at": "2026-09-01T21:20:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install it' / '/plugin marketplace add veelenga/claude-mermaid'",
+      "tested_at": "2026-09-01T21:20:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "'Free and open source · MIT license · works with any MCP client.'",
+      "tested_at": "2026-09-01T21:20:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Worked example of an OAuth sequence diagram rendered to localhost:3737/oauth, plus a full two-tool parameter reference",
+      "tested_at": "2026-09-01T21:20:00Z"
+    }
+  ],
+  "summary": "A two-tool MCP server that does one narrow job — live Mermaid previews inside Claude Code — and documents it better than most products ten times its size.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-01",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-01",
+  "attestation_url": "/data/attestations/veelenga-claude-mermaid.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-r4",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-01",
+    "source": "r4-editorial-enrich"
+  },
+  "evidence_images": {
+    "run_id": "run-0884a400e2e8d8fc-veelenga-github-io",
+    "base": "https://images.hlido.eu/reviews/veelenga-claude-mermaid/run-0884a400e2e8d8fc-veelenga-github-io",
+    "files": [
+      "home.png",
+      "page_main.png",
+      "page_top.png",
+      "page_how.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/veelenga-claude-mermaid/run-0884a400e2e8d8fc-veelenga-github-io/home.png",
+      "https://images.hlido.eu/reviews/veelenga-claude-mermaid/run-0884a400e2e8d8fc-veelenga-github-io/page_main.png",
+      "https://images.hlido.eu/reviews/veelenga-claude-mermaid/run-0884a400e2e8d8fc-veelenga-github-io/page_top.png",
+      "https://images.hlido.eu/reviews/veelenga-claude-mermaid/run-0884a400e2e8d8fc-veelenga-github-io/page_how.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "'Free and open source · MIT license · works with any MCP client.'",
+      "tested_at": "2026-09-01"
+    },
+    "last_verified": "2026-09-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-01"
+  }
+}
