@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "slug": "utensils-mcp-nixos",
+  "name": "MCP-NixOS",
+  "agent_url": "https://mcp-nixos.io/",
+  "repo_url": null,
+  "category": "Infrastructure",
+  "run_id": "run-utensils-mcp-nixos-rpub-2026-09-01",
+  "run_at": "2026-09-01T08:49:26.323Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "MCP server that gives AI real, current NixOS / Home Manager / nix-darwin / flakes data so it stops hallucinating package and option names — narrow, well-built and context-frugal.",
+    "body": "MCP-NixOS is a model of a good single-purpose MCP server: it picks one sharp, real problem — LLMs confidently inventing NixOS package names, attribute paths and option strings — and solves it by serving live, authoritative data over the Model Context Protocol. The coverage is broad within its niche (130K+ packages and 23K+ system options, 5K+ Home Manager options, nix-darwin settings, flakes via search.nixos.org and FlakeHub, package version history through NixHub, and even Noogle/Nixvim/NVF function and module data), and the surface is documented with an unusually clear, self-aware voice. Two design decisions stand out for agent use. First, it is deliberately context-frugal — the docs claim a total footprint around ~1,030 tokens, a pointed contrast with MCP servers that flood a model's context window, which matters directly for cost and reliability. Second, it requires no local Nix install to run and works on Windows, macOS and Linux, because it is an API client rather than a build tool — lowering the barrier considerably. It's clearly cared-for (815 GitHub stars, HTTP/remote-MCP support, tidy docs). The honest limits are simply scope and read-depth: it is a knowledge/lookup server, not an actuator (it won't build or deploy Nix configurations), it is only valuable to the Nix community, and this public-surface review reads the documentation rather than exercising every query path. Within its lane, this is one of the more polished and thoughtfully-scoped MCP servers in the cohort.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78), medium-high confidence. It earns solid STEADY on a crisply-scoped, genuinely useful purpose (kill NixOS hallucinations with live data), broad in-niche coverage, meaningful agent-aware engineering (a ~1,030-token footprint and no-Nix-required cross-platform operation), and clear evidence of care (815 stars, remote-MCP support, strong docs). Not higher because its value is inherently bounded to the Nix ecosystem and because this is a documentation-level read rather than an exercised test of every data path.",
+  "what_it_does_well": [
+    "Serves real, current NixOS data (130K+ packages, 23K+ options) so agents stop hallucinating attribute and package names",
+    "Broad in-niche coverage: Home Manager, nix-darwin, flakes/FlakeHub, package version history (NixHub), Noogle/Nixvim/NVF",
+    "Context-frugal by design — documented ~1,030-token total footprint, a real cost/reliability advantage for agents",
+    "No Nix install required and cross-platform (Windows/macOS/Linux) — it's an API client, not a build tool",
+    "Well-maintained and documented: 815 GitHub stars, HTTP/remote-MCP support, clear self-aware docs"
+  ],
+  "what_it_fails_at": [
+    "Knowledge/lookup only — it does not build, evaluate or deploy Nix configurations (not an actuator)",
+    "Value is inherently confined to the NixOS ecosystem",
+    "Public-surface review reads the docs; the freshness and completeness of every backing data source is claimed, not independently audited here"
+  ],
+  "best_for": [
+    "Nix users driving Claude, Cursor or another MCP client who need accurate package/option names instead of guesses",
+    "Agent workflows that write or explain Nix configs and must not hallucinate attribute paths",
+    "Context-budget-sensitive setups that can't afford a token-heavy MCP server"
+  ],
+  "not_recommended_for": [
+    "Anyone outside the Nix/NixOS ecosystem",
+    "Users needing to actually build, evaluate or deploy Nix configurations (this is lookup, not execution)",
+    "Teams wanting a broad, general-purpose knowledge server rather than a single-domain one"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Serves real NixOS package/option data over MCP; 130K+ packages, 23K+ options",
+      "source": "https://mcp-nixos.io/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Covers Home Manager, nix-darwin, flakes/FlakeHub, package version history and more",
+      "source": "https://mcp-nixos.io/ (Home / Resources)",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "~1,030-token total footprint; no Nix required to run; cross-platform; 815 GitHub stars",
+      "source": "https://github.com/utensils/mcp-nixos",
+      "tested_at": "2026-09-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct MCP server (stdio or HTTP/remote MCP at /mcp) usable from Claude, Cursor and any MCP client. Purpose-built for agents to query authoritative NixOS data with a minimal context footprint — highly composable within the Nix domain.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Because your AI shouldn't hallucinate package names.'",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / 'View on GitHub'",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source; free; no Nix required to run",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Usage docs + capability list captured; HTTP/remote-MCP endpoint documented",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    }
+  ],
+  "summary": "MCP server that gives AI real, current NixOS / Home Manager / nix-darwin / flakes data so it stops hallucinating package and option names — narrow, well-built and context-frugal.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": null,
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": null,
+  "attestation_url": "/data/attestations/utensils-mcp-nixos.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-rpublish",
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Developer tooling / MCP server — not a generative-content producer, so Article-50 synthetic-content marking does not apply.",
+    "checked_at": "2026-09-01"
+  },
+  "evidence_images": {
+    "run_id": "run-5f4f0fe46cf80b68-mcp-nixos-io",
+    "base": "https://images.hlido.eu/reviews/utensils-mcp-nixos/run-5f4f0fe46cf80b68-mcp-nixos-io",
+    "files": [
+      "home.png",
+      "page_VPContent.png",
+      "pageusage.png",
+      "pageabout.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/utensils-mcp-nixos/run-5f4f0fe46cf80b68-mcp-nixos-io/home.png",
+      "https://images.hlido.eu/reviews/utensils-mcp-nixos/run-5f4f0fe46cf80b68-mcp-nixos-io/page_VPContent.png",
+      "https://images.hlido.eu/reviews/utensils-mcp-nixos/run-5f4f0fe46cf80b68-mcp-nixos-io/pageusage.png",
+      "https://images.hlido.eu/reviews/utensils-mcp-nixos/run-5f4f0fe46cf80b68-mcp-nixos-io/pageabout.png"
+    ],
+    "verified_at": null,
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from scorecard.run_id and is the only one these keys resolve under. Link-verified downstream by scripts/link-review-evidence.mjs before surfacing."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source; free; no Nix required to run",
+      "tested_at": "2026-09-01"
+    },
+    "last_verified": "2026-09-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-01"
+  }
+}
