@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "srclight-srclight",
+  "name": "Srclight",
+  "agent_url": "https://srclight.dev",
+  "repo_url": null,
+  "category": "Coding",
+  "run_id": "run-srclight-srclight-rpub-2026-09-01",
+  "run_at": "2026-09-01T08:49:26.323Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Local-first code-indexing MCP server for AI agents — hybrid FTS5 + tree-sitter + embeddings in a single SQLite file, fully offline, 25 tools.",
+    "body": "Srclight targets a real and growing pain: coding agents burn context and latency making dozens of grep/glob calls to understand a repo, and Srclight offers to replace that with a precise, structured index they can query over MCP. The engineering choices on the public surface are tasteful and coherent — a single SQLite file per repo (no external database, no Docker, no cloud), tree-sitter for precise symbol extraction plus call graphs, and a hybrid search that fuses FTS5 keyword matching with semantic embeddings via reciprocal rank fusion. The privacy posture is a genuine differentiator: embeddings run locally through Ollama, so code never leaves the machine, and it explicitly supports air-gapped and private repos. Twenty-five MCP tools, a one-line pip install, multi-repo workspaces and an optional GPU-accelerated vector cache round out a surprisingly complete story for a young project. The caveats are the caveats of youth and of a public-surface read: the star count is small (early adoption), the performance claims (sub-3ms semantic queries, 60-second setup) are documented rather than independently benchmarked here, and the local-embeddings path adds an Ollama dependency and hardware expectations that the landing page soft-pedals. For agent builders who want retrieval that stays on their own hardware, it is a well-conceived, honestly-scoped tool worth watching.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72), medium confidence. It clears the STEADY bar on a clear, well-argued value proposition (structured index over MCP to cut agent grep/glob overhead), a privacy-first local/offline architecture that is a real differentiator, and a genuinely complete feature surface for its age (25 tools, hybrid search, multi-repo, MIT, PyPI). Kept out of the higher band because adoption is still early (small star count) and the notable performance claims are documented but not independently verified in this public-surface review.",
+  "what_it_does_well": [
+    "Replaces dozens of agent grep/glob calls with a precise, structured, queryable index over MCP",
+    "Fully local and offline: local embeddings via Ollama, so code never leaves the machine (air-gapped/private-repo friendly)",
+    "Minimal footprint — a single SQLite file per repo, no external DB, Docker or cloud services",
+    "Hybrid retrieval done right: FTS5 keyword + semantic embeddings fused via reciprocal rank fusion, plus tree-sitter symbol/call-graph extraction",
+    "Complete surface for a young project: 25 MCP tools, one-line pip install, multi-repo workspaces, MIT license on PyPI"
+  ],
+  "what_it_fails_at": [
+    "Early adoption — small GitHub star count and limited independent track record",
+    "Headline performance claims (sub-3ms semantic queries, 60-second setup) are documented, not independently benchmarked here",
+    "Local-embeddings path adds an Ollama dependency and real hardware expectations the landing page underplays",
+    "Public surface is a single landing page; depth of the 25 tools is described more than demonstrated"
+  ],
+  "best_for": [
+    "Agent builders who want code retrieval that stays entirely on their own hardware",
+    "Private-repo, air-gapped or compliance-sensitive teams that can't send code to a cloud indexer",
+    "Claude Code / Cursor / Windsurf users wanting to cut token spend on repository exploration"
+  ],
+  "not_recommended_for": [
+    "Teams that prefer a fully managed, hosted code-intelligence service with no local setup",
+    "Users unwilling to run Ollama / provision local embedding compute",
+    "Anyone needing a proven, large-scale production track record today"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "sourcegraph-cody",
+      "verdict_diff": "Sourcegraph Cody is a mature, largely hosted code-intelligence platform; Srclight is a young, local-first indexing layer exposed purely over MCP. Choose Cody for enterprise-scale hosted code search; choose Srclight when the requirement is that nothing leaves the machine and the consumer is an agent, not a human IDE.",
+      "preferred_for_axis": "local-offline-mcp-retrieval"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Deep code index for AI agents: SQLite FTS5 + tree-sitter + embeddings + MCP, 25 tools",
+      "source": "https://srclight.dev",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Fully offline — local embeddings via Ollama; single SQLite file, no external DB/Docker/cloud",
+      "source": "https://srclight.dev",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "One-line install (pip install srclight); MIT license; multi-repo workspaces",
+      "source": "https://github.com/srclight/srclight",
+      "tested_at": "2026-09-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct MCP server (srclight serve) with 25 tools, connectable from Claude Code, Cursor, Windsurf or any MCP client. Also a CLI for indexing. Purpose-built to be driven by agents for code retrieval — highly composable.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Deep code indexing for AI agents'",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'pip install srclight' / GitHub / PyPI",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source MIT on PyPI; free",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "3-step get-started (install/index/serve) with commands shown",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    }
+  ],
+  "summary": "Local-first code-indexing MCP server for AI agents — hybrid FTS5 + tree-sitter + embeddings in a single SQLite file, fully offline, 25 tools.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": null,
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": null,
+  "attestation_url": "/data/attestations/srclight-srclight.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-rpublish",
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Developer tooling / MCP server — not a generative-content producer, so Article-50 synthetic-content marking does not apply.",
+    "checked_at": "2026-09-01"
+  },
+  "evidence_images": {
+    "run_id": "run-3c956c4c026024f5-srclight-dev",
+    "base": "https://images.hlido.eu/reviews/srclight-srclight/run-3c956c4c026024f5-srclight-dev",
+    "files": [
+      "home.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/srclight-srclight/run-3c956c4c026024f5-srclight-dev/home.png",
+      "https://images.hlido.eu/reviews/srclight-srclight/run-3c956c4c026024f5-srclight-dev/page_.png"
+    ],
+    "verified_at": null,
+    "verified_count": 2,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from scorecard.run_id and is the only one these keys resolve under. Link-verified downstream by scripts/link-review-evidence.mjs before surfacing."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source MIT on PyPI; free",
+      "tested_at": "2026-09-01"
+    },
+    "last_verified": "2026-09-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-01"
+  }
+}
