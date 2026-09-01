@@ -1,0 +1,181 @@
+{
+  "schema_version": "2.0",
+  "slug": "proliferate-ai-proliferate",
+  "name": "Proliferate",
+  "agent_url": "https://proliferate.com/docs",
+  "repo_url": null,
+  "category": "Coding",
+  "run_id": "run-proliferate-ai-proliferate-rpub-2026-09-01",
+  "run_at": "2026-09-01T08:49:26.323Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Open-source, self-hostable workspace for running coding agents in parallel — a review-first orchestration layer over Claude Code, Codex, Cursor, OpenCode and Grok.",
+    "body": "Proliferate is not another coding agent — it is the workspace you run your coding agents inside. The pitch on the public docs is coherent and, for an agentic ecosystem, well-aimed: pick whichever agent fits a task, give it an isolated git worktree with its own branch, terminal, conversation and review surface, and read the diff before anything ships. Chaining agent steps and human approvals into a repeatable workflow is the second act. That 'review before it ships' framing is the right instinct for the current moment, where the bottleneck is trust in agent output, not raw generation. Being open-source (AGPL-3.0) and self-hostable is a genuine differentiator against the hosted-only orchestrators, and agent-agnosticism (it drives Claude Code, Codex, Cursor, OpenCode, Grok) means it doesn't bet the product on one model vendor. What the public surface can't yet settle is execution depth: this is an early project (a few hundred GitHub stars, a Windows build still marked beta), the docs describe the concepts more than they prove the day-to-day reliability of parallel worktrees under load, and there is no visible programmatic/MCP interface for an agent to drive Proliferate itself — it is a human-operated cockpit, not a component another agent composes with. Promising positioning; the reliability and adoption evidence is still accruing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) on a medium-confidence public-surface read: the positioning is clear and differentiated (open-source, self-hostable, agent-agnostic, review-first), the docs are well-structured, and the concept maps directly to a real 2026 pain (governing multiple coding agents safely). Held below the VITAL band because this is an early-stage project — a small star count, a beta Windows build, and documentation that explains the model more than it evidences production reliability. Not FADING because there are no trust red flags: the code is open, the license is explicit, and the value proposition is honest about being local and self-hostable rather than over-claiming.",
+  "what_it_does_well": [
+    "Isolates each agent task in its own git worktree (branch, terminal, chat, review surface) — a clean concurrency model",
+    "Agent-agnostic: drives Claude Code, Codex, Cursor, OpenCode and Grok rather than locking to one model vendor",
+    "Review-first workflow — read the diff and gate on human approval before anything ships",
+    "Open-source (AGPL-3.0) and self-hostable, so the workspace can run entirely on the user's own machine",
+    "Documentation is well-organised (Quickstart, Concepts, Features, Reference) and honest about scope"
+  ],
+  "what_it_fails_at": [
+    "Early-stage maturity signals: small GitHub star count and a Windows build still marked beta",
+    "No visible programmatic or MCP interface — Proliferate is a human-operated cockpit, not something another agent can drive or compose with",
+    "Public docs describe the concurrency/worktree model more than they evidence its reliability under real parallel load",
+    "AGPL-3.0 can be a licensing constraint for teams that need to embed it in closed products"
+  ],
+  "best_for": [
+    "Developers running several coding agents at once who want each task isolated and reviewable",
+    "Teams that require self-hosting and want to avoid a hosted-only orchestration vendor",
+    "Anyone standardising a 'read the diff before it ships' review gate around agent output"
+  ],
+  "not_recommended_for": [
+    "Users wanting a single turnkey hosted product with no local setup",
+    "Agent-driven pipelines that need to invoke the orchestrator programmatically (no API/MCP surface exposed)",
+    "Teams blocked by AGPL-3.0 obligations"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "opencode",
+      "verdict_diff": "OpenCode is itself a coding agent; Proliferate is the workspace you'd run OpenCode (and others) inside. They're complementary, not substitutes — Proliferate wins when the problem is orchestrating and reviewing multiple agents, not the agent itself.",
+      "preferred_for_axis": "multi-agent-orchestration"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a mature, single-session terminal coding agent with a large following; Proliferate is a younger orchestration layer above that class of tool. Choose Aider to do the coding; choose Proliferate to marshal several such agents with per-task isolation and review gates.",
+      "preferred_for_axis": "review-first-workspace"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source, self-hostable workspace for running coding agents",
+      "source": "https://proliferate.com/docs",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Agent-agnostic (Claude Code, Codex, Cursor, OpenCode, Grok)",
+      "source": "https://proliferate.com/docs (Agents section)",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Isolated git worktrees per task; workflows chain agent steps + human approvals",
+      "source": "https://proliferate.com/docs (Concepts / Workflows)",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "AGPL-3.0 licensed, source on GitHub",
+      "source": "https://github.com/proliferate-ai/proliferate",
+      "tested_at": "2026-09-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Proliferate orchestrates coding agents rather than exposing itself to them. It is operated by a human (desktop app + local install) and does not publish an API or MCP surface an external agent could drive on the public surface reviewed. Relevant to the agent ecosystem as a governance/review layer for agent output, not as a callable component.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Run coding agents and build reviewable workflows locally.'",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for macOS' / Quickstart",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source (AGPL-3.0), self-hostable — free to run",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Quickstart + 'How Proliferate works' docs captured",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    }
+  ],
+  "summary": "Open-source, self-hostable workspace for running coding agents in parallel — a review-first orchestration layer over Claude Code, Codex, Cursor, OpenCode and Grok.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": null,
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": null,
+  "attestation_url": "/data/attestations/proliferate-ai-proliferate.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-rpublish",
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Developer tooling / MCP server — not a generative-content producer, so Article-50 synthetic-content marking does not apply.",
+    "checked_at": "2026-09-01"
+  },
+  "evidence_images": {
+    "run_id": "run-cb3fe144314e78ea-proliferate-com",
+    "base": "https://images.hlido.eu/reviews/proliferate-ai-proliferate/run-cb3fe144314e78ea-proliferate-com",
+    "files": [
+      "home.png",
+      "page_quickstart.png",
+      "page_windows.png",
+      "page_how-proliferate-works.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/proliferate-ai-proliferate/run-cb3fe144314e78ea-proliferate-com/home.png",
+      "https://images.hlido.eu/reviews/proliferate-ai-proliferate/run-cb3fe144314e78ea-proliferate-com/page_quickstart.png",
+      "https://images.hlido.eu/reviews/proliferate-ai-proliferate/run-cb3fe144314e78ea-proliferate-com/page_windows.png",
+      "https://images.hlido.eu/reviews/proliferate-ai-proliferate/run-cb3fe144314e78ea-proliferate-com/page_how-proliferate-works.png"
+    ],
+    "verified_at": null,
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from scorecard.run_id and is the only one these keys resolve under. Link-verified downstream by scripts/link-review-evidence.mjs before surfacing."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source (AGPL-3.0), self-hostable — free to run",
+      "tested_at": "2026-09-01"
+    },
+    "last_verified": "2026-09-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-01"
+  }
+}
