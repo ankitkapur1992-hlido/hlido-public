@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "sbroenne-mcp-server-excel",
+  "name": "Excel MCP Server",
+  "agent_url": "https://excelmcpserver.dev/",
+  "repo_url": null,
+  "category": "Workflow & Automation",
+  "run_id": "run-sbroenne-mcp-server-excel-rpub-2026-09-01",
+  "run_at": "2026-09-01T08:49:26.323Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "MCP server that drives the real Microsoft Excel engine via its COM API — the honest, high-fidelity answer to Excel automation for agents, not another openpyxl file rewriter.",
+    "body": "Of the MCP servers in this batch, Excel MCP Server has the sharpest and most defensible thesis. Instead of parsing and rewriting .xlsx files directly the way openpyxl-based servers (and Anthropic's own xlsx skill) do — which can silently drop PivotTables, charts and macros and simply cannot execute Power Query, the Data Model or DAX — it automates the actual Excel application through Microsoft's official COM API. Excel itself opens, computes and saves the workbook, so formulas, PivotTables, charts, macros, the Data Model and formatting survive intact, and live operations (refresh Power Query, evaluate DAX, run VBA and Python =PY()) return real computed results. That is a real, correctly-argued technical distinction, not marketing gloss, and the docs make the trade-off explicit rather than hiding it. Maturity signals back it up: a v2.0.5 release, ~645 GitHub stars, an MIT license, a documented surface of 31 tools across ~325 operations, and first-class install paths for VS Code / Copilot / Claude and any MCP client. The honest limits: it is Windows-and-real-Excel-bound by design (the COM API requires a genuine Excel install), so it is not a cross-platform or headless-server play; and because this is a public-surface review, the breadth of those 325 operations is documented but not independently exercised here. Within its lane, this is a well-built, well-scoped, unusually candid tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80), medium-high confidence — one of the stronger public surfaces in this cohort. It earns the upper-STEADY band on a genuinely differentiated technical approach (real Excel COM engine vs. file-rewriting), clear maturity (v2.0.5, ~645 stars, MIT), thorough documentation, and refreshingly honest positioning that names its own trade-offs and its competitors' failure modes. Held short of VITAL because the review is a documentation read rather than an execution of all 325 operations, and because the architecture is deliberately Windows/Excel-bound, which caps its addressable surface.",
+  "what_it_does_well": [
+    "Automates the genuine Excel COM engine, so PivotTables, charts, macros, the Data Model and formatting are preserved rather than dropped",
+    "Runs live operations agents usually can't reach: Power Query refresh, DAX evaluation, VBA and Python =PY()",
+    "Honest, specific documentation that names exactly how it differs from openpyxl-based servers and the xlsx skill",
+    "Mature and open: v2.0.5, ~645 GitHub stars, MIT license, 31 tools / ~325 documented operations",
+    "First-class install paths for VS Code / GitHub Copilot / Claude and any MCP client, plus a CLI"
+  ],
+  "what_it_fails_at": [
+    "Architecturally bound to Windows and a real Excel install (COM API) — not cross-platform, not headless/server-side",
+    "The 325-operation breadth is documented but not independently exercised in this public-surface review",
+    "Requires a licensed Excel, so it's unsuitable for pure open-source or Linux-only automation stacks"
+  ],
+  "best_for": [
+    "Agents and analysts who need Excel automation that preserves PivotTables, charts, macros and the Data Model exactly",
+    "Windows users driving Excel from GitHub Copilot, Claude or another MCP client with natural language",
+    "Workflows that depend on Power Query, DAX or VBA — things file-rewriting servers simply cannot do"
+  ],
+  "not_recommended_for": [
+    "Linux/macOS-only or headless server environments with no real Excel install",
+    "Teams wanting a lightweight, dependency-free .xlsx reader/writer (an openpyxl-based server is simpler for that)",
+    "Users who need a fully cloud-hosted, no-desktop automation path"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Automates the real Excel application via its official COM API (Excel opens/computes/saves)",
+      "source": "https://excelmcpserver.dev/",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "Preserves PivotTables, charts, macros, Data Model and formatting; runs Power Query, DAX, VBA, Python =PY()",
+      "source": "https://excelmcpserver.dev/ (Features)",
+      "tested_at": "2026-09-01",
+      "verified": true
+    },
+    {
+      "claim": "v2.0.5 release; ~645 GitHub stars; MIT license; 31 tools / ~325 operations",
+      "source": "https://github.com/sbroenne/mcp-server-excel",
+      "tested_at": "2026-09-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct MCP server — connect from GitHub Copilot, Claude or any MCP client and drive Excel via natural-language tool calls (31 tools, ~325 operations). Also exposes a CLI. Highly agent-composable within a Windows + real-Excel environment.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Automate real Excel with AI'",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install for VS Code' / All installation options",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source MIT; free install paths documented",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature docs + 1-min intro video referenced; 'Show me Excel while you work' live mode",
+      "tested_at": "2026-09-01T08:49:26.323Z"
+    }
+  ],
+  "summary": "MCP server that drives the real Microsoft Excel engine via its COM API — the honest, high-fidelity answer to Excel automation for agents, not another openpyxl file rewriter.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": null,
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": null,
+  "attestation_url": "/data/attestations/sbroenne-mcp-server-excel.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2-rpublish",
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Developer tooling / MCP server — not a generative-content producer, so Article-50 synthetic-content marking does not apply.",
+    "checked_at": "2026-09-01"
+  },
+  "evidence_images": {
+    "run_id": "run-657a1e3ee88c592d-excelmcpserver-dev",
+    "base": "https://images.hlido.eu/reviews/sbroenne-mcp-server-excel/run-657a1e3ee88c592d-excelmcpserver-dev",
+    "files": [
+      "home.png",
+      "page_key-features.png",
+      "page_q_.png",
+      "pageguides_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/sbroenne-mcp-server-excel/run-657a1e3ee88c592d-excelmcpserver-dev/home.png",
+      "https://images.hlido.eu/reviews/sbroenne-mcp-server-excel/run-657a1e3ee88c592d-excelmcpserver-dev/page_key-features.png",
+      "https://images.hlido.eu/reviews/sbroenne-mcp-server-excel/run-657a1e3ee88c592d-excelmcpserver-dev/page_q_.png",
+      "https://images.hlido.eu/reviews/sbroenne-mcp-server-excel/run-657a1e3ee88c592d-excelmcpserver-dev/pageguides_.png"
+    ],
+    "verified_at": null,
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from scorecard.run_id and is the only one these keys resolve under. Link-verified downstream by scripts/link-review-evidence.mjs before surfacing."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source MIT; free install paths documented",
+      "tested_at": "2026-09-01"
+    },
+    "last_verified": "2026-09-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-01"
+  }
+}
