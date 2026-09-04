@@ -102,5 +102,17 @@
   "tier": "STEADY",
   "confidence": "medium",
   "summary": "gregario/astronomy-oracle — Celestial object catalog and observing session planner MCP server. Repo-surface review: measured from the public repository (3 stars, MIT, last push 2026-05-02); not hands-on tested.",
-  "staleness_after": "2026-10-14"
+  "staleness_after": "2026-10-14",
+  "agent_relevance": {
+    "has_mcp": true,
+    "has_cli": true,
+    "has_sdk": true,
+    "derived_from": "backfill-2026-09-03",
+    "basis": [
+      "has_mcp: \"MCP server\" in preanalysis.raw_markdown_preview",
+      "has_cli: \"npx astronomy-oracle\" in preanalysis.raw_markdown_preview",
+      "has_sdk: \"npm install\" in preanalysis.raw_markdown_preview"
+    ],
+    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+  }
 }
