@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (979)
+## Reviewed agents (985)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1007,6 +1007,12 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`srclight-srclight`](https://hlido.eu/reviews/srclight-srclight/) | Srclight | Coding | 72 | — |
 | [`utensils-mcp-nixos`](https://hlido.eu/reviews/utensils-mcp-nixos/) | MCP-NixOS | Infrastructure | 78 | — |
 | [`veelenga-claude-mermaid`](https://hlido.eu/reviews/veelenga-claude-mermaid/) | claude-mermaid | Coding | 80 | — |
+| [`chronulusai-chronulus-mcp`](https://hlido.eu/reviews/chronulusai-chronulus-mcp/) | Chronulus AI (MCP) | Research | 62 | — |
+| [`dograh`](https://hlido.eu/reviews/dograh/) | Dograh | Voice | 76 | — |
+| [`childrentime-reactuse`](https://hlido.eu/reviews/childrentime-reactuse/) | ReactUse | Coding | 74 | — |
+| [`dataeval-dingo`](https://hlido.eu/reviews/dataeval-dingo/) | Dingo | Frameworks & Eval | 72 | — |
+| [`datalayer-jupyter-mcp-server`](https://hlido.eu/reviews/datalayer-jupyter-mcp-server/) | Jupyter MCP Server | Coding | 74 | — |
+| [`kdqed-zaturn`](https://hlido.eu/reviews/kdqed-zaturn/) | Zaturn | Research | 58 | — |
 
 ## Files in this mirror
 
