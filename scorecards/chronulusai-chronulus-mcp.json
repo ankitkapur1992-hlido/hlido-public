@@ -1,0 +1,149 @@
+{
+  "schema_version": "2.0",
+  "slug": "chronulusai-chronulus-mcp",
+  "name": "Chronulus AI (MCP)",
+  "agent_url": "https://www.chronulus.com",
+  "category": "Research",
+  "run_id": "run-chronulusai-chronulus-mcp-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 62,
+  "tier": "FADING",
+  "laddoo_score": 62,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Forecasting-and-prediction agents exposed to Claude via an MCP server, with a genuinely useful cold-start (zero-history) angle — but 'predict anything' is a broad claim the public surface cannot substantiate, and traction is still early.",
+    "body": "Chronulus packages forecasting and prediction as agents you talk to, and its MCP server is the hook for Hlido's audience: it lets a Claude client 'chat with' those forecasting agents directly. The most interesting and specific idea on the surface is the cold-start solution — forecasting new items or concepts from text (and optional images) with no historical data — which is a real pain point that classic time-series tools handle badly, plus 'magic input attributes' that enrich a forecast with fetched context (images, weather). The four-step flow (describe use case → define input format → queue a prediction with a horizon → collect forecast + explanation) is coherent, and the product gestures at responsible-forecasting risk assessments and usage tracking via a console. What holds this at the lower band is a gap between ambition and evidence: 'predict anything' is close to unfalsifiable on a marketing page, forecast accuracy is the entire value of a forecasting product and is exactly what a public-surface review cannot measure, pricing sits behind the console rather than an open page, and traction is modest (~112 stars) for a category where trust compounds slowly. Promising and well-articulated; unproven where it counts most.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (62): the product is clearly explained, the MCP/agent path is real, and the cold-start forecasting angle is a genuine differentiator — enough to sit comfortably above the FLATLINE line. Kept below STEADY because the core promise (forecast accuracy) is unverifiable at Tier-1, the headline claim is very broad, pricing was not openly captured, and adoption signals are still early.",
+  "what_it_does_well": [
+    "Exposes forecasting agents to Claude via an MCP server (clear agent path)",
+    "Cold-start / zero-history forecasting from text (+ optional images) is a real differentiator",
+    "Coherent four-step workflow that returns both a forecast and an explanation",
+    "Gestures at responsible-forecasting risk assessments and usage tracking"
+  ],
+  "what_it_fails_at": [
+    "Forecast accuracy — the whole point — is unmeasurable on the public surface",
+    "'Predict anything' is a very broad, effectively unfalsifiable headline claim",
+    "Pricing sits behind a console rather than an open pricing page",
+    "Early traction (~112 stars) for a trust-compounding category"
+  ],
+  "best_for": [
+    "Teams wanting LLM-mediated forecasts inside a Claude/MCP workflow",
+    "Cold-start prediction problems where no historical series exists",
+    "Users who value a written explanation alongside the forecast number"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a benchmarked, auditable accuracy guarantee before adopting",
+    "Classic high-volume time-series forecasting with rich history (specialised tools fit better)",
+    "Anyone needing transparent, self-serve pricing up front"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server to chat with Chronulus forecasting agents in Claude",
+      "source": "https://github.com/ChronulusAI/chronulus-mcp",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Cold-start forecasting from text (+ optional images), no history needed",
+      "source": "https://www.chronulus.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Returns forecast data plus an explanation over a specified horizon",
+      "source": "https://www.chronulus.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "'Predict anything' / general-purpose forecast accuracy",
+      "source": "https://www.chronulus.com",
+      "tested_at": "2026-09-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A native MCP server exposing forecasting agents to MCP clients (e.g. Claude Desktop). Agent-drivable; forecast quality is testable in principle but was not exercised at Tier-1.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Forecast and predict anything with Chronulus AI Agents'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Learn More' / 'Read Our Docs'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pricing referenced but gated behind console; not openly captured",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Four-step workflow and feature descriptions shown",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Forecasting-and-prediction agents exposed to Claude via an MCP server, with a genuinely useful cold-start (zero-history) angle — but 'predict anything' is a broad claim the public surface cannot substantiate, and traction is still early.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/chronulusai-chronulus-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (run-0b9168ebbbe25e5e-www-chronulus-com); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Pricing referenced but gated behind console; not openly captured",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
