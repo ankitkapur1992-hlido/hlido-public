@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "slug": "dataeval-dingo",
+  "name": "Dingo",
+  "agent_url": "https://dingo.openxlab.org.cn/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-dataeval-dingo-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "tier": "STEADY",
+  "laddoo_score": 72,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Comprehensive open-source data/model/application quality-evaluation toolkit that spans rule-based checks, LLM-as-a-judge and Agent-as-a-judge, including agent-trace evaluation — genuinely on-thesis for the agent era, reviewed here only at the surface.",
+    "body": "Dingo positions itself as a 'data quality inspection assistant' that scales from single-sample checks up to continuous agent-trace evaluation, and the public surface describes a coherent three-mode design: Quick Try for fast validation, Full Pipeline for batch dataset evaluation, and an Agent Evaluation mode for online monitoring of agent traces (task completion, tool usage, plan adherence, error recovery, latency and token trends). That last mode is what makes it interesting to Hlido's readership — evaluating agents, not just training data, is exactly where the eval space is heading. The breadth is credible: 20+ built-in rules for dataset hygiene, LLM integration (OpenAI, Kimi, local Llama3) for semantic assessment, and a bundled HHEM model for RAG/hallucination consistency. It is open source with meaningful traction (750+ stars) and clear documentation of its architecture. The limits are the honest Tier-1 ones: the accuracy and usefulness of the judges, the real cost of running them, and how well the agent-trace evaluation performs are all things you learn by running it, not by reading the site. There is also a naming/homepage inconsistency worth a second look at re-review (README repo namespace vs. the DataEval/MigoXLab labels), which is cosmetic but worth confirming.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72): a broad, clearly-documented, open-source evaluation toolkit that explicitly covers agent-trace evaluation, with real traction and a coherent architecture. Held mid-band because judge accuracy, run cost and the agent-eval mode's real-world performance are untested at Tier-1, and the toolkit's breadth means depth-per-mode is unproven from the surface alone.",
+  "what_it_does_well": [
+    "Covers the full quality spectrum: rule-based → LLM-as-a-judge → Agent-as-a-judge",
+    "Agent-trace evaluation (tool usage, plan adherence, error recovery) is on-thesis for agent teams",
+    "20+ built-in dataset-hygiene rules plus bundled HHEM for RAG/hallucination checks",
+    "Open source with solid traction (750+ stars) and clear architecture docs",
+    "Pluggable LLM backends including local models (Llama3) for privacy-sensitive eval"
+  ],
+  "what_it_fails_at": [
+    "Judge accuracy and false-positive/negative rates are untested at Tier-1",
+    "Run cost of LLM/agent-as-judge evaluation at scale is not disclosed on the surface",
+    "Breadth-over-depth risk: each of the three modes is unproven individually from the site",
+    "Minor branding/namespace inconsistency (DataEval / MigoXLab / repo name) to confirm at re-review"
+  ],
+  "best_for": [
+    "ML/LLM teams needing dataset-quality inspection before training or RAG",
+    "Agent teams that want to evaluate traces (tool use, plan adherence) continuously",
+    "Privacy-sensitive orgs that want to run judges against local models",
+    "Anyone standardising a data/model quality gate in a pipeline"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a fully hosted, zero-setup eval SaaS with SLAs",
+    "Buyers who need an independently benchmarked judge-accuracy guarantee up front",
+    "Non-technical users who can't operate a Python/pipeline toolkit"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "ragas",
+      "verdict_diff": "Ragas is focused on RAG evaluation metrics; Dingo is broader — dataset hygiene, LLM-as-judge and agent-trace eval in one toolkit. Choose Ragas for a tight RAG-metrics focus, Dingo when you want one tool across data and agent quality.",
+      "preferred_for_axis": "breadth-of-eval-surface"
+    },
+    {
+      "slug": "promptfoo-promptfoo",
+      "verdict_diff": "Promptfoo centres on prompt/LLM test-and-compare workflows; Dingo leans toward data-quality and agent-trace monitoring. Overlapping but different centres of gravity.",
+      "preferred_for_axis": "data-and-agent-quality"
+    },
+    {
+      "slug": "langsmith",
+      "verdict_diff": "LangSmith is a hosted tracing/eval platform tied to the LangChain ecosystem; Dingo is a self-hostable OSS toolkit. Trade managed convenience for control and locality.",
+      "preferred_for_axis": "open-source-self-host"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Rule-based + LLM-as-a-judge + Agent-as-a-judge evaluation",
+      "source": "https://dingo.openxlab.org.cn/",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Agent trace evaluation mode (task completion, tool usage, plan adherence)",
+      "source": "https://dingo.openxlab.org.cn/",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "20+ built-in rules and bundled HHEM-2.1-Open for RAG/hallucination",
+      "source": "https://dingo.openxlab.org.cn/",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Open source (753+ GitHub stars)",
+      "source": "https://github.com/DataEval/dingo",
+      "tested_at": "2026-09-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "An evaluation toolkit that can score agent traces (tool usage, plan adherence, error recovery). Directly relevant as a quality gate in agent pipelines; behaviourally testable, though not exercised at Tier-1.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'A Comprehensive AI Data, Model, & Application Quality Evaluation Platform'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / 'View on GitHub'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source toolkit, free to self-host",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Architecture diagram and mode descriptions shown",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Comprehensive open-source data/model/application quality-evaluation toolkit that spans rule-based checks, LLM-as-a-judge and Agent-as-a-judge, including agent-trace evaluation — genuinely on-thesis for the agent era, reviewed here only at the surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/dataeval-dingo.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (cf-browser-rendering); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source toolkit, free to self-host",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
