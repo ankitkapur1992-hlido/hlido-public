@@ -1,0 +1,158 @@
+{
+  "schema_version": "2.0",
+  "slug": "datalayer-jupyter-mcp-server",
+  "name": "Jupyter MCP Server",
+  "agent_url": "https://jupyter-mcp-server.datalayer.tech",
+  "category": "Coding",
+  "run_id": "run-datalayer-jupyter-mcp-server-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Well-documented open-source MCP server that lets an AI edit, document and execute Jupyter notebooks in real time — a clean, on-thesis agent-tooling bridge whose security and permission claims deserve verification before production use.",
+    "body": "This is a focused, legible piece of agent infrastructure: an MCP server that connects an AI client to Jupyter notebooks so it can view changes live, execute cells with output feedback, and reason over full notebook context. It supports both STDIO and Streamable HTTP transports, works with any Jupyter deployment (local, JupyterHub, or Datalayer-hosted), and is open source under BSD-3-Clause. The documentation is a real strength — dedicated sections for transports, code sandboxes, security, operations and architecture signal a project that has thought past the demo. Backing from Datalayer and 1.2k+ stars add credibility. For Hlido's audience this is precisely the kind of component agents actually consume, and the maintainers make some of the right noises about safety ('the agent receives a token scoped to what you approved', 'an agent can never reach a notebook you cannot'). Those permission and isolation claims are the ones that matter most and are exactly what a public-surface review cannot confirm — running arbitrary agent-authored code against your notebooks is high-trust, so the security posture is a claim to validate in a sandbox, not a checkbox to take on faith. Reviewed at the surface, it is a clean, credible bridge; verify the security model before you point an autonomous agent at production notebooks.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74): a well-scoped, well-documented open-source MCP server for a genuinely useful capability (agent-driven notebooks), with dual-transport support, an explicit security section, institutional backing and solid traction. Not higher because the load-bearing security/permission guarantees are unverified at Tier-1, and executing agent-authored code against notebooks is inherently high-risk until that model is validated.",
+  "what_it_does_well": [
+    "Clean, single-purpose MCP bridge: agents can edit, document and execute notebooks live",
+    "Dual transport (STDIO + Streamable HTTP); works with local, JupyterHub or hosted Jupyter",
+    "Unusually thorough docs — transports, sandboxes, security, operations, architecture",
+    "Open source (BSD-3-Clause) with institutional backing (Datalayer) and 1.2k+ stars",
+    "Cell-output feedback lets the agent adjust when a run fails"
+  ],
+  "what_it_fails_at": [
+    "Security/permission claims ('scoped token', 'agent can't reach what you can't') are unverified at Tier-1",
+    "Executing agent-authored code against notebooks is inherently high-trust — posture needs validation",
+    "Real-world reliability under long agent sessions is untested from the surface",
+    "Hosted vs. self-hosted operational differences are documented but not exercised here"
+  ],
+  "best_for": [
+    "Data/ML teams that want an agent to drive notebooks (analysis, viz, execution)",
+    "Builders wiring Jupyter into an MCP-capable agent client",
+    "Orgs that can validate and sandbox the security model before production",
+    "Anyone needing both STDIO and HTTP transport options"
+  ],
+  "not_recommended_for": [
+    "Teams unwilling to let an agent execute code until the permission model is independently verified",
+    "Non-Jupyter data workflows",
+    "Buyers wanting a fully managed product rather than a server to operate"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "asmith26-jupytercad-mcp",
+      "verdict_diff": "JupyterCAD-MCP targets CAD-in-Jupyter workflows; this server is the general notebook execution/editing bridge. Choose by whether you need general notebook control or the CAD-specific surface.",
+      "preferred_for_axis": "general-notebook-control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MCP server enabling real-time notebook edit/execute/document",
+      "source": "https://jupyter-mcp-server.datalayer.tech",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Supports STDIO and Streamable HTTP transports; any Jupyter deployment",
+      "source": "https://jupyter-mcp-server.datalayer.tech",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Open source under BSD-3-Clause",
+      "source": "https://github.com/datalayer/jupyter-mcp-server",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Agent receives a scoped token; cannot reach notebooks the user cannot",
+      "source": "https://jupyter-mcp-server.datalayer.tech",
+      "tested_at": "2026-09-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A native MCP server: any MCP-capable agent client connects over STDIO or HTTP to edit and execute Jupyter notebooks. Directly agent-drivable and behaviourally testable; security model should be validated first.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'MCP server ... enables real-time interaction with Jupyter Notebooks'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Getting Started' docs",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source server, free to self-host; hosted option via Datalayer",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Feature list + architecture/security docs shown",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Well-documented open-source MCP server that lets an AI edit, document and execute Jupyter notebooks in real time — a clean, on-thesis agent-tooling bridge whose security and permission claims deserve verification before production use.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/datalayer-jupyter-mcp-server.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (cf-browser-rendering); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source server, free to self-host; hosted option via Datalayer",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
