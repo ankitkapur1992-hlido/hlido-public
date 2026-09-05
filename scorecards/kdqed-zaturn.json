@@ -1,0 +1,154 @@
+{
+  "schema_version": "2.0",
+  "slug": "kdqed-zaturn",
+  "name": "Zaturn",
+  "agent_url": "https://zaturn.kdqed.com",
+  "category": "Research",
+  "run_id": "run-kdqed-zaturn-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 58,
+  "tier": "FADING",
+  "laddoo_score": 58,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "Open-source, local-first 'chat with your data' co-pilot that gives AI models SQL tools across many data sources, usable as an MCP server or a Jupyter-like studio — a promising, honest single-maintainer project that's early and asks you to bring your own LLM.",
+    "body": "Zaturn's pitch is refreshingly concrete: instead of building dashboards, you point an AI at your data and ask questions, and Zaturn provides the tools that let the model run SQL so you don't have to. It runs locally, works either as an MCP server for any protocol-capable AI client or through a bundled studio (web) interface reminiscent of a notebook, and it connects to a solid spread of sources — PostgreSQL, MySQL, SQLite, DuckDB, ClickHouse, SQL Server, BigQuery, plus CSV and Parquet files. The local-first design is a real privacy advantage for people who don't want their data flowing to a hosted BI vendor, and the 'bring your own LLM API key' model is honest about where the intelligence comes from. The tempering facts are all about maturity: this is an early, single-maintainer project (~75 stars), the 'with vibes' framing signals a young tool rather than a hardened one, quality of the generated SQL and analysis is untested at Tier-1, and there is no team/governance story on the surface. For an individual analyst or a curious builder it's an appealing, low-lock-in way to try agentic data analysis; for anything mission-critical it needs more track record than the surface shows.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (58): a clear, genuinely useful concept with a real MCP path, broad data-source support and a privacy-friendly local-first design — well clear of FLATLINE. Held here because it is early and single-maintainer (~75 stars), the generated-SQL/analysis quality is untested, it requires the user's own LLM key, and there's no team/governance or reliability evidence on the public surface.",
+  "what_it_does_well": [
+    "Concrete value: give an AI SQL tools so you query data by asking, not by building dashboards",
+    "Works as an MCP server for any protocol-capable client, or via a bundled studio UI",
+    "Broad data-source support (Postgres, MySQL, SQLite, DuckDB, ClickHouse, SQL Server, BigQuery, CSV, Parquet)",
+    "Local-first / runs on your PC — a real privacy advantage over hosted BI",
+    "Honest 'bring your own LLM key' model"
+  ],
+  "what_it_fails_at": [
+    "Early, single-maintainer project (~75 stars) — limited track record",
+    "Quality of generated SQL and analysis is untested at Tier-1",
+    "Requires the user's own LLM API key with the studio interface",
+    "No team, governance or reliability story on the public surface"
+  ],
+  "best_for": [
+    "Individual analysts and builders wanting local-first, low-lock-in data Q&A",
+    "MCP users who want to give a Claude/other client SQL access to their databases",
+    "Privacy-conscious users who want to keep data off hosted BI tools",
+    "People comfortable supplying their own LLM key"
+  ],
+  "not_recommended_for": [
+    "Teams needing a hardened, supported, multi-user BI platform",
+    "Mission-critical analytics that require vendor SLAs and a track record",
+    "Non-technical users who can't run a local package or manage an LLM key"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "julius-ai",
+      "verdict_diff": "Julius is a polished hosted data-analysis product; Zaturn is a local-first, open-source, bring-your-own-LLM tool with an MCP path. Choose Julius for managed convenience, Zaturn for locality, low lock-in and agent integration.",
+      "preferred_for_axis": "local-first-open-source"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Gives AI models tools to run SQL so the user doesn't have to",
+      "source": "https://zaturn.kdqed.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Usable as an MCP server or a Jupyter-like studio web interface",
+      "source": "https://zaturn.kdqed.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Connects to BigQuery, ClickHouse, DuckDB, MySQL, Postgres, SQLite, SQL Server, CSV, Parquet",
+      "source": "https://zaturn.kdqed.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Runs locally; requires the user's own LLM API key (studio)",
+      "source": "https://zaturn.kdqed.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Runs as an MCP server exposing SQL tools to an AI client, or standalone via a studio UI. Directly agent-drivable and behaviourally testable; analysis quality not exercised at Tier-1.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your open source, AI-powered data analysis co-pilot — Just chat with your data'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source, free to run locally; user supplies own LLM key",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Supported data sources and usage examples shown; demo video linked in README",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Open-source, local-first 'chat with your data' co-pilot that gives AI models SQL tools across many data sources, usable as an MCP server or a Jupyter-like studio — a promising, honest single-maintainer project that's early and asks you to bring your own LLM.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/kdqed-zaturn.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (cf-browser-rendering); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source, free to run locally; user supplies own LLM key",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
