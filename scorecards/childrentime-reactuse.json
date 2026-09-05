@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "slug": "childrentime-reactuse",
+  "name": "ReactUse",
+  "agent_url": "https://reactuse.com",
+  "category": "Coding",
+  "run_id": "run-childrentime-reactuse-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Mature, well-documented React hooks library (110+ hooks, TypeScript-first, SSR-safe) with a real MCP server so coding agents can query it — a solid developer utility whose 'agent' relevance is as a component, not an autonomous product.",
+    "body": "ReactUse is a large, VueUse-inspired collection of production-oriented React hooks — the documentation lays out 110+ of them, organised into clear buckets (state, effect, element, browser, sensors), and the library advertises tree-shaking, SSR-safety and a TypeScript-first API. The surface is that of a settled open-source utility rather than a launch: an ordered hook index, a changelog, a blog, and adoption claims (Shopee, PDD, Ctrip) that read as credible for a library at 1k+ stars. What makes it relevant to an agentic register at all is that it ships an MCP server (the repo carries an MCP top-list badge and the `mcp` topic), which lets a coding agent look up and reason about the hooks programmatically. That is a legitimate but narrow kind of agent-relevance: ReactUse is a dependency a developer or a coding agent uses, not an agent that does work on its own. Judged as what it is — a developer library with an agent-readable surface — it is dependable and clearly presented. The caveats are the usual ones for this class: real quality lives in tree-shaking correctness, SSR edge-cases and per-hook stability, none of which a public-surface review exercises, and the adoption logos are asserted rather than independently confirmed here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74): the documentation is thorough and well-structured, the API surface is large and specific, open-source with visible maintenance (changelog, blog), and it exposes an MCP server that makes it genuinely queryable by coding agents. Not higher because agent-relevance is component-level (a library, not an autonomous agent), per-hook correctness/SSR behaviour is untested at Tier-1, and the enterprise-adoption claims are unverified.",
+  "what_it_does_well": [
+    "Large, well-organised hook catalogue (110+) with a clear category index",
+    "TypeScript-first, tree-shakable and SSR-safe by design",
+    "Ships an MCP server so coding agents can discover and use the hooks programmatically",
+    "Signs of active maintenance — changelog, blog, ordered docs",
+    "Familiar mental model for anyone who knows VueUse"
+  ],
+  "what_it_fails_at": [
+    "It is a component library, not an autonomous agent — 'agent' relevance is indirect",
+    "Per-hook correctness, tree-shaking and SSR edge behaviour are untested at Tier-1",
+    "Enterprise adoption claims (Shopee/PDD/Ctrip) are asserted, not independently verified here",
+    "No standalone runtime to behaviourally exercise as an agent"
+  ],
+  "best_for": [
+    "React/TypeScript teams wanting a broad, maintained hooks toolkit",
+    "Coding agents that can consume the MCP server to look up and apply hooks",
+    "Projects that need SSR-safe, tree-shakable utilities out of the box",
+    "Developers already comfortable with the VueUse pattern"
+  ],
+  "not_recommended_for": [
+    "Buyers looking for an autonomous agent or end-user product",
+    "Teams that need an independently benchmarked performance guarantee before adopting",
+    "Non-React stacks"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "110+ React hooks, TypeScript-first, SSR-safe, tree-shakable",
+      "source": "https://reactuse.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Exposes an MCP server (mcp topic + MCP top-list badge)",
+      "source": "https://github.com/childrentime/reactuse",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Used in production by Shopee, PDD and Ctrip",
+      "source": "https://github.com/childrentime/reactuse (README)",
+      "tested_at": "2026-09-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "A React hooks library consumed as a dependency; its MCP server lets a coding agent discover and apply hooks. Agent-relevance is component-level (something an agent uses), not an autonomous agent to drive.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'110+ Essential React Hooks Library for TypeScript'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open-source library, free; 'Buy me a coffee'/sponsor links",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Full hook index and docs shown on site",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Mature, well-documented React hooks library (110+ hooks, TypeScript-first, SSR-safe) with a real MCP server so coding agents can query it — a solid developer utility whose 'agent' relevance is as a component, not an autonomous product.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/childrentime-reactuse.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (cf-browser-rendering); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source library, free; 'Buy me a coffee'/sponsor links",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
