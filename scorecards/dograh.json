@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "dograh",
+  "name": "Dograh",
+  "agent_url": "https://dograh.com",
+  "category": "Voice",
+  "run_id": "run-dograh-v2-rpublish-2026-09-05",
+  "run_at": "2026-09-05T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Open-source, self-hostable voice-agent platform positioned squarely as the Vapi/Retell alternative — unusually broad provider matrix and a genuine air-gapped story, but the voice quality and privacy claims are untested on the public surface.",
+    "body": "Dograh makes the sharpest positioning bet in the voice-agent space right now: it is the fork-it-yourself, run-it-on-your-own-infrastructure answer to the hosted incumbents (Vapi, Retell). The public surface backs the pitch with substance rather than slogans — a visual workflow builder where every stage of the pipeline (inbound channel, STT, LLM, TTS, telephony) is a swappable node, and a genuinely long list of interchangeable providers (Deepgram, ElevenLabs, Cartesia, Groq, OpenRouter, Twilio, Telnyx, Plivo, Asterisk, and dozens more), plus a speech-to-speech path that skips the cascade entirely. The BSD-2 license and 5.5k+ GitHub stars make the open-source claim credible, and the Product Hunt #1-of-day/week recognitions and NVIDIA Inception listing are real external signals. The load-bearing differentiator — 'your data never leaves', deploy on-prem or air-gapped so no calls, recordings, transcripts or model inference cross your boundary — is exactly what a regulated buyer wants, and exactly what cannot be confirmed from a marketing page: it is a claim to verify in a deployment, not a fact we observed. For an agentic ecosystem, the appeal is that a coding agent (the site names Claude Code, Cursor, and others) can reportedly spin up and modify agents against your own stack. Treat that, too, as an advertised capability pending hands-on confirmation. The honest read: a serious, well-differentiated OSS project with strong momentum, reviewed here only at the surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-05",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76): the product is clearly articulated, the feature surface is deep and specific (not vaporware bullet points), the open-source license and traction signals are verifiable, and the positioning fills a real gap (self-hosted/air-gapped voice agents). Held below the top band because the defining claims — voice quality, latency, and the air-gapped/no-data-egress guarantee — are unverified at Tier-1, pricing for the hosted 'Try Cloud' tier was not captured, and a young high-velocity project carries more roadmap risk than the established hosted incumbents.",
+  "what_it_does_well": [
+    "Sharp, credible positioning as the self-hostable OSS alternative to Vapi/Retell",
+    "Genuinely broad, swappable provider matrix across STT, LLM, TTS and telephony",
+    "Visual workflow builder plus a speech-to-speech path for lower-latency pipelines",
+    "Open-source (BSD-2) with strong external traction signals (5.5k+ stars, Product Hunt #1)",
+    "On-prem / air-gapped deployment story that hosted incumbents structurally cannot match"
+  ],
+  "what_it_fails_at": [
+    "Core voice quality, latency and reliability are untested on the public surface",
+    "The headline 'data never leaves / air-gapped' guarantee is advertised, not verified here",
+    "Hosted 'Try Cloud' pricing and limits were not captured at Tier-1",
+    "Young, fast-moving project — API/feature stability and long-term maintenance are unproven",
+    "Agent-runtime integration (Claude Code/Cursor spinning up agents) is a claim, not a tested path"
+  ],
+  "best_for": [
+    "Teams that need voice agents inside their own VPC or fully air-gapped for compliance",
+    "Engineering orgs that want to own and fork the stack rather than rent a hosted API",
+    "Builders who want to swap STT/LLM/TTS/telephony providers without re-platforming",
+    "Anyone evaluating an OSS exit from Vapi/Retell lock-in"
+  ],
+  "not_recommended_for": [
+    "Teams that want a fully managed, zero-ops hosted voice API and nothing to run",
+    "Buyers who need a vendor with a long production track record today",
+    "Use cases that require an independently benchmarked voice-quality/latency guarantee before commit"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "vapi-ai",
+      "verdict_diff": "Vapi is the polished hosted incumbent with a longer track record; Dograh is the self-hostable OSS challenger. Choose Vapi for zero-ops managed infrastructure; choose Dograh when data residency, forking, or air-gapped deployment is the constraint.",
+      "preferred_for_axis": "self-hosting-and-data-residency"
+    },
+    {
+      "slug": "retell-ai",
+      "verdict_diff": "Retell is another strong hosted voice-agent platform. Dograh's pitch is explicitly the open-source alternative to it — same problem space, opposite deployment philosophy.",
+      "preferred_for_axis": "open-source-vs-hosted"
+    },
+    {
+      "slug": "bland-ai",
+      "verdict_diff": "Bland is hosted and phone-call-focused. Dograh trades turnkey convenience for provider flexibility and on-prem control.",
+      "preferred_for_axis": "provider-flexibility"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Positions as open-source, self-hostable alternative to Vapi & Retell",
+      "source": "https://dograh.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Swappable pipeline (STT/LLM/TTS/telephony) with a broad provider matrix",
+      "source": "https://dograh.com",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Open source under BSD-2-Clause",
+      "source": "https://dograh.com (README)",
+      "tested_at": "2026-09-05",
+      "verified": true
+    },
+    {
+      "claim": "Data never leaves your boundary / on-prem / air-gapped inference",
+      "source": "https://dograh.com",
+      "tested_at": "2026-09-05",
+      "verified": false
+    },
+    {
+      "claim": "Point Claude Code/Cursor/agent runtimes at it to build & deploy agents",
+      "source": "https://dograh.com",
+      "tested_at": "2026-09-05",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Self-hosted voice-agent platform with a workflow builder and provider-pluggable pipeline; the vendor claims agent runtimes (Claude Code, Cursor) can build and deploy agents against it. Behaviourally testable in a deployment, though not exercised at Tier-1.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The self-hostable voice agent platform · OSS alternative to Vapi & Retell'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Try Cloud'",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Pricing link present but tier detail not captured at Tier-1",
+      "tested_at": "2026-09-05T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Interactive pipeline/'Start call' demo shown on homepage",
+      "tested_at": "2026-09-05T00:00:00Z"
+    }
+  ],
+  "summary": "Open-source, self-hostable voice-agent platform positioned squarely as the Vapi/Retell alternative — unusually broad provider matrix and a genuine air-gapped story, but the voice quality and privacy claims are untested on the public surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-04",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-04",
+  "attestation_url": "/data/attestations/dograh.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "_provenance_note": "Public-surface Tier-1 review. Scores and narrative are an editorial assessment of the vendor's public surface captured by the Hlido engine (cf-browser-rendering); no private/authenticated testing was performed. Vendor performance, security and self-hosting claims are marked UNVERIFIED where they could not be observed on the public surface. Evidence images are attached separately by link-review-evidence.mjs after HEAD-verification against R2.",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-05",
+    "source": "public-surface-tier-1"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Pricing link present but tier detail not captured at Tier-1",
+      "tested_at": "2026-09-05"
+    },
+    "last_verified": "2026-09-05",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-05"
+  }
+}
