@@ -1,0 +1,165 @@
+{
+  "schema_version": "2.0",
+  "slug": "reflexio",
+  "name": "Reflexio",
+  "agent_url": "https://reflexio.ai",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-reflexio-2026-09-06",
+  "run_at": "2026-09-06T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "Agent infrastructure that turns real interactions — corrections, failures, wins — into reusable, visible, revocable 'learnings', with a genuinely well-explained mechanism and multiple clean integration paths.",
+    "body": "Reflexio is a 'learning platform for AI agents': it takes what happens in production — user corrections, failed paths, successful outcomes — and turns the repeats into 'learnings' the agent reuses, each one visible and revocable, so a static agent becomes self-improving without a full retrain. What lifts this above the usual 'AI memory' pitch is how concretely the mechanism is explained. The landing page walks a real before/after: an agent refunds one unrecognised charge and misses a second, the user has to come back; Reflexio extracts the lesson ('search the full window of recent charges before resolving any single one; present everything unfamiliar in one message'), and next time the agent catches both at once. It goes further into the lifecycle honestly — a self-improvement loop that keeps learning from every conversation, self-tuning learnings scored by the evidence they produce, and, importantly, retirement: a March learning ('refunds within 30 days') is automatically replaced when a June policy change ('window is now 14 days') contradicts it. That 'learnings expire when reality changes' story is the differentiator, because stale memory is the failure mode most agent-memory tools ignore. The integration story is strong and plural: a portable skill you hand to Codex, Claude Code or Cursor, plus Python, REST and CLI paths and an SDK, with the skill on public GitHub. What keeps it in STEADY rather than higher is the usual young-product gap — no named customers, usage numbers, or independent evidence of how well the extracted learnings actually perform in the wild, and pricing figures behind the Pricing link. But of the five reviewed here, this is the most genuinely agent-native, and the mechanism is described with unusual care.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-06",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because Reflexio is genuinely agent-native infrastructure with a clearly-differentiated idea (visible, revocable, self-retiring learnings derived from real interactions), an unusually concrete explanation of its mechanism, and multiple clean integration paths (portable skill, Python, REST, CLI, SDK, public GitHub). Held below the top band because it is a young product with no named customers or independent evidence of learning quality on the reviewed surface, and full pricing is behind a click. It rises with adoption evidence and measured proof that its learnings improve agent outcomes.",
+  "what_it_does_well": [
+    "Genuinely agent-native: a portable skill for Codex/Claude Code/Cursor plus Python, REST and CLI paths, an SDK, and the skill published on GitHub",
+    "Differentiated core idea — learnings are visible AND revocable, and are retired automatically when newer conversations contradict them",
+    "The mechanism is explained with unusual concreteness (a real before/after refund example, self-tuning scored by evidence)",
+    "Directly addresses the failure mode most agent-memory tools ignore: stale knowledge that no longer matches policy or product",
+    "Works from your existing logs — 'the lessons are already in your logs' — lowering the integration lift"
+  ],
+  "what_it_fails_at": [
+    "No named customers, usage numbers or independent evidence of learning quality on the reviewed surface",
+    "Full pricing sits behind the Pricing link rather than on the page",
+    "Effectiveness of the extracted learnings is asserted through examples, not demonstrated with measured outcomes",
+    "Young product — durability, maintenance cadence and production track record aren't established publicly",
+    "The value depends on having enough real interaction volume for meaningful learnings to emerge"
+  ],
+  "best_for": [
+    "Teams running production agents (support, sales, coding, data) that keep repeating the same mistakes",
+    "Agent builders who want continuous improvement from real interactions without full retraining",
+    "Developers who value auditable, revocable behaviour changes over opaque memory"
+  ],
+  "not_recommended_for": [
+    "Teams that need named-customer proof or measured outcome evidence before adopting",
+    "Very early agents without enough real interaction volume for learnings to form",
+    "Buyers who require published pricing up front"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "letta",
+      "verdict_diff": "Letta is an agent framework centred on persistent memory and stateful agents. Reflexio is narrower and complementary — it focuses specifically on extracting reusable, revocable learnings from real interactions and feeding them back, and integrates into agents you already run (including via a portable skill) rather than being the framework itself. Choose Letta to build stateful agents; add Reflexio to make existing agents learn from production.",
+      "preferred_for_axis": "learning-loop-over-existing-agents"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Turns real interactions into reusable behaviour changes that are visible and revocable",
+      "source": "https://reflexio.ai ('turns user corrections, failed paths, and successful outcomes into behavior changes your agents reuse — each one visible, and revocable')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Learnings are retired automatically when newer conversations contradict them",
+      "source": "https://reflexio.ai ('retires older learnings once newer conversations contradict them'; March 'refunds within 30 days' replaced by June '14 days')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Multiple integration paths: portable skill, Python, REST, CLI, SDK",
+      "source": "https://reflexio.ai ('Start with the portable skill, or wire the same retrieve-and-publish loop through Python, REST, or the CLI'; 'Full SDK reference'; GitHub skill link)",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Free entry point available",
+      "source": "https://reflexio.ai ('Start free'; 'Book a demo')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Reflexio is infrastructure built for agents. Integrate via a portable skill handed to Codex, Claude Code or Cursor, or wire the retrieve-and-publish loop directly through a Python SDK, REST API or CLI; the integration skill is published on GitHub. The whole product exists to be driven by and improve other agents.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Learning platform for AI agents — learn from real interactions, improve behavior, stop repeating mistakes"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Start free / Book a demo / Sign up"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Free entry point ('Start free') but full pricing is behind the Pricing link"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Concrete before/after mechanism walkthrough and multiple documented integration paths"
+    }
+  ],
+  "summary": "Agent infrastructure that turns real interactions — corrections, failures, wins — into reusable, visible, revocable 'learnings', with a genuinely well-explained mechanism and multiple clean integration paths.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-05",
+  "attestation_url": "/data/attestations/reflexio.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-06",
+    "source": "r-publish-editorial-enrich",
+    "note": "Reflexio is an agent-learning/behaviour-management layer — it does not generate synthetic media, so Article-50 synthetic-content marking does not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-391c01503e6776ce-reflexio-ai",
+    "base": "https://images.hlido.eu/reviews/reflexio/run-391c01503e6776ce-reflexio-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/reflexio/run-391c01503e6776ce-reflexio-ai/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Free entry point ('Start free') but full pricing is behind the Pricing link",
+      "tested_at": "2026-09-06"
+    },
+    "last_verified": "2026-09-06",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-06"
+  }
+}
