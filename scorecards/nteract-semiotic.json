@@ -1,0 +1,160 @@
+{
+  "schema_version": "2.0",
+  "slug": "nteract-semiotic",
+  "name": "Semiotic",
+  "agent_url": "https://semiotic.nteract.io",
+  "repo_url": "https://github.com/nteract/semiotic",
+  "category": "Developer Tool",
+  "run_id": "run-r-publish-v2-nteract-semiotic-2026-09-06",
+  "run_at": "2026-09-06T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A deep, mature React data-visualization library with an unusually broad chart catalog and a real accessibility discipline — a developer library, not an agent, and reviewed here through its documentation.",
+    "body": "Semiotic (from the nteract org) is a React data-visualization library, and the documentation surface makes its defining trait clear immediately: breadth. The catalog spans standard XY and categorical charts (line, area, scatter, bar, box, violin), network diagrams (force-directed, chord, Sankey, tree, treemap, circle-pack), geospatial maps (choropleth, flow, cartogram), a whole 'physics' family (Galton board, collision swarm, chain reaction), and streaming/realtime frames — far more chart types than a typical charting library exposes. It is clearly a serious, mature project: there is a v3 with a migration guide, a large worked-example gallery, custom-chart tooling (glyph marks, recipe decoration), a mobile-visualization track, and — notably — a dedicated accessibility section with a Chartability audit, chart descriptions and structured navigation, which is a discipline most viz libraries treat as an afterthought. The honest framing for Hlido's readers is that this is a developer library, not an AI agent: you consume it as npm/React code, there is no API, CLI, MCP server or agent-drivable surface, and 'quality' here means the fit and correctness of the components in your own build rather than a behaviour we can exercise. On its own terms it is strong and thoughtfully built; the uncertainty is around current maintenance momentum and adoption, which the documentation surface alone doesn't establish. For React teams that need an expressive, accessibility-conscious viz layer beyond the common libraries, Semiotic is well worth evaluating from its docs and source.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-06",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because Semiotic is a mature, expressive React data-viz library with an unusually broad chart catalog, a v3 with migration guidance, extensive examples, custom-chart tooling and a genuine accessibility discipline (Chartability audit, chart descriptions, structured navigation). Held in the mid-70s because it is a developer library rather than an agent — no API/CLI/MCP or agent-drivable surface — and current maintenance momentum and adoption are not established by the documentation surface reviewed. It rises with visible recent-release cadence and adoption signals.",
+  "what_it_does_well": [
+    "Unusually broad chart catalog — XY, categorical, network, geospatial, a physics family, and realtime/streaming frames",
+    "Mature and versioned: a v3 with a migration guide, plus a large worked-example gallery",
+    "A real accessibility discipline — Chartability audit, chart descriptions and structured navigation, rarely a first-class concern in viz libraries",
+    "Custom-chart tooling (glyph marks, recipe decoration, custom layouts) for going beyond the presets",
+    "Dedicated mobile-visualization track and a documented streaming/push model"
+  ],
+  "what_it_fails_at": [
+    "It is a developer React library, not an agent — no API, CLI, MCP server or agent-drivable interface",
+    "Current maintenance momentum and adoption are not evidenced on the documentation surface",
+    "Value is confined to the React ecosystem; teams on other stacks get nothing",
+    "'Quality' is the fit of components in your own build — nothing is behaviourally testable from the public surface",
+    "The sheer breadth raises a learning-curve and long-term-support question the docs alone don't answer"
+  ],
+  "best_for": [
+    "React and Next.js teams that need an expressive visualization layer beyond common charting libraries",
+    "Developers who need network, geospatial or physics-style visualizations, not just standard charts",
+    "Teams for whom chart accessibility (screen-reader descriptions, structured navigation) is a real requirement"
+  ],
+  "not_recommended_for": [
+    "Non-React projects",
+    "Teams wanting a hosted or agent-drivable analytics/visualization service rather than a code library",
+    "Buyers who need a strong recency-of-maintenance signal before adopting a dependency"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "React data-visualization library with a broad chart catalog",
+      "source": "https://semiotic.nteract.io ('Semiotic — Data Visualization for React'; catalog spanning XY, categorical, network, geo, physics and value charts)",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Mature and versioned with migration guidance",
+      "source": "https://semiotic.nteract.io ('Migrating to v3'; 'Getting Started')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "First-class accessibility support",
+      "source": "https://semiotic.nteract.io (Accessibility section — 'Chartability Audit', 'Chart Descriptions', 'Structured Navigation')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Custom-chart tooling and streaming/realtime frames",
+      "source": "https://semiotic.nteract.io ('Custom Charts' — Glyph Marks, Recipe Decoration Kit; 'FRAMES' — StreamXYFrame, StreamNetworkFrame)",
+      "tested_at": "2026-09-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Semiotic is a React component library consumed as source/npm within a front-end build. It has no API, CLI, MCP server or hosted surface an external agent could drive; a coding agent could use it only by writing React code that imports it.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Semiotic — Data Visualization for React"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Getting Started / GitHub"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Open-source React library — free to use"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Extensive worked-example gallery and per-chart documentation"
+    }
+  ],
+  "summary": "A deep, mature React data-visualization library with an unusually broad chart catalog and a real accessibility discipline — a developer library, not an agent, and reviewed here through its documentation.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-05",
+  "attestation_url": "/data/attestations/nteract-semiotic.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-06",
+    "source": "r-publish-editorial-enrich",
+    "note": "Semiotic is a React charting library that renders the developer's own data — it does not generate synthetic media, so Article-50 synthetic-content marking does not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-7bc98e582d547f07-semiotic-nteract-io",
+    "base": "https://images.hlido.eu/reviews/nteract-semiotic/run-7bc98e582d547f07-semiotic-nteract-io",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/nteract-semiotic/run-7bc98e582d547f07-semiotic-nteract-io/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source React library — free to use",
+      "tested_at": "2026-09-06"
+    },
+    "last_verified": "2026-09-06",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-06"
+  }
+}
