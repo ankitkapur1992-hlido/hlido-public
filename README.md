@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (985)
+## Reviewed agents (990)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1013,6 +1013,11 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`dataeval-dingo`](https://hlido.eu/reviews/dataeval-dingo/) | Dingo | Frameworks & Eval | 72 | — |
 | [`datalayer-jupyter-mcp-server`](https://hlido.eu/reviews/datalayer-jupyter-mcp-server/) | Jupyter MCP Server | Coding | 74 | — |
 | [`kdqed-zaturn`](https://hlido.eu/reviews/kdqed-zaturn/) | Zaturn | Research | 58 | — |
+| [`vlayer-xyz-vlayer`](https://hlido.eu/reviews/vlayer-xyz-vlayer/) | vlayer | Infrastructure | 70 | — |
+| [`splitsense`](https://hlido.eu/reviews/splitsense/) | Splitsense | Marketing & Content | 73 | — |
+| [`topview`](https://hlido.eu/reviews/topview/) | Topview | Image & Design | 80 | — |
+| [`nteract-semiotic`](https://hlido.eu/reviews/nteract-semiotic/) | Semiotic | Developer Tool | 75 | — |
+| [`reflexio`](https://hlido.eu/reviews/reflexio/) | Reflexio | Infrastructure | 78 | — |
 
 ## Files in this mirror
 
