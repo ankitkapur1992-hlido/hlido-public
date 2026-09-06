@@ -1,0 +1,161 @@
+{
+  "schema_version": "2.0",
+  "slug": "vlayer-xyz-vlayer",
+  "name": "vlayer",
+  "agent_url": "https://book.vlayer.xyz",
+  "repo_url": "https://github.com/vlayer-xyz/vlayer",
+  "category": "Infrastructure",
+  "run_id": "run-r-publish-v2-vlayer-xyz-vlayer-2026-09-06",
+  "run_at": "2026-09-06T09:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Zero-knowledge infrastructure that lets Ethereum smart contracts verify real-world data — powerful primitives (Web/Email Proofs, Time Travel, Teleport), but reviewed here through docs the site itself flags as outdated.",
+    "body": "vlayer is developer infrastructure for the Web3 stack: it lets Ethereum smart contracts extract, verify and integrate real-world data using zero-knowledge proofs and multi-party computation, so a contract can act on a fact without the underlying private data ever being exposed. The four primitives are genuinely interesting and clearly scoped — Web Proofs (verify data from APIs and websites on-chain), Email Proofs (bring email content on-chain, e.g. to reset an account-abstraction wallet), Time Travel (use historical on-chain balances for airdrops, voting or entitlements) and Teleport (execute a contract across EVM-compatible chains). The use-cases are concrete rather than hand-wavy: proof of asset custody, proof-of-holdings as cross-chain loan collateral, verifiable social-media engagement for brand partnerships. It is distributed as a developer toolkit — install the CLI, scaffold a project, and drive it from Vanilla JS/TS or React. What holds the score down is not the technology but the surface we could review: the reviewed page is the `book.vlayer.xyz` handbook, which opens with its own banner saying the docs are outdated and pointing to a newer site, so the first thing a developer (or an agent) meets is a self-declared stale reference. There is no pricing, no maturity or production-readiness signal, and the proof primitives require a blockchain environment to exercise, so this is a review of documentation, not of behaviour. For teams already building on Ethereum who need verifiable off-chain data, the primitives are worth a serious look — but the public entry point needs to stop sending readers to a page it admits is out of date.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-06",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because vlayer offers real, well-differentiated ZK/MPC primitives with concrete on-chain use-cases and a documented JS/TS + React developer path. Held in the low band because the reviewed surface is a handbook the site itself flags as outdated, no pricing or production-maturity evidence is public, and the proofs can only be exercised inside a blockchain environment — so this is a documentation review, not a behavioural one. It rises with a current, non-deprecated docs entry point and public evidence of production usage.",
+  "what_it_does_well": [
+    "Clearly-scoped ZK/MPC primitives — Web Proofs, Email Proofs, Time Travel and Teleport — each mapped to concrete real-world applications",
+    "Solves a genuine problem: acting on verified facts on-chain without exposing the underlying private data",
+    "Documented developer path from Vanilla JS/TS and React, with installation and first-project steps",
+    "Cross-chain execution (Teleport) and historical on-chain reads (Time Travel) are differentiated capabilities, not table stakes"
+  ],
+  "what_it_fails_at": [
+    "The reviewed docs page (book.vlayer.xyz) carries its own banner saying it is outdated and points elsewhere — a poor public entry point",
+    "No pricing or access model visible on the reviewed surface",
+    "No production-maturity, security-audit or adoption evidence on the captured surface",
+    "The primitives require a blockchain environment to exercise — nothing is behaviourally testable from the public page",
+    "No MCP server or agent-native interface surfaced"
+  ],
+  "best_for": [
+    "Ethereum / EVM developers who need to bring verified off-chain or historical on-chain data into smart contracts",
+    "Teams building account-abstraction, airdrop, entitlement or cross-chain-collateral flows that depend on provable facts",
+    "Web3 builders comfortable evaluating ZK/MPC tooling from source and current docs"
+  ],
+  "not_recommended_for": [
+    "Non-blockchain teams — the entire value proposition assumes smart-contract deployment",
+    "Buyers who need published pricing or a production-readiness signal before evaluating",
+    "Agent-driven workflows expecting an MCP server or hosted API rather than an on-chain SDK"
+  ],
+  "red_flags": [
+    "The primary reviewed documentation page declares itself outdated and redirects readers to a different site"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "ZK + MPC let smart contracts verify private real-world data without exposing it",
+      "source": "https://book.vlayer.xyz ('powered by Zero Knowledge Proofs (ZKP) and Multi-Party Computation (MPC), allowing you to securely verify private data without exposing sensitive information')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Four core features: Web Proofs, Email Proofs, Time Travel, Teleport",
+      "source": "https://book.vlayer.xyz (Introduction — 'Our four core features include: Web Proofs ... Email Proofs ... Time Travel ... Teleport')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Documented developer path via Vanilla JS/TS and React",
+      "source": "https://book.vlayer.xyz ('From JavaScript' — 'Vanilla JS/TS', 'React')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    },
+    {
+      "claim": "Reviewed docs page declares itself outdated",
+      "source": "https://book.vlayer.xyz ('⚠️ These docs are outdated. For the latest version, visit https://docs.vlayer.xyz')",
+      "tested_at": "2026-09-06",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "vlayer is a developer SDK/CLI for Ethereum smart-contract development (Vanilla JS/TS and React), not a hosted agent surface. An agent could consume it only as a code library within a blockchain project; there is no MCP server or hosted API on the reviewed surface, and the proofs require a chain environment to run.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "vlayer enables developers to extract, verify and integrate real-world data into Ethereum smart contracts"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Getting Started / Installation flow documented"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "No pricing on the reviewed docs surface"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-09-06T09:00:00Z",
+      "evidence": "Concrete use-cases and a documented JS/TS + React integration path"
+    }
+  ],
+  "summary": "Zero-knowledge infrastructure that lets Ethereum smart contracts verify real-world data — powerful primitives (Web/Email Proofs, Time Travel, Teleport), but reviewed here through docs the site itself flags as outdated.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-05",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-05",
+  "attestation_url": "/data/attestations/vlayer-xyz-vlayer.json",
+  "signature_pending": true,
+  "source": "r-publish-editorial-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-06",
+    "source": "r-publish-editorial-enrich",
+    "note": "vlayer produces cryptographic proofs for smart contracts, not synthetic media — Article-50 synthetic-content marking does not apply."
+  },
+  "evidence_images": {
+    "run_id": "run-6f90f0a009b29ffd-book-vlayer-xyz",
+    "base": "https://images.hlido.eu/reviews/vlayer-xyz-vlayer/run-6f90f0a009b29ffd-book-vlayer-xyz",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/vlayer-xyz-vlayer/run-6f90f0a009b29ffd-book-vlayer-xyz/home.png"
+    ],
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing on the reviewed docs surface",
+      "tested_at": "2026-09-06"
+    },
+    "last_verified": "2026-09-06",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-06"
+  }
+}
