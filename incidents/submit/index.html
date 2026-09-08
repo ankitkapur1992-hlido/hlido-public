@@ -10,13 +10,13 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site-v2.css?v=20260713unify">
-  <link rel="stylesheet" href="/assets/site-v3.css?v=20260713unify">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=9321bea07b">
+  <link rel="stylesheet" href="/assets/site-v3.css?v=60f0aca942">
   <style>
     .submit-page { background: var(--paper); color: var(--ink); }
     .submit-page .wrap { max-width: 760px; }
-    .submit-page h1 { font-family: 'Fraunces', serif; font-weight: 500; }
+    .submit-page h1 { font-family: var(--font-display); font-weight: 500; }
     form.incident-form { display: grid; gap: 16px; margin: 24px 0 64px; }
     form.incident-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
     form.incident-form input[type="text"],
@@ -25,22 +25,22 @@
     form.incident-form input[type="datetime-local"],
     form.incident-form select,
     form.incident-form textarea {
-      padding: 10px 12px; border: 1px solid var(--rule, #ddd); border-radius: 6px;
-      font-family: inherit; font-size: 14px; background: var(--paper, #fff); color: var(--ink, #222);
+      padding: 10px 12px; border:1px solid var(--rule, var(--surface)); border-radius: 6px;
+      font-family: inherit; font-size: 14px; background:var(--paper, var(--surface)); color:var(--ink, var(--ink));
     }
     form.incident-form textarea { min-height: 100px; resize: vertical; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
     form.incident-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    form.incident-form .help { font-size: 12px; color: var(--ink-muted, #666); font-weight: 400; }
-    form.incident-form button { padding: 12px 24px; background: var(--ink, #111); color: var(--paper, #fff); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px; }
+    form.incident-form .help { font-size: 12px; color:var(--ink-muted, var(--ink)); font-weight: 400; }
+    form.incident-form button { padding: 12px 24px; background:var(--ink, var(--surface-raise)); color:var(--paper, var(--ink)); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px; }
     form.incident-form button:disabled { opacity: 0.5; cursor: not-allowed; }
-    .disclosure { padding: 16px; background: #fff8e1; border-left: 4px solid #f57f17; border-radius: 6px; font-size: 14px; }
+    .disclosure { padding: 16px; background:var(--surface); border-left:4px solid var(--tier-flatline); border-radius: 6px; font-size: 14px; }
     .evidence-list { display: grid; gap: 8px; }
     .evidence-list input { width: 100%; }
-    .add-evidence { font-size: 13px; background: none; border: 1px dashed var(--rule, #ccc); padding: 6px 12px; border-radius: 6px; cursor: pointer; color: var(--ink, #333); }
+    .add-evidence { font-size: 13px; background: none; border:1px dashed var(--rule, var(--surface)); padding: 6px 12px; border-radius: 6px; cursor: pointer; color:var(--ink, var(--ink)); }
     .submit-result { padding: 16px; border-radius: 8px; margin-top: 16px; display: none; }
-    .submit-result.success { background: #e8f5e9; color: #1b5e20; display: block; }
-    .submit-result.error { background: #ffebee; color: #b71c1c; display: block; }
-    .private-beta-banner { padding: 14px 18px; background: #fff8e1; border-left: 4px solid #f57f17; border-radius: 6px; margin: 16px 0; font-size: 14px; color: #6f4f00; }
+    .submit-result.success { background:var(--surface); color:var(--ink); display: block; }
+    .submit-result.error { background:var(--surface); color:var(--ink); display: block; }
+    .private-beta-banner { padding: 14px 18px; background:var(--surface); border-left:4px solid var(--tier-flatline); border-radius: 6px; margin: 16px 0; font-size: 14px; color:var(--tier-fading); }
     body.form-private-beta .submit-active { display: none; }
     body.form-private-beta form.incident-form { opacity: 0.55; pointer-events: none; }
   </style>
@@ -154,9 +154,58 @@
       <div class="submit-result" id="submit-result"></div>
     </form>
   </main>
-  <footer class="site-foot wrap">
-    <p>&copy; Hlido &middot; <a href="/methodology/">Methodology</a> &middot; <a href="/privacy/">Privacy</a></p>
-  </footer>
+    <footer class="footer">
+      <div class="container footer-stack">
+        <div class="footer-grid">
+          <div>
+            <strong>Hlido</strong>
+            <div class="muted footer-entity">Independent review desk &amp; technology consulting · Prague, Czech Republic</div>
+          </div>
+          <div class="footer-contact">
+            <span class="muted">Questions? Disputes?</span>
+            <a href="/contact/">Open contact page</a>
+            <span class="muted" style="opacity:0.7;">or email</span>
+            <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a>
+          </div>
+        </div>
+        <nav class="footer-nav-flat" aria-label="Site map">
+          <div class="fnf-group">
+            <span class="fnf-label">Site</span>
+            <a href="/reviews/">Reviews</a>
+            <a href="/services/">Services</a>
+            <a href="/eu-ai-act/">EU AI Act</a>
+            <a href="/check/">Check a tool</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Trust</span>
+            <a href="/methodology/">Methodology</a>
+            <a href="/incidents/">Incident registry</a>
+            <a href="/legal/editorial-policy.html">Editorial policy</a>
+            <a href="/legal/conflict-of-interest.html">Conflict of interest</a>
+            <a href="/legal/privacy.html">Privacy</a>
+            <a href="/legal/terms.html">Terms</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Developers</span>
+            <a href="/developers/">Developer tools</a>
+            <a href="/mcp/">MCP server</a>
+            <a href="/api/">Recommendation API</a>
+            <a href="/data/open/">Open data (CC-BY)</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Company</span>
+            <a href="/submit/">Submit an agent</a>
+            <a href="/vendor/">For vendors</a>
+            <a href="/fixmyproblem/">FixMyProblem</a>
+            <a href="/services/#partnerships">Partnerships</a>
+            <a href="/login/">Sign in</a>
+            <a href="/legal/dispute-process.html">Dispute process</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
   <script>
     (function () {
       const form = document.getElementById('incident-form');
@@ -223,5 +272,6 @@
       });
     })();
   </script>
+  <script src="/assets/site-motion.js?v=3481720be7" defer></script>
 </body>
 </html>
