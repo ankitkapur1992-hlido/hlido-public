@@ -21,28 +21,28 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site-v2.css?v=20260713unify">
-  <link rel="stylesheet" href="/assets/site-v3.css?v=20260713unify">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-v2.css?v=9321bea07b">
+  <link rel="stylesheet" href="/assets/site-v3.css?v=60f0aca942">
   <style>
     .api-page { background: var(--paper); color: var(--ink); }
     .api-page .page-hero { padding: 80px 0 56px; background: linear-gradient(180deg, var(--paper) 0%, var(--paper-alt) 100%); }
     .api-page .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-    .api-page h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: 48px; line-height: 1.1; margin: 0 0 16px; }
+    .api-page h1 { font-family: var(--font-display); font-weight: 500; font-size: 48px; line-height: 1.1; margin: 0 0 16px; }
     .api-page .lead { font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 720px; margin: 0 0 32px; }
-    .api-page h2 { font-family: "Fraunces", serif; font-weight: 500; font-size: 32px; margin: 56px 0 16px; }
+    .api-page h2 { font-family: var(--font-display); font-weight: 500; font-size: 32px; margin: 56px 0 16px; }
     .api-page h3 { font-weight: 600; font-size: 18px; margin: 0 0 8px; }
     .api-page p { line-height: 1.6; margin: 0 0 12px; }
     .api-page .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 32px 0; }
     .api-page .tier-card { background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
-    .api-page .tier-card.featured { border-color: var(--accent, #ffffff); box-shadow: 0 6px 24px rgba(255,255,255,0.12); }
-    .api-page .tier-card .price { font-family: "Fraunces", serif; font-size: 36px; font-weight: 500; margin: 8px 0 4px; }
+    .api-page .tier-card.featured { border-color:var(--accent, var(--surface)); box-shadow: 0 6px 24px rgba(255,255,255,0.12); }
+    .api-page .tier-card .price { font-family: var(--font-display); font-size: 36px; font-weight: 500; margin: 8px 0 4px; }
     .api-page .tier-card .price small { font-size: 16px; font-weight: 400; color: var(--muted); }
     .api-page .tier-card ul { list-style: none; padding: 0; margin: 16px 0; flex: 1; }
     .api-page .tier-card li { padding: 6px 0; font-size: 14px; }
     .api-page .tier-card li::before { content: "+ "; color: var(--accent); font-weight: 600; }
-    .api-page .btn { display: inline-block; background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; cursor: pointer; border: none; font-family: inherit; font-size: inherit; }
-    .api-page .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+    .api-page .btn { display: inline-block; background: var(--surface); color: #000; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; cursor: pointer; border: none; font-family: inherit; font-size: inherit; }
+    .api-page .btn-ghost { background: transparent; color: #000; border: 1px solid var(--rule); }
     .api-page pre { background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 8px; padding: 16px; overflow-x: auto; font-family: "JetBrains Mono", monospace; font-size: 13px; line-height: 1.5; margin: 0; }
     .api-page code { font-family: "JetBrains Mono", monospace; font-size: 13px; background: var(--paper-alt); padding: 2px 6px; border-radius: 4px; }
     .api-page .field-grid { display: grid; grid-template-columns: 200px 1fr; gap: 12px 24px; margin: 16px 0; font-size: 14px; }
@@ -58,7 +58,7 @@
     .code-tabs { margin: 16px 0 32px; }
     .code-tab-btns { display: flex; gap: 4px; border-bottom: 1px solid var(--rule); margin-bottom: 0; flex-wrap: wrap; }
     .code-tab-btn { background: transparent; border: 1px solid transparent; border-bottom: none; padding: 8px 14px; font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--muted); cursor: pointer; border-radius: 6px 6px 0 0; }
-    .code-tab-btn[aria-selected="true"] { background: var(--paper-alt); border-color: var(--rule); color: var(--ink); }
+    .code-tab-btn[aria-selected="true"] { background: var(--paper-alt); border-color: var(--rule); color: #000; }
     .code-tab-panel { display: none; }
     .code-tab-panel[data-active="true"] { display: block; }
     .api-page .nav-bar { padding: 16px 0; border-bottom: 1px solid var(--rule); background: var(--paper); }
@@ -350,5 +350,58 @@ for hit in r.json()["results"]:
       });
     })();
   </script>
+    <footer class="footer">
+      <div class="container footer-stack">
+        <div class="footer-grid">
+          <div>
+            <strong>Hlido</strong>
+            <div class="muted footer-entity">Independent review desk &amp; technology consulting · Prague, Czech Republic</div>
+          </div>
+          <div class="footer-contact">
+            <span class="muted">Questions? Disputes?</span>
+            <a href="/contact/">Open contact page</a>
+            <span class="muted" style="opacity:0.7;">or email</span>
+            <a href="mailto:ankit@hlido.eu">ankit@hlido.eu</a>
+          </div>
+        </div>
+        <nav class="footer-nav-flat" aria-label="Site map">
+          <div class="fnf-group">
+            <span class="fnf-label">Site</span>
+            <a href="/reviews/">Reviews</a>
+            <a href="/services/">Services</a>
+            <a href="/eu-ai-act/">EU AI Act</a>
+            <a href="/check/">Check a tool</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Trust</span>
+            <a href="/methodology/">Methodology</a>
+            <a href="/incidents/">Incident registry</a>
+            <a href="/legal/editorial-policy.html">Editorial policy</a>
+            <a href="/legal/conflict-of-interest.html">Conflict of interest</a>
+            <a href="/legal/privacy.html">Privacy</a>
+            <a href="/legal/terms.html">Terms</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Developers</span>
+            <a href="/developers/">Developer tools</a>
+            <a href="/mcp/">MCP server</a>
+            <a href="/api/">Recommendation API</a>
+            <a href="/data/open/">Open data (CC-BY)</a>
+          </div>
+          <div class="fnf-group">
+            <span class="fnf-label">Company</span>
+            <a href="/submit/">Submit an agent</a>
+            <a href="/vendor/">For vendors</a>
+            <a href="/fixmyproblem/">FixMyProblem</a>
+            <a href="/services/#partnerships">Partnerships</a>
+            <a href="/login/">Sign in</a>
+            <a href="/legal/dispute-process.html">Dispute process</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  <script src="/assets/site-motion.js?v=3481720be7" defer></script>
 </body>
 </html>
