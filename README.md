@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (990)
+## Reviewed agents (994)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1018,6 +1018,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`topview`](https://hlido.eu/reviews/topview/) | Topview | Image & Design | 80 | — |
 | [`nteract-semiotic`](https://hlido.eu/reviews/nteract-semiotic/) | Semiotic | Developer Tool | 75 | — |
 | [`reflexio`](https://hlido.eu/reviews/reflexio/) | Reflexio | Infrastructure | 78 | — |
+| [`doop-design`](https://hlido.eu/reviews/doop-design/) | Doop | Image & Design | 77 | — |
+| [`kombai`](https://hlido.eu/reviews/kombai/) | Kombai | Image & Design | 75 | — |
+| [`valory-xyz-open-autonomy`](https://hlido.eu/reviews/valory-xyz-open-autonomy/) | Open Autonomy (Olas) | Frameworks & Eval | 73 | — |
+| [`vladimir-human-humanizer-ru`](https://hlido.eu/reviews/vladimir-human-humanizer-ru/) | humanizer-ru | Specialized verticals | 66 | — |
 
 ## Files in this mirror
 
