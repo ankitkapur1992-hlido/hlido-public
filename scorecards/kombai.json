@@ -1,0 +1,177 @@
+{
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "schema_version": "2.0",
+  "source": "r4-claude-native-enrich",
+  "slug": "kombai",
+  "name": "Kombai",
+  "agent_url": "https://kombai.com",
+  "category": "Image & Design",
+  "run_id": "run-r4-v2-kombai-2026-09-09",
+  "run_at": "2026-09-09T08:55:00Z",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A design-and-code agent with a real thesis — make the design decisions deliberately, then write code that matches the repo it lands in — but nothing on the public surface an agent can drive.",
+    "body": "Kombai calls itself an 'AI design engineer', and unusually for that phrase it names the specific failure it is built against: 'AI outputs often repeat generic design choices across very different tasks, while missing the code patterns already decided in large repos.' Both halves of that sentence are a real complaint about coding agents, and the product is organised around them — a 'taste agent' that identifies which design decisions a task actually requires and makes them deliberately rather than falling back on defaults, and a code path that reuses components, tokens and hooks from your own repo, npm package or Storybook. The pillars are spelled out (Creative Taste, Infinite Canvases, Deep Product Context, Any Model), and the landing page carries a long worked example rather than a slogan: three dropdowns restyled onto a glass design system, with the agent reading the tokens first, mapping every state 1:1, spawning three subagents on canvas, running two refinement passes, then applying a surface-only diff of +115/-30 across three TSX files. Whether it behaves that way in your repo is exactly what a marketing page cannot tell you, but the example is specific enough to be checkable, which is more than most of this category offers. Distribution is broad and concrete — macOS, Windows, Linux, VS Code and Cursor, with a Linux download offered directly from the hero. What we could not see is the part Hlido weighs most heavily: the captured surface shows no API, no CLI, no MCP endpoint and no documented way for another agent to drive Kombai. It is an agent you sit with, not one you compose. Pricing is a nav item we did not open, and the '500K+ installs' figure is the vendor's own count with no source beside it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because the product has a clearly-argued thesis, a specific and checkable worked example rather than generic claims, and real multi-platform distribution including two editor integrations. Held below the top band because the public surface exposes no programmatic interface for other agents, the headline adoption figure is self-reported with no source, and pricing detail was not on the captured surface. It rises with a published API or MCP server and any third-party evidence for the install count.",
+  "what_it_does_well": [
+    "Names the specific failure it targets — generic AI design defaults, and ignored repo conventions — instead of claiming general 'AI-powered' improvement",
+    "Carries a long, concrete worked example (three dropdowns restyled to a glass design system, +115/-30 across three TSX files) rather than a slogan",
+    "Separates the two problems into two mechanisms: a taste agent for design decisions, repo/npm/Storybook context for code fit",
+    "Broad distribution on the captured surface — macOS, Windows, Linux, plus VS Code and Cursor integrations",
+    "Canvas iteration is positioned before production code, so exploration does not have to touch the repo"
+  ],
+  "what_it_fails_at": [
+    "No API, CLI, MCP server or other programmatic interface visible on the captured surface — another agent cannot drive it",
+    "'500K+ installs and counting' is a self-reported figure with no source or methodology beside it",
+    "Pricing is a nav link only; no tiers, figures or free-tier limits appeared on the captured surface",
+    "The design-quality claims ('standout, not slop') are inherently subjective and the page offers no independent evaluation",
+    "No named customers, case studies or third-party evidence on the captured surface"
+  ],
+  "best_for": [
+    "Front-end teams whose coding agent produces working code that ignores their existing design system",
+    "Designers and engineers who want to iterate on canvas before a change reaches production code",
+    "Teams already in VS Code or Cursor who want the design step inside the editor",
+    "Codebases with an established component library, token set or Storybook for the agent to reuse"
+  ],
+  "not_recommended_for": [
+    "Agent-driven pipelines that need to invoke a design step programmatically — no such interface is published",
+    "Teams needing published pricing before evaluation",
+    "Backend or non-UI work — the entire proposition is website and product UI",
+    "Buyers who require named references or independent adoption evidence before a trial"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "uizard",
+      "verdict_diff": "Uizard is a design tool that generates UI from prompts and wireframes. Kombai's pitch is narrower and more engineering-shaped: fit the generated design and code into an existing repo's conventions. Choose Uizard to explore UI from scratch; choose Kombai when the constraint is an existing codebase.",
+      "preferred_for_axis": "repo-context-fit"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is the general coding agent Kombai integrates with rather than replaces. Cursor edits any code; Kombai is a design-decision layer for UI work specifically. They are complements on the captured surface, not alternatives.",
+      "preferred_for_axis": "general-coding-vs-ui-design"
+    },
+    {
+      "slug": "figma-make",
+      "verdict_diff": "Figma Make works from inside the design tool and outward to code. Kombai works from the repo outward to design, reusing components and tokens that already exist. The choice follows which artefact you consider canonical.",
+      "preferred_for_axis": "design-source-of-truth"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Positions itself as an 'AI design engineer' for websites and product UIs",
+      "source": "https://kombai.com",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Available for macOS, Windows, Linux, VS Code and Cursor",
+      "source": "homepage hero, 'Available for macOS, Windows, Linux, VS Code and Cursor.'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Reuses components, tokens and hooks from the user's repo, npm package or Storybook",
+      "source": "homepage, 'Code that fits in' section",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Claims 500K+ installs",
+      "source": "homepage hero, '500K+ installs and counting' — vendor-reported, no source given",
+      "tested_at": "2026-09-09",
+      "verified": false
+    },
+    {
+      "claim": "Pricing page linked from primary navigation",
+      "source": "homepage nav",
+      "tested_at": "2026-09-09",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None published on the captured surface. Kombai ships as a desktop application plus VS Code and Cursor extensions — a human-driven agent, not a component another agent can call. It sits inside an agentic editor rather than exposing itself to one.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "https://kombai.com returned the full marketing surface, no blockers detected",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your AI design engineer' / 'Design and code standout websites and product UIs, not slop.'",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started for Free' in nav; 'Download for Linux' in hero",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Pricing linked from primary nav and a free entry point ('Get Started for Free'); no figures on the captured surface",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Extended in-page worked example: three dropdowns restyled to a glass design system with a +115/-30 diff across three named TSX files",
+      "tested_at": "2026-09-09T08:55:00Z"
+    }
+  ],
+  "summary": "A design-and-code agent with a real thesis — make the design decisions deliberately, then write code that matches the repo it lands in — but nothing on the public surface an agent can drive.",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-09",
+    "source": "r4-claude-native-enrich (public-surface capture)",
+    "note": "No C2PA, watermark, content-credentials or provenance statement appeared on the captured surface. Kombai generates designs and code, so Article 50(4) marking is applicable; absence here is an absence of evidence on the homepage, not a tested negative across the whole product."
+  },
+  "staleness_after": "2027-03-09",
+  "next_review_due_at": "2027-03-09",
+  "review_age_days_at_publish": 0,
+  "signature_pending": true,
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing linked from primary nav and a free entry point ('Get Started for Free'); no figures on the captured surface",
+      "tested_at": "2026-09-09"
+    },
+    "last_verified": "2026-09-09",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-09"
+  }
+}
