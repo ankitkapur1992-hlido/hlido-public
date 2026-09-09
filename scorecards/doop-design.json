@@ -1,0 +1,185 @@
+{
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "schema_version": "2.0",
+  "source": "r4-claude-native-enrich",
+  "slug": "doop-design",
+  "name": "Doop",
+  "agent_url": "https://doop.design",
+  "category": "Image & Design",
+  "run_id": "run-r4-v2-doop-design-2026-09-09",
+  "run_at": "2026-09-09T08:55:00Z",
+  "score": 77,
+  "tier": "STEADY",
+  "laddoo_score": 77,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An infinite design canvas that agents join over MCP as you, via OAuth — the most genuinely agent-native design surface we have reviewed, and free in beta with everything that implies.",
+    "body": "Doop is a shared design canvas whose primary users are meant to be agents. They connect over MCP — one command, `claude mcp add --transport http doop https://doop.design/mcp`, then a browser OAuth approval — and then work on the canvas *as you*, attributed and accountable, with no API keys handed over and no second AI subscription. For a register whose thesis is that agents, not humans, are the consumers of the next layer of tooling, that architecture is the most interesting thing on the page. The rest follows from it. Frames stream in as they are written rather than appearing behind a spinner. A comment left anywhere on the canvas becomes a task the right agent picks up, works, and replies to with a screenshot — feedback as backlog. A headless renderer hands agents screenshots of their own frames so they can review fit, spacing and contrast and fix problems before a human sees them. Every frame is a live URL that re-renders when the design changes, so an embedded og:image is never stale. And the canvas holds shared memory: tasks, decisions, comments and a distilled 'taste profile' learned from what you actually said ('rounder corners?', 'keep it to the blue', 'less shadow on the cards') live on the canvas rather than in one agent's context, so whoever joins next continues mid-thought. Multi-agent designs usually founder on exactly that handoff, and Doop has addressed it structurally. What holds it down is stage, not design: it is free in beta, which is a statement about today and not about what this costs later; there are no named customers, no usage figures, and nothing independent about whether the self-review actually catches what a designer would. The surface also does its own product demonstration entirely through mock canvases — persuasive, but authored by the vendor.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77) because Doop is genuinely agent-native rather than agent-adjacent — a documented MCP endpoint with OAuth-delegated identity, a stated multi-agent memory model, and a design surface built for agents to act on rather than a human tool with an AI feature bolted on. Held below the top band because it is explicitly in beta with no priced tier, carries no named customers or usage evidence, and every capability on the page is demonstrated through the vendor's own mock canvases. It rises with published pricing, adoption evidence, and any third-party account of the self-review actually working.",
+  "what_it_does_well": [
+    "Agents connect over MCP as first-class users — one documented command plus a browser OAuth approval, with no API keys transferred",
+    "Agents act under the user's identity, attributed and accountable, rather than as an anonymous integration",
+    "Shared canvas memory — tasks, decisions and comments persist on the canvas, so a new agent continues mid-thought instead of restarting",
+    "Distils a 'taste profile' from ordinary comments and applies it to new frames, with each learned rule traced back to the comment and date it came from",
+    "Built-in headless renderer lets agents screenshot and review their own frames for fit, spacing and contrast before a human sees them",
+    "Every frame is a live URL that re-renders on change, so shared or embedded images do not go stale",
+    "Explicitly plural about agents — Claude Code, Codex 'and any MCP agent' — rather than locking to one vendor"
+  ],
+  "what_it_fails_at": [
+    "'Free in beta' is a statement about the current stage, not a pricing model — no tiers, no figures, no indication of what it costs after beta",
+    "No named customers, adoption figures or independent evidence anywhere on the captured surface",
+    "Every feature is demonstrated through the vendor's own mock canvases; nothing shown is third-party verifiable",
+    "The self-review claim ('they judge them like a senior designer') is the strongest claim on the page and the least evidenced",
+    "Beta status carries the usual continuity risk for anything a team would build a workflow around"
+  ],
+  "best_for": [
+    "Teams already running Claude Code, Codex or other MCP agents who want a design surface those agents can act on directly",
+    "Multi-agent workflows where handoff and shared context between agents is the actual bottleneck",
+    "Anyone who wants agent design work attributed to a real identity rather than a shared API key",
+    "Design reviews that live in comments — the comment-to-task loop is the most concrete part of the product"
+  ],
+  "not_recommended_for": [
+    "Organisations that need committed pricing or a support commitment before adopting a workflow tool",
+    "Teams with no MCP-capable agent — the central proposition does not apply",
+    "Work requiring an audited or contractual design-review process; the self-review is unevidenced",
+    "Buyers who require production references before trialling"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "uizard",
+      "verdict_diff": "Uizard generates UI for a human designer to refine. Doop's canvas is built for agents to work on directly over MCP, with the human steering. Choose Uizard for human-led generation; choose Doop when the agents are meant to do the work.",
+      "preferred_for_axis": "agent-native-canvas"
+    },
+    {
+      "slug": "figma-make",
+      "verdict_diff": "Figma Make brings generation into an established, priced, enterprise-ready design tool. Doop is a beta product whose differentiator is agent access and shared canvas memory. Figma Make wins on maturity and procurement; Doop wins on agent-native architecture.",
+      "preferred_for_axis": "maturity-vs-agent-access"
+    },
+    {
+      "slug": "playgroundai",
+      "verdict_diff": "Playground is a generation surface for images and graphics. Doop is a collaborative product-design canvas with task, memory and review semantics. Different problems — only compare them if the need is 'produce a visual' rather than 'design a product surface with agents'.",
+      "preferred_for_axis": "product-design-vs-image-generation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Agents connect over MCP via OAuth and act as the user",
+      "source": "homepage, 'Bring your own agent' — `claude mcp add --transport http doop https://doop.design/mcp`, browser approval, 'your agent now designs as you'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Free in beta, works with Claude Code, Codex and any MCP agent",
+      "source": "homepage hero, 'Free in beta · works with Claude Code / Codex / + any MCP agent'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Canvas holds shared memory across agents (tasks, decisions, comments, taste profile)",
+      "source": "homepage, 'One memory, every agent.' and 'Doop learns your taste.' sections",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Built-in headless renderer lets agents self-review their own frames",
+      "source": "homepage, 'Self-review' feature block",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Every frame is a live export URL that re-renders on change",
+      "source": "homepage, 'Live exports' block — doop.design/i/verdi-hero.png",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Agents judge frames 'like a senior designer'",
+      "source": "homepage, 'Self-review' block — vendor claim, no independent evidence on the captured surface",
+      "tested_at": "2026-09-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Documented MCP server at https://doop.design/mcp over streamable HTTP, added with a single `claude mcp add` command and authorised by browser OAuth so the agent acts under the user's own identity. Agents create and edit frames, pick up canvas comments as tasks, read shared canvas memory, and retrieve screenshots of their own output for self-review. This is a design surface intended to be driven by an agent rather than merely assisted by one.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "https://doop.design returned the full marketing surface, no blockers detected",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Design with AI agents.' — 'an infinite canvas where AI agents design beside you. They join through MCP — as yours, via OAuth'",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'GET STARTED' and 'DOWNLOAD FOR MACOS' / 'OPEN IN BROWSER'",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "'Free in beta' stated in the hero; no priced tiers published",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Extensive in-page product demonstration plus a copy-pasteable MCP connection command; DOCS and FAQ linked from nav",
+      "tested_at": "2026-09-09T08:55:00Z"
+    }
+  ],
+  "summary": "An infinite design canvas that agents join over MCP as you, via OAuth — the most genuinely agent-native design surface we have reviewed, and free in beta with everything that implies.",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-09",
+    "source": "r4-claude-native-enrich (public-surface capture)",
+    "note": "No C2PA, watermark, content-credentials or provenance statement appeared on the captured surface. Doop generates design output, so Article 50(4) marking is applicable; this records an absence of evidence on the homepage, not a tested negative across the product."
+  },
+  "staleness_after": "2027-03-09",
+  "next_review_due_at": "2027-03-09",
+  "review_age_days_at_publish": 0,
+  "signature_pending": true,
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "subscription"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "'Free in beta' stated in the hero; no priced tiers published",
+      "tested_at": "2026-09-09"
+    },
+    "last_verified": "2026-09-09",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-09"
+  }
+}
