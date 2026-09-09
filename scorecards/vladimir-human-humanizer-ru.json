@@ -1,0 +1,169 @@
+{
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "schema_version": "2.0",
+  "source": "r4-claude-native-enrich",
+  "slug": "vladimir-human-humanizer-ru",
+  "name": "humanizer-ru",
+  "agent_url": "https://vladimir-human.github.io/humanizer-ru/",
+  "category": "Specialized verticals",
+  "run_id": "run-r4-v2-vladimir-human-humanizer-ru-2026-09-09",
+  "run_at": "2026-09-09T08:55:00Z",
+  "score": 66,
+  "tier": "FADING",
+  "laddoo_score": 66,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A single-purpose Russian-language checker for AI-paste traces that is unusually honest about its own state — versioned rules, a pinned commit, a published errata — but narrow, solo-maintained, and shipped alongside a rewriter that cuts the other way.",
+    "body": "This is a small, deliberate tool doing one thing: you paste text copied out of a chat with an AI model and it shows the traces it can find in Russian text and explains each one. The demo runs entirely in the browser and the page says so twice, unprompted — the text does not leave the browser and is not transmitted anywhere, and even the feedback field is explicit that you compose and send the report yourself. For a tool people will paste unpublished writing into, stating that plainly on the surface is the right instinct. The engineering discipline on display is well above what its size would predict. The developer footer carries a named rule format (vmarkers.v1), the marker count (40), the date the rule data was compiled, the date it was verified, the exact commit it is running, the product version — and, remarkably, that main is 43 commits ahead of the release you are using. Volunteering the gap between what is shipped and what is built is the opposite of what most surfaces do. It also publishes real machine-readable artefacts: llms.txt, a contract.v1.json and an ERRATA.md, with sources and the full skill on GitHub and the package on PyPI. An errata file is a quiet admission that a rule-based detector will be wrong sometimes, which is more credible than a confidence score. Two things hold the score down and neither is about craft. The first is scope and continuity: this is one page and one rule set for one language, maintained by an individual, with no organisation, support commitment or roadmap behind it — a genuine dependency risk for anyone building on it. The second is worth stating plainly because readers of this register will care: the same package ships a rewriter alongside the detector. The demo surface is framed as verification — show the traces, explain them — and that framing is honest about what is on the page. But a component that removes machine-detectable markers from AI-generated text points the other way from the transparency duties this register spends most of its time measuring, and anyone republishing rewritten output should understand that their own marking obligations do not travel with the text.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (66) is a judgement about scope and continuity, not about quality. The craft signals are strong — versioned rules with a compile date, a pinned commit, an honest release-versus-main gap, a published errata, and real machine-readable artefacts (llms.txt, contract.v1.json) that put its agent-readability above most of its band. What holds it below STEADY is that it is a single-page demo for a single language maintained by an individual, with no organisation, support commitment or roadmap behind it, and no evidence of the detector's accuracy beyond the rules themselves. It rises with independent accuracy evidence and any continuity commitment.",
+  "what_it_does_well": [
+    "States its privacy model plainly and repeatedly — analysis is browser-local, the text is not transmitted, and even the feedback field says you send the report yourself",
+    "Publishes the exact state it is running: rule format vmarkers.v1, 40 markers, rule-data date, verification date, running commit, and product version",
+    "Volunteers that main is 43 commits ahead of the release being served — a gap almost nobody discloses",
+    "Ships real machine-readable artefacts for agents: llms.txt, contract.v1.json and ERRATA.md",
+    "Maintains a published errata, treating detector error as expected rather than denying it",
+    "Sources and the full skill are open on GitHub with the package on PyPI, so the rules are inspectable rather than asserted",
+    "Explains each match rather than returning a bare verdict, and separates class A from class B findings"
+  ],
+  "what_it_fails_at": [
+    "Russian text only — the rule set does not generalise to other languages",
+    "Solo-maintained with no organisation, support commitment, roadmap or continuity guarantee behind it",
+    "No independent accuracy evidence — no false-positive or false-negative rate is published for the 40 markers",
+    "The detector is deterministic and rule-based, so its coverage is bounded by whatever markers a given model happens to leave",
+    "The same package ships a rewriter alongside the detector; that capability is not on the demo surface, so its behaviour is undocumented here",
+    "A single static page with no service, account or availability commitment for anything built on it"
+  ],
+  "best_for": [
+    "Russian-language editors and reviewers who want to see and understand paste traces rather than get a verdict",
+    "Anyone who needs the check to run locally because the text cannot leave the browser",
+    "Developers who want an inspectable, versioned rule set rather than an opaque classifier score",
+    "Agents that can consume llms.txt and contract.v1.json to use the rule layer programmatically"
+  ],
+  "not_recommended_for": [
+    "Any language other than Russian",
+    "Institutional or academic integrity decisions — no published accuracy figures support a consequential verdict",
+    "Teams needing a supported service with availability or continuity commitments",
+    "Anyone seeking a definitive 'was this AI-written' answer; the tool shows markers and explains them, and is honest that this is what it does"
+  ],
+  "red_flags": [
+    "The package pairs a detector with a rewriter. Removing machine-detectable markers from AI-generated text runs against the transparency duties this register measures elsewhere, and marking obligations do not travel with rewritten output. The reviewed demo surface is the verification layer only, and is framed as such — the rewriter's behaviour is not evidenced here."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Analyses text for AI-paste traces and explains each match",
+      "source": "https://vladimir-human.github.io/humanizer-ru/",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Analysis is browser-local; text is not transmitted anywhere",
+      "source": "page body, 'Текст анализируется только в браузере и никуда не отправляется'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Publishes rule format, marker count, rule-data date, verification date, running commit and version",
+      "source": "developer footer, 'правила vmarkers.v1 · маркеров: 40 · данные правил от 2026-08-26 · проверено: 2026-09-09, коммит 7e7c48a5 … humanizer-ru v3.35.2'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Discloses that main is 43 commits ahead of the served release",
+      "source": "developer footer, 'main впереди релиза на 43 коммитов'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Publishes machine-readable artefacts llms.txt, contract.v1.json and ERRATA.md",
+      "source": "developer footer, 'Машинные файлы: llms.txt · contract.v1.json · ERRATA.md'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "A rewriter and a connective-tissue detector ship in the repository and on PyPI",
+      "source": "developer footer, 'переписывание и детектор связок — в репозитории и PyPI' — stated by the vendor; not exercised on the captured surface",
+      "tested_at": "2026-09-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "The web demo is the browser-local check layer, but the project publishes llms.txt and a contract.v1.json machine-readable contract alongside a PyPI package and a documented skill on GitHub — so an agent can consume the rule layer programmatically rather than by scraping the page. Machine-readability is well above what a page this small usually offers; there is no hosted API or MCP endpoint.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "https://vladimir-human.github.io/humanizer-ru/ returned the full demo surface, no blockers detected",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Проверяемая гигиена вставки из чата для русского текста' — verifiable paste hygiene for Russian text, with traces shown and explained",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Проверить' / 'Вставить образец' / 'Проверить свой' on the demo surface",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open-source and free: the demo runs in the browser with no account, sources and the full skill are on GitHub and the package on PyPI",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "The page is itself a working demo with a bundled sample; rule provenance, running commit, version and an ERRATA.md are published in the developer footer",
+      "tested_at": "2026-09-09T08:55:00Z"
+    }
+  ],
+  "summary": "A single-purpose Russian-language checker for AI-paste traces that is unusually honest about its own state — versioned rules, a pinned commit, a published errata — but narrow, solo-maintained, and shipped alongside a rewriter that cuts the other way.",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": true,
+    "cop_signatory": null,
+    "evidence_url": "https://vladimir-human.github.io/humanizer-ru/",
+    "checked_at": "2026-09-09",
+    "source": "r4-claude-native-enrich (public-surface capture)",
+    "note": "The product IS a free, publicly accessible detection surface for AI-paste traces in Russian text, with its rule set versioned and open — that is what detection_tool records here. It makes no statement about marking or provenance of its own output, and the rewriter shipped in the same package is not exercised on this surface."
+  },
+  "staleness_after": "2027-03-09",
+  "next_review_due_at": "2027-03-09",
+  "review_age_days_at_publish": 0,
+  "signature_pending": true,
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source and free: the demo runs in the browser with no account, sources and the full skill are on GitHub and the package on PyPI",
+      "tested_at": "2026-09-09"
+    },
+    "last_verified": "2026-09-09",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-09"
+  }
+}
