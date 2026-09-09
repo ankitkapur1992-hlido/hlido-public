@@ -1,0 +1,176 @@
+{
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "schema_version": "2.0",
+  "source": "r4-claude-native-enrich",
+  "slug": "valory-xyz-open-autonomy",
+  "name": "Open Autonomy (Olas)",
+  "agent_url": "https://stack.olas.network/open-autonomy/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-r4-v2-valory-xyz-open-autonomy-2026-09-09",
+  "run_at": "2026-09-09T08:55:00Z",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium-high",
+  "hlido_opinion": {
+    "headline": "A mature, well-documented open-source framework for multi-agent services that settle on-chain — genuinely deep reference material, and a crypto premise you either need or you do not.",
+    "body": "Open Autonomy is the agent framework inside the Olas (formerly Autonolas) stack, and the surface we read is its developer documentation rather than a marketing page — which for a framework is the honest surface to judge. The premise is stated plainly: off-chain autonomous agents that run as a multi-agent system and offer enhanced functionality on-chain, so that operations too complex for a smart contract — the documentation names machine-learning algorithms specifically — can still be executed in a way described as decentralised, trust-minimised, transparent and robust. What the framework actually provides is described without inflation: a set of command-line tools to build, deploy, publish and test agents, and a set of base packages giving agent blueprints the functionality to become part of a service. The documentation depth is the strongest signal here. Get started, guides, key concepts, service configuration, advanced CLI and API reference, versioning and upgrade paths, and an FAQ are all present as first-class sections, alongside a sibling Open AEA framework, Dev Academy videos, a dependency graph and a whitepaper — and the docs explicitly situate the framework within the wider stack (agent marketplace, Pearl, Olas Protocol) rather than pretending to be the whole thing. Versioning and upgrade guidance as standing sections is a maturity marker that most agent frameworks skip. The constraint is not a defect but it is decisive: the value proposition is inseparable from on-chain settlement and a crypto-economic context. If you do not need consensus-backed autonomy, most of what makes this framework interesting is overhead. We also read only the documentation home — the guides, the reference and the whitepaper were linked but not opened, so this is a judgement about the shape and completeness of the documentation, not about how the framework behaves in a build.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the documentation surface is unusually complete for an agent framework — concepts, guides, full CLI/API reference, configuration, an FAQ, and standing versioning and upgrade sections — and the framework's claims about what it provides are specific and unembellished. Held below the top band because the offering is tightly coupled to an on-chain, crypto-economic premise that narrows applicability sharply, and because this review reads the documentation home rather than a build. It rises with evidence of production services running on it outside the sponsoring ecosystem.",
+  "what_it_does_well": [
+    "Documentation is structured as a real reference, not a landing page — get started, guides, key concepts, configuration, advanced CLI/API reference and FAQ are all first-class sections",
+    "Carries standing versioning and upgrade sections, a maturity marker most agent frameworks omit",
+    "Describes what it provides concretely (CLI tools to build/deploy/publish/test, base packages providing agent blueprints) rather than in capability adjectives",
+    "Situates itself honestly inside a larger stack — marketplace, Pearl, Olas Protocol, a sibling Open AEA framework — instead of implying it is the whole system",
+    "Backed by a published whitepaper and Dev Academy video material, so the architectural claims are documented somewhere checkable",
+    "Publicly accessible with no login wall on the documentation"
+  ],
+  "what_it_fails_at": [
+    "The proposition is inseparable from on-chain settlement — outside a crypto-economic context most of the framework is overhead",
+    "'Decentralized, trust-minimized, transparent and robust' is asserted as a property of the architecture, with the supporting argument deferred to the whitepaper rather than made on the page",
+    "No named production services, adoption figures or independent deployments on the captured surface",
+    "The surface read is documentation only; nothing here evidences how the framework behaves in an actual build",
+    "The two-framework split (Open Autonomy alongside Open AEA) is a choice a newcomer must make before the documentation explains the trade-off"
+  ],
+  "best_for": [
+    "Teams building autonomous services that must settle or coordinate on-chain",
+    "Developers who need multi-agent consensus rather than a single agent with tool access",
+    "Work requiring computation too complex for a smart contract but still needing on-chain guarantees",
+    "Builders already inside the Olas ecosystem or its agent marketplace"
+  ],
+  "not_recommended_for": [
+    "Ordinary LLM agent applications with no on-chain requirement — the crypto machinery is pure cost",
+    "Teams wanting a quick start; the framework carries genuine architectural weight",
+    "Anyone needing a hosted or managed runtime rather than a framework to operate themselves",
+    "Buyers who require production references outside the sponsoring ecosystem"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI orchestrates multi-agent collaboration entirely off-chain and is far quicker to start. Open Autonomy adds consensus and on-chain settlement at a real complexity cost. Choose CrewAI unless the on-chain guarantee is the requirement.",
+      "preferred_for_axis": "on-chain-settlement"
+    },
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain is a general-purpose agent and tooling framework with a far larger ecosystem. Open Autonomy is narrower and deeper, aimed at decentralised services rather than general LLM applications. They are not substitutes.",
+      "preferred_for_axis": "general-purpose-vs-decentralised-services"
+    },
+    {
+      "slug": "langchain-langgraph-supervisor",
+      "verdict_diff": "LangGraph's supervisor pattern coordinates agents through an application-level graph you control. Open Autonomy coordinates them through a consensus mechanism with on-chain finality. The choice is whether coordination needs to be trust-minimised or merely correct.",
+      "preferred_for_axis": "coordination-trust-model"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Framework for off-chain autonomous agents running as a multi-agent system with on-chain functionality",
+      "source": "https://stack.olas.network/open-autonomy/",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Provides CLI tools to build, deploy, publish and test agents, plus base packages of agent blueprints",
+      "source": "documentation home, 'The framework provides:'",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Full documentation set — get started, guides, key concepts, configuration, advanced reference, versioning, upgrading, FAQ",
+      "source": "documentation navigation",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Architecture documented in the Olas whitepaper",
+      "source": "documentation home, 'Read the Whitepaper' section",
+      "tested_at": "2026-09-09",
+      "verified": true
+    },
+    {
+      "claim": "Agents are 'decentralized, trust-minimized, transparent, and robust'",
+      "source": "documentation home — architectural claim, supporting argument deferred to the whitepaper and not evidenced on the captured surface",
+      "tested_at": "2026-09-09",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Open Autonomy is itself an agent framework rather than a service an agent calls: it ships a documented command-line toolchain to build, deploy, publish and test agents, base packages providing agent blueprints, and a documented CLI and API reference. An agent developer consumes it as a library and a CLI; there is no MCP server or hosted endpoint for another agent to invoke.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "https://stack.olas.network/open-autonomy/ returned the documentation home, no login wall, no blockers detected",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open Autonomy is a framework for the creation of AI agents: off-chain autonomous AI agents which run as a multi-agent-system (MAS) and offer enhanced functionalities on-chain.'",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' and 'Guides' entry points on the documentation home",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": true,
+      "evidence": "Open-source framework with publicly accessible documentation and no login wall; no commercial pricing applies to the framework itself",
+      "tested_at": "2026-09-09T08:55:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "'Demo autonomous services' section, full CLI/API reference, Dev Academy videos and a published whitepaper linked from the documentation home",
+      "tested_at": "2026-09-09T08:55:00Z"
+    }
+  ],
+  "summary": "A mature, well-documented open-source framework for multi-agent services that settle on-chain — genuinely deep reference material, and a crypto premise you either need or you do not.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-09",
+    "source": "r4-claude-native-enrich (public-surface capture)",
+    "note": "Open Autonomy is a framework for building autonomous on-chain services, not a generator of synthetic media or text. Article 50(4) marking duties attach to the applications built with it, not to the framework surface reviewed here."
+  },
+  "staleness_after": "2027-03-09",
+  "next_review_due_at": "2027-03-09",
+  "review_age_days_at_publish": 0,
+  "signature_pending": true,
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open-source framework with publicly accessible documentation and no login wall; no commercial pricing applies to the framework itself",
+      "tested_at": "2026-09-09"
+    },
+    "last_verified": "2026-09-09",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-09"
+  }
+}
