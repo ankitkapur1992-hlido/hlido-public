@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "ayman3000-naseem-app",
+  "name": "Naseem",
+  "agent_url": "https://ayman3000.github.io/naseem-app/",
+  "repo_url": "https://github.com/ayman3000/naseem-app",
+  "category": "Coding",
+  "run_id": "run-f3354ca71d651826-ayman3000-github-io",
+  "run_at": "2026-09-11T08:31:35.710Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A Mac-native coding agent with an unusually rigorous 'prove, don't assert' philosophy and transparent BYO-key pricing — genuinely differentiated, though young and untested by us behind the download.",
+    "body": "Naseem is a native macOS coding agent (macOS 14+), written entirely in Swift with no Electron or embedded browser, that positions itself against the heavy chat-first assistants: it acts on your actual Mac — real files, a real terminal (git, xcodebuild, package managers, tests, Python), the iOS Simulator, and even GUI-only apps via Apple's Accessibility APIs. The most distinctive part of the pitch is a verification discipline that most agents only gesture at. Naseem claims it 'proves, it doesn't assert': a 'done' that says a file was created is rejected if the file isn't on disk, a Simulator tap on a changed screen is refused, and a scheduled rule that ran no check is refused too — with the menu bar and an on-disk status file as the source of truth ('the app is the status page — no server to trust'). It pairs that with concrete engineering claims: completed tool outputs collapse to compact receipts so the prompt stays bounded over hundreds of steps, a byte-identical request prefix to exploit provider prompt caching, memory that survives restarts, crash-safe resumption, and a stated-cost window. Commercially it is honest and low-friction: a free tier with no account and no subscription (bring your own AI key), and a one-time Pro license (launch price $29, normally $49). The caveats are about maturity and verifiability rather than honesty — it is a young product (v1.4.24) whose public GitHub repo and Product Hunt presence are encouraging but not a track record, it is Mac-only, and Hlido reviewed the landing surface without downloading and running the app, so the strong verification and context-bounding claims are credible-on-their-face but not independently confirmed here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-11",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) — one of the stronger public surfaces we've seen for a young agent: specific, falsifiable claims rather than vague AI marketing, a genuine architectural differentiator (native Swift + tree-first Simulator/Mac automation), a rigorous verification philosophy, an open GitHub repo, and transparent low-friction pricing. Held below VITAL because it is a young product with no long-run track record, Mac-only, and — being a downloadable native app — outside what Hlido's public-surface engine can functionally verify, so the headline verification and context claims remain unconfirmed by us. Confidence medium.",
+  "what_it_does_well": [
+    "Acts on the real machine — files, a real terminal, the iOS Simulator, and GUI-only Mac apps via Accessibility APIs — not a sandbox",
+    "Rigorous 'prove, don't assert' verification: claimed actions are rejected unless the on-disk/UI state confirms them",
+    "Native Swift, no Electron — stays light while Xcode, the Simulator, and the model do the heavy work",
+    "Engineered for long tasks: bounded context via collapsed receipts, cache-friendly stable prefix, restart-surviving memory, crash-safe resume",
+    "Honest, low-friction commercials: free tier, no account, bring-your-own key, one-time Pro license with visible cost tracking"
+  ],
+  "what_it_fails_at": [
+    "macOS 14+ only — no Windows, Linux, or mobile",
+    "Young product (v1.4.24) with no long-run reliability track record yet",
+    "Bring-your-own-key means the user carries model cost and setup",
+    "No public API/MCP surface — it's an end-user agent, not a component other agents can drive",
+    "Strong verification and context-bounding claims are not independently confirmed on the public surface"
+  ],
+  "best_for": [
+    "macOS developers who want an agent that actually builds, runs, tests, and debugs on their real machine",
+    "iOS developers who want native Simulator driving (build, install, launch, tap, screenshot)",
+    "Engineers wary of Electron-heavy assistants who value a lightweight native app",
+    "Users who want to bring their own model key and avoid subscriptions",
+    "Anyone who values an agent that verifies its own 'done' rather than asserting it"
+  ],
+  "not_recommended_for": [
+    "Windows, Linux, or mobile users (Mac-only)",
+    "Teams needing a programmatic/agent-drivable API or MCP surface",
+    "Buyers who require a proven, multi-year reliability record before adoption",
+    "Users who want a fully managed, no-key, hosted experience"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Mac-native (macOS 14+) AI agent that acts on files, terminal, and apps",
+      "source": "https://ayman3000.github.io/naseem-app/",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Drives the iOS Simulator natively via the accessibility tree; automates GUI-only Mac apps via Accessibility APIs",
+      "source": "homepage feature sections",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "'Proves, doesn't assert' — rejects a claimed action unless on-disk/UI state confirms it",
+      "source": "homepage verification section",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Free plan (no account, no subscription, BYO key); Pro one-time license $29 launch / $49",
+      "source": "homepage pricing",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Written in Swift, no Electron; open GitHub repo; launched on Product Hunt; version 1.4.24",
+      "source": "homepage + github.com/ayman3000/naseem-app",
+      "tested_at": "2026-09-11",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Naseem is itself an end-user agent harness for macOS (LLM + harness + your Mac), driven by a human via a native app with bring-your-own model key. It exposes no public API, CLI, or MCP for another agent to drive it programmatically. Its agentic value is as a capable local coding/automation agent, not as an integration component in a larger agent pipeline.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The Mac-native AI agent that does the work, not just the chat'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for macOS'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free plan (BYO key, no account); Pro one-time $29 launch / $49",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Multiple in-action demos (iOS Simulator build/debug, parallel sub-agents) + open GitHub repo",
+      "tested_at": "2026-09-11T08:31:00Z"
+    }
+  ],
+  "summary": "A Mac-native coding agent with an unusually rigorous 'prove, don't assert' philosophy and transparent BYO-key pricing — genuinely differentiated, though young and untested by us behind the download.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-10",
+  "attestation_url": "/data/attestations/ayman3000-naseem-app.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-11",
+    "source": "public-surface-tier-2-review"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…subscription (bring your own AI key), and a one-time Pro license (launch price $29, normally $49). The caveats are about maturity and verifiability rather than…",
+        "source": "hlido_opinion.body"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free plan (BYO key, no account); Pro one-time $29 launch / $49",
+      "tested_at": "2026-09-11"
+    },
+    "last_verified": "2026-09-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-11"
+  }
+}
