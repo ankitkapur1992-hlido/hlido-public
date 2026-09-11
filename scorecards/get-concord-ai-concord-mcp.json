@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0",
+  "slug": "get-concord-ai-concord-mcp",
+  "name": "Concord AI",
+  "agent_url": "https://getconcord.ai/",
+  "category": "Infrastructure",
+  "run_id": "run-42960badde34049c-getconcord-ai",
+  "run_at": "2026-09-11T04:31:23.540Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A coordination layer for multi-agent coding — genuinely agent-native and unusually honest about its own evidence, but still waitlist-stage with the Cloud tier unshipped.",
+    "body": "Concord AI names a problem the agentic-coding wave has walked straight into: individual agents got faster, but two agents editing the same repo have no shared work-state, so they collide at merge time. Concord's answer is a coordination layer delivered as an MCP server — presence (who is working on what), scope claims (reserve a file before editing), agent-to-agent messages mid-session, task memory, ownership handoff, and review packets. It plugs into the clients teams already run (Claude Code, Codex, Cursor, any MCP-capable agent), which is exactly the right integration posture for an agent-to-agent tool: it doesn't ask you to switch runtimes, it sits between the ones you have. What earns Concord more credit than a typical pre-launch landing page is its honesty about its own data. The headline demo carries the disclaimer that it 'measures dual-writer exposure, not merge-conflict reduction' and describes the sample as 'six real-agent runs, one designed collision' — a level of self-limiting precision most vendors would sand off. The caveats are real, though: the primary call-to-action is 'join the waitlist,' the hosted Concord Cloud is 'coming soon,' and what is genuinely available today is the local open-source MCP (`npm install -g @concord-ai/concord-mcp`). We reviewed the public surface only and did not run the coordination flow, so the score reflects a well-articulated, agent-native design at an early stage — not a verified track record.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-11",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70, low end) because the problem is real and sharply framed, the integration model is correctly agent-native (MCP, works with existing clients), and the marketing is unusually disciplined about not overclaiming its evidence. It sits at the bottom of the band rather than higher because the primary product is still waitlist-stage: the hosted Cloud tier is unshipped ('coming soon'), only the local OSS MCP is available now, and Hlido ran a public-surface review with no functional test of the coordination flow. Confidence is low-medium accordingly.",
+  "what_it_does_well": [
+    "Frames a concrete, timely problem — multiple coding agents colliding on the same files with no shared work-state",
+    "Ships as an MCP server that works with existing clients (Claude Code, Codex, Cursor) rather than demanding a new runtime",
+    "Coordination primitives map cleanly to the problem: presence, scope claims, agent-to-agent messages, task memory, ownership handoff, review packets",
+    "Unusually honest about its own evidence — explicitly states it measures dual-writer exposure, not merge-conflict reduction, and discloses the small sample",
+    "A working open-source local MCP is installable today via npm"
+  ],
+  "what_it_fails_at": [
+    "Primary CTA is a waitlist — the product is not generally launched",
+    "The hosted 'Concord Cloud, across machines' tier is 'coming soon', not available",
+    "No published pricing for the eventual Cloud offering",
+    "Public surface shows the design and demos but no independent, at-scale evidence of coordination outcomes",
+    "Cross-machine coordination (the harder problem) is exactly the part not yet shipped"
+  ],
+  "best_for": [
+    "Teams already running several coding agents (Claude Code, Codex, Cursor) against one repository and hitting collisions",
+    "Early adopters comfortable installing a local open-source MCP and giving feedback pre-launch",
+    "Engineers who want scope-claiming and shared task memory between agents without switching their agent stack"
+  ],
+  "not_recommended_for": [
+    "Teams needing a supported, hosted, cross-machine coordination service today (Cloud is unshipped)",
+    "Buyers who require published pricing and SLAs before adoption",
+    "Single-agent workflows — the coordination value only appears with concurrent agents",
+    "Anyone needing verified, at-scale conflict-reduction guarantees (the vendor itself does not claim these)"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Positions as a multiplayer / shared work-state layer for coding agents",
+      "source": "https://getconcord.ai/",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Delivered as an MCP server installable via npm (@concord-ai/concord-mcp)",
+      "source": "homepage install snippet",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Works with any MCP-capable client incl. Claude Code, Codex, Cursor",
+      "source": "homepage 'Agent support' section",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Local OSS available now; hosted Concord Cloud 'coming soon'; primary CTA is a waitlist",
+      "source": "homepage availability + CTA",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Self-limits its own demo: 'measures dual-writer exposure, not merge-conflict reduction'",
+      "source": "homepage evidence disclaimer",
+      "tested_at": "2026-09-11",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Concord is itself agent infrastructure: an MCP server that coding agents connect to for shared coordination state. Any MCP-capable client (Claude Code, Codex, Cursor) can drive it via the exposed tools (start_work, claims, messages, ownership handoff, review packets). Installed locally today via `npm install -g @concord-ai/concord-mcp`; a cross-machine hosted tier is not yet available.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-11T04:31:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Multiplayer workspace for coding agents' / 'Shared work-state for coding agents'",
+      "tested_at": "2026-09-11T04:31:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Join the waitlist'",
+      "tested_at": "2026-09-11T04:31:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Local open-source MCP free via npm; hosted Cloud pricing not yet published (coming soon)",
+      "tested_at": "2026-09-11T04:31:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Workflow diagram + real-agent-run demo, with an explicit sample-size disclaimer",
+      "tested_at": "2026-09-11T04:31:00Z"
+    }
+  ],
+  "summary": "A coordination layer for multi-agent coding — genuinely agent-native and unusually honest about its own evidence, but still waitlist-stage with the Cloud tier unshipped.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-10",
+  "attestation_url": "/data/attestations/get-concord-ai-concord-mcp.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-11",
+    "source": "public-surface-tier-2-review"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Local open-source MCP free via npm; hosted Cloud pricing not yet published (coming soon)",
+      "tested_at": "2026-09-11"
+    },
+    "last_verified": "2026-09-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-11"
+  }
+}
