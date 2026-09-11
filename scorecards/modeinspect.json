@@ -1,0 +1,173 @@
+{
+  "schema_version": "2.0",
+  "slug": "modeinspect",
+  "name": "Mode",
+  "agent_url": "https://modeinspect.com/",
+  "category": "Image & Design",
+  "run_id": "run-ce44538c3effb827-modeinspect-com",
+  "run_at": "2026-09-11T08:31:02.321Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 76,
+  "tier": "STEADY",
+  "laddoo_score": 76,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An AI design canvas that edits your real codebase — a sharp answer to throwaway-mockup drift, with transparent pricing but a login-gated product we couldn't run.",
+    "body": "Mode (modeinspect.com) takes a clear position in the crowded AI-design space: instead of generating a picture of a UI that a developer then rebuilds, it turns your product's actual codebase into editable canvas frames. You design against the real components, the real tokens, live data and every state — and the output is a scoped, type-safe PR against your repo rather than a redline document. The pitch is aimed squarely at 'design engineers,' and the feature set backs it up on the surface: 1:1 real components, enforced design tokens, native breakpoints, capture-from-product-to-canvas, dynamic states, and diffs framed as 'code your engineers want to merge' (scoped changes, no parallel design system, no generated UI debt). Pricing is refreshingly concrete for this category — a free tier plus $24/mo and $48/mo — which is a trust signal in a market full of 'contact us.' The honest limits: the meaningful part of the product sits behind sign-in, so Hlido reviewed the marketing and pricing surface, not the canvas itself. The single named customer proof point (Prelude, '22 days saved, zero handoffs') is a vendor-supplied story, not independently verified. And while Mode uses AI internally, it is a human-driven design tool, not a component another agent can drive programmatically — its agentic relevance is as a codebase-aware PR producer, not an integration surface.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-11",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) because the product has a differentiated, well-articulated thesis (design on the real codebase, ship real PRs), transparent published pricing including a free tier, and a coherent, specific feature set on the public surface. Not higher because the core experience is login-gated and therefore untested by Hlido, the only proof point is a vendor-authored customer story, and there is no independent evidence of the 'type-safe, mergeable PR' claim. Confidence is medium: the marketing surface is rich and specific, but no functional verification was possible.",
+  "what_it_does_well": [
+    "Stakes out a clear differentiator — design against the real codebase's components and tokens, not a throwaway mockup",
+    "Frames output as scoped, type-safe PRs engineers can review, targeting the design-to-engineering handoff directly",
+    "Transparent, published pricing with a free tier ($0 / $24 / $48 per month) — uncommon in AI design tooling",
+    "Specific, credible feature set: 1:1 components, enforced tokens, native breakpoints, dynamic states, capture-to-canvas",
+    "Explicitly addresses design-system drift and 'generated UI debt', a real pain in AI-assisted UI work"
+  ],
+  "what_it_fails_at": [
+    "Core product is behind sign-in — the canvas itself could not be exercised on the public surface",
+    "The strong 'PRs your engineers want to merge' claim is unverified independently",
+    "Only one named customer proof point, and it is vendor-supplied (Prelude)",
+    "No published API/MCP surface — not drivable by other agents",
+    "Codebase integration scope (frameworks, languages, repo size limits) is not spelled out on the public surface"
+  ],
+  "best_for": [
+    "Design engineers who want to edit production UI on a real canvas and ship code, not redlines",
+    "Teams fighting mockup-to-code drift and design-system inconsistency",
+    "Product teams that want design changes to arrive as scoped, reviewable PRs",
+    "Small teams that value transparent, self-serve pricing"
+  ],
+  "not_recommended_for": [
+    "Buyers who need to evaluate the actual editing experience before committing (it is login-gated)",
+    "Teams needing programmatic/agent-driven design generation via an API",
+    "Organizations requiring documented enterprise controls before adoption (details are thin on the public surface)",
+    "Designers who want a standalone visual tool decoupled from a real codebase"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "AI design canvas that edits product UI directly in the codebase",
+      "source": "https://modeinspect.com/",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Uses real components (1:1) and enforces design tokens from your library",
+      "source": "homepage feature sections 01-02",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Output is scoped, type-safe PRs against the real repo",
+      "source": "homepage 'Code your engineers want to merge' section",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Transparent pricing: free / $24 / $48 per month",
+      "source": "homepage pricing block",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Customer story: Prelude reports 22 days saved, zero handoffs (vendor-supplied)",
+      "source": "homepage customer story",
+      "tested_at": "2026-09-11",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Mode is a human-driven, AI-assisted design canvas that produces PRs against a codebase. It exposes no public API, CLI, or MCP surface for another agent to drive. Its relevance to agentic workflows is as a codebase-aware UI-change producer for human design engineers, not as a programmatic component.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The AI-native way to design production-grade UI'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Published tiers: $0 / $24 / $48 per month",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Extensive feature walkthrough + one named customer story (Prelude)",
+      "tested_at": "2026-09-11T08:31:00Z"
+    }
+  ],
+  "summary": "An AI design canvas that edits your real codebase — a sharp answer to throwaway-mockup drift, with transparent pricing but a login-gated product we couldn't run.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-10",
+  "attestation_url": "/data/attestations/modeinspect.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-11",
+    "source": "public-surface-tier-2-review"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…debt). Pricing is refreshingly concrete for this category — a free tier plus $24/mo and $48/mo — which is a trust signal in a market full of 'contact us.' The…",
+        "source": "hlido_opinion.body"
+      },
+      {
+        "quote": "Transparent, published pricing with a free tier ($0 / $24 / $48 per month) — uncommon in AI design tooling",
+        "source": "what_it_does_well[2]"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Published tiers: $0 / $24 / $48 per month",
+      "tested_at": "2026-09-11"
+    },
+    "last_verified": "2026-09-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-11"
+  }
+}
