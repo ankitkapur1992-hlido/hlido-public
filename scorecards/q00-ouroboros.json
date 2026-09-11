@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "slug": "q00-ouroboros",
+  "name": "Ouroboros",
+  "agent_url": "https://ouroboros.page/",
+  "category": "Frameworks & Eval",
+  "run_id": "run-6c490bbcd1e0cf10-ouroboros-page",
+  "run_at": "2026-09-11T08:31:54.680Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "An open-source (MIT) spec-and-verify harness that sits around your coding agent — a strong idea with broad host support, still early and unverified by us at runtime.",
+    "body": "Ouroboros occupies a genuinely useful seam in the agentic-coding stack: it doesn't write the code, it manages the requirements, execution, evaluation, and records around whatever agent does. It pins the spec before the run and verifies the result after — an interview stage that surfaces an 'ambiguity score,' advisory lanes, and an ambiguity ledger, then evaluation with recorded results. Two design choices stand out. First, breadth of host support: it wraps a long list of runtimes (Claude Code, Codex CLI, Copilot CLI, OpenCode, Gemini, Goose and more), and the demo deliberately runs different tasks on different hosts to show the engine is what's shared, not the prompt — the right way to prove a wrapper is runtime-agnostic. Second, and more interesting for an evaluator: the docs note that the grading assertions are hidden from the agent under test, which is exactly the integrity property an eval tool needs so the agent can't optimize to the test. It is MIT-licensed and installable today (a Claude Code plugin, or `pip install ouroboros-ai`), with English/Korean/Chinese docs — a credible open-source posture. The tempering factors are maturity and verification: the site leans heavily on a GTM roadmap ('evidence gates,' 'proposed joint validation,' 'conditional enterprise horizons'), which signals early stage; the project is from a small lab (Ouro Labs); and Hlido reviewed the public surface and docs without running the harness, so the spec-pinning and verification behavior are credible-by-design but not confirmed here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-11",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because the concept is well-targeted (a runtime-agnostic spec/verify/record layer around coding agents), the open-source MIT posture and multi-host support are real and installable today, and the hidden-assertion design shows genuine eval-integrity thinking. Not higher because the surface is roadmap-heavy (early GTM stage), it comes from a small lab without an established track record, and Hlido did not run the harness, so its core verification behavior is unconfirmed. Confidence low-medium.",
+  "what_it_does_well": [
+    "Targets a real gap — a spec/verify/record layer that wraps the coding agent rather than replacing it",
+    "Runtime-agnostic by design, with broad host support (Claude Code, Codex, Copilot, OpenCode, Gemini, Goose, and more)",
+    "Hides grading assertions from the agent under test — a sound eval-integrity property",
+    "Open source under MIT and installable today (Claude Code plugin or `pip install ouroboros-ai`)",
+    "Structured process (interview → ambiguity ledger → execution → evaluation → records) plus multilingual docs"
+  ],
+  "what_it_fails_at": [
+    "Public surface is roadmap-heavy — evidence gates and enterprise horizons are 'proposed/conditional', not shipped",
+    "Small lab (Ouro Labs) with no established reliability track record on the surface",
+    "No published pricing or support model (fine for OSS, but relevant for teams weighing dependence)",
+    "Core spec-pinning and verification behavior is unconfirmed — Hlido did not run the harness",
+    "The Claude Code plugin path centers on one host despite the broad compatibility list"
+  ],
+  "best_for": [
+    "Developers who want to wrap their existing coding agent with spec-pinning and post-run verification",
+    "Teams standardizing AI-coding process across multiple agent runtimes",
+    "Engineers who value an open-source, MIT-licensed, self-hostable eval/record layer",
+    "Anyone wanting an ambiguity check before an agent starts writing code"
+  ],
+  "not_recommended_for": [
+    "Teams needing a mature, supported, commercially-backed product today",
+    "Buyers who require a proven track record and formal SLAs",
+    "Users wanting the agent that writes code (Ouroboros manages and verifies; it doesn't generate)",
+    "Those unwilling to run an early-stage open-source tool without independent runtime verification"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Manages requirements, execution, evaluation and records; pins the spec before the run and verifies after",
+      "source": "https://ouroboros.page/",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Open source under the MIT license (Ouro Labs)",
+      "source": "homepage license banner + footer",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Works across many coding-agent runtimes (Claude Code, Codex CLI, Copilot CLI, OpenCode, Gemini, Goose, etc.)",
+      "source": "homepage host list + multi-host demo",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Installable via Claude Code plugin marketplace or `pip install ouroboros-ai`",
+      "source": "homepage install section",
+      "tested_at": "2026-09-11",
+      "verified": true
+    },
+    {
+      "claim": "Grading assertions are hidden from the agent under test",
+      "source": "homepage / docs (Chinese guide note)",
+      "tested_at": "2026-09-11",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Ouroboros is agent infrastructure: an open-source CLI/plugin that wraps a coding agent to pin the spec, run the work, verify the result, and keep records. Installed as a Claude Code plugin (`claude plugin install ouroboros@ouroboros`) or standalone (`pip install ouroboros-ai`), and designed to be runtime-agnostic across many coding-agent hosts. It orchestrates and evaluates other agents rather than exposing a service for agents to call.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your coding agent writes the code. Ouroboros verifies the result.'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Install' / 'Read the guide'",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT); installable via plugin or pip",
+      "tested_at": "2026-09-11T08:31:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Four-host demo (Terminal, Codex, Claude Code, Discord/Hermes) with ambiguity ledger + multilingual guides",
+      "tested_at": "2026-09-11T08:31:00Z"
+    }
+  ],
+  "summary": "An open-source (MIT) spec-and-verify harness that sits around your coding agent — a strong idea with broad host support, still early and unverified by us at runtime.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-10",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-10",
+  "attestation_url": "/data/attestations/q00-ouroboros.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-11",
+    "source": "public-surface-tier-2-review"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free and open source (MIT); installable via plugin or pip",
+      "tested_at": "2026-09-11"
+    },
+    "last_verified": "2026-09-11",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-11"
+  }
+}
