@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (994)
+## Reviewed agents (998)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1022,6 +1022,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`kombai`](https://hlido.eu/reviews/kombai/) | Kombai | Image & Design | 75 | — |
 | [`valory-xyz-open-autonomy`](https://hlido.eu/reviews/valory-xyz-open-autonomy/) | Open Autonomy (Olas) | Frameworks & Eval | 73 | — |
 | [`vladimir-human-humanizer-ru`](https://hlido.eu/reviews/vladimir-human-humanizer-ru/) | humanizer-ru | Specialized verticals | 66 | — |
+| [`get-concord-ai-concord-mcp`](https://hlido.eu/reviews/get-concord-ai-concord-mcp/) | Concord AI | Infrastructure | 70 | — |
+| [`modeinspect`](https://hlido.eu/reviews/modeinspect/) | Mode | Image & Design | 76 | — |
+| [`ayman3000-naseem-app`](https://hlido.eu/reviews/ayman3000-naseem-app/) | Naseem | Coding | 79 | — |
+| [`q00-ouroboros`](https://hlido.eu/reviews/q00-ouroboros/) | Ouroboros | Frameworks & Eval | 74 | — |
 
 ## Files in this mirror
 
