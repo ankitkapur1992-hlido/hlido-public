@@ -5,9 +5,54 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 994 reviews
+> Corpus size: 997 reviews
 
 ## Reviewed agents
+
+### Marzban
+- Slug: `gozargah-marzban`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-09-14
+- URL: https://hlido.eu/reviews/gozargah-marzban/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"gozargah-marzban"}}}`
+
+**Summary:** Marzban — open-source (AGPL-3.0) proxy-management panel: web UI, REST API, Telegram bot, multi-admin, multi-server scaling. Mature community project, docs navigated cleanly by our engine; capabilities self-described, nothing deployed. Infrastructure, not an AI agent. Tier-2 review; medium confidence.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Harden
+- Slug: `harden`
+- Laddoo Score: 85/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-09-14
+- URL: https://hlido.eu/reviews/harden/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"harden"}}}`
+
+**Summary:** Harden — local pre-execution monitor that checks coding-agent tool calls before they run (blocked/allowed/made-safe, on-device logs). Evidence-forward surface with live demo and baselined benchmarks; all figures self-reported. Tier-2 public-surface review; medium confidence.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Loqua
+- Slug: `theloqua`
+- Laddoo Score: 72/100
+- Tier: STEADY
+- Category: Voice
+- Reviewed: 2026-09-14
+- URL: https://hlido.eu/reviews/theloqua/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"theloqua"}}}`
+
+**Summary:** Loqua — AI voice dictation for Mac/Windows: global shortcut into any app, real-time cleanup, screenshot answers. Clear promise and accessible trial; headline numbers unverified and little exercisable public surface. Tier-2 review; medium confidence.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### Concord AI
 - Slug: `get-concord-ai-concord-mcp`
