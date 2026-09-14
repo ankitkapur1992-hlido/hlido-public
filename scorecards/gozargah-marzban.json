@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2+claude-native",
+  "methodology_version": "2026.05",
+  "methodology_url": "https://hlido.eu/methodology/",
+  "run_at": "2026-09-14T17:33:19.760Z",
+  "confidence": "medium",
+  "staleness_after": "2026-12-13",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-13",
+  "signature_pending": true,
+  "source": "session-editorial-enrich-v2-claude-native",
+  "slug": "gozargah-marzban",
+  "name": "Marzban",
+  "agent_url": "https://gozargah.github.io/marzban/",
+  "category": "Infrastructure",
+  "run_id": "run-gozargah-marzban-cf",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "hlido_opinion": {
+    "headline": "A mature open-source proxy-management panel with an active community — not an AI agent, and rated here as infrastructure.",
+    "body": "Marzban (Farsi: \"border guard\") is an AGPL-3.0 management panel for proxy/censorship-circumvention infrastructure: a web UI, full REST API, Telegram bot for management and notifications, multi-admin support and multi-server scaling. The captured docs surface (in Farsi) is clean, modern and self-consistent, and the project advertises an active maintainer community. Be clear about what this is: infrastructure software with an API and a bot interface, not an autonomous AI agent — it entered our pipeline through demand and is recorded as infrastructure. What this review does NOT cover: no deployment was exercised; claims about scalability and protocol support are the project’s own; the docs surface reviewed is the project’s public site. Medium confidence.",
+    "voice": "measured",
+    "as_of": "2026-09-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the project shows the durable signals of healthy open source — permissive-copyleft licence stated plainly, REST API, multi-admin, an organised docs site that our engine navigated cleanly (4 screenshots, 3/3 interactions) — while every capability claim remains self-described and nothing was deployed or exercised beyond the public surface.",
+  "what_it_does_well": [
+    "States its licence (AGPL-3.0) and governance (community workgroup) plainly on the front page (captured)",
+    "Full REST API advertised for programmatic control (captured)",
+    "Docs surface is clean and navigable — engine completed 3/3 interactions without blockers (engine measurement)"
+  ],
+  "what_it_fails_at": [
+    "All capability claims (scalability, protocol support) are self-described — nothing deployed or exercised in this review",
+    "Primary documentation is Farsi-only on the captured surface, which narrows the evaluable audience"
+  ],
+  "best_for": [
+    "Operators managing proxy access infrastructure who want an API-driven panel with Telegram management",
+    "Teams that value copyleft licensing and community maintenance"
+  ],
+  "not_recommended_for": [
+    "Anyone shopping for an AI agent — this is infrastructure software, recorded as such",
+    "Buyers needing English-first documentation on the primary site"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    "https://gozargah.github.io/marzban/"
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "REST API for programmatic management; Telegram bot for notifications and admin actions."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "4 screenshots, 3/3 interactions succeeded, no blockers",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "unified panel for access management: UI, REST API, scaling, Telegram bot",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    },
+    {
+      "id": "licence_stated",
+      "pass": true,
+      "required": false,
+      "evidence": "AGPL-3.0 stated on the captured surface",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    }
+  ],
+  "summary": "Marzban — open-source (AGPL-3.0) proxy-management panel: web UI, REST API, Telegram bot, multi-admin, multi-server scaling. Mature community project, docs navigated cleanly by our engine; capabilities self-described, nothing deployed. Infrastructure, not an AI agent. Tier-2 review; medium confidence.",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "last_verified": "2026-09-14",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-14"
+  }
+}
