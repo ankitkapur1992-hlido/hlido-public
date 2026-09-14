@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2+claude-native",
+  "methodology_version": "2026.05",
+  "methodology_url": "https://hlido.eu/methodology/",
+  "run_at": "2026-09-14T17:33:19.760Z",
+  "confidence": "medium",
+  "staleness_after": "2026-12-13",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2026-12-13",
+  "signature_pending": true,
+  "source": "session-editorial-enrich-v2-claude-native",
+  "slug": "harden",
+  "name": "Harden",
+  "agent_url": "https://harden.run",
+  "category": "Infrastructure",
+  "run_id": "run-538dbcc37a6dbdb4-harden-run",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "hlido_opinion": {
+    "headline": "A pre-execution guardrail for coding agents with an unusually evidence-forward public surface.",
+    "body": "Harden ships a local monitor (the \"Agentic Integrity Foundation\") that checks a coding agent’s tool calls before they execute — the captured page demonstrates it live: a kubectl rollout allowed, a production-namespace delete blocked with a safe retry suggested. The surface is unusually honest for this market: a one-line no-account curl install, per-session decision histories with real-looking counts, named third-party-style benchmarks (SLEIGHT, AgentHazard, SABER, LinuxArena) with a GPT baseline column and an explicit \"lower is better\" annotation where the direction flips. It names support for the agents our own register measures demand for — Claude Code, Codex, Cursor and others — via native hooks with an MCP-proxy fallback. What this review does NOT cover: the benchmark numbers are the vendor’s own and were not re-run; the monitor’s live blocking behaviour was not exercised beyond the public demo surface. Medium confidence.",
+    "voice": "measured",
+    "as_of": "2026-09-14",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the product addresses a real, growing problem class our own demand data confirms (agent tool-call safety), the public surface demonstrates the mechanism rather than merely claiming it, and the benchmark presentation includes the direction-of-goodness honesty most vendors omit — but every quantitative claim remains self-reported and the blocking loop was not independently exercised, which caps it below the VITAL band.",
+  "what_it_does_well": [
+    "Demonstrates the core mechanism on the page: allowed vs blocked calls with a safe-retry suggestion (captured)",
+    "No-account, one-line local install — the lowest-friction trial in the category (captured)",
+    "Benchmarks shown with baselines and an explicit lower-is-better annotation (captured)",
+    "Supports the coding agents agents actually use — Claude Code, Codex, Cursor — with an MCP-proxy fallback (captured)"
+  ],
+  "what_it_fails_at": [
+    "All benchmark figures are self-reported; no third-party verification is linked (captured surface only)",
+    "The blocking loop itself was not exercised in this tier-2 review — the evidence is the vendor’s own demo data"
+  ],
+  "best_for": [
+    "Teams running autonomous coding agents who want a local, pre-execution safety layer",
+    "Security-conscious orgs that need agent tool-call decisions logged on-device"
+  ],
+  "not_recommended_for": [
+    "Anyone requiring independently verified efficacy numbers before deployment"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code carries its own permission scoping (--allowedTools, sandbox-aware flags); Harden positions as an independent, vendor-external judgment layer across MANY agents — complementary, not competing."
+    }
+  ],
+  "evidence_urls": [
+    "https://harden.run"
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Install via the one-line local script; native hooks attach to supported coding agents, MCP proxy covers others; decisions logged locally."
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "4 screenshots, 3/3 interactions succeeded, no blockers",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "\"judge every action a coding agent is about to take, and stop the dangerous ones before they execute\"",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    },
+    {
+      "id": "mechanism_demonstrated",
+      "pass": true,
+      "required": false,
+      "evidence": "live allowed/blocked/safe-retry demo with per-session counts",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    },
+    {
+      "id": "claims_direction_honesty",
+      "pass": true,
+      "required": false,
+      "evidence": "benchmark table annotates \"lower is better\" where applicable",
+      "tested_at": "2026-09-14T17:33:19.760Z"
+    }
+  ],
+  "summary": "Harden — local pre-execution monitor that checks coding-agent tool calls before they run (blocked/allowed/made-safe, on-device logs). Evidence-forward surface with live demo and baselined benchmarks; all figures self-reported. Tier-2 public-surface review; medium confidence."
+}
