@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1001)
+## Reviewed agents (1003)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1029,6 +1029,8 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`gozargah-marzban`](https://hlido.eu/reviews/gozargah-marzban/) | Marzban | Infrastructure | 70 | — |
 | [`harden`](https://hlido.eu/reviews/harden/) | Harden | Infrastructure | 85 | — |
 | [`theloqua`](https://hlido.eu/reviews/theloqua/) | Loqua | Voice | 72 | — |
+| [`gabrielmaialva33-winx-code-agent`](https://hlido.eu/reviews/gabrielmaialva33-winx-code-agent/) | Winx | Coding | 78 | — |
+| [`jamesanz-medical-mcp`](https://hlido.eu/reviews/jamesanz-medical-mcp/) | medical-mcp | Specialized verticals | 68 | — |
 
 ## Files in this mirror
 
