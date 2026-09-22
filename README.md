@@ -750,7 +750,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`muno-work`](https://hlido.eu/reviews/muno-work/) | muno-work | AI Agent | 50 | FADING |
 | [`paseru-sinew`](https://hlido.eu/reviews/paseru-sinew/) | Paseru/sinew | Coding | 50 | FADING |
 | [`constellation-engine-constellation-engine`](https://hlido.eu/reviews/constellation-engine-constellation-engine/) | CONSTELLATION-ENGINE/constellation-engine | AI Agent | 50 | FADING |
-| [`denissergeevitch-agents-best-practices`](https://hlido.eu/reviews/denissergeevitch-agents-best-practices/) | DenisSergeevitch/agents-best-practices | Image & Design | 82 | STEADY |
+| [`denissergeevitch-agents-best-practices`](https://hlido.eu/reviews/denissergeevitch-agents-best-practices/) | DenisSergeevitch/agents-best-practices | Frameworks & Eval | 82 | STEADY |
 | [`zhitongblog-solomd`](https://hlido.eu/reviews/zhitongblog-solomd/) | zhitongblog/solomd | MCP Server | 82 | STEADY |
 | [`ryjoxtechnologies-octopoda-os`](https://hlido.eu/reviews/ryjoxtechnologies-octopoda-os/) | RyjoxTechnologies/Octopoda-OS | AI Agent | 50 | FADING |
 | [`iamcorey-kooky`](https://hlido.eu/reviews/iamcorey-kooky/) | iAmCorey/kooky | Coding | 82 | STEADY |
