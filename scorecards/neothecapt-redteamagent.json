@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "neothecapt-redteamagent",
   "name": "NeoTheCapt/RedteamAgent",
   "agent_url": "https://github.com/NeoTheCapt/RedteamAgent",
@@ -7,7 +7,7 @@
   "category": "Coding",
   "run_id": "run-neothecapt-redteamagent-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,15 +93,36 @@
     "language": "Python"
   },
   "evidence_urls": [
-    "https://github.com/NeoTheCapt/RedteamAgent",
-    "https://api.github.com/repos/NeoTheCapt/RedteamAgent",
-    "https://github.com/NeoTheCapt/RedteamAgent/releases"
+    {
+      "claim": "92 GitHub stars",
+      "source": "https://github.com/NeoTheCapt/RedteamAgent",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Tagged release v0.1.1",
+      "source": "https://github.com/NeoTheCapt/RedteamAgent/releases",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "No licence present in repository",
+      "source": "https://github.com/NeoTheCapt/RedteamAgent",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Structured recon→test→exploit→report workflow, authorized-use scoped",
+      "source": "https://github.com/NeoTheCapt/RedteamAgent#readme",
+      "tested_at": "2026-09-22",
+      "verified": true
+    }
   ],
   "laddoo_score": 73,
   "score": 73,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "NeoTheCapt/RedteamAgent — An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit → report workflow, with containerized tools and resumable state.. Repo-surface review: measured from the public repository (92 stars, no license, last push 2026-05-14); not hands-on tested.",
+  "summary": "A structured red-team workflow for authorized pentesting — decent docs and traction, but unlicensed and CI-less.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,11 +146,60 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Wraps an existing coding agent (Claude Code / OpenCode / Codex) into a pentesting workflow; installed from the repo and driven through the host agent. Consumable by developers, not a standalone callable service.",
+    "agent_friendly_score": 5
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/repo-surface-track/",
+  "hlido_opinion": {
+    "headline": "A structured red-team workflow for authorized pentesting — decent docs and traction, but unlicensed and CI-less.",
+    "body": "RedteamAgent turns a coding agent (Claude Code / OpenCode / Codex) into a structured recon → test → exploit → report pentesting workflow, with containerized tooling and resumable state, scoped explicitly to authorized labs and web-app testing. The repository is reasonably healthy: a 21K-char README, a tagged release (v0.1.1), 92 stars, and commits within the year. Two real gaps hold it below the batch's top: it carries no licence (which is a genuine adoption blocker — without one, reuse rights are unclear), and there are no CI workflows. Given it is offensive-security tooling, the authorized-use framing in its own description is the right posture; the register scores the repository, not the tool's operational effectiveness, which was not tested.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) — a repo-surface score below the 82 ceiling because two measurable signals are missing: no licence and no CI workflows. What is present is solid: reachable, a 21K-char README with documented usage, a tagged release, and 92 stars. Not VITAL because effectiveness of the recon/exploit workflow needs hands-on testing that repo signals cannot provide.",
+  "what_it_does_well": [
+    "Clear, structured workflow: recon → test → exploit → report",
+    "Documented usage in a substantial README (21K chars)",
+    "A tagged release (v0.1.1) and containerized, resumable design",
+    "Reasonable early traction (92 stars)",
+    "Explicitly scoped to authorized labs / web-app pentesting"
+  ],
+  "what_it_fails_at": [
+    "No licence — reuse and redistribution rights are unclear (adoption blocker)",
+    "No CI workflows",
+    "Operational effectiveness of the pentest workflow was not hands-on tested"
+  ],
+  "best_for": [
+    "Security teams running authorized pentests who already use Claude Code / Codex / OpenCode",
+    "Labs wanting a resumable, containerized recon-to-report harness"
+  ],
+  "not_recommended_for": [
+    "Anyone without explicit authorization to test the target (misuse is out of scope by design)",
+    "Organizations that require a clear open-source licence before adoption"
+  ],
+  "red_flags": [
+    "No licence file — legal status of reuse is undefined"
+  ],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-22"
   }
 }
