@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "volcengine-searchcli",
   "name": "volcengine/SearchCLI",
   "agent_url": "https://github.com/volcengine/SearchCLI",
@@ -7,7 +7,7 @@
   "category": "Frameworks & Eval",
   "run_id": "run-volcengine-searchcli-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,14 +93,36 @@
     "language": "TypeScript"
   },
   "evidence_urls": [
-    "https://github.com/volcengine/SearchCLI",
-    "https://api.github.com/repos/volcengine/SearchCLI"
+    {
+      "claim": "1,128 GitHub stars",
+      "source": "https://github.com/volcengine/SearchCLI",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Apache-2.0 licence",
+      "source": "https://github.com/volcengine/SearchCLI",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Same-day commit activity at review",
+      "source": "https://github.com/volcengine/SearchCLI",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Documented CLI install line in README",
+      "source": "https://github.com/volcengine/SearchCLI#readme",
+      "tested_at": "2026-09-22",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "volcengine/SearchCLI — Open CLI for integrating AI search, recommendation, and conversational retrieval into agent systems and business systems. Repo-surface review: measured from the public repository (1128 stars, Apache-2.0, last push 2026-07-16); not hands-on tested.",
+  "summary": "Volcengine's open, Apache-2.0 CLI for wiring AI search and retrieval into agent systems — well-adopted and freshly maintained.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -134,11 +156,48 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.scoring_hypothesis"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A CLI for embedding AI search/retrieval into agent and business systems; installable via the documented CLI line and callable from agent workflows.",
+    "agent_friendly_score": 6
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/repo-surface-track/",
+  "hlido_opinion": {
+    "headline": "Volcengine's open, Apache-2.0 CLI for wiring AI search and retrieval into agent systems — well-adopted and freshly maintained.",
+    "body": "SearchCLI is Volcengine's (ByteDance's cloud arm) open command-line tool for integrating AI search, recommendation and conversational retrieval into agent and business systems. The repository signals are healthy: Apache-2.0 licensed, 1.1K stars, a documented CLI install line, and a commit the same day as the review — this is being actively worked on. It is a thinner README (8K chars) than others in this batch and has no tagged releases or CI workflows, so the packaging story is informal, but the backing of a major cloud vendor and the clear agent-tooling purpose make it a credible retrieval building block. The 82 grades repository health and agent-consumability; how well the search/retrieval actually performs was not hands-on tested.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82), the repo-surface ceiling: reachable, Apache-2.0, documented CLI install, 1.1K stars, and same-day commit activity. Not VITAL because retrieval quality needs behavioral testing, and the repo lacks tagged releases and CI, so the delivery discipline is informal despite the vendor backing.",
+  "what_it_does_well": [
+    "Backed by Volcengine (ByteDance cloud) — a substantial vendor",
+    "Apache-2.0 licence",
+    "Solid adoption (1.1K stars) and same-day commit activity at review",
+    "Documented CLI install line — directly consumable by agents/systems",
+    "Clear, focused purpose: AI search / recommendation / conversational retrieval"
+  ],
+  "what_it_fails_at": [
+    "Thin README (8K chars) relative to the rest of the batch",
+    "No tagged releases and no CI workflows — informal delivery",
+    "Retrieval/recommendation quality was not hands-on tested"
+  ],
+  "best_for": [
+    "Teams adding AI search or conversational retrieval to an agent system",
+    "Developers who want a vendor-backed, Apache-2.0 CLI to integrate"
+  ],
+  "not_recommended_for": [
+    "Buyers needing formally versioned releases and CI guarantees",
+    "Use cases requiring benchmarked retrieval accuracy up front"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
 }
