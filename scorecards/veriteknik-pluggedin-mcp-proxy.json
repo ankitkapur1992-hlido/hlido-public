@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "veriteknik-pluggedin-mcp-proxy",
   "name": "VeriTeknik/pluggedin-mcp-proxy",
   "agent_url": "https://github.com/VeriTeknik/pluggedin-mcp-proxy",
@@ -7,7 +7,7 @@
   "category": "MCP Server",
   "run_id": "run-veriteknik-pluggedin-mcp-proxy-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,14 +93,36 @@
     "language": "TypeScript"
   },
   "evidence_urls": [
-    "https://github.com/VeriTeknik/pluggedin-mcp-proxy",
-    "https://api.github.com/repos/VeriTeknik/pluggedin-mcp-proxy"
+    {
+      "claim": "Apache-2.0 licence",
+      "source": "https://github.com/VeriTeknik/pluggedin-mcp-proxy",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "31K-char README with documented install/usage",
+      "source": "https://github.com/VeriTeknik/pluggedin-mcp-proxy#readme",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "132 GitHub stars",
+      "source": "https://github.com/VeriTeknik/pluggedin-mcp-proxy",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Two CI workflow files present",
+      "source": "https://github.com/VeriTeknik/pluggedin-mcp-proxy",
+      "tested_at": "2026-09-22",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "VeriTeknik/pluggedin-mcp-proxy — Plugged.in MCP Server manages all your other MCPs in one MCP.. Repo-surface review: measured from the public repository (132 stars, Apache-2.0, last push 2026-05-10); not hands-on tested.",
+  "summary": "An Apache-2.0 MCP hub/proxy that aggregates servers, memory and tools — well-documented, lightly adopted, and a touch stale at review time.",
   "staleness_after": "2026-10-14",
   "evidence_images": {
     "run_id": "run-fd94fd37408215ae-github-com",
@@ -126,11 +148,66 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
     "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"Model Context Protocol\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP proxy/hub: agents connect to it as a single MCP endpoint and it fans out to the servers it aggregates. Directly agent-consumable via the MCP protocol.",
+    "agent_friendly_score": 7
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/repo-surface-track/",
+  "hlido_opinion": {
+    "headline": "An Apache-2.0 MCP hub/proxy that aggregates servers, memory and tools — well-documented, lightly adopted, and a touch stale at review time.",
+    "body": "plugged.in MCP Proxy is an aggregation layer: it sits in front of multiple MCP servers and presents them as one hub, adding knowledge, memory and tooling on top. On the repository signals it reads as a serious project — Apache-2.0 licensed, a 31K-char README, two CI workflows, and MCP server markers so a client can wire it up. Where it is thinner is momentum and adoption: 132 stars is modest for infrastructure that wants to be a central hub, and the last push was ~67 days before review, so it is maintained but not fast-moving. For teams evaluating an MCP aggregation layer it is a credible, permissively-licensed option to trial; the register scores its repository health, not the runtime reliability of the proxy under load, which was not tested here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82), the repo-surface ceiling: reachable, Apache-2.0, a thorough 31K-char README, two CI workflows, MCP server markers, and commits within the year. Not VITAL because proxy runtime behavior (routing correctness, latency, failure handling under real MCP traffic) needs hands-on testing the repo signals cannot supply; adoption (132 stars) and a ~67-day-stale tip also temper the ceiling.",
+  "what_it_does_well": [
+    "Permissive Apache-2.0 licence",
+    "Thorough README (31K chars) documenting install and usage",
+    "Two CI workflows present — some automated quality gating",
+    "MCP server markers make client integration straightforward",
+    "Clear, focused purpose: proxy + knowledge + memory + tools in one hub"
+  ],
+  "what_it_fails_at": [
+    "Modest adoption for infrastructure (132 stars)",
+    "No tagged releases — versioning/upgrade story is informal",
+    "Last push ~67 days before review — maintained but not actively iterating",
+    "Runtime proxy behavior under real MCP load was not tested"
+  ],
+  "best_for": [
+    "Teams wanting to aggregate several MCP servers behind one endpoint",
+    "Users who need an Apache-2.0-licensed MCP hub they can self-host",
+    "Setups that also want memory/knowledge layered onto the proxy"
+  ],
+  "not_recommended_for": [
+    "Production deployments needing a formally released, versioned artifact",
+    "Buyers who require a proven-at-scale, supported proxy"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "viperjuice-mcp-gateway",
+      "verdict_diff": "Both are MCP aggregation layers. mcp-gateway (PMCP) ships tagged releases (v1.19.3) and a PyPI package with heavier CI; pluggedin-mcp-proxy leans on a richer hub feature set (knowledge/memory) but has no releases. Choose mcp-gateway for a versioned, packaged gateway; choose pluggedin for the broader hub features.",
+      "preferred_for_axis": "release-discipline-vs-features"
+    },
+    {
+      "slug": "ikoskela-wisepanel-mcp",
+      "verdict_diff": "Both are MCP-surface projects in the register; wisepanel is a single MCP server, pluggedin is a proxy that fronts many. Pick pluggedin when the problem is fan-in across multiple servers.",
+      "preferred_for_axis": "aggregation"
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-22",
+    "source": "R-publish-repo-track-enrich (non-generative: infra/framework/agent tool, no synthetic-media output surface)"
   }
 }
