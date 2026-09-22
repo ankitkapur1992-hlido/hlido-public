@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "viperjuice-mcp-gateway",
   "name": "ViperJuice/mcp-gateway",
   "agent_url": "https://github.com/ViperJuice/mcp-gateway",
@@ -7,7 +7,7 @@
   "category": "MCP Server",
   "run_id": "run-viperjuice-mcp-gateway-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,15 +93,36 @@
     "language": "Python"
   },
   "evidence_urls": [
-    "https://github.com/ViperJuice/mcp-gateway",
-    "https://api.github.com/repos/ViperJuice/mcp-gateway",
-    "https://github.com/ViperJuice/mcp-gateway/releases"
+    {
+      "claim": "Tagged releases up to v1.19.3",
+      "source": "https://github.com/ViperJuice/mcp-gateway/releases",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Published to PyPI as `pmcp`",
+      "source": "https://pypi.org/project/pmcp/",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "MIT licence",
+      "source": "https://github.com/ViperJuice/mcp-gateway",
+      "tested_at": "2026-09-22",
+      "verified": true
+    },
+    {
+      "claim": "Five CI workflow files present",
+      "source": "https://github.com/ViperJuice/mcp-gateway",
+      "tested_at": "2026-09-22",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "ViperJuice/mcp-gateway — MCP Gateway - A meta-server for minimal Claude Code tool bloat with progressive disclosure. Repo-surface review: measured from the public repository (15 stars, MIT, last push 2026-07-15); not hands-on tested.",
+  "summary": "PMCP — a versioned, PyPI-packaged MCP gateway with strong release/CI discipline but near-zero adoption so far.",
   "staleness_after": "2026-10-14",
   "evidence_images": {
     "run_id": "run-820cd0d67341faec-github-com",
@@ -117,17 +138,70 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "has_api": true,
+    "has_api": false,
     "has_cli": true,
-    "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in preanalysis.raw_markdown_preview",
-      "has_api: \"API key\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"pip install pmcp\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"pip install\" in preanalysis.raw_markdown_preview"
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP gateway distributed as a PyPI package (`pmcp`); agents connect through it as an MCP endpoint. Pip-installable and MCP-native, so directly agent-consumable.",
+    "agent_friendly_score": 7
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "repo-surface-track+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/repo-surface-track/",
+  "hlido_opinion": {
+    "headline": "PMCP — a versioned, PyPI-packaged MCP gateway with strong release/CI discipline but near-zero adoption so far.",
+    "body": "PMCP (Progressive MCP) is an MCP gateway published to PyPI and cut into tagged releases up to v1.19.3, with five CI workflows and a large 54K-char README — the engineering hygiene here is notably strong for a long-tail project. The gap is adoption: at 15 stars it is effectively pre-traction, so while the packaging and release discipline are real, there is little external signal that it has been battle-tested. That makes it an interesting pick for a team that values a properly versioned, pip-installable gateway and is comfortable being an early adopter. As with every repo-surface review, the 82 reflects repository health — packaging, releases, CI, docs — not the gateway's measured runtime behavior.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82), the repo-surface ceiling: MIT-licensed, PyPI-packaged, tagged releases (v1.19.3), five CI workflows, a 54K-char README, and daily commits. Not VITAL because gateway runtime correctness needs hands-on testing, and adoption is still negligible (15 stars), so real-world hardening is unproven.",
+  "what_it_does_well": [
+    "Proper release discipline — tagged releases up to v1.19.3",
+    "Published to PyPI (pip-installable) as `pmcp`",
+    "Five CI workflows — the strongest automated gating in this batch",
+    "Very thorough README (54K chars)",
+    "MIT-licensed and actively committed (daily at review time)"
+  ],
+  "what_it_fails_at": [
+    "Near-zero adoption (15 stars) — essentially pre-traction",
+    "No external evidence of production hardening",
+    "Runtime gateway behavior was not hands-on tested"
+  ],
+  "best_for": [
+    "Early adopters who want a versioned, pip-installable MCP gateway",
+    "Teams that value release/CI discipline over headcount of stars",
+    "Python-first stacks integrating MCP routing"
+  ],
+  "not_recommended_for": [
+    "Risk-averse buyers who need a widely-adopted, proven gateway",
+    "Anyone who treats star count / community size as a hard requirement"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "veriteknik-pluggedin-mcp-proxy",
+      "verdict_diff": "mcp-gateway (PMCP) wins on packaging and release discipline (PyPI + tagged releases + 5 CI workflows); pluggedin-mcp-proxy wins on adoption (132 vs 15 stars) and hub features. Choose based on whether release hygiene or community traction matters more to you.",
+      "preferred_for_axis": "release-discipline"
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-22",
+    "source": "R-publish-repo-track-enrich (non-generative: infra/framework/agent tool, no synthetic-media output surface)"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-22"
   }
 }
