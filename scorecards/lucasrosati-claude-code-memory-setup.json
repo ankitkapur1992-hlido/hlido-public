@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "lucasrosati-claude-code-memory-setup",
   "name": "lucasrosati/claude-code-memory-setup",
   "agent_url": "https://github.com/lucasrosati/claude-code-memory-setup",
@@ -7,7 +7,7 @@
   "category": "Coding",
   "run_id": "run-lucasrosati-claude-code-memory-setup-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,14 +93,30 @@
     "language": "Python"
   },
   "evidence_urls": [
-    "https://github.com/lucasrosati/claude-code-memory-setup",
-    "https://api.github.com/repos/lucasrosati/claude-code-memory-setup"
+    {
+      "claim": "Public repository reachable with substantive README",
+      "source": "https://github.com/lucasrosati/claude-code-memory-setup",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Product description: \"Up to 71.5x fewer tokens per session on Claude Code with Obsidian + Graphify. Persistent memory, codebase knowledge grap\"",
+      "source": "https://github.com/lucasrosati/claude-code-memory-setup",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Open-source license present in repository",
+      "source": "https://github.com/lucasrosati/claude-code-memory-setup",
+      "tested_at": "2026-09-24",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "lucasrosati/claude-code-memory-setup — Up to 71.5x fewer tokens per session on Claude Code with Obsidian + Graphify. Persistent memory, codebase knowledge graphs, and chat import pipeline. 🇧🇷 PT-BR included.. Repo-surface review: measured from the public repository (852 stars, MIT, last push 2026-06-01); not hands-on tested.",
+  "summary": "A well-documented setup guide and toolchain for giving Claude Code persistent memory and codebase awareness via Obsidian + Graphify — high-value as a recipe, but it's a configuration playbook, not a product.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -124,11 +140,64 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in scorecard.checklist.evidence"
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A methodology for configuring Claude Code with Obsidian + Graphify for persistent memory and codebase awareness. Not a component agents call; rather, it shapes how a coding agent is set up. Value is in the workflow, not an API.",
+    "agent_friendly_score": 5
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "hlido_opinion": {
+    "headline": "A well-documented setup guide and toolchain for giving Claude Code persistent memory and codebase awareness via Obsidian + Graphify — high-value as a recipe, but it's a configuration playbook, not a product.",
+    "body": "This project packages a complete method for two real Claude Code pain points: amnesia between sessions and token waste from re-reading files. Its answer pairs Obsidian (as a Zettelkasten of \"what was decided\" — declarative memory) with Graphify (a codebase knowledge graph for \"how the code is structured\" — structural memory), plus a chat-import pipeline, and it headlines \"up to 71.5x fewer tokens per session.\" As a guide it is genuinely useful and clearly written, bilingual (EN/PT-BR), MIT-licensed, and actively maintained, and it addresses problems every heavy Claude Code user recognises. The honest framing matters, though: this is a configuration playbook stitching third-party tools (Obsidian, Graphify) together, not a standalone application Hlido can run and measure. The eye-catching 71.5x figure is the author's, is best-case and workload-dependent, and was not benchmarked here. Its durability is also tied to the underlying tools staying compatible with Claude Code as that product evolves. For a developer willing to invest an afternoon in setup, the payoff is plausibly large; for someone wanting a one-click install, this isn't it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY reflects a well-maintained, MIT-licensed, clearly documented and actively updated guide that solves recognised Claude Code problems. Not higher because it is a configuration playbook over third-party tools rather than a runnable product (limiting what Hlido can independently verify, medium confidence), and its headline token-saving claim is best-case, author-reported, and unmeasured here.",
+  "what_it_does_well": [
+    "Addresses two real, widely-felt Claude Code problems: cross-session amnesia and token-wasting re-reads",
+    "Clear separation of concerns: Obsidian for decisions (declarative), Graphify for structure (structural)",
+    "Thoroughly documented, bilingual (EN/PT-BR), with a step-by-step workflow and troubleshooting",
+    "MIT-licensed and actively maintained (recent commits, community traction)",
+    "Includes a chat-import pipeline to bootstrap memory from existing sessions"
+  ],
+  "what_it_fails_at": [
+    "It's a setup guide/recipe, not a standalone product — no single install, and it depends on third-party tools",
+    "The \"71.5x fewer tokens\" headline is best-case, author-reported, and not benchmarked by Hlido",
+    "Durability depends on Obsidian/Graphify staying compatible as Claude Code evolves",
+    "Non-trivial setup effort; not suitable for users wanting a one-click solution",
+    "Value is hard to verify independently because the outcome depends on the reader's own configuration"
+  ],
+  "best_for": [
+    "Heavy Claude Code users willing to invest setup time for persistent memory and lower token use",
+    "Developers who already use or are open to Obsidian for a second brain",
+    "Teams standardising how they carry project context across AI-coding sessions",
+    "PT-BR-speaking developers wanting first-class localised guidance"
+  ],
+  "not_recommended_for": [
+    "Users wanting a packaged, one-click product rather than a configuration playbook",
+    "Anyone unwilling to adopt Obsidian and Graphify as dependencies",
+    "Buyers who need the token-saving claim independently proven before investing setup time",
+    "Environments that can't rely on third-party tools tracking Claude Code changes"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "generated_at": "2026-09-24T09:08:55.949Z",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-24"
   }
 }
