@@ -1,13 +1,13 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "zhitongblog-solomd",
   "name": "zhitongblog/solomd",
   "agent_url": "https://github.com/zhitongblog/solomd",
   "repo_url": "https://github.com/zhitongblog/solomd",
-  "category": "MCP Server",
+  "category": "Productivity",
   "run_id": "run-zhitongblog-solomd-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,15 +93,30 @@
     "language": "TypeScript"
   },
   "evidence_urls": [
-    "https://github.com/zhitongblog/solomd",
-    "https://api.github.com/repos/zhitongblog/solomd",
-    "https://github.com/zhitongblog/solomd/releases"
+    {
+      "claim": "Public repository reachable with substantive README",
+      "source": "https://github.com/zhitongblog/solomd",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Product description: \"A markdown editor — and the bridge to your LLM. Local-first, MIT, ~15 MB. Bundled MCP server lets Claude Code / Codex / \"",
+      "source": "https://github.com/zhitongblog/solomd",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Open-source license present in repository",
+      "source": "https://github.com/zhitongblog/solomd",
+      "tested_at": "2026-09-24",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "zhitongblog/solomd — A markdown editor — and the bridge to your LLM. Local-first, MIT, ~15 MB. Bundled MCP server lets Claude Code / Codex / Cursor drive your vault directly. 14 AI providers BYOK.. Repo-surface review: measured from the public repository (442 stars, MIT, last push 2026-07-12); not hands-on tested.",
+  "summary": "A local-first Markdown editor with a bundled MCP server, so Claude Code / Cursor / Codex can drive your notes vault directly — a clean take on \"agent-native\" note-taking, with BYOK across 14 providers.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,12 +140,66 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
     "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in preanalysis.scoring_hypothesis",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Ships a bundled MCP server so MCP-capable clients (Claude Code, Cursor, Codex) can read and write the vault directly. Agent integration is the product's core design, not an afterthought.",
+    "agent_friendly_score": 7
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "hlido_opinion": {
+    "headline": "A local-first Markdown editor with a bundled MCP server, so Claude Code / Cursor / Codex can drive your notes vault directly — a clean take on \"agent-native\" note-taking, with BYOK across 14 providers.",
+    "body": "SoloMD's pitch — \"the editor where agents live\" — is more precise than the usual AI-note-app copy. It is a small (~15 MB), MIT-licensed, Tauri-based Markdown editor that keeps your files as plain .md on disk, and its differentiator is a bundled MCP server: the same vault is editable by you in the app and drivable from outside by Claude Code, Cursor, or Codex over Model Context Protocol. That local-first, plain-files posture matters for lock-in — your data isn't trapped in a proprietary store — and the BYOK model across 14 providers means you aren't captive to one LLM vendor. The repository shows genuine maintenance (tagged releases, download counters, extensive multi-language READMEs, a public security page). The honest caveats: this is a single-author desktop app in a category crowded by Obsidian (with its own thriving plugin and MCP ecosystem), and the \"scheduled recipes\" / agent-surface features are the newest and least battle-tested part of the story. For someone who wants their notes to be first-class agent-addressable without leaving a local editor, it's a thoughtful, low-lock-in choice.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY reflects a well-maintained, MIT-licensed, local-first project with real release cadence, community download traction, and a coherent agent-native design (bundled MCP, BYOK). Not higher because it is a public-surface + repo-health assessment (medium confidence), it competes against the deeply entrenched Obsidian, and its agent-recipe features are recent and unproven at Hlido's evidence tier.",
+  "what_it_does_well": [
+    "Local-first, plain .md files — low lock-in and portable data",
+    "Bundled MCP server lets external agents (Claude Code / Cursor / Codex) drive the same vault",
+    "BYOK across 14 providers — no single-LLM captivity",
+    "Small footprint (~15 MB, Tauri) and MIT-licensed",
+    "Strong maintenance signals: tagged releases, download counters, published security page, extensive localisation"
+  ],
+  "what_it_fails_at": [
+    "Competes head-on with Obsidian, which already has a mature plugin + MCP ecosystem",
+    "Appears to be a single-maintainer project — bus-factor and long-term support risk",
+    "The scheduled-recipes / agent-surface features are the newest and least proven part",
+    "No public live demo Hlido could exercise; assessment is of the repo and stated behaviour",
+    "Desktop-app distribution means no browsable web trial before download"
+  ],
+  "best_for": [
+    "Note-takers who want their vault to be directly addressable by coding agents via MCP",
+    "Users who value local-first, plain-Markdown storage and low lock-in",
+    "People who want to switch LLM providers freely (BYOK)",
+    "Lightweight-editor fans who find full IDE-style tools overkill"
+  ],
+  "not_recommended_for": [
+    "Teams already deeply invested in Obsidian's plugin ecosystem with little reason to move",
+    "Buyers who need enterprise support guarantees behind a single-maintainer project",
+    "Users wanting a hosted, cross-device-sync-first notes service (this is local-first)",
+    "Anyone needing a web trial before installing a desktop binary"
+  ],
+  "red_flags": [
+    "Single-maintainer open-source project: verify release cadence and issue responsiveness before depending on it for critical workflows."
+  ],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "generated_at": "2026-09-24T09:08:55.949Z",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-24"
   }
 }
