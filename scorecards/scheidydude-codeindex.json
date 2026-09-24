@@ -1,13 +1,13 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "scheidydude-codeindex",
   "name": "scheidydude/codeindex",
   "agent_url": "https://github.com/scheidydude/codeindex",
   "repo_url": "https://github.com/scheidydude/codeindex",
-  "category": "MCP Server",
+  "category": "Coding",
   "run_id": "run-scheidydude-codeindex-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,15 +93,30 @@
     "language": "Python"
   },
   "evidence_urls": [
-    "https://github.com/scheidydude/codeindex",
-    "https://api.github.com/repos/scheidydude/codeindex",
-    "https://github.com/scheidydude/codeindex/releases"
+    {
+      "claim": "Public repository reachable with substantive README",
+      "source": "https://github.com/scheidydude/codeindex",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Product description: \"Repo dependency analyzer with **blast-radius impact scoring** for AI-assisted development.\"",
+      "source": "https://github.com/scheidydude/codeindex",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Open-source license present in repository",
+      "source": "https://github.com/scheidydude/codeindex",
+      "tested_at": "2026-09-24",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "scheidydude/codeindex — Repo dependency analyzer with **blast-radius impact scoring** for AI-assisted development.. Repo-surface review: measured from the public repository (268 stars, NOASSERTION, last push 2026-06-19); not hands-on tested.",
+  "summary": "A temporal code-knowledge-graph tool with blast-radius scoring and a symbol index that materially cuts an agent's token use on codebase tasks — a well-thought-out, dependency-light developer utility.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,15 +140,64 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
+    "has_api": false,
     "has_cli": true,
-    "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"cli\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"pip install\" in preanalysis.raw_markdown_preview"
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Ships an MCP server with 10 tools plus CLI, pre-commit hook, and CLAUDE.md injection, so coding agents can query the code graph directly. Designed to be consumed by AI-assisted development workflows.",
+    "agent_friendly_score": 8
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "hlido_opinion": {
+    "headline": "A temporal code-knowledge-graph tool with blast-radius scoring and a symbol index that materially cuts an agent's token use on codebase tasks — a well-thought-out, dependency-light developer utility.",
+    "body": "codeindex builds a persistent SQLite knowledge graph of a repository — dependency graph, per-file blast-radius scores (how many files break if this one changes, including historical as-of queries), a symbol map, and hybrid semantic search — and exposes it ten ways: CLI, Markdown report, an MCP server with 10 tools, a pre-commit hook, and CLAUDE.md injection. The core idea is sound and addresses a real cost centre: instead of an AI assistant scanning every file to locate a symbol, it does an O(1) lookup and opens only the relevant file, which the project claims cuts token usage 60–90% on symbol-location tasks. That claim is plausible in mechanism, though Hlido did not measure it. The engineering choices are pragmatic — no build step, no npm, zero required runtime dependencies because SQLite is stdlib — and it detects 12+ languages. Repo-health signals are strong (documented install via pip, CI, releases, recent commits). Its weaknesses are the honest ones of a young single-author tool: the blast-radius and semantic-search quality will vary by language and codebase, and the value is entirely as a supporting index, not a standalone agent.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY reflects an actively maintained, well-documented tool (pip install, CI, releases, recent commits) solving a genuine agent-cost problem with a clean, dependency-light design. Not higher because this is a repo-health + public-surface assessment (medium confidence): the headline 60–90% token-saving figure is the project's own, not independently measured here, and analysis quality across 12+ languages is asserted rather than verified.",
+  "what_it_does_well": [
+    "Directly attacks agent token cost: symbol index enables O(1) lookups instead of full-repo scans",
+    "Temporal graph with git-history backfill and historical as-of blast-radius queries — genuinely differentiated",
+    "Zero required runtime dependencies (SQLite stdlib), no build step, no npm",
+    "Ten consumption paths including an MCP server (10 tools), CLI, pre-commit hook, and CLAUDE.md injection",
+    "Strong maintenance signals: pip-installable, CI, tagged releases, recent commits"
+  ],
+  "what_it_fails_at": [
+    "The 60–90% token-saving claim is the project's own; Hlido did not benchmark it",
+    "Analysis quality across 12+ languages will vary and isn't independently verified here",
+    "Value is purely as a supporting index — it is not an agent by itself",
+    "Young, apparently single-author project: long-term maintenance risk",
+    "No live demo; assessment is of the repo and documented behaviour"
+  ],
+  "best_for": [
+    "Developers using Claude Code / Cursor on large codebases who want to cut token spend on symbol-location tasks",
+    "Teams wanting blast-radius awareness (what breaks if I change this file) surfaced to their AI assistant",
+    "Polyglot repos that need a language-agnostic dependency and symbol index",
+    "Anyone who values a dependency-light, pip-installable tool over a heavier indexing service"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a turnkey agent rather than a supporting index",
+    "Buyers who need the token-saving and analysis-accuracy claims independently benchmarked before adopting",
+    "Environments that require vendor-backed support guarantees",
+    "Very small repos where full-file scanning is already cheap"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "generated_at": "2026-09-24T09:08:55.949Z",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-24"
   }
 }
