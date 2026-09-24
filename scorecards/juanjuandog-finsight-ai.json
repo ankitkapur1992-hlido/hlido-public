@@ -1,13 +1,13 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.0",
   "slug": "juanjuandog-finsight-ai",
   "name": "juanjuandog/FinSight-AI",
   "agent_url": "https://github.com/juanjuandog/FinSight-AI",
   "repo_url": "https://github.com/juanjuandog/FinSight-AI",
-  "category": "Coding",
+  "category": "Research",
   "run_id": "run-juanjuandog-finsight-ai-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
-  "source": "hlido-repo-track",
+  "source": "hlido-editor-v2",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
   "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
@@ -93,14 +93,30 @@
     "language": "Java"
   },
   "evidence_urls": [
-    "https://github.com/juanjuandog/FinSight-AI",
-    "https://api.github.com/repos/juanjuandog/FinSight-AI"
+    {
+      "claim": "Public repository reachable with substantive README",
+      "source": "https://github.com/juanjuandog/FinSight-AI",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Product description: \"AI equity research agent with resilient workflows, Redis Lua single-flight, pgvector RAG, versioned reports, evidence tr\"",
+      "source": "https://github.com/juanjuandog/FinSight-AI",
+      "tested_at": "2026-09-24",
+      "verified": true
+    },
+    {
+      "claim": "Open-source license present in repository",
+      "source": "https://github.com/juanjuandog/FinSight-AI",
+      "tested_at": "2026-09-24",
+      "verified": true
+    }
   ],
   "laddoo_score": 82,
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "juanjuandog/FinSight-AI — AI equity research agent with resilient workflows, Redis Lua single-flight, pgvector RAG, versioned reports, evidence tracing, and RAG evaluation.. Repo-surface review: measured from the public repository (1123 stars, MIT, last push 2026-05-26); not hands-on tested.",
+  "summary": "An open-source, infrastructure-heavy AI equity-research agent — evidence-grounded reports, pgvector RAG, resilient workflows — that is more a reference architecture for building agents than a turnkey product.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -124,11 +140,66 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in scorecard.checklist.evidence"
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A self-hosted Spring Boot backend with a research console; integration is via standing up the service and its APIs. No MCP server or CLI advertised. More a system to run than a component to embed.",
+    "agent_friendly_score": 5
+  },
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "hlido_opinion": {
+    "headline": "An open-source, infrastructure-heavy AI equity-research agent — evidence-grounded reports, pgvector RAG, resilient workflows — that is more a reference architecture for building agents than a turnkey product.",
+    "body": "FinSight AI turns filings, financial reports, research notes, and market data into source-grounded answers and versioned research reports, and it is refreshingly upfront that its point is the infrastructure around an AI agent, not just the model call. The stack shows it: Spring Boot backend, PostgreSQL + pgvector for RAG, Redis with Lua single-flight to deduplicate concurrent work, RabbitMQ for workflow orchestration, plus evidence tracing and a RAG-evaluation harness. For a developer studying how to build a resilient, evaluable research agent — with proper caching, deduplication, versioning, and evidence traceability — this is a genuinely instructive, MIT-licensed reference. As a product for a non-technical equity researcher, it is not that: it is a self-hosted, backend-heavy application you must stand up and operate, and it needs your own data feeds and model keys. The evidence-tracing and RAG-eval focus is the standout, because it treats \"can you trust this report?\" as a first-class engineering concern rather than a disclaimer. Hlido assessed the repo and its public surface, not a live research run, so report quality itself is unverified here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-24",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY reflects a substantial, well-architected, MIT-licensed project with documented install, CI, and recent activity, whose evidence-tracing and RAG-evaluation focus is genuinely above the category norm. Not higher because this is a repo-health + public-surface assessment (medium confidence) — Hlido did not run a live research workflow — and it is a self-hosted reference architecture, not a turnkey product, which limits who can actually use it.",
+  "what_it_does_well": [
+    "Treats trust as engineering: evidence tracing and a built-in RAG-evaluation harness, not just an AI disclaimer",
+    "Serious resilience architecture — Redis Lua single-flight, RabbitMQ workflows, versioned reports",
+    "pgvector RAG on PostgreSQL keeps the stack conventional and self-hostable",
+    "MIT-licensed and openly documented — a strong learning reference for building research agents",
+    "Runnable institutional-research console that exposes the workflow, cache, and evidence trace"
+  ],
+  "what_it_fails_at": [
+    "Backend-heavy and self-hosted — significant setup and operational burden, not a turnkey product",
+    "Requires the user to supply data feeds and model keys",
+    "Report quality is unverified here; Hlido assessed the repo, not a live equity-research run",
+    "Targeted at developers, not the equity researchers who are the end audience of the output",
+    "No hosted demo to evaluate output quality before standing up the whole stack"
+  ],
+  "best_for": [
+    "Developers learning how to build a resilient, evaluable, evidence-grounded RAG research agent",
+    "Fintech/research engineering teams wanting a self-hostable reference architecture to adapt",
+    "Anyone who needs versioned reports with an auditable evidence trail",
+    "Teams that value RAG evaluation being built in rather than bolted on"
+  ],
+  "not_recommended_for": [
+    "Non-technical equity researchers wanting a ready-to-use product",
+    "Teams without the appetite to run Spring Boot + PostgreSQL + Redis + RabbitMQ",
+    "Buyers who need investment-grade output quality independently validated before adoption",
+    "Anyone expecting bundled market-data feeds (bring your own)"
+  ],
+  "red_flags": [
+    "Financial research output must not be treated as investment advice; the project is a tool/reference, and report accuracy was not verified by Hlido at this evidence tier."
+  ],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "generated_at": "2026-09-24T09:08:55.949Z",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "last_verified": "2026-07-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-24"
   }
 }
