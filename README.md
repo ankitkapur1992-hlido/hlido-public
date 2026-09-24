@@ -681,7 +681,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`mai-with-u-maibot`](https://hlido.eu/reviews/mai-with-u-maibot/) | Mai-with-u/MaiBot | Coding | 75 | STEADY |
 | [`manavarya09-design-extract`](https://hlido.eu/reviews/manavarya09-design-extract/) | Manavarya09/design-extract | Image & Design | 10 | FLATLINE |
 | [`lucasrosati-claude-code-memory-setup`](https://hlido.eu/reviews/lucasrosati-claude-code-memory-setup/) | lucasrosati/claude-code-memory-setup | Coding | 82 | STEADY |
-| [`mcp-brasil-mcp-brasil`](https://hlido.eu/reviews/mcp-brasil-mcp-brasil/) | Mcp-Brasil/mcp-brasil | MCP Server | 82 | STEADY |
+| [`mcp-brasil-mcp-brasil`](https://hlido.eu/reviews/mcp-brasil-mcp-brasil/) | Mcp-Brasil/mcp-brasil | Infrastructure | 82 | STEADY |
 | [`microsoft-autogen`](https://hlido.eu/reviews/microsoft-autogen/) | microsoft/autogen | AI Agent | 80 | STEADY |
 | [`memtensor-skills-vote`](https://hlido.eu/reviews/memtensor-skills-vote/) | MemTensor/skills-vote | AI Agent | 50 | FADING |
 | [`miomioos-mioisland`](https://hlido.eu/reviews/miomioos-mioisland/) | MioMioOS/MioIsland | Coding | 70 | STEADY |
@@ -743,7 +743,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`can4hou6joeng4-boss-agent-cli`](https://hlido.eu/reviews/can4hou6joeng4-boss-agent-cli/) | can4hou6joeng4/boss-agent-cli | AI Agent | 50 | FADING |
 | [`cloakhq-cloakbrowser`](https://hlido.eu/reviews/cloakhq-cloakbrowser/) | CloakHQ/CloakBrowser | AI Agent | 50 | FADING |
 | [`getmaxun-maxun`](https://hlido.eu/reviews/getmaxun-maxun/) | getmaxun/maxun | Coding | 50 | FADING |
-| [`pinchtab-pinchtab`](https://hlido.eu/reviews/pinchtab-pinchtab/) | pinchtab/pinchtab | MCP Server | 82 | STEADY |
+| [`pinchtab-pinchtab`](https://hlido.eu/reviews/pinchtab-pinchtab/) | pinchtab/pinchtab | Infrastructure | 82 | STEADY |
 | [`h4ckf0r0day-obscura`](https://hlido.eu/reviews/h4ckf0r0day-obscura/) | h4ckf0r0day/obscura | AI Agent | 50 | FADING |
 | [`clawd-bot`](https://hlido.eu/reviews/clawd-bot/) | clawd-bot | AI Agent | 50 | FADING |
 | [`ioni`](https://hlido.eu/reviews/ioni/) | ioni | AI Agent | 50 | FADING |
@@ -751,7 +751,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`paseru-sinew`](https://hlido.eu/reviews/paseru-sinew/) | Paseru/sinew | Coding | 50 | FADING |
 | [`constellation-engine-constellation-engine`](https://hlido.eu/reviews/constellation-engine-constellation-engine/) | CONSTELLATION-ENGINE/constellation-engine | AI Agent | 50 | FADING |
 | [`denissergeevitch-agents-best-practices`](https://hlido.eu/reviews/denissergeevitch-agents-best-practices/) | DenisSergeevitch/agents-best-practices | Frameworks & Eval | 82 | STEADY |
-| [`zhitongblog-solomd`](https://hlido.eu/reviews/zhitongblog-solomd/) | zhitongblog/solomd | MCP Server | 82 | STEADY |
+| [`zhitongblog-solomd`](https://hlido.eu/reviews/zhitongblog-solomd/) | zhitongblog/solomd | Productivity | 82 | STEADY |
 | [`ryjoxtechnologies-octopoda-os`](https://hlido.eu/reviews/ryjoxtechnologies-octopoda-os/) | RyjoxTechnologies/Octopoda-OS | AI Agent | 50 | FADING |
 | [`iamcorey-kooky`](https://hlido.eu/reviews/iamcorey-kooky/) | iAmCorey/kooky | Coding | 82 | STEADY |
 | [`agentforce314-clawcodex`](https://hlido.eu/reviews/agentforce314-clawcodex/) | agentforce314/clawcodex | Coding | 50 | FADING |
@@ -792,7 +792,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`voltagent`](https://hlido.eu/reviews/voltagent/) | VoltAgent | Frameworks & Eval | 76 | — |
 | [`zeroclaw-labs-zeroclaw`](https://hlido.eu/reviews/zeroclaw-labs-zeroclaw/) | ZeroClaw | Infrastructure | 79 | — |
 | [`itsinseong-value-for-fable`](https://hlido.eu/reviews/itsinseong-value-for-fable/) | itsinseong/value-for-fable | Coding | 67 | FADING |
-| [`scheidydude-codeindex`](https://hlido.eu/reviews/scheidydude-codeindex/) | scheidydude/codeindex | MCP Server | 82 | STEADY |
+| [`scheidydude-codeindex`](https://hlido.eu/reviews/scheidydude-codeindex/) | scheidydude/codeindex | Coding | 82 | STEADY |
 | [`modelstudioai-cli`](https://hlido.eu/reviews/modelstudioai-cli/) | modelstudioai/cli | Workflow & Automation | 50 | FADING |
 | [`freepeak-leankg`](https://hlido.eu/reviews/freepeak-leankg/) | FreePeak/LeanKG | AI Agent | 50 | FADING |
 | [`volcengine-searchcli`](https://hlido.eu/reviews/volcengine-searchcli/) | volcengine/SearchCLI | Frameworks & Eval | 82 | STEADY |
@@ -802,7 +802,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`decolua-9remote`](https://hlido.eu/reviews/decolua-9remote/) | decolua/9remote | Coding | 50 | FADING |
 | [`ykdojo-claude-code-tips`](https://hlido.eu/reviews/ykdojo-claude-code-tips/) | ykdojo/claude-code-tips | MCP Server | 67 | FADING |
 | [`montferret-ferret`](https://hlido.eu/reviews/montferret-ferret/) | MontFerret/ferret | Workflow & Automation | 50 | FADING |
-| [`juanjuandog-finsight-ai`](https://hlido.eu/reviews/juanjuandog-finsight-ai/) | juanjuandog/FinSight-AI | Coding | 82 | STEADY |
+| [`juanjuandog-finsight-ai`](https://hlido.eu/reviews/juanjuandog-finsight-ai/) | juanjuandog/FinSight-AI | Research | 82 | STEADY |
 | [`open-multi-agent-open-multi-agent`](https://hlido.eu/reviews/open-multi-agent-open-multi-agent/) | open-multi-agent/open-multi-agent | Workflow & Automation | 50 | FADING |
 | [`mvanhorn-cli-printing-press`](https://hlido.eu/reviews/mvanhorn-cli-printing-press/) | mvanhorn/cli-printing-press | MCP Server | 82 | STEADY |
 | [`juliusbrussee-cavemem`](https://hlido.eu/reviews/juliusbrussee-cavemem/) | JuliusBrussee/cavemem | AI Agent | 50 | FADING |
