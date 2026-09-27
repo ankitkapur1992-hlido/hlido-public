@@ -1,0 +1,203 @@
+{
+  "schema_version": "2.0",
+  "slug": "kestra-io-mcp-server-python",
+  "name": "kestra-io/mcp-server-python",
+  "agent_url": "https://github.com/kestra-io/mcp-server-python",
+  "repo_url": "https://github.com/kestra-io/mcp-server-python",
+  "category": "Workflow & Automation",
+  "run_id": "run-4fb8482b0478e9bc-kestra-io-v2",
+  "run_at": "2026-09-27T00:00:00Z",
+  "source": "hlido-editor-v2",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "confidence": "medium",
+  "methodology_note": "Repo-surface track: this product is a Model Context Protocol server distributed as a repository and a container image (ghcr.io/kestra-io/mcp-server-python), so the score derives from measurable public signals — documentation quality, distribution/config, auth model, agent-consumability — plus the credibility of the parent platform. IMPORTANT EVIDENCE LIMITATION: Hlido's automated capture resolved the surface to the Kestra AI Agents blog (kestra.io/blogs/introducing-ai-agents), NOT the MCP server's own repository page. The README content was read via scout-enrich preanalysis, but repo-health signals (license file, tagged releases, star/fork counts, CI, push recency) were not directly captured for THIS repo. The 27,793-star figure visible on the blog belongs to the main kestra-io/kestra platform repository, not the MCP server, and is not credited to this product. Score ceiling 85: VITAL requires hands-on behavioral testing (a running Kestra instance + Docker MCP client) that this pass did not perform.",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "summary": "A credible, well-documented MCP server that exposes Kestra's workflow orchestration to agent clients like Claude, Cursor and VS Code — genuinely agent-first, though Hlido's capture landed on the parent blog rather than the repo, leaving repo-health signals unverified.",
+  "hlido_opinion": {
+    "headline": "A credible, well-documented MCP server that exposes Kestra's workflow orchestration to agent clients like Claude, Cursor and VS Code — genuinely agent-first, though Hlido's capture landed on the parent blog rather than the repo, leaving repo-health signals unverified.",
+    "body": "The Kestra Python MCP server is exactly the kind of surface an agent ecosystem wants: it wraps Kestra — a mature, open-source declarative orchestration platform — behind the Model Context Protocol so an assistant like Claude Desktop, Cursor, Windsurf or VS Code can drive flows and executions directly. The documentation is a real strength: it ships as a pinned container image (ghcr.io/kestra-io/mcp-server-python), gives copy-paste MCP client configs, and cleanly separates an open-source auth path (username/password) from an Enterprise one (API token), with environment-variable controls for disabling tools and setting log level. That is a coherent, agent-consumable design from a vendor with a serious platform behind it. The honest gaps are on Hlido's side as much as the product's: our automated pass captured the Kestra AI Agents blog rather than the repository itself, so we could not independently verify the license file, release cadence, test/CI presence, maintenance recency or community traction for this specific repo — and we did not run it against a live Kestra instance. It is also not a standalone tool: it is only useful to teams already operating Kestra, and the OSS example embeds plaintext admin credentials, which deployers should replace with the token path. As a documented, vendor-backed MCP bridge it reads as a solid building block; a hands-on run against a live instance would be needed to confirm the tools behave as described and to lift it above medium confidence.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because this is a coherent, well-documented MCP server from a credible open-source orchestration vendor, with a clear agent-consumption path (container image + MCP client configs for Claude/Cursor/VS Code + OSS and Enterprise auth modes). It is not rated higher for two reasons: Hlido's capture resolved to the Kestra AI Agents blog rather than the MCP server's repository, so license, releases, CI, maintenance recency and star count for this specific repo were not independently verified; and this is a public/repo-surface review with no hands-on behavioral run against a live Kestra instance (medium confidence). A confirmed repo-health pass plus a behavioral run would likely move it into the upper STEADY range.",
+  "what_it_does_well": [
+    "Genuinely agent-first: a Model Context Protocol server that exposes Kestra orchestration directly to MCP clients (Claude, Cursor, Windsurf, VS Code)",
+    "Container-first distribution with a pinned image (ghcr.io/kestra-io/mcp-server-python) that avoids local Python/dependency management",
+    "Copy-paste MCP client configuration is documented for both open-source and Enterprise Edition users",
+    "Clean auth separation — OSS username/password vs Enterprise API-token config — with env-var controls for disabling tools and log level",
+    "Backed by Kestra, an established open-source declarative-orchestration platform with Enterprise and Cloud editions"
+  ],
+  "what_it_fails_at": [
+    "Only useful to teams already running Kestra — it is a bridge to a backend, not a standalone tool",
+    "The documented OSS config example embeds plaintext admin username/password; deployers must harden this with the token path",
+    "Repo-health signals (license file, tagged releases, CI, push recency, star count) were not captured for this specific repository",
+    "No live/browsable demo of the MCP tools; behaviour is asserted by the README, not independently exercised here",
+    "Requires Docker plus a reachable Kestra instance (KESTRA_BASE_URL), so setup is heavier than a hosted agent tool"
+  ],
+  "best_for": [
+    "Teams already operating Kestra who want to drive flows and executions from an MCP-capable assistant",
+    "Builders wiring Claude Desktop, Cursor, Windsurf or VS Code to a workflow-orchestration backend",
+    "Platform/data engineers who prefer a pinned container image over managing a Python environment",
+    "Enterprise Kestra users who need token-scoped, tool-restricted MCP access"
+  ],
+  "not_recommended_for": [
+    "Anyone not already running or planning to run a Kestra instance",
+    "Users wanting a zero-infrastructure, hosted agent tool with no Docker or backend to operate",
+    "Buyers who need a live pre-adoption demo of the exact tool behaviour before integrating",
+    "Deployments that cannot securely manage MCP-client credentials and API tokens"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "checklist": [
+    {
+      "id": "repo_reachable",
+      "task": "Repository is publicly reachable",
+      "required": true,
+      "pass": true,
+      "evidence": "kestra-io/mcp-server-python referenced as the canonical product surface; README content captured via scout-enrich preanalysis."
+    },
+    {
+      "id": "readme_present",
+      "task": "README documents the product (≥500 chars)",
+      "required": true,
+      "pass": true,
+      "evidence": "README documents Docker distribution and MCP client configuration (OSS and EE); captured markdown preview well over 500 chars."
+    },
+    {
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
+      "pass": true,
+      "evidence": "Docker run command plus MCP settings JSON for Cursor/Claude/VS Code documented for both OSS (username/password) and EE (API token) users."
+    },
+    {
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config or CLI install)",
+      "required": false,
+      "pass": true,
+      "evidence": "Model Context Protocol server; ghcr.io/kestra-io/mcp-server-python image; mcpServers config blocks for Cursor, Claude and VS Code."
+    },
+    {
+      "id": "active_12mo",
+      "task": "Maintained: parent platform active and MCP a current feature",
+      "required": true,
+      "pass": true,
+      "evidence": "Kestra AI Agents (which lists MCP clients as a current tool) last updated Sept 2025; © 2026 Kestra Technologies. NOTE: repo-specific push date was not captured; platform-level activity is the basis here."
+    },
+    {
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
+      "pass": false,
+      "evidence": "License file not visible in captured evidence — the capture landed on the Kestra AI Agents blog, not the repo page. Not independently verified for this repo."
+    },
+    {
+      "id": "releases_present",
+      "task": "Tagged releases exist",
+      "required": false,
+      "pass": false,
+      "evidence": "Not captured; the container image is pinned to :latest in the README, but tagged repo releases were not verified."
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction (star count)",
+      "required": false,
+      "pass": false,
+      "evidence": "Star count for this repo not captured (preanalysis gh_stars is null). The 27,793 stars on the blog belong to the main kestra-io/kestra platform repo, not the MCP server, and are not credited here."
+    },
+    {
+      "id": "ci_or_tests",
+      "task": "CI workflows present",
+      "required": false,
+      "pass": false,
+      "evidence": "Not captured; repo page was not crawled in this run."
+    },
+    {
+      "id": "recent_commit_90d",
+      "task": "Actively developed (push within 90 days)",
+      "required": false,
+      "pass": false,
+      "evidence": "Repo push date not captured; not independently verified for this repository."
+    }
+  ],
+  "repo_metrics": {
+    "stars": null,
+    "forks": null,
+    "open_issues": null,
+    "archived": null,
+    "pushed_at": null,
+    "license": null,
+    "language": "Python",
+    "note": "Repo-specific metrics were not captured — the engine resolved the surface to the Kestra AI Agents blog rather than the mcp-server-python repository page. Values are null rather than inferred. The 27,793-star figure on the blog is the main kestra-io/kestra platform repo, not this MCP server."
+  },
+  "evidence_urls": [
+    {
+      "claim": "You can run the MCP Server in a Docker container (image ghcr.io/kestra-io/mcp-server-python:latest)",
+      "source": "https://github.com/kestra-io/mcp-server-python",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "MCP client configuration is documented for Cursor, Claude and VS Code (\"Paste the following configuration into your MCP settings\")",
+      "source": "https://github.com/kestra-io/mcp-server-python",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Separate configurations for open-source users (username/password) and Enterprise Edition users (KESTRA_API_TOKEN), with env-var controls for disabled tools and log level",
+      "source": "https://github.com/kestra-io/mcp-server-python",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Backed by Kestra, an established open-source declarative orchestration platform with Enterprise and Cloud editions",
+      "source": "https://kestra.io/blogs/introducing-ai-agents",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Repository health signals for this specific MCP server repo (license file, tagged releases, CI, push recency, star/fork counts)",
+      "source": "https://github.com/kestra-io/mcp-server-python",
+      "tested_at": "2026-09-27",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An MCP client (Claude Desktop, Cursor, Windsurf, VS Code) runs the container image ghcr.io/kestra-io/mcp-server-python via a stdio Docker command, pointed at a Kestra instance (KESTRA_BASE_URL / tenant) and authenticated with either OSS username-password or an Enterprise API token. The agent then invokes Kestra orchestration through the exposed MCP tools; specific tools can be disabled via KESTRA_MCP_DISABLED_TOOLS. Requires a reachable Kestra backend and Docker.",
+    "agent_friendly_score": 8
+  },
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-27",
+    "source": "r-publish-editorial"
+  },
+  "evidence_images": {
+    "run_id": "run-4fb8482b0478e9bc-kestra-io",
+    "base": "https://images.hlido.eu/reviews/kestra-io-mcp-server-python/run-4fb8482b0478e9bc-kestra-io",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/kestra-io-mcp-server-python/run-4fb8482b0478e9bc-kestra-io/home.png"
+    ]
+  },
+  "staleness_after": "2026-12-27",
+  "generated_at": "2026-09-27T00:00:00Z",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}."
+}
