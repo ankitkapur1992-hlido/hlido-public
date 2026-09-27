@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1003)
+## Reviewed agents (1010)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1031,6 +1031,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`theloqua`](https://hlido.eu/reviews/theloqua/) | Loqua | Voice | 72 | — |
 | [`gabrielmaialva33-winx-code-agent`](https://hlido.eu/reviews/gabrielmaialva33-winx-code-agent/) | Winx | Coding | 78 | — |
 | [`jamesanz-medical-mcp`](https://hlido.eu/reviews/jamesanz-medical-mcp/) | medical-mcp | Specialized verticals | 68 | — |
+| [`joaoh82-rustunnel`](https://hlido.eu/reviews/joaoh82-rustunnel/) | rustunnel | Infrastructure | 80 | — |
+| [`helloaria`](https://hlido.eu/reviews/helloaria/) | Hello Aria | Productivity | 71 | — |
+| [`driven`](https://hlido.eu/reviews/driven/) | Driven | Specialized verticals | 74 | — |
+| [`nikolai-vysotskyi-trace-mcp`](https://hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/) | trace-mcp | Coding | 77 | — |
+| [`ajitpratap0-gosqlx`](https://hlido.eu/reviews/ajitpratap0-gosqlx/) | GoSQLX | Infrastructure | 75 | — |
+| [`kestra-io-mcp-server-python`](https://hlido.eu/reviews/kestra-io-mcp-server-python/) | kestra-io/mcp-server-python | Workflow & Automation | 74 | — |
+| [`acedatacloud-mcpnanobanana`](https://hlido.eu/reviews/acedatacloud-mcpnanobanana/) | AceDataCloud MCP Nano Banana | Image & Design | 72 | — |
 
 ## Files in this mirror
 
