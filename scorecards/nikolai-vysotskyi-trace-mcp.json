@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "nikolai-vysotskyi-trace-mcp",
+  "name": "trace-mcp",
+  "agent_url": "https://trace-mcp.com",
+  "repo_url": "https://github.com/nikolai-vysotskyi/trace-mcp",
+  "category": "Coding",
+  "run_id": "run-21c397ad7f35ce6c-trace-mcp-com-v2",
+  "run_at": "2026-09-27T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 77,
+  "tier": "STEADY",
+  "laddoo_score": 77,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A genuinely agent-native code-intelligence MCP server — open-source, local-first, broadly integrated — whose headline token-savings claims are asserted without a published, reproducible benchmark.",
+    "body": "trace-mcp is exactly the kind of component the agent ecosystem is short on: an MCP server that indexes a repository once into a framework-aware graph and serves it back to coding agents as precomputed answers instead of files to re-read. The design is agent-first rather than retrofitted — 169 MCP tools over stdio or HTTP, tree-sitter parsing with optional LSP enrichment, and a local SQLite index — and the trust posture is unusually clean for the space: MIT-licensed, no API keys, no cloud, bundled embeddings, and 'no data leaves your machine.' Distribution is real (the page cites ~3.1k npm downloads last month), and the install path is honestly three commands. Where Hlido withholds credit is the marketing's central promise. The '~40–50% fewer tokens on average, up to 94–99% in structured workflows, up to 2×' figures are attributed only to 'baseline agent runs' with no linked methodology, dataset, or third-party reproduction, and the surface carries some internal inconsistency (58 vs 87 integrations, live graph-explorer counters reading 0 in our capture) plus category-defining language ('the execution layer for AI systems') that runs ahead of its 101 GitHub stars. This is a promising, well-secured building block for agent developers; the efficiency numbers should be treated as vendor claims until independently measured, which Hlido has not done here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77) reflects a coherent, genuinely agent-native product with a strong open-source and security posture (MIT, local-first, zero egress, audited writes), documented broad framework/language coverage, a clean no-key install path, and real npm distribution. It is not scored higher because this is a public-surface review (medium confidence) — Hlido did not install trace-mcp or run it against a live codebase — and the headline token-reduction claims are asserted without a published, reproducible benchmark, alongside modest community traction (101 stars) and some internal inconsistency on the surface.",
+  "what_it_does_well": [
+    "Agent-native by design: an MCP server exposing 169 tools over stdio/HTTP that return answers, not files for the agent to re-read",
+    "Strong trust and security posture — MIT-licensed, runs fully local, no API keys, bundled embeddings, 'no data leaves your machine', dry-run defaults and a guard hook on writes",
+    "Broad documented coverage: tree-sitter parsing plus optional LSP enrichment across many languages, with framework-aware edges for common stacks (Laravel, Django, Next.js, Rails, NestJS, and more)",
+    "Low-friction adoption — a three-command install with no signup, auto-detection of installed MCP clients, and incremental file-watcher reindexing",
+    "Real distribution signal on the surface (~3.1k npm downloads last month) for a young open-source project"
+  ],
+  "what_it_fails_at": [
+    "Headline efficiency claims (~40–50% average, up to 94–99%, up to 2× context) are attributed only to unspecified 'baseline agent runs' with no linked methodology, dataset, or independent reproduction",
+    "Internal inconsistency on the public surface — integration counts given as both 58 and 87, and the live graph-explorer counters (languages/integrations/tools) read 0 in Hlido's capture",
+    "Category-creation marketing ('the execution layer for AI systems', 'recomputation → reuse') runs well ahead of demonstrated traction (101 GitHub stars, 2 watching)",
+    "No hands-on behavioral run by Hlido — token savings, tool reliability, and indexing accuracy are asserted by the project, not independently confirmed here",
+    "The heavier features (LSP enrichment, apply_codemod, decision memory, desktop app) are documented capabilities whose real-world reliability is unverified from the public surface"
+  ],
+  "best_for": [
+    "Developers building or running AI coding agents (Claude Code, Cursor, Windsurf, VS Code, Codex) who want repository context served over MCP",
+    "Teams wanting a local-first, zero-egress code-intelligence layer with no cloud dependency or API keys",
+    "Engineers on large or multi-framework codebases where blind file-by-file traversal is burning tokens and latency",
+    "Open-source-preferring shops comfortable running and updating a self-hosted CLI/MCP server"
+  ],
+  "not_recommended_for": [
+    "Buyers who need the token-savings figures verified before adoption — treat them as unmeasured vendor claims",
+    "Teams wanting a managed, hosted, zero-ops service rather than a locally installed CLI/MCP server",
+    "Non-technical users who cannot run a Node.js CLI and wire an MCP client",
+    "Environments where a young, single-maintainer open-source project with modest traction is an unacceptable dependency risk"
+  ],
+  "red_flags": [
+    "Performance is the product's core promise, yet the ~40–50% / up-to-99% / up-to-2× figures are presented without a reproducible methodology or third-party benchmark — buyers should require their own measurement."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Framework-aware MCP server that serves a precomputed dependency graph, full-text search, impact analysis and decision memory to cut token usage for AI coding agents",
+      "source": "https://trace-mcp.com",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Open source, MIT-licensed, runs locally with no API keys — 'no data leaves your machine', bundled ONNX embeddings, fully offline after first install",
+      "source": "https://trace-mcp.com",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Installs via 'npm install -g trace-mcp' (Node.js 20+) and exposes 169 MCP tools over stdio or HTTP to Claude Code, Cursor, Windsurf, VS Code and other MCP clients",
+      "source": "https://trace-mcp.com",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "~40–50% fewer tokens on average, up to 94–99% in structured workflows, up to 2× effective context — attributed only to 'baseline agent runs', no published methodology",
+      "source": "https://trace-mcp.com",
+      "tested_at": "2026-09-27",
+      "verified": false
+    },
+    {
+      "claim": "Code-linked decision memory and agent-behavior rules keep reuse the default across sessions",
+      "source": "https://trace-mcp.com",
+      "tested_at": "2026-09-27",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native MCP server: install the CLI (npm install -g trace-mcp), run 'trace-mcp init' to wire it into an MCP client, then 'trace-mcp add' per repo. Agents then call any of the ~169 tools (search, get_outline, find_usages, get_call_graph, get_change_impact, apply_codemod, …) over stdio or HTTP against a locally indexed graph. An open plugin API lets developers add framework-specific edges. Maximally agent-native — MCP is the primary and intended consumption surface.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "trace-mcp.com returned a full product page (page_title 'trace-mcp — Make AI agents understand your codebase, not just read it')",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Make AI agents understand your codebase — not just read it' — framework-aware MCP server serving precomputed code intelligence",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'GET STARTED IN MINUTES' / 'npm install -g trace-mcp' copy button / 'VIEW ON GITHUB'",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (MIT license), no signup and no API keys required",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Install walkthrough with example terminal session, cross-language edge trace example, and an optional desktop graph explorer shown; live graph-explorer counters read 0 in capture",
+      "tested_at": "2026-09-27T00:00:00Z"
+    }
+  ],
+  "summary": "A genuinely agent-native code-intelligence MCP server — open-source, local-first, broadly integrated — whose headline token-savings claims are asserted without a published, reproducible benchmark.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-27",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-27",
+    "source": "r-publish-editorial"
+  },
+  "evidence_images": {
+    "run_id": "run-21c397ad7f35ce6c-trace-mcp-com",
+    "base": "https://images.hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/run-21c397ad7f35ce6c-trace-mcp-com",
+    "files": [
+      "home.png",
+      "page__.png",
+      "page__problem.png",
+      "page__product.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/run-21c397ad7f35ce6c-trace-mcp-com/home.png",
+      "https://images.hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/run-21c397ad7f35ce6c-trace-mcp-com/page__.png",
+      "https://images.hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/run-21c397ad7f35ce6c-trace-mcp-com/page__problem.png",
+      "https://images.hlido.eu/reviews/nikolai-vysotskyi-trace-mcp/run-21c397ad7f35ce6c-trace-mcp-com/page__product.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free and open source (MIT license), no signup and no API keys required",
+      "tested_at": "2026-09-27"
+    },
+    "last_verified": "2026-09-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-27"
+  },
+  "generated_at": "2026-09-27T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
