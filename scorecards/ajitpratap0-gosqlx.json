@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "ajitpratap0-gosqlx",
+  "name": "GoSQLX",
+  "agent_url": "https://gosqlx.dev",
+  "category": "Infrastructure",
+  "run_id": "run-79cf746840c262b9-gosqlx-dev-v2",
+  "run_at": "2026-09-27T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "medium",
+  "summary": "A fast, well-presented multi-dialect SQL parsing SDK for Go with a genuinely agent-first MCP surface — but its headline performance and traction numbers are vendor-asserted and, in one case, don't reconcile.",
+  "hlido_opinion": {
+    "headline": "A fast, well-presented multi-dialect SQL parsing SDK for Go with a genuinely agent-first MCP surface — but its headline performance and traction numbers are vendor-asserted and, in one case, don't reconcile.",
+    "body": "GoSQLX is a developer library, not an AI product, yet it earns its place in an agent register: it ships a keyless, no-install remote MCP server (mcp.gosqlx.dev) exposing seven SQL tools — parse, format, validate, lint, analyze, injection-detect, list-dialects — to Claude, Cursor, or any MCP client, which is exactly the kind of narrow, composable capability agents can consume without ceremony. The public surface is strong: the in-page playground actually parsed a multi-table JOIN into a full AST during our capture, so the core function is demonstrable rather than merely claimed, and the project spreads across a Go SDK, CLI, VS Code extension, GitHub Lint Action, and WASM under Apache-2.0. Where it should be read with caution is the numbers. The marquee throughput figure (1.38M ops/sec, sub-microsecond latency) and the chart beating vitess and pg_query are self-reported benchmarks on the author's own Apple M4 hardware, and the dialect-coverage percentages are self-graded QA. More pointedly, the homepage advertises \"1.2k GitHub Stars\" while Hlido's scout recorded 111 stars for the same repository — a gap the public surface does not explain. None of this makes GoSQLX a weak tool; the design is coherent and the agent path is real. It does mean the performance and popularity claims are inputs to verify, not conclusions to trust, and Hlido ran no hands-on behavioral test of the MCP tools or SDK.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because the product is coherent, actively presented, open-source (Apache-2.0), and offers a real, keyless agent-integration path via MCP alongside a working in-page playground that demonstrated the core parse function. It is held below the top band because the review is a public-surface (medium-confidence) assessment with no hands-on behavioral run, every performance and coverage figure is vendor self-reported, and the homepage's advertised star count (1.2k) does not reconcile with the 111 stars Hlido's scout recorded — a traction discrepancy a buyer must resolve independently. VITAL is unreachable without hands-on behavioral testing Hlido did not perform.",
+  "what_it_does_well": [
+    "Ships a genuinely agent-first surface: a keyless, no-install remote MCP server (mcp.gosqlx.dev) exposing 7 SQL tools to Claude, Cursor, or any MCP client",
+    "The in-page playground actually parsed a multi-table JOIN query into a complete AST during Hlido's capture — the core function is demonstrable, not just asserted",
+    "Broad multi-dialect support presented clearly: PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, SQLite, Snowflake, and ClickHouse",
+    "Multiple distribution channels — Go SDK, CLI, VS Code extension, GitHub Lint Action, and WASM — plus docs, changelog, and benchmarks pages",
+    "Open source under Apache-2.0 with a clean, well-organised developer site and a simple, honest example API"
+  ],
+  "what_it_fails_at": [
+    "Headline throughput (1.38M ops/sec, <1µs latency) is a vendor self-reported benchmark on the author's Apple M4 hardware — Hlido did not reproduce it",
+    "The comparative chart beating vitess, pg_query, and sqlparser is unsourced beyond \"BenchmarkParse, Apple M4, Go 1.26\"",
+    "Homepage traction is inconsistent: it advertises \"1.2k GitHub Stars\" while Hlido's scout recorded 111 stars for the repository, unexplained on the public surface",
+    "Per-dialect coverage percentages (80%–100%) are self-graded QA figures with no external validation",
+    "No hands-on behavioral run of the MCP tools or SDK, so runtime correctness, thread-safety, and race-free claims remain asserted rather than confirmed here"
+  ],
+  "best_for": [
+    "Go developers who need an embeddable, multi-dialect SQL parser, formatter, and linter",
+    "Agent builders who want SQL parsing, validation, and injection-detection tools available over MCP without provisioning an API key",
+    "Teams building SQL tooling — linters, analyzers, IDE integrations — on top of a shared AST",
+    "Workflows that need SQL security scanning (injection detection with severity classification) as a component"
+  ],
+  "not_recommended_for": [
+    "Teams that require independently reproduced performance benchmarks before adoption",
+    "Non-Go stacks needing a native library (the MCP server and WASM build only partially bridge this)",
+    "Buyers who treat published star/traction counts as a due-diligence signal — the figures here do not reconcile",
+    "Production use where correctness must be verified by hands-on testing rather than vendor QA claims"
+  ],
+  "red_flags": [
+    "The homepage advertises \"1.2k GitHub Stars\" but Hlido's scout recorded 111 stars for the same repository (ajitpratap0/GoSQLX) on 2026-08-26. A traction figure a buyer cannot reconcile from the public surface should be independently verified before it is relied upon."
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "GoSQLX is a production-ready, multi-dialect SQL parsing SDK for Go (v1.14.0), 'Parse SQL at the speed of Go' with zero-copy tokenization and object pooling",
+      "source": "https://gosqlx.dev/ (hero + page title)",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Documents a keyless, no-install remote MCP server (claude mcp add --transport http gosqlx https://mcp.gosqlx.dev/mcp) exposing 7 SQL tools: parse_sql, format_sql, validate_sql, lint_sql, analyze_sql, detect_injection, list_dialects, for Claude, Cursor, or any MCP client",
+      "source": "https://gosqlx.dev/ ('AI-Ready SQL Tools' section)",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Performance of 1,379,878+ ops/sec with <1µs latency, benchmarked on Apple M4, Go 1.26, outperforming vitess/pg_query/sqlparser",
+      "source": "https://gosqlx.dev/ (Performance / Benchmarks section)",
+      "tested_at": "2026-09-27",
+      "verified": false
+    },
+    {
+      "claim": "Traction stat '1.2k GitHub Stars'",
+      "source": "https://gosqlx.dev/ ('TRUSTED BY DEVELOPERS' band)",
+      "tested_at": "2026-09-27",
+      "verified": false
+    },
+    {
+      "claim": "Supports 8 SQL dialects with coverage from 80% (Oracle) to 100% (Snowflake, 87/87 QA)",
+      "source": "https://gosqlx.dev/ ('8 SQL Dialects, One Parser' section)",
+      "tested_at": "2026-09-27",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Primary agent path is a keyless, no-install remote MCP server (https://mcp.gosqlx.dev/mcp) exposing 7 SQL tools (parse_sql, format_sql, validate_sql, lint_sql, analyze_sql, detect_injection, list_dialects) consumable by Claude, Cursor, or any MCP client. Beyond MCP, GoSQLX ships as a Go SDK (github.com/ajitpratap0/GoSQLX), a CLI, a VS Code extension, a GitHub Lint Action, and a WASM build, plus an interactive web playground. It is a developer library rather than an AI product, but the MCP surface makes its parsing/validation/injection-detection capabilities directly agent-consumable.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "https://gosqlx.dev/ returned title 'GoSQLX - Production-Ready SQL Parsing SDK for Go'",
+      "tested_at": "2026-08-28T04:30:39Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Parse SQL at the speed of Go — Production-ready SQL parsing with zero-copy tokenization, object pooling, and multi-dialect support'",
+      "tested_at": "2026-08-28T04:30:39Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' and 'Try Playground' primary CTAs",
+      "tested_at": "2026-08-28T04:30:39Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source (Apache-2.0 per repo badges); MCP server documented as free/keyless, no API key required. No paid pricing surface present.",
+      "tested_at": "2026-08-28T04:30:39Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live in-page playground parsed a multi-table JOIN into a full AST ('Parsed in 78.80ms'); benchmarks and changelog pages linked",
+      "tested_at": "2026-08-28T04:30:39Z"
+    }
+  ],
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-27",
+    "source": "r-publish-editorial"
+  },
+  "evidence_images": {
+    "run_id": "run-79cf746840c262b9-gosqlx-dev",
+    "base": "https://images.hlido.eu/reviews/ajitpratap0-gosqlx/run-79cf746840c262b9-gosqlx-dev",
+    "files": [
+      "home.png",
+      "page__main-content.png",
+      "page_.png",
+      "page_docs_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/ajitpratap0-gosqlx/run-79cf746840c262b9-gosqlx-dev/home.png",
+      "https://images.hlido.eu/reviews/ajitpratap0-gosqlx/run-79cf746840c262b9-gosqlx-dev/page__main-content.png",
+      "https://images.hlido.eu/reviews/ajitpratap0-gosqlx/run-79cf746840c262b9-gosqlx-dev/page_.png",
+      "https://images.hlido.eu/reviews/ajitpratap0-gosqlx/run-79cf746840c262b9-gosqlx-dev/page_docs_.png"
+    ]
+  },
+  "staleness_after": "2026-12-27",
+  "generated_at": "2026-09-27T00:00:00Z",
+  "source": "hlido-editor-v2",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source (Apache-2.0 per repo badges); MCP server documented as free/keyless, no API key required. No paid pricing surface present.",
+      "tested_at": "2026-08-28"
+    },
+    "last_verified": "2026-08-28",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-27"
+  }
+}
