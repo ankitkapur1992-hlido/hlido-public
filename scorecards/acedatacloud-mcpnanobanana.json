@@ -1,59 +1,206 @@
 {
+  "schema_version": "2.0",
   "slug": "acedatacloud-mcpnanobanana",
-  "name": "AceDataCloud/MCPNanoBanana",
-  "agent_url": "https://platform.acedata.cloud",
+  "name": "AceDataCloud MCP Nano Banana",
+  "agent_url": "https://github.com/AceDataCloud/MCPNanoBanana",
   "repo_url": "https://github.com/AceDataCloud/MCPNanoBanana",
-  "category": "Infrastructure",
-  "run_id": "run-acedatacloud-mcpnanobanana-i1afbekf",
-  "run_at": "2026-07-28T12:00:56.127Z",
-  "source": "hlido-drain-worker",
+  "category": "Image & Design",
+  "run_id": "run-5d77cd567e84ddf5-platform-acedata-cloud-v2",
+  "run_at": "2026-09-27T00:00:00Z",
+  "source": "hlido-editor-v2",
+  "review_track": "repo-surface",
+  "evidence_tier": "repo-surface",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface+repo-health-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_note": "Repo-surface track: this product is an MCP server distributed as a package (PyPI mcp-nanobanana-pro / GitHub) that wraps AceDataCloud's hosted 'Nano Banana' image-generation API, with no standalone web product of its own. The score derives from measurable public signals only — the repository README (features, licensing, tool reference, install path) and the backing platform's public surface captured by the Hlido engine (platform.acedata.cloud home/docs/services). Score ceiling 85/100: VITAL requires hands-on behavioral testing of the running server that public-surface signals cannot provide, and Hlido did not execute the server against the live API.",
   "checklist": [
     {
-      "id": "C01",
+      "id": "repo_reachable",
+      "task": "Product is publicly reachable and identifiable",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "README present with PyPI (mcp-nanobanana-pro) version + downloads badges; backing platform home captured at platform.acedata.cloud"
     },
     {
-      "id": "C02",
+      "id": "readme_present",
+      "task": "README documents the product",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "README describes purpose, 5 feature areas, and a 4-tool reference table"
     },
     {
-      "id": "C03",
+      "id": "license_present",
+      "task": "License declared",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "MIT (README license badge)"
     },
     {
-      "id": "C04",
+      "id": "install_documented",
+      "task": "Install/usage instructions present",
+      "required": true,
       "pass": true,
-      "required": true
+      "evidence": "Quick Start: obtain an AceDataCloud API token, then run the MCP server (Python 3.10+, PyPI package)"
     },
     {
-      "id": "C05",
+      "id": "agent_consumable",
+      "task": "Agent-consumable surface documented (MCP config)",
+      "required": false,
       "pass": true,
-      "required": false
+      "evidence": "MCP server with 4 documented tools: nanobanana_generate_image, nanobanana_edit_image, nanobanana_get_task, nanobanana_get_tasks_batch"
+    },
+    {
+      "id": "releases_present",
+      "task": "Published releases exist",
+      "required": false,
+      "pass": true,
+      "evidence": "PyPI version + monthly-downloads badges indicate published releases (exact version/count not captured)"
+    },
+    {
+      "id": "community_traction",
+      "task": "Community traction verified",
+      "required": false,
+      "pass": null,
+      "evidence": "GitHub star count not captured (gh_stars null in preanalysis); PyPI downloads badge present but its value was not read — traction unverified"
+    },
+    {
+      "id": "active_maintained",
+      "task": "Actively maintained (recent push, not archived)",
+      "required": false,
+      "pass": null,
+      "evidence": "Repository push date / maintenance cadence not captured in this run — cannot be confirmed from held evidence"
+    },
+    {
+      "id": "provenance_disclosed",
+      "task": "Machine-readable provenance/marking of generated images disclosed",
+      "required": false,
+      "pass": false,
+      "evidence": "No C2PA, IPTC, watermark, or content-credential statement found in the README preview or on the captured platform surface"
     }
   ],
-  "laddoo_score": 95,
-  "score": 95,
-  "tier": "VITAL",
-  "summary": "Public-surface review of AceDataCloud/MCPNanoBanana: 4/4 required and 1/1 optional checks verified against the live product surface.",
-  "confidence": "medium",
   "evidence_urls": [
-    "https://platform.acedata.cloud"
+    {
+      "claim": "MCP server for AI image generation and editing using Google's Nano Banana model through the AceDataCloud API",
+      "source": "https://github.com/AceDataCloud/MCPNanoBanana",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "MIT License; distributed as PyPI package mcp-nanobanana-pro; Python 3.10+; MCP-compatible",
+      "source": "https://github.com/AceDataCloud/MCPNanoBanana",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Generate and edit AI images directly from Claude, VS Code, or any MCP-compatible client.",
+      "source": "https://github.com/AceDataCloud/MCPNanoBanana",
+      "tested_at": "2026-09-27",
+      "verified": false
+    },
+    {
+      "claim": "Unified pay-as-you-go interface, no subscription required; one API key accesses 300+ models across 30+ providers",
+      "source": "https://platform.acedata.cloud",
+      "tested_at": "2026-09-27",
+      "verified": false
+    },
+    {
+      "claim": "99.9% service availability; 7.6M+ API calls and 8,829+ active developers in the last 30 days (vendor-reported, as of Aug 9, 2026)",
+      "source": "https://platform.acedata.cloud",
+      "tested_at": "2026-09-27",
+      "verified": false
+    }
   ],
-  "evidence_tier": "public-surface",
+  "laddoo_score": 72,
+  "score": 72,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "summary": "A genuinely MCP-native image-generation server — four clean tools over Google's Nano Banana via AceDataCloud — but a thin, MIT-licensed wrapper whose reliability, traction, and image provenance all rest on an unverified third-party gateway.",
+  "staleness_after": "2026-12-27",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-27",
+    "source": "r-publish-editorial"
+  },
   "evidence_images": {
-    "run_id": "run-ecc472c53a894c9a-platform-acedata-cloud",
-    "base": "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-ecc472c53a894c9a-platform-acedata-cloud",
+    "run_id": "run-5d77cd567e84ddf5-platform-acedata-cloud",
+    "base": "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-5d77cd567e84ddf5-platform-acedata-cloud",
     "files": [
-      "home.png"
+      "home.png",
+      "page_documents.png",
+      "page_services.png",
+      "page_services.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-ecc472c53a894c9a-platform-acedata-cloud/home.png"
+      "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-5d77cd567e84ddf5-platform-acedata-cloud/home.png",
+      "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-5d77cd567e84ddf5-platform-acedata-cloud/page_documents.png",
+      "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-5d77cd567e84ddf5-platform-acedata-cloud/page_services.png",
+      "https://images.hlido.eu/reviews/acedatacloud-mcpnanobanana/run-5d77cd567e84ddf5-platform-acedata-cloud/page_services.png"
+    ]
+  },
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Purpose-built for agents: an MCP server that exposes four image tools (generate, edit, task-status, batch-status) to any MCP client — Claude, VS Code, Cursor, Cline. It authenticates against AceDataCloud's OpenAI-compatible REST API with a single key, and the platform also ships Python/Node SDKs. There is no standalone product; the server is the integration surface, and it inherits a hard runtime dependency on a paid third-party gateway plus valid credits.",
+    "agent_friendly_score": 8
+  },
+  "hlido_opinion": {
+    "headline": "A genuinely MCP-native image-generation server — four clean tools over Google's Nano Banana via AceDataCloud — but a thin, MIT-licensed wrapper whose reliability, traction, and image provenance all rest on an unverified third-party gateway.",
+    "body": "MCP Nano Banana does the one thing an agent builder actually wants from an image tool: it presents Google's Nano Banana model as four well-named MCP tools — generate, edit, task status, and batch status — that drop straight into Claude, VS Code, Cursor, or Cline. The design is agent-first rather than a web app bolted onto an API, the package is MIT-licensed and published to PyPI, and the README is specific about what each tool does. The catch is that everything downstream of the tool schema is somebody else's: the server is a wrapper around AceDataCloud's hosted gateway, so its speed, uptime, image quality, and cost all belong to that platform, and Hlido could verify none of them by hand — the platform's own headline figures (99.9% availability, 7.6M calls, 8,829 developers) are vendor-reported and captured as marketing, not measured. Two gaps matter for a tool that emits synthetic images: there is no public statement of machine-readable provenance or watermarking (no C2PA, IPTC, or content-credential mention), which is a live EU AI Act concern for anyone deploying it, and the surrounding platform leans on a $ACE Solana token discount scheme that adds noise no image workflow needs. Repository traction and maintenance cadence were not captured in this run, so its staying power is unproven here. As a fast on-ramp to Nano Banana inside an agent it is credible and convenient; as a dependency you would harden a product on, it asks you to trust a gateway you cannot yet independently verify.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) reflects a coherent, genuinely MCP-native product with a clean four-tool surface, an MIT license, a documented install path, and a backing platform that claims real scale. It is not higher because the review is a public-surface + repo-health assessment (medium confidence): Hlido did not run the server against the live API, the repository's stars and maintenance cadence were not captured so traction is unverified, and the product is a thin wrapper whose reliability and cost are inherited from a paid third-party gateway. It carries no independent behavioral confirmation and no disclosed provenance/marking for the images it generates.",
+  "what_it_does_well": [
+    "Agent-first by construction: four purpose-named MCP tools (generate, edit, get-task, batch) that plug into Claude, VS Code, Cursor, and Cline",
+    "MIT-licensed and published to PyPI (mcp-nanobanana-pro, Python 3.10+) — low-friction to adopt and fork",
+    "Clear, specific README with a tool-reference table and a concrete quick-start (token, then run)",
+    "Single-key access to a broad hosted gateway (300+ models, 30+ providers) with pay-as-you-go and no subscription",
+    "Covers practical image tasks beyond raw generation — editing, virtual try-on, and product placement"
+  ],
+  "what_it_fails_at": [
+    "It is a thin wrapper: speed, uptime, image quality, and cost all belong to the AceDataCloud gateway, not the server",
+    "No machine-readable provenance or watermarking (C2PA/IPTC/content credentials) is disclosed for the images it generates",
+    "Platform reliability and traction figures are vendor-reported marketing, not independently measured by Hlido",
+    "Repository star count and maintenance cadence were not captured, so staying power and community adoption are unproven here",
+    "Hard runtime dependency on a paid third-party account plus credits — no self-contained or self-hosted model path"
+  ],
+  "best_for": [
+    "Agent builders who want the fastest way to add Nano Banana image generation to an MCP client",
+    "Prototypes and internal tools where a single pay-as-you-go key is preferable to per-provider account setup",
+    "Developers comfortable depending on a hosted gateway for inference rather than self-hosting a model",
+    "Workflows that need image editing, try-on, or product placement alongside plain generation"
+  ],
+  "not_recommended_for": [
+    "Teams that require disclosed provenance/watermarking on generated images for compliance (e.g. EU AI Act Art. 50) evidence",
+    "Products that need independently verified uptime, latency, or cost guarantees before taking a dependency",
+    "Deployers who want to avoid reliance on a single paid third-party gateway or on crypto-token billing mechanics",
+    "Use cases requiring an audited, self-hosted image model rather than a proxied hosted API"
+  ],
+  "red_flags": [
+    "For a tool that emits synthetic images, no public statement of C2PA/IPTC/watermark or content-credential marking was found — a live transparency gap under EU AI Act Art. 50 for deployers.",
+    "The backing platform promotes a $ACE Solana-token discount scheme and on-chain (x402/USDC) payments; this adds billing complexity and volatility that a straightforward image workflow does not need, and Hlido did not verify any of these mechanics."
+  ],
+  "compared_to": [],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "generated_at": "2026-09-27T00:00:00Z",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based"
     ],
-    "verified_at": "2026-07-31T09:31:43.875Z",
-    "verified_count": 1,
-    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+    "free_tier": true,
+    "last_verified": "2026-09-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-27"
   }
 }
