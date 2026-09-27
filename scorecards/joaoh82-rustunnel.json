@@ -1,0 +1,184 @@
+{
+  "schema_version": "2.0",
+  "slug": "joaoh82-rustunnel",
+  "name": "rustunnel",
+  "agent_url": "https://rustunnel.com",
+  "repo_url": "https://github.com/joaoh82/rustunnel",
+  "category": "Infrastructure",
+  "run_id": "run-3260a53e28969487-rustunnel-com-v2",
+  "run_at": "2026-09-27T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An open-source, Rust-fast tunnel with a first-class MCP server — genuinely agent-drivable, priced to punish idle time, but the managed edge and reliability claims are asserted, not yet independently run.",
+    "body": "rustunnel is a localhost/webhook/TCP tunneling tool that reads as unusually agent-native: it ships an MCP server that lets Claude Code, Cursor, Windsurf, Cline, Codex and custom harnesses create, manage and close tunnels in plain language, with a one-command installer that writes the right config for each client. That is the standout, and it is backed by a coherent product surface — CLI install (brew install rustunnel), API-key auth via RUSTUNNEL_TOKEN, HTTP/TCP/UDP and P2P tunnels, custom subdomains, load-balanced pools with health checks, a live terminal dashboard, and a loopback request inspector with replay. The positioning against ngrok is direct and, refreshingly, factual rather than snarky: pay-as-you-go from a $3/mo minimum that is credited toward usage, self-host free under AGPL, and idle time billed at zero. Where the evidence thins is exactly where it matters most for infrastructure: end-to-end encryption, 'blazing fast' latency, global edge availability and the reliability of the managed relay are stated on the page, not something Hlido observed by running a tunnel end to end. Traction is moderate (655 GitHub stars) and the managed cloud is newer than the open-source core. As a self-hostable building block it looks credible and honestly documented; as a managed dependency, the durability and edge-fleet claims are the buyer's to verify before production.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the public surface is substantive and internally consistent: a clearly documented open-source (AGPL) tunnel with transparent pay-as-you-go pricing, a self-host path, a broad protocol feature set, and — the differentiator — a first-class MCP server that makes it directly consumable by AI agents. It is not scored higher because this is a public-surface (medium-confidence) review with no hands-on behavioral run: encryption, latency, and managed-edge reliability are asserted on the page rather than independently exercised, and community traction (655 stars) is moderate rather than dominant.",
+  "what_it_does_well": [
+    "First-class MCP server with a one-command installer that configures Claude Code, Cursor, Windsurf, Cline, Codex and custom harnesses — the tunnel is drivable in natural language",
+    "Broad protocol coverage on the public surface: HTTP, TCP, UDP and P2P tunnels, custom subdomains, regions, and load-balanced pools with TCP/HTTP health checks",
+    "Transparent, idle-friendly pricing (Hobby free, PAYG $3/mo minimum credited toward usage at $0.10/GB) with a self-host-free AGPL option",
+    "Developer-facing tooling that mirrors the familiar ngrok workflow — live terminal dashboard plus a loopback request inspector at :4040 with one-click replay",
+    "A direct, factual rustunnel-vs-ngrok comparison table that cites its ngrok source and dates it, rather than relying on vague claims"
+  ],
+  "what_it_fails_at": [
+    "Core infrastructure claims — end-to-end encryption, low-latency edge, global fleet availability — are asserted on the page, not independently exercised in this review",
+    "The managed relay/cloud is newer than the open-source core, and its uptime and reliability are unverified from the public surface",
+    "Moderate community traction (655 GitHub stars) — real but not yet a dominant, widely battle-tested footprint",
+    "Self-hosting the AGPL server (TLS, edge, systemd) shifts real operational burden onto the deployer for the free path",
+    "No hands-on Hlido run of an actual tunnel session, so throughput, stability under load, and MCP behavior are claimed rather than confirmed here"
+  ],
+  "best_for": [
+    "Developers who want an AI agent to spin up and tear down tunnels in plain language via MCP",
+    "Teams tunneling webhooks or sharing localhost who resent paying a flat fee for idle time",
+    "Users wanting an open-source, self-hostable ngrok alternative under AGPL with full data control",
+    "Builders needing TCP/UDP/P2P tunnels or load-balanced backends with health checks, not just HTTP",
+    "Cost-sensitive light users who benefit from pay-as-you-go billing credited toward usage"
+  ],
+  "not_recommended_for": [
+    "Production dependencies that require independently verified edge uptime and reliability SLAs before adoption",
+    "Buyers who need a mature, heavily battle-tested vendor rather than a growing open-source project",
+    "Teams wanting fully managed tunneling with zero self-host or operational responsibility on the free tier",
+    "Anyone who needs the encryption and latency claims proven before trusting sensitive traffic"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Open-source tunnel — self-host free under AGPL, or use the managed pay-as-you-go service",
+      "source": "https://rustunnel.com",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Ships a first-class MCP server that works with Claude Code, Claude Desktop, Codex, Cursor, Windsurf, Cline and custom agents via a one-command installer or copy-paste config",
+      "source": "https://rustunnel.com (Built for AI Agents section)",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "Pay-as-you-go pricing: Hobby $0/mo, PAYG $3/mo + $0.10/GB with 30 GB included, Self-host free forever",
+      "source": "https://rustunnel.com (Pricing section)",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "655 GitHub stars, 100% open source",
+      "source": "https://rustunnel.com (hero + stats)",
+      "tested_at": "2026-09-27",
+      "verified": true
+    },
+    {
+      "claim": "End-to-end encrypted, Rust-fast global edge with automatic Let's Encrypt TLS — infrastructure performance and reliability claims",
+      "source": "https://rustunnel.com (feature copy)",
+      "tested_at": "2026-09-27",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class MCP server (rustunnel-mcp, JSON-RPC over stdio): an agent sets RUSTUNNEL_TOKEN and can create, manage and close tunnels in natural language (e.g. \"Expose port 3000\" -> create_tunnel). Also drivable via the CLI (brew install rustunnel) and an API-key-authenticated HTTP surface. One-command installer writes per-harness config for Claude Code, Cursor, Windsurf, Cline and Codex.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "rustunnel.com captured; title 'rustunnel — open-source secure tunnel for localhost, webhooks & AI agents'",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Open-source tunnels. Stop paying for idle time.' with MCP-for-agents framing",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start free' / 'Get Started' / 'brew install rustunnel'",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Hobby $0, PAYG $3/mo + $0.10/GB, Self-host free — transparent tiers on page",
+      "tested_at": "2026-09-27T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live-session terminal mockup, feature descriptions, and a dated rustunnel-vs-ngrok comparison table",
+      "tested_at": "2026-09-27T00:00:00Z"
+    }
+  ],
+  "summary": "An open-source, Rust-fast tunnel with a first-class MCP server — genuinely agent-drivable, priced to punish idle time, but the managed edge and reliability claims are asserted, not yet independently run.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of} for the canonical Hlido-owned opinion.",
+  "staleness_after": "2026-12-27",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-27",
+    "source": "r-publish-editorial"
+  },
+  "evidence_images": {
+    "run_id": "run-3260a53e28969487-rustunnel-com",
+    "base": "https://images.hlido.eu/reviews/joaoh82-rustunnel/run-3260a53e28969487-rustunnel-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/joaoh82-rustunnel/run-3260a53e28969487-rustunnel-com/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based",
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…is direct and, refreshingly, factual rather than snarky: pay-as-you-go from a $3/mo minimum that is credited toward usage, self-host free under AGPL, and idle time…",
+        "source": "hlido_opinion.body"
+      },
+      {
+        "quote": "…idle-friendly pricing (Hobby free, PAYG $3/mo minimum credited toward usage at $0.10/GB) with a self-host-free AGPL option",
+        "source": "what_it_does_well[2]"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Hobby $0, PAYG $3/mo + $0.10/GB, Self-host free — transparent tiers on page",
+      "tested_at": "2026-09-27"
+    },
+    "last_verified": "2026-09-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-27"
+  },
+  "generated_at": "2026-09-27T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
