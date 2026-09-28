@@ -1,0 +1,162 @@
+{
+  "schema_version": "2.0",
+  "slug": "otodock-oto-dock",
+  "name": "OtoDock",
+  "agent_url": "https://otodock.io",
+  "repo_url": "https://github.com/OtoDock/oto-dock",
+  "category": "Workflow & Automation",
+  "run_id": "run-5b0d8f887137ec3f-otodock-io-v2",
+  "run_at": "2026-09-28T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A self-hosted 'agentic company OS' on your own Claude/Codex subscription, with an unusually specific security model — ambitious in breadth, still asking to be taken on trust on most of it.",
+    "body": "OtoDock's pitch is a self-hosted platform where a company builds and runs a team of AI agents on infrastructure it controls, driven by Claude Code and Codex on the customer's own Anthropic/OpenAI subscription, free up to five users. The framing is coherent and the composition is thoughtful — an agent is broken into six editable parts (persona, memory, workspace, knowledge, skills, tools), roles and sharing modes are spelled out, and automation (recurring, event, and one-off tasks) plus a phone bridge (Twilio/Asterisk) round it out. What stands out most to Hlido is the security section, which is specific rather than decorative: a kernel sandbox per agent with its own mount and process namespaces, always-on network isolation that makes private ranges, the LAN, and cloud metadata endpoints unreachable by default, credentials encrypted at rest and injected per session so agents use but never see them, and SSO/2FA/per-user budgets from first install. That is the correct threat model for autonomous agents, and stating it plainly is a credit. The licensing is honest too — Fair Source, full source public, each release converting to Apache 2.0 after two years. Where Hlido withholds credit: the breadth is large and almost entirely unverifiable from the public surface — departments, delegation, live dashboards, remote-machine control, phone calls, in-chat Office editing — and the marketing flourish that 'this entire video was directed, captured and edited by an OtoDock agent' is exactly the kind of claim that needs a hands-on run to stand up. This is a promising, security-conscious platform reviewed from its public surface only; Hlido did not self-host it or exercise the agents.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-28",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) for a coherent, ambitious self-hosted agent platform with an unusually concrete and correct security posture (kernel sandbox per agent, network isolation of private/metadata ranges, per-session credential injection, SSO/2FA/budgets), honest Fair Source licensing, and a genuine free self-host tier up to five users. Held in the middle of the band because it is a public-surface review (medium confidence, not self-hosted or exercised by Hlido), the feature breadth is very large and almost all of it is unverified from the surface, adoption requires Docker self-hosting plus a customer's own Claude/Codex subscription, and community traction is modest (187 GitHub stars).",
+  "what_it_does_well": [
+    "Coherent, editable agent model — persona, memory, workspace, knowledge, skills and tools are each first-class and user-editable, with clear roles and four personal/shared sharing modes",
+    "Specific, correct security posture for autonomous agents — a kernel sandbox per agent (own mount/process namespaces), always-on network isolation of private ranges/LAN/cloud-metadata endpoints, credentials encrypted at rest and injected per session, SSO/2FA and per-user cost budgets from install",
+    "Runs on the customer's own infrastructure and their own Claude Code / Codex subscription (or API keys) — data and keys stay on hardware they control",
+    "Honest, transparent licensing — Fair Source with the full source public and each release converting to Apache 2.0 after two years, plus a real free tier up to five users",
+    "Low-friction self-host story — a single install script that checks Docker, writes the .env, and starts server, dashboard, PostgreSQL and live document preview"
+  ],
+  "what_it_fails_at": [
+    "Very broad feature surface (departments, delegation, live dashboards, remote-machine control, a phone line, in-chat Excel/Word/PowerPoint editing) that is almost entirely unverifiable from the public surface",
+    "Marketing flourish that outruns evidence — 'this entire video was directed, captured and edited by an OtoDock agent' is precisely the claim that needs a hands-on run to substantiate",
+    "Adoption friction — requires Docker self-hosting and a customer's own paid Claude/Codex subscription before any value is realised",
+    "Modest community traction (187 GitHub stars) relative to the scope of what is promised",
+    "No hands-on run by Hlido — agent reliability, sandbox enforcement, and the automation/phone/remote-machine features are asserted by the vendor, not confirmed here"
+  ],
+  "best_for": [
+    "Small teams and technical founders who want a self-hosted, multi-user agent platform on their own Claude/Codex subscription and their own hardware",
+    "Privacy- and security-conscious organisations that need agents sandboxed, network-isolated, and running behind their own firewall",
+    "Shops comfortable running a Docker stack and administering SSO/roles/budgets themselves",
+    "Buyers who value transparent, source-available licensing (Fair Source → Apache 2.0) over a closed SaaS"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a managed, zero-ops hosted SaaS rather than a self-hosted Docker deployment",
+    "Non-technical buyers who cannot run and maintain a server stack, or who lack an Anthropic/OpenAI subscription to bring",
+    "Anyone who needs the broad automation/phone/remote-machine claims verified before committing — treat them as unmeasured vendor claims",
+    "Organisations that require an established, high-traction vendor rather than an early, source-available project"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Self-hosted, multi-tenant 'agentic company OS' built on Claude Code and Codex, running on the customer's own Anthropic/OpenAI subscription; free to self-host up to five users, no credit card",
+      "source": "https://otodock.io",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "An agent is composed of six editable parts (persona, memory, workspace, knowledge, skills, tools), with defined roles and four personal/shared workspace modes",
+      "source": "https://otodock.io",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Each server-side agent runs in a kernel sandbox with its own mount/process namespaces and always-on network isolation; private ranges, LAN and cloud-metadata endpoints are unreachable by default; credentials are encrypted at rest and injected per session",
+      "source": "https://otodock.io",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Fair Source licensing — full source public, free self-host up to five users, seat licensing above, and each release converts to Apache 2.0 after two years",
+      "source": "https://otodock.io",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Agents can run automations (recurring, event-triggered, one-off), be given a phone number via Twilio/Asterisk, control remote machines, and edit Office documents in chat",
+      "source": "https://otodock.io",
+      "tested_at": "2026-09-28",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "OtoDock is a self-hosted platform that humans use to build and run agents on Claude Code / Codex backends; it consumes MCP tools from a community catalog to extend its own agents, and supports webhook-triggered automations. It exposes no documented external API or MCP server for a third-party agent to drive OtoDock itself from the public surface — it is agent infrastructure you host and operate, not a component another agent calls remotely. Behavioral testing requires self-hosting behind a login.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "otodock.io returned a full product page (page_title 'OtoDock — Collaborative Agents')",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The agentic company OS' — a self-hosted team of AI agents on infrastructure you control, built on Claude Code & Codex",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' / 'View the source' / a self-host install snippet (curl the install.sh, bash install.sh)",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free to self-host up to five users; seat licensing for growing teams (pricing page linked; prices exclude VAT)",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "A two-minute dashboard video and detailed feature/security sections shown; features are illustrated but not independently exercised from the public surface",
+      "tested_at": "2026-09-28T00:00:00Z"
+    }
+  ],
+  "summary": "A self-hosted 'agentic company OS' on your own Claude/Codex subscription, with an unusually specific security model — ambitious in breadth, still asking to be taken on trust on most of it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-28",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-28",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free to self-host up to five users; seat licensing for growing teams (pricing page linked; prices exclude VAT)",
+      "tested_at": "2026-09-28"
+    },
+    "last_verified": "2026-09-28",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-28"
+  },
+  "generated_at": "2026-09-28T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
