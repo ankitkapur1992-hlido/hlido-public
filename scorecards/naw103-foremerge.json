@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0",
+  "slug": "naw103-foremerge",
+  "name": "Foremerge",
+  "agent_url": "https://foremerge.com",
+  "repo_url": "https://github.com/naw103/foremerge",
+  "category": "Coding",
+  "run_id": "run-f888cc9553a5787a-foremerge-com-v2",
+  "run_at": "2026-09-28T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A deterministic, MCP-first coordination protocol for multi-agent coding — unusually honest about its own limits, and exactly the plumbing a fleet-of-agents future needs.",
+    "body": "Foremerge answers a problem the agent ecosystem is only starting to feel: two coding agents in separate worktrees can each finish clean work that silently undoes the other's, because Git compares text, not intent. Foremerge sits above Git as a shared, queryable store where every agent publishes its intent and semantic scopes (symbol, api, schema, migration, contract, env) before it edits, so collisions surface as an explainable finding while both trees are still clean. Two design choices earn Hlido's respect. First, the conflict detector is deterministic and heuristic with no LLM in the detection path, so the same inputs always produce the same answer — the right call for infrastructure agents must trust. Second, the surface is refreshingly honest: a whole 'what it does not claim' section, a docs/limitations.md, an explicit 'no performance claims until there are' on the missing benchmarks, and a verification lifecycle that treats agent-reported test results as provenance, never proof. It is genuinely agent-native — CLI plus a JSON/OpenAPI loopback daemon plus an 18-tool MCP server over stdio, provider-agnostic by design so mixed Claude+Codex fleets are the design center. The reasons it isn't scored higher are all maturity, not integrity: it's a pre-1.0 (0.5.0) local-first MVP, multi-machine coordination is roadmap not shipped, and there are no published coordinated-vs-uncoordinated results yet — the authors say so themselves. This is a promising, well-designed building block reviewed from its public surface; Hlido did not install it or drive a live multi-agent run here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-28",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) for a coherent, genuinely agent-native protocol with an excellent trust posture — Apache-2.0, local-first with no cloud dependency, a deterministic (no-LLM) detection path, an honest limitations section, and real traction (512 GitHub stars) for a young project. Held below VITAL because this is a public-surface review (medium confidence, no hands-on multi-agent run by Hlido), the project is explicitly pre-1.0 (0.5.0), multi-machine coordination is not yet in the box, and the authors have published no reproducible coordinated-vs-uncoordinated benchmark yet.",
+  "what_it_does_well": [
+    "Names a real, emerging failure mode precisely — two agents making individually-correct edits in separate worktrees that Git merges without conflict but that undo each other's work",
+    "Deterministic, explainable conflict detection with no LLM in the detection path — the same inputs always produce the same finding, which is the correct property for trusted infrastructure",
+    "Maximally agent-native distribution: one Rust binary exposing a CLI, an authenticated JSON/OpenAPI loopback daemon, and an 18-tool MCP server over stdio, with a one-line 'tell your agent to install it' path",
+    "Provider-agnostic by design — mixed Claude + Codex fleets are the design center, and every ChangeSet records which agent/model did what against an exact Git fingerprint",
+    "Unusually honest public surface — an explicit 'what it does not claim' section, docs/limitations.md, advisory-not-locking coordination, and 'no performance claims until there are'"
+  ],
+  "what_it_fails_at": [
+    "Explicitly pre-1.0 (0.5.0) MVP with schemas that 'may still change' — an early dependency risk the authors flag themselves",
+    "No published, reproducible coordinated-vs-uncoordinated benchmark yet, so the core value ('catch conflicts before they land') is argued rather than measured",
+    "Local-first only — a single SQLite store shared across worktrees on one machine; multi-machine shared mode is on the roadmap, not shipped",
+    "Deterministic heuristics can miss synonymous concepts and warn on compatible work, as the docs acknowledge — coverage is advisory, not guaranteed",
+    "No hands-on run by Hlido — the conflict-detection quality, tool reliability, and lifecycle gating are asserted by the project, not independently confirmed here"
+  ],
+  "best_for": [
+    "Developers running two or more coding agents (Claude Code, Codex, Cursor) in parallel worktrees on the same repository",
+    "Teams building agent harnesses who want a deterministic, scriptable (--json) coordination layer above Git rather than an LLM-judged one",
+    "Open-source-preferring shops comfortable running a self-hosted Rust binary and following an MCP/CLI protocol",
+    "Researchers and platform builders interested in cross-model coordination data (which agent/model did what, validated how)"
+  ],
+  "not_recommended_for": [
+    "Teams needing coordination across multiple machines today — that mode is roadmap, not shipped",
+    "Buyers who require a published, reproducible benchmark before adopting a coordination claim",
+    "Non-technical users, or anyone unwilling to run a CLI/MCP server and follow a per-repo setup protocol",
+    "Environments where a pre-1.0, single-maintainer open-source dependency is unacceptable"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Open-source (Apache-2.0) coordination protocol for coding agents built above Git — agents publish intent and semantic scopes before editing so conflicts surface while both worktrees are still clean",
+      "source": "https://foremerge.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Deterministic conflict detection with no LLM in the detection path — the same inputs always produce the same answer; coordination is advisory and never locks a file",
+      "source": "https://foremerge.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Ships as one binary exposing a CLI, a JSON/OpenAPI loopback daemon, and an 18-tool MCP server over stdio; coordination state lives in a SQLite store under the repo's Git common directory",
+      "source": "https://foremerge.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Provider-agnostic — mixed Claude + Codex fleets are the design center; every ChangeSet records which agent and model did what against an exact Git fingerprint",
+      "source": "https://foremerge.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Pre-1.0 (0.5.0) local-first MVP with no published coordinated-vs-uncoordinated benchmark yet and multi-machine coordination out of scope — stated by the project itself",
+      "source": "https://foremerge.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Native, MCP-first: an agent (or its harness) installs the Foremerge binary, runs 'foremerge init' and 'foremerge setup all' per repo, then drives coordination through an 18-tool MCP server over stdio (publish_intent, claim_work, check_conflicts, publish_changeset, run_verification, accept_changeset, and more). A CLI with --json and an authenticated JSON/OpenAPI loopback daemon offer the same operations for harnesses preferring HTTP. Provider-agnostic by design — any MCP-capable client drives the identical tools.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "foremerge.com returned a full product page (page_title 'Foremerge: catch intent conflicts before code conflicts')",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Catch intent conflicts before code conflicts' — an open-source coordination protocol for coding agents, built above Git",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Quickstart' / 'View on GitHub' / 'curl -fsSL https://foremerge.com/install.sh | sh'",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (Apache-2.0); binaries for macOS/Linux, or 'cargo install --locked foremerge'",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Worked quickstart with a two-agent example, a JSON conflict finding (destructive_vs_additive, rule FM-C001), and an intent→committed lifecycle diagram; benchmark fixtures cited but no published results yet",
+      "tested_at": "2026-09-28T00:00:00Z"
+    }
+  ],
+  "summary": "A deterministic, MCP-first coordination protocol for multi-agent coding — unusually honest about its own limits, and exactly the plumbing a fleet-of-agents future needs.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-28",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-28",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free and open source (Apache-2.0); binaries for macOS/Linux, or 'cargo install --locked foremerge'",
+      "tested_at": "2026-09-28"
+    },
+    "last_verified": "2026-09-28",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-28"
+  },
+  "generated_at": "2026-09-28T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
