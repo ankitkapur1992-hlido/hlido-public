@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "slug": "theguysudo-enzo",
+  "name": "ENZO",
+  "agent_url": "https://enzo-hub.duckdns.org",
+  "repo_url": "https://github.com/theguysudo/ENZO",
+  "category": "Productivity",
+  "run_id": "run-d07b4421792e741c-enzo-hub-duckdns-org-v2",
+  "run_at": "2026-09-28T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A self-hosted, bring-your-own-keys AI command center with a genuinely strong key-custody story — let down on the surface by rough edges and a pricing table that says nothing.",
+    "body": "ENZO's thesis is 'frontier AI without frontier lock-in': one console that routes across nine provider gateways (Groq, OpenRouter, NVIDIA NIM, Hugging Face, Google AI, Cloudflare Workers AI and more), a cognitive-mode agentic terminal with SSE reasoning streams, a model-catalog advisor, and a set of agent tools (search, mail, calendar, documents) — all running on the user's own provider keys, on the user's own machine. The part Hlido credits most is the custody model, which is specific rather than hand-wavy: provider keys are encrypted with AES-256-GCM before they touch browser storage, under a key the browser will not let any JavaScript export, with an optional passphrase leaving nothing usable at rest, and the vendor states plainly it never syncs, stores or logs keys. For a BYOK product that is the whole ballgame, and stating it precisely is the right instinct. The routing-through-your-own-machine, no-wrapper-markup pitch is coherent and increasingly in demand. Where the surface undercuts the product: it is hosted on a duckdns.org demo domain rather than a stable custom domain, there is a visible typo in the hero ('Welcmo to ENZO') that dents the craft impression, and the pricing table lists Starter, Pro and Enterprise all at $0 with playful copy ('Buy — we dare you') — which reads less as a decision than as commercialization not yet thought through. Traction is early (108 GitHub stars) and the console sits behind a login, so its behaviour is asserted, not demonstrated here. This is a substantive, security-minded open-source workspace reviewed from its public surface; Hlido did not log in or drive the agents.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-28",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) for a coherent, genuinely useful self-hosted BYOK AI workspace with a specific, correct key-custody posture (AES-256-GCM, non-exportable key, optional passphrase, keys never on the vendor's servers) and a real breadth of routing and agent tooling. Held to the lower half of the band because this is a public-surface review (medium confidence, no login or hands-on run by Hlido), the surface carries craft and trust dents — a duckdns.org demo host, a hero typo, and a pricing table showing all three tiers at $0 that signals immature commercialization — and community traction is early (108 GitHub stars).",
+  "what_it_does_well": [
+    "Specific, correct key-custody model — provider keys encrypted with AES-256-GCM under a browser key JavaScript cannot export, an optional passphrase leaving nothing usable at rest, and an explicit 'we never sync, store or log your keys'",
+    "Coherent 'no lock-in, no wrapper markup' routing — one console across nine provider gateways, with requests leaving from the user's own machine at provider list price",
+    "Real breadth for a self-hosted workspace — an agentic terminal with cognitive modes and SSE reasoning streams, a catalog advisor that recommends and launches a model, and agent tools for search, mail, calendar and documents",
+    "Resilience touches that show engineering thought — auto-fallback across providers mid-stream, and a search path that tries four backends in order so a dead endpoint costs quality, not the feature",
+    "Open-source and self-hostable, so the trust claims can in principle be audited by the user"
+  ],
+  "what_it_fails_at": [
+    "Hosted on a duckdns.org demo domain rather than a stable custom domain — a professionalism and continuity signal against an otherwise serious product",
+    "A visible hero typo ('Welcmo to ENZO') that dents the craft impression on first contact",
+    "A pricing table listing Starter, Pro and Enterprise all at $0 with jokey copy — reads as commercialization not yet decided rather than a deliberate free-forever position",
+    "Early community traction (108 GitHub stars) relative to the breadth of what is claimed",
+    "Login-gated console with no hands-on run by Hlido — routing, custody enforcement, and the agent tools are asserted on the surface, not demonstrated here"
+  ],
+  "best_for": [
+    "Self-hosting power users and homelabbers who want one BYOK console across many model providers without a wrapper markup",
+    "Privacy-conscious individuals who want provider keys encrypted and kept on their own device, never on a vendor server",
+    "Developers wanting a single agentic terminal with provider auto-fallback over Groq/OpenRouter/NVIDIA/HuggingFace/Google AI and more",
+    "Cost-sensitive users happy to pay providers directly at list price rather than a marked-up subscription"
+  ],
+  "not_recommended_for": [
+    "Non-technical users who cannot self-host or manage their own provider API keys",
+    "Buyers who need a clear, stable commercial and support model — the all-$0 tiers and demo-domain hosting leave that undefined",
+    "Teams needing verified custody guarantees before adoption — treat the (well-stated) security claims as unmeasured until audited",
+    "Anyone wanting a polished, managed hosted product rather than an early self-hosted open-source workspace"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Self-hosted, bring-your-own-keys AI command center that routes across nine provider gateways from one console, with requests leaving from the user's own machine at provider cost (no wrapper markup)",
+      "source": "https://enzo-hub.duckdns.org",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Provider keys are encrypted with AES-256-GCM before touching browser storage under a non-exportable key; an optional passphrase leaves nothing usable at rest; keys are never synced, stored or logged",
+      "source": "https://enzo-hub.duckdns.org",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "An agentic terminal with cognitive modes (normal/thinking/research/coding/image), SSE reasoning streams, provider auto-fallback, and a catalog advisor that recommends and launches a model",
+      "source": "https://enzo-hub.duckdns.org",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Three plans — Starter, Pro and Enterprise — all listed at $0; overage tokens billed at provider list price",
+      "source": "https://enzo-hub.duckdns.org",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Agent tools spanning search, research, mail, calendar and documents, running against the user's own infrastructure",
+      "source": "https://enzo-hub.duckdns.org",
+      "tested_at": "2026-09-28",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "ENZO is a self-hosted, login-gated console a human operates — a BYOK workspace that runs agent 'tools' and cognitive modes internally and can consume MCP tools. It exposes no documented external API or MCP server on the public surface for a third-party agent to drive ENZO itself. It is best understood as a human-operated workspace upstream of agent workflows, not a component another agent calls remotely.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "enzo-hub.duckdns.org returned a full product page (page_title 'ENZO — AI Hub')",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The command center for frontier AI without frontier lock-in — every model routable, every key yours, every request leaving from your own machine'",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Explore the system' / 'SIGN UP'",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "A three-tier pricing table (Starter/Pro/Enterprise) all listed at $0, with overage tokens billed at provider list price",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "A live demo host and detailed architecture/security sections shown; a hero typo ('Welcmo to ENZO') is visible and the console itself is behind a login",
+      "tested_at": "2026-09-28T00:00:00Z"
+    }
+  ],
+  "summary": "A self-hosted, bring-your-own-keys AI command center with a genuinely strong key-custody story — let down on the surface by rough edges and a pricing table that says nothing.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-28",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-09-28",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "subscription"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "A three-tier pricing table (Starter/Pro/Enterprise) all listed at $0, with overage tokens billed at provider list price",
+      "tested_at": "2026-09-28"
+    },
+    "last_verified": "2026-09-28",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-28"
+  },
+  "generated_at": "2026-09-28T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
