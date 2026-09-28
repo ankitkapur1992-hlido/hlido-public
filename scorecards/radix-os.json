@@ -1,0 +1,140 @@
+{
+  "schema_version": "2.0",
+  "slug": "radix-os",
+  "name": "Radix",
+  "agent_url": "https://radix-os.com",
+  "repo_url": null,
+  "category": "Coding",
+  "run_id": "run-b8ac51313f5bf6ed-radix-os-com-v2",
+  "run_at": "2026-09-28T00:00:00Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A genuinely agent-native idea — a persistent visual workspace where a coding agent builds artifacts wired to your repo — behind a deliberately minimal, key-gated landing that gives Hlido almost nothing to verify.",
+    "body": "Radix is a macOS app that gives coding agents like Claude Code a persistent workspace: instead of the agent's diagrams, tools and pages evaporating with the chat, the agent builds interactive artifacts that live in the repo and stay wired to the code. The concept is squarely aligned with where agentic development is heading — durable, inspectable artifacts as the agent works, rather than throwaway text — and the demand signal is real (the launch drew ~412 points on Hacker News). The teaser hints at an unusually broad artifact vocabulary: SIMD-kernel diagrams, flame graphs, stack traces, deadlock and false-sharing analysis, N+1 detection, schemas, state machines, feature flags, import cycles, rate limiters and more. That is the strength and, for a public-surface review, also the problem: the landing page is deliberately spare — a one-line pitch, an install command, a 'get a free key' call to action and a word-cloud of artifact types — and the product itself is a native macOS app behind a signup key, so essentially none of the capability is visible or testable from the web. Hlido rates what it can verify, and here that is a coherent, in-demand concept with a professional but information-thin surface. This is a promising early product reviewed from a minimal public teaser; the score reflects the limits of that surface, not a judgement that the product underdelivers — a hands-on tier would be needed to say more.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-28",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70), at the base of the band, because the concept is coherent and genuinely agent-native and the demand signal is strong (~412 Hacker News points), but the public surface Hlido can actually verify is minimal — a spare landing page, an install command and a key-gated signup for a macOS app — so the broad artifact capabilities are asserted, not demonstrated. Confidence is low-medium accordingly: not lower, because nothing on the surface reads as dishonest or broken; not higher, because there is little to test without installing the app.",
+  "what_it_does_well": [
+    "A genuinely agent-native premise — persistent, inspectable artifacts a coding agent builds and keeps wired to the repo, rather than throwaway chat output",
+    "Strong, timely demand signal (~412 points on Hacker News at launch) for a real developer pain point",
+    "A hinted breadth of artifact types (flame graphs, stack traces, deadlock/false-sharing analysis, N+1 detection, schemas, state machines, import cycles, rate limiters) that maps directly onto real debugging and design work",
+    "A clean, low-friction entry path — a single install command and a free key",
+    "A focused, uncluttered surface that states its one idea plainly"
+  ],
+  "what_it_fails_at": [
+    "The public landing is deliberately minimal — a one-line pitch, an install command and a word-cloud — leaving the actual capabilities undescribed and unverifiable from the web",
+    "The product is a native macOS app behind a signup key, so its behaviour cannot be tested from the public surface (and macOS-only narrows reach)",
+    "No public repository or documentation surface was found to corroborate the artifact-building claims",
+    "The broad list of artifact types is presented as a teaser, without worked examples or evidence of each on the public surface",
+    "No hands-on run by Hlido — the persistence, the repo-wiring and the artifact quality are asserted, not confirmed here"
+  ],
+  "best_for": [
+    "macOS developers who drive coding agents (e.g. Claude Code) and want the agent's diagrams, tools and analyses to persist and stay linked to the code",
+    "Engineers who spend time on debugging and design artifacts (flame graphs, state machines, schemas) and want them agent-built and durable",
+    "Early adopters comfortable installing a young native app behind a free key to evaluate a new workflow"
+  ],
+  "not_recommended_for": [
+    "Non-macOS developers — the product is a macOS app",
+    "Buyers who need capabilities documented and verifiable before installing — the public surface shows very little",
+    "Teams wanting an open, inspectable or self-hostable tool — no public repository was found from the surface",
+    "Anyone needing the artifact-building claims proven rather than taken on trust at this stage"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "A visual UI for agentic programming — a macOS app that gives coding agents a persistent workspace to build interactive artifacts that live in the repo and stay wired to the code",
+      "source": "https://radix-os.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Installs via 'curl -fsSL https://get.radix-os.com/install.sh | bash' and requires a free key obtained at signup",
+      "source": "https://radix-os.com",
+      "tested_at": "2026-09-28",
+      "verified": true
+    },
+    {
+      "claim": "Supports a broad set of agent-built artifacts (SIMD kernels, stack traces, deadlock and false-sharing analysis, test coverage, N+1 query detection, API and state-machine diagrams, feature flags, flame graphs, schemas, shaders, bisect, component maps, import cycles, login flows, rate limiters, cron views)",
+      "source": "https://radix-os.com",
+      "tested_at": "2026-09-28",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Radix is a macOS app installed via a shell script that attaches to coding agents (e.g. Claude Code), giving the agent a persistent workspace in which it builds interactive artifacts wired to the repository. A free key is required, implying a backing service the agent authenticates against. The exact integration protocol (API/MCP/tool schema) is not documented on the public surface, and the app is macOS-only, so the agent-facing surface could not be inspected or exercised here.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "radix-os.com returned a landing page (page_title 'Radix — a visual UI for agentic programming')",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'A visual UI for agentic programming — build persistent flexible artifacts as your agent works'",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'GET A FREE KEY' / 'GET A KEY' and an install command",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "A free key on signup; a pricing page is linked in the nav but specific tiers were not present on the captured landing",
+      "tested_at": "2026-09-28T00:00:00Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "The landing shows only a one-line pitch, an install command and a word-cloud of artifact types; no worked example, demo or documentation of the artifacts was present on the captured surface",
+      "tested_at": "2026-09-28T00:00:00Z"
+    }
+  ],
+  "summary": "A genuinely agent-native idea — a persistent visual workspace where a coding agent builds artifacts wired to your repo — behind a deliberately minimal, key-gated landing that gives Hlido almost nothing to verify.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2026-12-28",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-09-28",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "A free key on signup; a pricing page is linked in the nav but specific tiers were not present on the captured landing",
+      "tested_at": "2026-09-28"
+    },
+    "last_verified": "2026-09-28",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-09-28"
+  },
+  "generated_at": "2026-09-28T00:00:00Z",
+  "source": "hlido-editor-v2"
+}
