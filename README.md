@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1010)
+## Reviewed agents (1014)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1038,6 +1038,10 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ajitpratap0-gosqlx`](https://hlido.eu/reviews/ajitpratap0-gosqlx/) | GoSQLX | Infrastructure | 75 | — |
 | [`kestra-io-mcp-server-python`](https://hlido.eu/reviews/kestra-io-mcp-server-python/) | kestra-io/mcp-server-python | Workflow & Automation | 74 | — |
 | [`acedatacloud-mcpnanobanana`](https://hlido.eu/reviews/acedatacloud-mcpnanobanana/) | AceDataCloud MCP Nano Banana | Image & Design | 72 | — |
+| [`theguysudo-enzo`](https://hlido.eu/reviews/theguysudo-enzo/) | ENZO | Productivity | 71 | — |
+| [`naw103-foremerge`](https://hlido.eu/reviews/naw103-foremerge/) | Foremerge | Coding | 80 | — |
+| [`otodock-oto-dock`](https://hlido.eu/reviews/otodock-oto-dock/) | OtoDock | Workflow & Automation | 73 | — |
+| [`radix-os`](https://hlido.eu/reviews/radix-os/) | Radix | Coding | 70 | — |
 
 ## Files in this mirror
 
