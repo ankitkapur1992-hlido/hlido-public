@@ -4,13 +4,13 @@
   "name": "Hello-QM/catgo-LRG",
   "agent_url": "https://github.com/Hello-QM/catgo-LRG",
   "repo_url": "https://github.com/Hello-QM/catgo-LRG",
-  "category": "MCP Server",
+  "category": "Specialized verticals",
   "run_id": "run-hello-qm-catgo-lrg-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "Hello-QM/catgo-LRG — AI-driven workbench for computational materials science — interactive 3D structure viewer, natural-language CatBot assistant, visual DAG workflow engine, HPC job submission. Tauri desktop app with SvelteKit frontend and FastAPI Python backend. Drives VASP, ORCA, CP2K, QE, GPAW, DFTB+, SIESTA, LAMMPS.. Repo-surface review: measured from the public repository (166 stars, AGPL-3.0, last push 2026-07-15); not hands-on tested.",
+  "summary": "A serious, fully-passing computational-materials-science workbench with an LLM assistant — a specialist desktop app, not general-purpose infrastructure.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -135,11 +135,94 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in scorecard.checklist.evidence"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A desktop workbench with an embedded LLM assistant (CatBot) and a FastAPI backend; agent-consumable within its own workflow. Domain-specialised, not general infrastructure.",
+    "agent_friendly_score": 4,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "A serious, fully-passing computational-materials-science workbench with an LLM assistant — a specialist desktop app, not general-purpose infrastructure.",
+    "body": "catgo-LRG is an AI-assisted workbench for computational materials science: an interactive 3D structure viewer, a natural-language CatBot assistant, a visual DAG workflow engine and HPC job submission, packaged as a Tauri desktop app (SvelteKit front end, FastAPI Python back end) that drives simulation engines like VASP and ORCA. On the repository signals it is a strong, serious project — 166 stars, actively maintained, releases present, CI in place, and a clean pass on every checklist item including agent-consumable. This is a genuinely specialised tool, and that specialisation is its whole point: the LLM assistant is grounded in a real scientific workflow rather than bolted onto a generic chat surface, which is where AI tends to add durable value. We have refiled it under Specialized verticals because that is what it is — a domain application for computational chemists, not something a general team or a general-purpose agent would reach for. The unavoidable caveats are the repo-surface ceiling (we have not run VASP/ORCA jobs through it) and the AGPL-3.0 licence, which matters for any institutional deployment. For a materials-science group it looks like a credible, well-built option; for anyone outside that domain it is simply not the tool.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on a clean, fully-passing checklist and active, release-backed maintenance for an ambitious desktop application. Below VITAL by the repo-surface ceiling — we have not hands-on driven real HPC simulation jobs through it — with AGPL-3.0 flagged as an institutional-adoption consideration.",
+  "what_it_does_well": [
+    "Passes every checklist item, including agent-consumable",
+    "Ambitious, coherent feature set grounded in a real scientific workflow (3D viewer, DAG engine, HPC submission)",
+    "Actively maintained with releases and CI",
+    "LLM assistant is embedded in a domain workflow rather than a generic chat bolt-on"
+  ],
+  "what_it_fails_at": [
+    "Highly specialised — irrelevant outside computational materials science",
+    "AGPL-3.0 licence matters for institutional / networked deployment",
+    "Not hands-on tested: real VASP/ORCA job runs are unverified",
+    "Desktop (Tauri) app scope, not a service agents call remotely"
+  ],
+  "best_for": [
+    "Computational-materials-science and chemistry research groups",
+    "Labs that run VASP/ORCA and want an LLM-assisted workflow layer",
+    "Users who value a domain-grounded assistant over a generic chatbot"
+  ],
+  "not_recommended_for": [
+    "General teams or agents with no materials-science workload",
+    "Deployments that cannot accept AGPL-3.0 terms",
+    "Buyers needing a hosted service rather than a desktop application"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "GH API 200 for Hello-QM/catgo-LRG",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "README length 30770",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "AGPL-3.0",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "last push 1d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/Hello-QM/catgo-LRG",
+      "evidence": "latest v1.4.5",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
