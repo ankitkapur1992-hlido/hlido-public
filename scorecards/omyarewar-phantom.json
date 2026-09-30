@@ -4,13 +4,13 @@
   "name": "OmYarewar/PHANTOM",
   "agent_url": "https://github.com/OmYarewar/PHANTOM",
   "repo_url": "https://github.com/OmYarewar/PHANTOM",
-  "category": "MCP Server",
+  "category": "Specialized verticals",
   "run_id": "run-omyarewar-phantom-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -100,7 +100,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "OmYarewar/PHANTOM — 👻 AI-Powered Pentesting Command Center — Autonomous security testing with real-time streaming, self-improving AI, unlimited tool iterations, and beautiful dark UI. Repo-surface review: measured from the public repository (59 stars, MIT, last push 2026-07-16); not hands-on tested.",
+  "summary": "An AI pentesting command centre with a clean repo and agent-consumable design — promising for authorised security testing, unverified and unversioned.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -124,11 +124,94 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in scorecard.checklist.evidence"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Documented as agent-consumable and driven programmatically as a security-testing command centre. Use only against authorised, scoped targets; the surface track verifies none of its safety controls.",
+    "agent_friendly_score": 5,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "An AI pentesting command centre with a clean repo and agent-consumable design — promising for authorised security testing, unverified and unversioned.",
+    "body": "PHANTOM presents as an AI-powered pentesting command centre — autonomous security testing with real-time streaming, self-improving iterations and a polished dark UI. On repo signals it is a tidy, real project: MIT-licensed, actively pushed, CI present, install documented, and it passes agent-consumable. Traction is modest (59 stars), which for a security tool is unremarkable and not a strike against it. The category is what a reader should hold onto. Autonomous, self-improving security testing is genuinely useful for defenders and authorised red teams, but it is dual-use by nature, and the surface track cannot tell us anything about the guardrails: whether it scopes targets, requires authorisation, or constrains 'unlimited tool iterations' against systems the operator does not own. We have not hands-on tested it, so the autonomy claims and — more importantly — the safety posture are entirely unverified. There are also no tagged releases, so anything wired into a workflow tracks a moving branch. Treat PHANTOM as a credible-looking project for authorised, scoped security work by people who understand the legal and safety boundaries; do not read the clean checklist as any statement about whether its autonomous behaviour is safe.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on solid repo hygiene (licence, maintenance, CI, documented install) plus the agent-consumable pass. Below VITAL by the repo-surface ceiling and the missing releases; the dual-use safety posture is unverified and flagged as the key caveat rather than scored, since the surface cannot measure it.",
+  "what_it_does_well": [
+    "MIT-licensed, actively maintained, CI present, install documented",
+    "Passes agent-consumable — designed to be driven programmatically",
+    "Real-time streaming and an iterative testing loop suit authorised red-team work",
+    "Coherent, purpose-built command-centre design"
+  ],
+  "what_it_fails_at": [
+    "Dual-use with no visible guardrail evidence — scoping/authorisation controls unverified on the surface",
+    "Not hands-on tested: autonomy and, critically, safety behaviour are unverified",
+    "No tagged releases — workflow consumers track a moving branch",
+    "Autonomous \"unlimited tool iterations\" framing warrants caution against un-owned targets"
+  ],
+  "best_for": [
+    "Authorised red teams and defenders doing scoped, legal security testing",
+    "Security engineers who can vet the tool before pointing it at anything",
+    "Labs and CTF/research contexts with clear authorisation"
+  ],
+  "not_recommended_for": [
+    "Anyone without explicit authorisation for the targets tested",
+    "Buyers who would mistake a clean repo checklist for a safety guarantee",
+    "Production automation needing versioned, release-pinned dependencies"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "GH API 200 for OmYarewar/PHANTOM",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "README length 10117",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "last push 0d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Community traction (≥50 stars)",
+      "source": "https://github.com/OmYarewar/PHANTOM",
+      "evidence": "59 stars",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
