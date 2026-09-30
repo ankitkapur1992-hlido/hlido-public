@@ -4,13 +4,13 @@
   "name": "mvanhorn/cli-printing-press",
   "agent_url": "https://github.com/mvanhorn/cli-printing-press",
   "repo_url": "https://github.com/mvanhorn/cli-printing-press",
-  "category": "MCP Server",
+  "category": "Infrastructure",
   "run_id": "run-mvanhorn-cli-printing-press-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "mvanhorn/cli-printing-press — Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compound insight commands.. Repo-surface review: measured from the public repository (3995 stars, MIT, last push 2026-07-16); not hands-on tested.",
+  "summary": "High-traction, agent-first Go CLI toolkit with offline search and SQLite sync — clean checklist, but an open-issue backlog worth noting.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,15 +125,94 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "has_api": true,
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in preanalysis.raw_markdown_preview",
-      "has_api: \"openapi\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"cli\" in name"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Produces and exposes a CLI explicitly designed for agents to invoke, with offline search and local state. Agent-consumable by design; validate generated commands before wiring them into automation.",
+    "agent_friendly_score": 8,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "High-traction, agent-first Go CLI toolkit with offline search and SQLite sync — clean checklist, but an open-issue backlog worth noting.",
+    "body": "cli-printing-press pitches itself as an agent-first CLI that reverse-engineers an API, absorbs features from competing tools, then generates a capable command-line interface — with SQLite sync, offline search and compound insight commands. On measured signals it is one of the stronger items here: 3,995 stars, 438 forks, MIT-licensed, releases present, CI in place, actively pushed, and a clean pass on every checklist item including agent-consumable. Building CLI surfaces 'for AI agents first' is squarely aligned with how we think agents will actually operate — a well-formed CLI is one of the most reliable ways for an agent to drive a tool — so the intent scores well with us. The signal to weigh against the enthusiasm is the issue tracker: 166 open issues is high relative to the project's size and suggests either heavy real-world use surfacing rough edges or maintenance strain; the surface track can't tell which, and we have not hands-on tested whether the generated CLIs are correct or safe. Treat the traction as real developer pull, verify the generated output on your own API before trusting it, and watch the issue backlog as a maintenance-health signal.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on a clean checklist (every item passes, agent-consumable included) and strong traction. Below VITAL because of the repo-surface ceiling — no hands-on test of whether generated CLIs are correct — and a notably large open-issue backlog we flag as a maintenance-health caveat.",
+  "what_it_does_well": [
+    "Clean checklist: passes every item we test, including agent-consumable",
+    "Strong traction (3,995 stars, 438 forks)",
+    "Agent-first CLI design aligns with how agents reliably drive tools",
+    "MIT-licensed, releases and CI present, actively maintained",
+    "Offline search + SQLite sync are practical for agent use"
+  ],
+  "what_it_fails_at": [
+    "166 open issues — high for the project size; ambiguous between heavy use and maintenance strain",
+    "Not hands-on tested: correctness and safety of generated CLIs are unverified",
+    "Ambitious \"absorbs every feature\" framing outruns what the surface can confirm"
+  ],
+  "best_for": [
+    "Developers who want an agent-drivable CLI over an existing API",
+    "Agent workflows that need offline search and local SQLite state",
+    "Teams comfortable validating generated output before trusting it"
+  ],
+  "not_recommended_for": [
+    "Anyone needing guaranteed-correct generated CLIs out of the box",
+    "Risk-averse adopters put off by a large open-issue backlog",
+    "Use cases where unvetted auto-generated commands would be dangerous"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "GH API 200 for mvanhorn/cli-printing-press",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "README length 40227",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "last push 0d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/mvanhorn/cli-printing-press",
+      "evidence": "latest v4.28.0",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
