@@ -4,13 +4,13 @@
   "name": "shenmintao/marginalia",
   "agent_url": "https://github.com/shenmintao/marginalia",
   "repo_url": "https://github.com/shenmintao/marginalia",
-  "category": "MCP Server",
+  "category": "Productivity",
   "run_id": "run-shenmintao-marginalia-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "shenmintao/marginalia — A library-science-inspired personal knowledge management system with LLM agents. Repo-surface review: measured from the public repository (211 stars, AGPL-3.0, last push 2026-07-08); not hands-on tested.",
+  "summary": "Tidy, fully-passing PKM system with LLM agents and a library-science bent — agent-consumable, but AGPL-3.0 constrains commercial reuse.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -135,13 +135,93 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in scorecard.checklist.evidence",
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "LLM agents operate over the note store; documented as agent-consumable. AGPL-3.0 is the gating consideration for any embedded or hosted use.",
+    "agent_friendly_score": 5,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Tidy, fully-passing PKM system with LLM agents and a library-science bent — agent-consumable, but AGPL-3.0 constrains commercial reuse.",
+    "body": "marginalia is a personal knowledge-management system inspired by library science, with LLM agents layered over an interlinked note store. On the repository signals it is a clean project — 211 stars, actively maintained, releases present, CI in place, and it passes every checklist item including agent-consumable. The library-science framing is more than branding: PKM tools live or die on how well they impose structure on messy inputs, and a cataloguing mindset is a promising foundation for that. The single most important thing a buyer should notice is not a defect but a licence: marginalia is AGPL-3.0, not MIT like most of its neighbours, which meaningfully constrains commercial and networked reuse — anyone embedding it in a hosted product needs to understand the copyleft obligations before adopting. Beyond that, the usual repo-surface caveat holds: we have not hands-on tested retrieval quality or how the agents behave over a large, real knowledge base, so the intelligence of the system is asserted rather than verified. As a personal or open-source PKM it is a credible, well-kept option; check the AGPL terms against your intended use first.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on a clean, fully-passing checklist and steady maintenance. Held below VITAL by the repo-surface ceiling (retrieval and agent quality untested hands-on); the AGPL-3.0 licence is flagged not as a quality defect but as a material adoption constraint.",
+  "what_it_does_well": [
+    "Passes every checklist item, including agent-consumable",
+    "Actively maintained with releases and CI present",
+    "Library-science structuring is a sound foundation for knowledge management",
+    "Clear niche and coherent design for personal / open-source use"
+  ],
+  "what_it_fails_at": [
+    "AGPL-3.0 licence materially constrains commercial and networked reuse — check obligations before embedding",
+    "Not hands-on tested: retrieval quality and agent behaviour over a large knowledge base are unverified",
+    "Modest traction (211 stars) — a smaller community to lean on"
+  ],
+  "best_for": [
+    "Individuals wanting a structured, agent-assisted personal knowledge base",
+    "Open-source projects compatible with AGPL-3.0",
+    "Users who value a cataloguing-first approach to notes"
+  ],
+  "not_recommended_for": [
+    "Commercial products that cannot accept AGPL-3.0 copyleft obligations",
+    "Buyers who need verified retrieval-quality guarantees",
+    "Teams wanting a large ecosystem and support community"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "GH API 200 for shenmintao/marginalia",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "README length 21823",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "AGPL-3.0",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "last push 8d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/shenmintao/marginalia",
+      "evidence": "latest v0.3.3",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
