@@ -4,13 +4,13 @@
   "name": "GizClaw/flowcraft",
   "agent_url": "https://github.com/GizClaw/flowcraft",
   "repo_url": "https://github.com/GizClaw/flowcraft",
-  "category": "Voice",
+  "category": "Frameworks & Eval",
   "run_id": "run-gizclaw-flowcraft-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "GizClaw/flowcraft — Production-grade Go SDK for building AI agents with long-term memory, knowledge retrieval, and voice — runnable as a library, a daemon, or a real-time pipeline.. Repo-surface review: measured from the public repository (486 stars, MIT, last push 2026-07-16); not hands-on tested.",
+  "summary": "Actively maintained Go SDK for stateful, voice-capable agents — clean repo hygiene, but no drop-in agent-consumable surface documented.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,13 +125,93 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
     "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"go install\" in preanalysis.claim",
-      "has_sdk: \"SDK\" in preanalysis.scoring_hypothesis"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "behavioral_testable": false,
+    "agent_integration_path": "Imported as a Go SDK / library, or run as a daemon. No MCP or documented CLI surface found, so agent consumption requires a developer to build the integration.",
+    "agent_friendly_score": 5,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Actively maintained Go SDK for stateful, voice-capable agents — clean repo hygiene, but no drop-in agent-consumable surface documented.",
+    "body": "flowcraft presents itself as a production-grade Go SDK for building agents with long-term memory, knowledge retrieval and a voice pipeline, runnable as a library, a daemon or a real-time stream. On the repo signals we can measure it holds up well: MIT-licensed, 486 stars, a tagged release, CI workflows present, and a push the same day we captured it — this is a live project, not an abandoned experiment. Go is a sensible choice for a long-running agent daemon where concurrency and a single static binary matter. The one gap the engine flagged is real: nothing in the repository documents an agent-consumable surface (no MCP config, no CLI-install recipe surfaced), so another agent can't yet drive flowcraft without a developer wiring the SDK in first. That keeps it a library you build with, not a component an agent picks up autonomously. For a Go team that wants memory and voice primitives under one roof, it is a credible starting point; treat the 'voice' framing as one capability among several rather than the headline.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) because the repository is healthy on every hygiene axis we measure — permissive licence, active maintenance, releases, CI, real star traction — which is what the repo-surface track rewards. Held below VITAL by the repo-surface ceiling (no hands-on run) and by the missing agent-consumable documentation, the single failed checklist item.",
+  "what_it_does_well": [
+    "MIT-licensed with a tagged release — clear terms and a versioned artefact to pin",
+    "Actively maintained: last push the same day as capture, CI workflows in place",
+    "Real community traction (486 stars) for a niche infrastructure library",
+    "Go gives a single static binary and solid concurrency for a long-running agent daemon"
+  ],
+  "what_it_fails_at": [
+    "No agent-consumable surface documented (no MCP config or CLI-install recipe found) — a developer must wire the SDK in by hand",
+    "Not hands-on tested — memory, retrieval and voice quality are unverified beyond the README",
+    "Voice is marketed prominently but is one capability among several, not a proven differentiator"
+  ],
+  "best_for": [
+    "Go teams that want memory + retrieval + voice primitives in one library",
+    "Developers comfortable integrating an SDK rather than consuming a ready endpoint",
+    "Projects that need a long-running agent daemon as a static binary"
+  ],
+  "not_recommended_for": [
+    "Agents that need to self-integrate without a developer wiring the SDK",
+    "Teams outside the Go ecosystem",
+    "Buyers wanting a hands-on-verified voice product rather than a framework"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "GH API 200 for GizClaw/flowcraft",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "README length 15367",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "last push 0d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/GizClaw/flowcraft",
+      "evidence": "latest vesseld/v0.1.0",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
