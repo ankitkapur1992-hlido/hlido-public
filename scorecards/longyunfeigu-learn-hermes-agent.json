@@ -4,13 +4,13 @@
   "name": "longyunfeigu/learn-hermes-agent",
   "agent_url": "https://github.com/longyunfeigu/learn-hermes-agent",
   "repo_url": "https://github.com/longyunfeigu/learn-hermes-agent",
-  "category": "MCP Server",
+  "category": "Frameworks & Eval",
   "run_id": "run-longyunfeigu-learn-hermes-agent-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -100,7 +100,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "longyunfeigu/learn-hermes-agent — A 27-chapter hands-on tutorial for building an autonomous AI agent from zero in Python. Agent loop, tool system, memory, skills, MCP,     multi-platform gateway, and self-evolution — inspired by Hermes Agent.. Repo-surface review: measured from the public repository (182 stars, MIT, last push 2026-05-14); not hands-on tested.",
+  "summary": "A well-structured 27-chapter tutorial for building an agent from zero — excellent as learning material, not a product you integrate.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -124,12 +124,93 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in scorecard.checklist.evidence",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None as a dependency — this is learning material. A developer reads and reimplements the patterns; an agent does not consume the tutorial itself.",
+    "agent_friendly_score": 3,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "A well-structured 27-chapter tutorial for building an agent from zero — excellent as learning material, not a product you integrate.",
+    "body": "learn-hermes-agent is exactly what it says: a 27-chapter, hands-on tutorial for building an autonomous AI agent from scratch in Python — agent loop, tool system, memory, skills, MCP, a multi-platform gateway and self-evolution, inspired by the Hermes Agent design. On repo signals it is healthy: 182 stars, MIT-licensed, actively maintained, CI present, and it passes agent-consumable (it documents MCP and runnable code). The important interpretive point is category, not quality: this is educational scaffolding, not a deployable product. Its value is that a developer reading it end-to-end learns how the pieces of an agent fit together — which is genuinely useful and increasingly rare to find laid out coherently — but you would not 'adopt' it the way you adopt a framework or an SDK, and treating a curriculum as production infrastructure would be a category error. We have refiled it under Frameworks & Eval as learning material and set its agent-relevance low on purpose: another agent does not consume a tutorial. The absence of tagged releases is expected for a course-style repo and not a mark against it. Recommended for the learner; not a build-on dependency.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on solid repo hygiene and active maintenance. Below VITAL both by the repo-surface ceiling and because, as a tutorial, its ceiling is inherently educational — there is no product to hands-on test. The one failed item (no releases) is normal for a course repo and not weighed against it.",
+  "what_it_does_well": [
+    "Comprehensive 27-chapter, from-zero curriculum covering loop, tools, memory, skills and MCP",
+    "MIT-licensed, actively maintained, CI present",
+    "Fills a real gap — coherent, end-to-end teaching of agent internals is rare",
+    "Passes agent-consumable: runnable code and MCP documented"
+  ],
+  "what_it_fails_at": [
+    "It is a tutorial, not a product — not something you integrate or depend on",
+    "No tagged releases (expected for a course repo, not a real defect)",
+    "Not applicable to hands-on product testing — there is no deployed surface to evaluate"
+  ],
+  "best_for": [
+    "Developers learning how to build an agent from first principles",
+    "Teams onboarding engineers into agent architecture",
+    "Anyone wanting a structured reference for the agent loop, tools and memory"
+  ],
+  "not_recommended_for": [
+    "Anyone looking for a production framework or SDK to build on",
+    "Agents seeking a consumable service (a curriculum is not a dependency)",
+    "Buyers expecting a supported product rather than teaching material"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "GH API 200 for longyunfeigu/learn-hermes-agent",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "README length 16959",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "last push 63d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Community traction (≥50 stars)",
+      "source": "https://github.com/longyunfeigu/learn-hermes-agent",
+      "evidence": "182 stars",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
