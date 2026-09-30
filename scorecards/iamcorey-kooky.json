@@ -10,7 +10,7 @@
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "iAmCorey/kooky — A minimal modern terminal for AI coding experience — Sidebar workspaces; horizontal / vertical split panes; one-click agent launch; per-agent activity readout; live workspace state with one-click Node and branch switching.. Repo-surface review: measured from the public repository (544 stars, MIT, last push 2026-07-10); not hands-on tested.",
+  "summary": "Polished macOS terminal built around one-click agent launch — good repo hygiene, but a human GUI, not an agent-consumable component.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,11 +125,94 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"command line\" in preanalysis.claim"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None for other agents — kooky is a human-operated macOS terminal that launches and monitors coding agents. It consumes agents; it is not consumed by them.",
+    "agent_friendly_score": 3,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Polished macOS terminal built around one-click agent launch — good repo hygiene, but a human GUI, not an agent-consumable component.",
+    "body": "kooky is a minimal, modern Swift terminal designed for AI-assisted coding: sidebar workspaces, split panes, one-click agent launch, per-agent activity readouts, and live workspace state with quick Node and branch switching. As a repository it is tidy — MIT-licensed, 544 stars, releases present, actively maintained. The design intent is clear and the feature list is coherent for a developer who runs several coding agents at once and wants a purpose-built cockpit rather than a generic terminal. Two measured gaps shape the verdict. It failed the CI/tests check (no workflows found), which is a modest quality-signal miss, and — more importantly for how we weight things — it failed agent-consumable: kooky is a native macOS GUI that a human drives to launch agents, not a surface another agent can call. That is a perfectly valid product, but it means its relevance to the agent-to-agent ecosystem is as a human's control panel, not as infrastructure agents integrate with. Swift/macOS-only also bounds its audience. Judge it as a developer tool for people, and it looks like a capable young project; we have not hands-on tested the experience.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) because the repository is healthy on licence, releases, maintenance and traction. Held below VITAL by the repo-surface ceiling and two failed checklist items — no CI/tests, and (weighted more) not agent-consumable, since it is a human-driven macOS GUI.",
+  "what_it_does_well": [
+    "Clean repo: MIT-licensed, releases present, actively maintained",
+    "Solid traction (544 stars) for a niche desktop tool",
+    "Coherent, purpose-built feature set for running multiple coding agents at once",
+    "Clear design focus rather than a generic terminal"
+  ],
+  "what_it_fails_at": [
+    "Not agent-consumable — a native macOS GUI a human drives, not a surface agents can call",
+    "No CI workflows found (a quality-signal miss)",
+    "Swift/macOS-only bounds the audience",
+    "Not hands-on tested: the actual UX is unverified"
+  ],
+  "best_for": [
+    "macOS developers who juggle several coding agents and want a dedicated cockpit",
+    "People who prefer a native app over a browser or generic terminal",
+    "Users who value split-pane workspace management for agent sessions"
+  ],
+  "not_recommended_for": [
+    "Any agent-to-agent workflow (it is a human control panel, not a component)",
+    "Non-macOS developers",
+    "Teams that require CI/test signals before adopting a tool"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "GH API 200 for iAmCorey/kooky",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "README length 11560",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "last push 6d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/iAmCorey/kooky",
+      "evidence": "latest v0.35.0",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
