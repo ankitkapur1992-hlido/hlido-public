@@ -10,7 +10,7 @@
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (library/CLI) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "withkynam/vibecode-pro-max-kit — Your AI forgets. This remembers. Spec-driven coding harness for vibecoders, product owners, CEOs and real builders — self-improving context memory, 15 agents, 33 skills working with /goal, agent-team, & workflow on autopilot loops with 0 need for human gate. Kills context rot, ships features, not spaghetti. Claude Code & Codex. Any stack. Repo-surface review: measured from the public repository (1042 stars, MIT, last push 2026-06-21); not hands-on tested.",
+  "summary": "Well-adopted spec-driven coding harness aimed at context rot — strong traction and agent-consumable, but install/usage docs are thin.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,11 +125,93 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"cli\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Consumed as a harness of agents and skills inside Claude Code or Codex. Agent-consumable, but the thin install documentation raises the wiring cost.",
+    "agent_friendly_score": 6,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Well-adopted spec-driven coding harness aimed at context rot — strong traction and agent-consumable, but install/usage docs are thin.",
+    "body": "vibecode-pro-max-kit is a spec-driven coding harness pitched at the 'your AI forgets' problem — self-improving context memory, a bundle of agents and skills, targeting Claude Code and Codex across any stack. The measured signals are healthy: 1,042 stars, 219 forks, MIT-licensed, releases present, CI in place, actively pushed, and it passes the agent-consumable check. The positioning — persistent context and spec-first workflow to stop 'context rot' — is a real pain point for anyone doing long agent-assisted builds, and the fact that it is consumable inside Claude Code and Codex fits the agent-to-agent thesis. The gap the engine flagged is worth taking seriously for a tool whose whole promise is smooth onboarding: no clear install/usage markers were found in the README, so despite the '30-second' framing the actual setup path is under-documented on the surface we read. Combined with the absence of a hands-on run, that means the memory and self-improvement claims are unverified. Strong momentum and a good idea; ask to see the setup docs before committing a team to it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on solid repo health and real traction, with the agent-consumable pass rewarded by the track. Below VITAL because of the repo-surface ceiling and the missing install/usage documentation — the one failed checklist item, and a pointed one for a tool that sells fast onboarding.",
+  "what_it_does_well": [
+    "Strong traction (1,042 stars, 219 forks) for a young harness",
+    "Agent-consumable and explicitly targets Claude Code and Codex",
+    "MIT-licensed with releases and CI present",
+    "Addresses a real pain point — context persistence across long agent-assisted builds"
+  ],
+  "what_it_fails_at": [
+    "No clear install/usage markers found in the README — setup path under-documented despite the \"30-second\" claim",
+    "Not hands-on tested: the context-memory and self-improvement claims are unverified",
+    "Heavy marketing framing (\"pro max\", \"GOAT\") outruns the documented evidence"
+  ],
+  "best_for": [
+    "Developers doing long agent-assisted builds who feel context rot acutely",
+    "Claude Code / Codex users wanting a spec-first harness",
+    "Teams willing to read the source to fill the documentation gaps"
+  ],
+  "not_recommended_for": [
+    "Buyers who need turnkey, well-documented onboarding today",
+    "Anyone wanting verified proof of the memory claims before adopting",
+    "Stacks outside the Claude Code / Codex orbit"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "GH API 200 for withkynam/vibecode-pro-max-kit",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "README length 95623",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "last push 25d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "latest v3.2.5",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Community traction (≥50 stars)",
+      "source": "https://github.com/withkynam/vibecode-pro-max-kit",
+      "evidence": "1042 stars",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
