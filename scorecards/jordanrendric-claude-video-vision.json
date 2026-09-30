@@ -4,13 +4,13 @@
   "name": "jordanrendric/claude-video-vision",
   "agent_url": "https://github.com/jordanrendric/claude-video-vision",
   "repo_url": "https://github.com/jordanrendric/claude-video-vision",
-  "category": "MCP Server",
+  "category": "Coding",
   "run_id": "run-jordanrendric-claude-video-vision-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -100,7 +100,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "jordanrendric/claude-video-vision — Give Claude the ability to watch and understand videos — Claude Code plugin with frame extraction and multimodal audio analysis. Repo-surface review: measured from the public repository (997 stars, MIT, last push 2026-07-01); not hands-on tested.",
+  "summary": "Popular Claude Code plugin that gives Claude frame-and-audio video understanding — strong traction and agent-consumable, but unversioned.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": true,
@@ -124,12 +124,93 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
     "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Installed as a Claude Code plugin and invoked in-agent to analyse video. Agent-consumable by design; pin to a commit given the absence of releases.",
+    "agent_friendly_score": 7,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Popular Claude Code plugin that gives Claude frame-and-audio video understanding — strong traction and agent-consumable, but unversioned.",
+    "body": "claude-video-vision is a Claude Code plugin that extracts frames and analyses audio so Claude can 'watch' and reason about video. It is the strongest-traction item in this batch by community signal (997 stars, 115 forks) and, unlike most repos we rate on the surface track, it passes the agent-consumable check — it is built to be installed and driven inside an agent workflow, which is exactly the direction we weight highest. MIT-licensed, actively pushed, CI present. The vendor also makes a machine-readable marking statement in the repo, which we record but have not independently corroborated. The honest caveats are two: there are no tagged releases, so consumers pin to a moving branch rather than a stable version — a real operational risk for anything wired into a pipeline — and we have not hands-on tested extraction accuracy or how it degrades on long or low-quality video. As a capability-extender for Claude Code specifically, it is well-positioned; as a dependency, insist on pinning a commit until releases exist.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) on strong repo health plus the agent-consumable pass, which the track rewards heavily. Below VITAL because of the repo-surface ceiling (no hands-on accuracy test) and the missing tagged releases — the one failed checklist item, and a genuine stability concern for a pipeline dependency.",
+  "what_it_does_well": [
+    "Passes the agent-consumable check — designed to be installed and driven inside Claude Code",
+    "Highest community traction in this cohort (997 stars, 115 forks)",
+    "MIT-licensed, actively maintained, CI present",
+    "Makes a machine-readable marking statement in the repository (recorded, not independently verified)"
+  ],
+  "what_it_fails_at": [
+    "No tagged releases — consumers pin to a moving branch, a real risk for a pipeline dependency",
+    "Not hands-on tested: frame-extraction and audio-analysis accuracy are unverified",
+    "Behaviour on long or low-quality video is undocumented"
+  ],
+  "best_for": [
+    "Claude Code users who need video understanding without leaving the agent",
+    "Developers who can pin to a specific commit to manage the no-release risk",
+    "Multimodal workflows where frame + audio analysis is the missing capability"
+  ],
+  "not_recommended_for": [
+    "Teams that require versioned, release-pinned dependencies today",
+    "Non-Claude-Code stacks (it is a Claude-specific plugin)",
+    "Use cases needing verified accuracy guarantees on video analysis"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "GH API 200 for jordanrendric/claude-video-vision",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "README length 7804",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "last push 15d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Community traction (≥50 stars)",
+      "source": "https://github.com/jordanrendric/claude-video-vision",
+      "evidence": "997 stars",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
