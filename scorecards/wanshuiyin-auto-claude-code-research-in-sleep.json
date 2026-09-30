@@ -4,13 +4,13 @@
   "name": "wanshuiyin/Auto-claude-code-research-in-sleep",
   "agent_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
   "repo_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
-  "category": "MCP Server",
+  "category": "Research",
   "run_id": "run-wanshuiyin-auto-claude-code-research-in-sleep-repotrack-2026-07-16",
   "run_at": "2026-07-16T13:14:00Z",
   "source": "hlido-repo-track",
   "review_track": "repo-surface",
   "evidence_tier": "repo-surface",
-  "methodology_note": "Repo-surface track: this product is distributed as a repository (MCP server) with no web product surface, so the score derives ONLY from measurable public-repository signals — documentation, licensing, maintenance activity, releases, traction, agent-consumability. Each checklist item carries its evidence. Score ceiling 82/100: VITAL requires hands-on behavioral testing that repo signals cannot provide. Replaces a 2026-06/07 stub that carried a default score with no evidence.",
+  "methodology_note": "Repo-surface review: no hands-on behavioural testing. Editorial derived from the public repository signals we measured (README, licence, releases, maintenance activity, community traction, agent-consumability) plus the vendor's own stated description. Score ceiling 82 — VITAL requires hands-on testing repo signals cannot provide.",
   "checklist": [
     {
       "id": "repo_reachable",
@@ -101,7 +101,7 @@
   "score": 82,
   "tier": "STEADY",
   "confidence": "medium",
-  "summary": "wanshuiyin/Auto-claude-code-research-in-sleep — ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.. Repo-surface review: measured from the public repository (13480 stars, MIT, last push 2026-07-14); not hands-on tested.",
+  "summary": "Very high-traction, framework-free ML-research skill pack (ARIS) for autonomous overnight research loops — clean checklist, portable across agents.",
   "staleness_after": "2026-10-14",
   "marking_signal": {
     "marking_statement": false,
@@ -125,11 +125,93 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Dropped in as Markdown skills that any capable LLM agent (Claude Code, Codex, etc.) reads and executes. No install, no framework — maximally agent-portable.",
+    "agent_friendly_score": 8,
+    "derived_from": "r-publish-editorial-enrich-2026-09-30",
+    "basis": "Claude-native editorial pass grounded in measured checklist + repo metrics + vendor description"
+  },
+  "hlido_opinion": {
+    "headline": "Very high-traction, framework-free ML-research skill pack (ARIS) for autonomous overnight research loops — clean checklist, portable across agents.",
+    "body": "ARIS (Auto-Research-In-Sleep) is a set of lightweight, Markdown-only skills for autonomous ML research — cross-model review loops, idea discovery and experiment automation — deliberately built with no framework and no lock-in so it runs under Claude Code, Codex, OpenClaw or any capable LLM agent. On measured signals it is the standout of this batch: 13,480 stars and 1,216 forks is exceptional traction, and it passes every checklist item we test on the surface track, including agent-consumable. The Markdown-only, framework-free design is a genuine strength for the agent-to-agent world we care about — there is nothing to install and nothing to break, so portability is close to free. What the surface track cannot tell us is whether the 'research in sleep' loops actually produce sound results or simply run unattended; overnight autonomy amplifies both good and bad reasoning, and we have not run it. Treat the star count as evidence of strong developer interest in the pattern, not as proof the outputs are trustworthy. As a portable skill layer to study and adapt, it is a strong pick; as an unattended research pipeline, supervise the first several runs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-09-30",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (82) — a perfect checklist on the repo-surface track (every item passes) plus exceptional community traction. Capped below VITAL only by the repo-surface ceiling: we have not hands-on verified that the autonomous loops produce sound research, which overnight autonomy makes the central question.",
+  "what_it_does_well": [
+    "Passes every checklist item we test on the surface track, including agent-consumable",
+    "Exceptional traction — 13,480 stars, 1,216 forks",
+    "Framework-free, Markdown-only: portable across Claude Code, Codex and other agents with nothing to install",
+    "MIT-licensed with releases — clear terms and versioned artefacts"
+  ],
+  "what_it_fails_at": [
+    "Not hands-on tested — whether the autonomous loops produce sound research is unverified",
+    "Unattended overnight autonomy amplifies bad reasoning as readily as good; no guardrail evidence on the surface",
+    "Star count signals interest in the pattern, not validated output quality"
+  ],
+  "best_for": [
+    "Researchers wanting a portable, lock-in-free skill layer to adapt",
+    "Multi-agent setups (Claude Code / Codex) that value drop-in Markdown skills",
+    "Teams comfortable supervising early autonomous runs before trusting them"
+  ],
+  "not_recommended_for": [
+    "Anyone expecting validated, hands-off research output out of the box",
+    "Environments that cannot supervise unattended autonomous loops",
+    "Buyers who read a high star count as a quality guarantee"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls_structured": [
+    {
+      "claim": "Repository is publicly reachable",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "GH API 200 for wanshuiyin/Auto-claude-code-research-in-sleep",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "README documents the product (≥500 chars)",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "README length 192363",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "License declared",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "MIT",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Install/usage instructions present",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "install/usage section found in README",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Maintained: pushed within 12 months and not archived",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "last push 2d ago",
+      "tested_at": "2026-07-16",
+      "verified": true
+    },
+    {
+      "claim": "Tagged releases exist",
+      "source": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "evidence": "latest v0.4.22",
+      "tested_at": "2026-07-16",
+      "verified": true
+    }
+  ],
+  "editorial_method": "repo-surface-signals+editorial-narrative-v2",
+  "_summary_deprecation_note": "v1-compatibility alias of hlido_opinion.headline. Canonical opinion lives in hlido_opinion.{headline,body,voice,as_of}.",
+  "enriched_at": "2026-09-30",
+  "enriched_by": "R-publish"
 }
