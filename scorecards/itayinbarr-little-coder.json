@@ -69,11 +69,84 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Little-coder is itself a terminal coding agent built on pi, driven from the command line against local models. It is a tool a developer runs rather than an endpoint other agents call.",
+    "agent_friendly_score": 6
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A coding agent deliberately tuned for small local models — a research-backed bet that scaffold-model fit beats raw model size for everyday coding.",
+    "body": "Little-coder is the rare coding agent that picks a side and argues it: it is optimised for smaller local LLMs (Qwen, Ollama-class models) rather than frontier APIs, and the project foregrounds a research story — that a well-matched scaffold let a ~9.7B Qwen beat much larger frontier entries on Aider Polyglot. Whether or not that result generalises, the thesis is the interesting part and it is a genuinely useful one: for developers who want local, private, cheap coding assistance, scaffold-model fit is exactly the lever that makes small models viable, and most agents ignore it by assuming a big API behind them. Built on top of pi and oriented around the terminal, it fits the local-first, benchmark-literate audience it is clearly written for. This is a public-surface and repository read — the Aider Polyglot claim is the author's benchmark, not one reproduced here — so the verdict reflects the clarity and plausibility of the approach and its signals, not an independently measured coding-success rate.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for a focused, thoughtfully-positioned coding agent with a clear local-small-model thesis and a stated benchmark result behind it, aimed squarely at a real audience. Not higher because the headline Aider Polyglot claim is the author's own and unreproduced here, the project is young, and the review is a public-surface read rather than a measured run.",
+  "what_it_does_well": [
+    "Deliberately tuned for small local models (Qwen, Ollama) — a clear, useful niche",
+    "Backed by a stated research result on Aider Polyglot",
+    "Local-first and private by design — no frontier API required",
+    "Built on pi and terminal-oriented, fitting its developer audience",
+    "Honest about the mechanism (scaffold-model fit) rather than hand-waving"
+  ],
+  "what_it_fails_at": [
+    "The Aider Polyglot result is the author's own benchmark, not reproduced here",
+    "Young project with a smaller ecosystem than established coding agents",
+    "Small-model ceiling means hard tasks may still need larger models",
+    "Capabilities were read, not executed, in this review"
+  ],
+  "best_for": [
+    "Developers who want local, private coding assistance on small models",
+    "Users running Qwen/Ollama-class models who want a scaffold tuned for them",
+    "Benchmark-literate tinkerers interested in scaffold-model fit"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a mature, broadly-supported coding agent",
+    "Workloads that need frontier-model capability on the hardest tasks",
+    "Non-technical users wanting a hosted, click-only product"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a mature, model-agnostic coding agent usually run against capable APIs; little-coder is purpose-tuned for small local models. Choose little-coder for local/small-model work, Aider for broad maturity and frontier-model use.",
+      "preferred_for_axis": "small-local-models"
+    },
+    {
+      "slug": "continue-dev",
+      "verdict_diff": "Continue is an IDE assistant with broad model support; little-coder is a terminal coding agent optimised for small local models specifically. Prefer little-coder when local small-model fit is the goal.",
+      "preferred_for_axis": "local-first-terminal"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "A coding agent optimized for smaller LLMs",
+      "source": "https://github.com/itayinbarr/little-coder",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Built on top of pi and tuned for small local models (Qwen, Ollama)",
+      "source": "https://itayinbarr.github.io/little-coder/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Research story: a 9.7B Qwen reported to beat frontier entries on Aider Polyglot",
+      "source": "https://github.com/itayinbarr/little-coder",
+      "tested_at": "2026-10-01",
+      "verified": false
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
