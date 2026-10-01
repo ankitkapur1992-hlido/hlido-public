@@ -2,7 +2,7 @@
   "slug": "nocobase-nocobase",
   "name": "nocobase/nocobase",
   "agent_url": "https://github.com/nocobase/nocobase",
-  "category": "Coding",
+  "category": "Workflow & Automation",
   "run_id": "run-nocobase-nocobase-o6mwm6si",
   "run_at": "2026-06-16T06:00:42.808Z",
   "source": "hlido-drain-worker",
@@ -61,19 +61,96 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false
     },
     "last_verified": "2026-06-16",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
+    "derived_at": "2026-10-01"
   },
   "agent_relevance": {
+    "has_api": true,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.claim"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "NocoBase documents a CLI and skills for coding agents to build data models, pages and workflows, so an agent can act as a builder inside the platform. Primary value is still the human/AI collaborative build surface rather than an external API for other agents to drive.",
+    "agent_friendly_score": 6
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "An AI-on-top-of-no-code platform with an unusually honest pitch: AI builds on production-proven infrastructure instead of generating business systems from scratch.",
+    "body": "NocoBase's positioning is the most interesting thing about it. Rather than promising that AI will spit out a whole business system, it frames AI as a collaborator working on top of a mature no-code platform — coding agents get a CLI and skills, people get a WYSIWYG interface, and both iterate on the same production infrastructure (data models, pages, workflows). That is a more defensible story than the from-scratch generators, because it keeps a human-editable, deterministic foundation under the AI output. The surface spans the familiar internal-tool/CRM/ERP territory, is open-source and self-hostable, and documents the 'AI employees' idea of AI operating inside the system rather than only scaffolding it. This is a public-surface read of the site and repository, not a build of a real application, so the verdict is about the model and its signals — the speed-plus-reliability claim is exactly what a buyer should validate in a pilot against their own schema.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for an open-source, self-hostable no-code platform with a coherent and honest AI story (AI on top of production infrastructure, human-editable throughout) and clear multi-language documentation. Not higher because the build-fast-and-reliable promise and the 'AI employees' capability are unverifiable without a real application build, and the category is crowded.",
+  "what_it_does_well": [
+    "AI works on top of production-proven infrastructure, not from scratch — a defensible model",
+    "Open-source and self-hostable, reducing lock-in versus hosted low-code rivals",
+    "WYSIWYG for people plus CLI/skills for coding agents — genuine human/AI collaboration",
+    "Covers internal-tool, CRM and ERP use cases on one platform",
+    "Multi-language documentation signals a real, maintained project"
+  ],
+  "what_it_fails_at": [
+    "Speed-with-reliability claim is unverifiable without a real application build",
+    "'AI employees' capability is documented, not demonstrated on the public surface",
+    "Crowded category (Airtable/Appsmith/Budibase-style) with strong incumbents",
+    "Self-hosting shifts operational burden onto the adopter"
+  ],
+  "best_for": [
+    "Teams building internal tools, CRM or ERP who want to self-host",
+    "Organisations that want AI assistance without surrendering a human-editable base",
+    "Developers and operators who value an open-source foundation"
+  ],
+  "not_recommended_for": [
+    "Buyers wanting a fully hosted, zero-ops SaaS with no infrastructure to run",
+    "Users expecting AI to deliver a finished system with no iteration",
+    "Teams without any technical capacity to operate a self-hosted platform"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "activepieces-activepieces",
+      "verdict_diff": "Activepieces is automation/workflow-first; NocoBase is application-and-data-modelling-first with workflows included. Choose NocoBase to build the business system itself, Activepieces to automate between existing ones.",
+      "preferred_for_axis": "app-building"
+    },
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is a workflow-automation engine; NocoBase is a no-code application platform that also does workflows. Prefer NocoBase when the deliverable is an internal app, n8n when it is integration plumbing.",
+      "preferred_for_axis": "no-code-app-platform"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source AI + no-code platform for building business systems",
+      "source": "https://www.nocobase.com",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Coding agents get a CLI and skills; people get a WYSIWYG no-code interface",
+      "source": "https://github.com/nocobase/nocobase",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Self-hosted deployment supported",
+      "source": "https://github.com/nocobase/nocobase",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
