@@ -69,13 +69,90 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
-    "has_mcp": true,
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Semble exposes an MCP server and a CLI, so coding agents consume it directly as a retrieval tool. It is purpose-built to be driven by an agent rather than a human, which is the highest-fit integration pattern in this corpus.",
+    "agent_friendly_score": 9
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Code search purpose-built for agents, not humans — the ~98%-fewer-tokens-than-grep claim is the whole thesis, and it is the right thesis.",
+    "body": "Semble is one of the clearest examples of a tool designed for the agent consumer rather than the human one. Instead of an agent burning context on grep-and-read across a repo, it asks a natural-language question and gets back only the relevant snippets, from a cached embedding index that rebuilds on first run and invalidates automatically when files change. The headline — roughly 98% fewer tokens than grep+read — is a token-economics argument, and token economics is exactly where coding-agent cost and latency actually live, so this is a well-aimed product. It ships as a PyPI package with an MCP server, which is the correct distribution for something meant to be wired into Claude Code, Cursor and similar. This is a public-surface and repository read: the token-reduction and accuracy figures are the vendor's and were not independently benchmarked here, so a buyer should confirm them against their own codebase — but the design is sound and the agent-fit is unusually high.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the tool is tightly designed for a real, expensive problem (agent token spend on code navigation), ships through the right channels (PyPI + MCP server), and documents sensible mechanics (cached, auto-invalidating index). Not VITAL on this pass because the central ~98% token-reduction and accuracy claims are vendor figures unverified by hands-on benchmarking in this review.",
+  "what_it_does_well": [
+    "Built for the agent consumer: natural-language code queries return only relevant snippets",
+    "Ships an MCP server — wires directly into MCP-aware coding agents",
+    "Index is cached on first run and auto-invalidated on file change",
+    "Token-economics framing targets the real cost centre of coding agents",
+    "Distributed on PyPI with an interactive installer for fast setup"
+  ],
+  "what_it_fails_at": [
+    "Headline ~98% token-reduction and accuracy claims are vendor figures, not independently benchmarked here",
+    "First-run index build adds latency and compute before the first query",
+    "Value depends on embedding/retrieval quality, which varies by codebase",
+    "Narrow by design — it is a search primitive, not a full coding agent"
+  ],
+  "best_for": [
+    "Coding agents and MCP-aware IDEs that need cheap, relevant code retrieval",
+    "Large repositories where grep+read blows the context budget",
+    "Developers wiring semantic code search into agent workflows"
+  ],
+  "not_recommended_for": [
+    "Users wanting a full coding agent rather than a retrieval component",
+    "Tiny repositories where grep is already cheap enough",
+    "Buyers who cannot pilot the token/accuracy claims on their own code"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "sourcegraph-cody",
+      "verdict_diff": "Cody is a full code-AI assistant with search among many features; Semble is a focused retrieval primitive for agents. Choose Semble when you want a token-efficient search component to compose, Cody when you want an assistant.",
+      "preferred_for_axis": "retrieval-primitive"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a coding agent that edits code; Semble feeds a coding agent the right context cheaply. They are complements more than competitors — Semble upstream of a tool like Aider.",
+      "preferred_for_axis": "context-retrieval"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Fast and accurate code search for agents, ~98% fewer tokens than grep+read",
+      "source": "https://github.com/MinishLab/semble",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Natural-language queries return only relevant code snippets",
+      "source": "https://minish.ai/packages/semble/introduction/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Indexes are cached on first run and auto-invalidated when files change",
+      "source": "https://github.com/MinishLab/semble",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Distributed on PyPI with an MCP server",
+      "source": "https://pypi.org/project/semble/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
