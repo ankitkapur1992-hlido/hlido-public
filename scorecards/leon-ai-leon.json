@@ -2,7 +2,7 @@
   "slug": "leon-ai-leon",
   "name": "leon-ai/leon",
   "agent_url": "https://github.com/leon-ai/leon",
-  "category": "AI Agent",
+  "category": "Chat & Companion",
   "run_id": "run-leon-ai-leon-qibw538f",
   "run_at": "2026-06-15T00:00:47.830Z",
   "source": "hlido-drain-worker",
@@ -61,11 +61,91 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false
     },
     "last_verified": "2026-06-15",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  }
+    "derived_at": "2026-10-01"
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A long-running open-source personal assistant leaning into privacy and offline operation — and now visibly rebuilding itself around agentic execution.",
+    "body": "Leon is one of the older open-source personal-assistant projects, and its public surface shows a deliberate second act: from a voice/skill assistant toward a more capable agent that can understand a goal, pick how to handle it, use tools, remember useful information and recover from failures. The privacy-and-offline posture is the honest differentiator — it can run locally with speech-to-text and text-to-speech, which is a genuinely different value proposition from the cloud assistants, and it matters to exactly the users who won't accept those. The project documents both native skills for controlled actions and agent skills backed by SKILL.md workflows, which is a sensible bridge between deterministic automation and agent-style execution. This is a public-surface and repository read, not a running installation, so the verdict reflects the project's direction, maturity signals and stated capabilities rather than measured task completion — and 'being rebuilt' is a phase a buyer should weigh, because it means the most interesting capabilities are partly aspirational today.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for a mature, genuinely open-source personal assistant with a defensible privacy/offline niche, speech on both ends, and a coherent move toward agentic execution with both native and SKILL.md-backed skills. Not higher because the project openly describes itself as being rebuilt, so some of the most compelling capabilities are in progress, and this is a surface read rather than a measured run.",
+  "what_it_does_well": [
+    "Privacy-first and offline-capable — a real differentiator from cloud assistants",
+    "Fully open-source with a long track record",
+    "Speech-to-text and text-to-speech on-device for a voice-driven experience",
+    "Both native skills (controlled actions) and SKILL.md-backed agent skills",
+    "Clear, stated direction toward goal-understanding and failure recovery"
+  ],
+  "what_it_fails_at": [
+    "Openly mid-rebuild — the most capable agentic features are partly aspirational",
+    "Self-hosted assistant means setup and maintenance fall on the user",
+    "Stated capabilities were read, not executed, in this review",
+    "Smaller ecosystem than commercial assistants means fewer ready integrations"
+  ],
+  "best_for": [
+    "Privacy-conscious users who want a self-hosted, offline-capable assistant",
+    "Developers who want to extend an assistant with their own skills",
+    "Voice-driven local automation where cloud assistants are unacceptable"
+  ],
+  "not_recommended_for": [
+    "Users wanting a polished, zero-setup commercial assistant",
+    "Buyers who need the in-progress agentic features working today",
+    "Non-technical users unwilling to self-host"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "block-goose",
+      "verdict_diff": "Goose is a developer-focused local agent; Leon is a broader personal assistant with voice and a privacy/offline emphasis. Choose Leon for a voice-driven home/personal assistant, Goose for developer task automation.",
+      "preferred_for_axis": "personal-assistant"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source personal assistant",
+      "source": "https://getleon.ai/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Can operate locally and use dedicated tools across deterministic workflows and agent-style execution",
+      "source": "https://github.com/leon-ai/leon",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Supports native skills for controlled actions and agent skills via SKILL.md workflows",
+      "source": "https://github.com/leon-ai/leon",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Leon is itself an assistant/agent that developers extend with native and SKILL.md-backed skills; it is self-hosted and driven locally. It is a thing you build on and run, not a hosted endpoint other agents call.",
+    "agent_friendly_score": 5
+  },
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
