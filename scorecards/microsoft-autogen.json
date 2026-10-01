@@ -2,7 +2,7 @@
   "slug": "microsoft-autogen",
   "name": "microsoft/autogen",
   "agent_url": "https://github.com/microsoft/autogen",
-  "category": "AI Agent",
+  "category": "Frameworks & Eval",
   "run_id": "run-microsoft-autogen-k6oqtr7m",
   "run_at": "2026-06-15T12:00:54.695Z",
   "source": "hlido-drain-worker",
@@ -67,5 +67,86 @@
     "last_verified": "2026-06-15",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "The big-vendor agentic framework, now consolidating — AutoGen is folding into a production-committed Microsoft Agent Framework, which cuts both ways.",
+    "body": "AutoGen is one of the most widely cited agentic programming frameworks, and its public surface now carries a significant signal: the project points at a production-ready Microsoft Agent Framework with stable APIs and a long-term-support commitment. For buyers that is the headline — a major vendor publicly committing to API stability and support is exactly the de-risking that enterprise adoption needs, and it is rare among agent frameworks. The documented capabilities (multi-model support, multi-agent orchestration via tool-style composition) are the expected core, well-documented and backed by an unusually large community. The same consolidation is also the risk to read carefully: a framework mid-transition between the AutoGen name and the new Agent Framework can leave users straddling two sets of docs and APIs. This is a public-surface and documentation read, not an execution of orchestration workloads, so the verdict reflects the project's positioning, backing and documented design rather than measured runtime behaviour.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) on the strength of a major vendor's backing, a stated move to stable APIs with long-term support, broad documentation and one of the largest communities in the category. Not VITAL here because the project is visibly mid-transition (AutoGen → Microsoft Agent Framework), which adds migration uncertainty, and the score rests on a public-surface read rather than benchmarked orchestration.",
+  "what_it_does_well": [
+    "Backed by a major vendor with a stated long-term-support commitment",
+    "Multi-agent orchestration and tool composition as documented first-class features",
+    "Multi-model support across several providers",
+    "Large community, abundant examples and tutorials lower the learning curve",
+    "Public move toward stable APIs is a real enterprise de-risking signal"
+  ],
+  "what_it_fails_at": [
+    "Visibly mid-transition between AutoGen and the Microsoft Agent Framework",
+    "Breadth brings complexity — more surface area than a focused framework",
+    "Documented capabilities were not executed/benchmarked in this review",
+    "Straddling two naming/API eras can confuse newcomers choosing where to start"
+  ],
+  "best_for": [
+    "Enterprises that want a vendor-backed framework with support commitments",
+    "Teams building multi-agent orchestration who value ecosystem and examples",
+    "Projects that need multi-model flexibility out of the box"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a small, single-purpose library with minimal surface area",
+    "Non-developers — there is no end-user product",
+    "Projects that cannot absorb churn during the Agent Framework transition"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langroid-langroid",
+      "verdict_diff": "AutoGen offers scale, backing and ecosystem; Langroid offers a smaller, more legible abstraction. Choose AutoGen when vendor support and community matter most; Langroid when design clarity does.",
+      "preferred_for_axis": "vendor-backing-and-ecosystem"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is lighter and role/crew-oriented for fast assembly; AutoGen is broader and more general. Prefer AutoGen for enterprise support posture, CrewAI for quick role-based prototyping.",
+      "preferred_for_axis": "enterprise-support"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "A programming framework for agentic AI",
+      "source": "https://microsoft.github.io/autogen/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Microsoft Agent Framework positioned as a production-ready release with stable APIs and long-term support",
+      "source": "https://github.com/microsoft/autogen",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Documented multi-agent orchestration and multi-model support",
+      "source": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/models.html",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "AutoGen is an agent SDK driven from code; agents and multi-agent orchestrations are composed programmatically. It is a framework developers build agents with, with a documented path toward stable, supported APIs.",
+    "agent_friendly_score": 8
+  },
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
