@@ -2,7 +2,7 @@
   "slug": "langroid-langroid",
   "name": "langroid/langroid",
   "agent_url": "https://github.com/langroid/langroid",
-  "category": "AI Agent",
+  "category": "Frameworks & Eval",
   "run_id": "run-langroid-langroid-e87xqdyb",
   "run_at": "2026-06-14T18:00:48.076Z",
   "source": "hlido-drain-worker",
@@ -69,12 +69,84 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
     "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP\" in preanalysis.claim",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Langroid is itself an agent SDK: agents are driven from Python, and its MCP adapter lets those agents consume external MCP servers directly. It is a component an agent developer builds with, not a hosted endpoint another agent calls.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A principled, lightweight multi-agent Python framework — and an early mover on a real MCP tool adapter rather than a bolted-on afterthought.",
+    "body": "Langroid is a developer framework, not an end-user product, and it reviews best when judged on that axis. Its public surface presents a clean agent-as-object model (agents own an LLM, tools and vector stores; tasks compose agents) that reads as deliberately smaller and more legible than the kitchen-sink frameworks it competes with. The README leans into function-calling, RAG and multi-agent orchestration, is provider-agnostic across OpenAI, local and open LLMs, and ships through PyPI with CI badges and docs — the ordinary signals of a maintained, used library rather than a weekend demo. The standout on the public surface is first-class MCP support: a tool adapter that turns any MCP server's tools into the framework's own ToolMessage type, which is exactly the kind of interoperability that matters in an agent-to-agent world. This is a public-surface and repository read, not an execution of the framework end to end, so the verdict covers what the project documents and signals about itself, not benchmarked runtime behaviour. On that evidence it is a dependable building block.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the project shows every public signal of a maintained, documented, PyPI-distributed framework with a clear and unfashionably focused design, plus genuine agent-interoperability (MCP adapter). Not VITAL on this pass because the score rests on a public-surface/repository read — no hands-on execution of multi-agent pipelines — and the framework's reach is narrower than the largest ecosystems.",
+  "what_it_does_well": [
+    "Clean, legible agent/task abstraction that stays smaller than kitchen-sink rivals",
+    "First-class MCP tool adapter — maps any MCP server into native tool calls",
+    "Provider-agnostic: documented support for OpenAI, local and open-weight LLMs",
+    "Published to PyPI with CI/docs badges — the signals of a maintained, used library",
+    "Built-in RAG and function-calling rather than requiring a separate stack"
+  ],
+  "what_it_fails_at": [
+    "Smaller community and ecosystem footprint than LangChain-scale frameworks",
+    "Value is realised only in code — nothing to evaluate without a Python project",
+    "Public surface documents capabilities we did not execute to benchmark",
+    "Opinionated abstractions mean a learning curve before the design pays off"
+  ],
+  "best_for": [
+    "Python developers who want a small, readable multi-agent framework",
+    "Teams building agents that need to consume MCP servers out of the box",
+    "RAG and function-calling applications that value focus over breadth"
+  ],
+  "not_recommended_for": [
+    "Non-developers — there is no end-user product surface",
+    "Teams that need the largest possible integration/plugin ecosystem",
+    "Anyone wanting a hosted, no-code agent builder"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "microsoft-autogen",
+      "verdict_diff": "AutoGen brings a larger backer and ecosystem; Langroid trades reach for a smaller, more opinionated and arguably more readable abstraction. Choose Langroid when design legibility and MCP interop matter more than ecosystem size.",
+      "preferred_for_axis": "legibility-and-mcp-interop"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI optimises for role-based crews and fast assembly; Langroid is lower-level and more general. Prefer Langroid when you want to compose agents your own way rather than within a crew metaphor.",
+      "preferred_for_axis": "low-level-composition"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Multi-agent programming framework for harnessing LLMs",
+      "source": "https://github.com/langroid/langroid",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "MCP tool adapter converts MCP server tools into native ToolMessage instances",
+      "source": "https://langroid.github.io/langroid/notes/mcp-tools/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Distributed on PyPI with active CI",
+      "source": "https://pypi.org/project/langroid/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
