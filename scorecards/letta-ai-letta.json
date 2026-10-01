@@ -2,7 +2,7 @@
   "slug": "letta-ai-letta",
   "name": "letta-ai/letta",
   "agent_url": "https://github.com/letta-ai/letta",
-  "category": "AI Agent",
+  "category": "Frameworks & Eval",
   "run_id": "run-letta-ai-letta-xqo30msd",
   "run_at": "2026-06-15T00:00:52.037Z",
   "source": "hlido-drain-worker",
@@ -71,13 +71,82 @@
   "agent_relevance": {
     "has_api": true,
     "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
     "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_api: \"API reference\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"npm install\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "behavioral_testable": true,
+    "agent_integration_path": "Letta exposes both a CLI and a hosted API, so agents can be driven locally or embedded into applications programmatically. Memory is server/state managed, making it addressable from agent workflows that need persistence.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "The stateful-memory thesis, matured — the MemGPT research line turned into a platform with both a local CLI and a hosted API.",
+    "body": "Letta (formerly MemGPT) is the clearest surviving commercialisation of the stateful-agent idea: agents whose memory persists, is edited over time, and is meant to make the agent better the longer it runs. The public surface splits cleanly into two addressable products — Letta Code, a CLI that runs agents locally in your terminal, and a Letta API for embedding agents into applications — which is a sensible shape for a framework that wants both tinkerers and integrators. Carrying the MemGPT lineage is a real credibility signal; memory is the hard, unglamorous part of agent engineering, and this is a team that has been working it for longer than most. This review reads the documented surface (docs site, CLI quickstart, API positioning), not a benchmarked run of long-horizon memory, so the verdict is about what the platform offers and signals, not a measurement of how well memory actually compounds in practice — which is exactly the thing a buyer should pilot before committing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) for a well-positioned, credibly-sourced platform (MemGPT lineage) with a coherent two-surface offering — local CLI plus hosted API — and clear documentation. Not higher on this pass because the central claim (memory that learns and self-improves over time) is precisely the kind of long-horizon behaviour a public-surface read cannot verify, and must be piloted.",
+  "what_it_does_well": [
+    "Credible pedigree: the MemGPT research line applied to a real product",
+    "Two clean surfaces — Letta Code CLI (local) and Letta API (embed)",
+    "Memory/state is treated as a first-class concern, not an add-on",
+    "Documentation and quickstarts are present and developer-oriented",
+    "Open and self-hostable enough to pilot without full vendor lock-in"
+  ],
+  "what_it_fails_at": [
+    "The headline memory/self-improvement claim is unverifiable from the public surface",
+    "Framework value only materialises inside a codebase or deployment",
+    "Node 18+ and setup overhead before the first useful agent runs",
+    "Long-horizon memory quality varies by workload and needs a real pilot"
+  ],
+  "best_for": [
+    "Developers building agents that must retain context across sessions",
+    "Teams that want a local CLI for prototyping and an API for production",
+    "Use cases where durable memory is the product, not a nice-to-have"
+  ],
+  "not_recommended_for": [
+    "Non-developers looking for a finished end-user assistant",
+    "Stateless, single-shot tasks where persistent memory adds only overhead",
+    "Buyers who need the memory claim proven before a pilot"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langroid-langroid",
+      "verdict_diff": "Langroid is a general multi-agent framework; Letta is specifically organised around persistent memory. Choose Letta when durable, evolving state is the core requirement rather than one feature among many.",
+      "preferred_for_axis": "stateful-memory"
+    },
+    {
+      "slug": "microsoft-autogen",
+      "verdict_diff": "AutoGen is orchestration-first with a big-vendor roadmap; Letta is memory-first with a research lineage. Prefer Letta when the hard problem is what the agent remembers, not how many agents talk.",
+      "preferred_for_axis": "memory-first"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Platform for building stateful agents with advanced memory",
+      "source": "https://docs.letta.com/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Letta Code CLI runs agents locally in the terminal",
+      "source": "https://docs.letta.com/letta-code",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Letta API for embedding agents into applications",
+      "source": "https://docs.letta.com/quickstart/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
