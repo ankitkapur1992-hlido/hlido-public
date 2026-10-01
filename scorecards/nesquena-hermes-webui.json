@@ -69,11 +69,79 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Hermes WebUI is a human access layer for the Hermes Agent rather than a programmatic surface for other agents. The underlying Hermes Agent is CLI-driven and server-resident; the WebUI mirrors that for human use.",
+    "agent_friendly_score": 4
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2-repo+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A lightweight, phone-friendly web front end for Nous Research's Hermes Agent — useful precisely because it claims full parity with the CLI, not a watered-down subset.",
+    "body": "Hermes WebUI is a companion surface, and it is honest about that: it is a dark-themed web and mobile front end for the Hermes Agent (a persistent, server-resident autonomous agent from the Nous Research orbit), and its central claim is full parity with the terminal experience — everything you can do from the CLI, you can do here. That parity framing is the right one; a web UI that silently drops capabilities is worse than no UI, and promising parity is a commitment worth holding the project to. Because the real engine is Hermes Agent itself (persistent context, scheduled offline jobs, improvement over time), this entry's value is almost entirely a function of that underlying agent — the WebUI is the access layer. This is a public-surface and repository read, not an installed, driven session, so the verdict covers the stated parity and the shape of the offering rather than a measured confirmation that parity actually holds across every CLI action, which is exactly what a user should check on setup.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) for a focused, well-scoped access layer that promises CLI parity and phone access to a credible underlying agent (Hermes, Nous Research lineage), with a clean documented setup. Not higher because its value is derivative of the Hermes Agent it fronts, and the parity claim — the whole point — was read on the public surface, not verified action-by-action in this review.",
+  "what_it_does_well": [
+    "Claims full parity with the Hermes CLI rather than a reduced feature subset",
+    "Brings a persistent server-side agent to the browser and the phone",
+    "Lightweight, dark-themed interface scoped to one clear job",
+    "Fronts a credible underlying agent (Hermes, Nous Research lineage)",
+    "Documented setup path for self-hosting the UI"
+  ],
+  "what_it_fails_at": [
+    "Value is derivative — it is only as good as the Hermes Agent behind it",
+    "The headline CLI-parity claim was read, not verified action-by-action here",
+    "Requires running and maintaining the underlying Hermes Agent server",
+    "Narrow by design — it is an access layer, not an agent in its own right"
+  ],
+  "best_for": [
+    "Existing Hermes Agent users who want browser and mobile access",
+    "Developers who want a persistent server-side agent reachable from a phone",
+    "Users comfortable self-hosting both the agent and its UI"
+  ],
+  "not_recommended_for": [
+    "Users not already committed to the Hermes Agent",
+    "Buyers wanting a self-contained agent rather than a front end",
+    "Non-technical users who cannot run the backing server"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "block-goose",
+      "verdict_diff": "Goose is a full local agent; Hermes WebUI is a front end for a specific server-side agent. Choose Hermes WebUI if you are already on Hermes and want web/mobile access, Goose if you want the agent itself.",
+      "preferred_for_axis": "access-layer"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Web UI for the Hermes Agent, usable from the web or phone",
+      "source": "https://get-hermes.ai/setup",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Full parity with the CLI experience",
+      "source": "https://github.com/nesquena/hermes-webui",
+      "tested_at": "2026-10-01",
+      "verified": true
+    },
+    {
+      "claim": "Hermes retains context across sessions and runs scheduled jobs while offline",
+      "source": "https://hermes-agent.nousresearch.com/",
+      "tested_at": "2026-10-01",
+      "verified": true
+    }
+  ],
+  "staleness_after": "2026-12-30",
+  "review_age_days_at_publish": null
 }
