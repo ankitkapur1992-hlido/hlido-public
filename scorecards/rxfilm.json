@@ -1,0 +1,152 @@
+{
+  "schema_version": "2.0",
+  "slug": "rxfilm",
+  "name": "RxFilmStudio",
+  "agent_url": "https://rxfilm.app",
+  "category": "Image & Design",
+  "run_id": "run-rxfilm-v2-rpub-2026-10-02",
+  "run_at": "2026-10-02T00:30:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/public-surface-tier-2/",
+  "score": 60,
+  "tier": "FADING",
+  "laddoo_score": 60,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A native macOS 'film studio in one window' — score, narrate, caption and render with an agent in the director's chair. Polished pitch for creators, but it's a downloadable desktop app Hlido could not run, so the verdict is about the surface only.",
+    "body": "RxFilmStudio is a native macOS application that bundles the moving-image production chain into one window: generate a score (it names Lyria for music), multi-speaker narration tuned line by line, caption/transcribe/translate with VTT or SRT export, and render out at up to 4K60 — with an agent coordinating the work. The positioning is clean and creator-friendly, the versioning is concrete (v1.10.0, a 41 MB .dmg dated October 2026), and a Marketplace is referenced. For a creative workflow this is an appealing one-surface concept. Hlido's constraint here is structural and worth stating plainly: this is a downloadable native app, and Hlido reviews public surfaces — it did not install RxFilmStudio, generate a frame of music, narration or video, or test the agent that supposedly sits in the director's chair. Everything about quality, the actual role of the 'agent', output fidelity and how the underlying generative models (e.g. Lyria) are licensed or surfaced is therefore unverified. A separate consideration for anyone shipping its output publicly: a tool that generates music, voice and video sits squarely inside AI-content transparency obligations, and the public surface says nothing about provenance marking (C2PA/watermarking) of what it produces. A confident, well-presented creative app reviewed from its landing page only.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-02",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (60) is a verifiability floor, not a craft judgement. The pitch is polished and concrete (named model for scoring, explicit export formats, real version/build), which keeps it mid-band. It is held below STEADY because RxFilmStudio is a downloadable macOS app that Hlido could not install or exercise — output quality, the agent's real role, and generative-content provenance are all unverified from the public surface, and there is no programmatic interface for agents.",
+  "what_it_does_well": [
+    "Clear, consolidated creative pitch: scoring, narration, captioning and rendering in one native macOS window",
+    "Concrete specifics on the surface — named music model (Lyria), VTT/SRT caption export, up to 4K60 rendering",
+    "Honest build transparency: explicit version (v1.10.0), file size (41 MB) and dated .dmg",
+    "Native-app approach may suit creators who want a local, single-window workflow"
+  ],
+  "what_it_fails_at": [
+    "Downloadable macOS app — not installed or exercised by Hlido, so output quality is unverified",
+    "The role and reliability of the 'agent in the director's chair' is asserted, not demonstrated",
+    "No stated provenance marking (C2PA/watermark) for generated music, voice or video despite producing synthetic media",
+    "No public pricing captured; Marketplace terms unclear from the surface",
+    "No API/CLI/MCP — nothing an external agent could drive"
+  ],
+  "best_for": [
+    "macOS creators who want scoring, narration, captioning and rendering in a single local app",
+    "Individual video/podcast makers comfortable evaluating a desktop download hands-on",
+    "Users who value a local-first creative workflow over a web app"
+  ],
+  "not_recommended_for": [
+    "Non-macOS users (native Mac app only)",
+    "Teams that need output provenance/marking documented before publishing AI-generated media",
+    "Agent-driven pipelines needing a programmatic interface",
+    "Buyers who require transparent pricing before downloading"
+  ],
+  "red_flags": [
+    "Generates synthetic media (music, voice, video) but the public surface states nothing about provenance marking (C2PA/watermarking) — relevant to AI-content transparency obligations for anyone publishing the output"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Native macOS app that scores, narrates, captions and renders with an embedded agent",
+      "source": "https://rxfilm.app/ (homepage, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Uses Lyria for music; caption export to VTT/SRT; render up to 3840x2160 60fps",
+      "source": "https://rxfilm.app/ (feature sections, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "v1.10.0 downloadable .dmg (41 MB), dated October 2026",
+      "source": "https://rxfilm.app/ (download CTA, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Output quality and the agent's effectiveness",
+      "source": "https://rxfilm.app/ (not installed or exercised)",
+      "tested_at": "2026-10-02",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None external. RxFilmStudio is a native macOS desktop application with an agent embedded inside it; it exposes no API/CLI/MCP/SDK for an outside agent to drive, and is not behaviorally testable from the public web surface.",
+    "agent_friendly_score": 2
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Your film studio, in one window'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for macOS v1.10.0'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "Download CTA + Marketplace referenced, but no pricing captured",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No runnable web demo (native app download); output not verifiable from the surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
+  ],
+  "summary": "A native macOS 'film studio in one window' — score, narrate, caption and render with an agent in the director's chair. Polished pitch for creators, but it's a downloadable desktop app Hlido could not run, so the verdict is about the surface only.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-02",
+  "attestation_url": "/data/attestations/rxfilm.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-02",
+    "source": "r-publish-editorial-2026-10-02"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "Download CTA + Marketplace referenced, but no pricing captured",
+      "tested_at": "2026-10-02"
+    },
+    "last_verified": "2026-10-02",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-02"
+  }
+}
