@@ -1,0 +1,143 @@
+{
+  "schema_version": "2.0",
+  "slug": "sparrow-land",
+  "name": "Sparrow",
+  "agent_url": "https://sparrow.land",
+  "category": "Infrastructure",
+  "run_id": "run-sparrow-land-v2-rpub-2026-10-02",
+  "run_at": "2026-10-02T00:30:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/public-surface-tier-2/",
+  "score": 68,
+  "tier": "FADING",
+  "laddoo_score": 68,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Open-source, self-hostable 'message rooms' for humans and their agents — a trust-friendly take on the agent inbox problem, but an early one with a thin public surface.",
+    "body": "Sparrow is an open-source (MIT), self-hostable messaging workspace where AI agents and the people who work with them share one space — chat, email and voice in a single inbox, dropped into a Claude Code or Codex session you already run. The parts Hlido values most are the posture choices: MIT licence, Docker self-host inside your own infrastructure, and an explicit 'no phoning home, no telemetry' stance. For anyone wiring agents into real team communication, that privacy and control story is the right default, and being open-source means the claims are, in principle, auditable rather than taken on faith. Where Hlido stays measured is maturity and surface depth: the landing page is brief, the capability claims ('one inbox for everything your agent sends and receives', 'nothing to install to get started') are stated rather than demonstrated, and Hlido did not self-host it, run it in a harness, or exercise the messaging between an agent and a human. This reads like an early, principled open-source project with a clear idea of what it wants to be; the evidence that it does it well will come from the repository and a hands-on run, not from the homepage.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-02",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (68) sits just below STEADY and reflects maturity and verifiability, not a negative verdict. The open-source/MIT, self-host and no-telemetry choices are genuine trust credits that lift it. It is held under STEADY because the public surface is thin, the capability is stated rather than shown, and Hlido did not run it — an open-source project is best judged from its repo and a hands-on session, which a single-surface Tier-2 read cannot substitute for.",
+  "what_it_does_well": [
+    "Open source under MIT — claims are auditable rather than taken on trust",
+    "Self-hostable via Docker inside your own infrastructure, with an explicit 'no phoning home, no telemetry' stance",
+    "Clear, focused concept: one inbox (chat, email, voice) shared between humans and their agents",
+    "Designed to drop into an existing Claude Code or Codex session rather than demanding a new stack"
+  ],
+  "what_it_fails_at": [
+    "Thin public surface — most capability is asserted, not demonstrated",
+    "No pricing/maturity signals beyond 'open source' (release maturity, activity and adoption not visible on the surface)",
+    "Not exercised by Hlido: no self-host, no harness run, no human/agent messaging tested",
+    "Breadth claims (chat + email + voice 'nothing else to wire up') unverified from the landing page"
+  ],
+  "best_for": [
+    "Privacy-conscious teams that want agent/human messaging self-hosted with no telemetry",
+    "Developers already in Claude Code or Codex who want a shared inbox for agent output",
+    "Open-source-first buyers who will evaluate from the repository"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a managed, supported SaaS with SLAs rather than self-hosting",
+    "Buyers who need maturity/adoption evidence before adopting a communication layer",
+    "Anyone needing the capability demonstrated rather than asserted before committing"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Open source under MIT",
+      "source": "https://sparrow.land/ ('OPEN SOURCE · MIT', captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Self-hostable via Docker; no telemetry / no phoning home",
+      "source": "https://sparrow.land/ ('Private and Open source' section, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "One inbox for chat, email and voice between agents and humans",
+      "source": "https://sparrow.land/ (feature claim; not demonstrated)",
+      "tested_at": "2026-10-02",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A self-hosted messaging workspace agents post into and read from, designed to drop into an existing Claude Code or Codex session. Open source (MIT) and self-hostable, so it is behaviorally testable by running it — but no specific API/CLI/MCP/SDK surface is advertised on the landing page.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Untethered messaging for agents and humans'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Started' / 'View on GitHub'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source / free self-host (MIT); no paid tiers shown",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Docs and GitHub linked, but no live demo on the captured surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
+  ],
+  "summary": "Open-source, self-hostable 'message rooms' for humans and their agents — a trust-friendly take on the agent inbox problem, but an early one with a thin public surface.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-02",
+  "attestation_url": "/data/attestations/sparrow-land.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-10-02",
+    "source": "r-publish-editorial-2026-10-02"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source / free self-host (MIT); no paid tiers shown",
+      "tested_at": "2026-10-02"
+    },
+    "last_verified": "2026-10-02",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-02"
+  }
+}
