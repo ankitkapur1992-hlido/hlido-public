@@ -1,0 +1,153 @@
+{
+  "schema_version": "2.0",
+  "slug": "iris-agent",
+  "name": "Iris",
+  "agent_url": "https://iris-agent.co",
+  "category": "Workflow & Automation",
+  "run_id": "run-iris-agent-v2-rpub-2026-10-02",
+  "run_at": "2026-10-02T00:30:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/public-surface-tier-2/",
+  "score": 62,
+  "tier": "FADING",
+  "laddoo_score": 62,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A coherent enterprise pitch for custom 'operations' agents that run across your existing tools — but the entire product sits behind a 'book a demo' wall, so almost none of it is checkable from the outside.",
+    "body": "Iris describes itself as an AI-native operating layer: department-specific agents (sales, operations, customer success, research, recruiting, executive assistance, engineering) that collect company context, carry it across teams, and take approved actions inside the CRM, email, docs and project tools a company already runs. The framing is internally consistent and the FAQ is unusually thorough — it is explicit about enterprise deployment options (customer-controlled private cloud or scoped on-prem, SSO, role-based access, private model endpoints, policy-based model routing, scoped credentials, action approvals, audit records) and about being model-agnostic. Hlido credits the clarity of the pitch and the fact that the security and permissions story is spelled out rather than hand-waved. Where Hlido withholds credit is that this is a demo-gated product with no self-serve entry, no public pricing, no public documentation, no live playground, and no stated programmatic interface (API/CLI/MCP) — every call to action is 'Book a demo' or 'Talk to Us'. Hlido reviewed only the marketing surface; it did not deploy Iris, connect it to any system, or watch an agent complete real work. One surface detail worth noting for buyers: a footer disclaimer states Iris 'is an independent product built on top of Iris Agent and is not affiliated with, endorsed by, or sponsored by Nous Research' — worth understanding before you assume vendor provenance. This is a promising-sounding operations-automation pitch whose substance is, by the vendor's own design, invisible until a sales conversation.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-02",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (62) is a reflection of VERIFIABILITY, not a judgement that the product is weak. The pitch is coherent and the enterprise-security posture is clearly stated, which keeps it out of the lower bands. It is held below STEADY because nothing on the public surface can be independently checked: no pricing, no public docs or demo, no self-serve trial, and no documented programmatic interface for agents. A demo-gated enterprise product can be excellent — Hlido simply cannot evidence that from the outside, and does not inflate a score to compensate.",
+  "what_it_does_well": [
+    "States a clear, internally consistent value proposition: custom agents that run recurring operational work across a company's existing tools",
+    "Spells out an enterprise deployment and security model in detail (private-cloud/on-prem options, SSO, RBAC, scoped credentials, action approvals, audit records)",
+    "Is explicit about being model-agnostic rather than locked to one provider",
+    "A thorough FAQ pre-empts most procurement questions about integration, data access and permissions"
+  ],
+  "what_it_fails_at": [
+    "Entirely demo-gated — no self-serve entry, so the product cannot be exercised or evidenced from the public surface",
+    "No public pricing of any kind — buyers cannot gauge cost without a sales call",
+    "No public documentation, live demo or playground",
+    "No documented API, CLI, MCP server or SDK — nothing an external agent could drive or integrate",
+    "Breadth of claimed capability (cross-team coordination, measurable ROI, department agents) is unverifiable from marketing copy alone"
+  ],
+  "best_for": [
+    "Mid-market and enterprise operations teams already willing to run a sales-led evaluation",
+    "Companies that need customer-controlled deployment (private cloud or on-prem) and formal action-approval/audit controls",
+    "Buyers who want agents layered onto an existing stack rather than a rip-and-replace"
+  ],
+  "not_recommended_for": [
+    "Individuals or small teams wanting to try before they talk to sales",
+    "Anyone needing transparent, published pricing up front",
+    "Agent-driven workflows that need a programmatic interface to configure or orchestrate Iris",
+    "Buyers who require independently verifiable evidence (benchmarks, public docs, open demo) before committing"
+  ],
+  "red_flags": [
+    "Product is entirely demo-gated with no public pricing, docs or demo — none of the capability claims can be independently verified",
+    "Footer disclaimer notes Iris is 'an independent product built on top of Iris Agent' and unaffiliated with Nous Research — understand provenance before assuming vendor identity"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Custom agents run operational work across existing tools (CRM, email, docs, project tools)",
+      "source": "https://iris-agent.co/ (homepage + FAQ, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Enterprise deployment supports private cloud / on-prem, SSO, RBAC, scoped credentials, action approvals, audit records",
+      "source": "https://iris-agent.co/ (FAQ: 'Can Iris Be Integrated Into Our Enterprise Environment?')",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Model-agnostic / policy-based model routing",
+      "source": "https://iris-agent.co/ (FAQ: 'Which AI Models Can Iris Use?')",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Delivers measurable ROI vs manual process",
+      "source": "https://iris-agent.co/ (marketing claim, not demonstrated)",
+      "tested_at": "2026-10-02",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None documented publicly. Iris is a managed, demo-gated platform that connects to business tools via standard and custom connectors, but exposes no stated API/CLI/MCP/SDK an external agent could drive or configure. Not behaviorally testable from the public surface.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI Agents Built for Your Operations'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Book a demo' / 'Talk to Us' (demo-gated)",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No public pricing; access is sales-led only",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No public demo, docs or playground on the captured surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
+  ],
+  "summary": "A coherent enterprise pitch for custom 'operations' agents that run across your existing tools — but the entire product sits behind a 'book a demo' wall, so almost none of it is checkable from the outside.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-02",
+  "attestation_url": "/data/attestations/iris-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-10-02",
+    "source": "r-publish-editorial-2026-10-02"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "enterprise-quote"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No public pricing; access is sales-led only",
+      "tested_at": "2026-10-02"
+    },
+    "last_verified": "2026-10-02",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-02"
+  }
+}
