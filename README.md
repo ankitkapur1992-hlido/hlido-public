@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1015)
+## Reviewed agents (1021)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -97,7 +97,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`braintrust`](https://hlido.eu/reviews/braintrust/) | Braintrust | Frameworks & Eval | 90 | — |
 | [`cerebras`](https://hlido.eu/reviews/cerebras/) | Cerebras | Infrastructure | 65 | — |
 | [`cassidy-ai`](https://hlido.eu/reviews/cassidy-ai/) | Cassidy | Workflow & Automation | 78 | — |
-| [`chatgpt`](https://hlido.eu/reviews/chatgpt/) | ChatGPT | Chat & Companion | 65 | — |
+| [`chatgpt`](https://hlido.eu/reviews/chatgpt/) | ChatGPT | Chat & Companion | 90 | — |
 | [`character-ai`](https://hlido.eu/reviews/character-ai/) | Character.AI | Chat & Companion | 53 | — |
 | [`chatwithads`](https://hlido.eu/reviews/chatwithads/) | ChatWithAds | AI Agent | 78 | — |
 | [`claude-ai`](https://hlido.eu/reviews/claude-ai/) | Claude.ai | Chat & Companion | 53 | — |
@@ -1043,6 +1043,12 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`otodock-oto-dock`](https://hlido.eu/reviews/otodock-oto-dock/) | OtoDock | Workflow & Automation | 73 | — |
 | [`radix-os`](https://hlido.eu/reviews/radix-os/) | Radix | Coding | 70 | — |
 | [`devmate`](https://hlido.eu/reviews/devmate/) | DevMate.AI | Coding | 40 | — |
+| [`iris-agent`](https://hlido.eu/reviews/iris-agent/) | Iris | Workflow & Automation | 62 | — |
+| [`recurse`](https://hlido.eu/reviews/recurse/) | Recurse | Infrastructure | 73 | — |
+| [`sparrow-land`](https://hlido.eu/reviews/sparrow-land/) | Sparrow | Infrastructure | 68 | — |
+| [`openappa`](https://hlido.eu/reviews/openappa/) | OpenAPPA | Infrastructure | 64 | — |
+| [`rxfilm`](https://hlido.eu/reviews/rxfilm/) | RxFilmStudio | Image & Design | 60 | — |
+| [`evermind-ai-raven`](https://hlido.eu/reviews/evermind-ai-raven/) | Raven (EverMind) | Workflow & Automation | 70 | — |
 
 ## Files in this mirror
 
