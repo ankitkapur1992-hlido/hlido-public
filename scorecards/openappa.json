@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "slug": "openappa",
+  "name": "OpenAPPA",
+  "agent_url": "https://openappa.com",
+  "category": "Infrastructure",
+  "run_id": "run-openappa-v2-rpub-2026-10-02",
+  "run_at": "2026-10-02T00:30:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/public-surface-tier-2/",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A deterministic, policy-as-code guardrail for agents with real technical ambition (paper, benchmarks, OPA/Cedar comparisons) — undercut by a '100% resistant to data exfiltration' absolute that no security product should make.",
+    "body": "OpenAPPA presents itself as a deterministic AI guardrail that sits between an agent and its tools, enforcing policy to prevent data exfiltration from prompt injection or model hallucination. The engineering framing is serious: a published paper, a playground, batteries (reusable policy modules), self-improving policies, evaluation and benchmarks, and explicit comparisons against Cedar, OPA and 'Dogwood'. It positions as an add-on to real agent runtimes (Claude Code, Archestra) and is openly developed on GitHub, currently marked PREVIEW & RFC. Hlido's interest here is genuine — a deterministic policy layer is the correct architectural answer to the agent-security problem, and the comparative, benchmark-led presentation is more rigorous than most entrants. The problem is the headline claim: OpenAPPA states it is '100% resistant to data exfiltration caused by prompt injection or model hallucination'. No security control is 100% of anything; absolute-immunity language is precisely the claim a careful buyer should distrust, and stating it this baldly works against the credibility the rest of the surface earns. Hlido did not run OpenAPPA, write a policy, or test the exfiltration claim — and given it is a PREVIEW/RFC, buyers should treat it as an early research artifact to evaluate hands-on, not a finished control to deploy on trust. Promising shape and unusually technical for its stage; the marketing absolute is the thing to verify first and hardest.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-02",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) balances genuine technical substance against an unverified and over-stated core claim at an early stage. The paper, benchmarks, OPA/Cedar comparisons, open GitHub development and correct architectural premise all pull the score up. It is held below STEADY because the product is self-described PREVIEW & RFC, nothing was exercised by Hlido, and the flagship '100% resistant' claim is an absolute that no security control can honestly make — which caps the trust/claim-verification dimensions until it is tested.",
+  "what_it_does_well": [
+    "Correct architecture for the problem: a deterministic, policy-as-code layer between agent and tools",
+    "Unusually rigorous public surface for its stage — paper, playground, benchmarks and head-to-head comparisons (Cedar, OPA, 'Dogwood')",
+    "Open development on GitHub; 'batteries' as reusable policy modules is a sensible abstraction",
+    "Designed to bolt onto existing agent runtimes (Claude Code, Archestra) rather than replace them"
+  ],
+  "what_it_fails_at": [
+    "Flagship claim of '100% resistant to data exfiltration' is an absolute no security control can honestly make",
+    "Self-described PREVIEW & RFC — not a finished, production-hardened control",
+    "The exfiltration/prompt-injection resistance was not tested by Hlido; the benchmark claims are vendor-published, not independently reproduced",
+    "Policy-authoring ergonomics, performance overhead and real coverage limits are not evidenced from the surface"
+  ],
+  "best_for": [
+    "Security and platform engineers evaluating deterministic guardrails for autonomous agents",
+    "Teams already using policy-as-code (OPA/Cedar) who want an agent-specific comparison point",
+    "Researchers and early adopters willing to engage with a PREVIEW/RFC and verify claims hands-on"
+  ],
+  "not_recommended_for": [
+    "Teams needing a production-ready, supported guardrail today",
+    "Buyers who would take a '100% resistant' claim at face value rather than testing it",
+    "Anyone needing independently reproduced security benchmarks before adopting a control"
+  ],
+  "red_flags": [
+    "Markets itself as '100% resistant to data exfiltration caused by prompt injection or model hallucination' — an absolute-immunity claim that is implausible for any security control and should be independently tested before trust",
+    "Self-described PREVIEW & RFC stage — treat as an early research artifact, not a deployable control"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Deterministic policy-as-code guardrail that sits between agent and tools",
+      "source": "https://openappa.com/ (homepage + 'How it works' / 'Policy configuration', captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Paper, playground, benchmarks and comparisons vs Cedar/OPA published",
+      "source": "https://openappa.com/ (nav: Paper, Playground, Benchmarks, Comparison, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "100% resistant to data exfiltration from prompt injection or model hallucination",
+      "source": "https://openappa.com/ (headline claim; NOT tested or independently verified)",
+      "tested_at": "2026-10-02",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A guardrail layer added to an agent runtime (advertised with Claude Code and Archestra) via policy configuration and reusable 'batteries'. Open on GitHub with a playground and benchmarks, so it is behaviorally testable — though the specific integration interface was not exercised and is marked PREVIEW/RFC.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Frontier deterministic AI guardrail' preventing data exfiltration",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' / 'Add to your agent'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing; PREVIEW & RFC, open on GitHub",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Playground, paper and benchmarks on the surface (vendor-published, not independently reproduced)",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
+  ],
+  "summary": "A deterministic, policy-as-code guardrail for agents with real technical ambition (paper, benchmarks, OPA/Cedar comparisons) — undercut by a '100% resistant to data exfiltration' absolute that no security product should make.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-02",
+  "attestation_url": "/data/attestations/openappa.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-10-02",
+    "source": "r-publish-editorial-2026-10-02"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing; PREVIEW & RFC, open on GitHub",
+      "tested_at": "2026-10-02"
+    },
+    "last_verified": "2026-10-02",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-02"
+  }
+}
