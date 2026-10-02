@@ -5,9 +5,99 @@ This file is the answer-engine corpus for Hlido, the trust layer for AI agents. 
 > Base URL: https://hlido.eu
 > MCP endpoint: https://hlido.eu/mcp (JSON-RPC 2.0, 19 tools, no auth)
 > MCP Trust register (server safety, early cohort): https://hlido.eu/mcp/ (data: https://hlido.eu/data/mcp-register.json)
-> Corpus size: 1011 reviews
+> Corpus size: 1017 reviews
 
 ## Reviewed agents
+
+### Iris
+- Slug: `iris-agent`
+- Laddoo Score: 62/100
+- Tier: FADING
+- Category: Workflow & Automation
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/iris-agent/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"iris-agent"}}}`
+
+**Summary:** A coherent enterprise pitch for custom 'operations' agents that run across your existing tools — but the entire product sits behind a 'book a demo' wall, so almost none of it is checkable from the outside.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Recurse
+- Slug: `recurse`
+- Laddoo Score: 73/100
+- Tier: STEADY
+- Category: Infrastructure
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/recurse/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"recurse"}}}`
+
+**Summary:** Hosting-for-agent-apps that treats MCP as the output format — build an agent app, deploy it with one CLI command, publish it as an MCP any client can call. Exactly the shape the agent-to-agent era needs; depth still to be proven hands-on.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Sparrow
+- Slug: `sparrow-land`
+- Laddoo Score: 68/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/sparrow-land/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"sparrow-land"}}}`
+
+**Summary:** Open-source, self-hostable 'message rooms' for humans and their agents — a trust-friendly take on the agent inbox problem, but an early one with a thin public surface.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### OpenAPPA
+- Slug: `openappa`
+- Laddoo Score: 64/100
+- Tier: FADING
+- Category: Infrastructure
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/openappa/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"openappa"}}}`
+
+**Summary:** A deterministic, policy-as-code guardrail for agents with real technical ambition (paper, benchmarks, OPA/Cedar comparisons) — undercut by a '100% resistant to data exfiltration' absolute that no security product should make.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### RxFilmStudio
+- Slug: `rxfilm`
+- Laddoo Score: 60/100
+- Tier: FADING
+- Category: Image & Design
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/rxfilm/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"rxfilm"}}}`
+
+**Summary:** A native macOS 'film studio in one window' — score, narrate, caption and render with an agent in the director's chair. Polished pitch for creators, but it's a downloadable desktop app Hlido could not run, so the verdict is about the surface only.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
+
+### Raven (EverMind)
+- Slug: `evermind-ai-raven`
+- Laddoo Score: 70/100
+- Tier: STEADY
+- Category: Workflow & Automation
+- Reviewed: 2026-10-02
+- URL: https://hlido.eu/reviews/evermind-ai-raven/
+- MCP query: `{"method":"tools/call","params":{"name":"trust_check","arguments":{"agent_or_url":"evermind-ai-raven"}}}`
+
+**Summary:** A multi-agent orchestration layer that sits above the coding agents you already run (Claude Code, Codex, Copilot, Qwen and more) — real GitHub traction and broad interop, wrapped in heavy 'self-evolving / RSI' language that the surface can't back up.
+
+**Evidence:** Captured from public surfaces and verified claim-by-claim. C2PA pending.
+
+---
 
 ### DevMate.AI
 - Slug: `devmate`
@@ -7339,8 +7429,8 @@ $0.000110
 
 ### ChatGPT
 - Slug: `chatgpt`
-- Laddoo Score: 65/100
-- Tier: FADING
+- Laddoo Score: 90/100
+- Tier: VITAL
 - Category: Chat & Companion
 - Reviewed: 2026-05-01
 - URL: https://hlido.eu/reviews/chatgpt/
