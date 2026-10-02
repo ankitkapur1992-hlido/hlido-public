@@ -1,0 +1,146 @@
+{
+  "schema_version": "2.0",
+  "slug": "recurse",
+  "name": "Recurse",
+  "agent_url": "https://recurse.run",
+  "category": "Infrastructure",
+  "run_id": "run-recurse-v2-rpub-2026-10-02",
+  "run_at": "2026-10-02T00:30:34Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.09",
+  "methodology_url": "/methodology/public-surface-tier-2/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Hosting-for-agent-apps that treats MCP as the output format — build an agent app, deploy it with one CLI command, publish it as an MCP any client can call. Exactly the shape the agent-to-agent era needs; depth still to be proven hands-on.",
+    "body": "Recurse's premise is narrow and well-aimed: you build an agent app, deploy it, and it becomes an MCP server that Claude, Codex or any MCP client can use — with Recurse handling the hosting. The developer path is concrete on the public surface: install the SDK (pip install recurse-sdk), deploy with 'recurse deploy . --as mcp', or start from an example in the gallery. There is even a copy-paste SKILL.md prompt so a coding agent can set the project up for you, which is a thoughtful nod to how people actually scaffold these days. For Hlido, the standout is positioning: most tools make you integrate an agent into something; Recurse makes the agent app itself a callable MCP primitive, which is the right abstraction for an ecosystem where other agents are the consumers. The surface advertises a gallery, docs, pricing and a blog — more self-serve substance than most entrants at this stage. Where Hlido stays cautious: everything here is the happy path as marketed. Hlido did not deploy an app, call the resulting MCP, or test reliability, cold-start behaviour, limits or what the hosting actually guarantees — and 'we handle the hosting' is a promise whose value is entirely in the operational detail a landing page cannot show. A credible, correctly-shaped piece of agent infrastructure reviewed from its public surface only.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-02",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the public surface is concrete and well-aimed for agent builders: a real CLI and SDK, MCP as the deployment target, worked examples, and self-serve docs/pricing — strong agent-to-agent fit with low obvious trust friction. Not higher because none of it is exercised: hosting guarantees, reliability, limits and the real deploy experience are unverified from the outside, and confidence is low on a single-surface read.",
+  "what_it_does_well": [
+    "Clear one-command deploy story: 'recurse deploy . --as mcp' turns an agent app into a callable MCP server",
+    "Publishes agent apps as MCP servers any client (Claude, Codex, generic MCP) can consume — the right primitive for agent-to-agent use",
+    "Real self-serve developer path: Python SDK (pip install recurse-sdk), examples gallery, docs",
+    "Ships a copy-paste SKILL.md so a coding agent can scaffold the project",
+    "Managed hosting removes the ops burden of running an MCP endpoint"
+  ],
+  "what_it_fails_at": [
+    "Hosting guarantees, uptime, cold-start and scaling behaviour are unstated on the public surface",
+    "No visible detail on limits, data handling or security posture of hosted agent apps",
+    "Deploy experience and MCP reliability were not exercised by Hlido — happy-path marketing only",
+    "Pricing is linked but concrete tiers were not captured on the reviewed surface"
+  ],
+  "best_for": [
+    "Developers who want to ship an agent app as an MCP server without managing infrastructure",
+    "Teams standardising on MCP as the interface between their tools and Claude/Codex clients",
+    "Builders who prototype with a coding agent and want a one-command path to a hosted endpoint"
+  ],
+  "not_recommended_for": [
+    "Teams that require self-hosting or full control over the runtime and data path",
+    "Production workloads needing published SLAs/limits before committing (not visible on the surface)",
+    "Anyone who needs non-MCP delivery as the primary interface"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "Deploy an agent app as an MCP server usable from Claude/Codex/any MCP client",
+      "source": "https://recurse.run/ (homepage + 'recurse deploy . --as mcp', captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Python SDK and CLI exist (pip install recurse-sdk)",
+      "source": "https://recurse.run/ (install step, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Examples gallery and docs are available",
+      "source": "https://recurse.run/ (nav + gallery, captured)",
+      "tested_at": "2026-10-02",
+      "verified": true
+    },
+    {
+      "claim": "Managed hosting reliability / guarantees",
+      "source": "https://recurse.run/ (claim; not exercised)",
+      "tested_at": "2026-10-02",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class: build an agent app with the Recurse SDK, deploy it via the CLI, and it is published as an MCP server any MCP client can call. The deployed artifact is itself an agent-consumable interface, which is the strongest possible agent-integration posture.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Build and deploy agent apps' / publish as MCP",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' / 'Use the CLI'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing page linked in nav (concrete tiers not captured on homepage)",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Examples gallery + docs + copy-paste SKILL.md on the surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
+  ],
+  "summary": "Hosting-for-agent-apps that treats MCP as the output format — build an agent app, deploy it with one CLI command, publish it as an MCP any client can call. Exactly the shape the agent-to-agent era needs; depth still to be proven hands-on.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-02",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-02",
+  "attestation_url": "/data/attestations/recurse.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "marking_signal": {
+    "not_applicable": true,
+    "checked_at": "2026-10-02",
+    "source": "r-publish-editorial-2026-10-02"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Pricing page linked in nav (concrete tiers not captured on homepage)",
+      "tested_at": "2026-10-02"
+    },
+    "last_verified": "2026-10-02",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-02"
+  }
+}
