@@ -80,40 +80,11 @@
     "agent_friendly_score": 7
   },
   "checklist": [
-    {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "'Every agent, one surface' — multi-agent orchestration",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "Install one-liner + 'View On GitHub'",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": true,
-      "required": false,
-      "evidence": "Free install via curl + public GitHub; no paid tiers captured",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false,
-      "evidence": "'See in run' section + public repo; not exercised by Hlido",
-      "tested_at": "2026-10-02T00:30:34Z"
-    }
+    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Every agent, one surface' — multi-agent orchestration", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "cta_present", "pass": true, "required": true, "evidence": "Install one-liner + 'View On GitHub'", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "pricing_or_access", "pass": true, "required": false, "evidence": "Free install via curl + public GitHub; no paid tiers captured", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "evidence_or_demo", "pass": true, "required": false, "evidence": "'See in run' section + public repo; not exercised by Hlido", "tested_at": "2026-10-02T00:30:34Z" }
   ],
   "summary": "A multi-agent orchestration layer that sits above the coding agents you already run (Claude Code, Codex, Copilot, Qwen and more) — real GitHub traction and broad interop, wrapped in heavy 'self-evolving / RSI' language that the surface can't back up.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
@@ -130,13 +101,15 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": ["open-source"],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": true,
-      "evidence": "Free install via curl + public GitHub; no paid tiers captured",
+      "evidence": "Free install via curl one-liner and public GitHub repo; no paid tiers shown on the surface",
       "tested_at": "2026-10-02"
     },
     "last_verified": "2026-10-02",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "basis": "Derived from Hlido-held evidence only (public-surface capture + editorial text); not vendor-supplied; re-derived daily. Verify current terms in the project's repository.",
     "derived_at": "2026-10-02"
   }
 }
