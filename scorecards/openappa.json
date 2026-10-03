@@ -80,40 +80,11 @@
     "agent_friendly_score": 7
   },
   "checklist": [
-    {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "'Frontier deterministic AI guardrail' preventing data exfiltration",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "'Get started' / 'Add to your agent'",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": false,
-      "required": false,
-      "evidence": "No pricing; PREVIEW & RFC, open on GitHub",
-      "tested_at": "2026-10-02T00:30:34Z"
-    },
-    {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false,
-      "evidence": "Playground, paper and benchmarks on the surface (vendor-published, not independently reproduced)",
-      "tested_at": "2026-10-02T00:30:34Z"
-    }
+    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Frontier deterministic AI guardrail' preventing data exfiltration", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "cta_present", "pass": true, "required": true, "evidence": "'Get started' / 'Add to your agent'", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "pricing_or_access", "pass": false, "required": false, "evidence": "No pricing; PREVIEW & RFC, open on GitHub", "tested_at": "2026-10-02T00:30:34Z" },
+    { "id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Playground, paper and benchmarks on the surface (vendor-published, not independently reproduced)", "tested_at": "2026-10-02T00:30:34Z" }
   ],
   "summary": "A deterministic, policy-as-code guardrail for agents with real technical ambition (paper, benchmarks, OPA/Cedar comparisons) — undercut by a '100% resistant to data exfiltration' absolute that no security product should make.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
@@ -130,13 +101,15 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": ["open-source", "preview"],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false,
-      "evidence": "No pricing; PREVIEW & RFC, open on GitHub",
+      "evidence": "No pricing shown; project is PREVIEW & RFC with open GitHub development",
       "tested_at": "2026-10-02"
     },
     "last_verified": "2026-10-02",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "basis": "Derived from Hlido-held evidence only (public-surface capture + editorial text); not vendor-supplied; re-derived daily. Verify current terms in the project's repository.",
     "derived_at": "2026-10-02"
   }
 }
