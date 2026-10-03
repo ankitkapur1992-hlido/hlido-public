@@ -159,7 +159,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`tabnine`](https://hlido.eu/reviews/tabnine/) | Tabnine | Coding | 90 | — |
 | [`tana`](https://hlido.eu/reviews/tana/) | Tana | Productivity | 65 | — |
 | [`tavus`](https://hlido.eu/reviews/tavus/) | Tavus | Voice | 78 | — |
-| [`v0`](https://hlido.eu/reviews/v0/) | v0 | Coding | 65 | — |
+| [`v0`](https://hlido.eu/reviews/v0/) | v0 | Coding | 76 | — |
 | [`together-ai`](https://hlido.eu/reviews/together-ai/) | Together AI | Infrastructure | 65 | — |
 | [`vercel-ai-sdk`](https://hlido.eu/reviews/vercel-ai-sdk/) | Vercel AI SDK | Frameworks & Eval | 78 | — |
 | [`vellum-ai`](https://hlido.eu/reviews/vellum-ai/) | Vellum | Frameworks & Eval | 78 | — |
