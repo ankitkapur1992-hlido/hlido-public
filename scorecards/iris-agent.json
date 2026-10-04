@@ -88,11 +88,40 @@
     "agent_friendly_score": 3
   },
   "checklist": [
-    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'AI Agents Built for Your Operations'", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "cta_present", "pass": true, "required": true, "evidence": "'Book a demo' / 'Talk to Us' (demo-gated)", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "pricing_or_access", "pass": false, "required": false, "evidence": "No public pricing; access is sales-led only", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "evidence_or_demo", "pass": false, "required": false, "evidence": "No public demo, docs or playground on the captured surface", "tested_at": "2026-10-02T00:30:34Z" }
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'AI Agents Built for Your Operations'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Book a demo' / 'Talk to Us' (demo-gated)",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No public pricing; access is sales-led only",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No public demo, docs or playground on the captured surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
   ],
   "summary": "A coherent enterprise pitch for custom 'operations' agents that run across your existing tools — but the entire product sits behind a 'book a demo' wall, so almost none of it is checkable from the outside.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
@@ -109,15 +138,16 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
-    "model": ["contact-sales"],
-    "free_tier": false,
+    "model": [
+      "enterprise-quote"
+    ],
     "pricing_disclosed": {
       "pass": false,
-      "evidence": "No public pricing; every CTA is 'Book a demo' / 'Talk to Us'",
+      "evidence": "No public pricing; access is sales-led only",
       "tested_at": "2026-10-02"
     },
     "last_verified": "2026-10-02",
-    "basis": "Derived from Hlido-held evidence only (public-surface capture + editorial text); not vendor-supplied; re-derived daily. Verify current pricing with the vendor.",
-    "derived_at": "2026-10-02"
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-03"
   }
 }
