@@ -91,8 +91,8 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`catdoes-v4`](https://hlido.eu/reviews/catdoes-v4/) | CatDoes v4 | AI Agent | 65 | — |
 | [`denovo`](https://hlido.eu/reviews/denovo/) | Denovo | AI Agent | 78 | — |
 | [`athena-intel`](https://hlido.eu/reviews/athena-intel/) | Athena Intelligence | Workflow & Automation | 53 | — |
-| [`anthropic-computer-use`](https://hlido.eu/reviews/anthropic-computer-use/) | Anthropic Computer Use | Infrastructure | 40 | — |
-| [`anyword`](https://hlido.eu/reviews/anyword/) | Anyword | Marketing & Content | 90 | — |
+| [`anthropic-computer-use`](https://hlido.eu/reviews/anthropic-computer-use/) | Anthropic Computer Use | Infrastructure | 82 | — |
+| [`anyword`](https://hlido.eu/reviews/anyword/) | Anyword | Marketing & Content | 70 | — |
 | [`axe`](https://hlido.eu/reviews/axe/) | Axe | AI Agent | 40 | — |
 | [`braintrust`](https://hlido.eu/reviews/braintrust/) | Braintrust | Frameworks & Eval | 90 | — |
 | [`cerebras`](https://hlido.eu/reviews/cerebras/) | Cerebras | Infrastructure | 65 | — |
@@ -200,7 +200,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openinterpreter`](https://hlido.eu/reviews/openinterpreter/) | Open Interpreter | Coding | 78 | — |
 | [`metagpt`](https://hlido.eu/reviews/metagpt/) | MetaGPT | Coding | 65 | — |
 | [`gpt-engineer`](https://hlido.eu/reviews/gpt-engineer/) | GPT Engineer | Coding | 78 | — |
-| [`agentgpt`](https://hlido.eu/reviews/agentgpt/) | AgentGPT | Coding | 53 | — |
+| [`agentgpt`](https://hlido.eu/reviews/agentgpt/) | AgentGPT | Coding | 65 | — |
 | [`autogen-studio`](https://hlido.eu/reviews/autogen-studio/) | AutoGen Studio | Coding | 78 | — |
 | [`smol-ai`](https://hlido.eu/reviews/smol-ai/) | Smol Developer | Coding | 40 | — |
 | [`superagi`](https://hlido.eu/reviews/superagi/) | SuperAGI | Coding | 78 | — |
@@ -211,13 +211,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`scholarcy`](https://hlido.eu/reviews/scholarcy/) | Scholarcy | Research | 78 | — |
 | [`exa-ai`](https://hlido.eu/reviews/exa-ai/) | Exa | Research | 90 | — |
 | [`kagi`](https://hlido.eu/reviews/kagi/) | Kagi | Research | 78 | — |
-| [`andi-search`](https://hlido.eu/reviews/andi-search/) | Andi Search | Research | 53 | — |
+| [`andi-search`](https://hlido.eu/reviews/andi-search/) | Andi Search | Research | 65 | — |
 | [`komo-ai`](https://hlido.eu/reviews/komo-ai/) | Komo | Research | 53 | — |
 | [`notebooklm`](https://hlido.eu/reviews/notebooklm/) | NotebookLM | Research | 65 | — |
 | [`hebbia`](https://hlido.eu/reviews/hebbia/) | Hebbia | Research | 78 | — |
 | [`casetext`](https://hlido.eu/reviews/casetext/) | Casetext | Specialized verticals | 40 | — |
 | [`ironclad`](https://hlido.eu/reviews/ironclad/) | Ironclad | Specialized verticals | 78 | — |
-| [`harvey-ai`](https://hlido.eu/reviews/harvey-ai/) | Harvey | Specialized verticals | 53 | — |
+| [`harvey-ai`](https://hlido.eu/reviews/harvey-ai/) | Harvey | Specialized verticals | 78 | — |
 | [`evisort`](https://hlido.eu/reviews/evisort/) | Evisort | Specialized verticals | 53 | — |
 | [`spellbook-legal`](https://hlido.eu/reviews/spellbook-legal/) | Spellbook | Specialized verticals | 90 | — |
 | [`luminance`](https://hlido.eu/reviews/luminance/) | Luminance | Specialized verticals | 65 | — |
@@ -287,7 +287,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ollama`](https://hlido.eu/reviews/ollama/) | Ollama | Infrastructure | 90 | — |
 | [`replicate`](https://hlido.eu/reviews/replicate/) | Replicate | Infrastructure | 78 | — |
 | [`lmstudio`](https://hlido.eu/reviews/lmstudio/) | LM Studio | Infrastructure | 65 | — |
-| [`deepseek-chat`](https://hlido.eu/reviews/deepseek-chat/) | DeepSeek | Chat & Companion | 53 | — |
+| [`deepseek-chat`](https://hlido.eu/reviews/deepseek-chat/) | DeepSeek | Chat & Companion | 78 | — |
 | [`xai-grok`](https://hlido.eu/reviews/xai-grok/) | Grok (xAI) | Chat & Companion | 65 | — |
 | [`hugging-face`](https://hlido.eu/reviews/hugging-face/) | HuggingFace | Infrastructure | 78 | — |
 | [`qwen-chat`](https://hlido.eu/reviews/qwen-chat/) | Qwen Chat | Chat & Companion | 40 | — |
@@ -305,7 +305,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openai-realtime`](https://hlido.eu/reviews/openai-realtime/) | OpenAI Realtime | Infrastructure | 90 | — |
 | [`perplexity-api`](https://hlido.eu/reviews/perplexity-api/) | Perplexity API | Infrastructure | 90 | — |
 | [`tavily-api`](https://hlido.eu/reviews/tavily-api/) | Tavily | Infrastructure | 78 | — |
-| [`airtable-ai`](https://hlido.eu/reviews/airtable-ai/) | Airtable AI | Productivity | 90 | — |
+| [`airtable-ai`](https://hlido.eu/reviews/airtable-ai/) | Airtable AI | Productivity | 72 | — |
 | [`dia-browser`](https://hlido.eu/reviews/dia-browser/) | Dia (The Browser Company) | Infrastructure | 53 | — |
 | [`arc-browser`](https://hlido.eu/reviews/arc-browser/) | Arc Browser | Infrastructure | 78 | — |
 | [`aria-opera`](https://hlido.eu/reviews/aria-opera/) | Aria (Opera) | Infrastructure | 65 | — |
@@ -313,7 +313,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`brave-leo`](https://hlido.eu/reviews/brave-leo/) | Brave Leo | Infrastructure | 78 | — |
 | [`kensho`](https://hlido.eu/reviews/kensho/) | Kensho | Specialized verticals | 53 | — |
 | [`ravenpack`](https://hlido.eu/reviews/ravenpack/) | RavenPack | Specialized verticals | 65 | — |
-| [`alphasense`](https://hlido.eu/reviews/alphasense/) | AlphaSense | Specialized verticals | 90 | — |
+| [`alphasense`](https://hlido.eu/reviews/alphasense/) | AlphaSense | Specialized verticals | 78 | — |
 | [`paradigm-ai`](https://hlido.eu/reviews/paradigm-ai/) | Paradigm | Productivity | 78 | — |
 | [`lutra`](https://hlido.eu/reviews/lutra/) | Lutra | Workflow & Automation | 78 | — |
 | [`you-com-search`](https://hlido.eu/reviews/you-com-search/) | You.com Search | Research | 40 | — |
@@ -335,7 +335,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`recogni`](https://hlido.eu/reviews/recogni/) | Recogni | Infrastructure | 53 | — |
 | [`deepinfra`](https://hlido.eu/reviews/deepinfra/) | DeepInfra | Infrastructure | 78 | — |
 | [`haystack-deepset`](https://hlido.eu/reviews/haystack-deepset/) | Haystack | Workflow & Automation | 78 | — |
-| [`agno`](https://hlido.eu/reviews/agno/) | Agno | Workflow & Automation | 78 | — |
+| [`agno`](https://hlido.eu/reviews/agno/) | Agno | Workflow & Automation | 70 | — |
 | [`griptape`](https://hlido.eu/reviews/griptape/) | Griptape | Workflow & Automation | 78 | — |
 | [`livekit-agents`](https://hlido.eu/reviews/livekit-agents/) | LiveKit Agents | Voice | 78 | — |
 | [`swiggy-ai`](https://hlido.eu/reviews/swiggy-ai/) | Swiggy AI | AI Agent | 53 | — |
