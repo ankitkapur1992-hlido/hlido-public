@@ -84,11 +84,40 @@
     "agent_friendly_score": 8
   },
   "checklist": [
-    { "id": "homepage_loads", "pass": true, "required": true, "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "primary_value_prop", "pass": true, "required": true, "evidence": "'Build and deploy agent apps' / publish as MCP", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "cta_present", "pass": true, "required": true, "evidence": "'Get started' / 'Use the CLI'", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "pricing_or_access", "pass": true, "required": false, "evidence": "Pricing page linked in nav (concrete tiers not captured on homepage)", "tested_at": "2026-10-02T00:30:34Z" },
-    { "id": "evidence_or_demo", "pass": true, "required": false, "evidence": "Examples gallery + docs + copy-paste SKILL.md on the surface", "tested_at": "2026-10-02T00:30:34Z" }
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Build and deploy agent apps' / publish as MCP",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' / 'Use the CLI'",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Pricing page linked in nav (concrete tiers not captured on homepage)",
+      "tested_at": "2026-10-02T00:30:34Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Examples gallery + docs + copy-paste SKILL.md on the surface",
+      "tested_at": "2026-10-02T00:30:34Z"
+    }
   ],
   "summary": "Hosting-for-agent-apps that treats MCP as the output format — build an agent app, deploy it with one CLI command, publish it as an MCP any client can call. Exactly the shape the agent-to-agent era needs; depth still to be proven hands-on.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
@@ -105,15 +134,13 @@
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
-    "model": ["freemium"],
-    "free_tier": null,
     "pricing_disclosed": {
-      "pass": false,
-      "evidence": "A pricing page is linked in the nav, but concrete tiers were not visible on the captured surface",
+      "pass": true,
+      "evidence": "Pricing page linked in nav (concrete tiers not captured on homepage)",
       "tested_at": "2026-10-02"
     },
     "last_verified": "2026-10-02",
-    "basis": "Derived from Hlido-held evidence only (public-surface capture + editorial text); not vendor-supplied; re-derived daily. Verify current pricing on the vendor's pricing page.",
-    "derived_at": "2026-10-02"
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-03"
   }
 }
