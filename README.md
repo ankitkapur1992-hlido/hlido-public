@@ -371,7 +371,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`aiforgoogleslides`](https://hlido.eu/reviews/aiforgoogleslides/) | AI for Google Slides - Free Google Slides AI tool | Coding | 50 | FADING |
 | [`app-rapidtextai`](https://hlido.eu/reviews/app-rapidtextai/) | RapidTextAI - Advanced AI article generator, Content, and Image Generation Tools | Image & Design | 65 | — |
 | [`avatarai-me`](https://hlido.eu/reviews/avatarai-me/) | AI Avatar Generator - Create Custom AI Avatars of Yourself | Professional Photo Shoots with AI | Image & Design | 65 | — |
-| [`aws-amazon`](https://hlido.eu/reviews/aws-amazon/) | Agentic Coding Experience - Amazon Q Developer - AWS | Coding | 90 | — |
+| [`aws-amazon`](https://hlido.eu/reviews/aws-amazon/) | Agentic Coding Experience - Amazon Q Developer - AWS | Coding | 50 | — |
 | [`chatwithcloud`](https://hlido.eu/reviews/chatwithcloud/) | ChatWithCloud - Chat with your AWS Cloud from Terminal | Chat & Companion | 78 | — |
 | [`astra`](https://hlido.eu/reviews/astra/) | Astra | Productivity | 40 | — |
 | [`civitai`](https://hlido.eu/reviews/civitai/) | Civitai | Share your models | AI Agent | 65 | — |
