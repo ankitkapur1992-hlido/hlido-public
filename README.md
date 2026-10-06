@@ -37,7 +37,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`parakeeet-ai`](https://hlido.eu/reviews/parakeeet-ai/) | Parakeeet AI | Sales | 75 | STEADY |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
 | [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 80 | — |
-| [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 90 | — |
+| [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 92 | — |
 | [`jared-so`](https://hlido.eu/reviews/jared-so/) | jared-so | Productivity | 40 | — |
 | [`raccoon-ai`](https://hlido.eu/reviews/raccoon-ai/) | raccoon-ai | Productivity | 70 | — |
 | [`needle-2-0`](https://hlido.eu/reviews/needle-2-0/) | needle-2-0 | Productivity | 80 | — |
@@ -67,7 +67,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`octoclaw`](https://hlido.eu/reviews/octoclaw/) | OctoClaw | AI Agent | 40 | — |
 | [`molmoweb`](https://hlido.eu/reviews/molmoweb/) | MolmoWeb | AI Agent | 40 | — |
 | [`guide-ai`](https://hlido.eu/reviews/guide-ai/) | Guide | AI Agent | 53 | — |
-| [`adobe-firefly`](https://hlido.eu/reviews/adobe-firefly/) | Adobe Firefly | AI Agent | 53 | — |
+| [`adobe-firefly`](https://hlido.eu/reviews/adobe-firefly/) | Adobe Firefly | AI Agent | 82 | — |
 | [`tad-ai`](https://hlido.eu/reviews/tad-ai/) | Tad AI | AI Agent | 65 | — |
 | [`genfuse-ai`](https://hlido.eu/reviews/genfuse-ai/) | GenFuse AI | AI Agent | 78 | — |
 | [`outset-ai`](https://hlido.eu/reviews/outset-ai/) | Outset AI | AI Agent | 65 | — |
@@ -224,7 +224,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`hippocratic-ai`](https://hlido.eu/reviews/hippocratic-ai/) | Hippocratic AI | Specialized verticals | 53 | — |
 | [`suki-ai`](https://hlido.eu/reviews/suki-ai/) | Suki | Specialized verticals | 90 | — |
 | [`glass-health`](https://hlido.eu/reviews/glass-health/) | Glass Health | Specialized verticals | 78 | — |
-| [`abridge`](https://hlido.eu/reviews/abridge/) | Abridge | Specialized verticals | 53 | — |
+| [`abridge`](https://hlido.eu/reviews/abridge/) | Abridge | Specialized verticals | 75 | — |
 | [`nabla`](https://hlido.eu/reviews/nabla/) | Nabla | Specialized verticals | 78 | — |
 | [`mutiny`](https://hlido.eu/reviews/mutiny/) | Mutiny | Marketing & Content | 65 | — |
 | [`persado`](https://hlido.eu/reviews/persado/) | Persado | Marketing & Content | 53 | — |
@@ -256,7 +256,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`julius-ai`](https://hlido.eu/reviews/julius-ai/) | Julius | Infrastructure | 78 | — |
 | [`n8n`](https://hlido.eu/reviews/n8n/) | n8n | Workflow & Automation | 90 | — |
 | [`make-com`](https://hlido.eu/reviews/make-com/) | Make | Workflow & Automation | 90 | — |
-| [`activepieces`](https://hlido.eu/reviews/activepieces/) | Activepieces | Workflow & Automation | 90 | — |
+| [`activepieces`](https://hlido.eu/reviews/activepieces/) | Activepieces | Workflow & Automation | 72 | — |
 | [`zapier`](https://hlido.eu/reviews/zapier/) | Zapier | Workflow & Automation | 90 | — |
 | [`integrately`](https://hlido.eu/reviews/integrately/) | Integrately | Workflow & Automation | 90 | — |
 | [`langflow`](https://hlido.eu/reviews/langflow/) | Langflow | Workflow & Automation | 78 | — |
