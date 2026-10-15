@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1017)
+## Reviewed agents (1021)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -441,6 +441,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`nopeek`](https://hlido.eu/reviews/nopeek/) | nopeek | Coding | 90 | — |
 | [`sym-bot-xmesh-agent`](https://hlido.eu/reviews/sym-bot-xmesh-agent/) | @sym-bot/xmesh-agent | AI Agent | 73 | — |
 | [`mcp-abap-adt-pg-vector-rag`](https://hlido.eu/reviews/mcp-abap-adt-pg-vector-rag/) | @mcp-abap-adt/pg-vector-rag | Coding | 73 | — |
+| [`studio-foundation-runner`](https://hlido.eu/reviews/studio-foundation-runner/) | @studio-foundation/runner | Coding | 90 | — |
 | [`ipads-skvm-skvm`](https://hlido.eu/reviews/ipads-skvm-skvm/) | @ipads-skvm/skvm | Coding | 90 | — |
 | [`mcp-abap-adt-ollama-embedder`](https://hlido.eu/reviews/mcp-abap-adt-ollama-embedder/) | @mcp-abap-adt/ollama-embedder | Coding | 73 | — |
 | [`luxyie-ai-cli`](https://hlido.eu/reviews/luxyie-ai-cli/) | luxyie.ai-cli | Coding | 90 | — |
@@ -497,6 +498,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`nlux-react`](https://hlido.eu/reviews/nlux-react/) | @nlux/react | Frameworks & Eval | 90 | — |
 | [`vulnbuster`](https://hlido.eu/reviews/vulnbuster/) | VulnBuster | AI Agent | 40 | — |
 | [`gradio-agentchatbot`](https://hlido.eu/reviews/gradio-agentchatbot/) | gradio_agentchatbot | Chat & Companion | 57 | — |
+| [`site-agent`](https://hlido.eu/reviews/site-agent/) | site-agent | AI Agent | 57 | — |
 | [`cs-agent`](https://hlido.eu/reviews/cs-agent/) | cs-agent | Chat & Companion | 57 | — |
 | [`referatai`](https://hlido.eu/reviews/referatai/) | referatai | Chat & Companion | 57 | — |
 | [`openai-chatgpt-turbo-ui`](https://hlido.eu/reviews/openai-chatgpt-turbo-ui/) | OpenAI_chatgpt-turbo-UI | Chat & Companion | 40 | — |
@@ -574,7 +576,9 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`tdsfinal`](https://hlido.eu/reviews/tdsfinal/) | tdsfinal | AI Agent | 57 | — |
 | [`lavent-marketing-agent`](https://hlido.eu/reviews/lavent-marketing-agent/) | lavent-marketing-agent | AI Agent | 57 | — |
 | [`quiz-agent1`](https://hlido.eu/reviews/quiz-agent1/) | quiz-agent1 | AI Agent | 40 | — |
+| [`tdsproject2`](https://hlido.eu/reviews/tdsproject2/) | TDSPROJECT2 | AI Agent | 57 | — |
 | [`hs-unit4-agent`](https://hlido.eu/reviews/hs-unit4-agent/) | hs-unit4-agent | AI Agent | 57 | — |
+| [`voice-agent`](https://hlido.eu/reviews/voice-agent/) | Voice_Agent | AI Agent | 57 | — |
 | [`magic-patterns`](https://hlido.eu/reviews/magic-patterns/) | Magic Patterns | Image & Design | 90 | — |
 | [`bolt-new-v2`](https://hlido.eu/reviews/bolt-new-v2/) | Bolt.new (StackBlitz) | Coding | 90 | — |
 | [`coplay`](https://hlido.eu/reviews/coplay/) | Coplay | Coding | 90 | — |
