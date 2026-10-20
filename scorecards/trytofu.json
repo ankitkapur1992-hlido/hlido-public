@@ -1,0 +1,211 @@
+{
+  "schema_version": "2.0",
+  "slug": "trytofu",
+  "name": "Tofu",
+  "agent_url": "https://trytofu.ai",
+  "category": "Infrastructure",
+  "run_id": "run-trytofu-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T04:30:14.009Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Turns an app your coding agent just built into something other people can actually open - one paste, a real URL, and a published price.",
+    "body": "The gap this targets is genuine and getting wider: coding agents now produce working applications far faster than their users can deploy them, and the last mile - a URL, saved data, sign-in, transactional email, basic analytics - is still eight separate services and an afternoon. Tofu's answer is deliberately small. You paste one message into whatever agent you are already using, and your app comes back at a live link with persistence, authentication, sign-up email and visit counts attached. The surface names roughly eighteen agents it works with - Claude Code, Codex, Cursor, Gemini, Copilot, Windsurf, Cline, OpenCode, Warp and others - which is the right posture: it does not care which agent built the thing. Two choices make this score well. First, the pricing is published and specific: free for one app with saved data and sign-in included, Pro at $19.99 a month for unlimited apps with a seven-day trial. Second, the comparison is shown rather than claimed - the page states that doing it yourself takes about eight services, roughly $65-95 a month and about 5.5 hours of setup, and then puts its own number beside it. That is vendor-computed arithmetic and a reader should treat the hours figure as an estimate, but it is disclosed in a form that can be argued with, and a free tier means the claim can be tested rather than debated. The example apps sit at real subdomains, which is the cheapest possible proof and the one most vendors skip. The limits are the ones inherent to the position. This is a hosting and glue layer, so you inherit its platform: there is no migration or export story on the surface, the apps live under its subdomain in the examples, and nothing establishes operating history, uptime or what happens to a deployed app if the company stops. Saved data for five apps is included on Pro, which is a quiet limit worth reading before planning around 'unlimited'. For hobby projects, prototypes and internal tools the economics are excellent. For anything with real users, ask the continuity question first.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79) because the value proposition is narrow, concrete and immediately testable, the pricing is published with a usable free tier rather than gated behind a sales process, the cost comparison is disclosed with its own arithmetic instead of asserted as a percentage, and live example apps at real subdomains let a reader verify the core claim in a minute. Not higher because it is a platform dependency with no migration, export or continuity story on the public surface, no operating or uptime history, and an 'unlimited apps' headline that carries a quieter five-app limit on included saved data.",
+  "what_it_does_well": [
+    "Works with any coding agent - about eighteen are named - rather than tying the user to one toolchain",
+    "Publishes real prices: free for one app including saved data and sign-in, Pro $19.99/month with a seven-day trial",
+    "Shows its cost comparison with its own arithmetic (about eight services, roughly $65-95/month, about 5.5 hours of setup) instead of a bare percentage",
+    "Bundles the genuine last mile - public URL, saved data, sign-in, sign-up email, visit counts - rather than only hosting",
+    "Live example apps at real subdomains let the central claim be checked immediately",
+    "Onboarding is a single pasted message, which is the correct interface for a user whose tool is an agent",
+    "Documentation, features and pricing pages are all published and reachable without contact"
+  ],
+  "what_it_fails_at": [
+    "Platform dependency with no migration or export path described on the public surface",
+    "No operating history, uptime record or continuity statement - a deployed app's fate if the company stops is unaddressed",
+    "'Unlimited apps' on Pro carries a quieter limit of included saved data for five apps",
+    "Example apps are served on vendor subdomains; custom-domain support is not evidenced on the captured surface",
+    "The 5.5-hour setup comparison is a vendor estimate with no stated method",
+    "No stated scaling, rate or resource limits for an app that becomes popular",
+    "No programmatic surface for an agent to drive deployments beyond the pasted-message flow"
+  ],
+  "best_for": [
+    "Anyone who has built something with a coding agent and needs other people to use it today",
+    "Hobby projects, prototypes and internal tools where $19.99/month replaces a stack of subscriptions",
+    "Non-specialists who need auth, persistence and email without assembling them",
+    "Teams who want to test the claim for free before committing - the free tier covers one real app"
+  ],
+  "not_recommended_for": [
+    "Production applications with real users, until the migration and continuity questions are answered",
+    "Projects needing a custom domain, where support is not evidenced on the captured surface",
+    "Apps expected to scale, since no resource or rate limits are published",
+    "Teams who must be able to export and self-host their deployment"
+  ],
+  "red_flags": [
+    "No migration, export or continuity story is published for a platform that holds a deployed app and its saved data - the central risk of this position is unaddressed on the surface",
+    "The Pro tier headline says unlimited apps while included saved data is limited to five apps; the limit is disclosed but it is quieter than the headline"
+  ],
+  "compared_to": [
+    {
+      "slug": "replit-agent",
+      "verdict_diff": "Replit builds and hosts in one integrated environment with a longer track record; Tofu is agnostic about which agent built the app and attaches hosting afterwards at a lower, simpler price. Choose Replit to build and ship in one place; choose Tofu when the app already exists from another agent and you only need the last mile.",
+      "preferred_for_axis": "integrated-build-and-host-vs-agent-agnostic-last-mile"
+    },
+    {
+      "slug": "lovable",
+      "verdict_diff": "Lovable generates the application itself; Tofu does not generate anything and only publishes what your agent produced. They sit at different stages, so the comparison is about where you want the generation to happen, not about which hosts better.",
+      "preferred_for_axis": "generation-vs-publishing"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Paste one message into a coding agent and the app is served at a public link",
+      "source": "https://trytofu.ai (hero)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Deployed apps can save data, sign people in, send sign-up emails and count visits",
+      "source": "https://trytofu.ai (example app panel)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Free for one app with saved data and sign-in included; Pro $19.99/month for unlimited apps with a seven-day trial",
+      "source": "https://trytofu.ai and https://trytofu.ai/pricing",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Works with named agents including Claude Code, Codex, Cursor, Gemini, Copilot, Windsurf, Cline, OpenCode and Warp",
+      "source": "https://trytofu.ai (compatibility strip)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Live example apps served at real subdomains",
+      "source": "https://instinct-chess.trytofu.app and franks-kitchen.trytofu.app",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Doing it yourself takes about 8 services, $65-95/month and 5.5 hours of setup",
+      "source": "https://trytofu.ai (comparison band) - vendor estimate, method not stated",
+      "tested_at": "2026-10-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-driven by design, through the prompt rather than an API. The onboarding flow is a message pasted into any coding agent, which then wires the app for deployment - so a coding agent is the intended operator. No documented API, CLI or MCP server is advertised for programmatic deployment control beyond that flow.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T04:30:14.009Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Made an app with AI? Let people use it today.' - one pasted message gives the app a public link with data, sign-in and email",
+      "tested_at": "2026-10-18T04:30:14.009Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start free' / 'or copy the message'",
+      "tested_at": "2026-10-18T04:30:14.009Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Published tiers: free for one app, Pro $19.99/month with a 7-day trial, plus an itemised comparison against assembling the stack yourself",
+      "tested_at": "2026-10-18T04:30:14.009Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Live example apps at real subdomains (instinct-chess.trytofu.app, franks-kitchen.trytofu.app) plus docs and features pages",
+      "tested_at": "2026-10-18T04:30:14.009Z"
+    }
+  ],
+  "summary": "Turns an app your coding agent just built into something other people can actually open - one paste, a real URL, and a published price.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/trytofu.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium",
+      "subscription"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…its cost comparison with its own arithmetic (about eight services, roughly $65-95/month, about 5.5 hours of setup) instead of a bare percentage",
+        "source": "what_it_does_well[2]"
+      },
+      {
+        "quote": "Hobby projects, prototypes and internal tools where $19.99/month replaces a stack of subscriptions",
+        "source": "best_for[1]"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Published tiers: free for one app, Pro $19.99/month with a 7-day trial, plus an itemised comparison against assembling the stack yourself",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
