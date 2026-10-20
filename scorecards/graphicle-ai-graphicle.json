@@ -1,0 +1,191 @@
+{
+  "schema_version": "2.0",
+  "slug": "graphicle-ai-graphicle",
+  "name": "Graphicle (KarLex AI)",
+  "agent_url": "https://www.karlex.ai",
+  "category": "Coding",
+  "run_id": "run-graphicle-ai-graphicle-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T00:31:28.977Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A local, Apache-2.0 code-graph and memory layer that returns cited excerpts to coding agents - genuinely useful, genuinely version 0.1.1.",
+    "body": "Coding agents fail most often by confidently answering from the wrong part of a repository, and the fix is retrieval that can be checked. Graphicle is a single Rust program that maps your repository into a code graph, indexes the project's docs, decisions and past sessions, and returns cited file-and-line excerpts to Claude Code, Cursor or Codex. The citation is the part that matters: an excerpt you can open is an excerpt you can disprove, which is a different product from a similarity score. Installation is a brew tap and `graphicle setup`, it runs entirely on your machine, and the surface states plainly that there is no account and no telemetry - a claim whose shape the open Apache-2.0 source lets a sceptical reader verify rather than take on trust. Alongside it sits CIEL, the company's research line: a 125M-parameter model reported to recall exact facts at 64K tokens after training on sequences of at most 8K. That is an interesting result and it is also, by the site's own account, four manuscripts under review as of September 2026. It has not been through peer review and must not be read as a validated capability of anything you can deploy today; the company is appropriately clear about which half is product and which half is research, and we are holding them to their own distinction. The honest summary of the product half is that it is early. Version 0.1.1, Windows marked preview, no operating history, no stated maintenance commitment, and nothing on the surface that establishes how the graph behaves on a large or polyglot monorepo - the case where this class of tool usually breaks. For a free, local, open-source dependency that risk profile is reasonable. For anything load-bearing, wait for a 1.0.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74) because the product is real, free, locally installable and Apache-2.0, and because its central design choice - returning cited file-and-line excerpts rather than opaque relevance - is the right answer to the failure mode it targets and is verifiable by installing it. It does not score higher because delivery is unproven at version 0.1.1 with Windows in preview, there is no operating history or maintenance commitment on the surface, behaviour on large polyglot repositories is undocumented, and the research line that carries much of the company's ambition is explicitly still under review.",
+  "what_it_does_well": [
+    "Returns cited file-and-line excerpts, so an agent's retrieval can be checked rather than trusted",
+    "Runs entirely locally as one Rust binary - no account, no telemetry, and open source so that claim is inspectable",
+    "Apache-2.0 and free, with a two-command install (brew tap, then graphicle setup)",
+    "Covers docs, decisions and past sessions alongside code, which is where project context actually lives",
+    "Clearly separates shipped product (Graphicle) from unreviewed research (CIEL) instead of blending them into one claim"
+  ],
+  "what_it_fails_at": [
+    "Version 0.1.1 with Windows marked preview - delivery at scale is unproven",
+    "No operating history, release cadence or maintenance commitment stated on the public surface",
+    "No documented behaviour or benchmark on large or polyglot monorepos, the usual failure case for code-graph tools",
+    "The CIEL recall result rests on manuscripts under review, not peer-reviewed or reproduced findings",
+    "No managed option and no support commitment - entirely self-hosted and self-supported",
+    "No published evaluation comparing its retrieval quality against the agents' built-in search"
+  ],
+  "best_for": [
+    "Developers running Claude Code, Cursor or Codex against a repository large enough that the agent keeps reading the wrong file",
+    "Teams who need code context to stay on the machine - no account and no telemetry, with source available to confirm it",
+    "Anyone who wants retrieval they can audit by opening the cited lines",
+    "Early adopters comfortable with a pre-1.0 local dependency"
+  ],
+  "not_recommended_for": [
+    "Teams needing a supported, versioned dependency with a maintenance commitment - this is 0.1.1",
+    "Windows-first shops, where support is explicitly preview",
+    "Buyers evaluating the CIEL memory claims as deployable capability - they are unreviewed research",
+    "Very large polyglot monorepos, where behaviour is undocumented and should be piloted before reliance"
+  ],
+  "red_flags": [
+    "Version 0.1.1 with no stated maintenance commitment or operating history - continuity risk for anything load-bearing",
+    "The CIEL long-context recall result is drawn from manuscripts under review as of September 2026; it is not peer-reviewed and should not be read as validated"
+  ],
+  "compared_to": [
+    {
+      "slug": "sourcegraph-cody",
+      "verdict_diff": "Sourcegraph Cody brings code intelligence at organisation scale with a hosted, supported product and a price. Graphicle is a free local binary at 0.1.1 with no account and no telemetry. Choose Cody when you need scale, support and administration; choose Graphicle when the requirement is that nothing leaves the machine and you can carry pre-1.0 risk.",
+      "preferred_for_axis": "local-and-private-vs-supported-at-scale"
+    },
+    {
+      "slug": "continue-dev",
+      "verdict_diff": "Continue is an open-source agent harness inside the editor; Graphicle is a retrieval layer the harness calls. They are complements more than substitutes - Graphicle's claim is the quality and citability of what gets retrieved, not the loop that uses it.",
+      "preferred_for_axis": "retrieval-layer-vs-agent-harness"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Local code graph and memory returning cited excerpts to Claude Code, Cursor and Codex",
+      "source": "https://www.karlex.ai (Graphicle section)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Version 0.1.1, Apache-2.0, macOS and Linux supported with Windows in preview",
+      "source": "https://www.karlex.ai (install block)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "No account and no telemetry",
+      "source": "https://www.karlex.ai (install block feature list)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Install via brew install graphicle-ai/tap/graphicle then graphicle setup",
+      "source": "https://www.karlex.ai (install block)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "CIEL 125M-parameter model recalls exact facts at 64K tokens after training on sequences of at most 8K",
+      "source": "https://www.karlex.ai/ciel - stated as manuscripts under review, September 2026",
+      "tested_at": "2026-10-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Via the CLI and the local index. Graphicle is installed as a single binary and consumed by coding agents (Claude Code, Cursor, Codex) that call it for cited excerpts; integration is through the command-line surface rather than a documented API or MCP server. Open source, so an agent-side wrapper is straightforward, but no first-party MCP server is advertised.",
+    "agent_friendly_score": 7
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T00:31:28.977Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Code graph and memory for coding agents' - cited excerpts from code, docs and past sessions, running locally",
+      "tested_at": "2026-10-18T00:31:28.977Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get Graphicle' / brew install command",
+      "tested_at": "2026-10-18T00:31:28.977Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free and open source (Apache-2.0) with no account required; stated plainly on the install block",
+      "tested_at": "2026-10-18T00:31:28.977Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Version 0.1.1 install path is published and runnable, and research manuscripts are listed, though no live demo or benchmark is provided",
+      "tested_at": "2026-10-18T00:31:28.977Z"
+    }
+  ],
+  "summary": "A local, Apache-2.0 code-graph and memory layer that returns cited excerpts to coding agents - genuinely useful, genuinely version 0.1.1.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/graphicle-ai-graphicle.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free and open source (Apache-2.0) with no account required; stated plainly on the install block",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
