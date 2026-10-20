@@ -1,0 +1,198 @@
+{
+  "schema_version": "2.0",
+  "slug": "getviberia",
+  "name": "Viberia",
+  "agent_url": "https://getviberia.com",
+  "category": "Coding",
+  "run_id": "run-getviberia-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T04:30:49.174Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 62,
+  "tier": "FADING",
+  "laddoo_score": 62,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A game-styled desktop console for running many coding agents at once - an appealing idea shipped on a page that was still rendering placeholder text when we captured it.",
+    "body": "Viberia's pitch is that managing several coding agents should not mean juggling terminal windows, and that the right interface for a 'semi-autonomous zoo' is closer to a game than a shell. Agents appear as named roles - planner, developer, researcher, analyst, designer, reviewer - on one screen showing every agent, task and status; you set the mission and they are said to organise themselves, spinning up teams, delegating and talking to each other; you click an agent like an NPC to check progress and decide what happens next. You bring your own Claude, GPT or Gemini keys or subscriptions, which is the right call commercially and removes a layer of vendor lock on model spend. A Mac download is available now, Windows is a waitlist, and there is documentation, a quickstart, concepts, an FAQ, a changelog and a Discord. Two things keep this in the lower band, and the first is simply what we saw. The captured page carried unrendered placeholder strings - 'LOADING BLOCK 1' through 'LOADING BLOCK 4' and 'LOADING HERO' - where the feature sections and hero media should have been. That is a live defect on the primary marketing surface, and for a product whose entire proposition is that it makes a chaotic workflow legible, shipping a page that is itself visibly unfinished is a signal about craft, not a cosmetic quibble. The second is that the central capability claim - that agents work out their own org chart, form teams and delegate - is the hardest thing in the pitch and the one with nothing behind it on the surface: no demo, no trace, no worked example, no evaluation. Self-organising multi-agent delegation is where most such systems degrade into expensive loops, and a claim that strong needs evidence we could not find. There is also no price anywhere. The idea deserves a second look once the surface is finished and the autonomy claim is shown rather than asserted.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (62) because the public surface shipped with unrendered placeholder blocks where its feature and hero sections belong, the strongest capability claim - agents self-organising into teams and delegating - is presented with no demo, trace or worked example, and no pricing is disclosed. It is not lower because a working Mac build is downloadable today, documentation and a changelog exist, and bring-your-own-keys is a genuine advantage on cost and control.",
+  "what_it_does_well": [
+    "Single-screen view of every agent, task and status instead of multiple terminal windows",
+    "Bring your own Claude, GPT or Gemini keys or subscriptions - no vendor markup on model spend and no lock-in on the model layer",
+    "Mac build is downloadable now, free, with no account step evident",
+    "Documentation, quickstart, concepts, FAQ and a public changelog are all published",
+    "Role-based framing (planner, developer, researcher, analyst, designer, reviewer) gives non-experts a usable mental model",
+    "Active Discord community channel for support"
+  ],
+  "what_it_fails_at": [
+    "The captured live page carried unrendered placeholder text - LOADING BLOCK 1 through 4 and LOADING HERO - where feature and hero content should appear",
+    "The core claim that agents organise themselves, form teams and delegate is unsupported by any demo, trace or worked example",
+    "No pricing of any kind is disclosed anywhere on the surface",
+    "Windows is waitlist-only; the product is effectively macOS-only today",
+    "No cost-control story for a system that is designed to run many agents in parallel against metered APIs",
+    "No operating history, team information or maintenance commitment on the surface"
+  ],
+  "best_for": [
+    "Developers who already run several coding agents at once and want one visual console instead of many terminals",
+    "People who prefer a graphical, role-based view of agent work to a command line",
+    "Teams who want to keep model spend on their own provider accounts",
+    "Early adopters on macOS willing to try a free build and report back"
+  ],
+  "not_recommended_for": [
+    "Anyone evaluating the self-organising multi-agent claim as a dependable capability - it is unevidenced on the public surface",
+    "Windows users - the build is waitlisted",
+    "Teams needing predictable spend when running many agents in parallel against metered APIs",
+    "Buyers who need published pricing, support terms or operating history"
+  ],
+  "red_flags": [
+    "The live marketing page was serving unrendered placeholder strings (LOADING BLOCK 1-4, LOADING HERO) at capture time - a visible defect on the primary public surface",
+    "The headline autonomy claim - agents figure out the org chart, spin up teams and delegate - is the strongest claim on the page and carries no demo, trace or evaluation behind it",
+    "No pricing is published, and no cost-control guidance exists for a product whose design encourages many parallel metered API calls"
+  ],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is a mature, supported, priced product that puts one agent inside an editor; Viberia is a free early console for supervising many agents outside the editor. Choose Cursor for dependable daily work; try Viberia only if parallel supervision is the specific problem and you can tolerate an unfinished surface.",
+      "preferred_for_axis": "maturity-and-support"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "OpenCode is an open-source agent you run and inspect directly; Viberia is a closed desktop layer above agents like it. OpenCode gives you auditability, Viberia offers visual supervision - and only OpenCode's behaviour can currently be inspected.",
+      "preferred_for_axis": "auditability-vs-visual-supervision"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Desktop console for running multiple coding agents with one screen showing every agent, task and status",
+      "source": "https://getviberia.com (hero and 'see everything at once')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Bring your own Claude, GPT or Gemini API keys and/or subscriptions",
+      "source": "https://getviberia.com ('your keys, your rules')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Mac download available; Windows is a waitlist",
+      "source": "https://getviberia.com (download block)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Documentation, quickstart, concepts, FAQ and changelog are published",
+      "source": "https://getviberia.com/docs/getting-started/ and /docs/",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Live page served unrendered placeholder blocks (LOADING BLOCK 1-4, LOADING HERO)",
+      "source": "https://getviberia.com (captured page text, 2026-10-18)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Agents organise themselves, spin up teams and delegate tasks",
+      "source": "https://getviberia.com ('they organize themselves') - no demo, trace or example provided",
+      "tested_at": "2026-10-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Inverted and closed. Viberia is a desktop supervisor that drives coding agents using your own provider keys; it advertises no API, CLI, MCP server or webhook for an external agent to drive Viberia. It is a human-facing console over an agent fleet, not a component in an automated stack.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T04:30:49.174Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Run a semi-autonomous zoo' - one screen showing every agent, task and status, with bring-your-own keys",
+      "tested_at": "2026-10-18T04:30:49.174Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for Mac' / Windows waitlist / Discord",
+      "tested_at": "2026-10-18T04:30:49.174Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing of any kind is disclosed; the Mac build is free to download and model cost falls to the user's own provider keys",
+      "tested_at": "2026-10-18T04:30:49.174Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "No demo, trace or worked example of the self-organising behaviour; the live page was serving unrendered placeholder blocks where feature media should be",
+      "tested_at": "2026-10-18T04:30:49.174Z"
+    }
+  ],
+  "summary": "A game-styled desktop console for running many coding agents at once - an appealing idea shipped on a page that was still rendering placeholder text when we captured it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/getviberia.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "usage-based"
+    ],
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing of any kind is disclosed; the Mac build is free to download and model cost falls to the user's own provider keys",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
