@@ -1,0 +1,212 @@
+{
+  "schema_version": "2.0",
+  "slug": "agent37",
+  "name": "Agent 37",
+  "agent_url": "https://agent37.com",
+  "category": "Infrastructure",
+  "run_id": "run-agent37-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T04:30:31.395Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A cloud sandbox for agents that publishes its unit rates, shows its own cost comparison with sources, and offers to refund the difference - the price transparency is the product.",
+    "body": "Agent sandboxes are a crowded category and most entrants compete on features they cannot prove. Agent 37 competes on price and then does the one thing that makes a price claim assessable: it publishes the arithmetic. The surface carries per-unit rates (vCPU-hour, GB-hour of memory, GB-hour of disk), a configurable estimator that shows a worked monthly figure for a given shape and duty cycle, and a side-by-side monthly comparison against Hetzner, AWS EC2, Daytona, E2B, Cloudflare Sandbox, Modal and Vercel Sandbox with a Sources link and a multiplier beside each. It also offers to refund the difference if you find a cheaper sandbox. That is a falsifiable commitment, and it is the right structure for a claim like '94% lower cost than most sandbox providers' - which remains vendor-computed arithmetic on vendor-chosen comparators, and should be read as such, but is disclosed in a form a buyer can re-derive rather than asserted as a bare percentage. The rest of the offering is competent and self-serve: ready-made harnesses for Hermes, OpenClaw, Claude Code, Codex, OpenCode, Grok and others or bring your own, per-customer sandbox isolation for tools, files and credentials, background jobs, desktop and browser environments, plain Docker containers, metered by the minute, $5 free credit, a dashboard, docs, a security page and case studies. What is not established is operating history and durability. Y Combinator backing and 'powering agents for over 100 companies' are both stated without a date or a method, the named logos are small companies, and a provider competing primarily on being the cheapest carries an obvious question about what happens to those rates later. For bursty, non-critical agent workloads the economics are hard to argue with; for anything you cannot afford to re-platform, price the migration in.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the central claim is a price claim and the vendor publishes the unit rates, the worked estimate, the comparison method with sources and a price-match commitment - which is the most checkable pricing disclosure in this batch - and because the product is self-serve, documented and immediately usable with free credit. Not VITAL because operating history and scale claims carry no date or method, the comparison is vendor-computed on vendor-chosen comparators, and a position built on being cheapest is the position most exposed to later repricing, which nothing on the surface addresses.",
+  "what_it_does_well": [
+    "Publishes per-unit rates for vCPU, memory and disk, with per-minute, per-hour and per-month views",
+    "Shows its own cost comparison against seven named providers with multipliers and a Sources link, rather than asserting a bare percentage",
+    "Offers to refund the difference if a cheaper sandbox is found - a falsifiable commitment, not a slogan",
+    "Per-customer sandbox isolation for tools, files and credentials is a stated design property",
+    "Self-serve with $5 free credit, a dashboard and docs - evaluable without a sales conversation",
+    "Supports ready-made agent harnesses (Hermes, OpenClaw, Claude Code, Codex, OpenCode, Grok) or bring-your-own, plus plain Docker containers",
+    "Metered by the minute rather than by the hour, which matters for bursty agent workloads"
+  ],
+  "what_it_fails_at": [
+    "'94% lower cost than most sandbox providers' is vendor-computed arithmetic on vendor-chosen comparators and configurations",
+    "'Powering agents for over 100 companies' carries no date or counting method",
+    "No operating history, uptime record or published SLA visible on the public surface",
+    "Named customer logos are small companies; no enterprise reference is evidenced",
+    "A position built on lowest price is exposed to later repricing and nothing on the surface addresses rate stability",
+    "Compliance and certification posture is not evidenced beyond a security page"
+  ],
+  "best_for": [
+    "Teams running bursty or high-volume agent sandboxes where compute cost is the binding constraint",
+    "Developers who want per-customer isolation of tools, files and credentials without building it",
+    "Anyone who needs to model sandbox cost before committing - the unit rates and estimator make that possible",
+    "Projects hosting agent harnesses (Claude Code, Codex, OpenCode and similar) in the cloud rather than on a laptop"
+  ],
+  "not_recommended_for": [
+    "Workloads that cannot tolerate re-platforming if rates change - price in the migration",
+    "Buyers who require a published SLA, uptime history or named enterprise references",
+    "Regulated deployments needing evidenced certifications rather than a security page",
+    "Teams who need the lowest latency to a specific region - no region or performance commitments are published"
+  ],
+  "red_flags": [
+    "The headline '94% lower cost' and the '100+ companies' figure are both vendor-stated without a date or method; the cost comparison is disclosed with sources, which is better than most, but it remains the vendor's own arithmetic on comparators it selected",
+    "No operating history, uptime record or SLA is published, and the named customers are small companies - continuity is unestablished for a provider competing on price"
+  ],
+  "compared_to": [
+    {
+      "slug": "e2b",
+      "verdict_diff": "E2B is the established agent-sandbox reference with a longer public track record and broader SDK surface; Agent 37 appears in E2B's own comparison row at a fraction of the monthly cost. Choose E2B when maturity and ecosystem matter more than unit price; choose Agent 37 when sandbox spend is the binding constraint and you can carry provider risk.",
+      "preferred_for_axis": "maturity-vs-unit-cost"
+    },
+    {
+      "slug": "modal-com",
+      "verdict_diff": "Modal is a general serverless compute platform with deep Python ergonomics and a wide workload range; Agent 37 is narrower and cheaper, aimed specifically at per-customer agent sandboxes. Choose Modal for varied production compute; choose Agent 37 for many isolated, bursty agent environments.",
+      "preferred_for_axis": "general-compute-vs-agent-sandbox-economics"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Cloud sandbox infrastructure for agents with per-customer isolation of tools, files and credentials",
+      "source": "https://agent37.com (hero and harness section)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Published unit rates: $0.0011 per vCPU-hour, $0.00096 per GB-hour memory, $0.00012 per GB-hour disk, metered by the minute",
+      "source": "https://agent37.com (unit rates band)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "$5 free credit and self-serve start",
+      "source": "https://agent37.com ('Start Free', '$5 free credit')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Offers to refund the difference if a cheaper sandbox is found",
+      "source": "https://agent37.com (pricing section)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Monthly cost comparison against Hetzner, AWS EC2, Daytona, E2B, Cloudflare Sandbox, Modal and Vercel Sandbox with a Sources link",
+      "source": "https://agent37.com (monthly usage comparison)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "94% lower cost than most sandbox providers",
+      "source": "https://agent37.com (hero) - vendor-computed on vendor-selected comparators",
+      "tested_at": "2026-10-18",
+      "verified": false
+    },
+    {
+      "claim": "Powering agents for over 100 companies",
+      "source": "https://agent37.com (customer band) - no date or counting method stated",
+      "tested_at": "2026-10-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Primary use case. Agent 37 hosts the agent itself - a ready-made harness (Hermes, OpenClaw, Claude Code, Codex, OpenCode, Grok) or your own, in an isolated sandbox with its own tools, files and credentials, plus background jobs, desktop and browser environments and plain Docker containers. A dashboard and docs are published; the programmatic surface is documented behind the docs rather than advertised in detail on the homepage.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T04:30:31.395Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Cloud Sandbox for Agents. You build the agents. We run the infrastructure.'",
+      "tested_at": "2026-10-18T04:30:31.395Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start Free' / 'Talk to the founder'",
+      "tested_at": "2026-10-18T04:30:31.395Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Full unit rates, a configurable monthly estimator, a seven-provider comparison with sources and a price-match offer - the most transparent pricing in this batch",
+      "tested_at": "2026-10-18T04:30:31.395Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Self-serve start with $5 free credit, plus a dashboard, docs, security page and case studies reachable from the masthead",
+      "tested_at": "2026-10-18T04:30:31.395Z"
+    }
+  ],
+  "summary": "A cloud sandbox for agents that publishes its unit rates, shows its own cost comparison with sources, and offers to refund the difference - the price transparency is the product.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/agent37.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "usage-based",
+      "freemium"
+    ],
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…and browser environments, plain Docker containers, metered by the minute, $5 free credit, a dashboard, docs, a security page and case studies. What is not…",
+        "source": "hlido_opinion.body"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Full unit rates, a configurable monthly estimator, a seven-provider comparison with sources and a price-match offer - the most transparent pricing in this batch",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
