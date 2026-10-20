@@ -1,0 +1,192 @@
+{
+  "schema_version": "2.0",
+  "slug": "traceforce",
+  "name": "Traceforce",
+  "agent_url": "https://traceforce.ai",
+  "category": "Specialized verticals",
+  "run_id": "run-traceforce-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T04:30:39.078Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "On-device security and control for AI agents - the right architecture for where AI actually runs, sold with trust claims that name no customer and no price.",
+    "body": "Traceforce makes an argument we think is correct: AI use has moved off the web page and onto the device, into desktop apps, CLI agents and MCP servers, and security tooling that watches the network sees almost none of it. Its answer is an on-device agent deployed through existing mobile-device-management tooling - Jamf, JumpCloud, NinjaOne and Iru are named - that tracks every tool call from MCP servers and CLIs, blocks dangerous actions, and records prompts, tool calls, reasoning and outcomes rather than just processes. The incident view it calls TraceGraph is the part that would matter in practice: when something goes wrong with an agent, the reconstruction you need is the chain of intent and tool invocations, which conventional endpoint logging does not hold. It also auto-patches AI packages on-device with policy and audit logs, and publishes an open-source MCP scanner, which is a credible signal in a field where most vendors publish nothing inspectable. Deployment is claimed at under fifteen minutes through an existing MDM, which is a sensible wedge. What the surface does not do is let anyone verify the company. 'Trusted by companies that power the Fortune 500' names no customer and is not checkable - and it is a construction that implies enterprise adoption without asserting it, which is worth reading carefully. The headline counts, 1,000+ devices secured and 1,000+ MCPs curated, carry no date and no counting method; a devices figure in particular is a scale claim and 1,000 is a modest one, so stating it without context tells a buyer very little. There is a compliance and certifications section but the capture does not evidence which certifications are held. And there is no pricing anywhere - the routes are 'get started' and a free trial. For a security product a buyer will deploy to every endpoint they own, published certifications and named references are not marketing niceties; they are the evidence base. The architecture here is the strongest part of this record and the verifiability is the weakest.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73) because the architectural thesis - on-device visibility and control over MCP and CLI tool calls, deployed through existing MDM - is well-matched to where agent risk actually sits, the incident-reconstruction and auto-patching capabilities are specific, and publishing an open-source MCP scanner is an inspectable, falsifiable contribution. Not higher because the trust claims name no customer, the headline device and MCP counts carry no date or method, the certifications are referenced but not evidenced on the captured surface, and no pricing is disclosed for a product intended for fleet-wide deployment.",
+  "what_it_does_well": [
+    "Addresses agent activity on the device - browser AI, desktop apps and CLI agents - rather than at the network, which is where the visibility gap actually is",
+    "Tracks tool calls from MCP servers and CLIs and can block dangerous actions, not merely log them",
+    "Incident view records prompts, tool calls, reasoning and outcomes, which is the chain an agent investigation needs",
+    "Deploys through existing MDM tooling (Jamf, JumpCloud, NinjaOne, Iru) instead of requiring new infrastructure",
+    "Publishes an open-source MCP scanner - an inspectable artifact in a category where most vendors publish none",
+    "Automated on-device remediation of AI packages with policy and audit logs, rather than remediation scripts",
+    "Free trial and self-serve start, so evaluation does not require a sales process"
+  ],
+  "what_it_fails_at": [
+    "'Trusted by companies that power the Fortune 500' names no customer and is not verifiable from the public surface",
+    "Headline counts (1,000+ devices, 1,000+ MCPs curated) carry no date and no counting method",
+    "A compliance and certifications section is present but which certifications are held is not evidenced on the captured surface",
+    "No pricing of any kind is published for a product intended for fleet-wide deployment",
+    "No operating history, funding or team information visible on the captured surface",
+    "The blocking capability's false-positive behaviour is undocumented - a control that stops agent actions needs a stated error profile"
+  ],
+  "best_for": [
+    "Security teams that have lost visibility as AI use moved into desktop apps, CLI agents and MCP servers",
+    "Organisations already running Jamf, JumpCloud, NinjaOne or Iru who want AI controls through existing deployment rails",
+    "Teams needing to reconstruct what an agent did - prompts, tool calls, reasoning, outcomes - after an incident",
+    "Anyone wanting to inventory and govern MCP servers in use across a fleet"
+  ],
+  "not_recommended_for": [
+    "Buyers who require named customer references or evidenced certifications before a fleet-wide security deployment",
+    "Teams needing to budget before engaging - no pricing is published",
+    "Organisations without MDM, where the stated 15-minute onboarding does not apply",
+    "Deployments that cannot tolerate an undocumented false-positive profile on an action-blocking control"
+  ],
+  "red_flags": [
+    "'Trusted by companies that power the Fortune 500' names no customer and cannot be verified; it is phrased to imply enterprise adoption without asserting a checkable fact",
+    "The 1,000+ devices and 1,000+ MCPs-curated figures carry no date or counting method, and 1,000 devices is a modest scale to publish without context",
+    "A compliance and certifications section is shown but the specific certifications are not evidenced on the captured surface - for an endpoint security product this is the core evidence base, not a detail",
+    "No pricing is disclosed for a product a buyer would deploy across every endpoint they own"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "On-device security for browser AI, desktop apps and CLI agents rather than network-based monitoring",
+      "source": "https://traceforce.ai ('On-Device, Not On The Wire')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Tracks every tool call from MCP servers to CLIs and stops dangerous actions",
+      "source": "https://traceforce.ai ('Stops Dangerous Actions')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Incident intelligence records prompts, tool calls, reasoning and outcomes",
+      "source": "https://traceforce.ai (TraceGraph section)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Integrates with Jamf, JumpCloud, NinjaOne and Iru for MDM-based deployment",
+      "source": "https://traceforce.ai (Preferred MDM Partner Network)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Publishes an open-source MCP scanner",
+      "source": "https://traceforce.ai (masthead link, 'Open-source MCP scanner')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Trusted by companies that power the Fortune 500",
+      "source": "https://traceforce.ai (trust band) - no customer named, not verifiable",
+      "tested_at": "2026-10-18",
+      "verified": false
+    },
+    {
+      "claim": "1,000+ devices secured and 1,000+ MCPs curated",
+      "source": "https://traceforce.ai (statistics band) - no date or counting method stated",
+      "tested_at": "2026-10-18",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Governance rather than integration. Traceforce observes and constrains agents rather than being driven by them: it inspects MCP and CLI tool calls on the device and can block actions, and it publishes an open-source MCP scanner that is independently runnable. No API, CLI or MCP server for an external agent to drive Traceforce is advertised on the public surface.",
+    "agent_friendly_score": 5
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T04:30:39.078Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Security Beyond the Browser' - on-device visibility and control over browser AI, desktop apps and CLI agents",
+      "tested_at": "2026-10-18T04:30:39.078Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Get started' / 'Start a free trial'",
+      "tested_at": "2026-10-18T04:30:39.078Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing published anywhere on the public surface; routes are a free trial or a sales contact",
+      "tested_at": "2026-10-18T04:30:39.078Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "An open-source MCP scanner is published and independently runnable, and a free trial is offered - though no named customer evidence or specific certification is shown",
+      "tested_at": "2026-10-18T04:30:39.078Z"
+    }
+  ],
+  "summary": "On-device security and control for AI agents - the right architecture for where AI actually runs, sold with trust claims that name no customer and no price.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/traceforce.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing published anywhere on the public surface; routes are a free trial or a sales contact",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
