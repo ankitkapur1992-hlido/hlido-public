@@ -1,0 +1,187 @@
+{
+  "schema_version": "2.0",
+  "slug": "wise-vision-mcp-server-ros-2",
+  "name": "WiseVision ROS2 MCP",
+  "agent_url": "https://www.wisevision.tech/",
+  "category": "Infrastructure",
+  "run_id": "run-wise-vision-mcp-server-ros-2-v2-editor-2026-10-20",
+  "run_at": "2026-10-17T12:31:17.006Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 80,
+  "tier": "STEADY",
+  "laddoo_score": 80,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "An MPL-2.0 MCP server that puts a ROS 2 robot fleet behind a tool interface an agent can read and - deliberately optionally - drive.",
+    "body": "Robotics and agent tooling have mostly developed in separate rooms, and this is one of the few things we have reviewed that is built for the doorway between them. ROS2 MCP exposes a ROS 2 system through MCP: an agent can list live topics, services and actions and read their message types with no glue code, subscribe to topics, follow action status and query recorded history to explain what happened, and - if you let it - publish, call a service or send an action goal. The capability that most impressed us is the one most vendors would have buried: write access can be switched off entirely with a single environment variable. For a layer that sits between a language model and a physical machine, a one-flag read-only mode is the difference between a tool a safety reviewer can approve and one they cannot. The distribution choices are similarly checkable rather than asserted - MPL-2.0 open source, a Docker image, stdio transport, presence in Docker's official MCP catalog, ROS 2 Humble and Jazzy support, documentation generated from the code, and free commercial use with no licence key and no paid tier. Against that, the commercial story is thinner than the open-source one: WiseOS, the fleet-wide console that would make this a product rather than a component, is early access with private code, so nothing about it can be assessed. The defence and dual-use positioning is stated openly and we take no view on it beyond noting that the battlefield statistic used to frame it carries no source on the page. Scope is also genuinely narrow - if you do not run ROS 2, none of this is for you - but within that scope it is well-judged work.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the open-source component is complete, independently verifiable (MPL-2.0 source, Docker image, catalog listing, docs generated from code) and solves a real integration problem with an unusually responsible safety default in the single-variable read-only switch, and because free commercial use with no licence key removes the usual evaluation friction. Not VITAL because the commercial layer that would make this a platform (WiseOS) is early access with private code and therefore unassessable, operating history is not established on the surface, and the dual-use framing leans on an unsourced statistic.",
+  "what_it_does_well": [
+    "Exposes ROS 2 topics, services, actions and message types to an agent with no glue code",
+    "Write access (publish, service call, action goal) can be disabled entirely with one environment variable - a safety default most vendors would not ship",
+    "Open source under MPL-2.0 with free commercial use, no licence key and no paid tier",
+    "Ships as a Docker image over stdio and is listed in Docker's official MCP catalog - distribution is checkable, not claimed",
+    "Supports both ROS 2 Humble and Jazzy, the two versions most fleets actually run",
+    "Documentation is generated from the code, so the tool reference cannot silently drift from the implementation"
+  ],
+  "what_it_fails_at": [
+    "WiseOS, the fleet console that would make this a product rather than a component, is early access with private code and cannot be assessed",
+    "No operating history, release cadence or maintenance commitment visible on the public surface",
+    "The dual-use section's framing statistic (25,000+ Ukrainian ground-robot missions in August 2026) carries no source on the page",
+    "Narrow by construction - no value outside a ROS 2 estate",
+    "No managed or hosted option; the operator carries all deployment and security responsibility",
+    "Security model is documented but its adequacy for a fleet with physical actuators is not independently attested"
+  ],
+  "best_for": [
+    "Robotics teams running ROS 2 Humble or Jazzy who want an agent to explain fleet behaviour from live and recorded data",
+    "Operators who need a read-only diagnostic path before they will consider giving an agent any write access",
+    "Teams standardising on MCP who want robot telemetry in the same tool surface as the rest of their stack",
+    "Anyone needing commercially usable robotics middleware with no licence key or vendor negotiation"
+  ],
+  "not_recommended_for": [
+    "Anyone not running ROS 2 - there is nothing here for other robotics stacks",
+    "Teams needing a managed, hosted or supported deployment with a contractual commitment",
+    "Buyers evaluating WiseOS specifically - it is early access with private code and cannot be assessed from the public surface",
+    "Safety-critical deployments that require third-party attestation of the control path rather than a documented security model"
+  ],
+  "red_flags": [
+    "The defence and dual-use section is framed with a battlefield statistic that carries no source on the page; treat it as positioning, not as evidence",
+    "The commercial half of the offering (WiseOS) is early access with private code, so the published, verifiable part of this vendor is narrower than the site's overall presentation suggests"
+  ],
+  "compared_to": [],
+  "evidence_urls": [
+    {
+      "claim": "MCP server for ROS 2 that lists topics, services, actions and message types for an agent",
+      "source": "https://www.wisevision.tech/ (ROS2 MCP section)",
+      "tested_at": "2026-10-17",
+      "verified": true
+    },
+    {
+      "claim": "Write operations (publish, service call, action goal) can be disabled with one environment variable",
+      "source": "https://www.wisevision.tech/ ('Or switch all of that off with one environment variable.')",
+      "tested_at": "2026-10-17",
+      "verified": true
+    },
+    {
+      "claim": "Open source under MPL-2.0, free for commercial use, no licence key and no paid tier",
+      "source": "https://www.wisevision.tech/ (open-source band)",
+      "tested_at": "2026-10-17",
+      "verified": true
+    },
+    {
+      "claim": "Ships as a Docker image over stdio and is listed in Docker's official MCP catalog; supports ROS 2 Humble and Jazzy",
+      "source": "https://www.wisevision.tech/ (capability strip)",
+      "tested_at": "2026-10-17",
+      "verified": true
+    },
+    {
+      "claim": "WiseOS is early access with private code",
+      "source": "https://www.wisevision.tech/ (WiseOS section)",
+      "tested_at": "2026-10-17",
+      "verified": true
+    },
+    {
+      "claim": "25,000+ Ukrainian ground-robot logistics and evacuation missions in August 2026",
+      "source": "https://www.wisevision.tech/ (defence and dual-use section) - no source cited on page",
+      "tested_at": "2026-10-17",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Direct and primary. The product IS an MCP server: stdio transport, Docker image, connectable to Claude, Cursor, Codex or any MCP client, with a tool reference generated from the code. Read-only operation is available via a single environment variable, which is the recommended starting posture for an agent touching physical hardware.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-17T12:31:17.006Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'The AI layer for ROS 2 robots. Agents that see, understand and operate your fleet.'",
+      "tested_at": "2026-10-17T12:31:17.006Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Try ROS2 MCP' / 'Read the docs'",
+      "tested_at": "2026-10-17T12:31:17.006Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Open source MPL-2.0, explicitly free for commercial use with no licence key and no paid tier; WiseOS is early access with no price stated",
+      "tested_at": "2026-10-17T12:31:17.006Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Source on GitHub, Docker catalog listing and docs generated from the code are all reachable from the homepage",
+      "tested_at": "2026-10-17T12:31:17.006Z"
+    }
+  ],
+  "summary": "An MPL-2.0 MCP server that puts a ROS 2 robot fleet behind a tool interface an agent can read and - deliberately optionally - drive.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-15",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2027-01-15",
+  "attestation_url": "/data/attestations/wise-vision-mcp-server-ros-2.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Open source MPL-2.0, explicitly free for commercial use with no licence key and no paid tier; WiseOS is early access with no price stated",
+      "tested_at": "2026-10-17"
+    },
+    "last_verified": "2026-10-17",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
