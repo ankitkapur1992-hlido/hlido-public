@@ -1,0 +1,188 @@
+{
+  "schema_version": "2.0",
+  "slug": "offrun",
+  "name": "Offrun",
+  "agent_url": "https://offrun.dev",
+  "category": "Coding",
+  "run_id": "run-offrun-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T04:30:23.972Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A free Mac workspace for running several coding agents side by side, whose best feature is the unglamorous one: it shows you exactly how much quota each account has left.",
+    "body": "Most tools in this category sell orchestration. Offrun's most useful idea is accounting. It runs Claude Code, Codex, AGY, Grok Build and Muse Code side by side in one Mac workspace and then surfaces the thing every heavy agent user actually hits: per-account usage against its limits - session percentage and reset time, weekly percentage and reset time, across multiple accounts on multiple providers, including a work and a personal Claude account side by side. Anyone running agents daily knows the failure mode of discovering a limit mid-task; showing remaining quota per account before you dispatch is a small feature that removes a recurring cost, and it is specific and checkable rather than aspirational. The rest is solid: a home view counting agents running, waiting on you and with unread answers; a per-agent table with project, state and turn; multi-chat side-by-side work including an agent delegating to helper agents to bisect a crash; and a preview panel that renders what the agent built. The product is downloadable free today for macOS 14 or later, and it publishes pricing, privacy and FAQ pages - so a reader can evaluate it fully without talking to anyone. The copy is unusually concrete: the scroll narrative describes behaviour, including an agent correctly reporting that a dashboard works but that retention counts the week in progress as though it were over. Writing that detail into marketing is a signal of a team that has used the thing. Limits are real but narrow: macOS only, no operating history, and the product's design centre - managing several accounts of the same provider, with a dedicated page about multiple Claude Code accounts - is a practice any adopter should check against their own provider's terms of service before standardising on it. We are not asserting a violation; we are saying it is the buyer's question to ask, and the page would be stronger for addressing it.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the product is obtainable and free today, publishes pricing, privacy and FAQ pages, and its distinguishing capability - cross-account quota visibility with session and weekly resets before you dispatch - is concrete, checkable and solves a cost that recurs daily for heavy agent users. Not higher because it is macOS-only with no operating history, and because its multi-account design centre is something each adopter must verify against their provider's terms rather than something the surface resolves for them.",
+  "what_it_does_well": [
+    "Shows remaining quota per account - session and weekly percentages with reset times - before you dispatch work",
+    "Handles multiple accounts across multiple providers, including work and personal accounts of the same provider, in one view",
+    "Runs Claude Code, Codex, AGY, Grok Build and Muse Code side by side rather than replacing them",
+    "Home view distinguishes running from waiting-on-you from unread-answer, which is the state that actually matters",
+    "Downloadable and free today for macOS 14 or later, with no sales step",
+    "Publishes pricing, privacy and FAQ pages, so it can be fully evaluated without contact",
+    "Marketing copy is behaviourally specific - it describes an agent's partly-wrong finding rather than only its successes"
+  ],
+  "what_it_fails_at": [
+    "macOS 14 or later only - no Windows or Linux build",
+    "No operating history, release cadence or support commitment on the public surface",
+    "Managing several accounts of one provider is a design centre with a dedicated page, and the surface does not address provider terms of service",
+    "No programmatic surface - no API, CLI or MCP server for an external agent to drive Offrun",
+    "No stated cost-control or budgeting features beyond quota visibility",
+    "Agent coverage is a fixed named list; extending it to another agent is not documented"
+  ],
+  "best_for": [
+    "Developers running two or more coding agents daily who keep hitting usage limits mid-task",
+    "Anyone juggling a work and a personal account on the same provider and needing to see both",
+    "Mac users who want one workspace over several agents without giving up their existing tools",
+    "Teams wanting a free, no-contact way to evaluate multi-agent working"
+  ],
+  "not_recommended_for": [
+    "Windows and Linux users - macOS only",
+    "Organisations whose provider agreements constrain multiple-account use, until they have checked their own terms",
+    "Agent stacks needing programmatic control of the workspace itself",
+    "Teams needing a support commitment or operating track record"
+  ],
+  "red_flags": [
+    "The product's multi-account design centre, including a dedicated page on running multiple Claude Code accounts, is not reconciled against provider terms of service anywhere on the surface - an adopter should verify this for their own agreements before standardising on it"
+  ],
+  "compared_to": [
+    {
+      "slug": "warp-ai-terminal",
+      "verdict_diff": "Warp is a mature AI terminal with its own agent and a broad platform footprint; Offrun is a narrower Mac-only workspace whose distinguishing feature is cross-account quota visibility across several external agents. Choose Warp for a supported terminal you can standardise on; choose Offrun if the specific pain is running several agents and several accounts without hitting limits blind.",
+      "preferred_for_axis": "breadth-vs-quota-visibility"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is an editor with an agent inside it; Offrun sits outside the editor and supervises several agents, including ones you drive from a terminal. They are complements more than substitutes - Offrun's claim is visibility across agents and accounts, not the quality of any one agent.",
+      "preferred_for_axis": "supervision-layer-vs-editor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Manages Claude Code, Codex, AGY, Grok Build and Muse Code side by side in one Mac workspace",
+      "source": "https://offrun.dev (hero)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Shows per-account session and weekly usage percentages with reset times across multiple providers and accounts",
+      "source": "https://offrun.dev (Usage panel)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Free download for macOS 14 or later",
+      "source": "https://offrun.dev ('Download for Mac - Free - macOS 14 or later') and /download/",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Pricing, privacy and FAQ pages are published",
+      "source": "https://offrun.dev/pricing, https://offrun.dev/privacy/, https://offrun.dev FAQ",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Documents running multiple accounts of the same provider",
+      "source": "https://offrun.dev/multiple-claude-code-accounts/",
+      "tested_at": "2026-10-18",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Inverted. Offrun drives external coding agents on the user's machine and reads their account quotas; it exposes no API, CLI, MCP server or webhook for an external agent to drive Offrun. It is a human supervision layer over an agent fleet rather than a component an agent can call.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T04:30:23.972Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Manage every coding agent from one workspace' - with per-account usage and reset visibility",
+      "tested_at": "2026-10-18T04:30:23.972Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for Mac' (free, macOS 14+)",
+      "tested_at": "2026-10-18T04:30:23.972Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "A pricing page is published and the Mac build is free to download with no account step",
+      "tested_at": "2026-10-18T04:30:23.972Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Behaviourally specific product walkthrough plus a free downloadable build - the claims can be exercised directly",
+      "tested_at": "2026-10-18T04:30:23.972Z"
+    }
+  ],
+  "summary": "A free Mac workspace for running several coding agents side by side, whose best feature is the unglamorous one: it shows you exactly how much quota each account has left.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/offrun.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "A pricing page is published and the Mac build is free to download with no account step",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
