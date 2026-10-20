@@ -1,0 +1,190 @@
+{
+  "schema_version": "2.0",
+  "slug": "superset",
+  "name": "Superset",
+  "agent_url": "https://superset.sh",
+  "category": "Coding",
+  "run_id": "run-superset-v2-editor-2026-10-20",
+  "run_at": "2026-10-18T00:31:43.046Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 69,
+  "tier": "FADING",
+  "laddoo_score": 69,
+  "confidence": "medium-low",
+  "hlido_opinion": {
+    "headline": "A polished multi-agent coding workspace that you cannot currently use - the primary call to action is a waitlist, and the product is mid-rename.",
+    "body": "The product thesis is the right one and the execution shown is above average. Superset presents a single workspace that runs Claude Code, Codex, Cursor and OpenCode side by side across desktop, cloud and remote machines - parallel worktrees per task, scheduled automations (daily triage, changelog drafts, dependency upgrades), SSH-attached hardware, and a built-in pull-request review surface with diffs and approve/comment actions. The homepage demonstrates all of it in detail rather than gesturing at it, and there are real /pricing and /security pages, which is more than most products at this stage publish. The problem is availability. The primary action on the page is JOIN WAITLIST, and nothing on the public surface establishes that a prospective user can obtain and run the product today. A workspace that orchestrates your agents is a tool you adopt into a daily loop; a waitlist means that loop cannot start, and no amount of interface quality substitutes for that. The second issue compounds it: the site itself announces that Superset is getting a new name soon. A rename in flight means the brand, the documentation URLs, the CLI name shown in the screenshots (`superset automations`, `superset connect`) and this record's own slug are all provisional. That is a real cost to anyone writing it into a runbook now, and it is the kind of thing a buyer should know before they invest setup time. None of this is a judgement on quality - the craft here is good and the direction is sound. It is a judgement about what a reader can actually get, which is what this band measures.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-20",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (69) on availability, not on quality. The primary public call to action is a waitlist, so general availability cannot be confirmed from the public surface, and the site announces an imminent rename that makes the brand, documentation paths and CLI name provisional. The interface, the automation model and the published pricing and security pages are all better than typical for this stage, and a confirmed general-availability release under a settled name would move this well up the band - so this verdict is about obtainability today and should be re-read when the product ships.",
+  "what_it_does_well": [
+    "Orchestrates several external coding agents - Claude Code, Codex, Cursor, OpenCode - in one workspace rather than replacing them",
+    "Parallel isolated worktrees per task, so concurrent agent work does not collide",
+    "Scheduled automations with explicit schedules and last-run state (daily triage, changelog drafts, dependency upgrades)",
+    "Remote and cloud execution including SSH-attached hardware, so heavy runs leave the laptop",
+    "Built-in pull-request review surface with diffs and approve/comment actions, keeping the human gate inside the tool",
+    "Publishes both a pricing page and a security page, which most pre-release products at this stage do not"
+  ],
+  "what_it_fails_at": [
+    "Primary call to action is a waitlist - general availability is not established on the public surface",
+    "The site announces an imminent rename, making brand, documentation URLs, CLI name and this record's slug provisional",
+    "No downloadable build or trial reachable from the homepage",
+    "No operating history, and the interface walkthrough is a demonstration rather than evidence of production use",
+    "No programmatic surface for an external agent to drive Superset itself (it consumes an MCP server; it does not advertise one)",
+    "Enterprise path is a contact route with no published terms"
+  ],
+  "best_for": [
+    "Teams tracking the multi-agent orchestration category who want to evaluate the strongest-presented entrant and are willing to wait",
+    "Developers running three or more coding agents in parallel who need isolated worktrees and one review surface",
+    "Anyone who wants scheduled, unattended agent automations with a human approval gate"
+  ],
+  "not_recommended_for": [
+    "Anyone who needs a tool they can install and use this week - access is waitlisted",
+    "Teams writing tool names into runbooks or documentation now, given the announced rename",
+    "Buyers who require published, committed terms before adopting an orchestration layer",
+    "Agent stacks needing to drive the orchestrator programmatically - no such surface is advertised"
+  ],
+  "red_flags": [
+    "Access is waitlist-gated, so nothing on the public surface establishes that the product can be obtained and run today",
+    "The site states that the product is being renamed, which makes the brand, documentation paths, CLI invocations shown on the page and this record's slug provisional"
+  ],
+  "compared_to": [
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor is a generally available editor with an agent inside it; Superset is a waitlisted workspace that orchestrates several external agents, Cursor among them. Choose Cursor if you need something to use today inside one editor; revisit Superset if your problem is coordinating several agents at once and you can wait for access.",
+      "preferred_for_axis": "availability-today"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "OpenCode is an open-source agent you can run now and is one of the agents Superset proposes to orchestrate. They sit at different layers: OpenCode is a worker, Superset is the dispatcher. Today only the worker is obtainable.",
+      "preferred_for_axis": "obtainable-open-source-agent"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "One workspace for Claude Code, Codex and any coding agent",
+      "source": "https://superset.sh (hero)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Primary call to action is a waitlist",
+      "source": "https://superset.sh ('JOIN WAITLIST' masthead and hero)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Product is being renamed",
+      "source": "https://superset.sh ('Superset is getting a new name soon')",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Scheduled automations with named schedules and last-run state",
+      "source": "https://superset.sh (superset automations panel)",
+      "tested_at": "2026-10-18",
+      "verified": true
+    },
+    {
+      "claim": "Pricing and security pages are published",
+      "source": "https://superset.sh/pricing and https://superset.sh/security",
+      "tested_at": "2026-10-18",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Inverted, and not currently testable. Superset is a consumer of agents rather than a component agents drive: it connects to Claude Code, Codex, Cursor and OpenCode and the screenshots show it connecting to an MCP server, but it advertises no API, MCP server or webhook for an external agent to drive Superset itself. Its own CLI (superset automations, superset connect) appears in the walkthrough but is not obtainable while access is waitlisted.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T00:31:43.046Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Bring Any Agent, Orchestrate Them All' - one workspace for Claude Code, Codex and any coding agent",
+      "tested_at": "2026-10-18T00:31:43.046Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Join Waitlist'",
+      "tested_at": "2026-10-18T00:31:43.046Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "A /pricing page is published, though the product itself is waitlist-gated so terms cannot be exercised",
+      "tested_at": "2026-10-18T00:31:43.046Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Detailed interface walkthroughs are shown on the homepage, but no trial, download or live demo is reachable - access is waitlisted",
+      "tested_at": "2026-10-18T00:31:43.046Z"
+    }
+  ],
+  "summary": "A polished multi-agent coding workspace that you cannot currently use - the primary call to action is a waitlist, and the product is mid-rename.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-16",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-16",
+  "attestation_url": "/data/attestations/superset.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-20",
+  "marking_signal": {
+    "marking_statement": false,
+    "detection_tool": false,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-20",
+    "source": "r4-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "paid"
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "A /pricing page is published, though the product itself is waitlist-gated so terms cannot be exercised",
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-20"
+  }
+}
