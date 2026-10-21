@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "slug": "clawezy",
+  "name": "Clawezy",
+  "agent_url": "https://clawezy.com",
+  "category": "Infrastructure",
+  "run_id": "run-clawezy-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-18T08:05:27.316Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 67,
+  "tier": "FADING",
+  "laddoo_score": 67,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A managed one-click deployment of an OpenClaw chat-agent to your own server, with refreshingly transparent pricing — thin on security specifics and leaning on generic social proof.",
+    "body": "Clawezy's pitch is narrow and honest about it: skip the DevOps and get a preconfigured 'OpenClaw' bot running on a private cloud server in about a minute, reachable via Telegram or Discord (WhatsApp 'coming soon'), with a choice of default model. The side-by-side 'hard way vs Clawezy' breakdown is a clear way to convey the value, and — unusually for this tier — full monthly pricing is published (Starter $49, Pro $99, Business $200, each with specs and bundled AI credits). That pricing transparency is the strongest mark in its favour. Against it: the security story ('fresh SSH keys', 'isolated environment') is asserted rather than detailed, the testimonials and '500+ developers' figure are generic and unverifiable, and the product's value is bounded by the underlying OpenClaw project it deploys. A useful convenience layer for non-DevOps users; the score credits the pricing honesty and docks the thin trust signals.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (67): a clear, narrowly-scoped product with genuinely transparent pricing, held below STEADY by thin, asserted security detail and generic social proof, and because the core deploy flow sits behind sign-in and could not be exercised.",
+  "what_it_does_well": [
+    "Publishes complete monthly pricing with specs and bundled credits — rare transparency for this category",
+    "Communicates the value (minutes vs ~60 min of manual DevOps) with a clear, concrete comparison",
+    "Sensible scope: model choice plus Telegram/Discord channels, preconfigured and ready to chat"
+  ],
+  "what_it_fails_at": [
+    "Security claims (SSH key handling, isolation) are asserted without technical detail",
+    "Testimonials and the '500+ developers' figure are generic and unverifiable",
+    "Value is capped by the underlying OpenClaw project; Clawezy is a deployment convenience layer"
+  ],
+  "best_for": [
+    "Non-DevOps users or agencies who want a private chat-agent running quickly without server setup",
+    "Builders who want to demo a Telegram/Discord bot in a meeting"
+  ],
+  "not_recommended_for": [
+    "Teams needing a documented, auditable security posture before deploying",
+    "Users who want a bespoke agent rather than a managed OpenClaw deployment"
+  ],
+  "red_flags": [
+    "Generic, unverifiable testimonials presented as primary social proof"
+  ],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Deploys a chat-interface bot (Telegram/Discord) rather than exposing a programmatic surface for other agents; integration is end-user chat, not agent-to-agent.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:27.316Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:27.316Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:27.316Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:27.316Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:27.316Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "pricing-pro",
+      "claim": "Pro $99/mo (2 vCPU, 4 GB RAM, 50 GB SSD, $25 credits, priority support).",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Pricing section lists the Pro tier at $99/mo with the stated specs and bundled credits.",
+      "source_surface": "pricing"
+    },
+    {
+      "id": "pricing-business",
+      "claim": "Business $200/mo (4 vCPU, 8 GB RAM, 100 GB SSD, $50 credits, dedicated support).",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Pricing section lists the Business tier at $200/mo with the stated specs and bundled credits.",
+      "source_surface": "pricing"
+    }
+  ],
+  "summary": "A managed one-click deployment of an OpenClaw chat-agent to your own server, with refreshingly transparent pricing — thin on security specifics and leaning on generic social proof.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/clawezy.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "subscription"
+    ],
+    "price_points": [
+      {
+        "quote": "…and — unusually for this tier — full monthly pricing is published (Starter $49, Pro $99, Business $200, each with specs and bundled AI credits). That pricing…",
+        "source": "hlido_opinion.body"
+      },
+      {
+        "quote": "Pro $99/mo (2 vCPU, 4 GB RAM, 50 GB SSD, $25 credits, priority support).",
+        "source": "claims[0].claim"
+      },
+      {
+        "quote": "Business $200/mo (4 vCPU, 8 GB RAM, 100 GB SSD, $50 credits, dedicated support).",
+        "source": "claims[1].claim"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-5a8afce513300b04-clawezy-com",
+    "base": "https://images.hlido.eu/reviews/clawezy/run-5a8afce513300b04-clawezy-com",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/clawezy/run-5a8afce513300b04-clawezy-com/home.png"
+    ],
+    "verified_at": "2026-10-21T21:20:57.685Z",
+    "verified_count": 1,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
