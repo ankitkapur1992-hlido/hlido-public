@@ -1,0 +1,169 @@
+{
+  "schema_version": "2.0",
+  "slug": "agent-reviews",
+  "name": "agent.reviews",
+  "agent_url": "https://agent.reviews",
+  "category": "Frameworks & Eval",
+  "run_id": "run-agent-reviews-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-19T00:30:26.927Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A novel review platform where coding agents — not humans — write the reviews of developer tools, with detailed, specific entries as evidence the mechanism works, and the obvious open question of how far to trust them.",
+    "body": "agent.reviews (by Armature) flips the review model: AI agents such as Claude Code, Codex and Muse Code discover, read and write reviews of software — FastAPI, Stripe, Render, Cursor, S3 and hundreds more — each scored and backed by a note about what the agent actually did. The entries are the strongest thing here: they are concrete and task-grounded ('ran database migrations on startup via a lifespan context manager', 'aws s3 sync with an SSO profile archived four folders'), not generic star-padding, which is real evidence that agents are doing the work rather than the site inventing numbers. Positioning is clean — free to read and review, your code/prompts/secrets are never used, your name is never shown — and it is explicitly built for agents to plug into ('Add to your agent'). The honest reservation, and it is the central one for any review register, is provenance: from the public surface we cannot verify how reviews are generated, deduplicated, or guarded against gaming, and the operator is not well known. A genuinely interesting, agent-native idea; the score reflects strong, specific evidence tempered by an unproven trust layer. (Noted: this sits adjacent to Hlido's own space, and we have rated it on the same public-surface basis as any other entrant.)",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71): a clear, novel, agent-native product whose review entries are specific and task-grounded enough to be credible evidence the mechanism works. Held toward the lower edge of the band because the trust layer — how reviews are produced, curated and protected from gaming — is unverifiable from the public surface and the operator is not established.",
+  "what_it_does_well": [
+    "A genuinely novel model: agents, not humans, discover and write task-grounded reviews of developer tools",
+    "Review entries are concrete and specific (what the agent did, what broke), not generic star padding",
+    "Clean privacy stance — free to read/review, no code/prompts/secrets used, reviewer names not shown",
+    "Agent-native by design ('Add to your agent'), directly serving the agent-to-agent discovery need"
+  ],
+  "what_it_fails_at": [
+    "No public explanation of how reviews are generated, deduplicated, or protected against gaming",
+    "The operator (Armature) is not well established, so the trust layer rests on unverified ground",
+    "Review scores/counts cannot be independently validated from the public surface"
+  ],
+  "best_for": [
+    "Developers and agents wanting task-grounded signal on dev tools from real agent usage",
+    "Teams curious about agent-sourced software discovery as a complement to human reviews"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a documented, auditable review methodology before trusting the scores",
+    "Anyone treating the numeric scores as validated rather than indicative"
+  ],
+  "red_flags": [
+    "The core trust mechanism (how agent reviews are produced and curated) is not disclosed publicly"
+  ],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Built for agents to plug into ('Add to your agent') so an agent can read and contribute reviews; a programmatic/add-to-agent path is offered though not fully specified on the surface.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:26.927Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:26.927Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:26.927Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T00:30:26.927Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T00:30:26.927Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "agents-review-software",
+      "claim": "A platform where agents discover, read and write reviews of software, free to read and to review.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Homepage shows hundreds of tool entries with scores, review counts and specific agent-authored notes (Claude Code, Codex, Muse Code), plus 'Add to your agent' and 'Free to read and to review'.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "privacy-stance",
+      "claim": "Never your code, prompts or secrets; your name is never shown.",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Stated plainly on the surface; cannot be independently verified from a public-surface read.",
+      "source_surface": "homepage"
+    }
+  ],
+  "summary": "A novel review platform where coding agents — not humans — write the reviews of developer tools, with detailed, specific entries as evidence the mechanism works, and the obvious open question of how far to trust them.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/agent-reviews.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-19"
+    },
+    "last_verified": "2026-10-19",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-181346ecd664d018-agent-reviews",
+    "base": "https://images.hlido.eu/reviews/agent-reviews/run-181346ecd664d018-agent-reviews",
+    "files": [
+      "home.png",
+      "page_frameworks_fastapi_reviews_1d2fd364-ceb9-4511.png",
+      "page_.png",
+      "page_install.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/agent-reviews/run-181346ecd664d018-agent-reviews/home.png",
+      "https://images.hlido.eu/reviews/agent-reviews/run-181346ecd664d018-agent-reviews/page_frameworks_fastapi_reviews_1d2fd364-ceb9-4511.png",
+      "https://images.hlido.eu/reviews/agent-reviews/run-181346ecd664d018-agent-reviews/page_.png",
+      "https://images.hlido.eu/reviews/agent-reviews/run-181346ecd664d018-agent-reviews/page_install.png"
+    ],
+    "verified_at": "2026-10-21T21:21:08.185Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
