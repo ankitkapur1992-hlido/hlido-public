@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "slug": "openchatcut",
+  "name": "OpenChatCut",
+  "agent_url": "https://openchatcut.com",
+  "category": "Image & Design",
+  "run_id": "run-openchatcut-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-18T08:05:54.123Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 77,
+  "tier": "STEADY",
+  "laddoo_score": 77,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An open-source, AI-assisted video editor that keeps the human on a real timeline — credible OSS traction, MCP-connectable, with a clear open-vs-Pro split.",
+    "body": "OpenChatCut lets creators describe edits to an AI agent — add captions, music, transitions — and then refine the result on a conventional multitrack timeline, so the agent does the first pass and the human keeps control of the cut. The surface is honest about what it is: an open-source edition (public on GitHub, AGPL, ~2,475 stars, v0.2.17) alongside a proprietary Pro desktop app for macOS/Windows with a 7-day trial. Two things lift it above the usual AI-editor marketing: visible open-source traction you can actually inspect, and explicit MCP support so an external agent can drive edits. The docs and FAQ are thorough and candid (it even explains why macOS flags the unsigned build). The main gaps for a buyer are that Pro pricing is not shown on the homepage and, as with any public-surface read, we did not exercise the editor. A real, inspectable product with a sensible agent story.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77): genuine, inspectable open-source traction (public repo, ~2,475 stars), a clear open/Pro split, strong docs and MCP support for agent-driven editing. Short of higher bands because the editor itself was not exercised and Pro pricing is not surfaced.",
+  "what_it_does_well": [
+    "Open-source and inspectable (GitHub, AGPL) with visible traction (~2,475 stars) rather than asserted numbers",
+    "Keeps AI edits and manual edits on the same timeline, so the human retains control of the final cut",
+    "Explicit MCP support lets an external agent drive edits — a real agent-integration path",
+    "Thorough, candid docs/FAQ (model support, where media lives, unsigned-build warning)"
+  ],
+  "what_it_fails_at": [
+    "Pro pricing is not shown on the homepage; only a 7-day trial is mentioned",
+    "Editing quality and model behaviour could not be exercised on a public-surface pass",
+    "Unsigned macOS build adds first-run friction (acknowledged, but still a hurdle)"
+  ],
+  "best_for": [
+    "Creators who want AI to do a first editing pass but insist on refining on a real timeline",
+    "Developers who want an open, self-hostable editor they can study, adapt or extend via MCP"
+  ],
+  "not_recommended_for": [
+    "Buyers who need Pro pricing up front before committing",
+    "Users wanting fully-automated 'generate a video' output rather than an editing workspace"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The open-source edition can connect an external agent through MCP and supports configurable models, so an agent can drive timeline edits.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:54.123Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:54.123Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:54.123Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:54.123Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:54.123Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "chat-edit",
+      "claim": "Edit your videos by chatting with AI; bring your footage and describe the result you want.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Core workflow described and shown with editor screenshots; agent adds captions/music/transitions, human refines on the timeline.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "open-source-agpl",
+      "claim": "The source is public on GitHub, and you can use and modify it under the AGPL.",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "'View source' / GitHub links, 'Open source v0.2.17', 2,475 GitHub stars and an AGPL statement on the surface.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "mcp-local-models",
+      "claim": "Supports local media and projects, configurable models, and external agents via MCP.",
+      "required": false,
+      "verdict": "partial_pass",
+      "evidence": "Stated explicitly in the workflow and FAQ ('What is MCP used for?'); not functionally exercised on this pass.",
+      "source_surface": "docs"
+    }
+  ],
+  "summary": "An open-source, AI-assisted video editor that keeps the human on a real timeline — credible OSS traction, MCP-connectable, with a clear open-vs-Pro split.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/openchatcut.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-45d16279a1f73c90-openchatcut-com",
+    "base": "https://images.hlido.eu/reviews/openchatcut/run-45d16279a1f73c90-openchatcut-com",
+    "files": [
+      "home.png",
+      "page_docs.png",
+      "page_pricing.png",
+      "page_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/openchatcut/run-45d16279a1f73c90-openchatcut-com/home.png",
+      "https://images.hlido.eu/reviews/openchatcut/run-45d16279a1f73c90-openchatcut-com/page_docs.png",
+      "https://images.hlido.eu/reviews/openchatcut/run-45d16279a1f73c90-openchatcut-com/page_pricing.png",
+      "https://images.hlido.eu/reviews/openchatcut/run-45d16279a1f73c90-openchatcut-com/page_.png"
+    ],
+    "verified_at": "2026-10-21T21:21:01.843Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
