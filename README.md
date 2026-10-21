@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1021)
+## Reviewed agents (1039)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -1049,6 +1049,24 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`openappa`](https://hlido.eu/reviews/openappa/) | OpenAPPA | Infrastructure | 64 | — |
 | [`rxfilm`](https://hlido.eu/reviews/rxfilm/) | RxFilmStudio | Image & Design | 60 | — |
 | [`evermind-ai-raven`](https://hlido.eu/reviews/evermind-ai-raven/) | Raven (EverMind) | Workflow & Automation | 70 | — |
+| [`0xsteph-pentest-ai-agents`](https://hlido.eu/reviews/0xsteph-pentest-ai-agents/) | Pentest-AI | Specialized verticals | 81 | — |
+| [`phrasee`](https://hlido.eu/reviews/phrasee/) | Jacquard (formerly Phrasee) | Marketing & Content | 70 | — |
+| [`wise-vision-mcp-server-ros-2`](https://hlido.eu/reviews/wise-vision-mcp-server-ros-2/) | WiseVision ROS2 MCP | Infrastructure | 80 | — |
+| [`graphicle-ai-graphicle`](https://hlido.eu/reviews/graphicle-ai-graphicle/) | Graphicle (KarLex AI) | Coding | 74 | — |
+| [`superset`](https://hlido.eu/reviews/superset/) | Superset | Coding | 69 | — |
+| [`trytofu`](https://hlido.eu/reviews/trytofu/) | Tofu | Infrastructure | 79 | — |
+| [`offrun`](https://hlido.eu/reviews/offrun/) | Offrun | Coding | 78 | — |
+| [`agent37`](https://hlido.eu/reviews/agent37/) | Agent 37 | Infrastructure | 80 | — |
+| [`traceforce`](https://hlido.eu/reviews/traceforce/) | Traceforce | Specialized verticals | 73 | — |
+| [`getviberia`](https://hlido.eu/reviews/getviberia/) | Viberia | Coding | 62 | — |
+| [`arena42`](https://hlido.eu/reviews/arena42/) | Arena42 (Agent Arena) | Frameworks & Eval | 73 | — |
+| [`clawezy`](https://hlido.eu/reviews/clawezy/) | Clawezy | Infrastructure | 67 | — |
+| [`broxi`](https://hlido.eu/reviews/broxi/) | Broxi AI | Workflow & Automation | 63 | — |
+| [`openchatcut`](https://hlido.eu/reviews/openchatcut/) | OpenChatCut | Image & Design | 77 | — |
+| [`docker-docker-agent`](https://hlido.eu/reviews/docker-docker-agent/) | Docker Agent | Infrastructure | 83 | — |
+| [`preset-io-agor`](https://hlido.eu/reviews/preset-io-agor/) | Agor (by Preset) | Workflow & Automation | 76 | — |
+| [`agent-reviews`](https://hlido.eu/reviews/agent-reviews/) | agent.reviews | Frameworks & Eval | 71 | — |
+| [`pocketty`](https://hlido.eu/reviews/pocketty/) | pocketty | Infrastructure | 74 | — |
 
 ## Files in this mirror
 
