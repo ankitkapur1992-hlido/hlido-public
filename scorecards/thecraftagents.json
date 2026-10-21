@@ -1,0 +1,177 @@
+{
+  "schema_version": "2.0",
+  "slug": "thecraftagents",
+  "name": "Craft Agents",
+  "agent_url": "https://thecraftagents.com",
+  "category": "Workflow & Automation",
+  "run_id": "run-thecraftagents-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-19T08:31:46.191Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 79,
+  "tier": "STEADY",
+  "laddoo_score": 79,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An open-source desktop agent interface built to connect to anything — MCP, APIs, local files, and a built-in Chromium browser — with bring-your-own-model breadth that is genuinely broad.",
+    "body": "Craft Agents is a desktop UX for running capable agents: persistent Pages for results, reusable Skills, scheduled Automations, and connections to tools via API, MCP server, local filesystem, or a built-in full Chromium browser the agent drives directly (navigate, fill forms, click, extract, screenshot). The connect-to-anything story is the centrepiece and it is told convincingly — paste an MCP config and it takes over, run stdio MCP servers as local subprocesses, point it at an OpenAPI spec, or fall back to the browser when there is no API at all. Model support is unusually wide (Claude, ChatGPT/Codex, OpenRouter's 400+, local via Ollama/LM Studio, plus a long list of gateways), built on the Claude Agent SDK and Pi SDK, and it can import your existing Claude Code skills and MCPs. It is open source with the source viewable. The reservations are standard for a public-surface read plus one of tone: the FAQ leans on 'it just works / magic' framing for capabilities we could not exercise, and no pricing is surfaced. Strong agent-native design; treat the effortless-setup claims as to-be-verified.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (79): deep, agent-native capability surface (MCP, APIs, local files, built-in browser), very broad model support, open source and skill/MCP import. Held below higher bands by an unexercised product, hype-leaning claims, and no pricing on the surface.",
+  "what_it_does_well": [
+    "Connects to anything: MCP servers (remote and local stdio), REST/OpenAPI APIs, local filesystem, and a built-in browser",
+    "A full built-in Chromium the agent can drive for services with no API (navigate, fill, click, extract, screenshot)",
+    "Exceptionally broad bring-your-own-model support (Claude, Codex, OpenRouter, local Ollama/LM Studio, many gateways)",
+    "Open source, and imports existing Claude Code skills and MCP configs"
+  ],
+  "what_it_fails_at": [
+    "FAQ leans on 'magic / just works' framing for setup/automation that we could not verify on this pass",
+    "No pricing is shown on the captured surface",
+    "Skills, Automations and auto-configuration of sources were not functionally exercised"
+  ],
+  "best_for": [
+    "Developers who want one desktop interface over many models and tools without glue code",
+    "Users who need an agent that can fall back to a real browser for services with no API",
+    "Claude Code users who want to bring their existing skills and MCP servers into a desktop UX"
+  ],
+  "not_recommended_for": [
+    "Buyers who need upfront pricing or a managed/hosted service",
+    "Non-technical users who want a narrow, guided tool rather than a connect-to-anything workbench"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "First-class MCP support (remote + local stdio subprocesses), REST/OpenAPI connection, local filesystem, a built-in Chromium the agent drives, and import of Claude Code skills/MCPs; built on the Claude Agent SDK and Pi SDK.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:46.191Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:46.191Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:46.191Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T08:31:46.191Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T08:31:46.191Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "pages-skills-automations",
+      "claim": "Turn results into persistent Pages, teach reusable Skills, and run Automations on a schedule - all in a desktop UX you can actually live in.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Pages, Skills and scheduled Automations are described as core capabilities of the desktop interface.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "paste-mcp-config",
+      "claim": "Paste an existing MCP config JSON and the agent handles the rest.",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "FAQ states plainly: 'I already have my MCP config JSON... Great. Paste it. The agent handles the rest,' plus local stdio MCP support.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "builtin-browser",
+      "claim": "A full Chromium browser is built in: the agent can navigate pages, fill forms, click buttons, extract data, and take screenshots.",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Stated explicitly and repeatedly ('Yes. A full Chromium browser, built in... It sees what you see'), as the fallback for services without an API.",
+      "source_surface": "homepage"
+    }
+  ],
+  "summary": "An open-source desktop agent interface built to connect to anything — MCP, APIs, local files, and a built-in Chromium browser — with bring-your-own-model breadth that is genuinely broad.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/thecraftagents.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-19"
+    },
+    "last_verified": "2026-10-19",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-6c479b34094c7d08-thecraftagents-com",
+    "base": "https://images.hlido.eu/reviews/thecraftagents/run-6c479b34094c7d08-thecraftagents-com",
+    "files": [
+      "home.png",
+      "page_docs.png",
+      "page_.png",
+      "page_blog.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/thecraftagents/run-6c479b34094c7d08-thecraftagents-com/home.png",
+      "https://images.hlido.eu/reviews/thecraftagents/run-6c479b34094c7d08-thecraftagents-com/page_docs.png",
+      "https://images.hlido.eu/reviews/thecraftagents/run-6c479b34094c7d08-thecraftagents-com/page_.png",
+      "https://images.hlido.eu/reviews/thecraftagents/run-6c479b34094c7d08-thecraftagents-com/page_blog.png"
+    ]
+  }
+}
