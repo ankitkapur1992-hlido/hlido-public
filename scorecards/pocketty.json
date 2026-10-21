@@ -1,0 +1,176 @@
+{
+  "schema_version": "2.0",
+  "slug": "pocketty",
+  "name": "pocketty",
+  "agent_url": "https://pocketty.app",
+  "category": "Infrastructure",
+  "run_id": "run-pocketty-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-19T00:30:45.931Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 74,
+  "tier": "STEADY",
+  "laddoo_score": 74,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A tightly-built iPhone/iPad SSH companion for answering blocked coding agents from your pocket — serious about end-to-end security and upfront about a one-time price, but bound to the 'herdr' orchestrator.",
+    "body": "pocketty answers a real, specific pain: a coding agent (Claude Code, Codex, opencode) blocks or finishes while you are away from the keyboard. It pushes an end-to-end-sealed alert only your phone can open, then drops you into that exact pane over SSH — Face ID, keys in the Secure Enclave, routed over Tailscale with no server in between — where you can send real keystrokes, review the turn's diff, dictate or paste a full message, preview a dev-server port, and see every agent's live state. The eight-step walkthrough is clear and the security architecture is described concretely (HPKE, X25519, ChaCha20; the relay stores nothing), which is more rigour than most companion apps offer. Pricing is refreshingly plain: 14 days free, then a one-time $99 (launch price, usually $129). The limiting factor is coupling — pocketty is explicitly 'made for herdr,' so its value depends on running that orchestrator — and it is iOS-only. For herdr users this looks excellent; for everyone else it is not yet a standalone pick. We did not exercise the app.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (74): a focused, well-engineered product with a credible, concretely-described security model and honest one-time pricing. Held below higher bands by tight coupling to the 'herdr' orchestrator, an iOS-only footprint, and an unexercised app on a public-surface pass.",
+  "what_it_does_well": [
+    "Solves a concrete problem — answer a blocked/finished agent from your phone, in a real terminal over SSH",
+    "Concrete, serious security model (end-to-end sealed alerts, Secure Enclave keys, Tailscale, relay stores nothing)",
+    "Rich interaction set: real keystrokes, per-turn diffs, dictation/paste, dev-server port preview, live multi-agent view",
+    "Honest, upfront pricing — 14-day trial then a one-time $99 (launch), not a subscription"
+  ],
+  "what_it_fails_at": [
+    "Tightly coupled to the 'herdr' orchestrator — value depends on running herdr, not standalone",
+    "iOS/iPadOS only; no Android or web path",
+    "App behaviour and the security claims could not be exercised on a public-surface pass"
+  ],
+  "best_for": [
+    "Developers already running 'herdr' who want to supervise coding agents away from the desk",
+    "People who want a security-serious, no-subscription mobile way to unblock agents"
+  ],
+  "not_recommended_for": [
+    "Developers not using herdr, for whom it is not yet a standalone tool",
+    "Android users or anyone needing a web/desktop client"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "An agent-ops companion: it surfaces and lets you answer coding agents (Claude Code/Codex/opencode) managed by herdr over SSH, rather than exposing a programmatic surface other agents call.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:45.931Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:45.931Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T00:30:45.931Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T00:30:45.931Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T00:30:45.931Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "sealed-alerts",
+      "claim": "Only your phone can read the alert.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "End-to-end sealing described concretely (HPKE, X25519, ChaCha20; computer seals the alert for this phone only; the relay forwards/stores nothing).",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "real-terminal-control",
+      "claim": "Answer a blocked or finished agent in a real terminal over SSH, with real keystrokes and the turn's diff.",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Walkthrough shows opening the exact pane over SSH (Face ID, Secure Enclave, Tailscale), sending Return/Esc/Ctrl/arrows, and swiping for the turn's diff.",
+      "source_surface": "homepage"
+    }
+  ],
+  "summary": "A tightly-built iPhone/iPad SSH companion for answering blocked coding agents from your pocket — serious about end-to-end security and upfront about a one-time price, but bound to the 'herdr' orchestrator.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/pocketty.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "subscription"
+    ],
+    "price_points": [
+      {
+        "quote": "…apps offer. Pricing is refreshingly plain: 14 days free, then a one-time $99 (launch price, usually $129). The limiting factor is coupling — pocketty is…",
+        "source": "hlido_opinion.body"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-19"
+    },
+    "last_verified": "2026-10-19",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-b53d038fc3ff9b02-pocketty-app",
+    "base": "https://images.hlido.eu/reviews/pocketty/run-b53d038fc3ff9b02-pocketty-app",
+    "files": [
+      "home.png",
+      "page_docs.png",
+      "page_docs_security_model.png",
+      "page_docs_start_quick-start.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/pocketty/run-b53d038fc3ff9b02-pocketty-app/home.png",
+      "https://images.hlido.eu/reviews/pocketty/run-b53d038fc3ff9b02-pocketty-app/page_docs.png",
+      "https://images.hlido.eu/reviews/pocketty/run-b53d038fc3ff9b02-pocketty-app/page_docs_security_model.png",
+      "https://images.hlido.eu/reviews/pocketty/run-b53d038fc3ff9b02-pocketty-app/page_docs_start_quick-start.png"
+    ],
+    "verified_at": "2026-10-21T21:21:09.970Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
