@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "slug": "docker-docker-agent",
+  "name": "Docker Agent",
+  "agent_url": "https://docker.github.io/docker-agent/",
+  "category": "Infrastructure",
+  "run_id": "run-docker-docker-agent-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-18T12:30:21.316Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 83,
+  "tier": "STEADY",
+  "laddoo_score": 83,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "Agents defined in YAML and run like containers — a clean, developer-honest tool from Docker with first-class CLI, HTTP API, MCP and A2A, let down only by what a docs read cannot verify.",
+    "body": "Docker Agent applies the container mental model to AI agents: declare an agent (model, instruction, toolsets, teammates) in a YAML or HCL file, run it with one command, and share it through any OCI registry — the same workflow developers already use for images. The documentation is excellent and refreshingly honest about scope: it states plainly what the tool is (a CLI that runs declarative agents) and what it isn't (not a framework you write code in, not a hosted SaaS, not a model), and backs the no-glue-code claim with a concrete before/after that replaces ~30 lines of SDK plumbing with an eight-line YAML. For the agent-to-agent world this is about as well-positioned as a runtime gets: TUI, CLI, HTTP API, MCP server, A2A, OCI distribution, multi-agent delegation and any-model support (OpenAI, Anthropic, Gemini, Bedrock, local). It is open source and from a vendor with real distribution credibility. The score stops short of the top band only because a docs-site read cannot confirm the runtime actually behaves as described; the public surface, however, is among the strongest we have reviewed in this category.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (83): exceptional documentation, a clear and honest positioning, deep agent-native surface (CLI/API/MCP/A2A/OCI) and a credible open-source vendor. Held below VITAL only because runtime behaviour was not exercised on a public-surface pass.",
+  "what_it_does_well": [
+    "Declarative, no-glue-code model for defining and running agents (YAML/HCL), shown with a convincing before/after",
+    "Deep, agent-native interface surface: CLI, TUI, HTTP API, MCP server, A2A and OCI distribution",
+    "Honest, scoped positioning ('what it is / what it isn't') and documentation that flags unreleased features",
+    "Model-agnostic (OpenAI, Anthropic, Gemini, Bedrock, local) and extensible via Docker's MCP catalogue"
+  ],
+  "what_it_fails_at": [
+    "Runtime behaviour (orchestration loop, tool execution) could not be verified from a documentation read",
+    "Docs track the main branch and may describe unreleased features, so some capabilities may not yet be stable"
+  ],
+  "best_for": [
+    "Developers who want agents in their existing container/OCI workflow without writing orchestration glue",
+    "Teams building multi-agent setups that should be shareable and reproducible like images",
+    "Agent-to-agent integrators who need MCP, A2A and an HTTP API out of the box"
+  ],
+  "not_recommended_for": [
+    "Non-developers who want a no-terminal, hosted product",
+    "Teams that need a managed SaaS with a UI rather than a local CLI/runtime"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class: run via CLI, call over an HTTP API, expose/consume MCP servers, delegate via A2A, and distribute agents over any OCI registry.",
+    "agent_friendly_score": 9
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T12:30:21.316Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T12:30:21.316Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T12:30:21.316Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T12:30:21.316Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T12:30:21.316Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "no-code-agents",
+      "claim": "docker-agent lets you create and run intelligent AI agents that collaborate to solve complex problems — no code required.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Documented with concrete YAML examples, a before/after against ~30 lines of SDK glue, and multi-agent delegation described; no application code needed to define/run an agent.",
+      "source_surface": "docs"
+    }
+  ],
+  "summary": "Agents defined in YAML and run like containers — a clean, developer-honest tool from Docker with first-class CLI, HTTP API, MCP and A2A, let down only by what a docs read cannot verify.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/docker-docker-agent.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-20f26336735be687-docker-github-io",
+    "base": "https://images.hlido.eu/reviews/docker-docker-agent/run-20f26336735be687-docker-github-io",
+    "files": [
+      "home.png",
+      "pagetools_openapi_.png",
+      "pagetools_api_.png",
+      "pagefeatures_tui_.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/docker-docker-agent/run-20f26336735be687-docker-github-io/home.png",
+      "https://images.hlido.eu/reviews/docker-docker-agent/run-20f26336735be687-docker-github-io/pagetools_openapi_.png",
+      "https://images.hlido.eu/reviews/docker-docker-agent/run-20f26336735be687-docker-github-io/pagetools_api_.png",
+      "https://images.hlido.eu/reviews/docker-docker-agent/run-20f26336735be687-docker-github-io/pagefeatures_tui_.png"
+    ],
+    "verified_at": "2026-10-21T21:21:03.738Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
