@@ -1,0 +1,169 @@
+{
+  "schema_version": "2.0",
+  "slug": "openparrot",
+  "name": "Parrot",
+  "agent_url": "https://openparrot.app",
+  "category": "Productivity",
+  "run_id": "run-openparrot-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-19T08:31:36.436Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 81,
+  "tier": "STEADY",
+  "laddoo_score": 81,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A privacy-first, open-source meeting assistant for Mac that helps during the call, not just after — and backs its local-first promise with specifics rather than slogans.",
+    "body": "Parrot is an AI meeting recorder with a live assistant: it detects when a call starts, suggests answers grounded in your own documents while you are still talking, and keeps every call so you can query it later. What distinguishes it is how seriously it takes privacy, and how concretely it says so — no bot joins the meeting (it records what the Mac already plays and hears), transcription/speaker detection/document indexing run on-device with Apple's models, cloud transcription is opt-in only, and it ships with no account and no telemetry, signed and notarized, under GPL-3.0. The assistant cites its source for every answer and lets you decide whether it may go beyond your files at all — exactly the kind of grounded, auditable behaviour this category usually hand-waves. Profiles tailor what it watches for and how it reports (sales discovery, interview, investor pitch and more). The honest caveats: it is Mac-and-Apple-Silicon only, GitHub traction is still modest (~111 stars), and we did not run it. Within the public-surface read, this is one of the more trustworthy products we have seen.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (81): a clear, feature-complete product with an unusually strong, specific privacy posture (on-device, no telemetry, GPL-3.0, source-cited answers). Held below VITAL by modest traction, a Mac-only footprint, and the fact that behaviour was not exercised on a public-surface pass.",
+  "what_it_does_well": [
+    "Local-first by design — audio, transcription and document indexing stay on the Mac; cloud transcription is opt-in",
+    "Grounds assistant answers in your own documents and cites the source for each (or labels it 'general knowledge')",
+    "Genuinely useful live layer (objections, buying signals, next-question nudges) with per-call-type profiles",
+    "Honest trust signals: GPL-3.0, no account, no telemetry, signed and notarized, with clear system requirements"
+  ],
+  "what_it_fails_at": [
+    "macOS 14+ on Apple Silicon only — no Windows, Linux, or Intel path",
+    "GitHub traction is still modest (~111 stars) relative to the polish of the surface",
+    "Live assistant quality could not be exercised on a public-surface pass"
+  ],
+  "best_for": [
+    "Mac users who want live, document-grounded help during calls without a bot in the room",
+    "Privacy-sensitive professionals (sales, interviews, investor calls) who need audio to stay on-device",
+    "People who want a local, queryable record of past calls"
+  ],
+  "not_recommended_for": [
+    "Windows or Linux users, or anyone not on Apple Silicon",
+    "Teams needing a shared/cloud meeting-intelligence platform rather than a local personal tool"
+  ],
+  "red_flags": [],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "A local end-user Mac app; it consumes LLM provider API keys but does not expose a programmatic surface for other agents to call.",
+    "agent_friendly_score": 3
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:36.436Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:36.436Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-19T08:31:36.436Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T08:31:36.436Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-19T08:31:36.436Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "live-grounded-assistant",
+      "claim": "It notices when a call starts, suggests answers from your own documents while you're still talking, and remembers every call so you can ask about it later.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "Call-detection, a document-grounded knowledge base with source-citing, profiles, and 'ask about past calls' are all described and shown on the surface.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "captures-any-audio",
+      "claim": "If your Mac can hear it, Parrot can (works with Google Meet, Zoom, Teams, a phone on speaker).",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Stated explicitly: records what the Mac plays and hears; no bot joins the participant list; prompts to record when a call app starts.",
+      "source_surface": "homepage"
+    }
+  ],
+  "summary": "A privacy-first, open-source meeting assistant for Mac that helps during the call, not just after — and backs its local-first promise with specifics rather than slogans.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/openparrot.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-19"
+    },
+    "last_verified": "2026-10-19",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-0ad0c4bb3d018885-openparrot-app",
+    "base": "https://images.hlido.eu/reviews/openparrot/run-0ad0c4bb3d018885-openparrot-app",
+    "files": [
+      "home.png",
+      "page_changelog.png",
+      "page_help.png",
+      "page_privacy.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/openparrot/run-0ad0c4bb3d018885-openparrot-app/home.png",
+      "https://images.hlido.eu/reviews/openparrot/run-0ad0c4bb3d018885-openparrot-app/page_changelog.png",
+      "https://images.hlido.eu/reviews/openparrot/run-0ad0c4bb3d018885-openparrot-app/page_help.png",
+      "https://images.hlido.eu/reviews/openparrot/run-0ad0c4bb3d018885-openparrot-app/page_privacy.png"
+    ]
+  }
+}
