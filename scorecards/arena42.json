@@ -1,0 +1,170 @@
+{
+  "schema_version": "2.0",
+  "slug": "arena42",
+  "name": "Arena42 (Agent Arena)",
+  "agent_url": "https://arena42.ai",
+  "category": "Frameworks & Eval",
+  "run_id": "run-arena42-v2-rpublish-2026-10-21",
+  "run_at": "2026-10-18T08:05:18.500Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 73,
+  "tier": "STEADY",
+  "laddoo_score": 73,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "An active, legible competition arena where AI agents play games and earn credits — a genuinely agent-native product whose surface is clear but whose headline stats and earnings model stay unverified.",
+    "body": "Arena42 (Agent Arena, by NetMind.AI) is a platform where AI agents compete across game types — Werewolf, Tank Battle, Texas Hold'em, Debate, Stock Prediction, Art and more — with live lobbies, replays, leaderboards and a Product Arena where creators publish games and worlds. The public surface is unusually legible for this category: live matches, finished results, an agents-to-watch board and a plain registration path ('paste this line into your agent', which reads a skill.md). That last detail makes it one of the more agent-native surfaces we have seen — it is designed for an agent, not a human, to onboard. The reservations are the ones any public-surface read leaves open: the headline figures (15K+ agents, 28K+ games, prize-pool credits) are vendor-asserted and we could not verify them without an account, there is no monetary pricing (the economy runs on credits), and the 'Earn' promise is stated but not substantiated on the surface. A capable, well-built arena; the score reflects a clear product we could not functionally exercise.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-21",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (73): a clear, active, agent-native platform with broad feature depth and a reputable operator (NetMind.AI). Held below higher bands because the traction statistics and the earn/credits economy are unverifiable from the public surface and no pricing is disclosed.",
+  "what_it_does_well": [
+    "Agent-native onboarding — a single pasteable line that an agent reads (skill.md) to register and join matches",
+    "Broad, visibly-active catalogue of competition formats with live games, results and replays",
+    "A creator side (Product Arena) for publishing games and worlds, not just consuming them",
+    "Legible leaderboards and match history that make the state of the platform readable at a glance"
+  ],
+  "what_it_fails_at": [
+    "Headline traction stats (15K+ agents, 28K+ games, prize pools) are asserted, not evidenced on the surface",
+    "No monetary pricing — the credits economy and how one actually 'earns' are left unexplained publicly",
+    "Core registration and competition flow sit behind sign-in, so the experience could not be exercised"
+  ],
+  "best_for": [
+    "Agent builders who want a live arena to benchmark or showcase an agent against others",
+    "Developers exploring agent-vs-agent game and competition formats",
+    "Teams curious about agent-native onboarding patterns (link-driven self-registration)"
+  ],
+  "not_recommended_for": [
+    "Buyers who need transparent, monetary pricing before committing",
+    "Anyone relying on the stated earnings/credits model as a revenue source without independent proof"
+  ],
+  "red_flags": [
+    "Prominent traction and prize-pool figures with no public substantiation"
+  ],
+  "compared_to": [],
+  "evidence_urls": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Link-driven: an agent reads https://arena42.ai/skill.md and self-registers to join matches; described as working with any agent that can read a link.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:18.500Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:18.500Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-18T08:05:18.500Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:18.500Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "tested_at": "2026-10-18T08:05:18.500Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "product-arena-publish",
+      "claim": "Creators can publish products for the Product Arena where people and agents can play.",
+      "required": false,
+      "verdict": "pass",
+      "evidence": "Product Arena section lists dozens of published games/worlds and a 'Publish my product' action.",
+      "source_surface": "homepage"
+    },
+    {
+      "id": "agent-registration",
+      "claim": "Access begins by registering an agent, after which agents can join games.",
+      "required": true,
+      "verdict": "pass",
+      "evidence": "'Register Agent' nav plus 'Put your agent in the arena — paste this line into your agent' with a skill.md URL.",
+      "source_surface": "homepage"
+    }
+  ],
+  "summary": "An active, legible competition arena where AI agents play games and earn credits — a genuinely agent-native product whose surface is clear but whose headline stats and earnings model stay unverified.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-19",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-19",
+  "attestation_url": "/data/attestations/arena42.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-21",
+  "marking_signal": {
+    "marking_statement": null,
+    "detection_tool": null,
+    "cop_signatory": null,
+    "evidence_url": null,
+    "checked_at": "2026-10-21",
+    "source": "r-publish-editorial",
+    "not_applicable": true
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "tested_at": "2026-10-18"
+    },
+    "last_verified": "2026-10-18",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-21"
+  },
+  "evidence_images": {
+    "run_id": "run-b883913189ca2f41-arena42-ai",
+    "base": "https://images.hlido.eu/reviews/arena42/run-b883913189ca2f41-arena42-ai",
+    "files": [
+      "home.png",
+      "page_products.png",
+      "page_competition_7359b734-bdc8-47a9-85e8-787bd05ee.png",
+      "page_products_submit.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/arena42/run-b883913189ca2f41-arena42-ai/home.png",
+      "https://images.hlido.eu/reviews/arena42/run-b883913189ca2f41-arena42-ai/page_products.png",
+      "https://images.hlido.eu/reviews/arena42/run-b883913189ca2f41-arena42-ai/page_competition_7359b734-bdc8-47a9-85e8-787bd05ee.png",
+      "https://images.hlido.eu/reviews/arena42/run-b883913189ca2f41-arena42-ai/page_products_submit.png"
+    ],
+    "verified_at": "2026-10-21T21:20:56.944Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
