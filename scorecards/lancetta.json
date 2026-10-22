@@ -1,0 +1,215 @@
+{
+  "schema_version": "2.0",
+  "slug": "lancetta",
+  "name": "Lancetta",
+  "agent_url": "https://lancetta.app",
+  "run_id": "run-lancetta-v2-editor-2026-10-22",
+  "run_at": "2026-10-22T00:31:42.215Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "category": "Productivity",
+  "score": 78,
+  "tier": "STEADY",
+  "laddoo_score": 78,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A free, native menu-bar app that reads your Codex and Claude Code quota and tells you when to push, slow down or switch — and shows its working under every suggestion.",
+    "body": "Lancetta solves a small, real and badly-served problem: the percentage your coding agent reports is a number that leaves the decision to you, and nothing on the menu bar turns it into an action. Lancetta does. From the quota readings both Codex and Claude Code already keep — read, it stresses, without spending any of them — it says when a window is about to reset with most of it unused, when the current pace will stop an agent before its reset, when to drop to a lighter model or hand work to the other agent, and it watches the weekly window that quietly runs out days early. Two things lift this above the dozens of quota readouts in the same space. First, every suggestion names what it rests on ('5 hours: 82% used, 21% an hour over the last 1h00m, from 14 readings'), so the advice is arguable rather than oracular. Second, the surface is unusually candid about the ways a quota reading can be wrong — it devotes a whole section to three real defects (a stale file, a refused turn substituted for a real reading, a past reset time drawn as 0%) and states the constraint it will never break: looking at a quota must cost no quota, proven with a lifetime-token counter that does not move across twelve reads. That is the right instinct for a tool whose entire value is the trustworthiness of a number. It also quietly does two adjacent jobs well — a Maintenance pane that measures what your CLAUDE.md / AGENTS.md files load at every session start against Claude Code's own thresholds, and a Processes pane that reaps the background trees agents leave behind. The limits are the ones inherent to the position: it is macOS 15+ only, it supports exactly two agents, it depends on files that only move when you run those agents on that machine (a fragility it names honestly), and it is a single-maker open-source project with no operating history to point to. For a developer running Codex and Claude Code daily it is a genuinely useful, honest, zero-cost utility; its ceiling is the narrowness of what it watches.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the product ships (a signed, notarized universal build, 43 releases since September 2026, seven languages), does a real job well, is free, and is unusually transparent — every suggestion exposes the readings it rests on, and the surface documents its own failure modes and proves its founding no-token constraint with a counter. Not higher because it is a narrow, single-maker utility: it watches exactly two agents, runs only on macOS 15+, depends on locally-written quota files whose staleness it can only flag not fix, and has no operating or reliability history to stand on.",
+  "what_it_does_well": [
+    "Turns a raw quota percentage into a specific action — push on, slow down, switch model or agent, or trim — rather than just drawing a gauge",
+    "Shows the evidence under every suggestion (percentage, rate, readings count, reset time), so the advice can be checked before it is acted on",
+    "Names its own failure modes in detail — stale readings, a refused turn substituted for a real one, a past reset drawn as 0% — instead of hiding them",
+    "Holds a clear founding constraint — reading a quota must spend none of it — and demonstrates it with a lifetime-token counter that does not move across repeated reads",
+    "Free, native SwiftUI, signed and notarized, with a visible release cadence and seven UI languages",
+    "Adjacent value done well: a Maintenance pane measuring what instruction files load at each agent start, and a Processes pane that lists orphaned agent processes before reaping them"
+  ],
+  "what_it_fails_at": [
+    "Narrow scope: supports only Codex and Claude Code, so a user on other agents gets nothing",
+    "macOS 15.0+ only — no Linux, Windows or older-macOS path",
+    "Depends on local quota files that update only when the agent runs on that machine; staleness is flagged honestly but cannot be solved by the app",
+    "Single-maker open-source project with no stated operating history, uptime or continuity story",
+    "Several headline capabilities (reasoning from your own daily averages, predicting when you will stop) are on the roadmap as 'next', not shipped",
+    "Programmatic access for an agent to query it before a long task is raised in the FAQ but not documented as a stable API/MCP surface"
+  ],
+  "best_for": [
+    "Developers running Codex and/or Claude Code daily who keep hitting windows at the wrong time",
+    "People who want advice they can audit — the reading behind every suggestion is shown",
+    "Anyone wanting a zero-cost, native, no-Electron menu-bar tool that stays out of the way",
+    "Users who also want their agents' instruction-file bloat and leftover processes kept in check"
+  ],
+  "not_recommended_for": [
+    "Teams on agents other than Codex and Claude Code — unsupported",
+    "Non-macOS users, or anyone below macOS 15.0",
+    "Workflows that need a documented, stable programmatic interface to the quota data today",
+    "Buyers who require a vendor with an established operating and support history"
+  ],
+  "red_flags": [
+    "The tool's value rests entirely on the accuracy of a number it does not own; it is candid that local quota files can go stale and can only flag, not fix, that staleness — the honesty is a credit, the dependency is still the core risk",
+    "Single-maker project with no operating-history or continuity statement on the surface"
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Not a competitor — Lancetta sits beside Claude Code and reads the quota Claude Code already keeps. Claude Code is the agent; Lancetta is the menu-bar advisor that tells you when to spend or spare its window. Use Lancetta only if you already run Claude Code (or Codex).",
+      "preferred_for_axis": "agent-vs-quota-advisor"
+    },
+    {
+      "slug": "openai-codex",
+      "verdict_diff": "Same relationship as with Claude Code: Lancetta reads Codex's own quota readings and turns them into timing advice. It adds nothing on its own; its worth is proportional to how much you lean on Codex's windows.",
+      "preferred_for_axis": "agent-vs-quota-advisor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Reads Codex and Claude Code quota and turns it into timing advice (push on / slow down / switch)",
+      "source": "https://lancetta.app/ (hero + feature sections)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Free, signed and notarized universal macOS build, macOS 15.0+, seven languages, 43 releases since September 2026",
+      "source": "https://lancetta.app/ (download band)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Every suggestion shows the readings it rests on",
+      "source": "https://lancetta.app/ ('How it decides' section)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Reading a quota spends no tokens — demonstrated with an unchanged lifetime-token counter across twelve reads",
+      "source": "https://lancetta.app/ ('The founding constraint' section)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Documents its own quota-reading failure modes (stale / substituted / invented)",
+      "source": "https://lancetta.app/ ('Why the numbers matter' section)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Maintenance pane checks instruction-file load at agent start; Processes pane reaps orphaned agent processes",
+      "source": "https://lancetta.app/ and https://lancetta.app/docs",
+      "tested_at": "2026-10-22",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Lancetta is about coding agents rather than itself being one. It reads the quota files Codex and Claude Code keep and advises a human. The FAQ raises the idea of an agent querying Lancetta before a long task, but no stable API, CLI or MCP surface is documented on the captured pages, so programmatic integration is not yet verifiable.",
+    "agent_friendly_score": 4
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-22T00:31:42.215Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Push on, slow down, or switch agents. Lancetta tells you when.'",
+      "tested_at": "2026-10-22T00:31:42.215Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Download for macOS'",
+      "tested_at": "2026-10-22T00:31:42.215Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false,
+      "evidence": "Free; 'Free · v0.63.0 · macOS 15.0+ · Universal · Signed & notarized'; open-source with sponsor links",
+      "tested_at": "2026-10-22T00:31:42.215Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "Detailed feature walkthrough, docs/getting-started pages, 74-second concept explained; no in-browser demo (it is a native app)",
+      "tested_at": "2026-10-22T00:31:42.215Z"
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "Deterministic quota-advice utility; produces no generative AI content.",
+    "checked_at": "2026-10-22",
+    "source": "r-publish-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true,
+      "evidence": "Free; 'Free · v0.63.0 · macOS 15.0+ · Universal · Signed & notarized'; open-source with sponsor links",
+      "tested_at": "2026-10-22"
+    },
+    "last_verified": "2026-10-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-22"
+  },
+  "summary": "A free, native menu-bar app that reads your Codex and Claude Code quota and tells you when to push, slow down or switch — and shows its working under every suggestion.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-20",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-20",
+  "attestation_url": "/data/attestations/lancetta.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-22",
+  "evidence_images": {
+    "run_id": "run-c64fd7720e0d983d-lancetta-app",
+    "base": "https://images.hlido.eu/reviews/lancetta/run-c64fd7720e0d983d-lancetta-app",
+    "files": [
+      "home.png",
+      "page_docs.png",
+      "page_docs_getting-started.png",
+      "page_docs_suggestions.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/lancetta/run-c64fd7720e0d983d-lancetta-app/home.png",
+      "https://images.hlido.eu/reviews/lancetta/run-c64fd7720e0d983d-lancetta-app/page_docs.png",
+      "https://images.hlido.eu/reviews/lancetta/run-c64fd7720e0d983d-lancetta-app/page_docs_getting-started.png",
+      "https://images.hlido.eu/reviews/lancetta/run-c64fd7720e0d983d-lancetta-app/page_docs_suggestions.png"
+    ],
+    "verified_at": "2026-10-22T21:19:35.213Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
