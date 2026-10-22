@@ -1,0 +1,206 @@
+{
+  "schema_version": "2.0",
+  "slug": "navige",
+  "name": "Navige",
+  "agent_url": "https://navige.ai",
+  "run_id": "run-navige-v2-editor-2026-10-22",
+  "run_at": "2026-10-22T00:33:05.021Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "category": "Infrastructure",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "An in-path cost-governance layer that sits between your AI agents and the models they pay for, acting before a run rather than reporting after it — thoughtfully built and strikingly honest, but with no traction or pricing yet on show.",
+    "body": "Navige attacks a real and growing line item: agents over-buying intelligence — premium models on trivial tasks, runs that never finish, oversized context, repeated failures, many agents on one budget. Its stated difference from the observability crowd is the tense: where everyone else shows what a run cost after it ran, Navige claims to change the step before it runs, through caching and answer reuse, context and tool-payload trimming, a loop-and-failure guard, and task-complexity-based routing. It advertises one line of config across LangChain, LangGraph, CrewAI, OpenAI Agents, MCP and Agentforce, over Anthropic, OpenAI, Google, Bedrock, Mistral and Llama. The most persuasive thing on the page is not a feature but a posture: the savings calculator refuses to pretend. It is labelled an opportunity estimate, not a savings claim; it says in plain words 'we have never seen your systems', keeps the measured-opportunity panel blank until real traffic is seen, and explains why it gives a range rather than a single figure ('a single figure would claim a precision only measurement can earn'). For a category full of invented percentages, that restraint is a strong trust signal and the right instinct. What the captured surface does not yet show is anything behind it: the headline counters read '0+ agents connected', '$0+ managed', '0+ tool calls', which is the signature of a pre-traction launch; no pricing was on the captured page; and the central promise — same result, smaller bills — is asserted, with the product's own honesty admitting it stays unproven until Navige measures your traffic. There is also the standing risk of any in-path proxy: you are inserting a dependency into the hot path between your agents and every model they call, and the surface says nothing about its own latency, reliability or failure mode. The idea is sound, the framing is honest, and the category is real; what is missing is evidence that it works at scale and what it costs.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-22",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) — borderline — because the product is live with a clearly-articulated, differentiated position (govern the step before the run, not report after it), broad declared framework and model coverage, and an unusually honest savings calculator that refuses to claim what it has not measured, which is the right trust posture for this category. Held at the STEADY floor, not higher, because the public surface shows no traction (its own counters read 0+ agents, $0 managed, 0 tool calls), no pricing was captured, the core savings promise is unproven by the vendor's own admission, and an in-path proxy's latency/reliability/failure story is absent. This review saw only the homepage, so confidence is low.",
+  "what_it_does_well": [
+    "Clear, differentiated position: act on the step before a run (cache/reuse, trim, guard loops, route by complexity) rather than report cost after the fact",
+    "Broad declared integration surface — LangChain, LangGraph, CrewAI, OpenAI Agents, MCP, Agentforce — over Anthropic, OpenAI, Google, Bedrock, Mistral and Llama, via 'one line of config'",
+    "An exceptionally honest opportunity calculator: labelled an estimate not a savings claim, states 'we have never seen your systems', and leaves the measured panel blank until it sees real traffic",
+    "Explains its own method and why it gives a range instead of a single number — rare candour for the cost-optimisation category",
+    "Governs tool calls against rules before they run, not just flags them afterwards",
+    "Keeps keys, providers and frameworks unchanged — a low-friction adoption story"
+  ],
+  "what_it_fails_at": [
+    "No traction evidence: the surface's own counters read 0+ agents connected, $0+ managed, 0+ tool calls",
+    "No pricing captured on this run — the cost of the cost-saver is unknown from the reviewed surface",
+    "The core promise ('same result, smaller bills') is unproven; the product itself says the measured panel stays blank until it sees your traffic",
+    "In-path proxy risk: it inserts a dependency between agents and every model they call, with no stated latency, reliability or failure-mode story",
+    "Crowded category (AI gateways / routers / cost tooling) with no stated differentiation on reliability or scale",
+    "Only the homepage was captured, so features, docs and pricing could not be verified in depth"
+  ],
+  "best_for": [
+    "Teams with meaningful programmatic AI spend who want governance applied before a run, not a post-hoc bill",
+    "Early adopters comfortable piloting a young in-path layer and measuring the savings themselves",
+    "Multi-framework shops wanting one governed layer across LangChain / CrewAI / OpenAI Agents / MCP without changing keys or providers",
+    "Buyers who value a vendor that refuses to overclaim savings before measurement"
+  ],
+  "not_recommended_for": [
+    "Production hot paths that cannot absorb an unproven in-path dependency without a published latency/reliability story",
+    "Buyers who need pricing and references before piloting — neither is on the captured surface",
+    "Teams needing evidence of savings at scale today rather than an opportunity estimate",
+    "Anyone unwilling to route model traffic through a third party at an early stage of its operating history"
+  ],
+  "red_flags": [
+    "Every headline metric reads zero ('0+ agents connected', '$0+ AI spend managed', '0+ tool calls governed'), which points to a pre-traction launch with no demonstrated usage",
+    "It is an in-path layer between agents and models, yet the captured surface states nothing about its own latency, availability or what happens to a call if Navige is down",
+    "No pricing was present on the captured surface, so the cost of adopting the cost-saver is unknown"
+  ],
+  "compared_to": [
+    {
+      "slug": "openrouter",
+      "verdict_diff": "OpenRouter is a routing/aggregation layer with real traffic and published, per-model pricing; Navige's pitch is active pre-run governance (cache, trim, guard, route) rather than routing alone, but with no visible traction or pricing yet. Choose OpenRouter for a proven routing layer today; watch Navige if pre-run cost governance is the specific thing you need and you will pilot it yourself.",
+      "preferred_for_axis": "proven-routing-vs-prerun-governance"
+    },
+    {
+      "slug": "helicone",
+      "verdict_diff": "Helicone is observability — it shows you what runs cost, after the fact. Navige explicitly positions against that, claiming to change the step before the run. They are complementary more than competing: Helicone measures, Navige intervenes. Use Helicone to see spend; consider Navige if you want to act on it in-path, once it can show the savings are real.",
+      "preferred_for_axis": "observe-after-vs-intervene-before"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Sits in-path between agents and models and changes the step before a run (cache/reuse, context & payload trimming, loop/failure guard, smart routing)",
+      "source": "https://navige.ai (hero + \"Four ways every run gets lighter\")",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "One line of config across LangChain, LangGraph, CrewAI, OpenAI Agents, MCP, Agentforce over Anthropic/OpenAI/Google/Bedrock/Mistral/Llama",
+      "source": "https://navige.ai (integrations strip)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "The savings calculator is an opportunity estimate, not a savings claim, and the measured panel stays blank until Navige sees real traffic",
+      "source": "https://navige.ai (calculator + \"How this estimate works\")",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Usage/traction (agents connected, spend managed, tool calls governed)",
+      "source": "https://navige.ai (stats band shows '0+' for each)",
+      "tested_at": "2026-10-22",
+      "verified": true
+    },
+    {
+      "claim": "Transparent pricing",
+      "source": "Pricing nav link present but the pricing page was not captured in this run",
+      "tested_at": "2026-10-22",
+      "verified": false
+    },
+    {
+      "claim": "'Same result, smaller bills' at scale",
+      "source": "Asserted on the surface; the product itself states the measured panel is blank until it sees your traffic",
+      "tested_at": "2026-10-22",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Navige is infrastructure for agents by design: it inserts itself between an agent framework and the model providers via a one-line config change, and lists MCP among supported surfaces alongside LangChain, LangGraph, CrewAI and OpenAI Agents. Programmatic integration is the whole point, though the depth of the API/MCP surface could not be verified from the single captured page.",
+    "agent_friendly_score": 6
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "tested_at": "2026-10-22T00:33:05.021Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "'Sufficient intelligence you need' — sits between agents and what they pay for; every run cheaper and faster, same result",
+      "tested_at": "2026-10-22T00:33:05.021Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "'Start Free' / 'Get Started' / 'Read the Docs'",
+      "tested_at": "2026-10-22T00:33:05.021Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "A 'Start Free' CTA and a Pricing nav link are present, but the pricing page was not captured in this run; terms unverified",
+      "tested_at": "2026-10-22T00:33:05.021Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "An interactive opportunity calculator (explicitly an estimate), a before/after positioning band, and docs link; no proof of realised savings and all traction counters read 0+",
+      "tested_at": "2026-10-22T00:33:05.021Z"
+    }
+  ],
+  "marking_signal": {
+    "not_applicable": true,
+    "reason": "In-path gateway/routing layer; routes to third-party models and generates no AI content of its own.",
+    "checked_at": "2026-10-22",
+    "source": "r-publish-editorial-enrich"
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "A 'Start Free' CTA and a Pricing nav link are present, but the pricing page was not captured in this run; terms unverified",
+      "tested_at": "2026-10-22"
+    },
+    "last_verified": "2026-10-22",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-22"
+  },
+  "summary": "An in-path cost-governance layer that sits between your AI agents and the models they pay for, acting before a run rather than reporting after it — thoughtfully built and strikingly honest, but with no traction or pricing yet on show.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-20",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-20",
+  "attestation_url": "/data/attestations/navige.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-22",
+  "evidence_images": {
+    "run_id": "run-2729c23ac5f73636-navige-ai",
+    "base": "https://images.hlido.eu/reviews/navige/run-2729c23ac5f73636-navige-ai",
+    "files": [
+      "home.png"
+    ],
+    "urls": [
+      "https://images.hlido.eu/reviews/navige/run-2729c23ac5f73636-navige-ai/home.png"
+    ],
+    "verified_at": "2026-10-22T21:19:37.471Z",
+    "verified_count": 1,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  }
+}
