@@ -24,7 +24,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 - **An independent MCP-server safety register** — MCP servers scored safety-first (tool-poisoning / dangerous-capability / auth-posture red-flags → `SAFE` / `CAUTION` / `RISKY` / `DANGEROUS`) with published per-flag evidence, never a bare number. Early first cohort: [hlido.eu/mcp/](https://hlido.eu/mcp/) · data at [`/data/mcp-register.json`](https://hlido.eu/data/mcp-register.json)
 - **Distribution everywhere** — also indexed on [Smithery](https://smithery.ai/servers/ankitkapur1992/hlido), [HuggingFace dataset](https://huggingface.co/datasets/hlido-eu/agent-benchmark), and the [community awesome-mcp-servers list](https://github.com/punkpeye/awesome-mcp-servers)
 
-## Reviewed agents (1039)
+## Reviewed agents (1044)
 
 | Slug | Name | Category | Laddoo | Tier |
 |---|---|---|---|---|
@@ -102,7 +102,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`chatwithads`](https://hlido.eu/reviews/chatwithads/) | ChatWithAds | AI Agent | 78 | — |
 | [`claude-ai`](https://hlido.eu/reviews/claude-ai/) | Claude.ai | Chat & Companion | 53 | — |
 | [`codeium`](https://hlido.eu/reviews/codeium/) | Codeium | Coding | 65 | — |
-| [`continue-dev`](https://hlido.eu/reviews/continue-dev/) | Continue | Coding | 78 | — |
+| [`continue-dev`](https://hlido.eu/reviews/continue-dev/) | Continue | Coding | 75 | — |
 | [`cohere`](https://hlido.eu/reviews/cohere/) | Cohere | Chat & Companion | 78 | — |
 | [`crewai`](https://hlido.eu/reviews/crewai/) | CrewAI | Frameworks & Eval | 90 | — |
 | [`datagrout`](https://hlido.eu/reviews/datagrout/) | DataGrout | AI Agent | 40 | — |
@@ -265,7 +265,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`magic-dev`](https://hlido.eu/reviews/magic-dev/) | Magic | Coding | 53 | — |
 | [`dify-ai`](https://hlido.eu/reviews/dify-ai/) | Dify | Workflow & Automation | 78 | — |
 | [`poolside-ai`](https://hlido.eu/reviews/poolside-ai/) | Poolside | Coding | 65 | — |
-| [`contextual-ai`](https://hlido.eu/reviews/contextual-ai/) | Contextual AI | Research | 78 | — |
+| [`contextual-ai`](https://hlido.eu/reviews/contextual-ai/) | Contextual AI | Research | 75 | — |
 | [`langfuse`](https://hlido.eu/reviews/langfuse/) | Langfuse | Frameworks & Eval | 90 | — |
 | [`traceloop`](https://hlido.eu/reviews/traceloop/) | Traceloop | Frameworks & Eval | 90 | — |
 | [`promptlayer`](https://hlido.eu/reviews/promptlayer/) | PromptLayer | Frameworks & Eval | 65 | — |
@@ -1067,6 +1067,11 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`preset-io-agor`](https://hlido.eu/reviews/preset-io-agor/) | Agor (by Preset) | Workflow & Automation | 76 | — |
 | [`agent-reviews`](https://hlido.eu/reviews/agent-reviews/) | agent.reviews | Frameworks & Eval | 71 | — |
 | [`pocketty`](https://hlido.eu/reviews/pocketty/) | pocketty | Infrastructure | 74 | — |
+| [`openparrot`](https://hlido.eu/reviews/openparrot/) | Parrot | Productivity | 81 | — |
+| [`thecraftagents`](https://hlido.eu/reviews/thecraftagents/) | Craft Agents | Workflow & Automation | 79 | — |
+| [`lancetta`](https://hlido.eu/reviews/lancetta/) | Lancetta | Productivity | 78 | — |
+| [`praex`](https://hlido.eu/reviews/praex/) | Praex | Coding | 73 | — |
+| [`navige`](https://hlido.eu/reviews/navige/) | Navige | Infrastructure | 71 | — |
 
 ## Files in this mirror
 
