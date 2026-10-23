@@ -36,7 +36,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`parahelp`](https://hlido.eu/reviews/parahelp/) | Parahelp | Customer Experience | 75 | — |
 | [`parakeeet-ai`](https://hlido.eu/reviews/parakeeet-ai/) | Parakeeet AI | Sales | 75 | STEADY |
 | [`workbeaver`](https://hlido.eu/reviews/workbeaver/) | WorkBeaver | Productivity | 63.4 | — |
-| [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 80 | — |
+| [`gumloop`](https://hlido.eu/reviews/gumloop/) | Gumloop | Workflow & Automation | 78 | — |
 | [`aider`](https://hlido.eu/reviews/aider/) | Aider | Coding | 92 | — |
 | [`jared-so`](https://hlido.eu/reviews/jared-so/) | jared-so | Productivity | 40 | — |
 | [`raccoon-ai`](https://hlido.eu/reviews/raccoon-ai/) | raccoon-ai | Productivity | 70 | — |
@@ -187,7 +187,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`smartlead`](https://hlido.eu/reviews/smartlead/) | Smartlead | Customer Experience | 78 | — |
 | [`lavender-ai`](https://hlido.eu/reviews/lavender-ai/) | Lavender | Customer Experience | 78 | — |
 | [`kore-ai`](https://hlido.eu/reviews/kore-ai/) | Kore.ai | Customer Experience | 65 | — |
-| [`ada-cx`](https://hlido.eu/reviews/ada-cx/) | Ada | Customer Experience | 78 | — |
+| [`ada-cx`](https://hlido.eu/reviews/ada-cx/) | Ada | Customer Experience | 72 | — |
 | [`ultimate-ai`](https://hlido.eu/reviews/ultimate-ai/) | Ultimate | Customer Experience | 65 | — |
 | [`intercom-fin`](https://hlido.eu/reviews/intercom-fin/) | Intercom Fin | Customer Experience | 65 | — |
 | [`forethought`](https://hlido.eu/reviews/forethought/) | Forethought | Customer Experience | 90 | — |
@@ -242,7 +242,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`browser-base`](https://hlido.eu/reviews/browser-base/) | Browserbase | Infrastructure | 78 | — |
 | [`recraft-ai`](https://hlido.eu/reviews/recraft-ai/) | Recraft | Image & Design | 78 | — |
 | [`figma-make`](https://hlido.eu/reviews/figma-make/) | Figma Make | Image & Design | 65 | — |
-| [`anchor-browser`](https://hlido.eu/reviews/anchor-browser/) | Anchor Browser | Infrastructure | 78 | — |
+| [`anchor-browser`](https://hlido.eu/reviews/anchor-browser/) | Anchor Browser | Infrastructure | 65 | — |
 | [`simular`](https://hlido.eu/reviews/simular/) | Simular | Infrastructure | 78 | — |
 | [`scrapybara`](https://hlido.eu/reviews/scrapybara/) | Scrapybara | Infrastructure | 78 | — |
 | [`multion`](https://hlido.eu/reviews/multion/) | MultiOn | Infrastructure | 53 | — |
