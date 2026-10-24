@@ -191,7 +191,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`ultimate-ai`](https://hlido.eu/reviews/ultimate-ai/) | Ultimate | Customer Experience | 65 | — |
 | [`intercom-fin`](https://hlido.eu/reviews/intercom-fin/) | Intercom Fin | Customer Experience | 65 | — |
 | [`forethought`](https://hlido.eu/reviews/forethought/) | Forethought | Customer Experience | 90 | — |
-| [`cresta`](https://hlido.eu/reviews/cresta/) | Cresta | Customer Experience | 65 | — |
+| [`cresta`](https://hlido.eu/reviews/cresta/) | Cresta | Customer Experience | 75 | — |
 | [`netomi`](https://hlido.eu/reviews/netomi/) | Netomi | Customer Experience | 53 | — |
 | [`cognigy`](https://hlido.eu/reviews/cognigy/) | Cognigy | Customer Experience | 78 | — |
 | [`devin-cognition`](https://hlido.eu/reviews/devin-cognition/) | Devin (Cognition) | Coding | 65 | — |
