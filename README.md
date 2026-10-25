@@ -348,7 +348,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`playphone-ai`](https://hlido.eu/reviews/playphone-ai/) | PlayPhone AI | Voice | 40 | — |
 | [`camb-ai`](https://hlido.eu/reviews/camb-ai/) | Camb AI | Voice | 78 | — |
 | [`warmly-ai`](https://hlido.eu/reviews/warmly-ai/) | Warmly | Customer Experience | 78 | — |
-| [`hubspot-clearbit`](https://hlido.eu/reviews/hubspot-clearbit/) | HubSpot Clearbit | Customer Experience | 65 | — |
+| [`hubspot-clearbit`](https://hlido.eu/reviews/hubspot-clearbit/) | HubSpot Clearbit | Customer Experience | 75 | — |
 | [`clari`](https://hlido.eu/reviews/clari/) | Clari | Customer Experience | 78 | — |
 | [`opal-ai`](https://hlido.eu/reviews/opal-ai/) | Opal | Productivity | 40 | — |
 | [`swebench`](https://hlido.eu/reviews/swebench/) | SWE-bench Leaderboards | AI Agent | 65 | — |
