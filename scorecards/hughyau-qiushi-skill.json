@@ -47,15 +47,15 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-68e411c1672a0842-hughyau-com",
-    "base": "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-68e411c1672a0842-hughyau-com",
+    "run_id": "run-46fba7cd6c86c738-hughyau-com",
+    "base": "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-46fba7cd6c86c738-hughyau-com",
     "files": [
       "home.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-68e411c1672a0842-hughyau-com/home.png"
+      "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-46fba7cd6c86c738-hughyau-com/home.png"
     ],
-    "verified_at": "2026-10-25T21:16:41.976Z",
+    "verified_at": "2026-10-26T21:18:46.231Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -67,5 +67,38 @@
     "last_verified": "2026-06-14",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "model-drafted from captured public-surface evidence; scores and claim verdicts are measured by automated testing",
+  "hlido_opinion": {
+    "headline": "A methodology pack for agent reasoning that explains itself unusually well, and shows nothing of itself running.",
+    "body": "Qiushi-Skill is a collection of AI-agent skills built around one governing principle and nine methodological tools, drawn from classical dialectical materialism and applied to how an agent should approach a problem: investigate before answering, identify the main contradiction, validate in practice, keep pushing until the work is actually finished. The public surface we captured is a well-constructed argument for that approach — it names the failure modes it is reacting to (an agent that answers before checking facts, that cannot tell a main problem from surface noise, that stops at the first obstacle) and maps each to a named tool, with source texts cited per skill directory. That is more intellectual honesty about its own premises than most agent tooling offers. What the surface does not carry is the other half: there is no call to action, no stated access or pricing terms, and no demonstration or captured output showing the methodology changing an agent's behaviour on a real task. The project is also presented primarily in Chinese, with an English README alongside; a reader arriving in English gets the summary but not the full argument. The framing is explicitly ideological, which is a deliberate authorial choice rather than a defect, but it is the kind of thing a buyer should know before adopting it into a team workflow. On what is publicly visible, this reads as a serious, well-documented prompt-methodology collection whose claims about improving agent reasoning are stated but not yet evidenced in public.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-26",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY — the homepage loads and states a clear, specific value proposition with cited source material, which is what carries the score. It is held back from higher by three public-surface gaps measured in this run: no call to action, no disclosed pricing or access terms, and no demonstration or captured evidence of the methodology in use. Confidence is low: this is a Tier-2 public-surface read, not a hands-on test of the skills themselves.",
+  "what_it_does_well": [
+    "States its premise and its target failure modes explicitly, rather than asserting a generic improvement",
+    "Cites original source texts per skill directory, so a reader can check the derivation",
+    "Organises nine tools under one governing principle instead of shipping a loose prompt grab-bag"
+  ],
+  "what_it_fails_at": [
+    "No demonstration or captured output showing the methodology changing an agent's behaviour",
+    "No call to action on the landing surface",
+    "No disclosed access or pricing terms"
+  ],
+  "best_for": "Practitioners who want an opinionated, documented reasoning framework to adapt into their own agent prompts, and who are comfortable reading the Chinese-language material.",
+  "not_recommended_for": "Teams that need demonstrated, measured improvement before adopting a methodology, or that cannot evaluate the primary-language documentation.",
+  "red_flags": [],
+  "agent_relevance": {
+    "has_mcp": false,
+    "has_cli": false,
+    "derived_from": "r4-claude-enrich-2026-10-26",
+    "basis": [
+      "No MCP server or CLI surface evidenced in the captured page or repository preview; this is a prompt/skill collection, not a runnable agent."
+    ],
+    "note": "Flags not listed were not evidenced, not measured false."
   }
 }
