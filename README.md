@@ -648,27 +648,27 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`cherryhq-cherry-studio`](https://hlido.eu/reviews/cherryhq-cherry-studio/) | Cherry Studio | Chat & Companion | 72 | — |
 | [`clockless-org-html-anything`](https://hlido.eu/reviews/clockless-org-html-anything/) | html-anything | Coding | 65 | — |
 | [`coderluii-holyclaude`](https://hlido.eu/reviews/coderluii-holyclaude/) | HolyClaude | Coding | 67 | — |
-| [`aifordevelopers`](https://hlido.eu/reviews/aifordevelopers/) | AI for Developers — Best AI Coding Dev Tools, AI Agents, Skills & SDKs (2026) | Coding | 50 | FADING |
+| [`aifordevelopers`](https://hlido.eu/reviews/aifordevelopers/) | AI for Developers | Coding | 57 | FADING |
 | [`aidc-ai-comfyui-copilot`](https://hlido.eu/reviews/aidc-ai-comfyui-copilot/) | AIDC-AI/ComfyUI-Copilot | Image & Design | 82 | STEADY |
 | [`erickong-aura-agent`](https://hlido.eu/reviews/erickong-aura-agent/) | erickong/aura-agent | AI Agent | 67 | FADING |
 | [`esengine-deepseek-reasonix`](https://hlido.eu/reviews/esengine-deepseek-reasonix/) | esengine/DeepSeek-Reasonix | AI Agent | 50 | FADING |
 | [`fazxes-claude-code`](https://hlido.eu/reviews/fazxes-claude-code/) | fazxes/Claude-code | Coding | 60 | FADING |
 | [`genieincodebottle-generative-ai`](https://hlido.eu/reviews/genieincodebottle-generative-ai/) | genieincodebottle/generative-ai | Research | 80 | STEADY |
-| [`gitlawb-openclaude`](https://hlido.eu/reviews/gitlawb-openclaude/) | Gitlawb/openclaude | Coding | 50 | FADING |
+| [`gitlawb-openclaude`](https://hlido.eu/reviews/gitlawb-openclaude/) | openclaude | Coding | 72 | STEADY |
 | [`gizclaw-flowcraft`](https://hlido.eu/reviews/gizclaw-flowcraft/) | GizClaw/flowcraft | Frameworks & Eval | 82 | STEADY |
 | [`google-agents-cli`](https://hlido.eu/reviews/google-agents-cli/) | google/agents-cli | Frameworks & Eval | 80 | STEADY |
 | [`gi-dellav-zerostack`](https://hlido.eu/reviews/gi-dellav-zerostack/) | gi-dellav/zerostack | Coding | 70 | STEADY |
 | [`google-cloud-ai-agent-platform`](https://hlido.eu/reviews/google-cloud-ai-agent-platform/) | Google-Cloud-AI/agent-platform | Frameworks & Eval | 80 | STEADY |
 | [`gptme-gptme`](https://hlido.eu/reviews/gptme-gptme/) | gptme/gptme | Coding | 75 | STEADY |
-| [`gistai`](https://hlido.eu/reviews/gistai/) | Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT. | Image & Design | 50 | FADING |
+| [`gistai`](https://hlido.eu/reviews/gistai/) | Gist AI | Productivity | 63 | FADING |
 | [`he-yufeng-corecoder`](https://hlido.eu/reviews/he-yufeng-corecoder/) | he-yufeng/CoreCoder | Coding | 70 | STEADY |
 | [`graykode-abtop`](https://hlido.eu/reviews/graykode-abtop/) | graykode/abtop | Coding | 82 | STEADY |
 | [`heymrun-heym`](https://hlido.eu/reviews/heymrun-heym/) | heymrun/heym | Workflow & Automation | 80 | STEADY |
 | [`hello-qm-catgo-lrg`](https://hlido.eu/reviews/hello-qm-catgo-lrg/) | Hello-QM/catgo-LRG | Specialized verticals | 82 | STEADY |
 | [`hkuds-deepcode`](https://hlido.eu/reviews/hkuds-deepcode/) | HKUDS/DeepCode | Coding | 90 | VITAL |
-| [`hkuds-vibe-trading`](https://hlido.eu/reviews/hkuds-vibe-trading/) | HKUDS/Vibe-Trading | AI Agent | 50 | FADING |
-| [`hughyau-qiushi-skill`](https://hlido.eu/reviews/hughyau-qiushi-skill/) | HughYau/qiushi-skill | AI Agent | 70 | STEADY |
-| [`holaboss-ai-holaos`](https://hlido.eu/reviews/holaboss-ai-holaos/) | holaboss-ai/holaOS | AI Agent | 50 | FADING |
+| [`hkuds-vibe-trading`](https://hlido.eu/reviews/hkuds-vibe-trading/) | Vibe-Trading | AI Agent | 76 | STEADY |
+| [`hughyau-qiushi-skill`](https://hlido.eu/reviews/hughyau-qiushi-skill/) | Qiushi Skill | AI Agent | 61 | FADING |
+| [`holaboss-ai-holaos`](https://hlido.eu/reviews/holaboss-ai-holaos/) | holaboss | AI Agent | 66 | FADING |
 | [`hugohe3-ppt-master`](https://hlido.eu/reviews/hugohe3-ppt-master/) | hugohe3/ppt-master | Productivity | 80 | STEADY |
 | [`itayinbarr-little-coder`](https://hlido.eu/reviews/itayinbarr-little-coder/) | itayinbarr/little-coder | Coding | 70 | STEADY |
 | [`jackwener-opencli`](https://hlido.eu/reviews/jackwener-opencli/) | jackwener/OpenCLI | Workflow & Automation | 75 | STEADY |
@@ -683,13 +683,13 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`lucasrosati-claude-code-memory-setup`](https://hlido.eu/reviews/lucasrosati-claude-code-memory-setup/) | lucasrosati/claude-code-memory-setup | Coding | 82 | STEADY |
 | [`mcp-brasil-mcp-brasil`](https://hlido.eu/reviews/mcp-brasil-mcp-brasil/) | Mcp-Brasil/mcp-brasil | Infrastructure | 82 | STEADY |
 | [`microsoft-autogen`](https://hlido.eu/reviews/microsoft-autogen/) | microsoft/autogen | Frameworks & Eval | 80 | STEADY |
-| [`memtensor-skills-vote`](https://hlido.eu/reviews/memtensor-skills-vote/) | MemTensor/skills-vote | AI Agent | 50 | FADING |
-| [`miomioos-mioisland`](https://hlido.eu/reviews/miomioos-mioisland/) | MioMioOS/MioIsland | Coding | 70 | STEADY |
+| [`memtensor-skills-vote`](https://hlido.eu/reviews/memtensor-skills-vote/) | SkillsVote | AI Agent | 64 | FADING |
+| [`miomioos-mioisland`](https://hlido.eu/reviews/miomioos-mioisland/) | MioIsland | Coding | 71 | STEADY |
 | [`minishlab-semble`](https://hlido.eu/reviews/minishlab-semble/) | MinishLab/semble | Coding | 85 | STEADY |
-| [`myicor-mypka`](https://hlido.eu/reviews/myicor-mypka/) | myICOR/myPKA | AI Agent | 50 | FADING |
+| [`myicor-mypka`](https://hlido.eu/reviews/myicor-mypka/) | myICOR | Productivity | 59 | FADING |
 | [`nduckmink-arkon`](https://hlido.eu/reviews/nduckmink-arkon/) | nduckmink/arkon | MCP Server | 67 | FADING |
 | [`neothecapt-redteamagent`](https://hlido.eu/reviews/neothecapt-redteamagent/) | NeoTheCapt/RedteamAgent | Coding | 73 | STEADY |
-| [`nexu-io-html-anything`](https://hlido.eu/reviews/nexu-io-html-anything/) | nexu-io/html-anything | Coding | 50 | FADING |
+| [`nexu-io-html-anything`](https://hlido.eu/reviews/nexu-io-html-anything/) | HTML Anything | Coding | 74 | STEADY |
 | [`portialabs`](https://hlido.eu/reviews/portialabs/) | Portia Labs (Rezonant) | Coding | 64 | — |
 | [`nesquena-hermes-webui`](https://hlido.eu/reviews/nesquena-hermes-webui/) | nesquena/hermes-webui | AI Agent | 80 | STEADY |
 | [`nocobase-nocobase`](https://hlido.eu/reviews/nocobase-nocobase/) | nocobase/nocobase | Workflow & Automation | 75 | STEADY |
