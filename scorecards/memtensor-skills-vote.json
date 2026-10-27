@@ -1,44 +1,183 @@
 {
+  "schema_version": "2.0",
   "slug": "memtensor-skills-vote",
-  "name": "MemTensor/skills-vote",
+  "name": "SkillsVote",
   "agent_url": "https://skills.vote",
-  "repo_url": "https://github.com/MemTensor/skills-vote",
   "category": "AI Agent",
-  "run_id": "run-memtensor-skills-vote-jv1kuo0b",
-  "run_at": "2026-07-14T12:00:46.551Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "run_id": "run-67c710e69548f876-skills-vote",
+  "run_at": "2026-10-27T04:31:00.047Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 64,
+  "tier": "FADING",
+  "laddoo_score": 64,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A skills registry and recommendation gateway for AI agents with a sound feedback-loop design and an MCP integration path — undermined by headline numbers in the millions that the surface gives no way to check.",
+    "body": "The architecture here is well conceived and aimed at a real gap. Agent skill discovery today is mostly keyword search over a list; SkillsVote proposes vector retrieval over intent (find the skill for what you are trying to do, not the name you happen to know), a recommendation API that returns a skill set plus usage guidance rather than bare metadata, and — the part that matters most — a feedback leg where an agent reports back which skills it actually used and a trajectory summary after the task, so recommendations improve from execution rather than from votes alone. It also addresses the failure every skill registry eventually hits: that a skill you can find may not run. The surface says skills are exercised against constructed real tasks in a controlled environment to check they work, and that each carries environment requirements, permission scope, external dependencies and quality metrics so an agent can decide before invoking. Signed review and version pinning are claimed. Integration is advertised as MCP, an OpenAgent SDK and a CLI, with a four-step flow into Codex, Claude Code and similar clients — which is exactly the right shape for an agent-facing registry. The difficulty is the numbers. The page leads with 1,681,615 skills indexed, 794,617+ verified, 322,930 passing quality assessment and 36,616 featured. Those are extraordinary figures for a category where the largest curated collections number in the thousands, 'verified' and 'quality assessed' are not defined anywhere on the captured surface, and no methodology, sample or third-party audit is offered. Either the definitions are far looser than the words imply, or this is the largest such corpus in existence and nothing on the page establishes that. Precision to the single skill makes the claim look measured while leaving it entirely unchecked. Beyond that: API keys require login, so nothing could be exercised; the surface is Chinese-only; and no pricing is stated.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (64) because the design is genuinely good — intent-based retrieval, a real execution-feedback loop, runnability checks, declared permission scope, and an MCP/SDK/CLI integration path — but the surface leads with multi-million counts of 'indexed', 'verified' and 'quality assessed' skills that are nowhere defined or evidenced, which is the single thing a trust register must weigh most heavily. Defining those terms and publishing the verification method would move it to STEADY on the same feature set.",
+  "what_it_does_well": [
+    "Intent-based vector retrieval rather than keyword matching — find the skill for the job without knowing its name",
+    "Closes the loop properly: agents report which skills they actually used plus a trajectory summary after the task, so recommendations learn from execution",
+    "Addresses runnability, not just discoverability — skills are exercised against constructed tasks in a controlled environment",
+    "Each skill declares environment requirements, permission scope, external dependencies and quality metrics so an agent can decide before invoking",
+    "A proper agent-facing integration surface: MCP, an OpenAgent SDK and a CLI, with a documented four-step flow into clients like Codex and Claude Code",
+    "Claims signed review and version pinning per skill"
+  ],
+  "what_it_fails_at": [
+    "Headline counts (1,681,615 indexed, 794,617+ verified, 322,930 quality assessed) are presented with no definition, methodology, sample or audit",
+    "'Verified' and 'passed quality assessment' are the load-bearing words on the page and neither is defined anywhere on it",
+    "An API key requires login, so no part of the service could be exercised in this public-surface review",
+    "No pricing, rate limits or terms of use stated",
+    "Chinese-only surface with no English documentation captured",
+    "No named users, case studies or third-party integrations evidenced despite the agent-ecosystem positioning"
+  ],
+  "best_for": [
+    "Agent developers who need skill discovery driven by task intent rather than name matching",
+    "Teams building on MCP who want a registry with a documented feedback leg",
+    "Chinese-reading practitioners evaluating skill-gateway options"
+  ],
+  "not_recommended_for": [
+    "Anyone who needs to know what 'verified' means before routing agent capability selection through a third party",
+    "Buyers requiring published pricing, rate limits or terms before integrating",
+    "Non-Chinese-reading users — no English surface was captured",
+    "Production systems that cannot take a dependency on an unaudited external registry for capability selection"
+  ],
+  "red_flags": [
+    "1,681,615 skills indexed and 794,617+ 'verified' are stated to the single unit with no definition of either term, no methodology and no audit — precision presented as evidence",
+    "A registry whose purpose is to tell agents which capabilities are safe to invoke, with no published verification criteria, is asking for trust it has not shown the basis for",
+    "Nothing on the surface could be exercised without an account, so every claim above remains vendor self-description"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "slug": "promptlayer",
+      "verdict_diff": "PromptLayer manages and versions prompts you own with visible tooling; SkillsVote proposes discovery and recommendation across a public skill corpus. Different jobs — one governs your assets, the other sources someone else's.",
+      "preferred_for_axis": "own-asset-management-vs-public-discovery"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "slug": "langsmith",
+      "verdict_diff": "LangSmith is an established observability and evaluation platform for agent runs with a published product; SkillsVote's comparable idea is the post-task feedback leg, but its corpus claims are unverified. Choose LangSmith for measurement you can audit.",
+      "preferred_for_axis": "auditable-evaluation-vs-unverified-corpus"
     },
     {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "humanloop",
+      "verdict_diff": "Humanloop focuses on evaluation and iteration over prompts and models with defined methodology; SkillsVote leads with scale claims over method. Prefer Humanloop where the definition of 'good' has to be explicit.",
+      "preferred_for_axis": "defined-methodology-vs-scale-claim"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of MemTensor/skills-vote.",
-  "confidence": "low",
+  "evidence_urls": [
+    {
+      "claim": "Vector retrieval matches a skill to real intent rather than keywords",
+      "source": "https://skills.vote (工作原理 — 按真实需求找到技能)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Agents submit post-task feedback on which skills were used plus a trajectory summary, which updates recommendations",
+      "source": "https://skills.vote (工作原理 — 从执行中持续学习)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Skills are exercised against constructed real tasks in a controlled environment to confirm they run",
+      "source": "https://skills.vote (工作原理 — 不只搜得到，还要跑得起来)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Each skill declares environment requirements, permission scope, external dependencies and quality metrics",
+      "source": "https://skills.vote (工作原理 — 在调用前看清 skill 能力边界)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Integration via MCP, an OpenAgent SDK and a CLI into clients such as Codex and Claude Code",
+      "source": "https://skills.vote (MCP · OPENAGENT SDK · CLI banner + 无缝集成 four-step flow)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Headline counters: 1,681,615 indexed, 794,617+ verified, 322,930 quality assessed, 36,616 featured",
+      "source": "https://skills.vote (skills.vote --status header)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "SkillsVote is built for agents rather than people: it advertises an MCP server, an OpenAgent SDK and a CLI with an npx quickstart, a recommendation endpoint that takes a task description and returns a skill set with usage guidance, and a feedback endpoint for post-task reporting. The integration shape is right for agent-to-agent use; an API key requires login, so depth and reliability were not exercised here.",
+    "agent_friendly_score": 8
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "Page rendered and captured (1127 chars of text, 4 screenshot(s))",
+      "tested_at": "2026-10-27T04:31:00.047Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "SkillsVote — The Skills Engine for AI Agents",
+      "tested_at": "2026-10-27T04:31:00.047Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "A primary action is present on the captured surface",
+      "tested_at": "2026-10-27T04:31:00.047Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "No pricing, tier or rate-limit information appears on the captured surface. API keys are issued only after login and application, so access terms are not publicly stated.",
+      "tested_at": "2026-10-27T04:31:00.047Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": true,
+      "required": false,
+      "evidence": "3 of 3 navigation interaction(s) succeeded during the run",
+      "tested_at": "2026-10-27T04:31:00.047Z"
+    }
+  ],
+  "summary": "A skills registry and recommendation gateway for AI agents with a sound feedback-loop design and an MCP integration path — undermined by headline numbers in the millions that the surface gives no way to check.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-25",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-25",
+  "attestation_url": "/data/attestations/memtensor-skills-vote.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-27",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -48,16 +187,30 @@
     "source": "engine-browser-marking-retrofit/browser-rendered"
   },
   "evidence_images": {
-    "run_id": "run-63445e7c1f2f6a6b-skills-vote",
-    "base": "https://images.hlido.eu/reviews/memtensor-skills-vote/run-63445e7c1f2f6a6b-skills-vote",
+    "run_id": "run-67c710e69548f876-skills-vote",
+    "base": "https://images.hlido.eu/reviews/memtensor-skills-vote/run-67c710e69548f876-skills-vote",
     "files": [
-      "home.png"
+      "home.png",
+      "page_.png",
+      "page_skills.png",
+      "page_tasks.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/memtensor-skills-vote/run-63445e7c1f2f6a6b-skills-vote/home.png"
-    ],
-    "verified_at": "2026-07-31T09:31:39.246Z",
-    "verified_count": 1,
-    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+      "https://images.hlido.eu/reviews/memtensor-skills-vote/run-67c710e69548f876-skills-vote/home.png",
+      "https://images.hlido.eu/reviews/memtensor-skills-vote/run-67c710e69548f876-skills-vote/page_.png",
+      "https://images.hlido.eu/reviews/memtensor-skills-vote/run-67c710e69548f876-skills-vote/page_skills.png",
+      "https://images.hlido.eu/reviews/memtensor-skills-vote/run-67c710e69548f876-skills-vote/page_tasks.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "No pricing, tier or rate-limit information appears on the captured surface. API keys are issued only after login and application, so access terms are not publicly stated.",
+      "tested_at": "2026-10-27"
+    },
+    "last_verified": "2026-10-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-27"
   }
 }
