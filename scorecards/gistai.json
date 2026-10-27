@@ -1,43 +1,176 @@
 {
+  "schema_version": "2.0",
   "slug": "gistai",
-  "name": "Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT.",
+  "name": "Gist AI",
   "agent_url": "https://gistai.tech",
-  "category": "Image & Design",
-  "run_id": "run-gistai-tfd1008s",
-  "run_at": "2026-06-13T12:01:05.807Z",
-  "source": "hlido-drain-worker",
-  "checklist": [
+  "category": "Productivity",
+  "run_id": "run-39689599e37f7b7f-gistai-tech",
+  "run_at": "2026-10-27T04:30:32.791Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 63,
+  "tier": "FADING",
+  "laddoo_score": 63,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A free Chrome extension that summarises web pages, YouTube videos and PDFs in one click, with a genuinely useful jump-to-source feature — but a commodity product in a crowded category, evidenced only by testimonials.",
+    "body": "Gist AI does one thing and says so plainly: install a Chrome extension, click it on any page, YouTube video or PDF, and get a summary. The value proposition is legible in the first line, the install path is a single CTA, and the FAQ answers the questions a buyer would actually ask (what makes it different, whether there is a free version, whether it can read local files, whether it is safe). Two features are more than table stakes. The 'Read More' deep-dive lets you expand from a summary point back into the source passage rather than trusting the summary blind, and for YouTube the summary segments link to the timestamp they came from, which turns the summary into a navigation surface instead of a replacement for the video. Local PDF upload alongside online PDFs is a real convenience. Against that: this is one of the most crowded categories on the web, and the page offers nothing to separate it beyond the two features above. The differentiation claim rests on a 'research-backed technique' that is named but not cited. The only evidence of quality on the entire surface is customer testimonials — the weakest class of evidence there is, because it is selected by the vendor. There is no accuracy benchmark, no statement of which model version is used beyond 'Powered by ChatGPT', no usage limits published, no privacy statement visible on the landing page about what happens to the pages and PDFs you send it, and no pricing page at all — 'free' is asserted in the CTA without terms. For a tool you grant read access to every page you visit, the absence of a visible data-handling statement is the gap that matters most.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (63) because the product is live, clearly explained and does have two above-commodity features (deep-dive to source, YouTube timestamp jumps), but it carries no evidence beyond vendor-selected testimonials, no published limits or terms for a tool advertised as free, and no visible data-handling statement for a browser extension that reads every page. It would reach STEADY on a published privacy/data policy and any independent accuracy evidence.",
+  "what_it_does_well": [
+    "Single, unambiguous value proposition understood in one line: summarise any page, YouTube video or PDF in one click",
+    "The 'Read More' deep-dive lets a reader expand a summary point back into its source passage rather than trusting the summary blind",
+    "YouTube summaries link to the timestamp they came from, making the summary a way to navigate the video rather than replace it",
+    "Handles local PDFs as well as online ones, which most browser-extension summarisers do not",
+    "A substantial FAQ that answers real buyer questions rather than marketing ones"
+  ],
+  "what_it_fails_at": [
+    "No evidence of summary quality beyond vendor-selected customer testimonials",
+    "The 'research-backed technique' differentiator is named but no research is cited",
+    "No pricing page and no stated limits — 'free' appears as a CTA with no terms attached",
+    "No data-handling or privacy statement visible on the landing page, for an extension that reads every page you open",
+    "Model dependency is stated only as 'Powered by ChatGPT' with no version, so behaviour can change underneath users without notice",
+    "Commodity category with no stated differentiation against the dozens of comparable extensions"
+  ],
+  "best_for": [
+    "Students and researchers who skim long articles and PDFs and want to verify a point against its source",
+    "Anyone who watches long-form YouTube and wants to jump to the relevant minutes",
+    "Casual users who want a zero-cost, zero-setup summariser in the browser they already use"
+  ],
+  "not_recommended_for": [
+    "Organisations with data-handling requirements — no privacy or retention statement is visible on the reviewed surface",
+    "Anyone needing summarisation accuracy they can rely on unverified, since no accuracy evidence is published",
+    "Users outside Chrome, since the only distribution shown is the Chrome Web Store",
+    "Teams needing an API or programmatic access — none is advertised"
+  ],
+  "red_flags": [
+    "A browser extension that reads every page and accepts uploaded PDFs, with no data-handling statement anywhere on the landing page",
+    "The only quality evidence offered is vendor-selected testimonials",
+    "'Free' is asserted with no published limits, so the sustainable cost to the user is unknown"
+  ],
+  "compared_to": [
     {
-      "id": "C01",
-      "pass": false,
-      "required": true
+      "slug": "perplexity",
+      "verdict_diff": "Perplexity answers questions across sources with citations and has a published product and pricing; Gist AI summarises the single page you are already on, free and in-browser. Choose Perplexity for research across sources, Gist AI for a zero-friction summary of the thing in front of you.",
+      "preferred_for_axis": "cross-source-research-vs-in-page-summary"
     },
     {
-      "id": "C02",
-      "pass": false,
-      "required": true
+      "slug": "scholarcy",
+      "verdict_diff": "Scholarcy is built specifically for academic papers with structured extraction; Gist AI is a general web/video/PDF summariser with a lighter touch. Choose Scholarcy for literature work, Gist AI for general skimming.",
+      "preferred_for_axis": "academic-depth-vs-general-breadth"
     },
     {
-      "id": "C03",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C04",
-      "pass": false,
-      "required": true
-    },
-    {
-      "id": "C05",
-      "pass": false,
-      "required": false
+      "slug": "elicit-research",
+      "verdict_diff": "Elicit works over a literature corpus and surfaces findings across papers; Gist AI condenses one document at a time. They answer different questions and are not substitutes.",
+      "preferred_for_axis": "corpus-synthesis-vs-single-document"
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT..",
-  "confidence": "low",
+  "evidence_urls": [
+    {
+      "claim": "Summarises websites, YouTube videos, online PDFs and local PDFs from a Chrome extension",
+      "source": "https://gistai.tech (hero + 'Main Features')",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "'Read More' expands a summary point back into its source",
+      "source": "https://gistai.tech ('Read More of what you like' feature)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "YouTube summaries link to the relevant moment in the video",
+      "source": "https://gistai.tech ('Jump to core segments' feature)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Distributed via the Chrome Web Store and advertised as free",
+      "source": "https://gistai.tech ('Download Free Extension' CTA + How to Use)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Built on ChatGPT",
+      "source": "https://gistai.tech ('Powered by ChatGPT' hero line)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "No programmatic surface is advertised. Gist AI is a human-operated browser extension driven by clicking an icon in the Chrome toolbar; there is no API, CLI, SDK or MCP endpoint on the captured page, so another agent has no documented way to call it.",
+    "agent_friendly_score": 1
+  },
+  "checklist": [
+    {
+      "id": "homepage_loads",
+      "pass": true,
+      "required": true,
+      "evidence": "Page rendered and captured (3382 chars of text, 1 screenshot(s))",
+      "tested_at": "2026-10-27T04:30:32.791Z"
+    },
+    {
+      "id": "primary_value_prop",
+      "pass": true,
+      "required": true,
+      "evidence": "Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT.",
+      "tested_at": "2026-10-27T04:30:32.791Z"
+    },
+    {
+      "id": "cta_present",
+      "pass": true,
+      "required": true,
+      "evidence": "A primary action is present on the captured surface",
+      "tested_at": "2026-10-27T04:30:32.791Z"
+    },
+    {
+      "id": "pricing_or_access",
+      "pass": false,
+      "required": false,
+      "evidence": "The CTA reads 'Download Free Extension' and the FAQ asks 'Is there a free version of the summarizer available?', but no pricing page, tier table or usage limit was present on the captured surface.",
+      "tested_at": "2026-10-27T04:30:32.791Z"
+    },
+    {
+      "id": "evidence_or_demo",
+      "pass": false,
+      "required": false,
+      "evidence": "Only the landing surface was captured; no additional page or demo was reached in this run",
+      "tested_at": "2026-10-27T04:30:32.791Z"
+    }
+  ],
+  "summary": "A free Chrome extension that summarises web pages, YouTube videos and PDFs in one click, with a genuinely useful jump-to-source feature — but a commodity product in a crowded category, evidenced only by testimonials.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-25",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-25",
+  "attestation_url": "/data/attestations/gistai.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-27",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,16 +180,28 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-d1a8bc8f18a676c1-gistai-tech",
-    "base": "https://images.hlido.eu/reviews/gistai/run-d1a8bc8f18a676c1-gistai-tech",
+    "run_id": "run-39689599e37f7b7f-gistai-tech",
+    "base": "https://images.hlido.eu/reviews/gistai/run-39689599e37f7b7f-gistai-tech",
     "files": [
       "home.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/gistai/run-d1a8bc8f18a676c1-gistai-tech/home.png"
+      "https://images.hlido.eu/reviews/gistai/run-39689599e37f7b7f-gistai-tech/home.png"
+    ]
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "freemium"
     ],
-    "verified_at": "2026-10-26T21:18:41.003Z",
-    "verified_count": 1,
-    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "evidence": "The CTA reads 'Download Free Extension' and the FAQ asks 'Is there a free version of the summarizer available?', but no pricing page, tier table or usage limit was present on the captured surface.",
+      "tested_at": "2026-10-27"
+    },
+    "last_verified": "2026-10-27",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-27"
   }
 }
