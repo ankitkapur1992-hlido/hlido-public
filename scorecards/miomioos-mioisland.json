@@ -1,43 +1,176 @@
 {
+  "schema_version": "2.0",
   "slug": "miomioos-mioisland",
-  "name": "MioMioOS/MioIsland",
-  "agent_url": "https://github.com/MioMioOS/MioIsland",
+  "name": "MioIsland",
+  "agent_url": "https://miomioos.github.io/MioIsland/",
   "category": "Coding",
-  "run_id": "run-miomioos-mioisland-6c60omvh",
-  "run_at": "2026-06-15T18:00:38.926Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-732b25ce6d722f74-miomioos-github-io",
+  "run_at": "2026-10-27T04:31:30.479Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 71,
+  "tier": "STEADY",
+  "laddoo_score": 71,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A narrow, well-executed macOS utility that turns the MacBook notch into a live control surface for Claude Code sessions — approve a diff without switching windows — with an iPhone companion and the code on GitHub.",
+    "body": "MioIsland solves a small, specific and genuinely annoying problem: when you run several coding-agent sessions at once, the cost is not the agents, it is the window-switching required to notice that one of them is waiting on you. It puts that status where your eyes already are. The collapsed notch shows status dots per session with a colour code (cyan working, green done, red error) and the project name; expanded, it lists running sessions with status, tool calls and duration; and when Claude Code asks for permission, the diff renders in the notch with green/red highlighting so you can approve or deny in place. That last feature is the one that justifies the product — approval is the step that actually blocks an agent, and removing a context switch from it is a real saving rather than a novelty. The surface is concrete in the ways that matter: an interactive demo, a named monitoring model, specific session states, an iPhone companion with documented pairing, a GitHub repository, and a direct download. The scope is honestly narrow and the page does not pretend otherwise. Limits are equally clear. This is macOS-only and, by its central conceit, notch-hardware-only — it will not help on an external display or an older MacBook. It is a monitoring and approval layer over an agent someone else makes, so its usefulness is wholly contingent on Claude Code's behaviour and interfaces continuing to suit it, and the page states no compatibility policy for that dependency. No version, licence, release history or user count was captured, so maintenance durability is unknown for a tool that sits in the permission path of an agent editing your code. The surface also mixes English and Chinese inconsistently.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-27",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (71) because the product is focused, the core feature (approve an agent's diff in the notch without switching windows) is a real workflow saving, and it is demonstrated concretely with a download, a GitHub repository and an iPhone companion. It is held back by hard platform limits (macOS plus notch hardware), total dependency on another vendor's agent with no stated compatibility policy, and no visible version, licence or adoption evidence.",
+  "what_it_does_well": [
+    "Removes a context switch from the step that actually blocks an agent — rendering the permission diff in the notch for one-click approve or deny",
+    "Legible at-a-glance status: colour-coded session dots, project name, tool calls and duration without opening anything",
+    "Handles multiple concurrent agent sessions as the normal case rather than an edge case",
+    "iPhone companion with documented pairing, extending monitoring away from the desk",
+    "Source on GitHub and a direct download — the product is inspectable, not just described",
+    "An interactive demo on the page rather than a static screenshot"
+  ],
+  "what_it_fails_at": [
+    "macOS-only, and dependent on notch hardware by its central design — useless on an external display or an older MacBook",
+    "Entirely dependent on Claude Code's interfaces and behaviour, with no stated compatibility or support policy for that dependency",
+    "No version, licence, release history or changelog captured",
+    "No user count, star figure or adoption evidence on the reviewed surface",
+    "Inconsistent bilingual surface, with Chinese strings appearing inside an otherwise English page",
+    "It sits in the approval path of an agent editing your code, and says nothing about what happens to that path if it crashes or is not running"
+  ],
+  "best_for": [
+    "MacBook users running several Claude Code sessions at once who lose time to window-switching",
+    "Developers who want agent approvals surfaced without leaving the current window",
+    "Anyone who wants to glance at agent status while working in another app"
+  ],
+  "not_recommended_for": [
+    "Anyone not on a notch-equipped MacBook, including external-display setups",
+    "Teams using agents other than Claude Code — nothing else is supported on the captured surface",
+    "Users who need a licensed, versioned, supported tool in their agent approval path",
+    "Linux or Windows developers"
+  ],
+  "red_flags": [
+    "A utility that intermediates approvals for an agent editing your code, with no stated version, licence or failure behaviour on the reviewed surface",
+    "Single-vendor dependency on Claude Code with no compatibility commitment — an upstream interface change can disable the product outright"
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is the agent; MioIsland is a macOS surface for watching and approving it. They are complements, not alternatives — MioIsland has no value without it.",
+      "preferred_for_axis": "agent-vs-monitoring-surface"
+    },
+    {
+      "slug": "cursor",
+      "verdict_diff": "Cursor keeps agent approvals inside the IDE you are already in; MioIsland keeps them in the notch so you can be anywhere on the machine. Choose Cursor if you live in one editor, MioIsland if your agents run in terminals while you work elsewhere.",
+      "preferred_for_axis": "in-editor-approval-vs-system-wide-surface"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "opencode is a terminal agent you would run and watch yourself; MioIsland adds a monitoring layer but only for Claude Code. Different layers of the same workflow.",
+      "preferred_for_axis": "agent-runtime-vs-session-monitor"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Turns the MacBook notch into a control centre for Claude Code sessions",
+      "source": "https://miomioos.github.io/MioIsland/ (hero)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Collapsed notch shows colour-coded status dots (cyan working, green done, red error) and the project name",
+      "source": "https://miomioos.github.io/MioIsland/ (MAC FEATURES — Real-time Monitoring)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Permission requests render the diff with green/red highlighting for approve or deny without switching windows",
+      "source": "https://miomioos.github.io/MioIsland/ (MAC FEATURES — Notch Approval)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "Monitors multiple concurrent sessions with status, tool calls and duration",
+      "source": "https://miomioos.github.io/MioIsland/ ('Monitor all sessions' + interactive demo)",
+      "tested_at": "2026-10-27",
+      "verified": true
+    },
+    {
+      "claim": "iPhone companion with documented pairing, and source on GitHub",
+      "source": "https://miomioos.github.io/MioIsland/ (hero CTAs — 'How to pair iPhone', 'Star on GitHub')",
+      "tested_at": "2026-10-27",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "MioIsland is a human-facing monitoring and approval surface over another agent, not something an agent calls. It consumes Claude Code session state and presents it to a person; no API, CLI, SDK or MCP endpoint is advertised for other agents to drive it. Its relevance to agent work is high, but as an operator's instrument rather than an integration target.",
+    "agent_friendly_score": 3
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "Page rendered and captured (7113 chars of text, 2 screenshot(s))",
+      "tested_at": "2026-10-27T04:31:30.479Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "evidence": "MioIsland — AI agents live in your notch",
+      "tested_at": "2026-10-27T04:31:30.479Z"
     },
     {
       "id": "cta_present",
-      "pass": false,
-      "required": true
+      "pass": true,
+      "required": true,
+      "evidence": "A primary action is present on the captured surface",
+      "tested_at": "2026-10-27T04:31:30.479Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "evidence": "No pricing was present on the captured surface. The product is offered as a direct download with source on GitHub; no licence or cost terms were stated on the page reviewed.",
+      "tested_at": "2026-10-27T04:31:30.479Z"
     },
     {
       "id": "evidence_or_demo",
-      "pass": false,
-      "required": false
+      "pass": true,
+      "required": false,
+      "evidence": "1 of 1 navigation interaction(s) succeeded during the run",
+      "tested_at": "2026-10-27T04:31:30.479Z"
     }
   ],
-  "laddoo_score": 70,
-  "score": 70,
-  "tier": "STEADY",
-  "summary": "Public-surface review of MioMioOS/MioIsland.",
-  "confidence": "low",
+  "summary": "A narrow, well-executed macOS utility that turns the MacBook notch into a live control surface for Claude Code sessions — approve a diff without switching windows — with an iPhone companion and the code on GitHub.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-25",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-25",
+  "attestation_url": "/data/attestations/miomioos-mioisland.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-10-27",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,33 +180,26 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-336a5adb7cbbf20f-github-com",
-    "base": "https://images.hlido.eu/reviews/miomioos-mioisland/run-336a5adb7cbbf20f-github-com",
+    "run_id": "run-732b25ce6d722f74-miomioos-github-io",
+    "base": "https://images.hlido.eu/reviews/miomioos-mioisland/run-732b25ce6d722f74-miomioos-github-io",
     "files": [
-      "home.png"
+      "home.png",
+      "pagepair-setup_html.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/miomioos-mioisland/run-336a5adb7cbbf20f-github-com/home.png"
-    ],
-    "verified_at": "2026-07-31T09:31:39.329Z",
-    "verified_count": 1,
-    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+      "https://images.hlido.eu/reviews/miomioos-mioisland/run-732b25ce6d722f74-miomioos-github-io/home.png",
+      "https://images.hlido.eu/reviews/miomioos-mioisland/run-732b25ce6d722f74-miomioos-github-io/pagepair-setup_html.png"
+    ]
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
     "pricing_disclosed": {
-      "pass": false
+      "pass": false,
+      "evidence": "No pricing was present on the captured surface. The product is offered as a direct download with source on GitHub; no licence or cost terms were stated on the page reviewed.",
+      "tested_at": "2026-10-27"
     },
-    "last_verified": "2026-06-15",
+    "last_verified": "2026-10-27",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  },
-  "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"brew install xmqywx\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "derived_at": "2026-10-27"
   }
 }
