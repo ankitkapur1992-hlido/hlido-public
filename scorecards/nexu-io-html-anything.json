@@ -1,182 +1,43 @@
 {
-  "schema_version": "2.0",
   "slug": "nexu-io-html-anything",
-  "name": "HTML Anything",
-  "agent_url": "https://open-design.ai/html-anything/",
+  "name": "nexu-io/html-anything",
+  "agent_url": "https://github.com/nexu-io/html-anything",
   "category": "Coding",
-  "run_id": "run-2b7fdfd81532d3f1-open-design-ai",
-  "run_at": "2026-10-27T08:06:01.404Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 74,
-  "tier": "STEADY",
-  "laddoo_score": 74,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "An open-source tool that makes the coding-agent CLI you already pay for do your HTML rendering — no new key, no new subscription — with 75 forkable skill templates and, notably, a dated verification stamp on its own statistics.",
-    "body": "The insight behind HTML Anything is economical in the best sense: you have already authenticated a capable coding agent in your terminal, so it should be the rendering engine rather than something you buy a second subscription for. Drop in Markdown, CSV, TSV, JSON, SQL, Excel or plain text; pick one of 75 SKILL.md templates; the local CLI streams its stdout into a sandboxed iframe over SSE so you watch the layout assemble; then export to WeChat MP, X, Weibo, Xiaohongshu or Zhihu. Three design choices make this better than the average wrapper. First, privacy by architecture rather than by promise — tabular data is parsed in the browser via papaparse and xlsx, so it never leaves the machine, and the rendering runs through a CLI you already control. Second, the templates are plain SKILL.md folders you can fork and edit, which the page describes with unusual candour as 'the picker is a directory listing in disguise' — a deliberate refusal to make the extension mechanism proprietary. Third, and the thing this register notices most: the statistics block (9.2K GitHub stars, 8 coding-agent CLIs, 75 skill templates, 9 surface modes, Apache-2.0) carries the line 'Stats verified 2026-05-19 · live where the API is reachable'. Dating a self-reported number and stating the condition under which it was measured is rare, and it is the right instinct. The caveats are proportionate. That verification date is roughly five months before this review, so the figures are stale even though they are honest about being point-in-time. Nothing was exercised here: the eight supported CLIs, the SSE streaming render and the export paths are all read off the page. The export surfaces are weighted towards Chinese platforms, which narrows the audience. And the hard dependency is structural — the product is only as capable as whichever agent CLI you point it at, and the page sets no expectation about output quality varying between them.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-27",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "STEADY (74) because the product has a clear and economical thesis, an explicit Apache-2.0 licence, a local-first architecture that makes its privacy claim structural rather than promised, forkable templates, and — unusually — a dated verification stamp on its own statistics. It stays out of the 80s because those statistics are five months old at review, nothing on the surface was exercised, and output quality depends entirely on whichever third-party CLI the user supplies.",
-  "what_it_does_well": [
-    "Reuses the coding-agent CLI the user has already authenticated instead of demanding a new key, account or subscription",
-    "Privacy is architectural, not promised: tabular input is parsed in-browser via papaparse and xlsx so data does not leave the machine",
-    "75 skill templates are plain SKILL.md folders a user can fork and edit — the extension mechanism is deliberately not proprietary",
-    "Dates its own statistics ('Stats verified 2026-05-19') and states the condition they were measured under, which almost nothing in this category does",
-    "Apache-2.0 licence stated plainly on the landing surface",
-    "Live SSE streaming render into a sandboxed iframe, so the user watches the layout build rather than waiting on a black box"
-  ],
-  "what_it_fails_at": [
-    "The verified statistics are roughly five months old at the time of this review — honest, but stale",
-    "Output quality depends entirely on whichever of the eight supported CLIs the user supplies, and the page sets no expectation about that variance",
-    "Export surfaces skew heavily to Chinese platforms (WeChat MP, Zhihu, Xiaohongshu, Weibo), narrowing the audience",
-    "None of the eight CLI integrations, the SSE render or the export paths were exercised in this public-surface review",
-    "No pricing statement at all — the open-source licence implies free, but the terms of the hosted surface are not addressed"
-  ],
-  "best_for": [
-    "Writers and developers who already use a coding-agent CLI and want rendered HTML without another subscription",
-    "Anyone publishing to WeChat, Zhihu, Xiaohongshu or X who needs channel-shaped HTML from Markdown or tabular data",
-    "Teams with data-handling constraints who need the parsing to stay on the local machine",
-    "Users who want to fork and own their templates rather than accept a vendor's"
-  ],
-  "not_recommended_for": [
-    "Anyone without an authenticated coding-agent CLI — the product has no engine of its own",
-    "Users needing consistent output across machines, since the renderer is whichever CLI each user supplies",
-    "Publishers targeting only Western channels, where the template library is thinner",
-    "Buyers who need a supported, versioned commercial product"
-  ],
-  "red_flags": [
-    "The headline statistics are self-reported and, although dated, were verified roughly five months before this review",
-    "Output is produced by a third-party CLI the user supplies, so the product cannot guarantee the quality of its own primary deliverable"
-  ],
-  "compared_to": [
-    {
-      "slug": "claude-code",
-      "verdict_diff": "Claude Code is one of the CLIs HTML Anything drives; HTML Anything adds the template library, the streaming preview and the channel-specific export around it. Complements, not alternatives.",
-      "preferred_for_axis": "agent-runtime-vs-rendering-layer"
-    },
-    {
-      "slug": "gptme-gptme",
-      "verdict_diff": "gptme is a general-purpose terminal agent you would use directly; HTML Anything is a narrow surface over such an agent for one job — turning notes and data into publishable HTML. Pick gptme for general work, HTML Anything for the publishing path.",
-      "preferred_for_axis": "general-agent-vs-single-purpose-surface"
-    },
-    {
-      "slug": "notion-ai",
-      "verdict_diff": "Notion AI drafts and formats inside a hosted workspace that holds your data; HTML Anything keeps parsing local and renders through your own CLI. Choose Notion AI for an integrated workspace, HTML Anything to keep the data on your machine.",
-      "preferred_for_axis": "hosted-workspace-vs-local-first"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "Reuses an already-authenticated local coding-agent CLI as the rendering engine, with no new key or subscription",
-      "source": "https://open-design.ai/html-anything/ (hero + 'Your agent already knows you')",
-      "tested_at": "2026-10-27",
-      "verified": true
-    },
-    {
-      "claim": "Accepts Markdown, CSV, TSV, JSON, SQL, Excel and plain text; tabular data is parsed in-browser via papaparse and xlsx so nothing leaves the machine",
-      "source": "https://open-design.ai/html-anything/ (How it works — step 01)",
-      "tested_at": "2026-10-27",
-      "verified": true
-    },
-    {
-      "claim": "75 SKILL.md template folders, forkable and editable",
-      "source": "https://open-design.ai/html-anything/ ('Skills are folders, not magic' + stats block)",
-      "tested_at": "2026-10-27",
-      "verified": true
-    },
-    {
-      "claim": "Local CLI stdout streams into a sandboxed iframe via SSE for a live render",
-      "source": "https://open-design.ai/html-anything/ (How it works — step 02)",
-      "tested_at": "2026-10-27",
-      "verified": true
-    },
-    {
-      "claim": "Apache-2.0 licence, 9.2K GitHub stars, 8 supported coding-agent CLIs, 9 surface modes, 'Stats verified 2026-05-19'",
-      "source": "https://open-design.ai/html-anything/ (statistics block)",
-      "tested_at": "2026-10-27",
-      "verified": true
-    },
-    {
-      "claim": "One-click export to WeChat MP, X, Weibo, Xiaohongshu and Zhihu",
-      "source": "https://open-design.ai/html-anything/ (How it works — step 03)",
-      "tested_at": "2026-10-27",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": true,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": true,
-    "agent_integration_path": "HTML Anything is built around agent CLIs: it drives eight coding-agent command-line tools as its rendering engine and its templates are SKILL.md folders, the same format agent harnesses consume. It is a consumer of agents rather than a service agents call — no API or MCP endpoint is advertised for an agent to drive HTML Anything itself.",
-    "agent_friendly_score": 6
-  },
+  "run_id": "run-nexu-io-html-anything-zr6cplvn",
+  "run_at": "2026-06-16T00:00:55.388Z",
+  "source": "hlido-drain-worker",
   "checklist": [
     {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "evidence": "Page rendered and captured (5454 chars of text, 4 screenshot(s))",
-      "tested_at": "2026-10-27T08:06:01.404Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "Open Source HTML Anything Official",
-      "tested_at": "2026-10-27T08:06:01.404Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "A primary action is present on the captured surface",
-      "tested_at": "2026-10-27T08:06:01.404Z"
-    },
-    {
-      "id": "pricing_or_access",
+      "id": "C01",
       "pass": false,
-      "required": false,
-      "evidence": "No pricing is stated. The project declares an Apache-2.0 licence on its landing surface and directs users to GitHub; terms for any hosted component were not captured.",
-      "tested_at": "2026-10-27T08:06:01.404Z"
+      "required": true
     },
     {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false,
-      "evidence": "3 of 3 navigation interaction(s) succeeded during the run",
-      "tested_at": "2026-10-27T08:06:01.404Z"
+      "id": "C02",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C03",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C04",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C05",
+      "pass": false,
+      "required": false
     }
   ],
-  "summary": "An open-source tool that makes the coding-agent CLI you already pay for do your HTML rendering — no new key, no new subscription — with 75 forkable skill templates and, notably, a dated verification stamp on its own statistics.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-25",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-25",
-  "attestation_url": "/data/attestations/nexu-io-html-anything.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-10-27",
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of nexu-io/html-anything.",
+  "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -186,8 +47,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-2b7fdfd81532d3f1-open-design-ai",
-    "base": "https://images.hlido.eu/reviews/nexu-io-html-anything/run-2b7fdfd81532d3f1-open-design-ai",
+    "run_id": "run-50c79f6677878fcf-open-design-ai",
+    "base": "https://images.hlido.eu/reviews/nexu-io-html-anything/run-50c79f6677878fcf-open-design-ai",
     "files": [
       "home.png",
       "https___open-design_ai_pricing_.png",
@@ -195,26 +56,23 @@
       "https___open-design_ai_.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-2b7fdfd81532d3f1-open-design-ai/home.png",
-      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-2b7fdfd81532d3f1-open-design-ai/https___open-design_ai_pricing_.png",
-      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-2b7fdfd81532d3f1-open-design-ai/https___open-design_ai_cloud_api-keys_source_open_.png",
-      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-2b7fdfd81532d3f1-open-design-ai/https___open-design_ai_.png"
-    ]
-  },
-  "pricing_facts": {
-    "schema": "pricing-facts/1",
-    "model": [
-      "open-source",
-      "subscription"
+      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-50c79f6677878fcf-open-design-ai/home.png",
+      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-50c79f6677878fcf-open-design-ai/https___open-design_ai_pricing_.png",
+      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-50c79f6677878fcf-open-design-ai/https___open-design_ai_cloud_api-keys_source_open_.png",
+      "https://images.hlido.eu/reviews/nexu-io-html-anything/run-50c79f6677878fcf-open-design-ai/https___open-design_ai_.png"
     ],
-    "free_tier": true,
-    "pricing_disclosed": {
-      "pass": false,
-      "evidence": "No pricing is stated. The project declares an Apache-2.0 licence on its landing surface and directs users to GitHub; terms for any hosted component were not captured.",
-      "tested_at": "2026-10-27"
-    },
-    "last_verified": "2026-10-27",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-27"
+    "verified_at": "2026-10-28T21:29:03.189Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "derived_from": "backfill-2026-09-03",
+    "basis": [
+      "has_api: \"API key\" in preanalysis.scoring_hypothesis",
+      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
+    ],
+    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
   }
 }
