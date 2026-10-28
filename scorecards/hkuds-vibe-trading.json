@@ -1,176 +1,44 @@
 {
-  "schema_version": "2.0",
   "slug": "hkuds-vibe-trading",
-  "name": "Vibe-Trading",
+  "name": "HKUDS/Vibe-Trading",
   "agent_url": "https://vibetrading.wiki/",
+  "repo_url": "https://github.com/HKUDS/Vibe-Trading",
   "category": "AI Agent",
-  "run_id": "run-3235421e02edef96-vibetrading-wiki",
-  "run_at": "2026-10-26T12:31:20.312Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 76,
-  "tier": "STEADY",
-  "laddoo_score": 76,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "An open-source finance research agent that turns natural-language market questions into runnable, inspectable backtests — and, unusually for this category, draws an explicit line at live trading instead of blurring it.",
-    "body": "Vibe-Trading is a research harness, not a trading bot, and the surface is disciplined about saying so. The pitch is concrete: a prompt becomes a route through data sources, strategies, backtests and a report, and the example shown is a real command (vibe-trading run -p \"Backtest BTC-USDT 20/50 MA for 2024\") returning a run card with a return and a max drawdown rather than a screenshot of a dashboard. The four-step research loop — route, ground, test, deliver — is stated with what each step does, and the stated output of every run is a card with exports, tool traces and caveats, which is the right artifact for research you may have to defend later. Breadth is substantial on paper: eleven backtest engines across A-shares, global, Indian, Korean and Vietnamese equities, crypto, futures, forex, cross-market composites and options; preset swarm teams (investment committee, quant desk, risk review, macro); persistent memory, session search, editable skills and context compression; and a shadow-account feature that parses broker journals to extract implicit rules and run counterfactuals. Install is a published PyPI package. The strongest single thing on the page is the BOUNDARY section: it states that the product is for research, simulation and backtesting, that any live trading is opt-in and read-only by default, that it runs only through a broker you authorise yourself, within limits you set, and that you can halt it instantly. In a category where the incentive runs hard the other way, that is a deliberate restraint and it should count. The caution is that everything above is read off a marketing page. The 36.7k star count is displayed by the vendor and was not independently verified here; no backtest was reproduced; and the gap between eleven engines advertised and eleven engines that work well is exactly the gap a public-surface review cannot close. Backtest tooling also carries an inherent hazard this page does not address: nothing on the captured surface discusses look-ahead bias, survivorship bias or overfitting, which are the failure modes that make a good-looking backtest worthless.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-27",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "STEADY (76) because the product is open source with a published install path, an unusually specific and inspectable research loop, broad declared market coverage, and an explicit, well-drafted boundary around live trading that most of this category avoids. It is held out of VITAL because none of the engines or figures were verified here, the star count is vendor-displayed, and the surface says nothing about the statistical hazards (look-ahead, survivorship, overfitting) that decide whether a backtest means anything.",
-  "what_it_does_well": [
-    "States an explicit boundary — research and simulation by default, live trading opt-in and read-only through a broker you authorise, haltable instantly — in a category that usually blurs exactly this line",
-    "Every run is designed to leave an inspectable trail: run cards, exports, tool traces and caveats rather than a bare number",
-    "Concrete, reproducible-looking examples (a real CLI invocation returning a return and a max drawdown) instead of dashboard screenshots",
-    "Broad declared coverage: eleven backtest engines across A-shares, global, Indian, Korean and Vietnamese equities, crypto, futures, forex, composites and options",
-    "Open source with a published PyPI install (pip install vibe-trading-ai) and visible documentation, tutorials and an alpha library",
-    "The shadow-account feature — parsing broker journals to surface implicit rules and run counterfactuals — is a genuinely original idea in this space"
-  ],
-  "what_it_fails_at": [
-    "No independent verification of the 36.7k star figure, which is rendered by the vendor's own page",
-    "Nothing on the captured surface addresses look-ahead bias, survivorship bias or overfitting — the hazards that determine whether any backtest is meaningful",
-    "Eleven engines is a breadth claim with no evidence of depth or accuracy in any one of them",
-    "No pricing, support or maintenance commitment is stated, as is common but still material for open source used on money decisions",
-    "No backtest was reproduced in this review; every performance figure shown is illustrative vendor copy"
-  ],
-  "best_for": [
-    "Quantitative researchers who want a natural-language front end to backtesting while keeping the trail inspectable",
-    "Analysts covering Asian equity markets, where the declared A-share, Indian, Korean and Vietnamese coverage is unusual",
-    "Anyone who wants research tooling that is explicit about not executing trades for them",
-    "Python-comfortable users willing to validate the engines themselves before trusting a result"
-  ],
-  "not_recommended_for": [
-    "Anyone looking for a trading bot — the product deliberately is not one, and says so",
-    "Users who would act on a backtest without independently checking for look-ahead or survivorship bias",
-    "Institutions needing vendor support, SLAs or audited methodology",
-    "Non-technical users: the whole interface is a CLI and a Python package"
-  ],
-  "red_flags": [
-    "A backtesting product whose public surface never mentions look-ahead bias, survivorship bias or overfitting — the three ways a backtest lies",
-    "Headline traction (36.7k stars) is displayed by the vendor on its own page and was not independently confirmed in this review"
-  ],
-  "compared_to": [
-    {
-      "slug": "crewai",
-      "verdict_diff": "CrewAI is a general multi-agent framework you would build a finance workflow on top of; Vibe-Trading ships the finance workflow — data routing, eleven backtest engines, preset research teams — already assembled. Choose CrewAI to build your own, Vibe-Trading to start from a domain-shaped harness.",
-      "preferred_for_axis": "general-framework-vs-domain-harness"
-    },
-    {
-      "slug": "openhands",
-      "verdict_diff": "OpenHands is an open agent harness for software tasks with a broad community; Vibe-Trading applies the same harness idea to market research with domain tooling and an explicit trading boundary. Different domains, comparable openness.",
-      "preferred_for_axis": "software-tasks-vs-market-research"
-    },
-    {
-      "slug": "langroid-langroid",
-      "verdict_diff": "Langroid is a general-purpose multi-agent programming framework; Vibe-Trading is an end-user research product with finance engines built in. Pick Langroid to construct agents, Vibe-Trading to run market research today.",
-      "preferred_for_axis": "library-vs-product"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "Open-source finance research agent installed via pip install vibe-trading-ai",
-      "source": "https://vibetrading.wiki/ (INSTALL section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Four-stage inspectable loop: route, ground, test, deliver, returning run cards with tool traces and caveats",
-      "source": "https://vibetrading.wiki/ (RESEARCH LOOP section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Eleven backtest engines across A-shares, global, Indian, Korean and Vietnamese equities, crypto, futures, forex, composites and options",
-      "source": "https://vibetrading.wiki/ (CAPABILITIES / Backtesting)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Live trading is opt-in and read-only by default, runs only through a broker you authorise, within your limits, haltable instantly",
-      "source": "https://vibetrading.wiki/ (BOUNDARY section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Shadow Account parses broker journals to extract implicit rules and run counterfactual backtests",
-      "source": "https://vibetrading.wiki/ (CAPABILITIES / Shadow Account)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": true,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": true,
-    "behavioral_testable": true,
-    "agent_integration_path": "Vibe-Trading is driven by a CLI (vibe-trading run -p \"...\", vibe-trading --swarm-run ...) and distributed as a Python package, so another agent can invoke it as a subprocess and parse the run card it emits. Editable skills and session search are advertised. No API or MCP endpoint appears on the captured surface.",
-    "agent_friendly_score": 7
-  },
+  "run_id": "run-hkuds-vibe-trading-gh0jhwu1",
+  "run_at": "2026-07-14T06:00:46.853Z",
+  "source": "hlido-drain-worker",
   "checklist": [
     {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "evidence": "Page rendered and captured (2484 chars of text, 4 screenshot(s))",
-      "tested_at": "2026-10-26T12:31:20.312Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "Vibe-Trading Wiki - Finance Research Agent",
-      "tested_at": "2026-10-26T12:31:20.312Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "A primary action is present on the captured surface",
-      "tested_at": "2026-10-26T12:31:20.312Z"
-    },
-    {
-      "id": "pricing_or_access",
+      "id": "C01",
       "pass": false,
-      "required": false,
-      "evidence": "No pricing appears on the captured surface; the product is presented as open source with a public PyPI install. Licence terms were not stated on the page reviewed.",
-      "tested_at": "2026-10-26T12:31:20.312Z"
+      "required": true
     },
     {
-      "id": "evidence_or_demo",
-      "pass": true,
-      "required": false,
-      "evidence": "3 of 3 navigation interaction(s) succeeded during the run",
-      "tested_at": "2026-10-26T12:31:20.312Z"
+      "id": "C02",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C03",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C04",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C05",
+      "pass": false,
+      "required": false
     }
   ],
-  "summary": "An open-source finance research agent that turns natural-language market questions into runnable, inspectable backtests — and, unusually for this category, draws an explicit line at live trading instead of blurring it.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-25",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-25",
-  "attestation_url": "/data/attestations/hkuds-vibe-trading.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-10-27",
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of HKUDS/Vibe-Trading.",
+  "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -193,21 +61,17 @@
       "https://images.hlido.eu/reviews/hkuds-vibe-trading/run-3235421e02edef96-vibetrading-wiki/pagedocs_.png",
       "https://images.hlido.eu/reviews/hkuds-vibe-trading/run-3235421e02edef96-vibetrading-wiki/pagehome_.png",
       "https://images.hlido.eu/reviews/hkuds-vibe-trading/run-3235421e02edef96-vibetrading-wiki/pagetutorials_.png"
-    ]
-  },
-  "pricing_facts": {
-    "schema": "pricing-facts/1",
-    "model": [
-      "open-source"
     ],
-    "free_tier": true,
-    "pricing_disclosed": {
-      "pass": false,
-      "evidence": "No pricing appears on the captured surface; the product is presented as open source with a public PyPI install. Licence terms were not stated on the page reviewed.",
-      "tested_at": "2026-10-26"
-    },
-    "last_verified": "2026-10-26",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-27"
+    "verified_at": "2026-10-28T21:28:33.356Z",
+    "verified_count": 4,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "agent_relevance": {
+    "has_mcp": true,
+    "derived_from": "backfill-2026-09-03",
+    "basis": [
+      "has_mcp: \"MCP\" in preanalysis.claim"
+    ],
+    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
   }
 }
