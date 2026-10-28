@@ -1,176 +1,43 @@
 {
-  "schema_version": "2.0",
   "slug": "holaboss-ai-holaos",
-  "name": "holaboss",
-  "agent_url": "https://holaos.ai",
+  "name": "holaboss-ai/holaOS",
+  "agent_url": "https://github.com/holaboss-ai/holaOS",
   "category": "AI Agent",
-  "run_id": "run-dd7448376fce0e5b-holaos-ai",
-  "run_at": "2026-10-26T12:31:36.465Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 66,
-  "tier": "FADING",
-  "laddoo_score": 66,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "A well-argued pitch for running a service business on agents end to end, with a credible open-source runtime underneath — but the whole surface is narrative and the product behind it is not shown.",
-    "body": "holaboss names a real problem precisely: a service company leaks margin at the handoffs — between enquiry and CRM, between sale and kickoff, between a finished project and the next proposal — and every one of those handoffs depends on a person remembering. The proposed fix, making the handoff the agent's job, is a coherent thesis and better framed than most of this category manages. The six-chapter structure (website building, AI employee, customer management, delivery management, company brain, service templates) is a sensible decomposition of what a professional-services firm actually runs on, and the stack beneath it is not vapour-shaped: an open-source agent desktop runtime (holaOS) with a builder community, a model gateway (holaProxy) offering one API across models with unified credits and token metering, and a research arm. The claim that any agent — Cowork, Claude, or your own — can plug in is the right posture for a register that treats agent-to-agent interoperability as the point, though no protocol is named to back it. Pricing is at least directionally disclosed: start free, scale by the token, credits that cover model and integration calls and do not expire, with enterprise covering custom and on-premise. What is missing is everything that would turn the argument into evidence. The captured surface carries no product screenshots, no demo, no customer, no case study, no usage figure, and no stated protocol or API shape for the integration it advertises. Six chapters are described as a journey rather than demonstrated as working software. The open-source runtime is the one checkable claim on the page, and it is positioned as a sibling project rather than as the thing being sold. A buyer reading this page learns what holaboss believes and almost nothing about what it does when you log in.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-27",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "FADING (66) because the thesis is unusually well articulated and the supporting stack (open-source runtime, model gateway, token-metered pricing) is concrete enough to check, but the product itself is shown only as narrative — no demo, screenshot, customer or usage evidence on the reviewed surface, and no named protocol behind the 'any agent can plug in' claim. Evidence of a working product, or a named integration protocol, would move it into STEADY quickly.",
-  "what_it_does_well": [
-    "Diagnoses the problem precisely — service companies leak margin at handoffs that depend on a person remembering — rather than opening with a generic AI claim",
-    "Decomposes the offering into six coherent chapters that map to how a professional-services firm actually operates",
-    "Backs the product with a checkable open-source runtime (holaOS) and a model gateway (holaProxy) rather than a closed black box",
-    "Pricing is directionally disclosed on the landing page: start free, scale by the token, non-expiring credits, enterprise for custom and on-premise",
-    "Takes the right interoperability posture — any agent, including one you wrote, should be able to operate the infrastructure"
-  ],
-  "what_it_fails_at": [
-    "No product evidence of any kind on the captured surface: no screenshots, no demo, no walkthrough",
-    "No customers, case studies, logos or usage figures",
-    "The 'any agent can plug in' claim names no protocol, API or specification — the one detail that would make it checkable",
-    "Six capabilities are presented as chapters in a story rather than as features with observable behaviour",
-    "Pricing is a direction, not a table: no rate per token, no credit price, no tier boundaries",
-    "The open-source runtime that carries most of the page's credibility is positioned as a sibling project, not as what is being bought"
-  ],
-  "best_for": [
-    "Agency and professional-services owners who recognise the handoff-leakage problem and want to follow a project taking it seriously",
-    "Teams already comfortable with an agent-native desktop who want to evaluate the open-source holaOS runtime on its own terms",
-    "Early adopters willing to pilot against a free tier and form their own view"
-  ],
-  "not_recommended_for": [
-    "Buyers who need to see the product working before committing a service business's operations to it",
-    "Organisations requiring named references or case studies in their own sector",
-    "Teams needing a published integration spec before planning agent-to-agent work against it",
-    "Anyone who needs predictable costs — token-metered pricing with no published rate is not budgetable"
-  ],
-  "red_flags": [
-    "An infrastructure product whose entire public surface is narrative: no demo, screenshot, customer or usage figure anywhere on the captured page",
-    "The central interoperability claim ('any agent — Cowork, Claude, or your own — can plug in') names no protocol or API and is therefore unverifiable",
-    "Token-metered pricing is advertised with no rate, credit price or tier boundary on the reviewed surface"
-  ],
-  "compared_to": [
-    {
-      "slug": "lindy",
-      "verdict_diff": "Lindy sells configurable AI employees with a visible product and published pricing; holaboss pitches the same idea as whole-company infrastructure but shows no product on its landing surface. Choose Lindy to buy something today, holaboss if the end-to-end service-company thesis is what you are after and you will pilot it.",
-      "preferred_for_axis": "shipping-product-vs-end-to-end-thesis"
-    },
-    {
-      "slug": "relay-app",
-      "verdict_diff": "Relay is an operational automation product with concrete workflows and human-in-the-loop steps; holaboss argues for removing the human from handoffs entirely across six domains. Relay is the safer incremental choice, holaboss the more ambitious bet.",
-      "preferred_for_axis": "incremental-automation-vs-agent-native-rebuild"
-    },
-    {
-      "slug": "dify-ai",
-      "verdict_diff": "Dify is an established open platform for building and running LLM applications with a visible product; holaOS is holaboss's open runtime but the commercial product above it is not demonstrated. Choose Dify for a proven build surface.",
-      "preferred_for_axis": "proven-platform-vs-early-runtime"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "Positions as agent-native infrastructure for service companies across six chapters from lead to delivery",
-      "source": "https://holaos.ai (hero + THE STORY section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Backed by an open-source agent desktop runtime (holaOS) with a builder community",
-      "source": "https://holaos.ai (ECOSYSTEM / holaOS)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "holaProxy offers one API across models with unified credits, token metering and cost control",
-      "source": "https://holaos.ai (ECOSYSTEM / holaProxy)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Pricing: start free, scale by the token, credits cover model and integration calls and never expire; enterprise covers custom and on-premise",
-      "source": "https://holaos.ai (PRICING section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Claims any agent — Cowork, Claude, or a user's own — can plug in and operate the infrastructure",
-      "source": "https://holaos.ai (hero paragraph)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": true,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "The page states that any agent can plug into the infrastructure and that holaProxy exposes one API for every model, and a Developers section exists in the navigation — so a programmatic surface is advertised. No protocol, endpoint, specification or SDK is named on the captured page, so the integration path is claimed rather than documented here.",
-    "agent_friendly_score": 5
-  },
+  "run_id": "run-holaboss-ai-holaos-p6e71npi",
+  "run_at": "2026-06-14T06:00:55.202Z",
+  "source": "hlido-drain-worker",
   "checklist": [
     {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "evidence": "Page rendered and captured (2324 chars of text, 1 screenshot(s))",
-      "tested_at": "2026-10-26T12:31:36.465Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "holaboss — The Agent Native Infra for Service Companies",
-      "tested_at": "2026-10-26T12:31:36.465Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "A primary action is present on the captured surface",
-      "tested_at": "2026-10-26T12:31:36.465Z"
-    },
-    {
-      "id": "pricing_or_access",
-      "pass": true,
-      "required": false,
-      "evidence": "The landing page states 'Start free. Scale by the token.' with credits that cover model and integration calls and never expire, and an enterprise option for custom and on-premise deployments. No rate, credit price or tier table was captured.",
-      "tested_at": "2026-10-26T12:31:36.465Z"
-    },
-    {
-      "id": "evidence_or_demo",
+      "id": "C01",
       "pass": false,
-      "required": false,
-      "evidence": "Only the landing surface was captured; no additional page or demo was reached in this run",
-      "tested_at": "2026-10-26T12:31:36.465Z"
+      "required": true
+    },
+    {
+      "id": "C02",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C03",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C04",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C05",
+      "pass": false,
+      "required": false
     }
   ],
-  "summary": "A well-argued pitch for running a service business on agents end to end, with a credible open-source runtime underneath — but the whole surface is narrative and the product behind it is not shown.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-25",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-25",
-  "attestation_url": "/data/attestations/holaboss-ai-holaos.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-10-27",
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of holaboss-ai/holaOS.",
+  "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -187,23 +54,17 @@
     ],
     "urls": [
       "https://images.hlido.eu/reviews/holaboss-ai-holaos/run-dd7448376fce0e5b-holaos-ai/home.png"
-    ]
-  },
-  "pricing_facts": {
-    "schema": "pricing-facts/1",
-    "model": [
-      "open-source",
-      "usage-based",
-      "freemium"
     ],
-    "free_tier": true,
-    "pricing_disclosed": {
-      "pass": true,
-      "evidence": "The landing page states 'Start free. Scale by the token.' with credits that cover model and integration calls and never expire, and an enterprise option for custom and on-premise deployments. No rate,",
-      "tested_at": "2026-10-26"
-    },
-    "last_verified": "2026-10-26",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-27"
+    "verified_at": "2026-10-28T21:28:34.610Z",
+    "verified_count": 1,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "agent_relevance": {
+    "has_cli": true,
+    "derived_from": "backfill-2026-09-03",
+    "basis": [
+      "has_cli: \"CLI\" in preanalysis.claim"
+    ],
+    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
   }
 }
