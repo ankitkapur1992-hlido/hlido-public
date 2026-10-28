@@ -1,171 +1,43 @@
 {
-  "schema_version": "2.0",
   "slug": "hughyau-qiushi-skill",
-  "name": "Qiushi Skill",
-  "agent_url": "http://hughyau.com/qiushi-skill/",
+  "name": "HughYau/qiushi-skill",
+  "agent_url": "https://github.com/HughYau/qiushi-skill",
   "category": "AI Agent",
-  "run_id": "run-46fba7cd6c86c738-hughyau-com",
-  "run_at": "2026-10-26T12:31:29.253Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 61,
-  "tier": "FADING",
-  "laddoo_score": 61,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "A structured methodology pack that gives an AI agent a disciplined way to analyse a problem before acting — genuinely well organised, openly sourced to its texts, and inseparable from the political corpus it is built on.",
-    "body": "The diagnosis this project opens with is sharper than most agent tooling manages: models can now execute, so what separates them is no longer parameter count but whether they have a reliable method for facing a messy problem. It then names five concrete failure modes that anyone who has watched an agent work will recognise — grabbing at everything without identifying what actually matters, answering before investigating, never checking its own output, stopping at the first obstacle, and doing ten things at once badly. That is an accurate list, and the structure offered against it is coherent rather than a bag of tips: one governing principle (start from what objectively exists; let facts set the judgement) over three layers — a philosophical base (contradiction analysis, practice-based epistemology), working methods (investigation, mass line, criticism and self-criticism), and strategy and tactics (protracted strategy, concentration of force, spark-to-prairie-fire, overall coordination). Each of the nine tools carries a core principle, a named source text and an applicable scenario, which is more rigour about provenance than most prompt packs show, and there is a public examples section plus GitHub Discussions for community cases. What a buyer must weigh openly: the nine tools are drawn from Mao Zedong's writings, and the site's framing is explicitly ideological, opening with a revolutionary slogan. That is not hidden — it is the stated premise — but it means adopting this pack imports a particular political vocabulary into an agent's reasoning, which may be unwelcome or unusable in many organisational contexts regardless of how well the underlying heuristics work. Separately, and on this register's own terms: there is no evidence that the methodology improves agent output. No benchmark, no before-and-after, no evaluation. The claim that this makes agents reason better is argued, not measured. The surface is also Chinese-only, with no English documentation captured.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-27",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "FADING (61) because the pack is well structured, honest about its sources and addresses a real weakness in agent reasoning, but offers no evidence at all that it improves output — no benchmark, no evaluation, no before-and-after — and its political framing and Chinese-only surface sharply narrow where it can be adopted. Published evaluation against an unaided baseline would move it up; the framing is a buyer's judgement, not a defect.",
-  "what_it_does_well": [
-    "Names a real and under-addressed gap: agents that can execute but have no reliable method for deciding what matters first",
-    "Diagnoses five concrete agent failure modes that are recognisable from practice rather than invented for the page",
-    "Offers a genuinely structured system — one governing principle over three layers of nine tools — rather than a list of prompt tricks",
-    "Every tool cites its source text and states where it applies, which is unusual provenance discipline for a prompt pack",
-    "Carries real community examples and an open GitHub Discussions channel rather than only vendor copy",
-    "Is open about its ideological basis rather than laundering it into neutral-sounding language"
-  ],
-  "what_it_fails_at": [
-    "No evidence whatsoever that the methodology improves agent output — no benchmark, evaluation or before-and-after comparison",
-    "The surface is Chinese-only; no English documentation was captured, which limits who can adopt it",
-    "The political framing (an explicitly revolutionary register, Mao-derived sources) will make the pack unusable in many organisational contexts whatever the heuristics' merit",
-    "No installation, packaging or integration path is visible on the captured page — it is unclear how an agent actually loads this",
-    "No versioning, maintenance cadence or licence stated on the reviewed surface"
-  ],
-  "best_for": [
-    "Chinese-reading practitioners who want a structured reasoning discipline layered onto an agent rather than ad-hoc prompting",
-    "Anyone studying how to encode an explicit analytical method into agent behaviour, as a design reference",
-    "Users comfortable with the source corpus and the framing it brings"
-  ],
-  "not_recommended_for": [
-    "Organisations that need politically neutral tooling, or that cannot import this vocabulary into their systems",
-    "Buyers who need evidence that a methodology pack measurably improves output before adopting it",
-    "Non-Chinese-reading users — there is no English surface captured",
-    "Teams needing a packaged, versioned, licensed artifact with a clear install path"
-  ],
-  "red_flags": [
-    "The core claim — that this methodology makes an agent reason better — is argued at length and never measured; no benchmark or evaluation appears anywhere on the surface",
-    "The pack encodes an explicitly political corpus into an agent's reasoning layer; this is stated openly, but buyers should treat it as a deliberate choice with organisational consequences, not a neutral technique",
-    "No licence, version or install path is stated for something meant to be loaded into an agent"
-  ],
-  "compared_to": [
-    {
-      "slug": "smol-ai",
-      "verdict_diff": "smol-ai is executable agent tooling with code behind it; Qiushi Skill is a reasoning methodology with no runtime of its own. They are complements rather than alternatives — one runs, the other prescribes how to think.",
-      "preferred_for_axis": "executable-tooling-vs-reasoning-method"
-    },
-    {
-      "slug": "claude-code",
-      "verdict_diff": "Claude Code is a complete agent harness that ships its own working discipline; Qiushi Skill is a prompt-layer methodology you would load into such a harness. One is the vehicle, the other a proposed driving style.",
-      "preferred_for_axis": "harness-vs-methodology-layer"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "Presents one governing principle plus nine methodological tools in a three-layer structure",
-      "source": "http://hughyau.com/qiushi-skill/ (方法论结构 (methodology structure) section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Each of the nine tools states a core principle, a named source text and an applicable scenario",
-      "source": "http://hughyau.com/qiushi-skill/ (九大思想武器 (nine tools) section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Diagnoses five specific agent failure modes, including answering before investigating and not self-checking output",
-      "source": "http://hughyau.com/qiushi-skill/ (根本问题 (core problem) section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Tools are drawn from Mao Zedong's writings (On Contradiction, On Practice, On Protracted War and others)",
-      "source": "http://hughyau.com/qiushi-skill/ (原著出处 (source) lines on each tool)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Carries community-contributed usage examples and directs discussion to GitHub Discussions",
-      "source": "http://hughyau.com/qiushi-skill/ (展示示例 (examples) section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": false,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": false,
-    "agent_integration_path": "The project is presented as a 'skill' intended to be loaded into an AI agent, and references integration with agent harnesses in its community examples, but the captured surface documents no package, install command, file format or protocol — so how an agent consumes it could not be determined from the public page.",
-    "agent_friendly_score": 3
-  },
+  "run_id": "run-hughyau-qiushi-skill-u9zq2m0f",
+  "run_at": "2026-06-14T00:01:40.882Z",
+  "source": "hlido-drain-worker",
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true,
-      "evidence": "Page rendered and captured (3018 chars of text, 1 screenshot(s))",
-      "tested_at": "2026-10-26T12:31:29.253Z"
+      "required": true
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true,
-      "evidence": "求是 Skill | 武装 AI 的大脑",
-      "tested_at": "2026-10-26T12:31:29.253Z"
+      "required": true
     },
     {
       "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "A primary action is present on the captured surface",
-      "tested_at": "2026-10-26T12:31:29.253Z"
+      "pass": false,
+      "required": true
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false,
-      "evidence": "No pricing appears on the captured surface and no licence is stated. The project is presented as freely available with community discussion on GitHub.",
-      "tested_at": "2026-10-26T12:31:29.253Z"
+      "required": false
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false,
-      "evidence": "Only the landing surface was captured; no additional page or demo was reached in this run",
-      "tested_at": "2026-10-26T12:31:29.253Z"
+      "required": false
     }
   ],
-  "summary": "A structured methodology pack that gives an AI agent a disciplined way to analyse a problem before acting — genuinely well organised, openly sourced to its texts, and inseparable from the political corpus it is built on.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-25",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-25",
-  "attestation_url": "/data/attestations/hughyau-qiushi-skill.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-10-27",
+  "laddoo_score": 70,
+  "score": 70,
+  "tier": "STEADY",
+  "summary": "Public-surface review of HughYau/qiushi-skill.",
+  "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -182,17 +54,18 @@
     ],
     "urls": [
       "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-46fba7cd6c86c738-hughyau-com/home.png"
-    ]
+    ],
+    "verified_at": "2026-10-28T21:28:34.308Z",
+    "verified_count": 1,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
     "pricing_disclosed": {
-      "pass": false,
-      "evidence": "No pricing appears on the captured surface and no licence is stated. The project is presented as freely available with community discussion on GitHub.",
-      "tested_at": "2026-10-26"
+      "pass": false
     },
-    "last_verified": "2026-10-26",
+    "last_verified": "2026-06-14",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-27"
+    "derived_at": "2026-08-21"
   }
 }
