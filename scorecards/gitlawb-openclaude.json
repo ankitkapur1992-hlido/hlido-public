@@ -1,175 +1,44 @@
 {
-  "schema_version": "2.0",
   "slug": "gitlawb-openclaude",
-  "name": "openclaude",
+  "name": "Gitlawb/openclaude",
   "agent_url": "https://openclaude.gitlawb.com",
+  "repo_url": "https://github.com/Gitlawb/openclaude",
   "category": "Coding",
-  "run_id": "run-a9e56da710dabbf6-openclaude-gitlawb-com",
-  "run_at": "2026-10-26T08:32:22.737Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 72,
-  "tier": "STEADY",
-  "laddoo_score": 72,
-  "confidence": "low",
-  "hlido_opinion": {
-    "headline": "A model-neutral, open-source coding agent CLI that keeps the whole agent loop in your terminal and every change reviewable — an unusually complete feature surface for a young project, but nothing on the page proves it at scale.",
-    "body": "openclaude positions itself against the two shapes that dominate this category — the chatbot wrapper and the IDE plugin — and commits instead to a terminal-resident agent that talks to any model. The captured surface is specific where marketing pages usually go vague: a real install line (npm install -g @twigpine/openclaude@latest), a transcript of an actual agent loop reading a file, grepping, editing and running tests, and a named provider list that runs well past the usual three — OpenAI, Gemini, Grok, Ollama, GitHub Models, OpenRouter, DeepSeek, Kimi, GLM, Cloudflare, NVIDIA NIM, Groq, Mistral, LM Studio, Xiaomi MiMo, plus Bedrock, Vertex and any OpenAI-compatible endpoint. The agent-facing detail is the strongest part of the page and the part this register cares most about: a non-interactive --print mode with json and stream-json output, tool allowlists, budgets, session control, MCP servers and skills wired into the loop rather than bolted on, per-repo profiles, and sessions you can resume, branch and rewind with worktree isolation. That is a scriptable surface, not a chat window with a CLI badge. What the surface does not carry is evidence. There is no star count, no download figure, no named user, no benchmark, and no pricing or licence statement on the captured page — the word open-source appears in the banner but the terms are not stated where a buyer reads them. Every capability above is a vendor claim we could read and not a behaviour we measured, and the project sits on a personal-domain subdomain under a parent brand (twigpine) whose own standing is not established here. The design is right and the surface is honest about what it is; adoption and durability are the open questions.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-27",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "STEADY (72) because the product is live, the position is clearly differentiated (model-neutral, terminal-resident, scriptable), and the agent-facing surface — --print with json/stream-json, tool allowlists, budgets, MCP, skills — is specific enough to integrate against. It is held below the 80s by a complete absence of traction or third-party evidence on the reviewed surface, and no licence or pricing statement. It would move to VITAL on published adoption figures and a verified licence; it would fall to FADING if the provider claims proved thin on test.",
-  "what_it_does_well": [
-    "Genuinely model-neutral: a named list of 16+ providers plus Bedrock, Vertex and any OpenAI-compatible endpoint, switchable mid-session with one command",
-    "Scriptable by design — non-interactive --print mode with json and stream-json output, tool allowlists, budgets and session control, which is what makes it usable from another agent rather than only by a human",
-    "Real tools in the loop (bash, file edits, grep, glob, MCP servers, skills) rather than a chat surface with tool names listed beside it",
-    "Session durability is treated as a feature: resume, branch and rewind, background tasks, worktree isolation",
-    "The captured page shows an actual agent transcript (read, grep, edit, test run) instead of an abstract diagram"
-  ],
-  "what_it_fails_at": [
-    "No traction evidence anywhere on the captured surface — no stars, downloads, named users or case studies",
-    "Open-source is asserted in the banner but no licence is stated on the page a buyer actually lands on",
-    "No pricing or cost-of-access statement, even to say it is free",
-    "Every capability is a claim read off marketing copy; none was exercised in this public-surface review",
-    "Hosted on a subdomain of a personal domain under a parent brand whose own track record is not evidenced here"
-  ],
-  "best_for": [
-    "Developers who want a coding agent that runs against local models (Ollama, LM Studio) as readily as hosted ones",
-    "Teams scripting an agent into CI or another agent, who need --print with structured JSON output and tool allowlists",
-    "Anyone avoiding IDE lock-in who wants the agent loop visible and every diff reviewable in the terminal",
-    "Multi-provider shops that switch models often and do not want a rewrite each time"
-  ],
-  "not_recommended_for": [
-    "Buyers who need demonstrated adoption or a named reference before committing a team",
-    "Organisations that need a stated licence and support terms before installing a tool with shell and file-edit permissions",
-    "Teams wanting a managed, supported product rather than a young open project",
-    "Anyone who needs the provider-compatibility matrix guaranteed rather than advertised"
-  ],
-  "red_flags": [
-    "The page advertises open source in its banner but states no licence — a tool granted bash and file-edit access should name its terms where it asks for the install",
-    "Zero third-party evidence of use: no stars, downloads, users or benchmarks on the reviewed surface, so the entire capability list stands on self-description"
-  ],
-  "compared_to": [
-    {
-      "slug": "aider",
-      "verdict_diff": "Aider is the established terminal coding agent with years of public use and a visible community; openclaude's pitch is a wider provider matrix and a more scriptable non-interactive mode. Choose Aider when demonstrated adoption matters; look at openclaude if provider-neutrality and JSON-stream automation are the specific need.",
-      "preferred_for_axis": "proven-adoption-vs-provider-neutrality"
-    },
-    {
-      "slug": "opencode",
-      "verdict_diff": "Both are open terminal coding agents with multi-model support; openclaude advertises a broader named provider list and explicit tool allowlists and budgets, while opencode has the longer public record in this register. Neither was behaviourally tested here.",
-      "preferred_for_axis": "feature-breadth-vs-track-record"
-    },
-    {
-      "slug": "block-goose",
-      "verdict_diff": "Goose ships from a known company with published extensions and a visible release cadence; openclaude is an independent project with a comparable feature list and no corporate backing. Choose Goose for institutional durability, openclaude for independence and model neutrality.",
-      "preferred_for_axis": "vendor-backing-vs-independence"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "Model-neutral across 16+ named providers plus Bedrock, Vertex and any OpenAI-compatible endpoint",
-      "source": "https://openclaude.gitlawb.com (providers section)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Non-interactive --print mode with json and stream-json output, tool allowlists, budgets and session control",
-      "source": "https://openclaude.gitlawb.com ('scriptable from day one' feature block)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Real tools wired into the agent loop: bash, file edits, grep, glob, MCP servers, skills",
-      "source": "https://openclaude.gitlawb.com ('real tools, not just chat' feature block)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Install via npm install -g @twigpine/openclaude@latest",
-      "source": "https://openclaude.gitlawb.com (hero install line)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    },
-    {
-      "claim": "Sessions resume, branch and rewind, with background tasks and worktree isolation",
-      "source": "https://openclaude.gitlawb.com ('sessions that persist' feature block)",
-      "tested_at": "2026-10-26",
-      "verified": true
-    }
-  ],
-  "agent_relevance": {
-    "has_api": false,
-    "has_cli": true,
-    "has_mcp": true,
-    "has_webhook": false,
-    "has_sdk": false,
-    "behavioral_testable": true,
-    "agent_integration_path": "openclaude is agent-facing by construction: a non-interactive --print mode emitting json and stream-json, tool allowlists and budgets, and MCP server support mean another agent can drive it and parse the result rather than scrape a terminal. The npm package name is published on the page, so the integration path is concrete. Depth was not exercised in this public-surface review.",
-    "agent_friendly_score": 8
-  },
+  "run_id": "run-gitlawb-openclaude-5hwuk6ed",
+  "run_at": "2026-07-17T18:01:03.714Z",
+  "source": "hlido-drain-worker",
   "checklist": [
     {
-      "id": "homepage_loads",
-      "pass": true,
-      "required": true,
-      "evidence": "Page rendered and captured (3226 chars of text, 1 screenshot(s))",
-      "tested_at": "2026-10-26T08:32:22.737Z"
-    },
-    {
-      "id": "primary_value_prop",
-      "pass": true,
-      "required": true,
-      "evidence": "openclaude — open-source coding agent CLI for any model",
-      "tested_at": "2026-10-26T08:32:22.737Z"
-    },
-    {
-      "id": "cta_present",
-      "pass": true,
-      "required": true,
-      "evidence": "A primary action is present on the captured surface",
-      "tested_at": "2026-10-26T08:32:22.737Z"
-    },
-    {
-      "id": "pricing_or_access",
+      "id": "C01",
       "pass": false,
-      "required": false,
-      "evidence": "No pricing or licence terms were present on the captured surface. The banner says OPEN SOURCE and the install is a public npm package, but no licence is named and no cost statement appears.",
-      "tested_at": "2026-10-26T08:32:22.737Z"
+      "required": true
     },
     {
-      "id": "evidence_or_demo",
+      "id": "C02",
       "pass": false,
-      "required": false,
-      "evidence": "Only the landing surface was captured; no additional page or demo was reached in this run",
-      "tested_at": "2026-10-26T08:32:22.737Z"
+      "required": true
+    },
+    {
+      "id": "C03",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C04",
+      "pass": false,
+      "required": true
+    },
+    {
+      "id": "C05",
+      "pass": false,
+      "required": false
     }
   ],
-  "summary": "A model-neutral, open-source coding agent CLI that keeps the whole agent loop in your terminal and every change reviewable — an unusually complete feature surface for a young project, but nothing on the page proves it at scale.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-25",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-25",
-  "attestation_url": "/data/attestations/gitlawb-openclaude.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
-  "aspect_versions": {
-    "hlido_opinion": "1.0",
-    "tier_rationale": "1.0",
-    "what_it_does_well": "1.0",
-    "what_it_fails_at": "1.0",
-    "best_for": "1.0",
-    "not_recommended_for": "1.0",
-    "red_flags": "1.0",
-    "compared_to": "1.0",
-    "evidence_urls": "1.0",
-    "agent_relevance": "1.0",
-    "checklist": "1.0"
-  },
-  "aspect_versions_as_of": "2026-10-27",
+  "laddoo_score": 50,
+  "score": 50,
+  "tier": "FADING",
+  "summary": "Public-surface review of Gitlawb/openclaude.",
+  "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -186,17 +55,19 @@
     ],
     "urls": [
       "https://images.hlido.eu/reviews/gitlawb-openclaude/run-a9e56da710dabbf6-openclaude-gitlawb-com/home.png"
-    ]
+    ],
+    "verified_at": "2026-10-28T21:28:22.051Z",
+    "verified_count": 1,
+    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
-  "pricing_facts": {
-    "schema": "pricing-facts/1",
-    "pricing_disclosed": {
-      "pass": false,
-      "evidence": "No pricing or licence terms were present on the captured surface. The banner says OPEN SOURCE and the install is a public npm package, but no licence is named and no cost statement appears.",
-      "tested_at": "2026-10-26"
-    },
-    "last_verified": "2026-10-26",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-27"
+  "agent_relevance": {
+    "has_mcp": true,
+    "has_cli": true,
+    "derived_from": "backfill-2026-09-03",
+    "basis": [
+      "has_mcp: \"MCP\" in preanalysis.raw_markdown_preview",
+      "has_cli: \"cli\" in preanalysis.raw_markdown_preview"
+    ],
+    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
   }
 }
