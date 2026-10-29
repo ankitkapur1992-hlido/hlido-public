@@ -1,8 +1,8 @@
 {
   "slug": "ogulcancelik-herdr",
-  "name": "ogulcancelik/herdr",
+  "name": "Herdr",
   "agent_url": "https://github.com/ogulcancelik/herdr",
-  "category": "AI Agent",
+  "category": "Coding",
   "run_id": "run-ogulcancelik-herdr-504xvqqy",
   "run_at": "2026-06-16T06:00:49.038Z",
   "source": "hlido-drain-worker",
@@ -36,7 +36,7 @@
   "laddoo_score": 75,
   "score": 75,
   "tier": "STEADY",
-  "summary": "Public-surface review of ogulcancelik/herdr.",
+  "summary": "A persistent server that owns your coding agents' terminals so they keep working when you walk away — a real gap, addressed concretely, on claims we cannot check.",
   "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
@@ -47,8 +47,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-9ffe0fa342b09b35-herdr-dev",
-    "base": "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-9ffe0fa342b09b35-herdr-dev",
+    "run_id": "run-38bf6d1f4ddbb628-herdr-dev",
+    "base": "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-38bf6d1f4ddbb628-herdr-dev",
     "files": [
       "home.png",
       "page_docs_.png",
@@ -56,30 +56,119 @@
       "page_docs_agents_.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-9ffe0fa342b09b35-herdr-dev/home.png",
-      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-9ffe0fa342b09b35-herdr-dev/page_docs_.png",
-      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-9ffe0fa342b09b35-herdr-dev/page_docs_install_.png",
-      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-9ffe0fa342b09b35-herdr-dev/page_docs_agents_.png"
+      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-38bf6d1f4ddbb628-herdr-dev/home.png",
+      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-38bf6d1f4ddbb628-herdr-dev/page_docs_.png",
+      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-38bf6d1f4ddbb628-herdr-dev/page_docs_install_.png",
+      "https://images.hlido.eu/reviews/ogulcancelik-herdr/run-38bf6d1f4ddbb628-herdr-dev/page_docs_agents_.png"
     ],
-    "verified_at": "2026-10-28T21:29:09.674Z",
+    "verified_at": "2026-10-29T21:20:13.905Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false
     },
     "last_verified": "2026-06-16",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
+    "derived_at": "2026-10-29"
   },
   "agent_relevance": {
+    "has_api": true,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"cli\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "A socket API and CLI are described as the same surface agents drive: agents can split panes, start and prompt one another, and block until a peer is genuinely waiting. No MCP server is advertised, and no API reference was reachable from the captured surface.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.10",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A persistent server that owns your coding agents' terminals so they keep working when you walk away — a real gap, addressed concretely, on claims we cannot check.",
+    "body": "Herdr's premise is one most people running several coding agents will recognise immediately: the agents live in terminals, the terminals die with the session, and finding the one that is blocked means walking pane by pane. Herdr makes the terminals live inside a background server instead, marks each agent working, blocked or idle by reading its pane, restores the layout and resumes sessions after a restart, and federates machines over SSH so one Herdr covers a laptop, a desktop and a rented box. It claims to detect 22 agent CLIs out of the box — Claude Code, Codex, Cursor, opencode, Grok, Copilot and others — and positions itself as owning their terminals rather than wrapping or replacing them, which is the right boundary and the one a tool like this most often oversteps. The agent-native framing is more than decoration: the CLI and socket API are described as the same surface the agents themselves drive, so agents can split panes, start and prompt each other, and wait on a genuinely blocked peer instead of firing keystrokes hopefully. Apache 2.0, cross-platform, one binary, a curl-pipe-sh installer. Where it is weaker is the evidence: the landing surface leads with 46,411 GitHub stars, 1,899,471 installs to date and 1,963 community plugins, and none of those is verifiable from the surface we captured — large round-sounding counters are the easiest thing to put on a page and the hardest for a reader to check. There is no pricing or access section, which for an Apache-2.0 tool is defensible but leaves the commercial intent unstated, and the only call to action is an install command, so a cautious evaluator has no non-destructive path in. The idea is strong and the scope is honest; the numbers want corroboration.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because the problem is real, the solution is described in operational detail (process model, status detection, session resume, SSH federation, named agent CLIs), and the licence and platform support are stated plainly. It does not reach VITAL because the adoption figures that carry most of the page's credibility are unverifiable from the public surface, and because the only entry point offered is a shell-piped installer with no documented trial or sandbox path.",
+  "what_it_does_well": [
+    "Names the failure it fixes precisely: agents die with the session, and you cannot tell which one is blocked",
+    "Describes the mechanism rather than the benefit — background server, panes inside it, layout and session restore after reboot",
+    "Reads each pane to classify agents working / blocked / idle, so triage does not require attaching",
+    "Keeps a correct scope boundary: it owns terminals and does not wrap or replace the agent CLIs",
+    "Treats the CLI and socket API as one surface agents themselves drive, including waiting on a blocked peer",
+    "Apache 2.0, single binary, macOS / Linux / Windows, with homebrew, nix and manual install routes"
+  ],
+  "what_it_fails_at": [
+    "Headline adoption numbers (46,411 stars, 1,899,471 installs, 1,963 plugins) are unverifiable from the captured surface",
+    "No pricing or access statement — the commercial model, if any, is unstated",
+    "Primary install path is curl-pipe-sh, with no sandboxed or reversible way to evaluate first",
+    "Required call-to-action check failed: an install command is not an evaluation path for a cautious buyer",
+    "'22 agent CLIs detected' is asserted without a published compatibility matrix or version floors",
+    "Nothing on the public surface addresses what the server can see — it reads every pane, which is a trust question it does not answer"
+  ],
+  "best_for": [
+    "Developers running several coding agents at once across multiple projects",
+    "Long-running agent tasks that must survive a closed laptop lid or a dropped network",
+    "People who move between machines and want sessions where they left them",
+    "Agent-to-agent workflows that need to coordinate rather than interleave blindly"
+  ],
+  "not_recommended_for": [
+    "Anyone running a single agent in a single terminal — the orchestration is overhead",
+    "Environments where a background server with read access to every terminal pane is not acceptable",
+    "Teams that need a documented support or compatibility commitment before adopting an orchestration layer",
+    "Buyers who will not install via a piped shell script and find no alternative documented path"
+  ],
+  "red_flags": [
+    "Three large adoption counters anchor the page's credibility and none can be checked from the public surface. Verify the repository's actual stars and release history before treating the install figure as evidence of maturity.",
+    "The product reads every agent pane to classify status. No public statement addresses what that data is, where it stays, or whether it leaves the machine."
+  ],
+  "compared_to": [
+    {
+      "slug": "opencode",
+      "verdict_diff": "opencode is itself a coding agent; Herdr is the layer that keeps agents like it alive and visible. They are complementary rather than competing — Herdr lists opencode among the CLIs it detects.",
+      "preferred_for_axis": "agent-vs-agent-runtime"
+    },
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is one of the agent CLIs Herdr hosts. Choose Herdr only when you are running several such agents and session persistence has become the problem.",
+      "preferred_for_axis": "single-agent-vs-many"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Persistent background server keeps agent terminals running when detached",
+      "source": "https://github.com/ogulcancelik/herdr",
+      "verified": true,
+      "tested_at": "2026-06-16"
+    },
+    {
+      "claim": "Per-agent status classification (working / blocked / idle) read from panes",
+      "source": "https://github.com/ogulcancelik/herdr",
+      "verified": true,
+      "tested_at": "2026-06-16"
+    },
+    {
+      "claim": "Apache 2.0 licence, macOS / Linux / Windows, single binary",
+      "source": "https://github.com/ogulcancelik/herdr",
+      "verified": true,
+      "tested_at": "2026-06-16"
+    },
+    {
+      "claim": "Adoption counters displayed on the landing surface (stars / installs / plugins)",
+      "source": "https://github.com/ogulcancelik/herdr",
+      "verified": false,
+      "tested_at": "2026-06-16"
+    }
+  ]
 }
