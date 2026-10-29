@@ -1,8 +1,8 @@
 {
   "slug": "hughyau-qiushi-skill",
-  "name": "HughYau/qiushi-skill",
+  "name": "Qiushi Skill",
   "agent_url": "https://github.com/HughYau/qiushi-skill",
-  "category": "AI Agent",
+  "category": "Frameworks & Eval",
   "run_id": "run-hughyau-qiushi-skill-u9zq2m0f",
   "run_at": "2026-06-14T00:01:40.882Z",
   "source": "hlido-drain-worker",
@@ -36,7 +36,7 @@
   "laddoo_score": 70,
   "score": 70,
   "tier": "STEADY",
-  "summary": "Public-surface review of HughYau/qiushi-skill.",
+  "summary": "A reasoning-discipline skill pack for coding agents, installable across seven hosts, whose value rests entirely on claims about thinking quality that nobody can currently measure.",
   "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
@@ -55,17 +55,116 @@
     "urls": [
       "https://images.hlido.eu/reviews/hughyau-qiushi-skill/run-46fba7cd6c86c738-hughyau-com/home.png"
     ],
-    "verified_at": "2026-10-28T21:28:34.308Z",
+    "verified_at": "2026-10-29T21:19:52.118Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": false
     },
     "last_verified": "2026-06-14",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  }
+    "derived_at": "2026-10-29"
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.10",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A reasoning-discipline skill pack for coding agents, installable across seven hosts, whose value rests entirely on claims about thinking quality that nobody can currently measure.",
+    "body": "Qiushi Skill is not a tool but a methodology: nine named reasoning instruments plus one governing principle, distilled from a body of Chinese political-philosophical writing and reframed as a work discipline for AI agents. The diagnosis it opens with is sharper than most of this category manages. Agents, it argues, can think but cannot work a problem: they cannot separate the principal contradiction from surface noise, they answer before establishing the facts, they do not review their own output, they stop at the first obstacle, and they spread effort across ten tasks and finish none. Anyone who has watched a capable agent fail on a messy real task will recognise all five. The response is structured rather than aphoristic — a governing principle (let the facts determine the judgement) over three layers: a philosophical base (contradiction analysis, practice-based epistemology), working methods (investigation, mass line, criticism and self-criticism), and strategy and tactics (protracted strategy, concentration of force, spark-to-prairie-fire, overall coordination). Each instrument carries a core tenet, a cited source text and a stated applicable scenario, and the engineering is sound: MIT licence, npx installer that detects the host and writes to the right directory across Claude Code, Cursor, Codex, OpenCode, OpenClaw, Hermes Agent and nanobot, a validate command, and a Claude Code marketplace manifest with a SessionStart hook. The project also states its boundaries explicitly — not politics, not propaganda, not persona distillation, not an automation toolbox — and is right to, because the provenance will be the first thing many evaluators react to. The honest limitation is measurement. The entire proposition is that constrained reasoning produces better agent work, and there is no benchmark, no before-and-after, and no evaluation harness anywhere on the surface; the showcase is three community anecdotes. The documentation is also Chinese-only, which gates the audience as firmly as the subject matter does.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the packaging is genuinely good — MIT licensed, one-command cross-host install with validation, seven named hosts, a marketplace manifest — and because the problem statement and the structure imposed on it are more rigorous than most prompt-engineering artifacts. It is held well below VITAL because the central claim (better reasoning discipline yields better agent output) has no evidence of any kind on the public surface, the only demonstrations are three user anecdotes, and the documentation is single-language.",
+  "what_it_does_well": [
+    "Diagnoses five concrete agent failure modes rather than asserting a vague capability gap",
+    "Organises the methodology into a governing principle over three layers instead of a list of tips",
+    "Each of the nine instruments carries a core tenet, a cited source and a stated applicable scenario",
+    "One-command install (npx qiushi-skill) that detects the host and writes to the correct directory",
+    "Supports seven agent hosts explicitly, plus a documented copy-the-folder path for any Markdown-skill host",
+    "Ships a validate command and a Claude Code marketplace manifest with a SessionStart hook",
+    "States its own boundaries plainly — not politics, not persona simulation, not an automation toolbox"
+  ],
+  "what_it_fails_at": [
+    "No benchmark, evaluation or before-and-after evidence that the methodology improves agent output",
+    "The only demonstrations are three community-contributed anecdotes",
+    "Documentation and public surface are Chinese-only, with no English path",
+    "Required call-to-action check failed; no access or support statement on the surface",
+    "The political provenance of the source texts will be a non-starter for many organisations regardless of the disclaimer",
+    "Nine instruments plus a governing principle is a large amount of prompt context to spend before any task-specific instruction"
+  ],
+  "best_for": [
+    "Chinese-reading developers experimenting with reasoning scaffolds for coding agents",
+    "Long-running agent tasks where premature answers and abandoned work are the observed failure mode",
+    "Teams already authoring their own skill packs who want a worked example of structure over tips",
+    "Multi-host setups needing one install that covers Claude Code, Cursor, Codex and others"
+  ],
+  "not_recommended_for": [
+    "Organisations that cannot adopt artifacts derived from this source material, whatever the stated framing",
+    "Non-Chinese-reading teams — there is no English documentation",
+    "Anyone who needs measured evidence that a reasoning scaffold works before spending context on it",
+    "Context-constrained setups where a large standing methodology block displaces task instructions"
+  ],
+  "red_flags": [
+    "The entire value proposition is unmeasured. A skill pack that constrains how an agent reasons should be the easiest thing in this category to A/B test, and the public surface offers no evaluation at all — only three user stories.",
+    "The provenance is political writing, and while the project states it is extracting methodology rather than politics, that disclaimer is the author's framing and not something a reviewer can verify about how the prompts behave in practice."
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "This is a skill pack installed into Claude Code and six other hosts, not a competitor to any of them. It changes how your existing agent approaches a problem; it does not replace the agent.",
+      "preferred_for_axis": "skill-pack-not-agent"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Installed as Markdown skills, commands and hooks via npx qiushi-skill, which detects the host and writes to its skills directory; also installable from a Claude Code marketplace manifest with a SessionStart hook. Supported hosts named: Claude Code, Cursor, Codex, OpenCode, OpenClaw, Hermes Agent, nanobot. No API or MCP surface.",
+    "agent_friendly_score": 6
+  },
+  "evidence_urls": [
+    {
+      "claim": "Nine named methodology instruments plus a governing principle, each with a core tenet, cited source and applicable scenario",
+      "source": "https://github.com/HughYau/qiushi-skill",
+      "verified": true,
+      "tested_at": "2026-06-14"
+    },
+    {
+      "claim": "One-command cross-host install with host detection and a validate command",
+      "source": "https://github.com/HughYau/qiushi-skill",
+      "verified": true,
+      "tested_at": "2026-06-14"
+    },
+    {
+      "claim": "Seven agent hosts supported explicitly, plus a copy-the-folder path for other Markdown-skill hosts",
+      "source": "https://github.com/HughYau/qiushi-skill",
+      "verified": true,
+      "tested_at": "2026-06-14"
+    },
+    {
+      "claim": "MIT licence; Claude Code marketplace manifest with SessionStart hook",
+      "source": "https://github.com/HughYau/qiushi-skill",
+      "verified": true,
+      "tested_at": "2026-06-14"
+    },
+    {
+      "claim": "Project states explicit scope boundaries (methodology, not politics / persona / automation)",
+      "source": "https://github.com/HughYau/qiushi-skill",
+      "verified": true,
+      "tested_at": "2026-06-14"
+    }
+  ]
 }
