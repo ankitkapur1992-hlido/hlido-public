@@ -1,6 +1,6 @@
 {
   "slug": "patterai-patter",
-  "name": "PatterAI/Patter",
+  "name": "Patter",
   "agent_url": "https://github.com/PatterAI/Patter",
   "category": "Voice",
   "run_id": "run-patterai-patter-4f6nerrz",
@@ -36,7 +36,7 @@
   "laddoo_score": 80,
   "score": 80,
   "tier": "STEADY",
-  "summary": "Public-surface review of PatterAI/Patter.",
+  "summary": "An MIT-licensed SDK that puts a phone number in front of an existing agent, and proves the claim by publishing a number you can call.",
   "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
@@ -47,33 +47,133 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-328a4322829fa569-github-com",
-    "base": "https://images.hlido.eu/reviews/patterai-patter/run-328a4322829fa569-github-com",
+    "run_id": "run-684b78d2647dacaf-getpatter-com",
+    "base": "https://images.hlido.eu/reviews/patterai-patter/run-684b78d2647dacaf-getpatter-com",
     "files": [
       "home.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/patterai-patter/run-328a4322829fa569-github-com/home.png"
+      "https://images.hlido.eu/reviews/patterai-patter/run-684b78d2647dacaf-getpatter-com/home.png"
     ],
-    "verified_at": "2026-07-31T09:31:39.692Z",
+    "verified_at": "2026-10-29T21:20:19.633Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "usage-based"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
       "pass": true
     },
     "last_verified": "2026-06-17",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
+    "derived_at": "2026-10-29"
   },
   "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
     "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_sdk: \"SDK\" in preanalysis.scoring_hypothesis"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "behavioral_testable": true,
+    "agent_integration_path": "Python (pip install getpatter) and TypeScript (npm install getpatter) SDKs bind a carrier number to an agent instance and serve calls, optionally through a tunnel. An agent-driven workflow can place or receive calls programmatically; the published demo number also makes the behaviour testable end to end.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.10",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "An MIT-licensed SDK that puts a phone number in front of an existing agent, and proves the claim by publishing a number you can call.",
+    "body": "Patter's pitch is narrow and legible: connect any agent to real phone calls in four lines of code, Python or TypeScript, MIT licensed. The public surface does the two things that matter most in voice AI and are most often missing. First, it is specific about the plumbing it replaces — the page sets its four-line example beside a 371-line hand-rolled pipeline covering Twilio TwiML, WebSocket media streams, mulaw-to-PCM transcoding, STT, LLM and TTS round-tripping, and resampling back to 8 kHz. Anyone who has built that pipeline will recognise the list, which is a stronger credibility signal than a latency number. Second, it publishes a live demonstration you can verify without signing up: a US phone number that reaches the agent, labelled with the caveat that standard carrier rates apply. A category where almost every vendor gates the demo behind a form has a low bar here, and Patter clears it. The composition story is also sound: it binds to carriers (Twilio, Telnyx) and engines (OpenAI Realtime, ElevenLabs, Deepgram, Anthropic, Cartesia) rather than reimplementing them, so the SDK is a seam rather than a platform you marry. What it does not yet have is a commercial surface — Patter Cloud, the hosted runtime, is a waitlist, so the only concrete access path is self-hosting with your own carrier and model keys, and the costs land on your accounts in ways the page does not model. Sub-500 ms latency is claimed and a 412 ms time-to-first-audio is shown in a mock, but neither is independently measurable from outside. For a team that already has a working agent and needs it on the telephone network this week, Patter is a credible place to start. For a team that wants someone else to run the voice infrastructure, the product that does that is not shipped yet.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-29",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (80) because the product is verifiable in the ways that count: an open licence, two installable SDKs, a published version, a concrete integration surface named carrier by carrier, and a live phone number that lets anyone test the core claim without an account. It is not VITAL because the hosted runtime that would make it a product rather than a library is still a waitlist, and because the latency figures central to its positioning are vendor-stated and not independently reproducible from the public surface.",
+  "what_it_does_well": [
+    "Publishes a callable phone number so the core claim can be tested without signing up",
+    "MIT licensed with installable packages on both PyPI and npm, and a stated version (v0.7.0)",
+    "Names every carrier and engine it binds to rather than hiding behind 'integrates with leading providers'",
+    "Quantifies the work it removes by showing the 371-line hand-rolled equivalent beside its own example",
+    "Composes with existing STT/TTS/LLM vendors instead of locking you into one stack",
+    "Docs and changelog are public and reachable from the landing surface"
+  ],
+  "what_it_fails_at": [
+    "Sub-500 ms latency and the 412 ms time-to-first-audio are vendor-stated and not verifiable from outside",
+    "Patter Cloud — the managed runtime — is a waitlist, so there is no supported hosted path today",
+    "No cost model: you bring carrier and model keys, and the page does not help you estimate per-minute spend",
+    "Primary conversion path is 'Get a demo' for a product that is otherwise self-serve open source, which muddles the ask",
+    "Pre-1.0 version on a dependency that sits in the realtime path"
+  ],
+  "best_for": [
+    "Teams with a working text agent that now needs to answer or place phone calls",
+    "Builders who want to own the telephony layer rather than rent a voice platform",
+    "Prototypes where a real number in front of an agent is the fastest way to test demand",
+    "Stacks already committed to Twilio or Telnyx and a realtime model provider"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a managed voice runtime with support today — the cloud offering is not available",
+    "Regulated deployments needing documented call recording, retention and consent handling (not addressed on the public surface)",
+    "Teams without telephony or realtime-audio experience who would rather buy an outcome than a library",
+    "Anyone needing contractual latency guarantees"
+  ],
+  "red_flags": [
+    "The managed offering (Patter Cloud) is presented alongside shipped SDKs but is a waitlist, not a product. A buyer skimming the page could reasonably believe a hosted runtime exists.",
+    "Latency is the headline differentiator and is entirely self-reported; the on-page 412 ms figure appears inside an illustrative call mock rather than a published benchmark."
+  ],
+  "compared_to": [
+    {
+      "slug": "retell-ai",
+      "verdict_diff": "Retell is a managed voice-agent platform with a dashboard and per-minute pricing; Patter is an MIT library you run. Choose Retell to buy the outcome, Patter to own the pipeline and the costs.",
+      "preferred_for_axis": "managed-platform-vs-open-sdk"
+    },
+    {
+      "slug": "bland-ai",
+      "verdict_diff": "Bland sells phone-calling agents as a service with its own telephony; Patter assumes you bring a carrier. Bland is faster to a working call for a non-engineer; Patter gives an engineering team control of every hop.",
+      "preferred_for_axis": "service-vs-self-hosted"
+    },
+    {
+      "slug": "livekit",
+      "verdict_diff": "LiveKit is the broader realtime-media infrastructure play, with voice agents as one use case; Patter is narrowly the phone-number seam for an existing agent. LiveKit for a platform, Patter for the single job.",
+      "preferred_for_axis": "breadth-vs-single-purpose"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "MIT-licensed open-source SDK for connecting agents to phone calls",
+      "source": "https://github.com/PatterAI/Patter",
+      "verified": true,
+      "tested_at": "2026-06-17"
+    },
+    {
+      "claim": "Python and TypeScript packages published (getpatter)",
+      "source": "https://github.com/PatterAI/Patter",
+      "verified": true,
+      "tested_at": "2026-06-17"
+    },
+    {
+      "claim": "Live callable demonstration number published on the public surface",
+      "source": "https://github.com/PatterAI/Patter",
+      "verified": true,
+      "tested_at": "2026-06-17"
+    },
+    {
+      "claim": "Carrier and engine integrations named explicitly (Twilio, Telnyx, OpenAI Realtime, ElevenLabs, Deepgram, Anthropic, Cartesia)",
+      "source": "https://github.com/PatterAI/Patter",
+      "verified": true,
+      "tested_at": "2026-06-17"
+    },
+    {
+      "claim": "Patter Cloud hosted runtime is a waitlist, not a shipped product",
+      "source": "https://github.com/PatterAI/Patter",
+      "verified": true,
+      "tested_at": "2026-06-17"
+    }
+  ]
 }
