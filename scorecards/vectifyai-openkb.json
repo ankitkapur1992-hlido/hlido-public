@@ -1,43 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "vectifyai-openkb",
   "name": "VectifyAI/OpenKB",
-  "agent_url": "https://github.com/VectifyAI/OpenKB",
+  "agent_url": "https://pageindex.ai",
   "category": "AI Agent",
-  "run_id": "run-vectifyai-openkb-2130io7j",
-  "run_at": "2026-06-18T12:00:53.202Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-vectifyai-openkb-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-86b7f5939f443d03-pageindex-ai",
+  "engine_run_at": "2026-10-31T08:06:12.254Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "The reviewed surface is Vectify's PageIndex document-AI product, not the OpenKB repo it is registered under — a specific traceability pitch behind a marketing page with almost nothing to check.",
+    "body": "Read this review for what it is: a thin public-surface assessment, and of a surface that does not match the entry's name. VectifyAI/OpenKB is catalogued as an open LLM knowledge base built on the pattern Andrej Karpathy described, where models generate summaries, concept pages and cross-references maintained automatically. The URL Hlido captured, pageindex.ai, is the company's commercial product site, and what it markets is narrower and more concrete: document AI for \"verifiable answers from complex documents\", with precision, traceability and context as the stated axes. Its headline claim is a Page Search API that finds the pages relevant to a question in about a second so the model reads only those rather than the whole PDF, advertised as cutting token cost by 97% and as more accurate and faster than vector search. That is a well-formed, falsifiable claim and the right one for this problem — page-level retrieval with a traceable citation is genuinely more auditable than opaque chunk similarity. But almost nothing on this page can be checked. The capture is short: navigation, the API announcement, two calls to action (Try Now, Book a Demo) and a footer. Our automated checks resolved no CTA path, no pricing or access tier and no demo reachable without login, even though Pricing and Docs links are present in the navigation. The 97% figure carries no stated benchmark, dataset or baseline, and no comparison against vector search is shown. So the score reflects a coherent, specific product thesis and an active surface — a dated Page Search API announcement and a 2026 copyright — and nothing more. The name mismatch should be resolved before this review is relied upon: the registered artifact and the reviewed artifact are not the same thing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for an active commercial surface with a specific, falsifiable retrieval thesis and published navigation to docs and pricing. Held at low confidence and flagged because the captured surface (PageIndex) is not the registered OpenKB repo, and automated checks resolved no CTA, pricing or no-login demo.",
+  "what_it_does_well": [
+    "States a specific, falsifiable thesis — page-level search returns the relevant pages in about a second so the model reads only those, not the whole document",
+    "Frames the product on traceability and precision, which is the right axis for document question answering and more auditable than opaque chunk similarity",
+    "Surface is current and maintained: a dated Page Search API announcement, a 2026 copyright, and navigation to Docs, Blog and Pricing",
+    "Separates its offerings clearly into a chat app, a developer path and the Page Search API"
+  ],
+  "what_it_fails_at": [
+    "The registered entry is the OpenKB repo but the reviewed URL is the vendor's PageIndex product site — the two are not the same artifact and the review inherits that mismatch",
+    "The 97% token-cost reduction and the \"more accurate than vector search\" claim are given with no benchmark, dataset or baseline, so neither can be assessed",
+    "Automated checks resolved no CTA, no pricing or access tier and no demo reachable without login, despite Pricing and Docs appearing in navigation",
+    "The captured page is very thin — navigation, one announcement, two calls to action and a footer — leaving little public evidence of the product's behaviour"
+  ],
+  "best_for": [
+    "Teams doing question answering over long PDFs where a traceable page-level citation matters more than raw retrieval throughput",
+    "Developers hitting token-cost ceilings on whole-document prompting who want to evaluate page-level retrieval as the fix",
+    "Buyers willing to book a demo, since that is the main evaluation path the surface offers"
+  ],
+  "not_recommended_for": [
+    "Anyone needing to self-host or inspect the retrieval pipeline — the reviewed surface markets a hosted product",
+    "Buyers who require a published, benchmarked accuracy comparison before adopting a retrieval layer",
+    "Teams expecting the open-source OpenKB knowledge base this entry is named after; that is not what the captured surface delivers"
+  ],
+  "red_flags": [
+    "A precise quantitative claim (97% token-cost reduction, more accurate than vector search) is published with no benchmark, dataset or baseline disclosed",
+    "Entry-to-surface mismatch: catalogued as the OpenKB repo, reviewed at the vendor's commercial PageIndex site — this review should not be read as an assessment of OpenKB"
+  ],
+  "compared_to": [
+    {
+      "slug": "llamaindex",
+      "verdict_diff": "LlamaIndex is an open framework you assemble and can inspect end to end; the reviewed PageIndex surface sells hosted page-level retrieval with traceable citations. LlamaIndex wins on control and transparency, PageIndex on a ready answer to the long-PDF cost problem.",
+      "preferred_for_axis": "open inspectable framework vs hosted traceable retrieval"
+    },
+    {
+      "slug": "swarmclawai-swarmvault",
+      "verdict_diff": "SwarmVault compiles a local, file-inspectable knowledge graph under MIT licensing; this surface markets a hosted document-AI API. SwarmVault for auditability and self-hosting, PageIndex for a managed path to document question answering.",
+      "preferred_for_axis": "self-hosted auditability vs managed document AI"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "The captured surface is pageindex.ai, Vectify AI's commercial document-AI product site, not the OpenKB repository this entry is registered under",
+      "source": "https://pageindex.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Markets a Page Search API that finds the pages relevant to each question in about a second so the LLM reads only those pages",
+      "source": "https://pageindex.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Claims a 97% token-cost reduction and greater accuracy and speed than vector search, with no benchmark, dataset or baseline disclosed on the page",
+      "source": "https://pageindex.ai",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Automated public-surface checks resolved no CTA, no pricing or access tier and no demo reachable without login",
+      "source": "https://pageindex.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "An agent would call the Page Search API to resolve which pages of a document answer a question, then read only those pages — reducing context cost and giving a page-level citation to carry into its answer. Access requires a key; no no-login path to the API was reachable on the captured surface.",
+    "agent_friendly_score": 6
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:12.254Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:12.254Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:12.254Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:06:12.254Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:06:12.254Z"
     }
   ],
-  "laddoo_score": 70,
-  "score": 70,
-  "tier": "STEADY",
-  "summary": "Public-surface review of VectifyAI/OpenKB.",
-  "confidence": "low",
+  "summary": "The reviewed surface is Vectify's PageIndex document-AI product, not the OpenKB repo it is registered under — a specific traceability pitch behind a marketing page with almost nothing to check.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/vectifyai-openkb.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,35 +147,32 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-4a14d22e0dd07945-github-com",
-    "base": "https://images.hlido.eu/reviews/vectifyai-openkb/run-4a14d22e0dd07945-github-com",
+    "run_id": "run-86b7f5939f443d03-pageindex-ai",
+    "base": "https://images.hlido.eu/reviews/vectifyai-openkb/run-86b7f5939f443d03-pageindex-ai",
     "files": [
-      "home.png"
+      "home.png",
+      "page_.png",
+      "page_chat.png",
+      "page_developer.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/vectifyai-openkb/run-4a14d22e0dd07945-github-com/home.png"
+      "https://images.hlido.eu/reviews/vectifyai-openkb/run-86b7f5939f443d03-pageindex-ai/home.png",
+      "https://images.hlido.eu/reviews/vectifyai-openkb/run-86b7f5939f443d03-pageindex-ai/page_.png",
+      "https://images.hlido.eu/reviews/vectifyai-openkb/run-86b7f5939f443d03-pageindex-ai/page_chat.png",
+      "https://images.hlido.eu/reviews/vectifyai-openkb/run-86b7f5939f443d03-pageindex-ai/page_developer.png"
     ],
-    "verified_at": "2026-07-31T09:31:40.016Z",
-    "verified_count": 1,
+    "verified_at": "2026-10-31T21:14:41.539Z",
+    "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
     "pricing_disclosed": {
-      "pass": false
+      "pass": false,
+      "tested_at": "2026-10-31"
     },
-    "last_verified": "2026-06-18",
+    "last_verified": "2026-10-31",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  },
-  "agent_relevance": {
-    "has_cli": true,
-    "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"pip install\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "derived_at": "2026-10-31"
   }
 }
