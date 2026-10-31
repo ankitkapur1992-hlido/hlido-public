@@ -1,43 +1,143 @@
 {
+  "schema_version": "2.0",
   "slug": "swarmclawai-swarmvault",
   "name": "swarmclawai/swarmvault",
-  "agent_url": "https://github.com/swarmclawai/swarmvault",
+  "agent_url": "https://www.swarmvault.ai",
   "category": "Coding",
-  "run_id": "run-swarmclawai-swarmvault-c46twkns",
-  "run_at": "2026-06-17T18:02:18.260Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-swarmclawai-swarmvault-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-a163a6490d7a86ce-www-swarmvault-ai",
+  "engine_run_at": "2026-10-31T04:31:15.248Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A local-first knowledge-graph compiler for agent memory that insists its dashboard reads the same files the CLI writes — a small honesty worth more than the Karpathy name-drop.",
+    "body": "SwarmVault builds a persistent knowledge artifact rather than an ephemeral retrieval index. The workflow is explicit in four steps: define a schema (swarmvault.schema.md) so naming, categories and grounding expectations are fixed up front; ingest books, datasets, decks, screenshots, files or URLs, with immutable source manifests carrying content hashes; compile locally into a markdown wiki plus graph state, optionally calling a model provider for richer synthesis; then compound by querying, saving useful answers and exposing the vault to agents over MCP. Everything starts as inspectable local files — raw sources, the wiki, graph.json, report.json, approvals, candidates — and it is MIT-licensed, self-hosted, installed with a single npm command. The detail that most increases our confidence is a claim about the product's own honesty: the installed viewer is described as reading the same local files the CLI writes rather than being a mock dashboard, and the screenshot is stated to come from the installed package in a real browser rather than a design mock. Teams rarely volunteer that distinction unless it is true, and it is precisely the distinction that separates a working knowledge tool from a demo. The limits are real. This is a surface review: no vault was built, so compile quality, graph usefulness and query accuracy are untested, and the \"not a mock dashboard\" claim is itself unverified by Hlido. Our automated checks found no pricing or access tier resolved (consistent with MIT self-hosting, but there is no support signal) and no no-login CTA path. The positioning also leans hard on Andrej Karpathy's LLM Wiki pattern and on being an Obsidian alternative, which borrows credibility the captured surface does not independently establish.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for a clearly specified local-first pipeline with immutable hashed source manifests, inspectable artifacts, MIT licensing and MCP exposure for agent memory. Not higher because nothing was compiled or queried in this review, and the strongest trust claim — that the viewer reads real CLI output rather than a mock — is unverified.",
+  "what_it_does_well": [
+    "Four explicit stages (schema, ingest, compile, compound) with immutable source manifests carrying content hashes, so provenance survives into the graph",
+    "Everything is local inspectable files — raw sources, markdown wiki, graph.json, report.json, approvals, candidates — rather than an opaque index",
+    "Exposes the compiled vault to agents over MCP, making it usable as durable memory for Claude Code, Codex or similar clients",
+    "States that the installed viewer reads the same files the CLI writes and that its screenshot is from the real installed package, not a design mock",
+    "MIT licensed and self-hosted, installable with a single npm command and a quickstart that points at an existing repo or docs folder"
+  ],
+  "what_it_fails_at": [
+    "No vault was built in this review, so compile quality, graph structure and query accuracy are entirely untested",
+    "The honesty claim about the viewer reading real CLI artifacts is the trust centrepiece and is unverified by Hlido",
+    "Automated checks resolved no pricing or access tier and no login-free CTA — expected for MIT self-hosting, but it leaves no commercial support signal",
+    "Positioning borrows heavily from Andrej Karpathy's LLM Wiki pattern and from Obsidian comparison, credibility the captured surface does not establish on its own"
+  ],
+  "best_for": [
+    "Developers who want durable, inspectable agent memory in plain files beside their code rather than a hosted vector store",
+    "Teams compiling a repo or document corpus into a navigable knowledge graph they can review and version with git",
+    "Claude Code or Codex users looking for a self-hosted MCP-exposed knowledge base under their own control"
+  ],
+  "not_recommended_for": [
+    "Teams wanting managed, hosted RAG with an SLA and no local compilation step",
+    "Non-technical users — the entry point is a CLI and a schema file, not an application",
+    "Anyone who needs retrieval quality guarantees before adopting; none are demonstrated on the public surface"
+  ],
+  "red_flags": [
+    "The marketing leans on a named researcher's pattern and on being an Obsidian alternative, which transfers authority the captured surface has not earned independently"
+  ],
+  "compared_to": [
+    {
+      "slug": "mem0ai-mem0",
+      "verdict_diff": "Mem0 is a memory layer optimised for recall inside an agent loop; SwarmVault compiles a durable, inspectable wiki and graph you can read and version. Mem0 wins for low-friction agent memory, SwarmVault when the knowledge artifact itself has to be reviewable.",
+      "preferred_for_axis": "runtime recall vs durable inspectable artifact"
+    },
+    {
+      "slug": "vectifyai-openkb",
+      "verdict_diff": "Both target LLM-era knowledge bases; OpenKB's public surface foregrounds a hosted document-AI product, while SwarmVault is MIT, local-first and file-inspectable end to end. Choose SwarmVault when self-hosting and auditability are the requirement.",
+      "preferred_for_axis": "local-first auditability vs hosted document AI"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Self-hosted, open source, MIT licensed, installed via npm install -g @swarmvaultai/cli with a quickstart against a repo or docs folder",
+      "source": "https://www.swarmvault.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Four-stage workflow — schema, ingest with immutable content-hashed source manifests, local compile into wiki plus knowledge graph, then compound with queries and MCP exposure",
+      "source": "https://www.swarmvault.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "The installed viewer reads the same local files the CLI writes (graph.json, report.json, approvals, candidates) and the screenshot is from the installed package rather than a mock (vendor-stated, not verified by Hlido)",
+      "source": "https://www.swarmvault.ai",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Built on the LLM Wiki pattern described by Andrej Karpathy and positioned as an Obsidian alternative (vendor positioning, not an endorsement)",
+      "source": "https://www.swarmvault.ai",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "The compiled vault is exposed to agents over MCP, so Claude Code, Codex or any MCP-capable client can query the knowledge graph and saved answers as durable memory. Humans and scripts drive compilation through the swarmvault CLI (quickstart, next, query, doctor, graph serve).",
+    "agent_friendly_score": 8
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:15.248Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:15.248Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:15.248Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:31:15.248Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:31:15.248Z"
     }
   ],
-  "laddoo_score": 75,
-  "score": 75,
-  "tier": "STEADY",
-  "summary": "Public-surface review of swarmclawai/swarmvault.",
-  "confidence": "low",
+  "summary": "A local-first knowledge-graph compiler for agent memory that insists its dashboard reads the same files the CLI writes — a small honesty worth more than the Karpathy name-drop.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/swarmclawai-swarmvault.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,8 +147,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-9dfa5b2d2c2c497f-www-swarmvault-ai",
-    "base": "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-9dfa5b2d2c2c497f-www-swarmvault-ai",
+    "run_id": "run-a163a6490d7a86ce-www-swarmvault-ai",
+    "base": "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-a163a6490d7a86ce-www-swarmvault-ai",
     "files": [
       "home.png",
       "page_docs.png",
@@ -56,34 +156,27 @@
       "page_docs_getting-started_examples.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-9dfa5b2d2c2c497f-www-swarmvault-ai/home.png",
-      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-9dfa5b2d2c2c497f-www-swarmvault-ai/page_docs.png",
-      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-9dfa5b2d2c2c497f-www-swarmvault-ai/page_docs_getting-started_installation.png",
-      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-9dfa5b2d2c2c497f-www-swarmvault-ai/page_docs_getting-started_examples.png"
+      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-a163a6490d7a86ce-www-swarmvault-ai/home.png",
+      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-a163a6490d7a86ce-www-swarmvault-ai/page_docs.png",
+      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-a163a6490d7a86ce-www-swarmvault-ai/page_docs_getting-started_installation.png",
+      "https://images.hlido.eu/reviews/swarmclawai-swarmvault/run-a163a6490d7a86ce-www-swarmvault-ai/page_docs_getting-started_examples.png"
     ],
-    "verified_at": "2026-10-30T21:19:44.094Z",
+    "verified_at": "2026-10-31T21:14:34.647Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
-    "pricing_disclosed": {
-      "pass": false
-    },
-    "last_verified": "2026-06-17",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  },
-  "agent_relevance": {
-    "has_mcp": true,
-    "has_cli": true,
-    "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"cli\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"npm install\" in preanalysis.raw_markdown_preview"
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": false,
+      "tested_at": "2026-10-31"
+    },
+    "last_verified": "2026-10-31",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-31"
   }
 }
