@@ -1,43 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "trycua-cua",
   "name": "trycua/cua",
-  "agent_url": "https://github.com/trycua/cua",
+  "agent_url": "https://cua.ai",
   "category": "Infrastructure",
-  "run_id": "run-trycua-cua-4xes6jkz",
-  "run_at": "2026-06-18T06:01:45.907Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-trycua-cua-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-39c26c5088feddf4-cua-ai",
+  "engine_run_at": "2026-10-31T08:05:51.258Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "Shared, agent-ready desktops on hardware you already own — the multi-cursor streaming protocol is the real idea, and the MIT driver works without any of it.",
+    "body": "Cua's pitch is a \"Space\": a full desktop that you and your agents occupy at the same time, running on your Mac, on a box under your desk, or in your own cloud. The interesting engineering is RCDP, Cua's remote desktop protocol, which separates input from the picture so each participant — human or agent — gets its own cursor on one desktop. That detail matters, because the usual computer-use setup forces a handover: the agent takes the mouse and you watch. Here you can step in to make a judgement call and hand control back without tearing down the session. Teleport is the second idea: it packs an app's live session (tabs, profile, sign-ins) into a bundle, checks its SHA-256 before opening, requires Touch ID for sensitive items, and on Space images seals the bundle to that Space's own key so the relay cannot read it. Spaces also boot with permissions already granted and tools installed, which removes the permission dialog that quietly ends most autonomous desktop runs. The surface names real users — Meta, Nous Research, Qwen Code, Open Interpreter, Snorkel AI — and the Cua Driver underneath is MIT-licensed and usable standalone, driving native apps on macOS, Windows and Linux without taking over your cursor. Honest limits: Hlido read the marketing and docs surface only, not a running Space. Our automated pricing check did not resolve a priced tier — the page leads with a $0 free plan and \"no account needed to start\", with paid billing presented behind a period toggle rather than a clear published table. Linux desktop support is described as available while platform work continues. And the model depends on you supplying the machines, so \"infinite desktops\" is bounded by hardware you own.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) for a technically distinctive, partly MIT-licensed computer-use stack with named production users, a working free entry path and an unusually careful security story around session transfer. Not VITAL because Hlido tested only the public surface, paid pricing is not plainly published, and Linux support is still settling.",
+  "what_it_does_well": [
+    "RCDP separates input from the rendered picture, so a human and several agents each hold their own cursor on one shared desktop instead of taking turns",
+    "Teleport moves a live app session into a Space with SHA-256 verification, Touch ID for sensitive items, and end-to-end sealing to the Space's key so the relay cannot read the bundle",
+    "Spaces start with permissions granted and tools installed — the permission dialog that stalls most autonomous desktop runs is removed by design",
+    "The Cua Driver is MIT-licensed and usable on its own, driving native macOS, Windows and Linux apps without commandeering the local cursor or keyboard",
+    "Runs on hardware you control (local Mac via Lume, your own boxes, or your own cloud) and starts with no account required"
+  ],
+  "what_it_fails_at": [
+    "Our automated pricing check did not resolve a published priced tier — the free $0 plan is clear, paid tiers sit behind a billing-period toggle rather than a plain table",
+    "Capacity is bounded by machines you own and connect; \"as many desktops as your computers can hold\" is an honest phrase but not elastic cloud capacity",
+    "Linux desktop support is presented as working while platform coverage is still being completed",
+    "Hlido assessed the public surface and docs only — no Space was launched, so streaming latency, reconnect behaviour and agent reliability are unverified"
+  ],
+  "best_for": [
+    "Teams building or evaluating computer-use agents who want a sandbox desktop on infrastructure they control rather than a vendor's cloud",
+    "Researchers running agent benchmarks who need a real OS surface with native apps rather than a browser-only environment",
+    "Developers who want the MIT Cua Driver alone, to let an agent drive desktop apps without adopting the Spaces product"
+  ],
+  "not_recommended_for": [
+    "Buyers who need a published, predictable price list before procurement will sign",
+    "Teams with no spare machines and no cloud account, who expect elastic desktop capacity supplied by the vendor",
+    "Anyone needing a hardened, audited multi-tenant isolation guarantee today — the security design reads well but is undemonstrated here"
+  ],
+  "red_flags": [
+    "The security model for Teleport and Space sealing is described in detail on the vendor's own surface; none of it was independently verified by Hlido, and it is the part a buyer would most want audited"
+  ],
+  "compared_to": [
+    {
+      "slug": "browser-use",
+      "verdict_diff": "browser-use drives a browser and is far quicker to adopt for web tasks; Cua gives an agent a whole desktop with native apps and multi-cursor sharing. Pick browser-use when the job is on the web, Cua when it is not.",
+      "preferred_for_axis": "surface breadth (full desktop vs browser)"
+    },
+    {
+      "slug": "e2b-dev-e2b",
+      "verdict_diff": "E2B offers cloud sandboxes provisioned for you; Cua expects you to supply the machines and gives you a streamable, shareable desktop in return. E2B wins on zero-infrastructure start, Cua on control and native-app reach.",
+      "preferred_for_axis": "hosted convenience vs self-owned control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "RCDP streams each Space and handles input separately from the picture, so the user and every agent get their own cursor on the same desktop",
+      "source": "https://cua.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Teleport verifies a session bundle's SHA-256 before opening, gates sensitive items behind Touch ID, and seals bundles end-to-end to the Space's own key on Space images",
+      "source": "https://cua.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "The Cua Driver is MIT licensed, works on macOS, Windows and Linux, and is usable without Spaces",
+      "source": "https://cua.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Named in projects from Meta, Nous Research, Qwen Code, Factory, Open Interpreter and Snorkel AI (vendor-stated, not independently confirmed)",
+      "source": "https://cua.ai",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "A $0 free plan requiring no account is offered; a published priced tier was not resolved by the automated pricing check",
+      "source": "https://cua.ai",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "An agent runs inside a Space as a first-class participant with its own cursor, using the open-source Cua Driver to operate native desktop apps on macOS, Windows or Linux. Coding agents such as Claude Code and Codex pick up a provider connected once in Connections and work in every Space with no in-Space setup.",
+    "agent_friendly_score": 9
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:05:51.258Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:05:51.258Z"
     },
     {
       "id": "cta_present",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:05:51.258Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:05:51.258Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:05:51.258Z"
     }
   ],
-  "laddoo_score": 85,
-  "score": 85,
-  "tier": "STEADY",
-  "summary": "Public-surface review of trycua/cua.",
-  "confidence": "medium",
+  "summary": "Shared, agent-ready desktops on hardware you already own — the multi-cursor streaming protocol is the real idea, and the MIT driver works without any of it.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/trycua-cua.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,8 +153,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-5decc62ed1f3f13d-cua-ai",
-    "base": "https://images.hlido.eu/reviews/trycua-cua/run-5decc62ed1f3f13d-cua-ai",
+    "run_id": "run-39c26c5088feddf4-cua-ai",
+    "base": "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai",
     "files": [
       "home.png",
       "page_docs_spaces.png",
@@ -56,22 +162,28 @@
       "page_docs_spaces_guides_stream-a-desktop.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/trycua-cua/run-5decc62ed1f3f13d-cua-ai/home.png",
-      "https://images.hlido.eu/reviews/trycua-cua/run-5decc62ed1f3f13d-cua-ai/page_docs_spaces.png",
-      "https://images.hlido.eu/reviews/trycua-cua/run-5decc62ed1f3f13d-cua-ai/page_pricing.png",
-      "https://images.hlido.eu/reviews/trycua-cua/run-5decc62ed1f3f13d-cua-ai/page_docs_spaces_guides_stream-a-desktop.png"
+      "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/home.png",
+      "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/page_docs_spaces.png",
+      "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/page_pricing.png",
+      "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/page_docs_spaces_guides_stream-a-desktop.png"
     ],
-    "verified_at": "2026-10-30T21:19:48.455Z",
+    "verified_at": "2026-10-31T21:14:38.819Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "freemium"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
-      "pass": false
+      "pass": false,
+      "tested_at": "2026-10-31"
     },
-    "last_verified": "2026-06-18",
+    "last_verified": "2026-10-31",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
+    "derived_at": "2026-10-31"
   }
 }
