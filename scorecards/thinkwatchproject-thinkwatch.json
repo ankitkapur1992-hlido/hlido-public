@@ -1,43 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "thinkwatchproject-thinkwatch",
   "name": "ThinkWatchProject/ThinkWatch",
-  "agent_url": "https://github.com/ThinkWatchProject/ThinkWatch",
+  "agent_url": "https://thinkwat.ch",
   "category": "Infrastructure",
-  "run_id": "run-thinkwatchproject-thinkwatch-uhvinsh5",
-  "run_at": "2026-06-18T00:01:28.608Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-thinkwatchproject-thinkwatch-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-11e8f6b3f2d61944-thinkwat-ch",
+  "engine_run_at": "2026-10-31T04:31:27.561Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 75,
+  "tier": "STEADY",
+  "laddoo_score": 75,
+  "confidence": "low-medium",
+  "hlido_opinion": {
+    "headline": "A self-hosted gateway that meters and inspects both model calls and MCP tool calls — and is unusually careful about saying when a cost figure is an estimate.",
+    "body": "ThinkWatch sits between AI clients and upstream providers and does the unglamorous governance work: routing with failover, per-model token pricing, secret redaction before a request leaves, flagging of high-risk tool calls, and a per-request trace showing the matched rule, each upstream attempt and the cost. It ships in two shapes — Enterprise, a self-hosted server for organisations, and Lite, a desktop gateway for an individual developer on macOS, Windows or Linux — and lists the clients teams already use: Claude Code, Codex, Cursor, Continue, Cline, Zed, opencode and the OpenAI, Anthropic and Gemini SDKs. Two things stand out as genuinely well-judged. First, it treats MCP tool calls as first-class traffic rather than an afterthought, which is where the real risk now sits: the Lite description says credentials can be replaced before a request leaves so a relay never holds them, that dangerous tool calls slipped into an answer can be cut off before the client runs them, and that MCP servers, skills and hooks are scanned. Second, the cost accounting is honest about its own limits — usage without a known price is reported as \"unknown\" and estimated amounts are marked as estimated, which is rarer than it should be in a category that likes confident dashboards. Pricing and a changelog are published, and the surface carries concrete version numbers (Enterprise 3.10.0, Lite 2026.10.34), both signs of a maintained product. The limits are about evidence, not design. Hlido read the public surface only: no gateway was deployed, no request was routed, and no redaction or tool-blocking was exercised. The sample trace on the page is explicitly labelled with bracketed illustrative values, so it demonstrates the intended shape rather than real output. Our automated check also found no demo reachable without login, so every security and metering claim here is the vendor's own account.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for a maintained, versioned, published-pricing gateway that covers MCP tool calls as well as model calls and is explicit about when a cost is unknown or estimated. Not higher because nothing was deployed or exercised — the redaction, tool-blocking and metering claims are entirely vendor-stated on the surface Hlido read.",
+  "what_it_does_well": [
+    "Treats MCP tool calls as first-class metered, inspectable traffic rather than only proxying model completions",
+    "States cost honestly — usage without a known price is reported as unknown and estimated amounts are marked, instead of presenting a confident single number",
+    "Per-request trace names the matched rule, every upstream hop including retries and failovers, redactions applied and flagged tool calls, with replay against another upstream",
+    "Two deployment shapes from one product line: self-hosted Enterprise for organisations and a local Lite gateway for a single developer on macOS, Windows or Linux",
+    "Published pricing, a public changelog and concrete released versions (Enterprise 3.10.0, Lite 2026.10.34) — ordinary maintenance signals that many tools in this category lack"
+  ],
+  "what_it_fails_at": [
+    "No demo or trial reachable without login on the captured surface, so none of the gateway behaviour can be checked before committing",
+    "The sample request trace is explicitly illustrative with bracketed placeholder values — it shows intent, not real output",
+    "Security claims that would matter most to a buyer (credential replacement so a relay never holds a key, cutting off dangerous tool calls, scanning MCP servers, skills and hooks) are unverified by Hlido",
+    "Self-hosting is the primary model for Enterprise, so the operational burden of running and upgrading the gateway is yours"
+  ],
+  "best_for": [
+    "Organisations that must audit, meter and attribute AI spend across several providers from one self-hosted control point",
+    "Security-conscious teams whose developers run Claude Code, Codex or Cursor against MCP servers and want tool calls inspected and redacted centrally",
+    "Individual developers who want local routing and cost visibility across providers without deploying a server, via Lite"
+  ],
+  "not_recommended_for": [
+    "Teams who want a fully managed SaaS gateway with no infrastructure to operate",
+    "Buyers who will not adopt a governance layer without first exercising it — there is no no-login demo to evaluate",
+    "Single-provider shops with no multi-model routing, MCP exposure or chargeback requirement"
+  ],
+  "red_flags": [
+    "The strongest selling points are security behaviours (credential substitution, blocking injected tool calls, scanning skills and hooks) presented only as vendor claims on a page with no reachable demo — exactly the claims that should be demonstrated, not asserted"
+  ],
+  "compared_to": [
+    {
+      "slug": "berriai-litellm",
+      "verdict_diff": "LiteLLM is the established open-source proxy with very wide provider coverage; ThinkWatch leans on governance — MCP tool-call inspection, redaction and honest cost states. Choose LiteLLM for breadth and community, ThinkWatch when the audit and tool-call-risk story is the requirement.",
+      "preferred_for_axis": "provider breadth vs governance and tool-call inspection"
+    },
+    {
+      "slug": "portkey-ai-gateway",
+      "verdict_diff": "Portkey offers a mature hosted gateway with observability out of the box; ThinkWatch is self-hosted first and extends inspection to MCP servers, skills and hooks. Portkey wins on zero-ops, ThinkWatch on keeping traffic and keys inside your own perimeter.",
+      "preferred_for_axis": "hosted convenience vs self-hosted control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Routes, inspects and meters both model requests and MCP tool calls, shipping as a self-hosted Enterprise server and a desktop Lite gateway",
+      "source": "https://thinkwat.ch",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Usage without a known price is reported as unknown and estimated amounts are marked as estimates",
+      "source": "https://thinkwat.ch",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Lists compatibility with Claude Code, Codex, Cursor, Continue, Cline, Zed, opencode and the OpenAI, Anthropic and Gemini SDKs",
+      "source": "https://thinkwat.ch",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Pricing and changelog pages are published, with released versions Enterprise 3.10.0 and Lite 2026.10.34 named on the page",
+      "source": "https://thinkwat.ch",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Credential replacement before egress, cut-off of dangerous tool calls, and scanning of MCP servers, skills and hooks (vendor-stated; no demo reachable without login, not verified by Hlido)",
+      "source": "https://thinkwat.ch",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "An agent client is pointed once at the gateway's OpenAI-compatible endpoint (for example /v1/chat/completions with a tw- prefixed key) and thereafter upstreams and models are switched in the gateway with no client reconfiguration. MCP tool calls made by that agent are routed, traced, redacted and risk-flagged through the same path.",
+    "agent_friendly_score": 8
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:27.561Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:27.561Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:31:27.561Z"
     },
     {
       "id": "pricing_or_access",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:31:27.561Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:31:27.561Z"
     }
   ],
-  "laddoo_score": 75,
-  "score": 75,
-  "tier": "STEADY",
-  "summary": "Public-surface review of ThinkWatchProject/ThinkWatch.",
-  "confidence": "low",
+  "summary": "A self-hosted gateway that meters and inspects both model calls and MCP tool calls — and is unusually careful about saying when a cost figure is an estimate.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/thinkwatchproject-thinkwatch.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,8 +153,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-d20a8eddfbff6d91-thinkwat-ch",
-    "base": "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-d20a8eddfbff6d91-thinkwat-ch",
+    "run_id": "run-11e8f6b3f2d61944-thinkwat-ch",
+    "base": "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-11e8f6b3f2d61944-thinkwat-ch",
     "files": [
       "home.png",
       "page_docs.png",
@@ -56,31 +162,26 @@
       "page_docs_core_server-deployment.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-d20a8eddfbff6d91-thinkwat-ch/home.png",
-      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-d20a8eddfbff6d91-thinkwat-ch/page_docs.png",
-      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-d20a8eddfbff6d91-thinkwat-ch/page_pricing.png",
-      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-d20a8eddfbff6d91-thinkwat-ch/page_docs_core_server-deployment.png"
+      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-11e8f6b3f2d61944-thinkwat-ch/home.png",
+      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-11e8f6b3f2d61944-thinkwat-ch/page_docs.png",
+      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-11e8f6b3f2d61944-thinkwat-ch/page_pricing.png",
+      "https://images.hlido.eu/reviews/thinkwatchproject-thinkwatch/run-11e8f6b3f2d61944-thinkwat-ch/page_docs_core_server-deployment.png"
     ],
-    "verified_at": "2026-10-30T21:19:46.429Z",
+    "verified_at": "2026-10-31T21:14:36.693Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
-    "pricing_disclosed": {
-      "pass": true
-    },
-    "last_verified": "2026-06-18",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  },
-  "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
+    "model": [
+      "usage-based"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "pricing_disclosed": {
+      "pass": true,
+      "tested_at": "2026-10-31"
+    },
+    "last_verified": "2026-10-31",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-31"
   }
 }
