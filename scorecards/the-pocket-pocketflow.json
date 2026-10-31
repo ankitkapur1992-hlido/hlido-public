@@ -1,43 +1,141 @@
 {
+  "schema_version": "2.0",
   "slug": "the-pocket-pocketflow",
   "name": "The-Pocket/PocketFlow",
-  "agent_url": "https://github.com/The-Pocket/PocketFlow",
+  "agent_url": "https://the-pocket.github.io/PocketFlow/",
   "category": "AI Agent",
-  "run_id": "run-the-pocket-pocketflow-1izuu0tw",
-  "run_at": "2026-06-18T12:00:36.557Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-the-pocket-pocketflow-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-b07874ae77c3b6c1-the-pocket-github-io",
+  "engine_run_at": "2026-10-31T08:06:00.548Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 85,
+  "tier": "STEADY",
+  "laddoo_score": 85,
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A 100-line, zero-dependency graph abstraction for LLM apps that refuses to ship vendor wrappers — the restraint is the product.",
+    "body": "Pocket Flow is a deliberate rejection of the heavyweight LLM framework. The whole core is a graph plus a shared store: Nodes do single tasks, Flows connect them through labelled Actions, and a Shared Store carries state between nodes, with batch, async and parallel variants for data-heavy or I/O-bound work. On top of that it documents the patterns people actually want — Agent, Workflow, RAG, Map-Reduce, Structured Output and multi-agent coordination — without adding code to provide them. The most telling decision is what is missing: there are no built-in utilities for LLM calls, web search, chunking, embeddings, vector stores or TTS. The docs give examples and tell you to implement your own, and the stated reasoning is sound rather than lazy — vendor APIs churn, hardcoding them creates maintenance debt, and leaving them out keeps you free to switch providers, run locally, or do your own prompt caching, batching and streaming. For a project whose pitch is \"let agents build agents\", that minimalism is also a practical bet: a 100-line abstraction with zero dependencies is small enough for a coding agent to hold in context and extend correctly, which is a real advantage over frameworks an agent can only partially see. The honest limits are the flip side of the same choice. Pocket Flow gives you a shape, not a batteries-included platform, so every integration is yours to write and maintain. The surface Hlido read is a Just-the-Docs site with no pricing or access tier (correct for an open-source library, but it means our automated pricing check finds nothing) and no live demo — the evidence is the documentation and the repo, not a runnable example in the browser.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) for an unusually clear, well-documented and genuinely minimal abstraction whose omissions are argued rather than accidental, and which is small enough for coding agents to extend. Not VITAL because it is a pattern library rather than a working system — every utility is yours to build, and nothing was executed in this review.",
+  "what_it_does_well": [
+    "A genuinely small core — graph plus shared store in about 100 lines, with zero dependencies and no vendor lock-in",
+    "Documents the patterns people actually reach for (Agent, Workflow, RAG, Map-Reduce, Structured Output, multi-agent) rather than hiding them behind abstractions",
+    "Argues its exclusions explicitly: vendor APIs churn, so wrappers are left to you, keeping provider switching, local models, caching and batching in your hands",
+    "Batch, async and parallel node/flow variants cover data-intensive and I/O-bound work without a separate execution engine",
+    "Small enough to fit in a coding agent's context, which makes \"agents help build the app\" a practical claim rather than a slogan"
+  ],
+  "what_it_fails_at": [
+    "No built-in utilities at all — LLM wrappers, search, chunking, embeddings, vector stores and TTS are examples you must implement and then maintain",
+    "No runnable demo on the captured surface; the evidence is documentation, so correctness and ergonomics are unverified here",
+    "No pricing or access tier resolved by the automated check — expected for an open-source library, but it means there is no commercial support signal",
+    "A minimal core pushes real complexity into your own glue code, where it is no longer the framework's problem and no longer documented"
+  ],
+  "best_for": [
+    "Engineers who have outgrown a large framework and want to own their LLM orchestration without rebuilding graph execution",
+    "Teams doing agentic coding, where a small readable core lets the coding agent extend the system reliably",
+    "Projects that must stay provider-neutral or run local models, and cannot accept vendor-specific wrappers in the framework layer"
+  ],
+  "not_recommended_for": [
+    "Teams wanting a batteries-included platform with supported connectors, hosted execution and a vendor to call",
+    "Beginners who need working RAG or search out of the box rather than an example to implement",
+    "Organisations requiring commercial support or an SLA on their orchestration layer"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain supplies hundreds of integrations and a large surface to learn; Pocket Flow supplies a graph and tells you to write the integrations. LangChain wins when you want the connector today, Pocket Flow when you want to understand and own every line.",
+      "preferred_for_axis": "batteries-included breadth vs minimal ownable core"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI gives opinionated multi-agent roles and task delegation ready to run; Pocket Flow documents multi-agent as a pattern you assemble yourself. CrewAI is faster to a demo, Pocket Flow is easier to reason about in production.",
+      "preferred_for_axis": "opinionated agent scaffolding vs explicit control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "The core is a graph plus shared store in roughly 100 lines, with zero dependencies and no vendor lock-in",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Node, Flow, Shared Store, plus batch, async and parallel variants are the documented core abstractions",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "No built-in utilities are provided — LLM wrappers, web search, chunking, embeddings, vector databases and text-to-speech are examples to implement yourself, on a stated anti-vendor-lock-in rationale",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Agent, Workflow, RAG, Map-Reduce, Structured Output and multi-agent are documented as implementable design patterns",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Pocket Flow is a library an agent-building team imports, not a service an agent calls. Its relevance to agents is the reverse direction: the core is small enough for a coding agent to read in full and extend, and the project explicitly positions \"Agentic Coding\" — humans design the flow, agents write the nodes — as its intended workflow.",
+    "agent_friendly_score": 7
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:00.548Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:00.548Z"
     },
     {
       "id": "cta_present",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T08:06:00.548Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:06:00.548Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T08:06:00.548Z"
     }
   ],
-  "laddoo_score": 85,
-  "score": 85,
-  "tier": "STEADY",
-  "summary": "Public-surface review of The-Pocket/PocketFlow.",
-  "confidence": "medium",
+  "summary": "A 100-line, zero-dependency graph abstraction for LLM apps that refuses to ship vendor wrappers — the restraint is the product.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/the-pocket-pocketflow.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,8 +145,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-42791d0f6c1501fa-the-pocket-github-io",
-    "base": "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-42791d0f6c1501fa-the-pocket-github-io",
+    "run_id": "run-b07874ae77c3b6c1-the-pocket-github-io",
+    "base": "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io",
     "files": [
       "home.png",
       "pagecore_abstraction_.png",
@@ -56,22 +154,27 @@
       "pagecore_abstraction_flow_html.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-42791d0f6c1501fa-the-pocket-github-io/home.png",
-      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-42791d0f6c1501fa-the-pocket-github-io/pagecore_abstraction_.png",
-      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-42791d0f6c1501fa-the-pocket-github-io/pagecore_abstraction_node_html.png",
-      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-42791d0f6c1501fa-the-pocket-github-io/pagecore_abstraction_flow_html.png"
+      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/home.png",
+      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/pagecore_abstraction_.png",
+      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/pagecore_abstraction_node_html.png",
+      "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/pagecore_abstraction_flow_html.png"
     ],
-    "verified_at": "2026-10-30T21:19:50.678Z",
+    "verified_at": "2026-10-31T21:14:40.249Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
+    ],
+    "free_tier": true,
     "pricing_disclosed": {
-      "pass": false
+      "pass": false,
+      "tested_at": "2026-10-31"
     },
-    "last_verified": "2026-06-18",
+    "last_verified": "2026-10-31",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
+    "derived_at": "2026-10-31"
   }
 }
