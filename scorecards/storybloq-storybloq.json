@@ -1,43 +1,149 @@
 {
+  "schema_version": "2.0",
   "slug": "storybloq-storybloq",
   "name": "Storybloq/storybloq",
-  "agent_url": "https://github.com/Storybloq/storybloq",
+  "agent_url": "https://www.storybloq.com",
   "category": "Coding",
-  "run_id": "run-storybloq-storybloq-epiafypm",
-  "run_at": "2026-06-17T18:00:35.832Z",
-  "source": "hlido-drain-worker",
+  "run_id": "run-storybloq-storybloq-v2-editor-20261031T212153",
+  "run_at": "2026-10-31T21:21:53.854Z",
+  "engine_run_id": "run-78e6f9522e83b0ab-www-storybloq-com",
+  "engine_run_at": "2026-10-31T04:30:50.901Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 70,
+  "tier": "STEADY",
+  "laddoo_score": 70,
+  "confidence": "low",
+  "hlido_opinion": {
+    "headline": "A local harness that keeps Claude Code and Codex context in a git-tracked .story/ directory — the ownership model is the pitch, and it is a credible one.",
+    "body": "Storybloq addresses the failure every heavy coding-agent user knows: the next session starts cold. Its answer is to write the project's working memory to plain files in a .story/ directory beside the source — tickets, issues, lessons and handovers — tracked by git, readable and editable by a human or any AI. A handover is given real structure: what changed and which checks ran, why it changed and the reasoning behind the decisions, and what comes next including open questions and blockers. Around that sit a CLI, an MCP server the vendor says exposes 53 tools callable directly by Claude Code and Codex without subprocess spawning, a /story skill, and a Mac app. The ownership claim is the part that matters commercially: the CLI and MCP server run locally, so there is no Storybloq cloud subscription, no hosted-MCP quota and no network round trip to read your own project record. It also handles multi-repo work, showing how stories connect across web, API and mobile while each repo keeps its own history, and a \"Duet\" mode coordinates a manager agent that scopes work and checks evidence against workers. Confidence here is low, and deliberately so. Hlido read the marketing surface only; no install was performed, so the 53-tool MCP server, the handover quality and the multi-repo view are all unverified. Our automated checks were unusually weak on this page: no CTA was resolved despite a visible install command, no pricing or access tier was found, and no demo was reachable — the page leads with an npm command rather than a conventional signup path, which is honest for a local tool but leaves a buyer with little to evaluate.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-10-31",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) for a well-specified local-first harness whose core idea — agent context as git-tracked plain files you own — is sound and clearly explained, with a documented CLI, MCP server and Mac app. Held at low confidence because nothing was installed and the automated surface checks resolved no CTA, pricing or demo.",
+  "what_it_does_well": [
+    "Keeps agent working memory as plain files in .story/ beside the source, tracked by git and editable by both humans and agents",
+    "Gives handovers real structure — what changed and checks run, why it changed and the reasoning, what comes next with open questions and blockers",
+    "Runs the CLI and MCP server locally, so there is no cloud subscription, no hosted-MCP quota and no network round trip to read your own project record",
+    "Covers multi-repo work, connecting stories across web, API and mobile while each repo keeps its own history",
+    "Offers a manager-and-worker Duet mode where the manager scopes work and checks evidence, with assignments and approvals stored with the project"
+  ],
+  "what_it_fails_at": [
+    "The vendor's 53-tool MCP server, handover quality and multi-repo view are all unverified — nothing was installed in this review",
+    "Automated checks resolved no CTA, no pricing or access tier and no reachable demo, so a buyer has very little to evaluate before installing",
+    "Scoped to Claude Code and Codex, so value depends on already standardising on those harnesses",
+    "Adopting it means adding a convention (.story/ plus a schema of tickets, issues, lessons, handovers) that the whole team has to maintain for the record to stay honest"
+  ],
+  "best_for": [
+    "Heavy Claude Code or Codex users who repeatedly lose context between sessions and want the record in their own repo",
+    "Teams coordinating several coding agents across multiple repositories who need assignments and approvals stored with the code",
+    "Engineers who refuse hosted agent-memory services and want plain, inspectable, git-versioned files"
+  ],
+  "not_recommended_for": [
+    "Occasional coding-agent users for whom a per-project file convention is more overhead than the problem it solves",
+    "Teams on other harnesses, where the Claude Code and Codex focus leaves most of the value unreachable",
+    "Buyers who need published pricing and a working demo before installing anything"
+  ],
+  "red_flags": [
+    "A specific, impressive capability number — 53 MCP tools — is asserted on a page with no demo and no documented tool list reachable without installing, so the claim cannot be checked before adoption"
+  ],
+  "compared_to": [
+    {
+      "slug": "mem0ai-mem0",
+      "verdict_diff": "Mem0 is a general memory layer an agent calls at runtime; Storybloq is a project-scoped workflow record in git with tickets, handovers and approvals. Mem0 for recall across sessions, Storybloq when the team also needs to review and direct the work.",
+      "preferred_for_axis": "generic memory recall vs project workflow record"
+    },
+    {
+      "slug": "swarmclawai-swarmvault",
+      "verdict_diff": "Both keep agent context in local inspectable files; SwarmVault compiles a knowledge graph from sources, Storybloq tracks the project's live workflow — stories, issues, handovers. Pick by whether you need knowledge or coordination.",
+      "preferred_for_axis": "knowledge compilation vs work coordination"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Stories, issues, lessons and handovers live as plain files in a .story/ directory beside the source, versioned with git and editable by hand",
+      "source": "https://www.storybloq.com",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "The CLI and MCP server run locally, with no Storybloq cloud subscription, hosted-MCP quota or network round trip required to access the project record",
+      "source": "https://www.storybloq.com",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Installed via npm install -g @storybloq/storybloq@latest with storybloq setup --client all, positioned as a harness for Claude Code and Codex",
+      "source": "https://www.storybloq.com",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "An MCP server exposing 53 tools callable directly by Claude Code and Codex without subprocess spawning (vendor-stated; not verified by Hlido)",
+      "source": "https://www.storybloq.com",
+      "verified": false,
+      "tested_at": "2026-10-31"
+    },
+    {
+      "claim": "Automated public-surface checks resolved no CTA, no pricing or access tier and no reachable demo on the captured page",
+      "source": "https://www.storybloq.com",
+      "verified": true,
+      "tested_at": "2026-10-31"
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Claude Code and Codex call the local MCP server directly (the vendor states 53 tools, no subprocess spawning) and a /story skill exposes the same workflow in-session. The agent reads and writes the .story/ directory, so the next session resumes from the recorded handover rather than from nothing.",
+    "agent_friendly_score": 9
+  },
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:30:50.901Z"
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:30:50.901Z"
     },
     {
       "id": "cta_present",
       "pass": false,
-      "required": true
+      "required": true,
+      "tested_at": "2026-10-31T04:30:50.901Z"
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:30:50.901Z"
     },
     {
       "id": "evidence_or_demo",
       "pass": false,
-      "required": false
+      "required": false,
+      "tested_at": "2026-10-31T04:30:50.901Z"
     }
   ],
-  "laddoo_score": 70,
-  "score": 70,
-  "tier": "STEADY",
-  "summary": "Public-surface review of Storybloq/storybloq.",
-  "confidence": "low",
+  "summary": "A local harness that keeps Claude Code and Codex context in a git-tracked .story/ directory — the ownership model is the pitch, and it is a credible one.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-29",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-29",
+  "attestation_url": "/data/attestations/storybloq-storybloq.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -47,8 +153,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-5f9bb4124499b48c-www-storybloq-com",
-    "base": "https://images.hlido.eu/reviews/storybloq-storybloq/run-5f9bb4124499b48c-www-storybloq-com",
+    "run_id": "run-78e6f9522e83b0ab-www-storybloq-com",
+    "base": "https://images.hlido.eu/reviews/storybloq-storybloq/run-78e6f9522e83b0ab-www-storybloq-com",
     "files": [
       "home.png",
       "page_.png",
@@ -56,32 +162,26 @@
       "page_cli.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/storybloq-storybloq/run-5f9bb4124499b48c-www-storybloq-com/home.png",
-      "https://images.hlido.eu/reviews/storybloq-storybloq/run-5f9bb4124499b48c-www-storybloq-com/page_.png",
-      "https://images.hlido.eu/reviews/storybloq-storybloq/run-5f9bb4124499b48c-www-storybloq-com/page_mac.png",
-      "https://images.hlido.eu/reviews/storybloq-storybloq/run-5f9bb4124499b48c-www-storybloq-com/page_cli.png"
+      "https://images.hlido.eu/reviews/storybloq-storybloq/run-78e6f9522e83b0ab-www-storybloq-com/home.png",
+      "https://images.hlido.eu/reviews/storybloq-storybloq/run-78e6f9522e83b0ab-www-storybloq-com/page_.png",
+      "https://images.hlido.eu/reviews/storybloq-storybloq/run-78e6f9522e83b0ab-www-storybloq-com/page_mac.png",
+      "https://images.hlido.eu/reviews/storybloq-storybloq/run-78e6f9522e83b0ab-www-storybloq-com/page_cli.png"
     ],
-    "verified_at": "2026-10-30T21:19:39.820Z",
+    "verified_at": "2026-10-31T21:14:31.676Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
     "schema": "pricing-facts/1",
-    "pricing_disclosed": {
-      "pass": false
-    },
-    "last_verified": "2026-06-17",
-    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-08-21"
-  },
-  "agent_relevance": {
-    "has_mcp": true,
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP server\" in preanalysis.scoring_hypothesis",
-      "has_cli: \"CLI\" in preanalysis.scoring_hypothesis"
+    "model": [
+      "subscription"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "pricing_disclosed": {
+      "pass": false,
+      "tested_at": "2026-10-31"
+    },
+    "last_verified": "2026-10-31",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-10-31"
   }
 }
