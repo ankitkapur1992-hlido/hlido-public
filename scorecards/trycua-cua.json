@@ -1,149 +1,43 @@
 {
-  "schema_version": "2.0",
   "slug": "trycua-cua",
   "name": "trycua/cua",
   "agent_url": "https://cua.ai",
   "category": "Infrastructure",
-  "run_id": "run-trycua-cua-v2-editor-20261031T212153",
-  "run_at": "2026-10-31T21:21:53.854Z",
-  "engine_run_id": "run-39c26c5088feddf4-cua-ai",
-  "engine_run_at": "2026-10-31T08:05:51.258Z",
-  "editor": "Hlido Editor",
-  "editorial_method": "public-surface-tier-2+editorial-narrative-v2",
-  "methodology_version": "2026.05",
-  "methodology_url": "/methodology/public-surface-tier-1/",
-  "score": 85,
-  "tier": "STEADY",
-  "laddoo_score": 85,
-  "confidence": "medium",
-  "hlido_opinion": {
-    "headline": "Shared, agent-ready desktops on hardware you already own — the multi-cursor streaming protocol is the real idea, and the MIT driver works without any of it.",
-    "body": "Cua's pitch is a \"Space\": a full desktop that you and your agents occupy at the same time, running on your Mac, on a box under your desk, or in your own cloud. The interesting engineering is RCDP, Cua's remote desktop protocol, which separates input from the picture so each participant — human or agent — gets its own cursor on one desktop. That detail matters, because the usual computer-use setup forces a handover: the agent takes the mouse and you watch. Here you can step in to make a judgement call and hand control back without tearing down the session. Teleport is the second idea: it packs an app's live session (tabs, profile, sign-ins) into a bundle, checks its SHA-256 before opening, requires Touch ID for sensitive items, and on Space images seals the bundle to that Space's own key so the relay cannot read it. Spaces also boot with permissions already granted and tools installed, which removes the permission dialog that quietly ends most autonomous desktop runs. The surface names real users — Meta, Nous Research, Qwen Code, Open Interpreter, Snorkel AI — and the Cua Driver underneath is MIT-licensed and usable standalone, driving native apps on macOS, Windows and Linux without taking over your cursor. Honest limits: Hlido read the marketing and docs surface only, not a running Space. Our automated pricing check did not resolve a priced tier — the page leads with a $0 free plan and \"no account needed to start\", with paid billing presented behind a period toggle rather than a clear published table. Linux desktop support is described as available while platform work continues. And the model depends on you supplying the machines, so \"infinite desktops\" is bounded by hardware you own.",
-    "voice": "Hlido Editor",
-    "as_of": "2026-10-31",
-    "editor_signature_pending": true
-  },
-  "tier_rationale": "STEADY (85) for a technically distinctive, partly MIT-licensed computer-use stack with named production users, a working free entry path and an unusually careful security story around session transfer. Not VITAL because Hlido tested only the public surface, paid pricing is not plainly published, and Linux support is still settling.",
-  "what_it_does_well": [
-    "RCDP separates input from the rendered picture, so a human and several agents each hold their own cursor on one shared desktop instead of taking turns",
-    "Teleport moves a live app session into a Space with SHA-256 verification, Touch ID for sensitive items, and end-to-end sealing to the Space's key so the relay cannot read the bundle",
-    "Spaces start with permissions granted and tools installed — the permission dialog that stalls most autonomous desktop runs is removed by design",
-    "The Cua Driver is MIT-licensed and usable on its own, driving native macOS, Windows and Linux apps without commandeering the local cursor or keyboard",
-    "Runs on hardware you control (local Mac via Lume, your own boxes, or your own cloud) and starts with no account required"
-  ],
-  "what_it_fails_at": [
-    "Our automated pricing check did not resolve a published priced tier — the free $0 plan is clear, paid tiers sit behind a billing-period toggle rather than a plain table",
-    "Capacity is bounded by machines you own and connect; \"as many desktops as your computers can hold\" is an honest phrase but not elastic cloud capacity",
-    "Linux desktop support is presented as working while platform coverage is still being completed",
-    "Hlido assessed the public surface and docs only — no Space was launched, so streaming latency, reconnect behaviour and agent reliability are unverified"
-  ],
-  "best_for": [
-    "Teams building or evaluating computer-use agents who want a sandbox desktop on infrastructure they control rather than a vendor's cloud",
-    "Researchers running agent benchmarks who need a real OS surface with native apps rather than a browser-only environment",
-    "Developers who want the MIT Cua Driver alone, to let an agent drive desktop apps without adopting the Spaces product"
-  ],
-  "not_recommended_for": [
-    "Buyers who need a published, predictable price list before procurement will sign",
-    "Teams with no spare machines and no cloud account, who expect elastic desktop capacity supplied by the vendor",
-    "Anyone needing a hardened, audited multi-tenant isolation guarantee today — the security design reads well but is undemonstrated here"
-  ],
-  "red_flags": [
-    "The security model for Teleport and Space sealing is described in detail on the vendor's own surface; none of it was independently verified by Hlido, and it is the part a buyer would most want audited"
-  ],
-  "compared_to": [
-    {
-      "slug": "browser-use",
-      "verdict_diff": "browser-use drives a browser and is far quicker to adopt for web tasks; Cua gives an agent a whole desktop with native apps and multi-cursor sharing. Pick browser-use when the job is on the web, Cua when it is not.",
-      "preferred_for_axis": "surface breadth (full desktop vs browser)"
-    },
-    {
-      "slug": "e2b-dev-e2b",
-      "verdict_diff": "E2B offers cloud sandboxes provisioned for you; Cua expects you to supply the machines and gives you a streamable, shareable desktop in return. E2B wins on zero-infrastructure start, Cua on control and native-app reach.",
-      "preferred_for_axis": "hosted convenience vs self-owned control"
-    }
-  ],
-  "evidence_urls": [
-    {
-      "claim": "RCDP streams each Space and handles input separately from the picture, so the user and every agent get their own cursor on the same desktop",
-      "source": "https://cua.ai",
-      "verified": true,
-      "tested_at": "2026-10-31"
-    },
-    {
-      "claim": "Teleport verifies a session bundle's SHA-256 before opening, gates sensitive items behind Touch ID, and seals bundles end-to-end to the Space's own key on Space images",
-      "source": "https://cua.ai",
-      "verified": true,
-      "tested_at": "2026-10-31"
-    },
-    {
-      "claim": "The Cua Driver is MIT licensed, works on macOS, Windows and Linux, and is usable without Spaces",
-      "source": "https://cua.ai",
-      "verified": true,
-      "tested_at": "2026-10-31"
-    },
-    {
-      "claim": "Named in projects from Meta, Nous Research, Qwen Code, Factory, Open Interpreter and Snorkel AI (vendor-stated, not independently confirmed)",
-      "source": "https://cua.ai",
-      "verified": false,
-      "tested_at": "2026-10-31"
-    },
-    {
-      "claim": "A $0 free plan requiring no account is offered; a published priced tier was not resolved by the automated pricing check",
-      "source": "https://cua.ai",
-      "verified": true,
-      "tested_at": "2026-10-31"
-    }
-  ],
-  "agent_relevance": {
-    "has_api": true,
-    "has_cli": true,
-    "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": true,
-    "behavioral_testable": true,
-    "agent_integration_path": "An agent runs inside a Space as a first-class participant with its own cursor, using the open-source Cua Driver to operate native desktop apps on macOS, Windows or Linux. Coding agents such as Claude Code and Codex pick up a provider connected once in Connections and work in every Space with no in-Space setup.",
-    "agent_friendly_score": 9
-  },
+  "run_id": "run-trycua-cua-4xes6jkz",
+  "run_at": "2026-06-18T06:01:45.907Z",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
       "id": "homepage_loads",
       "pass": true,
-      "required": true,
-      "tested_at": "2026-10-31T08:05:51.258Z"
+      "required": true
     },
     {
       "id": "primary_value_prop",
       "pass": true,
-      "required": true,
-      "tested_at": "2026-10-31T08:05:51.258Z"
+      "required": true
     },
     {
       "id": "cta_present",
       "pass": true,
-      "required": true,
-      "tested_at": "2026-10-31T08:05:51.258Z"
+      "required": true
     },
     {
       "id": "pricing_or_access",
       "pass": false,
-      "required": false,
-      "tested_at": "2026-10-31T08:05:51.258Z"
+      "required": false
     },
     {
       "id": "evidence_or_demo",
       "pass": true,
-      "required": false,
-      "tested_at": "2026-10-31T08:05:51.258Z"
+      "required": false
     }
   ],
-  "summary": "Shared, agent-ready desktops on hardware you already own — the multi-cursor streaming protocol is the real idea, and the MIT driver works without any of it.",
-  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
-  "staleness_after": "2027-01-29",
-  "review_age_days_at_publish": 0,
-  "next_review_due_at": "2027-01-29",
-  "attestation_url": "/data/attestations/trycua-cua.json",
-  "signature_pending": true,
-  "source": "hlido-editor-v2",
+  "laddoo_score": 85,
+  "score": 85,
+  "tier": "STEADY",
+  "summary": "Turns the computers you already own into shared desktops that you and your agents drive at the same time, each with its own cursor.",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -167,7 +61,7 @@
       "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/page_pricing.png",
       "https://images.hlido.eu/reviews/trycua-cua/run-39c26c5088feddf4-cua-ai/page_docs_spaces_guides_stream-a-desktop.png"
     ],
-    "verified_at": "2026-10-31T21:14:38.819Z",
+    "verified_at": "2026-11-01T21:14:56.129Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -179,11 +73,129 @@
     ],
     "free_tier": true,
     "pricing_disclosed": {
-      "pass": false,
-      "tested_at": "2026-10-31"
+      "pass": false
     },
-    "last_verified": "2026-10-31",
+    "last_verified": "2026-06-18",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
-    "derived_at": "2026-10-31"
-  }
+    "derived_at": "2026-11-01"
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Turns the computers you already own into shared desktops that you and your agents drive at the same time, each with its own cursor.",
+    "body": "Most computer-use offerings rent you a sandbox and hand the agent the whole screen, which means you cannot work alongside it and you cannot use the machine you already trust. Cua inverts both. A Space is a desktop on hardware you own - a Mac, the Mac mini on the shelf, a Linux box, or your own cloud - and its remote desktop protocol separates input from the picture so you and every agent get a cursor of your own on the same desktop. The stated workflow is that you step in to make a call yourself and then hand it back, which is the right shape for work no one actually wants fully unattended. The surface is unusually specific about the parts that normally stay vague: Teleport packs an app's open tabs, profile and sign-ins into a session bundle, nothing is read until you approve, sensitive items require Touch ID, the Space verifies the bundle's SHA-256 before opening the app, and on Space images the bundle is sealed to that Space's own key so the relay cannot read it. Pre-granted permissions and pre-installed tools address the failure everyone hits in practice, which is an agent stopping at a permission dialog. The licensing is stated plainly rather than implied - Spaces is source-available under FSL-1.1-MIT while the Cua Driver and Lume are MIT - and the driver is usable on its own without Spaces, so the agent-facing layer is not hostage to the hosted product. What is not established is operating history: the named projects using it are a credibility signal, not a reliability record, and nothing on the surface bounds latency, session stability or what happens when a Space dies mid-task.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the central claim - shared desktops on your own hardware with a separate cursor per participant - is stated precisely, the security handling of Teleport is described at a level a reader can check rather than asserted, pricing and limits are fully disclosed including the free tier's session and remote-hour caps, and the agent-facing driver is MIT-licensed and independently usable. Not VITAL because there is no public operating history or reliability record for the streaming layer, several Pro and Teams capabilities are labelled coming soon rather than shipped, SSO and audit export are explicitly not included yet, and the failure behaviour of a Space mid-task is undocumented - so the properties an operator would most want bounded are the ones the surface bounds least.",
+  "what_it_does_well": [
+    "Runs on hardware the operator already owns - a Mac, a spare machine, or their own cloud - rather than renting a sandbox",
+    "Separates input from the video stream so a human and multiple agents each hold their own cursor on one desktop, with explicit hand-back",
+    "Describes Teleport's security handling concretely: approval before any read, Touch ID for sensitive items, SHA-256 verification of the bundle, and per-Space key sealing on Space images",
+    "Pre-grants permissions and pre-installs tools so an agent does not stall on a permission dialog - the most common practical failure in desktop automation",
+    "States licensing per component rather than in the abstract (Spaces source-available FSL-1.1-MIT; Cua Driver and Lume MIT) and lets the driver be used without Spaces",
+    "Publishes complete pricing with the real constraint named - live sessions and remote hours, with usage from the machine itself free"
+  ],
+  "what_it_fails_at": [
+    "No operating history, uptime record or reliability data for the streaming layer is visible on the public surface",
+    "Several paid-tier capabilities are marked coming soon (expiring share links, 90-day audit history), and SSO plus audit export are explicitly not included yet",
+    "Nothing states what happens when a Space fails mid-task - no documented recovery or session-durability behaviour",
+    "The named projects using Cua establish interest, not reliability; no case study bounds performance under load",
+    "Latency is described qualitatively (low latency over QUIC on the same network) with no published figures"
+  ],
+  "best_for": [
+    "Teams that want agents operating real desktop applications on machines they control rather than in a rented sandbox",
+    "Operators who need to watch an agent work and take the keyboard mid-task without killing the session",
+    "Anyone whose workflow depends on an app's existing sign-ins and profile being present rather than re-authenticating inside a fresh VM",
+    "Developers who want only the desktop-control layer - the MIT-licensed driver is usable standalone"
+  ],
+  "not_recommended_for": [
+    "Organisations that need SSO or exportable audit logs today - both are named as not yet included",
+    "Teams with no spare hardware and no cloud of their own, since the model assumes you bring the computers",
+    "Workloads needing a contractual uptime or latency guarantee - none is published",
+    "Anyone requiring fully unattended long-running sessions, as session-failure behaviour is undocumented"
+  ],
+  "red_flags": [
+    "No operating history or reliability record for the streaming layer, while the product's whole value depends on that layer holding a live desktop session",
+    "Enterprise controls a buyer would treat as table stakes (SSO, audit export) are stated as coming next and are not available"
+  ],
+  "compared_to": [
+    {
+      "slug": "browser-use",
+      "verdict_diff": "Browser-use drives a browser; Cua drives a full desktop on hardware you own, including native applications, with a separate cursor for the human. Choose browser-use for web-only automation that needs no desktop; choose Cua when the task requires native apps or an existing signed-in profile.",
+      "preferred_for_axis": "desktop-scope"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Shared desktop Spaces run on the operator's own computers, including a Mac, owned hardware, or their own cloud",
+      "source": "https://cua.ai",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "A remote desktop protocol handles input separately from the picture so each human and agent gets its own cursor",
+      "source": "https://cua.ai (section: one desktop, a cursor each)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Teleport requires approval before reading, Touch ID for sensitive items, and verifies a bundle's SHA-256 before opening the app",
+      "source": "https://cua.ai (section: teleport any app)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Pricing is published with session and remote-hour limits per tier, free tier at $0 with no account required",
+      "source": "https://cua.ai (section: pricing)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Cua Spaces is source-available under FSL-1.1-MIT; Cua Driver and Lume are MIT",
+      "source": "https://cua.ai (section: licensing)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "SSO and audit export are stated as coming next and not included",
+      "source": "https://cua.ai (section: Teams plan)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-first by design. The open-source Cua Driver lets an agent operate native desktop apps on macOS, Windows and Linux without seizing the human's cursor or keyboard, and is MIT-licensed and usable independently of the hosted Spaces product. Spaces start with permissions granted and tools installed, and a provider connected once in Connections is available to coding agents (Claude Code and Codex are named) inside every Space with nothing to configure. No MCP endpoint is advertised on the public surface.",
+    "agent_friendly_score": 9
+  },
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/trycua-cua.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01"
 }
