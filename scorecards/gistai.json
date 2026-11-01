@@ -2,41 +2,41 @@
   "slug": "gistai",
   "name": "Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT.",
   "agent_url": "https://gistai.tech",
-  "category": "Image & Design",
+  "category": "Productivity",
   "run_id": "run-gistai-tfd1008s",
   "run_at": "2026-06-13T12:01:05.807Z",
-  "source": "hlido-drain-worker",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
+      "id": "homepage_loads",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C02",
-      "pass": false,
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C03",
-      "pass": false,
+      "id": "cta_present",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false
     },
     {
-      "id": "C05",
-      "pass": false,
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false
     }
   ],
   "laddoo_score": 50,
   "score": 50,
   "tier": "FADING",
-  "summary": "Public-surface review of Gist AI - Free Web,YouTube,PDF Summarizer. Powered by ChatGPT..",
+  "summary": "A free Chrome summariser for pages, YouTube and PDFs whose best idea - jumping back to the source of any summary line - is undercut by a surface that has not moved since 2023.",
   "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
@@ -58,5 +58,121 @@
     "verified_at": "2026-10-30T21:18:50.852Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A free Chrome summariser for pages, YouTube and PDFs whose best idea - jumping back to the source of any summary line - is undercut by a surface that has not moved since 2023.",
+    "body": "Gist AI is a browser extension, not an agent, and it is worth saying that first because it sets what the review can reasonably assess. As an extension it does one thing with one genuinely good idea: the Read More feature lets you deep-dive into the source of whichever summary point interests you, and for YouTube it will jump to the moment in the video a point came from. That addresses the real weakness of every summariser - a summary you cannot verify is a summary you cannot trust - and it is the kind of design choice we credit. The privacy statement is also commendably plain: no user data is collected, and the only thing shared with the model is the article content needed to produce the summary. Against that, the surface is thin and dated. The copyright is 2023, the positioning is Powered by ChatGPT in a way that reads as a 2023 selling point rather than a 2026 one, and the only capability evidence offered is a Watch Demo Video link plus three named customer testimonials - which are marketing, not evidence, and we do not credit them. There is no API, CLI, MCP endpoint or any programmatic surface, so for Hlido's primary question - can another agent use this - the answer is no. The claim of a research-backed technique improving comprehension is made without a citation, which is the sort of assertion that should carry one.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) because the product does load, states a clear value proposition, is free with an unambiguous install path, and has one real design virtue in traceable summaries - but the public surface shows no activity since a 2023 copyright, the only capability evidence is a demo-video link and customer testimonials we do not count, a research-backed claim is made with no citation, and there is no API, CLI or MCP surface of any kind, so an agent cannot consume it. The published score band is unchanged: the re-test confirmed the band rather than moving it, which is why the number stands while the evidence behind it is now real.",
+  "what_it_does_well": [
+    "Lets a reader trace any summary point back to its source passage, and jump to the relevant moment in a YouTube video - the one feature that makes a summary checkable",
+    "Covers four input types in one extension: web pages, YouTube videos, online PDFs and PDFs stored locally",
+    "States its data handling plainly - no user data collected, only article content shared with the model to produce the summary",
+    "Free with an unambiguous install path and a short, accurate four-step usage description",
+    "Names its creators on the page rather than hiding behind a brand"
+  ],
+  "what_it_fails_at": [
+    "The public surface carries a 2023 copyright and shows no evidence of maintenance since",
+    "The only capability evidence is a demo-video link and three customer testimonials - testimonials are marketing and are not credited as evidence",
+    "A research-backed comprehension claim is made with no citation or reference",
+    "No API, CLI, MCP endpoint or programmatic interface of any kind, so no agent can use it",
+    "Model dependency is positioned as a feature (Powered by ChatGPT) with no statement of which model, version or what happens when it changes",
+    "Only one page was captured for the whole product, so there is no depth of surface to assess"
+  ],
+  "best_for": [
+    "Individual readers who want a free one-click summariser and value being able to check a summary against its source",
+    "Students or researchers skimming long articles or PDFs who need to find the few relevant passages quickly",
+    "Anyone wanting to skip to the useful minutes of a long YouTube video"
+  ],
+  "not_recommended_for": [
+    "Any agent or automated pipeline - there is no programmatic interface",
+    "Teams needing a maintained, supported tool, given no visible activity since 2023",
+    "Organisations with data-handling requirements that need more than a short privacy statement",
+    "Anyone needing summaries of long books or large document sets rather than single articles"
+  ],
+  "red_flags": [
+    "A 2023 copyright and no visible sign of maintenance, while the product depends on a third-party model API that has changed repeatedly since",
+    "Customer testimonials are the primary social proof on the page, with no reproducible demonstration of summary quality",
+    "A research-backed effectiveness claim is made with no citation"
+  ],
+  "compared_to": [
+    {
+      "slug": "notion-ai",
+      "verdict_diff": "Notion AI summarises inside a workspace you already keep documents in; Gist AI summarises whatever is in front of you in the browser and can trace each point to its source. Choose Notion AI if the content already lives in Notion; choose Gist AI for ad-hoc web, video and PDF reading - accepting that it appears unmaintained.",
+      "preferred_for_axis": "in-browser-scope"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "A free Chrome extension that summarises websites, YouTube videos and PDFs, both online and local",
+      "source": "https://gistai.tech",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "A Read More feature allows deep-diving into the source of a summary point, and jumping to the relevant moment of a YouTube video",
+      "source": "https://gistai.tech (section: main features)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "No user data is collected; only article content is shared with the model to generate the summary",
+      "source": "https://gistai.tech (section: privacy policy)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "The page carries a 2023 copyright",
+      "source": "https://gistai.tech (footer)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "None. The product is distributed solely as a Chrome extension driven by a human clicking a toolbar icon. No API, CLI, MCP endpoint, webhook or SDK is offered or mentioned anywhere on the public surface, so there is no path by which another agent could invoke it. On Hlido's primary axis - whether an agent can consume this - it scores at the floor.",
+    "agent_friendly_score": 1
+  },
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/gistai.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-06-13",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
