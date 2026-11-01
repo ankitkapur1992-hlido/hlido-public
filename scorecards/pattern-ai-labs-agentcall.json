@@ -1,43 +1,43 @@
 {
   "slug": "pattern-ai-labs-agentcall",
   "name": "pattern-ai-labs/agentcall",
-  "agent_url": "https://github.com/pattern-ai-labs/agentcall",
+  "agent_url": "https://agentcall.dev",
   "category": "Voice",
   "run_id": "run-pattern-ai-labs-agentcall-v3f6o4uh",
   "run_at": "2026-06-17T00:01:36.998Z",
-  "source": "hlido-drain-worker",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
+      "id": "homepage_loads",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C02",
-      "pass": false,
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C03",
-      "pass": false,
+      "id": "cta_present",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false
     },
     {
-      "id": "C05",
-      "pass": false,
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of pattern-ai-labs/agentcall.",
-  "confidence": "low",
+  "laddoo_score": 78,
+  "score": 78,
+  "tier": "STEADY",
+  "summary": "Puts your coding agent into a Google Meet, Zoom or Teams call as a participant that speaks, hears and screenshares - installed as a skill, not a platform.",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -61,16 +61,142 @@
       "https://images.hlido.eu/reviews/pattern-ai-labs-agentcall/run-95ba4810ed42a500-agentcall-dev/page_.png",
       "https://images.hlido.eu/reviews/pattern-ai-labs-agentcall/run-95ba4810ed42a500-agentcall-dev/page_blog.png"
     ],
-    "verified_at": "2026-10-31T21:14:28.485Z",
+    "verified_at": "2026-11-01T21:14:51.376Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class, and the product's strongest axis. An agent installs a published skill from the public repository, supplies an API key once (reused across sessions), then joins any meeting from a URL given in plain English. Claude Code, OpenAI Codex, Cursor, Gemini CLI, Windsurf, GitHub Copilot, JetBrains Junie and OpenClaw are named as supported frameworks. Transcripts are delivered over webhook or WebSocket, and actions are driven conversationally rather than through a command syntax. A tunnel feature exposes an agent's localhost UI into the meeting.",
+    "agent_friendly_score": 9
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Puts your coding agent into a Google Meet, Zoom or Teams call as a participant that speaks, hears and screenshares - installed as a skill, not a platform.",
+    "body": "The usual shape for meeting AI is a notetaker: a bot joins, records, and emails a summary afterwards. AgentCall is aimed at a different thing - an agent that is in the meeting while it happens, speaking when asked, posting in chat, raising a hand, starting a screenshare and sharing a link participants open in their own browser. The integration path is the strongest part and is unusually light: install a skill from the public repository, give it an API key once, then tell the agent to join a meeting URL in plain English. Three participation modes are described concretely - audio only, a custom webpage rendered as the bot's video feed, and audio plus screenshare - and the webpage-as-face mode is a genuinely novel idea, since any HTML dashboard becomes what the room sees. Transcription is specified at a useful level of detail: speaker diarization, partial transcripts updating live, full retrieval after the call, delivered over webhook or WebSocket, with the option to skip their transcription entirely and bring your own. The data posture is the second reason this scores where it does. The agent's reasoning runs locally in the operator's terminal or IDE, transcripts stream rather than being retained long-term, and the vendor states it never trains on user data - which is the right division for a product sitting in the middle of private meetings. What is missing is evidence of durability. There is no operating history, nothing bounds behaviour when a platform changes its client, and the claim of being first of its kind globally is the sort of assertion a reader cannot check and that we do not credit.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (78) because the integration path is first-class and genuinely low-friction for an agent (a skill install plus one API key, with Claude Code, Codex, Cursor, Gemini CLI, Windsurf, Copilot, Junie and OpenClaw all named), the capability list is specific about what the agent can perceive and do rather than vague about participation, the three modes are distinguished clearly, and the privacy division - local reasoning, streamed rather than stored transcripts, no training on user data - is stated plainly and is the correct posture for the use case. Not VITAL because there is no public operating history, the dependence on three third-party meeting platforms is an unbounded risk the surface never addresses, the first-of-its-kind-globally claim is unverifiable, and nothing demonstrates behaviour under real meeting conditions. This replaces an earlier 50/FADING that was produced when our own crawl captured none of the surface above; the band changed because the evidence arrived, not because the product did.",
+  "what_it_does_well": [
+    "Reduces agent onboarding to a skill install plus a single API key, then a plain-English instruction with a meeting URL",
+    "Specifies exactly what the agent perceives (live transcript with speaker names, join and leave events, who is currently speaking, meeting chat, shared screen on demand) and what it can do (speak, post chat, raise a hand, screenshare, share a link, show a progress list, mute, leave)",
+    "Offers a genuinely original participation mode - an arbitrary webpage rendered as the bot's video feed, so a live dashboard can be what the room sees",
+    "Keeps model reasoning on the operator's own machine rather than on vendor servers, and says so explicitly",
+    "Streams transcripts over WebSocket or webhook without long-term retention, and allows bringing your own transcription instead",
+    "Names the agent frameworks it works with specifically rather than claiming generic compatibility, and publishes the skill on a public repository"
+  ],
+  "what_it_fails_at": [
+    "No operating history, release cadence or maintenance commitment is visible on the public surface",
+    "The entire product depends on three third-party meeting platforms, and nothing states what happens when one changes its client or blocks automated participants",
+    "The claim of being first of its kind globally is unverifiable and is not evidence of capability",
+    "No demonstration under real meeting conditions - no recorded session showing latency, interruption handling or speaking-turn behaviour",
+    "Audit logging appears as a capability keyword without any description of what is logged or where it is retained"
+  ],
+  "best_for": [
+    "Teams already running a coding agent locally who want it present in calls rather than summarising them afterwards",
+    "Anyone who needs an agent to present - narrate slides, walk a document, run a live demo - rather than just listen",
+    "Builders who want a branded or data-driven visual presence in a call, using the webpage-as-video-feed mode",
+    "Organisations that require the model reasoning to stay on their own machines while a vendor handles only the meeting transport"
+  ],
+  "not_recommended_for": [
+    "Teams that only need post-meeting notes and summaries - this is heavier than the problem",
+    "Organisations needing a contractual uptime commitment for meeting attendance, since none is published",
+    "Anyone whose meeting platform forbids automated participants, a policy question the surface does not address",
+    "Buyers who require detailed audit and retention documentation before an agent may join confidential calls"
+  ],
+  "red_flags": [
+    "The product's existence depends entirely on continued automated-participant access to Google Meet, Zoom and Microsoft Teams, and the surface never acknowledges that dependency or what happens if a platform withdraws it",
+    "Audit logging is advertised as a capability but never specified - for a tool that sits inside confidential meetings, what is recorded and how long it is kept is the first thing a buyer needs and the surface does not say",
+    "An unverifiable superlative (first of its kind globally) is used as a selling point on the landing page"
+  ],
+  "compared_to": [
+    {
+      "slug": "vapi-ai",
+      "verdict_diff": "Vapi builds voice agents for telephony and your own applications; AgentCall puts an agent you already have into a scheduled video meeting on a third-party platform. Choose Vapi to build a voice product; choose AgentCall to give an existing coding agent a seat in your team's calls.",
+      "preferred_for_axis": "meeting-participation"
+    },
+    {
+      "slug": "retell-ai",
+      "verdict_diff": "Retell focuses on production voice agents handling calls at volume with its own orchestration; AgentCall deliberately owns only the meeting plumbing and leaves reasoning on the operator's machine. Choose Retell for managed call automation; choose AgentCall when the intelligence must stay local.",
+      "preferred_for_axis": "local-reasoning"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Lets an AI agent join Google Meet, Zoom and Microsoft Teams, speaking, listening and collaborating in the call",
+      "source": "https://agentcall.dev",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Integration is a skill install plus an API key supplied once, then a plain-English instruction with a meeting URL",
+      "source": "https://agentcall.dev (section: how it works)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Three participation modes: audio only, a custom webpage rendered as the bot video feed, and audio plus screenshare",
+      "source": "https://agentcall.dev (section: modes)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Live transcription with speaker diarization, partial transcripts, full retrieval, delivered over webhook or WebSocket",
+      "source": "https://agentcall.dev (section: real-time transcription)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Agent reasoning runs locally on the operator's machine; transcripts are not permanently stored and user data is not used for training",
+      "source": "https://agentcall.dev (section: data privacy)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/pattern-ai-labs-agentcall.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01",
+  "score_correction": {
+    "previous_score": 50,
+    "previous_tier": "FADING",
+    "corrected_on": "2026-11-01",
+    "basis": "The previous score was produced by a run whose public-surface capture returned nothing, so it recorded Hlido's inability to read the surface rather than a finding about the vendor. The engine re-tested on 2026-10-31 and captured the full surface; this score is derived from that evidence."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-06-17",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
