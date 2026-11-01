@@ -1,43 +1,43 @@
 {
   "slug": "synapseorch-ai-synapse-ai",
   "name": "synapseorch-ai/synapse-ai",
-  "agent_url": "https://github.com/synapseorch-ai/synapse-ai",
-  "category": "Infrastructure",
+  "agent_url": "https://synapseorch.com",
+  "category": "Workflow & Automation",
   "run_id": "run-synapseorch-ai-synapse-ai-sw42et43",
   "run_at": "2026-06-17T18:01:59.338Z",
-  "source": "hlido-drain-worker",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
+      "id": "homepage_loads",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C02",
-      "pass": false,
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C03",
-      "pass": false,
+      "id": "cta_present",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false
     },
     {
-      "id": "C05",
-      "pass": false,
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of synapseorch-ai/synapse-ai.",
-  "confidence": "low",
+  "laddoo_score": 72,
+  "score": 72,
+  "tier": "STEADY",
+  "summary": "Fixes the workflow before the run starts, so an automation that worked for weeks cannot quietly start improvising.",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -61,18 +61,168 @@
       "https://images.hlido.eu/reviews/synapseorch-ai-synapse-ai/run-9e91f5e4fa224ada-synapseorch-com/page_templates_weekly-report-docs_.png",
       "https://images.hlido.eu/reviews/synapseorch-ai-synapse-ai/run-9e91f5e4fa224ada-synapseorch-com/page_integrations_.png"
     ],
-    "verified_at": "2026-10-31T21:14:33.186Z",
+    "verified_at": "2026-11-01T21:14:54.016Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
     "has_mcp": true,
-    "has_webhook": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"mcp-server\" in preanalysis.raw_markdown_preview",
-      "has_webhook: \"webhook\" in preanalysis.claim"
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Present but deliberately bounded, and unverifiable while access is gated. The surface states that Claude and ChatGPT connect through MCP, and that any MCP server or API the operator already has can be wired in alongside more than fifty sign-in integrations. The design intent runs the other way from most agent platforms, though: the product's value proposition is constraining autonomous behaviour to a pre-approved route, so an agent is a component inside a fixed workflow rather than the driver of it. Nothing could be exercised behaviourally because the product requires an invite.",
+    "agent_friendly_score": 6
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Fixes the workflow before the run starts, so an automation that worked for weeks cannot quietly start improvising.",
+    "body": "This is a product built around three named failure modes, and it is worth taking seriously because they are the three that actually happen. The first is drift: an agentic workflow that behaves for weeks and then takes a different path. SynapseOrch's answer is that the route is fixed before the run begins and branches only where the operator drew a branch, so a run cannot leave the approved path, and a failed step stops the run with a plain-language reason rather than improvising around it. The second is runaway cost: every plan carries a hard credit limit, runs pause when it is reached, and nothing is billed past the plan chosen - which is a materially different promise from a usage alert. The third is vendor disappearance, answered by the engine being open source and identical whether it runs on their cloud or your servers. The approval model is the best-executed part: a sign-off can be placed anywhere work leaves the building, the run waits for minutes or days at no cost, the approver can answer in the app, in Telegram or with one click in the email, and - the detail that shows someone thought about adoption - the approver needs no paid seat. Pricing is unusually legible, with per-step credit costs, a worked example (a six-step weekly report at about four credits) and five tiers from free to $499. The significant catch is access: the primary action is Request an invite, so this is a waitlisted product, and the demonstrations are explicitly a demo workspace with illustrative figures.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because the product is organised around three correctly identified failure modes with a concrete mechanism against each, the approval design is thought through to the point of not charging for approver seats, pricing is disclosed at a level that lets a buyer compute their own cost before signing up, and the open-source engine with cloud-or-self-host parity is a real answer to platform risk rather than a reassurance. Not VITAL because the product is gated behind an invite request so the claims cannot be exercised, every shown run is labelled a demo workspace with illustrative numbers, no operating history or named deployment is evidenced, and the cost model is split in a way the headline pricing does not foreground - credits are plan-based but model usage is separate and billed on your own key or a prepaid balance. This replaces an earlier 50/FADING produced when our crawl captured none of this surface; the band changed because the evidence arrived.",
+  "what_it_does_well": [
+    "Fixes the execution route before a run starts so a run cannot leave the approved path, and branches only where the operator placed a branch",
+    "Stops a run on a failed step with a plain-language reason instead of letting the agent improvise a recovery",
+    "Enforces a hard per-plan credit ceiling - runs pause rather than overrunning, and nothing is billed past the chosen plan",
+    "Designs approvals for real organisations: sign-off anywhere work leaves the building, waiting is free and can last days, answerable in-app, in Telegram or by one click in an email, and the approver needs no paid seat",
+    "Publishes a cost model a buyer can actually compute - one credit per working step, a tenth for a logic step, nothing for waiting, with a worked six-step example",
+    "Ships the same open-source engine for its cloud and for self-hosting, which is a structural rather than contractual answer to the tool-shuts-down risk",
+    "States plainly which of its twelve templates require an approval and which run without one"
+  ],
+  "what_it_fails_at": [
+    "Access is gated behind Request an invite, so none of the stated behaviour can be exercised by a reader",
+    "Every demonstration is labelled a demo workspace with illustrative or sample figures",
+    "Model costs sit outside the credit pricing that the page foregrounds - $2 a month on every plan, then your own key or a prepaid balance",
+    "No operating history, named customer or third-party deployment is evidenced",
+    "Several integrations are listed as connectable without stating which are generally available versus planned"
+  ],
+  "best_for": [
+    "Teams that have been burned by an agentic automation changing behaviour after working reliably, and want the path fixed in advance",
+    "Operators who need a human sign-off before anything is emailed, filed or changed, and need approvers who are not licensed users",
+    "Organisations that require a hard spending ceiling rather than a budget alert",
+    "Buyers who want the option to move the same engine onto their own servers later without a rewrite"
+  ],
+  "not_recommended_for": [
+    "Anyone needing to start today, since access is by invite request",
+    "Teams wanting open-ended agent autonomy - the entire design constrains the agent to a pre-approved route",
+    "Buyers who need total cost in one number, as model spend is deliberately separate from the credit plans",
+    "Organisations that require a reference deployment before putting a vendor in an approval path"
+  ],
+  "red_flags": [
+    "The product is invite-gated, so every capability claim on the surface is currently unexercisable by a prospective buyer",
+    "All shown runs, costs and approvals are demo-workspace data with illustrative figures, so nothing independently evidences the fixed-route or hard-limit behaviour that is the product's core promise"
+  ],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n gives you a general workflow builder with very broad integrations and leaves governance to you; SynapseOrch is narrower and opinionated - a fixed pre-approved route, mandatory sign-off points and a hard credit ceiling. Choose n8n for breadth and immediate access; choose SynapseOrch when the point is that the automation cannot deviate.",
+      "preferred_for_axis": "governed-execution"
+    },
+    {
+      "slug": "activepieces",
+      "verdict_diff": "Activepieces is an open-source automation platform you can use right away; SynapseOrch is also open-source at the engine but invite-gated as a service, and differentiates on approval gates and billing caps rather than connector count. Choose Activepieces to start now; choose SynapseOrch for the approval and cost-ceiling model.",
+      "preferred_for_axis": "availability"
+    },
+    {
+      "slug": "dify-ai",
+      "verdict_diff": "Dify centres on building and deploying LLM applications; SynapseOrch centres on scheduled recurring business jobs with human sign-off. Choose Dify to build an AI product; choose SynapseOrch to automate work your team already repeats every week.",
+      "preferred_for_axis": "recurring-operations"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Workflow steps are fixed before a run starts; a run branches only where the operator placed a branch and stops with a plain-language reason on failure",
+      "source": "https://synapseorch.com (section: the path you approved)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Every plan has a hard credit limit - runs pause and nothing is billed past the chosen plan",
+      "source": "https://synapseorch.com (section: a bill that stops)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "The engine is open source and the same engine runs on their cloud or the operator's own servers",
+      "source": "https://synapseorch.com (section: an engine nobody can take away)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Approvals can wait for minutes or days at no cost, are answerable in-app, in Telegram or by one click in an email, and the approver needs no paid seat",
+      "source": "https://synapseorch.com (section: your sign-off)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Five published tiers from a free plan to $499 a month, priced in credits, with model usage billed separately",
+      "source": "https://synapseorch.com (section: what it costs)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    },
+    {
+      "claim": "Access to the hosted product is by invite request",
+      "source": "https://synapseorch.com (primary call to action)",
+      "tested_at": "2026-10-31",
+      "verified": true
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 1,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/synapseorch-ai-synapse-ai.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01",
+  "score_correction": {
+    "previous_score": 50,
+    "previous_tier": "FADING",
+    "corrected_on": "2026-11-01",
+    "basis": "The previous score was produced by a run whose public-surface capture returned nothing, so it recorded Hlido's inability to read the surface rather than a finding about the vendor. The engine re-tested on 2026-10-31 and captured the full surface; this score is derived from that evidence."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "freemium"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "price_points": [
+      {
+        "quote": "…(a six-step weekly report at about four credits) and five tiers from free to $499. The significant catch is access: the primary action is Request an invite, so…",
+        "source": "hlido_opinion.body"
+      },
+      {
+        "quote": "Model costs sit outside the credit pricing that the page foregrounds - $2 a month on every plan, then your own key or a prepaid balance",
+        "source": "what_it_fails_at[2]"
+      }
+    ],
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-06-17",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
