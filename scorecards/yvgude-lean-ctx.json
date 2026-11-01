@@ -1,11 +1,128 @@
 {
+  "schema_version": "2.0",
   "slug": "yvgude-lean-ctx",
-  "name": "yvgude/lean-ctx",
-  "agent_url": "https://github.com/yvgude/lean-ctx",
-  "category": "Coding",
-  "run_id": "run-yvgude-lean-ctx-x9yh8bmc",
-  "run_at": "2026-06-19T00:01:21.374Z",
-  "source": "hlido-drain-worker",
+  "name": "yvgude-lean-ctx",
+  "agent_url": "https://leanctx.com/",
+  "category": "Infrastructure",
+  "run_id": "run-820c308b7acfb4f9-leanctx-com",
+  "run_at": "2026-11-01T08:05:56.717Z",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "score": 72,
+  "laddoo_score": 72,
+  "tier": "STEADY",
+  "confidence": "medium",
+  "hlido_opinion": {
+    "headline": "A gateway between an AI system and the data it reads, whose most notable property is how carefully it refuses to overstate what it guarantees.",
+    "body": "LeanCTX sits between a model and the systems it reads, selecting task-relevant context, applying access and filter rules, and recording what the integration observed. The mechanism is illustrated concretely: for a task about how an invoice total is calculated, the implementation file is passed through as relevant code, a log file arrives with email and customer ID masked by configured rules, and a customer export is denied outright by the source-access policy. PathJail bounds reads to allowed directories and checks resolved paths including symlinks and traversal attempts; read-time checks can inspect text results for known injection patterns and personal-data formats; filter rules let the operator choose whether to warn, redact or block, with metadata reporting categories and counts. What distinguishes this surface is not any single feature but the discipline of its claims. PathJail is described as an application-level check, not an OS sandbox, and explicitly cannot eliminate operating-system or race-condition limits. Local context processing is stated not to mean local inference. Coverage is said to depend on the selected release and integration, and the reader is told to verify support for theirs. The GitHub stars are labelled individual stars, not company endorsements. Every one of those lines costs the vendor something and each is the kind of statement that makes the remaining claims more credible, not less. The weaknesses are commercial rather than technical: much of the capability is conditioned on an unnamed release or licence tier, production and OEM rights require a separate signed agreement, preview operations sit in a preview namespace, and the result is a surface where a reader can establish the architecture but not what their own deployment would actually include.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (72) because the architecture is explained concretely with a worked example a reader can follow end to end, the security boundary is specified at mechanism level (resolved-path checking including symlinks and traversal, read-time injection and personal-data checks, warn/redact/block responses with reporting metadata), the SDK surface is stated as a fixed contract of five primitives and six agent-tool language contracts, and the surface is unusually disciplined about the limits of its own guarantees - naming PathJail as application-level rather than an OS sandbox, separating local processing from local inference, and labelling its stars as individual rather than corporate endorsements. Not VITAL because so much capability is conditioned on an unnamed release, licence tier or signed agreement that a reader cannot determine what their deployment would include, no operating history or third-party audit is evidenced for a component that sits on the data path, and the download and star counts are self-reported with no verification method stated.",
+  "what_it_does_well": [
+    "Explains the mechanism with a worked example a reader can follow end to end - relevant code passed through, a log masked by rule, an export denied by policy",
+    "Specifies the security boundary at mechanism level: resolved-path checking including symlinks and traversal attempts, read-time checks for injection patterns and personal-data formats, and warn, redact or block responses",
+    "States the limits of its own guarantees plainly - PathJail is an application-level check rather than an OS sandbox and cannot eliminate operating-system or race-condition limits",
+    "Separates local context processing from local inference explicitly, instead of letting the reader assume the stronger claim",
+    "Labels its GitHub stars as individual stars rather than company endorsements, declining a social-proof shortcut most vendors take",
+    "Offers a stable integration contract - five SDK primitives and six agent-tool language contracts - with preview operations isolated in a preview namespace",
+    "Leaves the operator's model, agent loop and application in place, with context-only use requiring no hosted service",
+    "Reports filter metadata as categories and counts rather than exposing the sensitive matched content"
+  ],
+  "what_it_fails_at": [
+    "Capability is repeatedly conditioned on the selected release, configured integration or licensed agreement, so a reader cannot determine what their own deployment would include",
+    "Production and OEM rights require a separate signed written agreement that is not described",
+    "No operating history, third-party security audit or penetration test is referenced for a component sitting directly on the data path",
+    "Download and star counts are self-reported as updated on this visit with no verification method stated",
+    "The worked example is labelled an illustrated workflow with sample data rather than a reproducible demonstration",
+    "The repeated hedging, while honest, makes the actual boundary between free engine, enterprise and OEM hard to establish from the surface alone"
+  ],
+  "best_for": [
+    "Teams that must bound what an AI system is able to read from internal sources, and need the boundary to be configurable rather than implicit",
+    "Organisations needing personal data masked or blocked before context reaches a model, with a record of what was filtered",
+    "Builders who want context selection as a separate layer while keeping their own model call and agent loop",
+    "Product teams embedding context control into their own software through a stable SDK surface"
+  ],
+  "not_recommended_for": [
+    "Teams needing an OS-level sandbox guarantee - the vendor states PathJail is an application-level check and says so unprompted",
+    "Buyers who need to know exactly what they get before engaging, since coverage depends on release, integration and licence",
+    "Anyone assuming local processing means local inference, which the surface explicitly denies",
+    "Organisations requiring a third-party security audit before placing a component on the data path"
+  ],
+  "red_flags": [
+    "No third-party security audit or disclosure policy is referenced for a component whose entire purpose is enforcing an access and redaction boundary on sensitive data",
+    "So many capabilities are gated behind an unnamed release, integration or signed agreement that the public surface cannot establish what any given deployment actually enforces",
+    "Download and star counts are presented as updated on this visit without stating how they are measured or verified"
+  ],
+  "compared_to": [
+    {
+      "slug": "llamaindex",
+      "verdict_diff": "LlamaIndex is an open framework for building retrieval and context pipelines, with the access and redaction policy left to you; LeanCTX makes that policy the product - source permissions, masking and filter reporting at the boundary. Choose LlamaIndex to build the pipeline; choose LeanCTX when the controls themselves must be the enforced layer.",
+      "preferred_for_axis": "policy-enforcement"
+    },
+    {
+      "slug": "helicone",
+      "verdict_diff": "Helicone observes and analyses model calls after the fact; LeanCTX acts before the call, deciding what context is permitted to reach the model and masking what is not. They sit on opposite sides of the request and are more complementary than competing.",
+      "preferred_for_axis": "pre-call-control"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "A context gateway that sits between AI and the systems it reads, selecting context, applying controls and recording what the integration observes",
+      "source": "https://leanctx.com/",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "A worked example shows relevant code passed through, a log filtered with email and customer ID masked, and a customer export denied by source-access policy",
+      "source": "https://leanctx.com/ (section: LeanCTX in action)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "PathJail keeps reads within allowed directories and checks resolved paths including symlinks and traversal attempts; it is stated to be an application-level check and not an OS sandbox",
+      "source": "https://leanctx.com/ (section: PathJail)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "Read-time checks inspect supported text results for known injection patterns and personal-data formats; filter rules can warn, redact or block, with metadata reporting categories and counts",
+      "source": "https://leanctx.com/ (sections: read-time checks, filter rules and audit)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "Local context processing is explicitly stated not to mean local inference",
+      "source": "https://leanctx.com/ (section: coding teams)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "Five stable SDK primitives and six agent-tool language contracts; production and OEM rights require a separate signed written agreement",
+      "source": "https://leanctx.com/ (section: AI product builders)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    },
+    {
+      "claim": "GitHub stars are labelled individual stars rather than company endorsements",
+      "source": "https://leanctx.com/ (header social-proof block)",
+      "tested_at": "2026-11-01",
+      "verified": true
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Designed as infrastructure an agent sits on top of. An open-source Engine runs locally or behind configured provider and proxy routes, and context-only use needs no hosted service at all. The embedding contract is stated as five stable SDK primitives plus six agent-tool language contracts, with preview operations isolated in a preview namespace so a production integration is not exposed to them. Supported model and tool requests can additionally be routed through the gateway. No MCP endpoint is advertised, and the surface repeatedly notes that coverage depends on the selected release and integration, so the integration contract a given deployment gets cannot be read off the page.",
+    "agent_friendly_score": 8
+  },
   "checklist": [
     {
       "id": "homepage_loads",
@@ -33,30 +150,35 @@
       "required": false
     }
   ],
-  "laddoo_score": 90,
-  "score": 90,
-  "tier": "VITAL",
-  "summary": "Public-surface review of yvgude/lean-ctx.",
-  "confidence": "medium",
-  "marking_signal": {
-    "marking_statement": false,
-    "detection_tool": false,
-    "cop_signatory": null,
-    "evidence_url": null,
-    "checked_at": "2026-07-24",
-    "source": "engine-browser-marking-retrofit"
+  "summary": "A gateway between an AI system and the data it reads, whose most notable property is how carefully it refuses to overstate what it guarantees.",
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 0,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/yvgude-lean-ctx.json",
+  "signature_pending": true,
+  "source": "hlido-editor-v2",
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
   },
-  "evidence_images": {
-    "run_id": "run-d6752161c0213993-github-com",
-    "base": "https://images.hlido.eu/reviews/yvgude-lean-ctx/run-d6752161c0213993-github-com",
-    "files": [
-      "home.png"
-    ],
-    "urls": [
-      "https://images.hlido.eu/reviews/yvgude-lean-ctx/run-d6752161c0213993-github-com/home.png"
-    ],
-    "verified_at": "2026-07-31T09:31:40.269Z",
-    "verified_count": 1,
-    "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  "aspect_versions_as_of": "2026-11-01",
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-11-01",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
