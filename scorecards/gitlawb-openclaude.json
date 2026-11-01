@@ -6,39 +6,39 @@
   "category": "Coding",
   "run_id": "run-gitlawb-openclaude-5hwuk6ed",
   "run_at": "2026-07-17T18:01:03.714Z",
-  "source": "hlido-drain-worker",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
+      "id": "homepage_loads",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C02",
-      "pass": false,
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C03",
-      "pass": false,
+      "id": "cta_present",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false
     },
     {
-      "id": "C05",
-      "pass": false,
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of Gitlawb/openclaude.",
-  "confidence": "low",
+  "laddoo_score": 77,
+  "score": 77,
+  "tier": "STEADY",
+  "summary": "A terminal coding agent that treats the model as a swappable backend - 200-plus models behind one loop, switchable mid-session.",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -61,13 +61,148 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP\" in preanalysis.raw_markdown_preview",
-      "has_cli: \"cli\" in preanalysis.raw_markdown_preview"
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "First-class, and unusually well suited to being driven by another agent rather than a person. A non-interactive --print mode emits JSON and stream-JSON, so output is parseable; tool allowlists and budgets bound what an unattended run may do; session control supports resume, branch and rewind with worktree isolation and background tasks. MCP servers and skills are wired into the agent loop. Installation is a single npm command requiring Node 22 or later, and per-repo profiles make behaviour reproducible across clones.",
+    "agent_friendly_score": 9
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A terminal coding agent that treats the model as a swappable backend - 200-plus models behind one loop, switchable mid-session.",
+    "body": "Model neutrality is claimed often and implemented rarely. openclaude's public surface is specific enough to be checkable: a single npm install, a /provider command that wires OpenAI, Gemini, Grok, Ollama, LM Studio, GitHub Models, OpenRouter, DeepSeek, Kimi, GLM, Cloudflare, NVIDIA NIM, Groq, Mistral and more, plus Bedrock, Vertex and any OpenAI-compatible endpoint, with models switchable mid-session and per-repo profiles so every clone boots identically. For a team that wants local inference via Ollama for some work and a frontier model for the rest, that is the whole proposition and it is well stated. The second thing worth noting is that it is built to be driven by something other than a human. A non-interactive --print mode emits JSON and stream-JSON, tool allowlists and budgets are first-class, and session control covers resume, branch and rewind with worktree isolation and background tasks. That is the shape of a tool intended to sit inside a pipeline, not just a terminal. The agent loop is shown as a readable transcript - read, grep, edit, run tests - with every change kept reviewable and streamed rather than batched. Documentation is organised and deep (quickstart, slash commands, CLI reference, configuration, keybindings, skills). Against that: there is no pricing or support model because it is open source, no operating history or release cadence is visible, the partner logos are positioning rather than evidence, and a pixel-art companion feature occupies prominent landing-page space in a tool otherwise pitched at serious pipeline use.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (77) because the differentiating claim - genuine model neutrality - is backed by a named provider list long and specific enough to be falsifiable rather than a generic any-model assertion, the scriptability story is first-class (JSON and stream-JSON output, tool allowlists, budgets, session resume/branch/rewind, worktree isolation) which makes it usable by another agent and not only a human, installation is a single documented command, and the reference documentation is organised and complete. Not VITAL because no operating history, release cadence or maintenance commitment is visible, there is no published benchmark or comparison against the established terminal agents it competes with directly, the partner list is positioning rather than validation, and the alignment to a parent project is asserted without stating what it obliges. This replaces an earlier 50/FADING produced when our crawl captured none of this surface.",
+  "what_it_does_well": [
+    "Backs model neutrality with a long, specific, falsifiable provider list rather than a generic any-model claim, including local Ollama and LM Studio",
+    "Allows switching provider and model mid-session with a single command, and saves per-repo profiles so every clone boots the same way",
+    "Ships a non-interactive --print mode with JSON and stream-JSON output, which makes it drivable by another program or agent",
+    "Treats tool allowlists and budgets as first-class rather than afterthoughts - the two controls that matter when an agent runs unattended",
+    "Supports session resume, branch and rewind with worktree isolation and background tasks",
+    "Streams the agent loop so tool calls and diffs are watchable, and keeps every change reviewable",
+    "Publishes organised reference documentation covering quickstart, slash commands, CLI, configuration, keybindings and skills",
+    "Installs in one documented npm command with the Node version requirement stated"
+  ],
+  "what_it_fails_at": [
+    "No operating history, release cadence or maintenance commitment is visible on the public surface",
+    "No benchmark or published comparison against the established terminal coding agents it competes with",
+    "The partner and backer list is positioning, not evidence of capability or continuity",
+    "Alignment to a parent project is asserted without stating what that alignment obliges or guarantees",
+    "No pricing or support model is stated, which is consistent with open source but leaves commercial users without a path",
+    "A cosmetic pixel-art companion feature takes prominent landing-page space in a tool otherwise pitched at serious pipeline use"
+  ],
+  "best_for": [
+    "Teams that need to run some work against a local model and the rest against a frontier model, from one agent",
+    "Operators wiring a coding agent into CI or another agent's pipeline, who need JSON output and tool allowlists",
+    "Developers who want to avoid lock-in to a single model vendor at the agent layer",
+    "Anyone who needs budget and allowlist controls before letting an agent run unattended in a repository"
+  ],
+  "not_recommended_for": [
+    "Teams wanting an IDE-integrated experience - this is deliberately a terminal agent, not a plugin",
+    "Buyers who need a commercial support contract, as none is offered",
+    "Organisations that require a published maintenance or security-response commitment before adopting an agent with shell and file-edit access",
+    "Anyone wanting a managed product rather than something they install and configure themselves"
+  ],
+  "red_flags": [
+    "The agent has bash, file-edit and MCP access by design, yet no security-response or disclosure policy is visible on the public surface",
+    "No release cadence or maintenance commitment, in a category where an abandoned agent with shell access becomes a liability rather than merely unsupported"
+  ],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is the mature, widely-used terminal coding agent with a long operating record; openclaude competes on breadth of model backends and on scriptability (JSON output, allowlists, budgets, session rewind). Choose Aider for a proven track record; choose openclaude when backend neutrality or pipeline control is the requirement.",
+      "preferred_for_axis": "track-record-vs-model-neutrality"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "Both are open-source terminal agents aiming at model neutrality; openclaude's surface is more specific about scripted use - non-interactive JSON and stream-JSON output, tool allowlists, budgets and session branch/rewind. Compare on provider coverage for the models you actually use, since neither publishes a benchmark.",
+      "preferred_for_axis": "scripted-operation"
+    },
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is tied to one vendor's models and is the more polished and better-supported product; openclaude trades that polish for 200-plus backends including local inference. Choose Claude Code for support and consistency; choose openclaude when the model must be yours to pick.",
+      "preferred_for_axis": "vendor-independence"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "An open-source terminal coding agent that works with any model, naming OpenAI, Gemini, Codex, Grok, Ollama, LM Studio and over 200 models",
+      "source": "https://openclaude.gitlawb.com",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Provider and model are switchable mid-session via a /provider command, with per-repo profiles saving model, base URL, auth and defaults",
+      "source": "https://openclaude.gitlawb.com (sections: providers, profiles per repo)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "A non-interactive --print mode provides JSON and stream-JSON output, with tool allowlists, budgets and session control",
+      "source": "https://openclaude.gitlawb.com (section: scriptable from day one)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Bash, file edits, grep, glob, MCP servers and skills are wired into the agent loop",
+      "source": "https://openclaude.gitlawb.com (section: real tools, not just chat)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Installs with a single npm command and requires Node 22 or later",
+      "source": "https://openclaude.gitlawb.com (section: install)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/gitlawb-openclaude.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01",
+  "score_correction": {
+    "previous_score": 50,
+    "previous_tier": "FADING",
+    "corrected_on": "2026-11-01",
+    "basis": "The previous score was produced by a run whose public-surface capture returned nothing, so it recorded Hlido's inability to read the surface rather than a finding about the vendor. The engine re-tested on 2026-10-30 and captured the full surface; this score is derived from that evidence."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-07-17",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
