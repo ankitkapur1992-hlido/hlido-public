@@ -1,43 +1,43 @@
 {
   "slug": "nexu-io-html-anything",
   "name": "nexu-io/html-anything",
-  "agent_url": "https://github.com/nexu-io/html-anything",
-  "category": "Coding",
+  "agent_url": "https://open-design.ai/html-anything/",
+  "category": "Marketing & Content",
   "run_id": "run-nexu-io-html-anything-zr6cplvn",
   "run_at": "2026-06-16T00:00:55.388Z",
-  "source": "hlido-drain-worker",
+  "source": "hlido-editor-v2",
   "checklist": [
     {
-      "id": "C01",
-      "pass": false,
+      "id": "homepage_loads",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C02",
-      "pass": false,
+      "id": "primary_value_prop",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C03",
-      "pass": false,
+      "id": "cta_present",
+      "pass": true,
       "required": true
     },
     {
-      "id": "C04",
-      "pass": false,
-      "required": true
+      "id": "pricing_or_access",
+      "pass": true,
+      "required": false
     },
     {
-      "id": "C05",
-      "pass": false,
+      "id": "evidence_or_demo",
+      "pass": true,
       "required": false
     }
   ],
-  "laddoo_score": 50,
-  "score": 50,
-  "tier": "FADING",
-  "summary": "Public-surface review of nexu-io/html-anything.",
-  "confidence": "low",
+  "laddoo_score": 76,
+  "score": 76,
+  "tier": "STEADY",
+  "summary": "Reuses the coding-agent CLI you have already authenticated as the rendering engine, so turning notes into publish-ready HTML needs no new key and no new subscription.",
+  "confidence": "medium",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
@@ -66,13 +66,148 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_api": true,
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_api: \"API key\" in preanalysis.scoring_hypothesis",
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Inverted but genuinely agent-native: the agent is the engine rather than the consumer. The product detects an existing authenticated coding-agent CLI on the machine - Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI, GitHub Copilot CLI, OpenCode, Qwen Coder or Aider - and streams its stdout into a sandboxed iframe. Skills are SKILL.md folders, so an agent extends the system by writing a file rather than calling an API. There is no HTTP API or MCP endpoint; the integration contract is the CLI and the filesystem.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.05",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Reuses the coding-agent CLI you have already authenticated as the rendering engine, so turning notes into publish-ready HTML needs no new key and no new subscription.",
+    "body": "The insight here is economic rather than technical, and it is a good one. Anyone who writes for the web already has a coding agent authenticated in their terminal; asking them to buy another AI subscription to convert Markdown into a polished page is asking them to pay twice. HTML Anything detects whichever of eight coding-agent CLIs is already on the machine - Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI, GitHub Copilot CLI, OpenCode, Qwen Coder and Aider are named - and streams that CLI's stdout into a sandboxed iframe over SSE so the layout assembles in view. No new account, no new API key. The second good decision is making the skill system boringly inspectable: 75 templates, each a SKILL.md folder you can fork and edit, with the picker described as a directory listing in disguise. That is the opposite of the usual opaque prompt library, and it means the extension path is reading a folder rather than reverse-engineering a product. Tabular input is parsed in-browser so data does not leave the laptop, nine named surface modes cover specific destinations rather than generic styling, and export targets are concrete down to the mechanism (CSS inlined via juice for WeChat, 2x PNG via modern-screenshot for X). It is Apache-2.0 with 9.3K stars. The surface also does something rare and creditable: it dates its own statistics - stats verified 2026-05-19, live where the API is reachable - which is a provenance habit most vendors skip. The caveats are that the export targets are heavily weighted to Chinese platforms, several roadmap items sit beyond the stable set, and this is a sister project within a larger family, so its independent maintenance commitment is not established.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-01",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (76) because the core premise removes a real cost rather than adding a feature, the skill system is deliberately inspectable as plain folders which makes extension and audit trivial, the local-processing claim is specific about mechanism (in-browser parsing named libraries, agent runs on the laptop, only the Next.js shell is deployable), the licence is a clear Apache-2.0 with a substantial star count, and the page dates its own statistics instead of presenting them as timeless. Not VITAL because the capability depends entirely on third-party CLIs whose output format it does not control, the export surface is concentrated on platforms many readers will not use, part of the feature set is roadmap rather than stable, and as a sister project in a larger family it carries no independent maintenance commitment. This replaces an earlier 50/FADING produced when our crawl captured none of this surface.",
+  "what_it_does_well": [
+    "Removes the duplicate-subscription cost by using the coding-agent CLI the operator has already authenticated as the rendering engine",
+    "Auto-detects eight named coding-agent CLIs rather than claiming generic compatibility",
+    "Makes the skill system plain folders - 75 SKILL.md templates, forkable and editable, with the picker openly described as a directory listing",
+    "Keeps tabular input local, naming the in-browser parsing libraries, so data does not leave the machine",
+    "Streams the agent's output into a sandboxed iframe over SSE so the layout can be watched assembling",
+    "Specifies export mechanisms concretely per destination rather than claiming generic export",
+    "Dates its own statistics and states the condition under which they hold - an honesty habit most vendor surfaces skip"
+  ],
+  "what_it_fails_at": [
+    "Output quality is bounded by whichever third-party CLI is installed, and the surface sets no expectation for how results vary between them",
+    "Export targets skew heavily to Chinese platforms (WeChat MP, Zhihu, Xiaohongshu, Weibo), limiting relevance elsewhere",
+    "Several capabilities sit on a roadmap beyond the stable set rather than shipping",
+    "It is a sister project inside a larger family, with no independent maintenance or release commitment stated",
+    "No published evidence of output quality across the 75 templates beyond a showcase of four tiles"
+  ],
+  "best_for": [
+    "Writers and developers who already run a coding-agent CLI and refuse to pay for a second AI subscription to format output",
+    "Anyone publishing to WeChat, Zhihu, Xiaohongshu or X who needs platform-correct HTML rather than a generic page",
+    "Teams that want their templates to be auditable, forkable files rather than a vendor's hidden prompt library",
+    "Users with sensitive tabular data who need parsing to stay in the browser"
+  ],
+  "not_recommended_for": [
+    "Anyone without a coding-agent CLI already installed and authenticated - that is the engine, not an option",
+    "Teams needing a hosted service with no local setup, since the rendering loop stays on the laptop by design",
+    "Publishers targeting only Western platforms, where much of the export work does not apply",
+    "Buyers needing a supported product with a maintenance commitment rather than an open-source sister project"
+  ],
+  "red_flags": [
+    "The product has no rendering capability of its own - it is a shell around third-party CLIs it does not control, so a change in any of those CLIs can degrade output with no recourse",
+    "No independent maintenance or release commitment is stated for what the surface itself labels a sister project of a larger family"
+  ],
+  "compared_to": [
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is one of the CLIs HTML Anything can drive, not a competitor to it - Aider edits code in a repository, HTML Anything borrows that same agent to render documents for publication. Choose Aider for code; use HTML Anything on top when the output is a page someone reads.",
+      "preferred_for_axis": "publishing-output"
+    },
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is a general coding agent and is explicitly one of the eight engines HTML Anything detects; HTML Anything contributes the template library, surface modes and platform-specific export. Choose Claude Code alone if you will hand-write the HTML; add HTML Anything for the 75 templates and the export plumbing.",
+      "preferred_for_axis": "template-and-export-layer"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Uses an already-authenticated local coding-agent CLI as the rendering engine, requiring no new account or API key",
+      "source": "https://open-design.ai/html-anything/",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Eight coding-agent CLIs are auto-detected and named",
+      "source": "https://open-design.ai/html-anything/ (section: eight coding agents auto-detected)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "75 skill templates, each a SKILL.md folder that can be forked and edited",
+      "source": "https://open-design.ai/html-anything/ (section: skills are folders, not magic)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Tabular data is parsed in-browser via named libraries so nothing leaves the laptop",
+      "source": "https://open-design.ai/html-anything/ (section: how it works, step 01)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Apache-2.0 licence with a published star count, and statistics dated 2026-05-19",
+      "source": "https://open-design.ai/html-anything/ (header statistics block)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    },
+    {
+      "claim": "Nine surface modes and six export targets with per-destination mechanisms stated",
+      "source": "https://open-design.ai/html-anything/ (sections: nine surface modes, export targets)",
+      "tested_at": "2026-10-30",
+      "verified": true
+    }
+  ],
+  "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
+  "staleness_after": "2027-01-30",
+  "review_age_days_at_publish": 2,
+  "next_review_due_at": "2027-01-30",
+  "attestation_url": "/data/attestations/nexu-io-html-anything.json",
+  "signature_pending": true,
+  "aspect_versions": {
+    "hlido_opinion": "1.0",
+    "tier_rationale": "1.0",
+    "what_it_does_well": "1.0",
+    "what_it_fails_at": "1.0",
+    "best_for": "1.0",
+    "not_recommended_for": "1.0",
+    "red_flags": "1.0",
+    "compared_to": "1.0",
+    "evidence_urls": "1.0",
+    "agent_relevance": "1.0",
+    "checklist": "1.0"
+  },
+  "aspect_versions_as_of": "2026-11-01",
+  "score_correction": {
+    "previous_score": 50,
+    "previous_tier": "FADING",
+    "corrected_on": "2026-11-01",
+    "basis": "The previous score was produced by a run whose public-surface capture returned nothing, so it recorded Hlido's inability to read the surface rather than a finding about the vendor. The engine re-tested on 2026-10-30 and captured the full surface; this score is derived from that evidence."
+  },
+  "pricing_facts": {
+    "schema": "pricing-facts/1",
+    "model": [
+      "open-source",
+      "subscription"
     ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
+    "free_tier": true,
+    "pricing_disclosed": {
+      "pass": true
+    },
+    "last_verified": "2026-06-16",
+    "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
+    "derived_at": "2026-11-01"
   }
 }
