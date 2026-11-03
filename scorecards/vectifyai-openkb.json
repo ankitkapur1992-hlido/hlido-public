@@ -2,7 +2,7 @@
   "slug": "vectifyai-openkb",
   "name": "VectifyAI/OpenKB",
   "agent_url": "https://github.com/VectifyAI/OpenKB",
-  "category": "AI Agent",
+  "category": "Infrastructure",
   "run_id": "run-vectifyai-openkb-2130io7j",
   "run_at": "2026-06-18T12:00:53.202Z",
   "source": "hlido-drain-worker",
@@ -61,7 +61,7 @@
       "https://images.hlido.eu/reviews/vectifyai-openkb/run-410eebd0397cac52-pageindex-ai/page_chat.png",
       "https://images.hlido.eu/reviews/vectifyai-openkb/run-410eebd0397cac52-pageindex-ai/page_developer.png"
     ],
-    "verified_at": "2026-11-02T21:15:13.252Z",
+    "verified_at": "2026-11-03T21:22:56.984Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -75,13 +75,110 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
-    "has_cli": true,
-    "has_sdk": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview",
-      "has_sdk: \"pip install\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": true,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": null,
+    "behavioral_testable": true,
+    "agent_integration_path": "Directly agent-relevant as a retrieval component: the Page Search API is a documented HTTP surface an agent can call to narrow a long document to the pages worth reading, which is a real token-budget primitive for document agents. No CLI or MCP server documented; SDK availability is left null because the page references 'Start Building' and docs without evidencing a client library.",
+    "agent_friendly_score": 7
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A page-level retrieval API that claims to beat vector search on document Q&A — a sharp, falsifiable claim on a thin public surface.",
+    "body": "OpenKB's public surface is brief, and what it chooses to say is the interesting part. The pitch is page search rather than chunk-and-embed: the Page Search API finds the pages relevant to a question in about a second, so the LLM reads only those pages instead of the whole PDF — claimed as a 97% token-cost reduction and as both more accurate and faster than vector search. That is a genuinely falsifiable architectural claim, and a useful one, because chunk-level embedding retrieval has a well-known failure mode on long structured documents where the answer depends on page context the chunker destroyed. Positioning is consistent with it: 'Document AI for precision, traceability, and context', and 'get verifiable answers from complex documents' — traceability back to a page is exactly what a procurement or compliance reader needs, and page-level retrieval gives it for free in a way chunk IDs do not. The product is split sensibly into a chat app for people and an API for developers, with docs, pricing and a demo booking path. The weakness is the evidence, not the idea. 'More accurate and faster than vector search' is a benchmark claim with no benchmark attached — no dataset, no baseline, no numbers beyond the token-cost percentage, which measures input size rather than answer quality. Those are different claims and the page lets them blur. Two of five surface checks passed, and the captured page is thin enough (under 800 characters of substantive text) that much of what a buyer needs sits behind the docs rather than on the surface we can assess.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (70) because the core claim is specific, architecturally coherent and falsifiable, the product has a clear developer surface (Page Search API, docs, published pricing path), and two of five surface checks passed. Not higher because the accuracy claim against vector search carries no benchmark, dataset or baseline, and the public surface is too thin to evidence the traceability positioning it leads with.",
+  "what_it_does_well": [
+    "Page-level retrieval is a real architectural answer to a known chunk-embedding failure mode on long documents",
+    "Traceability is designed in — a page citation is inherently more checkable than a chunk ID",
+    "The token-cost claim is specific and quantified (97% reduction) rather than vague",
+    "Clean split between a chat app for people and a Page Search API for developers",
+    "Docs, pricing and a demo path are all present and reachable from the surface"
+  ],
+  "what_it_fails_at": [
+    "'More accurate and faster than vector search' is a benchmark claim with no benchmark, dataset or baseline published",
+    "Token-cost reduction measures input size, not answer quality — the page lets the two claims blur together",
+    "Public surface is very thin (under 800 characters of substantive text); most buying information is behind the docs",
+    "Three of five surface checks failed",
+    "No stated latency or throughput figures beyond an approximate 'about a second'",
+    "No MCP server, so the retrieval layer is not directly addressable by an MCP-speaking agent"
+  ],
+  "best_for": [
+    "Document Q&A over long structured PDFs where chunk-level retrieval loses page context",
+    "Compliance and procurement workflows that need an answer traceable to a page",
+    "Teams whose RAG token costs are dominated by over-retrieval",
+    "Developers wanting retrieval as an API rather than a stack to assemble"
+  ],
+  "not_recommended_for": [
+    "Short-document or conversational corpora where page structure carries no meaning",
+    "Teams needing published accuracy benchmarks before adopting a retrieval layer",
+    "Anyone requiring an MCP-addressable component",
+    "Self-hosted-only requirements — the surface describes a hosted API"
+  ],
+  "red_flags": [
+    "Claims to be 'More accurate and faster than vector search' with no benchmark, dataset or baseline — the one claim a retrieval product most needs to evidence"
+  ],
+  "compared_to": [
+    {
+      "slug": "llamaindex",
+      "verdict_diff": "LlamaIndex is the toolkit for building retrieval yourself, chunking strategy included. OpenKB sells one opinionated strategy as an API. LlamaIndex when you want control over the pipeline; OpenKB when you want page-level retrieval without building it.",
+      "preferred_for_axis": "managed-page-retrieval"
+    },
+    {
+      "slug": "qdrant",
+      "verdict_diff": "Qdrant is the vector database OpenKB positions itself against. If your documents are short or unstructured, vector search is the right tool. If they are long and structured and page context carries the answer, that is exactly OpenKB's claim — and the claim it has not benchmarked.",
+      "preferred_for_axis": "page-context-over-embeddings"
+    },
+    {
+      "slug": "jina-ai",
+      "verdict_diff": "Jina offers a broad embedding and reranking stack with published model benchmarks. OpenKB offers a narrower product with no benchmarks published. Jina where measured retrieval quality decides; OpenKB where page traceability is the requirement.",
+      "preferred_for_axis": "traceability-over-benchmarks"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Page-level retrieval instead of chunk embeddings",
+      "source": "https://pageindex.ai/",
+      "quote": "'Page Search API finds the relevant pages for each question in about a second, so your LLM reads only those, not the whole PDF.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Claimed token-cost reduction",
+      "source": "https://pageindex.ai/",
+      "quote": "'Page Search API — cut 97% token cost'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Accuracy claim against vector search, unbenchmarked",
+      "source": "https://pageindex.ai/",
+      "quote": "'More accurate and faster than vector search.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Positioning on traceability",
+      "source": "https://pageindex.ai/",
+      "quote": "'Get verifiable answers from complex documents' / 'Document AI for precision, traceability, and context.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Product split and developer surface",
+      "source": "https://pageindex.ai/",
+      "quote": "'Products | Chat App | Developer | Page Search API'; 'Docs | Blog | Pricing'; 'Start Building'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
