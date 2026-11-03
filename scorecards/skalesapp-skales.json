@@ -2,7 +2,7 @@
   "slug": "skalesapp-skales",
   "name": "skalesapp/skales",
   "agent_url": "https://github.com/skalesapp/skales",
-  "category": "Coding",
+  "category": "AI Agent",
   "run_id": "run-skalesapp-skales-2f429shj",
   "run_at": "2026-06-19T12:00:45.633Z",
   "source": "hlido-drain-worker",
@@ -47,8 +47,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-2e6492abf90858ef-skales-app",
-    "base": "https://images.hlido.eu/reviews/skalesapp-skales/run-2e6492abf90858ef-skales-app",
+    "run_id": "run-7eddd362d559bf3e-skales-app",
+    "base": "https://images.hlido.eu/reviews/skalesapp-skales/run-7eddd362d559bf3e-skales-app",
     "files": [
       "home.png",
       "page_features_.png",
@@ -56,13 +56,129 @@
       "page_scout_.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/skalesapp-skales/run-2e6492abf90858ef-skales-app/home.png",
-      "https://images.hlido.eu/reviews/skalesapp-skales/run-2e6492abf90858ef-skales-app/page_features_.png",
-      "https://images.hlido.eu/reviews/skalesapp-skales/run-2e6492abf90858ef-skales-app/page_.png",
-      "https://images.hlido.eu/reviews/skalesapp-skales/run-2e6492abf90858ef-skales-app/page_scout_.png"
+      "https://images.hlido.eu/reviews/skalesapp-skales/run-7eddd362d559bf3e-skales-app/home.png",
+      "https://images.hlido.eu/reviews/skalesapp-skales/run-7eddd362d559bf3e-skales-app/page_features_.png",
+      "https://images.hlido.eu/reviews/skalesapp-skales/run-7eddd362d559bf3e-skales-app/page_.png",
+      "https://images.hlido.eu/reviews/skalesapp-skales/run-7eddd362d559bf3e-skales-app/page_scout_.png"
     ],
-    "verified_at": "2026-11-02T21:15:20.679Z",
+    "verified_at": "2026-11-03T21:23:05.408Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "An unusually broad local-first desktop agent harness whose own pitch is that the harness, not the model, is the product — and our checks could not verify any of it.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. What the captured surface describes is one of the most expansive scopes we have seen stated on a single page: a desktop AI agent, installed as an app and running locally rather than in a vendor cloud, with 400+ built-in tools, 29 model providers including local inference, approval gates, a file sandbox, session-surviving memory, planning, and goals that resume after a restart — reached through chat, a voice surface, code, a Studio, a background cockpit, a desktop companion and a phone app. The framing is the interesting part and it is argued, not asserted: frontier model capability is treated as a commodity you buy by the token, so what decides whether work actually gets finished is everything around the model, and that layer is the whole product. Tools are described as loaded on demand rather than all at once, specifically so small models stay reliable — a detail that suggests real engineering rather than a feature list. The surface also carries specific adoption figures (50,000+ installations since March, 9,000+ downloads in 30 days, 2.2k GitHub stars) and a local-data claim (100% stored on your machine), none of which our run verified. Breadth at this scale is itself the main risk: a product spanning voice, code, mobile, Studio and a scout that runs for months has many surfaces to keep reliable, and the public page gives no evidence about any of them under load. Free for personal use with no signup lowers the cost of forming your own view, which is the sensible next step here.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a confidence verdict, not a quality one: every required public-surface check recorded a failure on this run, so nothing on the page — the install path, the tool count, the provider list, the privacy claim — was independently confirmed by us. The score is therefore what we could prove, which is almost nothing. It stays FADING rather than moving up because an unverified claim cannot earn a tier, and a re-test is queued; it is not placed lower because the captured page is detailed, internally consistent and makes falsifiable claims.",
+  "what_it_does_well": [
+    "States an explicit and arguable thesis — the harness beats the model — rather than listing features",
+    "Local-first by design: installs as an app, runs on the user's machine, claims all data stays local",
+    "Model-agnostic across 29 providers including local inference, with mid-conversation switching claimed",
+    "On-demand tool loading is justified by a real constraint (keeping context lean so small models stay reliable)",
+    "Free for personal use with no signup, so the claims are cheap for a user to test independently",
+    "Describes approval gates and a file sandbox — the right primitives for an agent with local filesystem access"
+  ],
+  "what_it_fails_at": [
+    "Every required Hlido public-surface check failed on this run — none of the claims below are independently verified",
+    "Adoption figures (50,000+ installs, 9,000+ 30-day downloads) are self-reported with no published method",
+    "The '100% stored on your machine' privacy claim is material and carries no third-party audit or attestation",
+    "Scope spans chat, voice, code, Studio, mobile and long-running scouts with no reliability evidence for any surface",
+    "No API, MCP server or programmatic interface documented for another agent to drive it",
+    "No security posture published for a product granted local filesystem and shell reach"
+  ],
+  "best_for": [
+    "Individuals wanting a local-first desktop assistant with no cloud dependency",
+    "Privacy-sensitive users who need model inference and data to stay on their own hardware",
+    "Users who refuse model lock-in and want to switch providers without changing tools",
+    "Anyone willing to evaluate first-hand — free personal use makes that the cheapest path to a verdict"
+  ],
+  "not_recommended_for": [
+    "Teams needing a programmatic or agent-to-agent integration path (none is documented)",
+    "Organisations requiring audited privacy or security guarantees before granting local filesystem access",
+    "Procurement processes that need independent verification — our own checks could not supply it",
+    "Server-side or headless deployments; this is a desktop application"
+  ],
+  "red_flags": [
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued",
+    "A local-first privacy claim ('100% stored on your machine') on a product with filesystem and shell reach is exactly the claim that warrants independent verification, and none is published"
+  ],
+  "compared_to": [
+    {
+      "slug": "openinterpreter",
+      "verdict_diff": "Open Interpreter is the established local-first agent that runs code on your machine, with a far narrower surface. Skales claims a much broader harness (voice, mobile, Studio, 400+ tools) but we verified none of it. Open Interpreter for a checkable local agent; Skales if the breadth is what you need and you will evaluate it yourself.",
+      "preferred_for_axis": "verified-narrow-over-unverified-broad"
+    },
+    {
+      "slug": "ollama",
+      "verdict_diff": "Ollama solves only local model serving and solves it well; Skales positions the harness ON TOP of local inference and integrates Ollama as one of its providers. They are complementary rather than competing.",
+      "preferred_for_axis": "harness-not-inference"
+    },
+    {
+      "slug": "goose",
+      "verdict_diff": "Goose is an open-source local agent with a documented extension model and a vendor behind it. Skales offers more surfaces and more tools, with less public evidence. Goose where auditability and a known maintainer matter; Skales where breadth does.",
+      "preferred_for_axis": "auditability"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Desktop agent that installs as an app and runs locally",
+      "source": "https://skales.app/",
+      "quote": "'It installs like an app and runs on your computer, not in someone's cloud.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Claimed scale of the harness",
+      "source": "https://skales.app/",
+      "quote": "'400+ built-in tools, approval gates, memory, planning and the surfaces to use them'; '29 AI providers'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Self-reported adoption figures (NOT verified)",
+      "source": "https://skales.app/",
+      "quote": "'50,000+ installations since March', '9,000+ downloads, last 30 days', '2.2k GitHub stars'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Local-data claim (NOT verified)",
+      "source": "https://skales.app/",
+      "quote": "'100% stored on your machine'; 'No cloud · No terminal · No signup · No subscription · Free for private use'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Stated thesis",
+      "source": "https://skales.app/",
+      "quote": "'The harness beats the model.' — 'Frontier capability is already a commodity... What decides whether an AI actually finishes your work is everything around the model.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "On-demand tool loading rationale",
+      "source": "https://skales.app/",
+      "quote": "'Tools are loaded on demand rather than all at once, so the context stays lean and small models stay reliable.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": null,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "Low agent-to-agent relevance on the evidence available: the captured surface documents human-facing surfaces (chat, voice, code, Studio, mobile) and no API, CLI or MCP server another agent could drive. MCP support is left null rather than false because the page mentions an extensible tool layer without evidencing a server. Not behaviourally testable from our side — it is a desktop install.",
+    "agent_friendly_score": 2
   }
 }
