@@ -2,7 +2,7 @@
   "slug": "holaboss-ai-holaos",
   "name": "holaboss-ai/holaOS",
   "agent_url": "https://github.com/holaboss-ai/holaOS",
-  "category": "AI Agent",
+  "category": "Workflow & Automation",
   "run_id": "run-holaboss-ai-holaos-p6e71npi",
   "run_at": "2026-06-14T06:00:55.202Z",
   "source": "hlido-drain-worker",
@@ -60,11 +60,119 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.claim"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": null,
+    "has_cli": false,
+    "has_mcp": null,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "The surface ASSERTS agent-to-agent openness — 'any agent... can plug into and operate' — but documents no API, protocol or MCP server to do it with, so API and MCP are recorded as null rather than false: the claim exists without evidence either way. holaProxy is described as a model gateway (outbound) rather than an inbound control surface. Not behaviourally testable from the public surface.",
+    "agent_friendly_score": 3
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "Agent-native operations infrastructure for service businesses, built around the handoffs where margin leaks — a clear thesis, almost no evidence.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. The captured surface makes an argument rather than a feature claim, and it is a good one: a service company leaks value at the seams — between the enquiry and the CRM, the sale and the kickoff, a finished project and the next proposal — and every one of those handoffs is a person remembering to do something, so every forgotten handoff is margin. holaboss positions itself as the infrastructure that makes the handoff the agent's job. Naming the handoff rather than the task as the unit of work is a sharper diagnosis of why service-firm automation usually fails than most products in this space manage. The product is laid out as six chapters following one journey: website building, 'AI employees' with a role, scope and work log, customer records that stay correct because no human updates them, delivery management turning closed deals into structured engagements, a company brain as a shared knowledge layer, and service templates that turn the best engagement into the default. The stack is described in three parts — holaOS as an open-source agent-native desktop with a builder community, holaProxy as a model gateway with unified credits and token metering, and Neo Lab as the research arm — and pricing is usage-based through that one meter with credits stated not to expire. The notable openness claim is that any agent, including Cowork, Claude or the customer's own, can plug in and operate, which would make this a substrate rather than a walled product. Against all of that: nothing on the page is evidence. No customers, no case studies, no figures, no integration documentation, and no verified checks from our run. This is a well-argued thesis at the pre-proof stage.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a confidence verdict, not a quality one: every required public-surface check failed on this run, and even taking the page at face value it carries no customers, case studies, metrics or integration documentation — there is very little a register could credit. The score states what we verified, which was nothing, and a re-test is queued. It is not lower because the positioning is coherent and specific, the stack is named in parts rather than hand-waved, and pricing is stated as usage-based rather than hidden.",
+  "what_it_does_well": [
+    "Diagnoses the handoff, not the task, as the unit where service-firm margin leaks — a sharper framing than most",
+    "Six-chapter structure maps to a recognisable service-business lifecycle rather than an arbitrary feature list",
+    "'AI employees' are given a role, a scope and a work log — the accountability primitives such a claim needs",
+    "Stack is named in parts (holaOS open-source desktop, holaProxy gateway, Neo Lab research) rather than left opaque",
+    "Claims openness to third-party agents (Cowork, Claude, or the customer's own) rather than a closed system",
+    "Usage-based pricing through a single meter, with credits stated not to expire"
+  ],
+  "what_it_fails_at": [
+    "All required public-surface checks failed on this run — nothing below is independently verified by us",
+    "No customers, case studies, logos or outcome figures anywhere on the surface",
+    "The 'any agent can plug in' claim carries no integration documentation, API reference or protocol name",
+    "No evidence that customer records stay correct without human updates — the load-bearing claim of chapter 03",
+    "Pricing is described as usage-based but no rates appear on the captured surface",
+    "No security, data-residency or tenancy detail for a system holding client records and delivery data"
+  ],
+  "best_for": [
+    "Service companies (agencies, consultancies) whose pain genuinely is handoff loss rather than tooling",
+    "Teams willing to evaluate an early product and wanting an agent-native rather than CRM-first design",
+    "Organisations that want to bring their own agent instead of adopting a vendor's"
+  ],
+  "not_recommended_for": [
+    "Teams needing references or case studies before committing operational data",
+    "Anyone depending on the third-party-agent integration claim — it is undocumented",
+    "Regulated industries needing published security and data-residency guarantees",
+    "Product or engineering companies — this is scoped to service delivery"
+  ],
+  "red_flags": [
+    "Claims any agent — Cowork, Claude or the customer's own — can plug in and operate, with no integration documentation, API reference or protocol named anywhere on the surface",
+    "No customers, case studies or outcome evidence of any kind for a product asking to hold client records and delivery data",
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued"
+  ],
+  "compared_to": [
+    {
+      "slug": "n8n",
+      "verdict_diff": "n8n is a mature, self-hostable automation platform that would let a service firm wire these handoffs itself, with a large integration library. holaboss offers the opinionated agent-native version with none of n8n's track record. n8n for proven, buildable automation; holaboss if the pre-built service-company shape is worth the risk.",
+      "preferred_for_axis": "proven-over-opinionated"
+    },
+    {
+      "slug": "dify-ai",
+      "verdict_diff": "Dify is an established platform for building and operating LLM applications, agent-native but domain-neutral. holaboss ships the service-business domain model on top. Dify where you want a proven substrate; holaboss where the domain model is the value.",
+      "preferred_for_axis": "domain-model-included"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI gives you the multi-agent framework to build 'AI employees' with roles and scopes yourself. holaboss claims them as a product with work logs attached. Build with CrewAI for control; evaluate holaboss if you would rather not build it.",
+      "preferred_for_axis": "product-not-framework"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Positioning as agent-native infrastructure for service companies",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'The Agent Native Infra | for Service Companies' — 'Run your service business on agents — from winning clients to delivering the work.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "The handoff thesis",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'Between the enquiry and the CRM. Between the sale and the kickoff... Every handoff is a person remembering to do something, and every forgotten handoff is margin.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Six-chapter product structure",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'01 Business Website Building | 02 AI Employee | 03 Customer Management | 04 Delivery Management | 05 Company Brain | 06 Service Template Management'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Third-party agent openness claim (NOT verified, undocumented)",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'holaboss is the infrastructure that any agent — Cowork, Claude, or your own — can plug into and operate.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Stack components",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'OPEN SOURCE holaOS' (Agent Native Desktop + holahub builder community); 'GATEWAY holaProxy' (one API for every model, unified credits, token metering); 'RESEARCH Neo Lab'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Pricing model",
+      "source": "https://www.holaboss.ai/",
+      "quote": "'Start free. Scale by the token.' — 'One meter through holaProxy — credits cover model and integration calls, and they never expire.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
