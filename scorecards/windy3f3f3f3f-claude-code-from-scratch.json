@@ -47,19 +47,19 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-0b9e6ab421b1e5ce-windy3f3f3f3f-github-io",
-    "base": "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-0b9e6ab421b1e5ce-windy3f3f3f3f-github-io",
+    "run_id": "run-ee152e58e0d08f77-windy3f3f3f3f-github-io",
+    "base": "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-ee152e58e0d08f77-windy3f3f3f3f-github-io",
     "files": [
       "home.png",
       "https___windy3f3f3f3f_github_io_how-claude-code-wo.png",
       "https___windy3f3f3f3f_github_io_claude-code-from-s.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-0b9e6ab421b1e5ce-windy3f3f3f3f-github-io/home.png",
-      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-0b9e6ab421b1e5ce-windy3f3f3f3f-github-io/https___windy3f3f3f3f_github_io_how-claude-code-wo.png",
-      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-0b9e6ab421b1e5ce-windy3f3f3f3f-github-io/https___windy3f3f3f3f_github_io_claude-code-from-s.png"
+      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-ee152e58e0d08f77-windy3f3f3f3f-github-io/home.png",
+      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-ee152e58e0d08f77-windy3f3f3f3f-github-io/https___windy3f3f3f3f_github_io_how-claude-code-wo.png",
+      "https://images.hlido.eu/reviews/windy3f3f3f3f-claude-code-from-scratch/run-ee152e58e0d08f77-windy3f3f3f3f-github-io/https___windy3f3f3f3f_github_io_claude-code-from-s.png"
     ],
-    "verified_at": "2026-11-02T21:15:17.321Z",
+    "verified_at": "2026-11-03T21:23:01.373Z",
     "verified_count": 3,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -73,12 +73,117 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
     "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP\" in preanalysis.raw_markdown_preview",
-      "note: preanalysis.access_class=api_or_cli with no textual corroboration — left unset"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Runnable as a CLI (npm start / mini-claude-py) with a documented MCP client over stdio, so it CAN be driven, but its value to an agent ecosystem is as a reference implementation rather than a component to depend on — it carries no maintenance commitment. Behaviourally testable: the project states every chapter runs without an API key.",
+    "agent_friendly_score": 6
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A 13-chapter teardown that rebuilds a coding agent in ~5,000 lines — genuinely useful as education, and explicit that it is not a product.",
+    "body": "This is a tutorial repository, and its honesty about that is the reason it scores as well as it does. The captured documentation walks 13 chapters from an empty loop to a working coding agent in roughly 5,000 lines, in both TypeScript and Python, covering the agent loop, a 13-tool system, system-prompt engineering, CLI and session handling, streaming with two backends, a permission model, context management, then memory, skills, plan mode, multi-agent and MCP integration. Two things lift it above the usual 'build X from scratch' genre. First, every code chapter is stated to be runnable without an API key, which removes the main reason such tutorials rot unread. Second, it carries a side-by-side architecture comparison against Claude Code that works in the right direction — 66+ tools versus 13, a four-stage compression pipeline versus four layers, seven permission layers with AST analysis versus five modes with declarative rules, 500k+ lines versus ~5,500 — so a reader learns where the simplification was made rather than being told the small version is equivalent. The disclaimer is equally clear: it follows Claude Code's publicly observable behaviour, does not claim to match the real internals, and states no affiliation with Anthropic, whose trademark it names. The limits follow from the purpose. This is not a maintained product, carries no support posture, and most of the documentation is in Chinese with only partial English, which narrows the audience it can actually teach.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) because three of five surface checks passed and the public surface does what it claims: a specific chapter structure, runnable code per chapter, a concrete architecture comparison with the thing it is modelled on, and an unambiguous scope disclaimer. Not VITAL because it is explicitly a learning project rather than something to deploy — no support, no stability commitment, no production evidence — and the predominantly Chinese documentation limits who can use it.",
+  "what_it_does_well": [
+    "Every code chapter is stated to run without an API key — removes the usual barrier to actually following along",
+    "Architecture comparison against Claude Code is specific and candid about what was simplified away",
+    "Two complete implementations (TypeScript and Python) rather than pseudocode",
+    "Scope disclaimer is explicit: publicly observable behaviour only, no claimed parity, no Anthropic affiliation",
+    "Covers the parts most tutorials skip — permissions, context compression, memory recall, MCP over stdio",
+    "Documented CLI flags map to real operational concerns (cost caps, turn limits, plan mode, CI mode)"
+  ],
+  "what_it_fails_at": [
+    "Educational project, not a maintained product — no support, SLA or stability commitment",
+    "Documentation is predominantly Chinese; English coverage is partial, limiting the audience",
+    "No production or reliability evidence, by design",
+    "Simplified against the real thing by its own comparison table (13 tools vs 66+, 5 permission modes vs 7 layers)",
+    "Depends on third-party model APIs the project does not control"
+  ],
+  "best_for": [
+    "Engineers who want to understand coding-agent internals without reading a 500k-line codebase",
+    "Teams building their own agent harness who need a reference implementation to study",
+    "Chinese-reading developers (the primary documentation language)",
+    "Anyone evaluating what a minimal viable coding agent actually requires"
+  ],
+  "not_recommended_for": [
+    "Production use — it is a tutorial and says so",
+    "Teams needing vendor support or a maintenance guarantee",
+    "English-only readers (documentation coverage is partial)",
+    "Anyone looking for Claude Code parity; the project explicitly disclaims it"
+  ],
+  "red_flags": [
+    "Names and benchmarks itself against a third party's trademarked product; the disclaimer is present and clear, but the dependency on that framing is structural"
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is the production agent this project reconstructs for teaching, and the repo's own table concedes the gap (66+ tools vs 13, 500k+ lines vs ~5,500). Use Claude Code to do work; use this to understand how such a thing is built.",
+      "preferred_for_axis": "education-not-production"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is a maintained open-source coding agent you can read AND run in production. This project is smaller and purely instructional. Aider when you want working software whose source you can study; this when the lesson is the point.",
+      "preferred_for_axis": "maintained-vs-instructional"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "OpenCode is a production-intent open-source terminal agent. This repository teaches the architecture such an agent needs. Complementary: read this, then deploy one of those.",
+      "preferred_for_axis": "reference-implementation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "13-chapter tutorial rebuilding a coding agent in ~5,000 lines, TypeScript and Python",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "'本项目用 约 5000 行代码（TypeScript 和 Python 两个版本分别写），从零手写 Claude Code 的核心'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Every code chapter runs without an API key",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "'▶ 每章代码都能跑（无需 API key）'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Explicit scope disclaimer and no Anthropic affiliation",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "'这是一个从零手写 Claude Code 的学习项目... 不保证和 Claude Code 真实内部实现一致。\"Claude Code\" 是 Anthropic 的商标，本项目和 Anthropic 没有关联。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Candid architecture comparison with the product it models",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "Claude Code 66+ 内置工具 vs 13 个工具; 4 级压缩流水线 vs 4 层压缩; 7 层权限 + AST vs 5 种模式; 50 万+ 行 vs ~5500 行",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Operational CLI flags are documented",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "--resume, --yolo, --plan, --accept-edits, --dont-ask (CI mode), --max-cost, --max-turns",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Covers MCP integration over stdio",
+      "source": "https://diwang.info/claude-code-from-scratch/#/",
+      "quote": "'MCP 集成 | McpManager + JSON-RPC over stdio'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
