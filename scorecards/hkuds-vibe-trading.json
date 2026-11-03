@@ -3,7 +3,7 @@
   "name": "HKUDS/Vibe-Trading",
   "agent_url": "https://vibetrading.wiki/",
   "repo_url": "https://github.com/HKUDS/Vibe-Trading",
-  "category": "AI Agent",
+  "category": "Specialized verticals",
   "run_id": "run-hkuds-vibe-trading-gh0jhwu1",
   "run_at": "2026-07-14T06:00:46.853Z",
   "source": "hlido-drain-worker",
@@ -67,11 +67,123 @@
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
-    "has_mcp": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP\" in preanalysis.claim"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-relevant as a pip-installable CLI and Python package with a documented one-shot invocation ('vibe-trading run -p \"...\"') and a swarm mode, so an orchestrating agent can drive it as a subprocess and consume the run cards it emits. No API or MCP server documented. Behaviourally testable via PyPI install.",
+    "agent_friendly_score": 7
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "An open-source finance research agent that draws its own boundary at execution — the most carefully scoped trading-adjacent agent we have seen, and unverified by our checks.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. Vibe-Trading turns natural-language market questions into runnable research, and the thing that distinguishes it from the crowded 'AI trading bot' category is a boundary section that limits the product rather than expanding it. The captured page states it is built for research, simulation and backtesting; that any live trading is opt-in and read-only by default; that it runs only through a broker the user authorises, within limits the user sets, and can be halted instantly; that it holds no funds and operates no execution venue; and that it is not investment advice and is experimental. In a category where overclaiming is the norm and the downside is a user's money, a vendor that writes down what it will not do is giving a reader something far more useful than a performance figure. The capability surface is specific: eleven backtesting engines across A-shares, global, Indian, Korean and Vietnamese equities, crypto, futures, forex, cross-market composites and options portfolios; preset swarm teams (investment committee, quant desk, risk review, macro, crypto); a 'shadow account' that parses broker journals, extracts implicit rules and runs counterfactual backtests; and an agent harness with persistent memory, session search, editable skills and context compression. A documented four-stage loop (route, ground, test, deliver) returns run cards, tool traces and caveats, which is the right shape for research you may need to defend later. Two cautions. The illustrative CLI output on the page shows a +18.6% return with -7.4% max drawdown — a marketing example, not a result, and a reader could easily take it for one. And the claimed 37.2k stars and 6.7K monthly installs are self-reported.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a measurement verdict: all required public-surface checks failed on this run, so the engine count, the harness features and the self-reported adoption figures are unconfirmed by us. In a domain where a wrong answer costs a user money, an unverified claim must not earn a tier — a re-test is queued. It is not lower because the captured surface is unusually disciplined: it states its own limits, disclaims investment advice, and makes the execution boundary explicit rather than burying it.",
+  "what_it_does_well": [
+    "Draws an explicit boundary at execution: research and backtesting only, live trading opt-in and read-only by default",
+    "States plainly that it holds no funds, runs no execution venue, and is not investment advice",
+    "Broker authorisation stays with the user, within user-set limits, with an instant halt",
+    "Backtesting breadth is enumerated by market rather than claimed generically (eleven engines, named markets)",
+    "The research loop (route, ground, test, deliver) returns run cards, tool traces and caveats — defensible output",
+    "Shadow-account counterfactual backtesting against real broker journals is a genuinely differentiated capability",
+    "Labels itself experimental rather than production-ready"
+  ],
+  "what_it_fails_at": [
+    "All required public-surface checks failed on this run — none of the capability claims is independently verified by us",
+    "The illustrative CLI output (+18.6% return, -7.4% max drawdown) reads like a result and is not one",
+    "No published backtest methodology, so look-ahead and survivorship-bias handling is unknown",
+    "Self-reported adoption figures (37.2k stars, 6.7K installs/mo) with no method",
+    "Eleven backtesting engines across many markets is a large surface with no per-engine validation evidence",
+    "Financial-domain software with no stated audit, compliance posture or data-provenance detail"
+  ],
+  "best_for": [
+    "Quantitative researchers who want natural-language access to backtesting across multiple markets",
+    "Agent-driven research pipelines where reproducible run artifacts matter",
+    "Analysts reviewing their own broker journals for implicit rules and counterfactuals",
+    "Non-US market coverage (A-shares, Indian, Korean, Vietnamese equities) that most tools skip"
+  ],
+  "not_recommended_for": [
+    "Anyone seeking automated live trading — the project explicitly declines that role",
+    "Users expecting investment advice or validated strategy performance",
+    "Regulated institutions needing an audited, compliant research platform",
+    "Anyone who would read the illustrative return figure as evidence of performance"
+  ],
+  "red_flags": [
+    "An illustrative CLI output showing '+18.6%' return and '-7.4% max drawdown' sits on the public surface where a reader can mistake a demo string for a measured result",
+    "No published backtesting methodology — look-ahead and survivorship-bias handling is unknown, which is the first question any backtest claim must answer",
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued"
+  ],
+  "compared_to": [
+    {
+      "slug": "openinterpreter",
+      "verdict_diff": "Open Interpreter is a general local code-execution agent you could point at market data yourself. Vibe-Trading ships the finance domain — eleven backtest engines, preset research teams, broker-journal parsing — plus an explicit execution boundary. General tool versus domain tool.",
+      "preferred_for_axis": "finance-domain-depth"
+    },
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is the framework for assembling the kind of multi-agent research team Vibe-Trading ships pre-built (investment committee, quant desk, risk review). Build it with CrewAI if your process is unusual; take the presets if it is not.",
+      "preferred_for_axis": "prebuilt-research-teams"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Open-source finance research agent connecting prompts to market data and backtests",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'OPEN-SOURCE FINANCE RESEARCH AGENT | Turn market questions into runnable research.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Explicit execution boundary",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'Vibe-Trading is built for research, simulation, and backtesting. Any live trading is opt-in and read-only by default... It holds no funds, runs no execution venue, and is not investment advice. Experimental — use at your own risk.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Backtesting breadth by market",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'Eleven engines across A-shares, global, Indian, Korean and Vietnamese equities, crypto, futures, forex, cross-market composites, and options portfolios.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Documented four-stage research loop",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'01 Route | 02 Ground | 03 Test | 04 Deliver' — 'Return run cards, exports, reports, tool traces, and caveats'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Shadow-account capability",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'Parse broker journals, extract implicit rules, run counterfactual backtests, and render audit reports.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Install path and self-reported scale (NOT verified)",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'pip install vibe-trading-ai' / 'vibe-trading init'; 'Star | 37.2k'; '📦 6.7K installs/mo'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Illustrative output that is a demo, not a result",
+      "source": "https://vibetrading.wiki/home/",
+      "quote": "'return +18.6% max drawdown -7.4%' shown as sample CLI output on the homepage",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
