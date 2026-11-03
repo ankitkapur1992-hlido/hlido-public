@@ -47,8 +47,8 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-45bfa002c336b2ba-whale-site-pages-dev",
-    "base": "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-45bfa002c336b2ba-whale-site-pages-dev",
+    "run_id": "run-a89ddbcb7a0e2a43-whale-site-pages-dev",
+    "base": "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-a89ddbcb7a0e2a43-whale-site-pages-dev",
     "files": [
       "home.png",
       "page_features.png",
@@ -56,12 +56,12 @@
       "page_getting-started.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-45bfa002c336b2ba-whale-site-pages-dev/home.png",
-      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-45bfa002c336b2ba-whale-site-pages-dev/page_features.png",
-      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-45bfa002c336b2ba-whale-site-pages-dev/page_.png",
-      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-45bfa002c336b2ba-whale-site-pages-dev/page_getting-started.png"
+      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-a89ddbcb7a0e2a43-whale-site-pages-dev/home.png",
+      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-a89ddbcb7a0e2a43-whale-site-pages-dev/page_features.png",
+      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-a89ddbcb7a0e2a43-whale-site-pages-dev/page_.png",
+      "https://images.hlido.eu/reviews/usewhale-deepseek-code-whale/run-a89ddbcb7a0e2a43-whale-site-pages-dev/page_getting-started.png"
     ],
-    "verified_at": "2026-11-02T21:15:15.020Z",
+    "verified_at": "2026-11-03T21:22:58.515Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -75,13 +75,117 @@
     "derived_at": "2026-08-21"
   },
   "agent_relevance": {
-    "has_mcp": true,
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_mcp: \"MCP\" in preanalysis.scoring_hypothesis",
-      "has_cli: \"terminal-first\" in preanalysis.scoring_hypothesis"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Directly agent-relevant: an npm-installable CLI with a headless one-shot mode ('whale exec'), MCP client support, and JavaScript-scripted multi-agent workflows. An orchestrating agent can drive it as a subprocess and extend it over MCP without forking. Behaviourally testable through the CLI.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A DeepSeek-native terminal coding agent that competes on cost per task and publishes the comparison — including where it loses.",
+    "body": "Whale picks one lane and commits to it: a terminal-first coding agent built around DeepSeek's prefix cache, where the architectural choice and the business case are the same choice. The captured surface claims roughly a 90% live prefix-cache hit rate and prices a five-turn coding session at about $0.001 against ~$0.015 for Claude Code, with a per-scenario table covering tool-calling and reasoning tasks too. Cost claims are the easiest thing to inflate in this category, so the useful signal is not the numbers but the fact that they are itemised per scenario and sit beside a feature comparison the vendor labels 'A honest look at where Whale fits' — a table that marks Claude Code and Codex CLI as equals on MCP, skills and planning, and concedes Whale's advantage is narrowed to DeepSeek optimisation and prefix-cache friendliness. A vendor that publishes the row where it does not win is giving you something to check. The product itself is conventional in the good sense: npm install, a setup and doctor command, TUI and headless CLI modes, code read/write, shell and test execution, MCP servers, local skills, and JavaScript-scripted multi-agent workflows it says are Claude Code compatible. The exposure is equally plain — the cost advantage is inherited from one model vendor it is explicitly not affiliated with, so DeepSeek's pricing or cache behaviour changing is Whale's roadmap changing.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because four of five surface checks passed against a specific, self-consistent public surface: a named install path, documented commands, an itemised cost table, and a competitive comparison that concedes parity where parity exists. Not VITAL because the central advantage rests on a single third-party model vendor the project states it has no affiliation with, and none of the headline figures — the 90% cache hit rate, the ~93% saving — is independently reproducible from the public surface.",
+  "what_it_does_well": [
+    "One clear architectural thesis (DeepSeek prefix-cache) that explains every other design choice",
+    "Publishes a per-scenario cost table rather than a single marketing percentage",
+    "Competitive comparison concedes parity to Claude Code and Codex CLI on MCP, skills and planning",
+    "Conventional, checkable install and setup path: npm install, `whale setup`, `whale doctor`",
+    "Terminal-native with both interactive TUI and headless CLI modes, plus MCP and local skills",
+    "States plainly that it is not affiliated with DeepSeek — an easy disclosure to omit"
+  ],
+  "what_it_fails_at": [
+    "The cost advantage is inherited from one model vendor's pricing and cache behaviour, outside the project's control",
+    "90% cache hit rate and ~93% cost saving are vendor-measured and not reproducible from the public surface",
+    "Non-DeepSeek backends are not characterised — unclear what remains when the cache thesis does not apply",
+    "No published reliability or task-completion evidence, only cost comparisons",
+    "Small open-source project surface: no stated support posture, SLA or maintenance commitment"
+  ],
+  "best_for": [
+    "Developers already using DeepSeek who want a terminal agent tuned for it",
+    "Cost-sensitive teams running long coding sessions where per-token economics dominate",
+    "Terminal-first workflows that reject IDE coupling",
+    "Teams wanting MCP and skills extensibility without forking the agent"
+  ],
+  "not_recommended_for": [
+    "Teams standardised on Anthropic or OpenAI models — the core advantage does not transfer",
+    "IDE-centric developers who want inline editor integration",
+    "Organisations needing a vendor support contract or a stability guarantee",
+    "Anyone who needs the cost claims verified before adopting — they are not independently checkable"
+  ],
+  "red_flags": [
+    "Headline cost and cache-hit figures are vendor-measured with no published method; treat as directional, not as a benchmark"
+  ],
+  "compared_to": [
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Whale's own comparison table names Claude Code as its benchmark and concedes parity on MCP, skills, planning and shell execution — its claimed edge is cost per task via DeepSeek. Choose Claude Code for model capability and a vendor behind it; choose Whale when per-task cost is the binding constraint.",
+      "preferred_for_axis": "cost-per-task"
+    },
+    {
+      "slug": "aider",
+      "verdict_diff": "Aider is the established multi-model terminal coding agent with a long track record; Whale is newer and narrower, optimised for one backend. Aider for model flexibility and maturity; Whale for DeepSeek-specific cache economics.",
+      "preferred_for_axis": "single-backend-optimisation"
+    },
+    {
+      "slug": "opencode",
+      "verdict_diff": "Both are open-source terminal agents. OpenCode is model-agnostic by design; Whale trades that breadth for a measurable cost advantage on one provider. Pick on whether you are willing to commit to DeepSeek.",
+      "preferred_for_axis": "provider-commitment"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Terminal-first coding agent built around DeepSeek's prefix cache",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "'Whale is a terminal-first AI coding agent built around DeepSeek's prefix-cache'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Claimed ~90% prefix-cache hit rate and ~30x cost advantage",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "'90% Live prefix-cache hit rate' and '~30x Cheaper per task vs Claude Code'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Itemised per-scenario cost comparison",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "5-turn coding session ~$0.001 vs ~$0.015 (~93%); tool-calling ~$0.00014 vs ~$0.0034 (~96%); R1 reasoning ~$0.0065 vs ~$0.044 (~85%)",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Install path and setup commands are specific",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "'npm install -g @usewhale/whale', then 'whale setup' / 'whale doctor', then 'whale' or 'whale exec'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "MCP and skills extensibility stated",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "'Connect external tools with MCP servers. Reuse workflows with local Agent Skills.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "No affiliation with the model vendor it is built around",
+      "source": "https://whale-site.pages.dev/",
+      "quote": "'This project is not affiliated with DeepSeek Inc. It is an independent open-source community project.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
