@@ -48,24 +48,132 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-ad4d2c6f19b47e9d-sciatlas-openkg-cn",
-    "base": "https://images.hlido.eu/reviews/zjunlp-sciatlas/run-ad4d2c6f19b47e9d-sciatlas-openkg-cn",
+    "run_id": "run-057cd495e9f36851-sciatlas-openkg-cn",
+    "base": "https://images.hlido.eu/reviews/zjunlp-sciatlas/run-057cd495e9f36851-sciatlas-openkg-cn",
     "files": [
       "home.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/zjunlp-sciatlas/run-ad4d2c6f19b47e9d-sciatlas-openkg-cn/home.png"
+      "https://images.hlido.eu/reviews/zjunlp-sciatlas/run-057cd495e9f36851-sciatlas-openkg-cn/home.png"
     ],
-    "verified_at": "2026-11-02T21:15:19.179Z",
+    "verified_at": "2026-11-03T21:23:03.669Z",
     "verified_count": 1,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": true,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.raw_markdown_preview"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "Among the more agent-ready surfaces in this cohort: a pip-installable CLI, an API token and base URL, and seven agent skills the documentation says load into Claude Code or Codex so an agent can call search-papers and synthesise from saved artifacts. No MCP server is documented. Behaviourally testable via the CLI once credentials are issued.",
+    "agent_friendly_score": 8
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A graph-backed research platform claiming the largest structured science knowledge graph, with agent skills that load into Claude Code and Codex — scale unverified by us.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. SciAtlas positions itself as infrastructure for automated science rather than another literature search box, and the captured surface is specific enough to argue with. It claims 43M+ papers across 26 disciplines, 157M entity nodes and 3B relation edges, a published schema of 9 entity types and 12 relation types (paper, author, institution, topic, keyword, source, domain, field, subfield), and a retrieval approach it calls tri-path collaborative recall with graph re-ranking — explicitly framed as moving from surface semantic matching toward topological reasoning. The three documented workflows are the right ones for the claim: evidence-grounded literature review with thematic clustering and gap analysis, idea grounding and evaluation with rubric-based critique and go/revise/no-go recommendations, and cross-disciplinary idea generation with KG evidence chains and minimal validation experiments. That last one is where a knowledge graph genuinely beats a vector index, and the discipline mix published on the page (Medicine 18.6%, Social Sciences 10.7%, Engineering 9.4%) is an unusually checkable detail. For an agent ecosystem the important part is the integration path: a pip-installable CLI, an API token, and seven agent skills the docs say load into Claude Code or Codex so an agent can run search-papers, inspect saved artifacts and synthesise downstream — this is built to be driven, not just read. The caution is proportional to the claim: 'the largest structured scientific knowledge graph available' is a superlative with no published comparison or coverage method, the service runs on a university-affiliated host, and nothing on the page speaks to availability or rate limits.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a confidence verdict, not a quality one: every required public-surface check failed on this run, so the graph scale, the retrieval method, the CLI and the agent skills are all unconfirmed by us. A superlative coverage claim with no published method is exactly what a register must decline to credit until measured, and a re-test is queued. It is not lower because the captured surface is detailed, publishes a real schema and a per-discipline breakdown, and documents a concrete install path a user can falsify.",
+  "what_it_does_well": [
+    "Publishes an actual graph schema (9 entity types, 12 relation types) rather than a vague 'knowledge graph' claim",
+    "Discipline coverage is given as a checkable percentage breakdown across 26 fields",
+    "Three documented workflows map to real research tasks, including rubric-based go/revise/no-go idea evaluation",
+    "Cross-disciplinary concept fusion is a use case a graph genuinely serves better than a vector index",
+    "Designed to be agent-driven: pip-installable CLI, API token, and skills that load into Claude Code or Codex",
+    "States that outputs carry KG evidence chains — the right posture for research tooling"
+  ],
+  "what_it_fails_at": [
+    "All required public-surface checks failed on this run — the scale and method claims are unverified by us",
+    "'Largest structured scientific knowledge graph available' is a superlative with no published comparison or method",
+    "No availability, rate-limit or uptime commitment for a service research workflows would depend on",
+    "Hosted on a university-affiliated domain with no stated operational or funding continuity",
+    "No pricing or access terms published, so cost of dependence is unknown",
+    "No independent evaluation of retrieval quality against the vector-search baseline it claims to beat"
+  ],
+  "best_for": [
+    "Researchers doing cross-disciplinary literature work where graph traversal beats keyword or vector search",
+    "Agent-driven research pipelines that can consume the CLI and agent skills",
+    "Teams needing evidence chains attached to generated literature reviews",
+    "Idea-stage evaluation where novelty and prior-art grounding matter"
+  ],
+  "not_recommended_for": [
+    "Production workflows needing an availability guarantee (none is published)",
+    "Anyone who needs the coverage superlative verified before relying on it",
+    "Simple single-paper lookups — the graph machinery is overhead for that",
+    "Commercial use without first clarifying access terms, which are not on the public surface"
+  ],
+  "red_flags": [
+    "Claims 'the largest structured scientific knowledge graph available' with no published comparison or coverage method — an unverifiable superlative",
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued"
+  ],
+  "compared_to": [
+    {
+      "slug": "elicit-research",
+      "verdict_diff": "Elicit is a mature, operated research assistant with a clear product and pricing. SciAtlas offers graph traversal and an agent-drivable CLI with no stated operational commitment. Elicit when you need the service to be there tomorrow; SciAtlas when cross-disciplinary graph structure is the requirement.",
+      "preferred_for_axis": "graph-traversal"
+    },
+    {
+      "slug": "perplexity",
+      "verdict_diff": "Perplexity answers questions with web citations across everything. SciAtlas is scoped to structured scientific literature with a traversable graph and method lineages. Perplexity for breadth and immediacy; SciAtlas for depth within science.",
+      "preferred_for_axis": "scientific-depth"
+    },
+    {
+      "slug": "llamaindex",
+      "verdict_diff": "LlamaIndex is the toolkit for building your own retrieval over your own corpus. SciAtlas is a pre-built graph over published science. Build with LlamaIndex if the corpus is yours; use SciAtlas if the corpus is the literature.",
+      "preferred_for_axis": "prebuilt-corpus"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Graph-backed platform positioning itself as infrastructure for automated science",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "'SciAtlas is a graph-backed platform for scientific discovery, unifying literature search, research skills, and AI workflows.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Claimed graph scale (NOT verified)",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "'43M+ papers across 26 disciplines, 157M entity nodes, and 3B relation edges — the largest structured scientific knowledge graph available.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Published schema",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "'Fig. 1 · SciAtlas graph schema — 9 entity types, 12 relation types' (Domain, Field, Subfield, Topic, Author, Institution, Paper, Keyword, Source)",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Per-discipline coverage breakdown",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "Medicine 18.56%, Social Sciences 10.7%, Engineering 9.43%, Biochemistry & Genetics 6.44%, Computer Science 6.29%",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Retrieval method claim",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "'Tri-path collaborative recall with graph re-ranking shifts from surface-level semantic matching to deterministic topological reasoning.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Agent integration path is documented",
+      "source": "https://sciatlas.openkg.cn/",
+      "quote": "'Start with the SciAtlas CLI for evidence retrieval, then load Agent Skills into cc / Claude Code or Codex'; 'pip install \"git+https://github.com/zjunlp/SciAtlas.git#subdirectory=sciatlas\"'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
