@@ -48,28 +48,136 @@
     "source": "engine-browser-marking-retrofit"
   },
   "evidence_images": {
-    "run_id": "run-9105eaf4bf950dff-hivehq-dev",
-    "base": "https://images.hlido.eu/reviews/tt-a1i-hive/run-9105eaf4bf950dff-hivehq-dev",
+    "run_id": "run-0c072d74a8a9047b-hivehq-dev",
+    "base": "https://images.hlido.eu/reviews/tt-a1i-hive/run-0c072d74a8a9047b-hivehq-dev",
     "files": [
       "home.png",
       "page_.png",
       "page_en_.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/tt-a1i-hive/run-9105eaf4bf950dff-hivehq-dev/home.png",
-      "https://images.hlido.eu/reviews/tt-a1i-hive/run-9105eaf4bf950dff-hivehq-dev/page_.png",
-      "https://images.hlido.eu/reviews/tt-a1i-hive/run-9105eaf4bf950dff-hivehq-dev/page_en_.png"
+      "https://images.hlido.eu/reviews/tt-a1i-hive/run-0c072d74a8a9047b-hivehq-dev/home.png",
+      "https://images.hlido.eu/reviews/tt-a1i-hive/run-0c072d74a8a9047b-hivehq-dev/page_.png",
+      "https://images.hlido.eu/reviews/tt-a1i-hive/run-0c072d74a8a9047b-hivehq-dev/page_en_.png"
     ],
-    "verified_at": "2026-11-02T21:15:18.578Z",
+    "verified_at": "2026-11-03T21:23:02.889Z",
     "verified_count": 3,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "agent_relevance": {
+    "has_api": false,
     "has_cli": true,
-    "derived_from": "backfill-2026-09-03",
-    "basis": [
-      "has_cli: \"CLI\" in preanalysis.scoring_hypothesis"
-    ],
-    "note": "Derived from held evidence text (positive matches only); flags not listed were not evidenced, not measured false. A Claude-native enrich pass may replace this block."
-  }
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": true,
+    "agent_integration_path": "Agent-relevant as a coordination layer rather than a callable service: installed and launched as a CLI, exposes a local web UI, and supports completion webhooks into Slack or CI. It drives other agents instead of being driven by them; no API or MCP server is documented for inbound control. Behaviourally testable — two npm commands and a demo mode that needs no agent CLIs installed.",
+    "agent_friendly_score": 6
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A local-only browser console that makes several real coding CLIs work as a team — a thoughtful orchestration layer we could not verify, maintained by one person.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. The captured surface describes Hive as a browser UI for an agent 'hive' that runs entirely on your own machine: an orchestrator assigns work and real CLI agents — Claude Code, Codex CLI, Gemini CLI, OpenCode, Cursor CLI, Qwen Code and others — each do their part in browser terminals. The design decision that stands out is that Hive holds no credentials of its own: it drives the CLIs you have already authenticated, so it needs no account and no API key. The documented division of labour is concrete rather than aspirational — one model writes while another reviews the diff, one writes tests while another fixes the reds — and the supporting pieces are the ones that decide whether multi-agent orchestration is usable at all: the task graph is a markdown file in your repository that can be edited and committed with declared dependencies, team memory carries workspace conventions into later assignments, and --resume reconnects through each CLI's native session or injects a written handoff brief when it cannot. The security posture is stated carefully: it listens on 127.0.0.1 only, remote phone access is off by default and end-to-end encrypted with the trust root on the desktop, no inbound ports are opened, and any paired device can be revoked. Two real constraints: it is maintained by a single developer with a modest star count, and it is BSL 1.1 rather than a standard open-source licence — both of which matter for anything load-bearing. The interface is also primarily Chinese.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a measurement verdict: all required public-surface checks failed on this run, so the install path, the agent roster, the local-only networking claim and the encryption model are all unconfirmed by us. The score states what we verified, which was nothing, and a re-test is queued. It is not lower because the captured page is specific, internally coherent, and makes claims a user can falsify in minutes with two npm commands.",
+  "what_it_does_well": [
+    "Holds no credentials — drives CLIs the user has already authenticated, so there is no new account or key to trust",
+    "Division of labour is concrete (write/review, test/fix) rather than a generic 'multi-agent' claim",
+    "Task graph is a markdown file in the user's repo with declared dependencies — inspectable and git-trackable",
+    "--resume handles the real failure case: native session recovery, with a written handoff brief as fallback",
+    "Security posture is specific: 127.0.0.1 only, no inbound ports, remote off by default, revocable device pairing",
+    "Works with nine named CLI agents plus anything else runnable locally — no vendor lock-in"
+  ],
+  "what_it_fails_at": [
+    "All required public-surface checks failed on this run — nothing below is independently verified by us",
+    "Single maintainer and a modest star count: real bus-factor risk for an orchestration layer",
+    "BSL 1.1, not a standard open-source licence — check the terms before any commercial dependency",
+    "Interface and documentation are primarily Chinese, with limited English",
+    "Only useful if you already have several agent CLIs installed and authenticated",
+    "Some capabilities are labelled experimental (team spawn, workflows) with no stability guarantee"
+  ],
+  "best_for": [
+    "Developers who already run several agent CLIs and want them coordinated rather than used one at a time",
+    "Cross-model review workflows where one model critiques another's diff",
+    "Local-only setups where code must not leave the machine",
+    "Chinese-reading developers (the primary interface language)"
+  ],
+  "not_recommended_for": [
+    "Teams needing a vendor-supported orchestration platform",
+    "Commercial deployments that cannot accept BSL 1.1 terms",
+    "Users without existing agent CLI installations and credentials",
+    "Anyone requiring independent verification of the security claims before granting local reach"
+  ],
+  "red_flags": [
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued",
+    "Single-maintainer project under BSL 1.1 rather than a standard open-source licence — both material for anything load-bearing"
+  ],
+  "compared_to": [
+    {
+      "slug": "crewai",
+      "verdict_diff": "CrewAI is a Python framework for building multi-agent systems from code. Hive orchestrates existing CLI agents through a browser UI with no code to write. CrewAI when you are building the agents; Hive when you already have them installed.",
+      "preferred_for_axis": "orchestrate-existing-not-build-new"
+    },
+    {
+      "slug": "claude-code",
+      "verdict_diff": "Claude Code is one of the nine agents Hive drives, not a competitor to it. The question is whether you want one strong agent or several coordinated — and Hive's own pitch is that cross-model review catches more than self-review.",
+      "preferred_for_axis": "coordination-layer"
+    },
+    {
+      "slug": "openhands",
+      "verdict_diff": "OpenHands is a complete agent platform with its own runtime and a backing organisation. Hive is a thin local coordinator over CLIs you already trust, from a single maintainer. OpenHands for an operated platform; Hive to avoid introducing a new credential boundary.",
+      "preferred_for_axis": "no-new-trust-boundary"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Browser console orchestrating real CLI agents locally",
+      "source": "https://hivehq.dev/",
+      "quote": "'一个 Orchestrator 派活，Claude Code、Codex、Gemini 这些真实的 CLI Agent 在浏览器终端里各自开工——全部跑在你本机。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Requires no account or API key of its own",
+      "source": "https://hivehq.dev/",
+      "quote": "'用你已经登录好的 CLI 就行，Hive 自己不要账号、不要 key。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Task graph is a markdown file in the repo with dependencies",
+      "source": "https://hivehq.dev/",
+      "quote": "'.hive/tasks.md | 任务图是份 markdown' — '能进 git'; '任务可以声明依赖（[needs: #3]）'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Network posture (NOT verified)",
+      "source": "https://hivehq.dev/",
+      "quote": "'只监听 127.0.0.1 · 代码不出本机 · BSL 1.1 · Node ≥ 22'; '不开任何端口 | 本机主动出站连接'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Remote access is opt-in and end-to-end encrypted",
+      "source": "https://hivehq.dev/",
+      "quote": "'默认关闭，不打开这个开关，远程通路就不存在'; '端到端加密'; '信任根在桌面'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Single maintainer, stated version and install",
+      "source": "https://hivehq.dev/",
+      "quote": "'由 @tt-a1i 一人维护 · Node ≥ 22'; 'npm i -g @tt-a1i/hive'; 'v2.2.1 ·发布于 2026-09-08'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ]
 }
