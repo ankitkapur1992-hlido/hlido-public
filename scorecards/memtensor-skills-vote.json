@@ -3,7 +3,7 @@
   "name": "MemTensor/skills-vote",
   "agent_url": "https://skills.vote",
   "repo_url": "https://github.com/MemTensor/skills-vote",
-  "category": "AI Agent",
+  "category": "Infrastructure",
   "run_id": "run-memtensor-skills-vote-jv1kuo0b",
   "run_at": "2026-07-14T12:00:46.551Z",
   "source": "hlido-drain-worker",
@@ -65,5 +65,131 @@
     "verified_at": "2026-10-30T21:19:18.491Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A skills registry that scores whether a skill actually RUNS, not just whether it matches — the right idea, with a verification funnel that deserves more scrutiny than the headline number.",
+    "body": "Hlido's automated public-surface checks recorded no passes on this run even though the page rendered and was captured in full, so the score reflects what our checks could VERIFY, not a judgement that the product is weak. Read the score as low confidence pending a re-test, and the notes below as what the captured surface says about itself. SkillsVote is a discovery and recommendation layer for agent skills, and its central insight is one the registry space mostly ignores: being findable is not the same as being runnable. The captured surface says it constructs real tasks from each skill and validates them in a controlled environment specifically to prevent the case where a skill is searchable, downloadable, and then does not work — and that each skill carries its environment requirements, permission scope, external dependencies and quality metrics so an agent can decide whether to call it at all before calling it. That is a materially more useful contract than a package index, and it is close to what Hlido argues about agents generally. The funnel it publishes is also the most informative thing on the page, and it reads against the headline: 1,681,615 skills indexed, 794,617+ verified, 322,930 passing quality assessment, 36,616 featured. So roughly 19% clear quality assessment and about 2% are featured — the 1.68M figure in the headline is an index size, not a supply of usable skills, and the page leads with the large number. The loop design is sound: vector retrieval for intent rather than keywords, task-description-to-skill-set recommendation with usage guidance rather than bare metadata, and post-execution feedback where the agent reports which skills it actually used plus a trace summary, feeding back into ranking. Access is via MCP, an OpenAgent SDK and a CLI, with plugin paths into Codex and Claude Code, and skills are stated to be signature-reviewed with version pinning. The interface is Chinese-only, requires login and an approved API key, and no verification methodology is published — which is the gap, since verification is the entire differentiator.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "FADING (50) is a measurement verdict: all required public-surface checks failed on this run, so the funnel figures, the verification process, the MCP surface and the signature review are unconfirmed by us. A product whose differentiator is verification, publishing no verification methodology, is precisely what a register must decline to credit until measured — a re-test is queued. It is not lower because the captured surface is specific, publishes a funnel that works against its own headline, and documents a real integration path.",
+  "what_it_does_well": [
+    "Verifies whether a skill actually RUNS, not just whether it matches a query — the gap most registries ignore",
+    "Publishes environment requirements, permission scope, dependencies and quality metrics per skill, pre-call",
+    "Publishes the full funnel (1.68M indexed → 795k verified → 323k quality-passing → 37k featured) rather than one number",
+    "Feedback loop closes on execution: the agent reports which skills it used plus a trace summary, feeding ranking",
+    "Vector retrieval for intent rather than keyword matching, so a skill is findable without knowing its name",
+    "Multiple access paths — MCP, OpenAgent SDK and CLI — plus plugin integration into Codex and Claude Code",
+    "Skills stated to be signature-reviewed with version pinning"
+  ],
+  "what_it_fails_at": [
+    "All required public-surface checks failed on this run — nothing below is independently verified by us",
+    "No verification methodology published, which is the whole differentiator",
+    "The headline leads with 1.68M indexed skills while only ~19% pass quality assessment and ~2% are featured",
+    "Interface and documentation are Chinese-only with no English surface",
+    "Requires login and an approved API key before any capability can be assessed",
+    "No pricing, rate limits or availability commitment for a service agents would call at runtime",
+    "'Signature-reviewed' is asserted with no detail on who signs or what the review covers"
+  ],
+  "best_for": [
+    "Agent frameworks needing runtime skill discovery with a pre-call capability contract",
+    "Chinese-language agent developers (the only supported interface language)",
+    "Teams wanting execution feedback to improve skill selection over time",
+    "Codex or Claude Code users wanting a plugin-based skill source"
+  ],
+  "not_recommended_for": [
+    "Non-Chinese-reading developers — there is no English surface",
+    "Production dependencies needing published availability or rate limits",
+    "Anyone who needs the verification claims substantiated before trusting a skill at runtime",
+    "Teams preferring a curated, small, auditable skill set over a 1.68M index"
+  ],
+  "red_flags": [
+    "The differentiator is verification, and no verification methodology is published — only aggregate counts",
+    "Headline figure is an index size (1,681,615) while the same page shows ~19% passing quality assessment and ~2% featured; the leading number overstates usable supply",
+    "All required public-surface checks failed on this run while the page rendered fully — the score reflects unverified claims, not measured weakness; a re-test is queued"
+  ],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain ships a large curated set of tools and integrations maintained in one repository. SkillsVote indexes a vastly larger third-party pool and claims to tell you which entries actually run. LangChain for a maintained, auditable set; SkillsVote for breadth plus a runnability claim you cannot yet verify.",
+      "preferred_for_axis": "breadth-with-verification-claim"
+    },
+    {
+      "slug": "agno",
+      "verdict_diff": "Agno is an agent framework with its own curated toolkits. SkillsVote is not a framework but a discovery and recommendation service a framework calls. Complementary rather than competing.",
+      "preferred_for_axis": "registry-not-framework"
+    },
+    {
+      "slug": "claude-skills-library",
+      "verdict_diff": "A curated skills library offers a small, inspectable set. SkillsVote offers a 1.68M index with an automated quality funnel on top. Curation versus scale-plus-filtering — and the filter's method is not published.",
+      "preferred_for_axis": "scale-over-curation"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Positioning as a skills gateway for agents",
+      "source": "https://skills.vote/",
+      "quote": "'AI Agent终极技能网关' — '把168 万+skills，变成 Agent 真正能调用、能执行、能进化的能力层。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Published verification funnel (NOT verified by us)",
+      "source": "https://skills.vote/",
+      "quote": "'1,681,615 已收录 | 794,617+ 已验证 | 322,930 通过质量评估 | 36,616 精选'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Runnability, not just findability, is the stated differentiator",
+      "source": "https://skills.vote/",
+      "quote": "'不只搜得到，还要跑得起来 | 基于 skill 构造真实任务，在可控环境中验证是否能跑通，防止能搜到，下载后却跑不起来。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Pre-call capability contract per skill",
+      "source": "https://skills.vote/",
+      "quote": "'每个 skill 都附带环境要求、权限范围、外部依赖与质量指标，帮助 Agent 更稳地决策是否调用。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Execution feedback loop",
+      "source": "https://skills.vote/",
+      "quote": "'任务完成后，Agent 反馈提交实际使用的 skills、轨迹摘要，持续进化技能库与推荐。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Access surfaces and client integration",
+      "source": "https://skills.vote/",
+      "quote": "'MCP · OPENAGENT SDK · CLI'; '以 plugin 或 skill 的形式接入 Codex、Claude Code 等客户端'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Login and approved API key required",
+      "source": "https://skills.vote/",
+      "quote": "'请先登录，并在我们网站申请 Key。'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": true,
+    "has_cli": true,
+    "has_mcp": true,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": false,
+    "agent_integration_path": "Explicitly built for agent-to-agent use: MCP, an OpenAgent SDK and a CLI are all named, with plugin paths into Codex and Claude Code, and the documented call pattern is recommendation during inference plus feedback after completion. The highest stated agent-readiness in this cohort — but not behaviourally testable from our side, because login and an approved API key are required before anything can be exercised.",
+    "agent_friendly_score": 8
   }
 }
