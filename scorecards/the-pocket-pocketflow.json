@@ -2,7 +2,7 @@
   "slug": "the-pocket-pocketflow",
   "name": "The-Pocket/PocketFlow",
   "agent_url": "https://github.com/The-Pocket/PocketFlow",
-  "category": "AI Agent",
+  "category": "Frameworks & Eval",
   "run_id": "run-the-pocket-pocketflow-1izuu0tw",
   "run_at": "2026-06-18T12:00:36.557Z",
   "source": "hlido-drain-worker",
@@ -61,7 +61,7 @@
       "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/pagecore_abstraction_node_html.png",
       "https://images.hlido.eu/reviews/the-pocket-pocketflow/run-b07874ae77c3b6c1-the-pocket-github-io/pagecore_abstraction_flow_html.png"
     ],
-    "verified_at": "2026-11-02T21:15:11.901Z",
+    "verified_at": "2026-11-03T21:22:56.191Z",
     "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
@@ -73,5 +73,102 @@
     "last_verified": "2026-06-18",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
+  },
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "public-surface-tier-1+editorial-narrative-v2",
+  "methodology_version": "2026.11",
+  "methodology_url": "/methodology/public-surface-tier-1/",
+  "hlido_opinion": {
+    "headline": "A 100-line graph abstraction that refuses to ship vendor wrappers — the most honest minimal-framework position we have reviewed.",
+    "body": "PocketFlow is the rare framework whose central claim is about what it does NOT contain. The captured documentation states the whole core is a graph abstraction in roughly 100 lines with zero dependencies, modelling an LLM workflow as Node + Flow + Shared Store, and from there deriving the usual patterns — agent, workflow, RAG, map-reduce, structured output, multi-agent. What makes it worth attention is the explicit refusal to bundle utilities: the docs argue that vendor-specific APIs inside a general framework are bad practice, citing API volatility, the cost of losing the freedom to switch or self-host models, and the difficulty of doing prompt caching, batching and streaming cleanly through someone else's abstraction. That is a coherent engineering argument rather than a marketing line, and it is the opposite of the lock-in most orchestration frameworks quietly build in. The cost is equally clear and the project states it plainly: you implement your own LLM wrapper, embedding, chunking, vector-store and search layers, so the time you save on framework weight you spend on plumbing. For a team that already has its model and retrieval layer and wants orchestration it can read end to end in one sitting, this is a strong fit. For a team that wants batteries included, it is the wrong tool by design, not by omission.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-03",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (85) because the public surface is specific, internally consistent and verifiable — a documented core abstraction, named design patterns, and a stated reason for every omission — and four of five surface checks passed. Not VITAL because the deliberate absence of built-in utilities means real-world reliability depends almost entirely on code the user writes, and the public surface carries no operational evidence (no benchmarks, no production case studies, no stated support posture) on which a higher tier could rest.",
+  "what_it_does_well": [
+    "States the entire core abstraction (Node, Flow, Shared Store) in terms a reader can verify against the source",
+    "Zero dependencies and no vendor lock-in — an unusually durable position for an orchestration layer",
+    "Gives an explicit engineering RATIONALE for excluding utilities rather than presenting it as a feature",
+    "Documents the derived patterns (agent, workflow, RAG, map-reduce, multi-agent) rather than implying them",
+    "Small enough to audit completely, which matters when an agent framework sits in a trust path"
+  ],
+  "what_it_fails_at": [
+    "No built-in utilities — LLM wrapper, embeddings, chunking, vector stores and web search are all the user's work",
+    "No benchmarks, latency figures or production case studies on the public surface",
+    "No stated support, versioning or stability policy for a dependency teams would build on",
+    "Async, parallel and batch behaviour is listed but not characterised under load",
+    "No MCP server and no published API surface of its own — it is a library to build with, not a component to call"
+  ],
+  "best_for": [
+    "Teams that already own their model and retrieval layer and want readable orchestration",
+    "Engineers who need to audit every line of an agent framework in a trust-sensitive path",
+    "Educational use — understanding agent orchestration without reading a large codebase",
+    "Projects that expect to switch model vendors and refuse framework-level coupling"
+  ],
+  "not_recommended_for": [
+    "Teams wanting batteries-included RAG or tool integrations out of the box",
+    "Non-engineers or low-code builders — this assumes you write the utilities",
+    "Production deployments needing a vendor-backed support or stability guarantee",
+    "Anyone who needs published performance characteristics before committing"
+  ],
+  "red_flags": [],
+  "compared_to": [
+    {
+      "slug": "langchain",
+      "verdict_diff": "LangChain ships the integrations PocketFlow deliberately omits — hundreds of vendor wrappers, retrievers and tool adapters. Choose LangChain when breadth of pre-built integration is the point; choose PocketFlow when you want an orchestration core you can read completely and no vendor coupling.",
+      "preferred_for_axis": "auditability-over-breadth"
+    },
+    {
+      "slug": "langgraph-platform",
+      "verdict_diff": "LangGraph offers the same graph mental model with a managed platform, persistence and observability behind it. PocketFlow gives the abstraction and nothing else. LangGraph wins where you want the runtime operated for you; PocketFlow wins where you want no runtime at all.",
+      "preferred_for_axis": "library-not-platform"
+    },
+    {
+      "slug": "pydantic-ai",
+      "verdict_diff": "Pydantic AI centres type-safe structured output with first-class model clients. PocketFlow centres the graph and leaves model access to you. Pydantic AI for typed vendor-aware agents; PocketFlow for vendor-agnostic flow control.",
+      "preferred_for_axis": "flow-control-over-typed-clients"
+    }
+  ],
+  "evidence_urls": [
+    {
+      "claim": "Core is a graph abstraction in ~100 lines with zero dependencies",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "quote": "'Lightweight: Just the core graph abstraction in 100 lines. ZERO dependencies, and vendor lock-in.'",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Workflow modelled as Node + Flow + Shared Store",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "quote": "'We model the LLM workflow as a Graph + Shared Store' — Node handles tasks, Flow connects nodes through Actions, Shared Store enables communication",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Utilities deliberately not built in, with a stated rationale",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "quote": "'We do not provide built-in utilities. Instead, we offer examples' + 'Why not built-in?: I believe it's a bad practice for vendor-specific APIs in a general framework' (API Volatility, Flexibility, Optimizations)",
+      "tested_at": "2026-11-03",
+      "verified": false
+    },
+    {
+      "claim": "Derived design patterns are enumerated",
+      "source": "https://the-pocket.github.io/PocketFlow/",
+      "quote": "Agent, Workflow, RAG, Map Reduce, Structured Output, (Advanced) Multi-Agents",
+      "tested_at": "2026-11-03",
+      "verified": false
+    }
+  ],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": false,
+    "has_mcp": false,
+    "has_webhook": false,
+    "has_sdk": true,
+    "behavioral_testable": true,
+    "agent_integration_path": "A Python library an agent-building team imports, not a service an agent calls. There is no API, CLI or MCP server on the public surface; agent relevance is as the orchestration layer INSIDE an agent you build. Behaviourally testable because the abstraction is small and dependency-free enough to exercise directly.",
+    "agent_friendly_score": 6
   }
 }
