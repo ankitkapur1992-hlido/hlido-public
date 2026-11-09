@@ -1,8 +1,8 @@
 {
   "slug": "zhulinsen-daily-stock-analysis",
   "name": "ZhuLinsen/daily_stock_analysis",
-  "agent_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-  "category": "Marketing & Content",
+  "agent_url": "https://dsa.zhulinsen.tech",
+  "category": "Specialized verticals",
   "run_id": "run-zhulinsen-daily-stock-analysis-40zre7sk",
   "run_at": "2026-06-19T18:00:36.533Z",
   "source": "hlido-drain-worker",
@@ -36,27 +36,34 @@
   "laddoo_score": 75,
   "score": 75,
   "tier": "STEADY",
-  "summary": "Public-surface review of ZhuLinsen/daily_stock_analysis.",
+  "summary": "Public-surface review of ZhuLinsen/daily_stock_analysis (DSA): 2/3 required and 1/2 optional checks verified against the live product surface at dsa.zhulinsen.tech.",
   "confidence": "low",
   "marking_signal": {
     "marking_statement": false,
     "detection_tool": false,
     "cop_signatory": null,
     "evidence_url": null,
-    "checked_at": "2026-08-14",
-    "source": "engine-browser-marking-retrofit"
+    "checked_at": "2026-11-09",
+    "source": "claude-native-editorial-enrich",
+    "note": "DSA output is LLM-generated text presented as research reports. No statement of machine-readable marking or provenance (C2PA, IPTC, watermark, content credentials) and no detection tool were found across the captured home page and three documentation pages. Recorded as absent on the surface examined, not as a verified vendor position."
   },
   "evidence_images": {
-    "run_id": "run-c48d497697955ca4-github-com",
-    "base": "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-c48d497697955ca4-github-com",
+    "run_id": "run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech",
+    "base": "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech",
     "files": [
-      "home.png"
+      "home.png",
+      "page_docs_.png",
+      "page_docs_quick-start_.png",
+      "page_docs_github-actions_.png"
     ],
     "urls": [
-      "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-c48d497697955ca4-github-com/home.png"
+      "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech/home.png",
+      "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech/page_docs_.png",
+      "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech/page_docs_quick-start_.png",
+      "https://images.hlido.eu/reviews/zhulinsen-daily-stock-analysis/run-dd4f0e8d385cb6a9-dsa-zhulinsen-tech/page_docs_github-actions_.png"
     ],
-    "verified_at": "2026-07-31T09:31:40.445Z",
-    "verified_count": 1,
+    "verified_at": "2026-11-09T21:17:11.771Z",
+    "verified_count": 4,
     "note": "Screenshots captured by the Hlido engine during the reviewed run, served from R2. Every URL here was HEAD-verified at the timestamp above. `run_id` is the ENGINE run id — it differs from `scorecard.run_id` and is the only one these keys resolve under."
   },
   "pricing_facts": {
@@ -67,5 +74,63 @@
     "last_verified": "2026-06-19",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "repo_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+  "schema_version": "2.0",
+  "editor": "Hlido Editor",
+  "editorial_method": "Claude-native editorial pass over the engine's captured public surface (home page plus three documentation pages, four screenshots held in R2). No vendor input, no login, no paid tier exercised. Scores and claim verdicts are measured by automated testing; this written analysis is model-drafted.",
+  "hlido_opinion": {
+    "headline": "A genuinely well-documented, zero-cost LLM research pipeline for retail equities — which also happens to print buy, add-on and stop prices, and that is the part a buyer has to think hardest about.",
+    "body": "DSA is an open-source (MIT) pipeline that pulls cross-market quotes for A-share, Hong Kong and US equities through six named data providers with documented fallbacks, layers news and social sentiment on top, and has an LLM turn the combination into a structured per-symbol report — score, trend, advice, risk alert, catalyst and an action checklist — then pushes it to WeChat Work, Feishu, Telegram, Discord, Slack or email. The engineering story is the strong part and it is unusually legible: three documented runtimes (GitHub Actions for serverless scheduling, local run for debugging, Docker for containers), a copy-pasteable Actions setup down to the secret names, reports persisted to SQLite, and a stated backtest-and-review loop for direction accuracy and simulated returns. The surface is bilingual and the capability list reads like something built by someone who actually runs it daily rather than a README written for stars. What the public surface does not establish is whether any of it is *right*. The sample output shown on the home page is specific in a way that invites reliance — 'Advice: Hold', an ideal buy at 118.50, an add-on at 108.00, a stop at 102.00 — and nowhere in the captured surface is there a published accuracy record for those levels, a disclaimer about LLM-generated trade guidance, or a description of how the backtest numbers are computed. A tool that stores reports in order to measure its own direction accuracy is well placed to publish that measurement; until it does, the structured confidence of the output runs ahead of the evidence behind it. Treat DSA as research plumbing you operate and judge yourself, not as a signal source.",
+    "voice": "Hlido Editor",
+    "as_of": "2026-11-09",
+    "editor_signature_pending": true
+  },
+  "tier_rationale": "STEADY (75) for an open-source, self-hostable research pipeline with an honest and specific capability list, multiple documented data providers with fallbacks, three working deployment paths and a bilingual docs set — verified against the live surface. Not higher because the one claim that matters most to a user of a stock tool, that its LLM decision reports are accurate, is unverified: the public surface shows no published direction-accuracy record, no methodology for the stated backtests, and no disclaimer on LLM-generated price levels. A conventional product call-to-action is also absent from the captured home page (the entry points are the repository and the docs), which is consistent with a developer-operated tool rather than a service.",
+  "what_it_does_well": [
+    "Names its data sources explicitly (TickFlow, AkShare, Tushare, YFinance, Longbridge) and documents fallback paths rather than hiding behind 'multi-source'",
+    "Three fully documented runtimes — GitHub Actions, local, Docker — with the Actions path specified down to secret and variable names",
+    "Covers A-share, Hong Kong and US markets plus common ETFs in one pipeline, which is rarer than single-market tools",
+    "Persists reports to SQLite so direction accuracy and simulated returns can be reviewed after the fact",
+    "Delivery to six-plus channels (WeChat Work, Feishu, Telegram, Discord, Slack, email), which fits how watchlist output is actually consumed",
+    "Bilingual (Simplified Chinese and English) surface and docs"
+  ],
+  "what_it_fails_at": [
+    "No published accuracy or track record for the LLM decision reports anywhere on the captured surface, despite storing the data needed to produce one",
+    "The stated backtest and simulated-return capability is described but its method is not disclosed, so the figures cannot be checked",
+    "LLM-generated trade levels (ideal buy, add-on, stop) are presented with scores and confidence labels and no visible disclaimer about their basis",
+    "No pricing or access statement was discoverable, and no conventional product call-to-action on the home page — access is via repository and docs only",
+    "Operating it requires supplying your own model API key and configuring providers; the 'zero-cost' framing holds only for the scheduling layer"
+  ],
+  "best_for": [
+    "Developers who want to run their own equities research loop and judge the output themselves",
+    "Users who need A-share and Hong Kong coverage alongside US markets in one pipeline",
+    "Anyone who wants scheduled watchlist reports delivered into an existing chat channel without maintaining a server"
+  ],
+  "not_recommended_for": [
+    "Anyone who would act on the generated buy, add-on or stop levels without independent validation",
+    "Non-technical users — there is no hosted service, only self-operated deployments",
+    "Any setting where the basis of an investment recommendation must be auditable or disclosed to a third party"
+  ],
+  "red_flags": [
+    "Generates specific, actionable price levels and directional advice from an LLM while publishing no accuracy record and no visible disclaimer on the captured surface. This is not a claim we found to be false; it is a claim the vendor has not evidenced, on exactly the axis where being wrong is expensive for the user."
+  ],
+  "compared_to": [],
+  "agent_relevance": {
+    "has_api": false,
+    "has_cli": true,
+    "has_mcp": false,
+    "has_webhook": true,
+    "has_sdk": false,
+    "behavioral_testable": false,
+    "agent_integration_path": "DSA exposes a CLI and a Bot entry point alongside its WebUI, and pushes output through webhooks to chat platforms, so another agent can schedule it and consume its reports as text. There is no documented programmatic API or MCP server on the captured surface, so an agent integrates by driving the CLI and parsing delivered reports rather than by querying a structured endpoint.",
+    "agent_friendly_score": 5
+  },
+  "evidence_urls": [
+    "https://dsa.zhulinsen.tech",
+    "https://dsa.zhulinsen.tech/docs/",
+    "https://dsa.zhulinsen.tech/docs/quick-start/",
+    "https://dsa.zhulinsen.tech/docs/github-actions/"
+  ],
+  "evidence_tier": "public-surface"
 }
