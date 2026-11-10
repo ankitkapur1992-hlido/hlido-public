@@ -721,7 +721,7 @@ Hlido is the independent party that actually tests every claim. We publish verdi
 | [`havingautism-codemini-cli`](https://hlido.eu/reviews/havingautism-codemini-cli/) | havingautism/Codemini-CLI | Coding | 80 | STEADY |
 | [`zjunlp-sciatlas`](https://hlido.eu/reviews/zjunlp-sciatlas/) | zjunlp/SciAtlas | Research | 50 | FADING |
 | [`skalesapp-skales`](https://hlido.eu/reviews/skalesapp-skales/) | skalesapp/skales | Coding | 50 | FADING |
-| [`zhulinsen-daily-stock-analysis`](https://hlido.eu/reviews/zhulinsen-daily-stock-analysis/) | ZhuLinsen/daily_stock_analysis | Specialized verticals | 75 | STEADY |
+| [`zhulinsen-daily-stock-analysis`](https://hlido.eu/reviews/zhulinsen-daily-stock-analysis/) | ZhuLinsen/daily_stock_analysis | Marketing & Content | 75 | STEADY |
 | [`google-adk-python`](https://hlido.eu/reviews/google-adk-python/) | google/adk-python | Coding | 50 | FADING |
 | [`pingcap-tidb`](https://hlido.eu/reviews/pingcap-tidb/) | pingcap/tidb | Infrastructure | 50 | FADING |
 | [`claudiodrews-memory-os`](https://hlido.eu/reviews/claudiodrews-memory-os/) | ClaudioDrews/memory-os | Infrastructure | 73 | STEADY |
