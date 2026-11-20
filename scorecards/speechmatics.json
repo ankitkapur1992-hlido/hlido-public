@@ -15,39 +15,42 @@
   "laddoo_score": 78,
   "confidence": "medium",
   "hlido_opinion": {
-    "headline": "Reliable speech recognition service with solid performance, but lacks standout features in a competitive landscape.",
-    "body": "Speechmatics offers a dependable speech recognition solution that caters to various industries. Its core functionality is robust, providing accurate transcriptions and support for multiple languages. However, the competitive landscape features several alternatives that may offer more specialized capabilities or integrations. While Speechmatics is a solid choice for organizations seeking reliable transcription services, it does not particularly excel in any one area compared to its peers. Users should consider their specific needs and evaluate alternatives that may provide additional features or better integration options.",
+    "headline": "Speech-to-text API platform with batch, real-time and voice-agent transcription, deployable in the cloud, on-prem or on-device.",
+    "body": "Speechmatics is a developer-facing speech platform. Its public documentation covers a REST API for batch transcription of files, a WebSocket API for real-time transcription, an Agent STT mode that returns speaker-labelled turns for voice agents, and text to speech. Official SDKs are listed for Python, JavaScript, .NET and Rust, with integrations for LiveKit, Pipecat and Vapi. Batch jobs can call back to a URL you control when they finish. The service runs as a managed cloud API, as on-prem containers or Kubernetes, and on-device on Mac and Windows. Dedicated medical models are documented. Hlido's review covers the public surface only: we did not benchmark transcription accuracy or run the APIs, so this score reflects how clearly the product, pricing, documentation and security claims are presented. Correction, 2026-11-20: an earlier version of this page said Speechmatics offered no API, SDK or webhooks and was not suited to real-time or specialised use. That was wrong. After a correction request from the vendor we checked each point against the public documentation and rewrote the text. The overall score is unchanged.",
     "voice": "Hlido Editor",
     "as_of": "2026-05-23",
     "editor_signature_pending": true
   },
-  "tier_rationale": "STEADY (78) because Speechmatics delivers consistent performance and reliability in speech recognition, with a clear market presence. Not VITAL due to a lack of unique features that differentiate it from competitors, which could impact its attractiveness to users seeking specialized solutions.",
+  "tier_rationale": "STEADY (78) because the public surface is clear: the value proposition, a pricing link, documentation and security claims were all found without a login. Not VITAL because this is a public-surface review at medium confidence: Hlido did not test transcription accuracy or API behaviour hands-on.",
   "what_it_does_well": [
-    "Provides accurate speech-to-text transcriptions across multiple languages",
-    "Offers a user-friendly interface for easy integration into existing workflows",
-    "Maintains a solid reputation for reliability in various industry applications"
+    "Documents both a REST batch API and a WebSocket real-time API, with a public API reference",
+    "Lists official SDKs for Python, JavaScript, .NET and Rust, plus LiveKit, Pipecat and Vapi integrations",
+    "Offers three deployment routes: managed cloud, on-prem containers or Kubernetes, and on-device on Mac and Windows",
+    "Publishes dedicated medical models and a language list covering 55+ languages"
   ],
   "what_it_fails_at": [
-    "Lacks standout features that differentiate it from competitors",
-    "Limited information on advanced integrations or API capabilities",
-    "No clear emphasis on specific use cases or industries that it excels in"
+    "On-device deployment is by access request, with pricing through sales rather than a public price",
+    "The newer multilingual models (Melia 1, Oak 1) do not yet support custom dictionary or confidence scores, per the vendor's model table",
+    "Some features are cloud-only, including summarization, auto chapters, topic detection and Agent STT",
+    "We did not find an official MCP server in the public documentation, and the legacy Python CLI is deprecated"
   ],
   "best_for": [
-    "Organizations seeking reliable speech recognition without complex requirements",
-    "Users needing straightforward transcription services across different languages",
-    "Teams looking for a dependable solution for standard voice-to-text needs"
+    "Developers adding batch or real-time transcription to a product through an API",
+    "Teams building voice agents that need speaker-labelled, turn-based transcripts",
+    "Organisations that must keep audio in their own environment, on-prem or on-device",
+    "Healthcare transcription projects that need a medical-vocabulary model"
   ],
   "not_recommended_for": [
-    "Users requiring advanced features like real-time transcription or deep integrations",
-    "Organizations focused on specialized industry applications that need tailored solutions",
-    "Teams that prioritize unique capabilities over general reliability"
+    "Buyers who need independently verified accuracy figures: this review did not benchmark transcription quality",
+    "Teams that want self-serve, publicly priced on-device deployment",
+    "Multilingual projects that need custom dictionary or confidence scores on the Melia 1 or Oak 1 models today"
   ],
   "red_flags": [],
   "compared_to": [
     {
       "slug": "google-cloud-speech-to-text",
-      "verdict_diff": "Google Cloud Speech-to-Text offers advanced features like real-time streaming and extensive language support. Choose Speechmatics for straightforward transcription needs without the complexity.",
-      "preferred_for_axis": "feature-complexity"
+      "verdict_diff": "Both offer real-time streaming and batch transcription through an API. Speechmatics also documents on-prem containers and on-device deployment; Google Cloud Speech-to-Text fits teams already building on Google Cloud.",
+      "preferred_for_axis": "deployment-flexibility"
     },
     {
       "slug": "rev-com",
@@ -55,16 +58,24 @@
       "preferred_for_axis": "accuracy-vs-volume"
     }
   ],
-  "evidence_urls": [],
+  "evidence_urls": [
+    "https://docs.speechmatics.com/api-ref",
+    "https://docs.speechmatics.com/api-ref/realtime-transcription-websocket",
+    "https://docs.speechmatics.com/integrations-and-sdks/sdks",
+    "https://docs.speechmatics.com/speech-to-text/batch/notifications",
+    "https://docs.speechmatics.com/speech-to-text/models",
+    "https://docs.speechmatics.com/deployments",
+    "https://www.speechmatics.com/speech-to-text/on-device"
+  ],
   "agent_relevance": {
-    "has_api": false,
+    "has_api": true,
     "has_cli": false,
     "has_mcp": false,
-    "has_webhook": false,
-    "has_sdk": false,
+    "has_webhook": true,
+    "has_sdk": true,
     "behavioral_testable": false,
-    "agent_integration_path": "None — Speechmatics does not provide an API or any programmatic integration options, limiting its use in agent-driven workflows.",
-    "agent_friendly_score": 2
+    "agent_integration_path": "REST API for batch jobs and WebSocket APIs for real-time and Agent STT, with official SDKs for Python, JavaScript, .NET and Rust. Batch jobs can notify a callback URL on completion. An API key is required. No official MCP server was found in the public documentation.",
+    "agent_friendly_score": 8
   },
   "checklist": [
     {
@@ -77,7 +88,7 @@
       "id": "primary_value_prop",
       "pass": true,
       "required": true,
-      "evidence": "'Accurate speech recognition for various applications'",
+      "evidence": "'Speech APIs powering Voice AI'",
       "tested_at": "2026-05-23T10:00:00Z"
     },
     {
@@ -102,7 +113,7 @@
       "tested_at": "2026-05-23T10:00:00Z"
     }
   ],
-  "summary": "Reliable speech recognition service with solid performance, but lacks standout features in a competitive landscape.",
+  "summary": "Speech-to-text API platform with batch, real-time and voice-agent transcription, deployable in the cloud, on-prem or on-device.",
   "_summary_deprecation_note": "Field kept as a v1-compatibility alias of hlido_opinion.headline. New consumers should read hlido_opinion.{headline,body,voice,as_of}.",
   "staleness_after": "2026-08-21",
   "review_age_days_at_publish": 0,
@@ -142,5 +153,23 @@
     "last_verified": "2026-05-23",
     "basis": "Derived from Hlido-held evidence only (engine checklist + editorial text); quotes are verbatim from the scorecard; not vendor-supplied; re-derived daily. Verify current prices on the vendor's pricing page.",
     "derived_at": "2026-08-21"
-  }
+  },
+  "corrections": [
+    {
+      "date": "2026-11-20",
+      "requested_by": "vendor",
+      "fields": [
+        "hlido_opinion",
+        "tier_rationale",
+        "what_it_does_well",
+        "what_it_fails_at",
+        "best_for",
+        "not_recommended_for",
+        "compared_to",
+        "agent_relevance",
+        "evidence_urls"
+      ],
+      "note": "Earlier text wrongly stated there was no API, SDK or webhook. Checked against the vendor's public documentation on 2026-11-20. Overall score and tier unchanged."
+    }
+  ]
 }
